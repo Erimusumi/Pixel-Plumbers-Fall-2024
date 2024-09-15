@@ -9,6 +9,9 @@ public class Game1 : Game
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
 
+    //Delete later
+    int test = 0;
+
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
