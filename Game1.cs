@@ -11,6 +11,14 @@ public class Game1 : Game
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
 
+    Texture2D MarioCharacterTexture;
+    Vector2 MarioCharacterPosition;
+
+    private ISprite MarioWalkingLeftRightAnimation;
+    private ISprite MarioCrouchingAnimation;
+    private ISprite MarioTurningAnimation;
+    private ISprite MarioJumpingAnimation;
+
     public Boolean GameStart = false;
     public Boolean Alive = true;
 
