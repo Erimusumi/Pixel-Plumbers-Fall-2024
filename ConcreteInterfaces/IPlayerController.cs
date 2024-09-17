@@ -1,6 +1,6 @@
 using System.Runtime.CompilerServices;
 
-public interface IPlayerController
+public interface IKeyboardController
 {
     void update();
 }
