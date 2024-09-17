@@ -11,6 +11,7 @@ public class Game1 : Game
 
     //Delete later
     int test = 0;
+    int SanaaTest = 1;
 
     public Game1()
     {
