@@ -14,6 +14,7 @@ public class Game1 : Game
     int test2 = 10;
     int Test0001 = 10;
     int test3 = 999;
+    int test99999 = 100;
 
     public Game1()
     {
