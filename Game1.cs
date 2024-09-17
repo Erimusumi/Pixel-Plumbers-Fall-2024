@@ -10,6 +10,7 @@ public class Game1 : Game
 {
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
+    private GameState MyGameState;
 
 
     Texture2D MarioCharacterTexture;
@@ -40,6 +41,7 @@ public class Game1 : Game
     protected override void Initialize()
     {
         base.Initialize();
+        MyGameState = new GameState();
     }
 
     protected override void LoadContent()
