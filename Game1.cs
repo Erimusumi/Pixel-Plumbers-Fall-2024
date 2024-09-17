@@ -11,6 +11,7 @@ public class Game1 : Game
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
 
+
     Texture2D MarioCharacterTexture;
     Vector2 MarioCharacterPosition;
 
