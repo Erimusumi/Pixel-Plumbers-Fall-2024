@@ -8,19 +8,19 @@ namespace Pixel-Plumbers-Fall-2024.MarioClasses
 {
     class Mario : IMario
     {
-    void TakeDamage()
+    public void TakeDamage()
     {
 
     }
-    void Jump()
+    public void Jump()
     {
 
     }
-    void Update()
+    public void Update()
     {
 
     }
-    void Move()
+    public void Move()
     {
 
     }
