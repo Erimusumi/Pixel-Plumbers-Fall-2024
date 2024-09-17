@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Diagnostics.Contracts;
+using System.Formats.Asn1;
+using Microsoft.VisualBasic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -8,9 +10,13 @@ namespace Pixel_Plumbers_Fall_2024;
 
 public class Game1 : Game
 {
+    public enum GameStates{MainMenu, PlayerAlive, FaceLeft, FaceRight, IsJumping, GameOver};
+    
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
     private GameState MyGameState;
+
+    private KeyboardController keyboardController;
 
 
     Texture2D MarioCharacterTexture;
@@ -20,16 +26,6 @@ public class Game1 : Game
     private ISprite MarioCrouchingAnimation;
     private ISprite MarioTurningAnimation;
     private ISprite MarioJumpingAnimation;
-
-    public Boolean GameStart = false;
-    public Boolean Alive = true;
-
-    public Boolean RightFacing = true;
-    public Boolean LeftFacing = false;
-
-    //Delete later
-    int test = 0;
-    int SanaaTest = 1;
 
     public Game1()
     {
@@ -41,6 +37,7 @@ public class Game1 : Game
     protected override void Initialize()
     {
         base.Initialize();
+        keyboardController = new KeyboardController();
         MyGameState = new GameState();
     }
 
@@ -51,9 +48,9 @@ public class Game1 : Game
 
     protected override void Update(GameTime gameTime)
     {
-        if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-            Exit();
-        base.Update(gameTime);
+
+        keyboardController.update();
+
     }
 
     protected override void Draw(GameTime gameTime)
