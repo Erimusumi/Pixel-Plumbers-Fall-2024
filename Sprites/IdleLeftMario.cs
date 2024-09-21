@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public class IdleMario : ISprite
+public class IdleLeftMario : ISprite
 {
     public void Draw(SpriteBatch spriteBatch, Vector2 location)
     {

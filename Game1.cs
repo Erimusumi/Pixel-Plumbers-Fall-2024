@@ -16,18 +16,13 @@ public class Game1 : Game
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
 
-    public ISprite CurrentMarioSprite { get; set; }
-    public WalkingLeftMario WalkingLeftMario { get; set; }
-
-
-
     public KeyboardController keyboardController;
 
-
-
-
-
-
+    public ISprite CurrentMarioSprite { get; set; }
+    public IdleRightMario idleRightMario { get; set; }
+    public IdleLeftMario idleLeftMario { get; set; }
+    public WalkingRightMario walkingRightMario { get; set; }
+    public WalkingLeftMario walkingLeftMario { get; set; }
 
 
     public Boolean FacingRight = true;

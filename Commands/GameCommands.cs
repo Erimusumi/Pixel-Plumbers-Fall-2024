@@ -12,6 +12,8 @@ public class GameCommands{
         this.game1 = game1;
         KeyCommands = new Dictionary<Keys, ICommand>();
         
+                    KeyCommands.Add(Keys.A, new WalkRightCommand(game1.walk));
+
     }
 
 
