@@ -1,4 +1,4 @@
 public interface ICommand
 {
-    void Execute();
-}
+    void Execute(Game game1);
+}ß
