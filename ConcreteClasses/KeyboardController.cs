@@ -15,7 +15,6 @@ public class KeyboardController : IKeyboardController
         {
             if (keyCommands.ContainsKey(key))
             {
-                keyCommands[key].Execute();
             }
         }
     }

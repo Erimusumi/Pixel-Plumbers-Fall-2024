@@ -17,12 +17,9 @@ public class Game1 : Game
     private GameState MyGameState;
 
     private KeyboardController keyboardController;
-
-
     Texture2D MarioCharacterTexture;
-    Vector2 MarioCharacterPosition;
 
-    private ISprite MarioWalkingLeftRightAnimation;
+    private ISprite MarioWalkingLeftRightAnimation {  get; set; };
     private ISprite MarioCrouchingAnimation;
     private ISprite MarioTurningAnimation;
     private ISprite MarioJumpingAnimation;
