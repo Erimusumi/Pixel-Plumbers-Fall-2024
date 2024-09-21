@@ -9,6 +9,5 @@ public class WalkCommand : ICommand
     }
     public void Execute(Game1 game1)
     {
-        
     }
 }

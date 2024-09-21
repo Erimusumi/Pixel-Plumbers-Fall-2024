@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics.Contracts;
 using System.Formats.Asn1;
+using System.Security.AccessControl;
 using Microsoft.VisualBasic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -10,16 +11,18 @@ namespace Pixel_Plumbers_Fall_2024;
 
 public class Game1 : Game
 {
-    public enum GameStates{MainMenu, PlayerAlive, FaceLeft, FaceRight, IsJumping, GameOver};
-    
+    public enum GameStates { MainMenu, PlayerAlive, FaceLeft, FaceRight, IsJumping, GameOver };
+
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
-    private GameState MyGameState;
 
-    private KeyboardController keyboardController;
-    Texture2D MarioCharacterTexture;
+    public KeyboardController keyboardController;
+    public ISprite CurrentMarioSprite { get; set; }
 
-    private ISprite CurrentMarioSprite {get; set;}
+
+
+
+    public Boolean FacingRight = true;
 
     public Game1()
     {
@@ -31,8 +34,7 @@ public class Game1 : Game
     protected override void Initialize()
     {
         base.Initialize();
-        keyboardController = new KeyboardController();
-        MyGameState = new GameState();
+        keyboardController = new KeyboardController(this);
     }
 
     protected override void LoadContent()

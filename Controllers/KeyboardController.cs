@@ -1,12 +1,16 @@
 using System.Collections.Generic;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
 public class KeyboardController : IKeyboardController
 {
-    Dictionary<Keys, ICommand> keyCommands;
-    public KeyboardController()
+    private ICommand MyCommands;
+    public Dictionary<Keys, ICommand> keyCommands;
+
+    public KeyboardController(Game game1)
     {
         keyCommands = new Dictionary<Keys, ICommand>();
+
     }
     public void update()
     {
