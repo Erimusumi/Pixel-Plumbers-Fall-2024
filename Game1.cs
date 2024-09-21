@@ -16,8 +16,16 @@ public class Game1 : Game
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
 
-    public KeyboardController keyboardController;
     public ISprite CurrentMarioSprite { get; set; }
+    public WalkingLeftMario WalkingLeftMario { get; set; }
+
+
+
+    public KeyboardController keyboardController;
+
+
+
+
 
 
 
