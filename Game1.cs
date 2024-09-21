@@ -19,10 +19,7 @@ public class Game1 : Game
     private KeyboardController keyboardController;
     Texture2D MarioCharacterTexture;
 
-    private ISprite MarioWalkingLeftRightAnimation {  get; set; };
-    private ISprite MarioCrouchingAnimation;
-    private ISprite MarioTurningAnimation;
-    private ISprite MarioJumpingAnimation;
+    private ISprite CurrentMarioSprite {get; set;}
 
     public Game1()
     {
