@@ -14,8 +14,4 @@ public class GameCommands
         KeyCommands = new Dictionary<Keys, ICommand>();
     }
 
-    public void AddKeys()
-    {
-        KeyCommands.Add(Keys.A, new IdleLeftCommand()
-    }
 }
