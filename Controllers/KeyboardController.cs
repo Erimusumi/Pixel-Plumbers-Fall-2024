@@ -1,14 +1,18 @@
 using System.Collections.Generic;
+using System.Data;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
 public class KeyboardController : IKeyboardController
 {
-    private ICommand MyCommands;
+    private ICommand myCommand;
+    private GameCommands gameCommands;
+
     public Dictionary<Keys, ICommand> keyCommands;
 
     public KeyboardController(Game game1)
     {
+        gameCommands = new GameCommands(game1);
         keyCommands = new Dictionary<Keys, ICommand>();
 
     }
@@ -19,6 +23,7 @@ public class KeyboardController : IKeyboardController
         {
             if (keyCommands.ContainsKey(key))
             {
+                
             }
         }
     }

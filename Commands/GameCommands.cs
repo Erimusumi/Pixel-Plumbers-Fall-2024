@@ -16,10 +16,6 @@ public class GameCommands
 
     public void AddKeys()
     {
-
+        KeyCommands.Add(Keys.A, new IdleLeftCommand()
     }
-
-
-
-
 }

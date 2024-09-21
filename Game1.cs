@@ -19,6 +19,8 @@ public class Game1 : Game
     public KeyboardController keyboardController;
 
     public ISprite CurrentMarioSprite { get; set; }
+    public ICommand CurrentCommand { get; set; }
+
     public IdleRightMario idleRightMario { get; set; }
     public IdleLeftMario idleLeftMario { get; set; }
     public WalkingRightMario walkingRightMario { get; set; }
@@ -37,19 +39,18 @@ public class Game1 : Game
     protected override void Initialize()
     {
         base.Initialize();
-        keyboardController = new KeyboardController(this);
     }
 
     protected override void LoadContent()
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
+        keyboardController = new KeyboardController(this);
     }
 
     protected override void Update(GameTime gameTime)
     {
-
         keyboardController.update();
-
+        CurrentMarioSprite.Update(gameTime);
     }
 
     protected override void Draw(GameTime gameTime)
