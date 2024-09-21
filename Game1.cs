@@ -11,20 +11,18 @@ namespace Pixel_Plumbers_Fall_2024;
 
 public class Game1 : Game
 {
-    public enum GameStates { MainMenu, PlayerAlive, FaceLeft, FaceRight, IsJumping, GameOver };
-
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
 
-    public KeyboardController keyboardController;
-
-    public ISprite CurrentMarioSprite { get; set; }
-    public ICommand CurrentCommand { get; set; }
 
     public IdleRightMario idleRightMario { get; set; }
     public IdleLeftMario idleLeftMario { get; set; }
     public WalkingRightMario walkingRightMario { get; set; }
     public WalkingLeftMario walkingLeftMario { get; set; }
+
+    public KeyboardController keyboardController;
+
+    public ISprite CurrentMarioSprite { get; set; }
 
 
     public Boolean FacingRight = true;
@@ -44,7 +42,6 @@ public class Game1 : Game
     protected override void LoadContent()
     {
         _spriteBatch = new SpriteBatch(GraphicsDevice);
-        keyboardController = new KeyboardController(this);
     }
 
     protected override void Update(GameTime gameTime)
