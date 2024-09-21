@@ -12,7 +12,6 @@ public class GameCommands
     {
         this.game1 = game1;
         KeyCommands = new Dictionary<Keys, ICommand>();
-
     }
 
     public void AddKeys()
