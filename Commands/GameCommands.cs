@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 
+
 public class GameCommands
 {
     public Game game1;
@@ -10,6 +11,7 @@ public class GameCommands
     {
         this.game1 = game1;
         KeyCommands = new Dictionary<Keys, ICommand>();
+
     }
 
     public void buildCommands()

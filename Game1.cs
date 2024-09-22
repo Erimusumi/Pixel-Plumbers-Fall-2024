@@ -1,8 +1,9 @@
 ﻿using System;
-
-
+using System.Runtime.CompilerServices;
+using System.Threading;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 
 
 namespace Pixel_Plumbers_Fall_2024;
@@ -11,17 +12,23 @@ public class Game1 : Game
 {
     private GraphicsDeviceManager _graphics;
     private SpriteBatch _spriteBatch;
+    private Texture2D MarioTexture;
 
+    private KeyboardController keyboardController;
 
-    public IdleRightMario idleRightMario { get; set; }
-    public IdleLeftMario idleLeftMario { get; set; }
-    public WalkingRightMario walkingRightMario { get; set; }
-    public WalkingLeftMario walkingLeftMario { get; set; }
+    public ISprite IdleRightMario;
+    public ISprite IdleLeftMario;
+    public ISprite WalkingLeftMario;
+    public ISprite WalkingRightMario;
 
+    public ICommand IdleRightCommand;
+    public ICommand IdleLeftCommand;
+    public ICommand WalkRightCommand;
+    public ICommand WalkLeftCommand;
 
-    public ISprite CurrentMarioSprite { get; set; }
-    public ICommand CurrentCommand { get; internal set; }
-    
+    public ISprite CurrentMarioSprite;
+    public bool FacingRight = true;
+
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);
@@ -31,22 +38,40 @@ public class Game1 : Game
 
     protected override void Initialize()
     {
+        keyboardController = new KeyboardController(this);
+        IdleRightCommand = new IdleRightCommand(this);
+        IdleLeftCommand = new IdleLeftCommand(this);
+        WalkRightCommand = new WalkRightCommand(this);
+        WalkLeftCommand = new WalkLeftCommand(this);
+
+        CurrentMarioSprite = IdleRightMario;
+        keyboardController.addCommand(Keys.A, WalkRightCommand);
+        keyboardController.addCommand(Keys.D, WalkLeftCommand);
+
         base.Initialize();
     }
 
     protected override void LoadContent()
     {
+        MarioTexture = Content.Load<Texture2D>("mario");
+        IdleRightMario = new IdleRightMario(MarioTexture);
+        IdleLeftMario = new IdleLeftMario(MarioTexture);
+        WalkingRightMario = new WalkingRightMario(MarioTexture);
+        WalkingLeftMario = new WalkingLeftMario(MarioTexture);
+
         _spriteBatch = new SpriteBatch(GraphicsDevice);
     }
 
     protected override void Update(GameTime gameTime)
     {
-        CurrentMarioSprite.Update(gameTime);
+        keyboardController.Update(gameTime);
+        base.Update(gameTime);
     }
 
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
+        CurrentMarioSprite.Draw(_spriteBatch, new Vector2(200, 200));
         base.Draw(gameTime);
     }
 }

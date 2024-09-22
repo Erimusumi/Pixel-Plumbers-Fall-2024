@@ -10,7 +10,11 @@ public class IdleRightMario : ISprite
     }
     public void Draw(SpriteBatch spriteBatch, Vector2 location)
     {
+        Rectangle sourceRectangle = new Rectangle(209, 52, 16, 32);
+        Rectangle destRectangle = new Rectangle(100, 100, 100, 100);
+        spriteBatch.Draw(texture, destRectangle, sourceRectangle, Color.White);
     }
+
     public void Update(GameTime gameTime)
     {
     }
