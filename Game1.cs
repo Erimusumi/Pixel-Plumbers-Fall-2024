@@ -72,12 +72,16 @@ public class Game1 : Game
         MovingRight = false;
         MovingLeft = false;
 
+
         if (kstate.IsKeyDown(Keys.Left))
         {
             FacingRight = false;
             MovingLeft = true;
             MarioPosition.X -= updatedMarioSpeed;
-            MovingLeftMarioAnimation.Update(gameTime);
+            if (!IsJumping)
+            {
+                MovingLeftMarioAnimation.Update(gameTime);
+            }
         }
 
         if (kstate.IsKeyDown(Keys.Right))
@@ -85,8 +89,12 @@ public class Game1 : Game
             FacingRight = true;
             MovingRight = true;
             MarioPosition.X += updatedMarioSpeed;
-            MovingRightMarioAnimation.Update(gameTime);
+            if (!IsJumping)
+            {
+                MovingRightMarioAnimation.Update(gameTime);
+            }
         }
+
 
         if (!IsJumping && kstate.IsKeyDown(Keys.Space))
         {
@@ -112,29 +120,8 @@ public class Game1 : Game
         GraphicsDevice.Clear(Color.CornflowerBlue);
         spriteBatch.Begin();
 
-        if (FacingRight)
-        {
-            if (MovingRight)
-            {
-                MovingRightMarioAnimation.Draw(spriteBatch, MarioPosition);
-            }
-            else
-            {
-                IdleRightMario.Draw(spriteBatch, MarioPosition);
-            }
-        }
 
-        if (!FacingRight)
-        {
-            if (MovingLeft)
-            {
-                MovingLeftMarioAnimation.Draw(spriteBatch, MarioPosition);
-            }
-            else
-            {
-                IdleLeftMario.Draw(spriteBatch, MarioPosition);
-            }
-        }
+
 
         if (IsJumping)
         {
@@ -145,6 +132,32 @@ public class Game1 : Game
             else
             {
                 JumpingLeftMario.Draw(spriteBatch, MarioPosition);
+            }
+        }
+        else
+        {
+            if (FacingRight)
+            {
+                if (MovingRight)
+                {
+                    MovingRightMarioAnimation.Draw(spriteBatch, MarioPosition);
+                }
+                else
+                {
+                    IdleRightMario.Draw(spriteBatch, MarioPosition);
+                }
+            }
+
+            if (!FacingRight)
+            {
+                if (MovingLeft)
+                {
+                    MovingLeftMarioAnimation.Draw(spriteBatch, MarioPosition);
+                }
+                else
+                {
+                    IdleLeftMario.Draw(spriteBatch, MarioPosition);
+                }
             }
         }
 
