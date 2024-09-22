@@ -20,7 +20,6 @@ public class Game1 : Game
     public WalkingRightMario walkingRightMario { get; set; }
     public WalkingLeftMario walkingLeftMario { get; set; }
 
-    public KeyboardController keyboardController;
 
     public ISprite CurrentMarioSprite { get; set; }
 
@@ -46,7 +45,6 @@ public class Game1 : Game
 
     protected override void Update(GameTime gameTime)
     {
-        keyboardController.update();
         CurrentMarioSprite.Update(gameTime);
     }
 
