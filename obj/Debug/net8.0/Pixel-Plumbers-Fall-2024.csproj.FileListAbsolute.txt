@@ -25,3 +25,4 @@
 /Users/arunghimire/Development/Workspace/Pixel-Plumbers-Fall-2024/obj/Debug/net8.0/Pixel-Plumbers-Fall-2024.genruntimeconfig.cache
 /Users/arunghimire/Development/Workspace/Pixel-Plumbers-Fall-2024/obj/Debug/net8.0/ref/Pixel-Plumbers-Fall-2024.dll
 /Users/arunghimire/Development/Workspace/Pixel-Plumbers-Fall-2024/bin/Debug/net8.0/Content/mario.xnb
+/Users/arunghimire/Development/Workspace/Pixel-Plumbers-Fall-2024/bin/Debug/net8.0/Content/ball.xnb
