@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -11,6 +12,16 @@ public class Game1 : Game
     Texture2D MarioTexture;
     Vector2 MarioPosition;
     float MarioSpeed;
+
+    private ISprite IdleRightMario;
+    private ISprite IdleLeftMario;
+    private ISprite MovingRightMarioAnimation;
+    private ISprite MovingLeftMarioAnimation;
+
+    public Boolean FacingRight = true;
+    public Boolean MovingRight = false;
+    public Boolean MovingLeft = true;
+
 
     public Game1()
     {
@@ -27,80 +38,90 @@ public class Game1 : Game
     protected override void LoadContent()
     {
         spriteBatch = new SpriteBatch(GraphicsDevice);
-        MarioPosition = new Vector2(graphics.PreferredBackBufferWidth / 2,
-                                   graphics.PreferredBackBufferHeight / 2);
+        MarioPosition = new Vector2(graphics.PreferredBackBufferWidth / 2, graphics.PreferredBackBufferHeight / 2);
         MarioSpeed = 200f;
-        MarioTexture = Content.Load<Texture2D>("mario");
-    }
 
+        MarioTexture = Content.Load<Texture2D>("mario");
+        IdleRightMario = new IdleRightMario(MarioTexture);
+        IdleLeftMario = new IdleLeftMario(MarioTexture);
+
+        MovingRightMarioAnimation = new MovingRightMario(MarioTexture);
+        MovingRightMarioAnimation.Load(graphics);
+
+        MovingLeftMarioAnimation = new MovingLeftMario(MarioTexture);
+        MovingLeftMarioAnimation.Load(graphics);
+    }
     protected override void Update(GameTime gameTime)
     {
-        if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed ||
-                             Keyboard.GetState().IsKeyDown(Keys.Escape))
+        if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
 
-        float updatedBallSpeed = MarioSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+        float updatedMarioSpeed = MarioSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
         var kstate = Keyboard.GetState();
 
+        MovingRight = false;
+        MovingLeft = false;
+
         if (kstate.IsKeyDown(Keys.Up))
         {
-            MarioPosition.Y -= updatedBallSpeed;
+            MarioPosition.Y -= updatedMarioSpeed;
         }
 
         if (kstate.IsKeyDown(Keys.Down))
         {
-            MarioPosition.Y += updatedBallSpeed;
+            MarioPosition.Y += updatedMarioSpeed;
         }
 
         if (kstate.IsKeyDown(Keys.Left))
         {
-            MarioPosition.X -= updatedBallSpeed;
+            FacingRight = false;
+            MovingLeft = true;
+            MarioPosition.X -= updatedMarioSpeed;
+            MovingLeftMarioAnimation.Update(gameTime);
         }
 
         if (kstate.IsKeyDown(Keys.Right))
         {
-            MarioPosition.X += updatedBallSpeed;
-        }
-
-        if (MarioPosition.X > graphics.PreferredBackBufferWidth - MarioTexture.Width / 2)
-        {
-            MarioPosition.X = graphics.PreferredBackBufferWidth - MarioTexture.Width / 2;
-        }
-        else if (MarioPosition.X < MarioTexture.Width / 2)
-        {
-            MarioPosition.X = MarioTexture.Width / 2;
-        }
-
-        if (MarioPosition.Y > graphics.PreferredBackBufferHeight - MarioTexture.Height / 2)
-        {
-            MarioPosition.Y = graphics.PreferredBackBufferHeight - MarioTexture.Height / 2;
-        }
-        else if (MarioPosition.Y < MarioTexture.Height / 2)
-        {
-            MarioPosition.Y = MarioTexture.Height / 2;
+            FacingRight = true;
+            MovingRight = true;
+            MarioPosition.X += updatedMarioSpeed;
+            MovingRightMarioAnimation.Update(gameTime);
         }
 
         base.Update(gameTime);
     }
 
 
+
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
-
         spriteBatch.Begin();
-        spriteBatch.Draw(
-        MarioTexture,
-        MarioPosition,
-        null,
-        Color.White,
-        0f,
-        new Vector2(MarioTexture.Width / 2, MarioTexture.Height / 2),
-        Vector2.One,
-        SpriteEffects.None,
-        0f
-        );
+
+        if (FacingRight)
+        {
+            if (MovingRight)
+            {
+                MovingRightMarioAnimation.Draw(spriteBatch, MarioPosition);
+            }
+            else
+            {
+                IdleRightMario.Draw(spriteBatch, MarioPosition);
+            }
+        }
+
+        if (!FacingRight)
+        {
+            if (MovingLeft)
+            {
+                MovingLeftMarioAnimation.Draw(spriteBatch, MarioPosition);
+            }
+            else
+            {
+                IdleLeftMario.Draw(spriteBatch, MarioPosition);
+            }
+        }
 
         spriteBatch.End();
         base.Draw(gameTime);
