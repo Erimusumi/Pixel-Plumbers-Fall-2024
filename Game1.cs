@@ -53,13 +53,14 @@ public class Game1 : Game
 
     protected override void LoadContent()
     {
+        _spriteBatch = new SpriteBatch(GraphicsDevice);
+
         MarioTexture = Content.Load<Texture2D>("mario");
         IdleRightMario = new IdleRightMario(MarioTexture);
         IdleLeftMario = new IdleLeftMario(MarioTexture);
         WalkingRightMario = new WalkingRightMario(MarioTexture);
         WalkingLeftMario = new WalkingLeftMario(MarioTexture);
 
-        _spriteBatch = new SpriteBatch(GraphicsDevice);
     }
 
     protected override void Update(GameTime gameTime)
@@ -71,7 +72,12 @@ public class Game1 : Game
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
+        _spriteBatch.Begin();
+            if (CurrentMarioSprite != null)
+    {
         CurrentMarioSprite.Draw(_spriteBatch, new Vector2(200, 200));
+    }
+        _spriteBatch.End();
         base.Draw(gameTime);
     }
 }
