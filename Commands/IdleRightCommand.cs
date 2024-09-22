@@ -1,12 +1,11 @@
-using System.Runtime.CompilerServices;
-using Microsoft.Xna.Framework;
 using Pixel_Plumbers_Fall_2024;
 
 public class IdleRightCommand : ICommand
 {
-    private ISprite sprite;
-    public IdleRightCommand(ISprite sprite){
-        this.sprite = sprite;
+    private Game1 game1;
+    public IdleRightCommand(Game1 game1)
+    {
+        this.game1 = game1;
     }
     public void Execute(Game1 game1)
     {

@@ -2,7 +2,7 @@ using static Pixel_Plumbers_Fall_2024.Game1;
 
 public class GameState
 {
-    private GameStates MyGameState = GameStates.MainMenu;
+    private GameState MyGameState = GameStates.MainMenu;
     public void SetGameState(GameStates state)
     {
         if (state != MyGameState)

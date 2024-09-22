@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Diagnostics.Contracts;
-using System.Formats.Asn1;
-using System.Security.AccessControl;
-using Microsoft.VisualBasic;
+
+
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
+
 
 namespace Pixel_Plumbers_Fall_2024;
 
@@ -22,10 +20,8 @@ public class Game1 : Game
 
 
     public ISprite CurrentMarioSprite { get; set; }
-
-
-    public Boolean FacingRight = true;
-
+    public ICommand CurrentCommand { get; internal set; }
+    
     public Game1()
     {
         _graphics = new GraphicsDeviceManager(this);

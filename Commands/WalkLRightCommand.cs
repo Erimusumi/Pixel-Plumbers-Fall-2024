@@ -1,12 +1,11 @@
-using Microsoft.Xna.Framework;
 using Pixel_Plumbers_Fall_2024;
 
 public class WalkRightCommand : ICommand
 {
-    private ISprite sprite;
-    public WalkRightCommand(ISprite sprite)
+    private Game1 game1;
+    public WalkRightCommand(Game1 game1)
     {
-        this.sprite = sprite;
+        this.game1 = game1;
     }
     public void Execute(Game1 game1)
     {
