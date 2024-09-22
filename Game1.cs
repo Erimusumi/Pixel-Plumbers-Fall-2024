@@ -39,7 +39,7 @@ public class Game1 : Game
     protected override void Initialize()
     {
         base.Initialize();
-        GroundPosition = graphics.PreferredBackBufferHeight / 2;                     // Set ground level based on screen height.
+        GroundPosition = graphics.PreferredBackBufferHeight / 2;
         MarioVelocity = Vector2.Zero;
     }
 
@@ -72,7 +72,6 @@ public class Game1 : Game
         MovingRight = false;
         MovingLeft = false;
 
-
         if (kstate.IsKeyDown(Keys.Left))
         {
             FacingRight = false;
@@ -83,7 +82,6 @@ public class Game1 : Game
                 MovingLeftMarioAnimation.Update(gameTime);
             }
         }
-
         if (kstate.IsKeyDown(Keys.Right))
         {
             FacingRight = true;
@@ -94,11 +92,9 @@ public class Game1 : Game
                 MovingRightMarioAnimation.Update(gameTime);
             }
         }
-
-
         if (!IsJumping && kstate.IsKeyDown(Keys.Space))
         {
-            MarioVelocity.Y = JumpSpeed;  // Apply jump force
+            MarioVelocity.Y = JumpSpeed;
             IsJumping = true;
         }
 
