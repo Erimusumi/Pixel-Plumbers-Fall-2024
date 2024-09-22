@@ -16,15 +16,15 @@ public class Game1 : Game
 
     private KeyboardController keyboardController;
 
-    public ISprite IdleRightMario;
-    public ISprite IdleLeftMario;
-    public ISprite WalkingLeftMario;
-    public ISprite WalkingRightMario;
+    public ISprite idleRightMario;
+    public ISprite idleLeftMario;
+    public ISprite walkingLeftMario;
+    public ISprite walkingRightMario;
 
-    public ICommand IdleRightCommand;
-    public ICommand IdleLeftCommand;
-    public ICommand WalkRightCommand;
-    public ICommand WalkLeftCommand;
+    public ICommand idleRightCommand;
+    public ICommand idleLeftCommand;
+    public ICommand walkRightCommand;
+    public ICommand walkLeftCommand;
 
     public ISprite CurrentMarioSprite;
     public bool FacingRight = true;
@@ -39,14 +39,15 @@ public class Game1 : Game
     protected override void Initialize()
     {
         keyboardController = new KeyboardController(this);
-        IdleRightCommand = new IdleRightCommand(this);
-        IdleLeftCommand = new IdleLeftCommand(this);
-        WalkRightCommand = new WalkRightCommand(this);
-        WalkLeftCommand = new WalkLeftCommand(this);
+        idleRightCommand = new IdleRightCommand(this);
+        idleLeftCommand = new IdleLeftCommand(this);
+        walkRightCommand = new WalkRightCommand(this);
+        walkLeftCommand = new WalkLeftCommand(this);
 
-        CurrentMarioSprite = IdleRightMario;
-        keyboardController.addCommand(Keys.A, WalkRightCommand);
-        keyboardController.addCommand(Keys.D, WalkLeftCommand);
+        CurrentMarioSprite = idleRightMario;
+
+        keyboardController.addCommand(Keys.A, walkRightCommand);
+        keyboardController.addCommand(Keys.D, walkLeftCommand);
 
         base.Initialize();
     }
@@ -56,11 +57,10 @@ public class Game1 : Game
         _spriteBatch = new SpriteBatch(GraphicsDevice);
 
         MarioTexture = Content.Load<Texture2D>("mario");
-        IdleRightMario = new IdleRightMario(MarioTexture);
-        IdleLeftMario = new IdleLeftMario(MarioTexture);
-        WalkingRightMario = new WalkingRightMario(MarioTexture);
-        WalkingLeftMario = new WalkingLeftMario(MarioTexture);
-
+        idleRightMario = new IdleRightMario(MarioTexture);
+        idleLeftMario = new IdleLeftMario(MarioTexture);
+        walkingRightMario = new WalkingRightMario(MarioTexture);
+        walkingLeftMario = new WalkingLeftMario(MarioTexture);
     }
 
     protected override void Update(GameTime gameTime)
@@ -73,10 +73,9 @@ public class Game1 : Game
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
         _spriteBatch.Begin();
-            if (CurrentMarioSprite != null)
-    {
-        CurrentMarioSprite.Draw(_spriteBatch, new Vector2(200, 200));
-    }
+
+        idleRightMario.Draw(_spriteBatch, new Vector2(200, 200));
+
         _spriteBatch.End();
         base.Draw(gameTime);
     }

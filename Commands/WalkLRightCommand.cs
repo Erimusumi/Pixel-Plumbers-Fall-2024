@@ -9,6 +9,6 @@ public class WalkRightCommand : ICommand
     }
     public void Execute(Game1 game1)
     {
-        game1.CurrentMarioSprite = game1.WalkingRightMario;
+        game1.CurrentMarioSprite = game1.walkingRightMario;
     }
 }

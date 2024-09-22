@@ -9,6 +9,6 @@ public class IdleLeftCommand : ICommand
     }
     public void Execute(Game1 game1)
     {
-        game1.CurrentMarioSprite = game1.IdleLeftMario;
+        game1.CurrentMarioSprite = game1.idleLeftMario;
     }
 }

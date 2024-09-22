@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 public class IdleLeftMario : ISprite
 {
-        private Texture2D texture;
+    private Texture2D texture;
     public IdleLeftMario(Texture2D texture)
     {
         this.texture = texture;
