@@ -8,6 +8,8 @@ public class CommandControlCenter
     private ICommand SetMovingLeftMarioCommand;
     private ICommand SetJumpingUpMarioCommand;
     private ICommand EnemySwitch;
+    private ICommand blockTCommand;
+    private ICommand blockYCommand;
     private KeyboardController keyboardController;
     public CommandControlCenter(Game1 game)
 	{
@@ -15,12 +17,16 @@ public class CommandControlCenter
         SetMovingRightMarioCommand = new SetMoveRightCommand(game);
         SetMovingLeftMarioCommand = new SetMoveLeftCommand(game);
         EnemySwitch = new EnemySwitch(game);
+        blockTCommand = new blockTCommand(game);
+        blockYCommand = new blockYCommand(game);
 
         keyboardController.addCommand(Keys.Right, SetMovingRightMarioCommand);
         keyboardController.addCommand(Keys.Left, SetMovingLeftMarioCommand);
         keyboardController.addCommand(Keys.Up, SetJumpingUpMarioCommand);
         keyboardController.addCommand(Keys.P, EnemySwitch);
         keyboardController.addCommand(Keys.O, EnemySwitch);
+        keyboardController.addCommand(Keys.T, blockTCommand);
+        keyboardController.addCommand(Keys.Y, blockYCommand);
         game.SetKey(keyboardController);
     }
 
