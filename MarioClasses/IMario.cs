@@ -12,6 +12,8 @@ public interface IMario
     void Jump();
     //Move method might be unneccessary, if there's a more appropriate place for it
     void Move();
+    void GetPowerup();
+
 }
 
 class Mario : IMario
@@ -34,6 +36,10 @@ class Mario : IMario
     { 
         state.Move();
     }
+    public void GetPowerup()
+    {
+        state.GetPowerup();
+    }
 }
 
 class StarMario : IMario
@@ -41,8 +47,8 @@ class StarMario : IMario
     IMario decoratedMario;
     //Replace timer with however long the star lasts
     int timer = 0;
-    
-    public StarMario (IMario decoratedMario)
+
+    public StarMario(IMario decoratedMario)
     {
         this.decoratedMario = decoratedMario;
     }
@@ -65,83 +71,99 @@ class StarMario : IMario
 
         decoratedMario.Update();
     }
+    public void GetPowerup()
+    {
+        decoratedMario.GetPowerup();
+    }
 
     public void RemoveStar()
     {
         //Copied directly from carmen, change to better fix our project
-        Game1.Instance.mario = decoratedMario;
+        Game1.Mario = decoratedMario;
     }
     public void Move()
     {
         decoratedMario.Move();
     }
 }
-class BigMario : IMario
-{
-    IMario decoratedMario;
-    public BigMario(IMario decoratedMario)
+    //BigMario doesn't have any special attributes that would require a decorator
+    /*
+    class BigMario : IMario
     {
-        this.decoratedMario = decoratedMario;
+        IMario decoratedMario;
+        public BigMario(IMario decoratedMario)
+        {
+            this.decoratedMario = decoratedMario;
+        }
+
+        public void TakeDamage()
+        {
+            decoratedMario.TakeDamage();
+        }
+        public void Jump()
+        {
+            decoratedMario.Jump();
+        }
+        public void Update()
+        {
+            decoratedMario.Update();
+        }
+        public void GetPowerup()
+        {
+            decoratedMario.GetPowerup();
+        }
+
+        public void RemovePowerup()
+        {
+            //Copied directly from carmen, change to better fix our project
+            Game1.Mario = decoratedMario;
+        }
+        public void Move()
+        {
+            decoratedMario.Move();
+        }
+    }
+    */
+
+    class FireMario : IMario
+    {
+        IMario decoratedMario;
+        public FireMario(IMario decoratedMario)
+        {
+            this.decoratedMario = decoratedMario;
+        }
+
+        public void TakeDamage()
+        {
+            decoratedMario.TakeDamage();
+        }
+        public void Jump()
+        {
+            decoratedMario.Jump();
+        }
+        public void Update()
+        {
+            decoratedMario.Update();
+        }
+
+        public void RemovePowerup()
+        {
+            //Copied directly from carmen, change to better fix our project
+            Game1.Mario = decoratedMario;
+        }
+        public void Move()
+        {
+            decoratedMario.Move();
+        }
+
+        public void ShootFire()
+        {
+
+        }
+        public void GetPowerup()
+        {
+            decoratedMario.GetPowerup();
+        }
     }
 
-    public void TakeDamage()
-    {
-        decoratedMario.TakeDamage();
-    }
-    public void Jump()
-    {
-        decoratedMario.Jump();
-    }
-    public void Update()
-    {
-        decoratedMario.Update();
-    }
-
-    public void RemovePowerup()
-    {
-        //Copied directly from carmen, change to better fix our project
-        Game1.Instance.mario = decoratedMario;
-    }
-    public void Move()
-    {
-        decoratedMario.Move();
-    }
-}
-
-class FireMario : IMario
-{
-    IMario decoratedMario;
-    public FireMario(IMario decoratedMario)
-    {
-        this.decoratedMario = decoratedMario;
-    }
-
-    public void TakeDamage()
-    {
-        decoratedMario.TakeDamage();
-    }
-    public void Jump()
-    {
-        decoratedMario.Jump();
-    }
-    public void Update()
-    {
-        decoratedMario.Update();
-    }
-
-    public void RemovePowerup()
-    {
-        //Copied directly from carmen, change to better fix our project
-        Game1.Instance.mario = decoratedMario;
-    }
-    public void Move()
-    {
-        decoratedMario.Move();
-    }
-
-    public void ShootFire()
-    {
-        
-    }
-}
 

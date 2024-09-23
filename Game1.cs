@@ -11,6 +11,7 @@ public class Game1 : Game
     private SpriteBatch spriteBatch;
 
     public IMario Mario;
+
     private Texture2D MarioTexture;
     public Vector2 MarioPosition;
     private float MarioSpeed;

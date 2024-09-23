@@ -12,13 +12,20 @@ internal interface IMarioState
     void Jump();
     void Update();
     void Move();
+    void GetPowerup();
 }
 
 public class MarioState : IMarioState
 {
     private enum MarioStateEnum {LeftStill, RightStill, LeftWalk, RightWalk, LeftRun, 
-        RightRun, LeftJump, RightJump, LeftCrouch, RightCrouch, LeftSwim, RightSwim };
+        RightRun, LeftJump, RightJump, LeftCrouch, RightCrouch, LeftSwim, RightSwim, LeftTurning,
+        RightTurning, Dead };
+    private enum MarioPowerupEnum {Base, Big, Fire };
+
+
     private MarioStateEnum currState = MarioStateEnum.RightStill;
+    private MarioPowerupEnum currPowerup = MarioPowerupEnum.Base;
+
     public void TakeDamage()
     {
 
@@ -32,6 +39,10 @@ public class MarioState : IMarioState
 
     }
     public void Move()
+    {
+
+    }
+    public void GetPowerup()
     {
 
     }
