@@ -47,6 +47,7 @@ public class Game1 : Game
         base.Initialize();
         GroundPosition = graphics.PreferredBackBufferHeight / 2;
         MarioVelocity = Vector2.Zero;
+        
         Mario = new Mario();
     }
 

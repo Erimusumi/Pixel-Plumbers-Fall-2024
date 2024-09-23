@@ -5,7 +5,7 @@ public class SetMoveLeftCommand : ICommand
 {
     private Game1 game;
     private GameTime gameTime;
-    public SetMoveLeftCommand(Game1 game, GameTime gameTime)
+    public SetMoveLeftCommand(Game1 game)
     {
         this.game = game;
         this.gameTime = gameTime;
