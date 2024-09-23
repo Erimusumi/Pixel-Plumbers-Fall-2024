@@ -10,6 +10,7 @@ public class Game1 : Game
     private GraphicsDeviceManager graphics;
     private SpriteBatch spriteBatch;
 
+    public IMario Mario;
     private Texture2D MarioTexture;
     public Vector2 MarioPosition;
     private float MarioSpeed;
@@ -45,6 +46,7 @@ public class Game1 : Game
         base.Initialize();
         GroundPosition = graphics.PreferredBackBufferHeight / 2;
         MarioVelocity = Vector2.Zero;
+        Mario = new Mario();
     }
 
     protected override void LoadContent()
