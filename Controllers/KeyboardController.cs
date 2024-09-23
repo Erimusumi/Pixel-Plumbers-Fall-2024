@@ -1,10 +1,12 @@
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
+using System.Windows.Input;
 
 public class KeyboardController : IController
 {
     Dictionary<Keys, ICommand> KeyBinds;
+    KeyboardState previousKeyState;
     public KeyboardController()
     {
         KeyBinds = new Dictionary<Keys, ICommand>();
@@ -18,13 +20,14 @@ public class KeyboardController : IController
     public void Update(GameTime gameTime)
     {
         var keysPressed = Keyboard.GetState().GetPressedKeys();
-
+        KeyboardState state = Keyboard.GetState();
         foreach (var key in keysPressed)
         {
-            if (KeyBinds.ContainsKey(key))
+            if (KeyBinds.ContainsKey(key) & previousKeyState.IsKeyUp(Keys.Y))
             {
                 KeyBinds[key].Execute();
             }
         }
+        previousKeyState = state;
     }
 }
