@@ -6,23 +6,27 @@ using Microsoft.Xna.Framework.Input;
 namespace Pixel_Plumbers_Fall_2024;
 public class Game1 : Game
 {
+    internal int CurrentMarioSprite1;
     private GraphicsDeviceManager graphics;
     private SpriteBatch spriteBatch;
 
-    Texture2D MarioTexture;
-    Vector2 MarioPosition;
-    float MarioSpeed;
+    private Texture2D MarioTexture;
+    public Vector2 MarioPosition;
+    private float MarioSpeed;
     private Vector2 MarioVelocity;
     private float Gravity = 9.8f;
     private float JumpSpeed = -350f;
     private float GroundPosition;
+    public float updatedMarioSpeed;
 
-    private ISprite IdleRightMario;
-    private ISprite IdleLeftMario;
-    private ISprite MovingRightMarioAnimation;
-    private ISprite MovingLeftMarioAnimation;
-    private ISprite JumpingRightMario;
-    private ISprite JumpingLeftMario;
+    public ISprite IdleRightMario;
+    public ISprite IdleLeftMario;
+    public ISprite MovingRightMarioAnimation;
+    public ISprite MovingLeftMarioAnimation;
+    public ISprite JumpingRightMario;
+    public ISprite JumpingLeftMario;
+
+    public ISprite CurrentMarioSprite;
 
     public Boolean FacingRight = true;
     public Boolean MovingRight = false;
@@ -66,7 +70,7 @@ public class Game1 : Game
         if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
             Exit();
 
-        float updatedMarioSpeed = MarioSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+        updatedMarioSpeed = MarioSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
         var kstate = Keyboard.GetState();
 
         MovingRight = false;
@@ -74,13 +78,7 @@ public class Game1 : Game
 
         if (kstate.IsKeyDown(Keys.Left))
         {
-            FacingRight = false;
-            MovingLeft = true;
-            MarioPosition.X -= updatedMarioSpeed;
-            if (!IsJumping)
-            {
-                MovingLeftMarioAnimation.Update(gameTime);
-            }
+
         }
         if (kstate.IsKeyDown(Keys.Right))
         {
