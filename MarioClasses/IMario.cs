@@ -138,5 +138,10 @@ class FireMario : IMario
     {
         decoratedMario.Move();
     }
+
+    public void ShootFire()
+    {
+        
+    }
 }
 
