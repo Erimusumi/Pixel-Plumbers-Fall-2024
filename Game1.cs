@@ -27,7 +27,7 @@ public class Game1 : Game
     public Boolean FacingRight = true;
     public Boolean MovingRight = false;
     public Boolean MovingLeft = true;
-    private Boolean IsJumping = false;
+    public Boolean IsJumping = false;
 
     public Game1()
     {
@@ -47,7 +47,7 @@ public class Game1 : Game
     {
         spriteBatch = new SpriteBatch(GraphicsDevice);
         MarioPosition = new Vector2(graphics.PreferredBackBufferWidth / 2, graphics.PreferredBackBufferHeight / 2);
-        MarioSpeed = 200f;
+        MarioSpeed = 150f;
 
         MarioTexture = Content.Load<Texture2D>("mario");
         IdleRightMario = new IdleRightMario(MarioTexture);

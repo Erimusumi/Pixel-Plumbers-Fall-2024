@@ -32,7 +32,6 @@ public class MovingRightMario : ISprite
 
         previousAnimationIndex = 2;
         currentAnimationIndex = 1;
-         
     }
 
     public void Update(GameTime gameTime)
