@@ -118,6 +118,7 @@ public class Game1 : Game
         MarioTexture = Content.Load<Texture2D>("mario");
         EnemyTexture = Content.Load<Texture2D>("enemies");
         ItemsTexture = Content.Load<Texture2D>("MarioItems");
+        block = Content.Load<Texture2D>("blocks");
 
         BigIdleRightMario = new BigIdleRightMario(MarioTexture);
         BigIdleLeftMario = new BigIdleLeftMario(MarioTexture);
@@ -165,6 +166,8 @@ public class Game1 : Game
         spriteEnemy.Updates();
         controlG.Update(gameTime);
         manager.updateCurrentItem(currentItem, numItems);
+        sprite1[index1].Update(gameTime);
+        sprite2[index2].Update(gameTime);
         base.Update(gameTime);
     }
 
@@ -176,6 +179,8 @@ public class Game1 : Game
         CurrentMarioSprite.Draw(spriteBatch, MarioPosition);
         manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
         spriteBatch.End();
+        sprite1[index2].Draw(spriteBatch, new Vector2(0,0));
+        sprite2[index2].Draw(spriteBatch, new Vector2(0,0));
         base.Draw(gameTime);
     }
 }
