@@ -83,7 +83,7 @@ public class Game1 : Game
 
         CurrentMarioSprite = IdleRightMario;
 
-        Mario = new Mario(Mario);
+        Mario = new Mario(this);
         spriteEnemy = new Goomba();
         controlG = new GoombaCommand(spriteEnemy);
     }
