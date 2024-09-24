@@ -2,23 +2,20 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-
 namespace Pixel_Plumbers_Fall_2024;
+
 public class Game1 : Game
 {
-    internal int CurrentMarioSprite1;
     private GraphicsDeviceManager graphics;
     private SpriteBatch spriteBatch;
 
-    public IMario Mario;
-
-    private Texture2D MarioTexture;
+    public Texture2D MarioTexture;
     public Vector2 MarioPosition;
-    private float MarioSpeed;
-    private Vector2 MarioVelocity;
-    private float Gravity = 9.8f;
-    private float JumpSpeed = -350f;
-    private float GroundPosition;
+    public float MarioSpeed;
+    public Vector2 MarioVelocity;
+    public float Gravity = 9.8f;
+    public float JumpSpeed = -350f;
+    public float GroundPosition;
     public float updatedMarioSpeed;
 
     public ISprite IdleRightMario;
@@ -28,13 +25,18 @@ public class Game1 : Game
     public ISprite JumpingRightMario;
     public ISprite JumpingLeftMario;
 
+    public ICommand SetMovingRightMarioCommand;
+    public ICommand SetMovingLeftMarioCommand;
+    public ICommand SetJumpingUpMarioCommand;
+
     public ISprite CurrentMarioSprite;
 
     public Boolean FacingRight = true;
     public Boolean MovingRight = false;
-    public Boolean MovingLeft = true;
+    public Boolean MovingLeft = false;
     public Boolean IsJumping = false;
 
+    private KeyboardController keyboardController;
     public Game1()
     {
         graphics = new GraphicsDeviceManager(this);
@@ -47,7 +49,18 @@ public class Game1 : Game
         base.Initialize();
         GroundPosition = graphics.PreferredBackBufferHeight / 2;
         MarioVelocity = Vector2.Zero;
-        Mario = new Mario();
+
+        SetJumpingUpMarioCommand = new SetJumpUp(this);
+        SetMovingRightMarioCommand = new SetMoveRightCommand(this);
+        SetMovingLeftMarioCommand = new SetMoveLeftCommand(this);
+
+        keyboardController = new KeyboardController();
+        keyboardController.addCommand(Keys.Right, SetMovingRightMarioCommand);
+        keyboardController.addCommand(Keys.Left, SetMovingLeftMarioCommand);
+        keyboardController.addCommand(Keys.Up, SetJumpingUpMarioCommand);
+
+
+        CurrentMarioSprite = IdleRightMario;
     }
 
     protected override void LoadContent()
@@ -68,47 +81,22 @@ public class Game1 : Game
         MovingLeftMarioAnimation = new MovingLeftMario(MarioTexture);
         MovingLeftMarioAnimation.Load(graphics);
     }
+
     protected override void Update(GameTime gameTime)
     {
-        if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-            Exit();
-
+        keyboardController.Update(gameTime);
         updatedMarioSpeed = MarioSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
-        var kstate = Keyboard.GetState();
-
-        MovingRight = false;
-        MovingLeft = false;
-
-        if (kstate.IsKeyDown(Keys.Left))
-        {
-
-        }
-        if (kstate.IsKeyDown(Keys.Right))
-        {
-            FacingRight = true;
-            MovingRight = true;
-            MarioPosition.X += updatedMarioSpeed;
-            if (!IsJumping)
-            {
-                MovingRightMarioAnimation.Update(gameTime);
-            }
-        }
-        if (!IsJumping && kstate.IsKeyDown(Keys.Space))
-        {
-            MarioVelocity.Y = JumpSpeed;
-            IsJumping = true;
-        }
-
         MarioVelocity.Y += Gravity;
         MarioPosition.Y += MarioVelocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
         if (MarioPosition.Y >= GroundPosition)
         {
-            MarioPosition.Y = GroundPosition;                       // Snap Mario to the ground
-            MarioVelocity.Y = 0;                                    // Reset vertical velocity
-            IsJumping = false;                                      // Allow jumping again
+            MarioPosition.Y = GroundPosition;
+            MarioVelocity.Y = 0;
+            IsJumping = false;
         }
 
+        CurrentMarioSprite.Update(gameTime);
         base.Update(gameTime);
     }
 
@@ -117,46 +105,7 @@ public class Game1 : Game
         GraphicsDevice.Clear(Color.CornflowerBlue);
         spriteBatch.Begin();
 
-
-
-
-        if (IsJumping)
-        {
-            if (FacingRight)
-            {
-                JumpingRightMario.Draw(spriteBatch, MarioPosition);
-            }
-            else
-            {
-                JumpingLeftMario.Draw(spriteBatch, MarioPosition);
-            }
-        }
-        else
-        {
-            if (FacingRight)
-            {
-                if (MovingRight)
-                {
-                    MovingRightMarioAnimation.Draw(spriteBatch, MarioPosition);
-                }
-                else
-                {
-                    IdleRightMario.Draw(spriteBatch, MarioPosition);
-                }
-            }
-
-            if (!FacingRight)
-            {
-                if (MovingLeft)
-                {
-                    MovingLeftMarioAnimation.Draw(spriteBatch, MarioPosition);
-                }
-                else
-                {
-                    IdleLeftMario.Draw(spriteBatch, MarioPosition);
-                }
-            }
-        }
+        CurrentMarioSprite.Draw(spriteBatch, MarioPosition);
 
         spriteBatch.End();
         base.Draw(gameTime);

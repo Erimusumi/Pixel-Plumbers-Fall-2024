@@ -16,11 +16,9 @@ public class JumpingLeftMario : ISprite
 
     public void Load(GraphicsDeviceManager graphics)
     {
-        throw new System.NotImplementedException();
     }
 
     public void Update(GameTime gametime)
     {
-        throw new System.NotImplementedException();
     }
 }
