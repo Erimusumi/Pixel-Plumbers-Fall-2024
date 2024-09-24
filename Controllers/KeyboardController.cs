@@ -1,27 +1,29 @@
 using Microsoft.Xna.Framework.Input;
-using Pixel_Plumbers_Fall_2024;
+using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 
-public class KeyboardController
+public class KeyboardController : IController
 {
-    private Dictionary<Keys, ICommand> keyBindings;
+    Dictionary<Keys, ICommand> KeyBinds;
     public KeyboardController()
     {
-        keyBindings = new Dictionary<Keys, ICommand>();
+        KeyBinds = new Dictionary<Keys, ICommand>();
     }
 
-    public void BindKey(Keys key, ICommand command)
+    public void addCommand(Keys key, ICommand command)
     {
-        keyBindings[key] = command;
+        KeyBinds.Add(key, command);
     }
 
-    public void ProcessInput(KeyboardState keyboardState, Game1 game)
+    public void Update(GameTime gameTime)
     {
-        foreach (var binding in keyBindings)
+        var keysPressed = Keyboard.GetState().GetPressedKeys();
+
+        foreach (var key in keysPressed)
         {
-            if (keyboardState.IsKeyDown(binding.Key))
+            if (KeyBinds.ContainsKey(key))
             {
-                binding.Value.Execute();
+                KeyBinds[key].Execute();
             }
         }
     }
