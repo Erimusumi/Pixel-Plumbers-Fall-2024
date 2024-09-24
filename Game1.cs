@@ -59,7 +59,6 @@ public class Game1 : Game
         keyboardController.addCommand(Keys.Left, SetMovingLeftMarioCommand);
         keyboardController.addCommand(Keys.Up, SetJumpingUpMarioCommand);
 
-
         CurrentMarioSprite = IdleRightMario;
     }
 
@@ -84,6 +83,15 @@ public class Game1 : Game
 
     protected override void Update(GameTime gameTime)
     {
+        if (!IsJumping && FacingRight)
+        {
+            CurrentMarioSprite = IdleRightMario;
+        }
+        else if (!IsJumping && !FacingRight)
+        {
+            CurrentMarioSprite = IdleLeftMario;
+        }
+
         keyboardController.Update(gameTime);
         updatedMarioSpeed = MarioSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
         MarioVelocity.Y += Gravity;
@@ -95,7 +103,6 @@ public class Game1 : Game
             MarioVelocity.Y = 0;
             IsJumping = false;
         }
-
         CurrentMarioSprite.Update(gameTime);
         base.Update(gameTime);
     }
@@ -104,9 +111,7 @@ public class Game1 : Game
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
         spriteBatch.Begin();
-
         CurrentMarioSprite.Draw(spriteBatch, MarioPosition);
-
         spriteBatch.End();
         base.Draw(gameTime);
     }
