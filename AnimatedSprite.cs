@@ -31,6 +31,8 @@ namespace sprint_0
             width = (int)(End.X - Start.X) / frames;            
             height = (int)(End.Y - Start.Y);                    
         }
+        public void Load() {
+        }
         public void Update()
         {
             buffer++;
