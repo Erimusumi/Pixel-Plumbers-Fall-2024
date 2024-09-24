@@ -3,7 +3,7 @@ using System.Security.Cryptography.X509Certificates;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Sprint0;
+using Pixel_Plumbers_Fall_2024;
 
 public class GoombaCommand : IController
 {
@@ -15,7 +15,7 @@ public class GoombaCommand : IController
         _sprite = sprite1;
     }
 
-    public void Updates()
+    public void Update(GameTime gameTime)
     {
         count++;
         if (count % 50 == 0)
