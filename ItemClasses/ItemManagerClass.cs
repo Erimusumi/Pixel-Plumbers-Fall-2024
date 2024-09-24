@@ -4,7 +4,7 @@ using System;
 public interface IitemManager
 {
     void updateCurrentItem(int numItems, int[] itemArray)
-    {
+    { 
 
     }
 }
