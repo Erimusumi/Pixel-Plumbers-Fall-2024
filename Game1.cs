@@ -9,6 +9,8 @@ public class Game1 : Game
     private GraphicsDeviceManager graphics;
     private SpriteBatch spriteBatch;
 
+    public IMario Mario;
+
     public Texture2D MarioTexture;
     public Vector2 MarioPosition;
     public float MarioSpeed;
@@ -61,7 +63,7 @@ public class Game1 : Game
 
         CurrentMarioSprite = IdleRightMario;
         
-        Mario = new Mario();
+        Mario = new Mario(Mario);
     }
 
     protected override void LoadContent()

@@ -5,14 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\marioclasses\\imario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:marioclasses\\imario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\marioclasses\\imariostate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:marioclasses\\imariostate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,39 +30,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IMarioState.cs",
-              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\MarioClasses\\IMarioState.cs",
-              "RelativeDocumentMoniker": "MarioClasses\\IMarioState.cs",
-              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\MarioClasses\\IMarioState.cs",
-              "RelativeToolTip": "MarioClasses\\IMarioState.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T16:14:57.266Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IMario.cs",
-              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\MarioClasses\\IMario.cs",
-              "RelativeDocumentMoniker": "MarioClasses\\IMario.cs",
-              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\MarioClasses\\IMario.cs",
-              "RelativeToolTip": "MarioClasses\\IMario.cs",
-              "ViewState": "AgIAAIcAAAAAAAAAAAA7wJcAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T16:09:53.881Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
-              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Game1.cs",
-              "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Game1.cs*",
+              "RelativeToolTip": "Game1.cs*",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAkwAsAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
               "EditorCaption": ""
