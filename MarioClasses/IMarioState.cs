@@ -97,12 +97,16 @@ public class MarioState : IMarioState
         switch (powerupType)
         {
             case 0:
-                if (currPowerup = MarioPowerupEnum)
+                if (currPowerup == MarioPowerupEnum.Base)
                 {
-
+                    currPowerup = MarioPowerupEnum.Big;
                 }
                 break;
             case 1:
+                if (currPowerup != MarioPowerupEnum.Fire)
+                {
+                    currPowerup = MarioPowerupEnum.Fire;
+                }
                 break;
             default:
                 break;
