@@ -11,6 +11,8 @@ internal interface IMarioState
     void TakeDamage();
     void Jump();
     void Update();
+    void Stop();
+    //Seperate walk and run might not be necessary, since I think the sprites are the same
     void Walk();
     void Run();
     void Swim();
@@ -21,14 +23,15 @@ internal interface IMarioState
 
 public class MarioState : IMarioState
 {
-    private enum MarioStateEnum {LeftStill, RightStill, LeftWalk, RightWalk, LeftRun, 
-        RightRun, LeftJump, RightJump, LeftCrouch, RightCrouch, LeftSwim, RightSwim, LeftTurning,
-        RightTurning, Dead };
+    private enum MarioStateEnum {Still, Walk, Run, Jump, Crouch, Swim, Turning, Dead };
     private enum MarioPowerupEnum {Base, Big, Fire };
 
+    private enum MarioDirectionEnum {Left, Right };
 
-    private MarioStateEnum currState = MarioStateEnum.RightStill;
+
+    private MarioStateEnum currState = MarioStateEnum.Still;
     private MarioPowerupEnum currPowerup = MarioPowerupEnum.Base;
+    private MarioDirectionEnum currDirection = MarioDirectionEnum.Right;
 
     public void TakeDamage()
     {
@@ -50,43 +53,41 @@ public class MarioState : IMarioState
     }
     public void Jump()
     {
-        switch (currState)
-        {
-            case MarioStateEnum.LeftStill:
-            case MarioStateEnum.LeftWalk:
-            case MarioStateEnum.LeftRun:
-            case MarioStateEnum.LeftTurning:
-                currState = MarioStateEnum.LeftJump;
-                break;
-            case MarioStateEnum.RightStill:
-            case MarioStateEnum.RightWalk:
-            case MarioStateEnum.RightRun:
-            case MarioStateEnum.RightTurning:
-                currState = MarioStateEnum.RightJump;
-                break;
-            default:
-                break;
-        }
+        currState = MarioStateEnum.Jump;
     }
     public void Update()
     {
 
     }
+    public void Stop()
+    {
+        currState = MarioStateEnum.Still;
+    }
     public void Walk()
     {
-
+        currState = MarioStateEnum.Walk;
     }
     public void Run()
     {
-
+        currState = MarioStateEnum.Run;
     }
     public void Swim()
     {
-
+        currState = MarioStateEnum.Swim;
     }
     public void Turn()
     {
-
+        switch (currDirection)
+        {
+            case MarioDirectionEnum.Left:
+                currDirection = MarioDirectionEnum.Right;
+                break;
+            case MarioDirectionEnum.Right:
+                currDirection = MarioDirectionEnum.Left;
+                break;
+            default:
+                break;
+        }
     }
     public void GetPowerup()
     {
@@ -94,24 +95,7 @@ public class MarioState : IMarioState
     }
     public void Crouch()
     {
-        switch (currState)
-        {
-            case MarioStateEnum.LeftStill:
-            case MarioStateEnum.LeftWalk:
-            case MarioStateEnum.LeftRun:
-            case MarioStateEnum.LeftTurning:
-                currState = MarioStateEnum.LeftCrouch;
-                break;
-            case MarioStateEnum.RightStill:
-            case MarioStateEnum.RightWalk:
-            case MarioStateEnum.RightRun:
-            case MarioStateEnum.RightTurning:
-                currState = MarioStateEnum.RightCrouch;
-                break;
-            default:
-                break;
-
-        }
+        currState = MarioStateEnum.Crouch;
     }
 }
 

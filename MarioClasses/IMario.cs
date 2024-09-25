@@ -10,11 +10,13 @@ public interface IMario
     void TakeDamage();
     void Update();
     void Jump();
+    void Stop();
     void Walk();
     void Run();
     void Swim();
     void Turn();
     void GetPowerup();
+    void GetStar();
     void Crouch();
 
 }
@@ -43,6 +45,11 @@ class Mario : IMario
     {
         state.Update();
     }
+
+    public void Stop()
+    {
+        state.Stop();
+    }
     public void Walk()
     { 
         state.Walk();
@@ -68,6 +75,10 @@ class Mario : IMario
     {
         state.GetPowerup();
     }
+    public void GetStar()
+    {
+        IMarioObject = new StarMario(this, IMarioObject);
+    }
 }
 
 class StarMario : IMario
@@ -75,7 +86,7 @@ class StarMario : IMario
     IMario decoratedMario;
     IMario IMarioObject;
     //Replace timer with however long the star lasts
-    int timer = 0;
+    int timer = 100;
 
     public StarMario(IMario decoratedMario, IMario mario)
     {
@@ -106,12 +117,22 @@ class StarMario : IMario
         decoratedMario.GetPowerup();
     }
 
+    public void GetStar()
+    {
+        //Do nothing since already has star
+        //Maybe reset timer?
+    }
+
     public void RemoveStar()
     {
         //Copied directly from carmen, change to better fix our project
         IMarioObject = decoratedMario;
     }
 
+    public void Stop()
+    {
+        decoratedMario.Stop();
+    }
     public void Walk()
     {
         decoratedMario.Walk();
@@ -176,44 +197,53 @@ class StarMario : IMario
     }
     */
 
- class FireMario : IMario
- {
-     IMario decoratedMario;
-     IMario IMarioObject;
-     public FireMario(IMario decoratedMario, IMario mario)
-     {
-         this.decoratedMario = decoratedMario;
-         IMarioObject = mario;
-     }
+class FireMario : IMario
+{
+    IMario decoratedMario;
+    IMario IMarioObject;
+    public FireMario(IMario decoratedMario, IMario mario)
+    {
+        this.decoratedMario = decoratedMario;
+        IMarioObject = mario;
+    }
 
-     public void TakeDamage()
-     {
-         decoratedMario.TakeDamage();
-     }
-     public void Jump()
-     {
-            decoratedMario.Jump();
-     }
-     public void Update()
-     {
-         decoratedMario.Update();
-     }
+    public void TakeDamage()
+    {
+        decoratedMario.TakeDamage();
+    }
+    public void Jump()
+    {
+           decoratedMario.Jump();
+    }
+    public void Update()
+    {
+        decoratedMario.Update();
+    }
 
-     public void RemovePowerup()
-     {
-         //Copied directly from carmen, change to better fix our project
-         IMarioObject = decoratedMario;
-     }
+    public void RemovePowerup()
+    {
+        //Copied directly from carmen, change to better fix our project
+        IMarioObject = decoratedMario;
+    }
 
-     public void ShootFire()
-     {
+    public void ShootFire()
+    {
+        //TODO: this
+    }
+    public void GetPowerup()
+    {
+       decoratedMario.GetPowerup();
+    }
 
-     }
-     public void GetPowerup()
-     {
-        decoratedMario.GetPowerup();
-     }
+    public void GetStar()
+    {
+        IMarioObject = new StarMario(this, IMarioObject);
+    }
 
+    public void Stop()
+    {
+        decoratedMario.Stop();
+    }
     public void Walk()
     {
         decoratedMario.Walk();

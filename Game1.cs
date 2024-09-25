@@ -105,6 +105,7 @@ public class Game1 : Game
         MovingLeftMarioAnimation.Load(graphics);
 
         firePower = new FirePower(ItemsTexture);
+        starPower = new StarPower(ItemsTexture);
 
 
 
