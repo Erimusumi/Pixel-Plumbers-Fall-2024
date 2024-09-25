@@ -104,6 +104,8 @@ public class Game1 : Game
         MovingLeftMarioAnimation = new MovingLeftMario(MarioTexture);
         MovingLeftMarioAnimation.Load(graphics);
 
+        firePower = new FirePower(ItemsTexture);
+
 
 
 
@@ -145,6 +147,7 @@ public class Game1 : Game
         spriteEnemy.Draw(spriteBatch, EnemyTexture);
         spriteBatch.Begin();
         CurrentMarioSprite.Draw(spriteBatch, MarioPosition);
+        //firePower.Draw(spriteBatch, new Vector2(200, 200));
         spriteBatch.End();
         base.Draw(gameTime);
     }
