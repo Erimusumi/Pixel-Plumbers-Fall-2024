@@ -45,11 +45,12 @@ public class Game1 : Game
     ISpriteEnemy spriteEnemy;
     IController controlG;
     Texture2D EnemyTexture;
+
     
     public Texture2D ItemsTexture;
     public ISprite firePower;
     public ISprite starPower;
-    
+    public int[] Items;
     
 
     private KeyboardController keyboardController;
