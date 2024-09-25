@@ -40,12 +40,13 @@ public class Game1 : Game
     public Boolean MovingLeft = false;
     public Boolean IsJumping = false;
 
-    public Texture2D ItemsTexture;
+   
     //Enemy Code
     ISpriteEnemy spriteEnemy;
     IController controlG;
     Texture2D EnemyTexture;
-
+    
+    public Texture2D ItemsTexture;
 
     private KeyboardController keyboardController;
     public Game1()
