@@ -104,6 +104,8 @@ public class Game1 : Game
         MovingLeftMarioAnimation.Load(graphics);
 
 
+
+
     }
 
     protected override void Update(GameTime gameTime)
