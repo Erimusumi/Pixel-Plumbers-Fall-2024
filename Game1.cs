@@ -20,7 +20,7 @@ public class Game1 : Game
     public float GroundPosition;
     public float updatedMarioSpeed;
 
-    public Texture2D ItemsTexture;
+    
 
     public ISprite IdleRightMario;
     public ISprite IdleLeftMario;
@@ -40,6 +40,7 @@ public class Game1 : Game
     public Boolean MovingLeft = false;
     public Boolean IsJumping = false;
 
+    public Texture2D ItemsTexture;
     //Enemy Code
     ISpriteEnemy spriteEnemy;
     IController controlG;
