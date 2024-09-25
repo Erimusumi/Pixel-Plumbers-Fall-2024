@@ -20,6 +20,8 @@ public class Game1 : Game
     public float GroundPosition;
     public float updatedMarioSpeed;
 
+    public Texture2D ItemsTexture;
+
     public ISprite IdleRightMario;
     public ISprite IdleLeftMario;
     public ISprite MovingRightMarioAnimation;
