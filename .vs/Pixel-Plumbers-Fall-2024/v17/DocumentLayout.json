@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariorep\\sprites\\item sprites\\firepower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\item sprites\\firepower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariorep\\content\\marioitems.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:content\\marioitems.png||{177559E0-D141-11D0-92DF-00A0C9138C45}"
     },
@@ -50,20 +54,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IdleLeftMario.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioRep\\Sprites\\Mario Sprites\\IdleLeftMario.cs",
-              "RelativeDocumentMoniker": "Sprites\\Mario Sprites\\IdleLeftMario.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioRep\\Sprites\\Mario Sprites\\IdleLeftMario.cs",
-              "RelativeToolTip": "Sprites\\Mario Sprites\\IdleLeftMario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "FirePower.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioRep\\Sprites\\Item Sprites\\FirePower.cs",
+              "RelativeDocumentMoniker": "Sprites\\Item Sprites\\FirePower.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioRep\\Sprites\\Item Sprites\\FirePower.cs",
+              "RelativeToolTip": "Sprites\\Item Sprites\\FirePower.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T17:22:44.378Z",
+              "WhenOpened": "2024-09-25T17:51:16.528Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ItemManagerClass.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioRep\\ItemClasses\\ItemManagerClass.cs",
               "RelativeDocumentMoniker": "ItemClasses\\ItemManagerClass.cs",
@@ -71,12 +75,11 @@
               "RelativeToolTip": "ItemClasses\\ItemManagerClass.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T17:19:55.489Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-25T17:19:55.489Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "BlockObjectClass.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioRep\\ItemClasses\\BlockObjectClass.cs",
               "RelativeDocumentMoniker": "ItemClasses\\BlockObjectClass.cs",
@@ -84,12 +87,11 @@
               "RelativeToolTip": "ItemClasses\\BlockObjectClass.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T17:19:08.233Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-25T17:19:08.233Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MarioItems.png - PNG [1013x625, 32 bit, PNG]",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioRep\\Content\\MarioItems.png",
               "RelativeDocumentMoniker": "Content\\MarioItems.png",
@@ -101,7 +103,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "mario.png - PNG [405x188, 32 bit, PNG]",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioRep\\Content\\mario.png",
               "RelativeDocumentMoniker": "Content\\mario.png",
@@ -119,14 +121,22 @@
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioRep\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAawJUAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAkwHgAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IdleLeftMario.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioRep\\Sprites\\Mario Sprites\\IdleLeftMario.cs",
+              "RelativeDocumentMoniker": "Sprites\\Mario Sprites\\IdleLeftMario.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioRep\\Sprites\\Mario Sprites\\IdleLeftMario.cs",
+              "RelativeToolTip": "Sprites\\Mario Sprites\\IdleLeftMario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T17:22:44.378Z"
             }
           ]
         }
