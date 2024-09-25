@@ -1,3 +1,2 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/kamau/Downloads/CSE3902/MarioRep/Content/mario.png","C:/Users/kamau/Downloads/CSE3902/MarioRep/Content/bin/DesktopGL/Content/mario.xnb","TextureProcessor","Texture2DContent",6584,304645,0.1954529
-"C:/Users/kamau/Downloads/CSE3902/MarioRep/Content/MarioItems.png","C:/Users/kamau/Downloads/CSE3902/MarioRep/Content/bin/DesktopGL/Content/MarioItems.xnb","TextureProcessor","Texture2DContent",38427,2532585,0.099756
+"C:/Users/creat/Source/Repos/Pixel-Plumbers-Fall-2024/Content/MarioItems.png","C:/Users/creat/Source/Repos/Pixel-Plumbers-Fall-2024/Content/bin/DesktopGL/Content/MarioItems.xnb","TextureProcessor","Texture2DContent",38427,2532585,0.9327121

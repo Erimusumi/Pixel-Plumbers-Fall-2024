@@ -17,7 +17,7 @@ internal interface IMarioState
     void Run();
     void Swim();
     void Turn();
-    void GetPowerup();
+    void GetPowerup(int powerupType);
     void Crouch();
 }
 
@@ -89,9 +89,24 @@ public class MarioState : IMarioState
                 break;
         }
     }
-    public void GetPowerup()
+    public void GetPowerup(int powerupType)
     {
+        //Probably a better way to get the type of powerup collected. For now, assume
+        //whatever calling this gives an int as input for type.
+        //0 = mushroom, 1 = fire flower
+        switch (powerupType)
+        {
+            case 0:
+                if (currPowerup = MarioPowerupEnum)
+                {
 
+                }
+                break;
+            case 1:
+                break;
+            default:
+                break;
+        }
     }
     public void Crouch()
     {
