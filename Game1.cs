@@ -47,6 +47,10 @@ public class Game1 : Game
     Texture2D EnemyTexture;
     
     public Texture2D ItemsTexture;
+    public ISprite firePower;
+    public ISprite starPower;
+    
+    
 
     private KeyboardController keyboardController;
     public Game1()
@@ -86,6 +90,8 @@ public class Game1 : Game
 
         MarioTexture = Content.Load<Texture2D>("mario");
         EnemyTexture = Content.Load<Texture2D>("enemies");
+        ItemsTexture = Content.Load<Texture2D>("MarioItems");
+
         IdleRightMario = new IdleRightMario(MarioTexture);
         IdleLeftMario = new IdleLeftMario(MarioTexture);
         JumpingRightMario = new JumpingRightMario(MarioTexture);
@@ -96,6 +102,8 @@ public class Game1 : Game
 
         MovingLeftMarioAnimation = new MovingLeftMario(MarioTexture);
         MovingLeftMarioAnimation.Load(graphics);
+
+
     }
 
     protected override void Update(GameTime gameTime)
