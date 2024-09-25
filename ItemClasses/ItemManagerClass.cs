@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
 public interface IitemManager
@@ -38,6 +39,22 @@ public class itemManager : IitemManager
             }
         }
 
+    }
+    void drawCurrentItem(int currentItem, int[] itemArray, SpriteBatch spriteBatch)
+    {
+        if (currentItem == 0)
+        {
+            itemArray[0];
+        }else if(currentItem == 1)
+        {
+            
+        }else if(currentItem == 2)
+        {
+
+        }else if(currentItem == 3)
+        {
+
+        }
     }
 }
 
