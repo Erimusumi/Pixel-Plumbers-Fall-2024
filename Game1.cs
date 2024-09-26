@@ -75,12 +75,22 @@ public class Game1 : Game
         keyboardController.addCommand(Keys.Right, SetMovingRightMarioCommand);
         keyboardController.addCommand(Keys.Left, SetMovingLeftMarioCommand);
         keyboardController.addCommand(Keys.Up, SetJumpingUpMarioCommand);
+        keyboardController.addCommand(Keys.P, new EnemySwitch(this));
 
         CurrentMarioSprite = IdleRightMario;
         
         Mario = new Mario(Mario);
         spriteEnemy = new Goomba();
         controlG = new GoombaCommand(spriteEnemy);
+    }
+    public ISpriteEnemy SetEnemy(ISpriteEnemy enemy)
+    {
+        spriteEnemy = enemy;
+        return spriteEnemy;
+    }
+    public void SetEnemyCommand(IController Enemy)
+    {
+        controlG = Enemy;
     }
 
     protected override void LoadContent()
@@ -111,6 +121,7 @@ public class Game1 : Game
 
 
     }
+
 
     protected override void Update(GameTime gameTime)
     {
