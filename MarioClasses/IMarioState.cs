@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 internal interface IMarioState
 {
     void TakeDamage();
+    void Die();
     void Jump();
     void Update();
     void Stop();
@@ -16,9 +17,11 @@ internal interface IMarioState
     void Walk();
     void Run();
     void Swim();
-    void Turn();
-    void GetPowerup(int powerupType);
+    void SwapDir();
+    void Turning();
+    void CollectPowerup(int powerupType);
     void Crouch();
+    
 }
 
 public class MarioState : IMarioState
@@ -47,9 +50,14 @@ public class MarioState : IMarioState
                 
             default:
                 //die
-                currState = MarioStateEnum.Dead;
+                this.Die();
                 break;
         }
+    }
+
+    public void Die()
+    {
+        currState = MarioStateEnum.Dead;
     }
     public void Jump()
     {
@@ -75,7 +83,7 @@ public class MarioState : IMarioState
     {
         currState = MarioStateEnum.Swim;
     }
-    public void Turn()
+    public void SwapDir()
     {
         switch (currDirection)
         {
@@ -89,7 +97,12 @@ public class MarioState : IMarioState
                 break;
         }
     }
-    public void GetPowerup(int powerupType)
+
+    public void Turning()
+    {
+        currState = MarioStateEnum.Turning;
+    }
+    public void CollectPowerup(int powerupType)
     {
         //Probably a better way to get the type of powerup collected. For now, assume
         //whatever calling this gives an int as input for type.

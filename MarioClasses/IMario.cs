@@ -14,9 +14,10 @@ public interface IMario
     void Walk();
     void Run();
     void Swim();
-    void Turn();
-    void GetPowerup();
-    void GetStar();
+    void SwapDir();
+    void Turning();
+    void CollectPowerup(int powType);
+    void CollectStar();
     void Crouch();
 
 }
@@ -26,11 +27,12 @@ class Mario : IMario
     IMarioState state;
     //IMarioObject is reference to IMario in Game1. Kept here as variable so that the
     //decorators can change it
-    IMario IMarioObject;
+    Game1 game;
 
-    public Mario(IMario mario)
+    public Mario(Game1 game)
     {
-        IMarioObject = mario;
+        this.game = game;
+        state = new MarioState();
     }
     
     public void TakeDamage()
@@ -63,35 +65,39 @@ class Mario : IMario
         state.Swim();
     }
 
-    public void Turn()
+    public void SwapDir()
     {
-        state.Turn();
+        state.SwapDir();
+    }
+    public void Turning()
+    {
+        state.Turning();
     }
     public void Crouch()
     {
         state.Crouch();
     }
-    public void GetPowerup()
+    public void CollectPowerup(int powType)
     {
-        state.GetPowerup();
+        state.CollectPowerup(powType);
     }
-    public void GetStar()
+    public void CollectStar()
     {
-        IMarioObject = new StarMario(this, IMarioObject);
+        game.Mario = new StarMario(this, this.game);
     }
 }
 
 class StarMario : IMario
 {
     IMario decoratedMario;
-    IMario IMarioObject;
+    Game1 game;
     //Replace timer with however long the star lasts
     int timer = 100;
 
-    public StarMario(IMario decoratedMario, IMario mario)
+    public StarMario(IMario decoratedMario, Game1 game)
     {
         this.decoratedMario = decoratedMario;
-        IMarioObject = mario;
+        this.game = game;
     }
 
     public void TakeDamage()
@@ -112,12 +118,12 @@ class StarMario : IMario
 
         decoratedMario.Update();
     }
-    public void GetPowerup()
+    public void CollectPowerup(int powType)
     {
-        decoratedMario.GetPowerup();
+        decoratedMario.CollectPowerup(powType);
     }
 
-    public void GetStar()
+    public void CollectStar()
     {
         //Do nothing since already has star
         //Maybe reset timer?
@@ -126,7 +132,7 @@ class StarMario : IMario
     public void RemoveStar()
     {
         //Copied directly from carmen, change to better fix our project
-        IMarioObject = decoratedMario;
+        game.Mario = decoratedMario;
     }
 
     public void Stop()
@@ -148,9 +154,14 @@ class StarMario : IMario
         decoratedMario.Swim();
     }
 
-    public void Turn()
+    public void SwapDir()
     {
-        decoratedMario.Turn();
+        decoratedMario.SwapDir();
+    }
+
+    public void Turning()
+    {
+        decoratedMario.Turning();
     }
 
     public void Crouch()
@@ -200,11 +211,11 @@ class StarMario : IMario
 class FireMario : IMario
 {
     IMario decoratedMario;
-    IMario IMarioObject;
-    public FireMario(IMario decoratedMario, IMario mario)
+    Game1 game;
+    public FireMario(IMario decoratedMario, Game1 game)
     {
         this.decoratedMario = decoratedMario;
-        IMarioObject = mario;
+        this.game = game;
     }
 
     public void TakeDamage()
@@ -223,21 +234,21 @@ class FireMario : IMario
     public void RemovePowerup()
     {
         //Copied directly from carmen, change to better fix our project
-        IMarioObject = decoratedMario;
+        game.Mario = decoratedMario;
     }
 
     public void ShootFire()
     {
         //TODO: this
     }
-    public void GetPowerup()
+    public void CollectPowerup(int powType)
     {
-       decoratedMario.GetPowerup();
+       //Fire Mario is the highest tier of powerup, collecting powerups will do nothing
     }
 
-    public void GetStar()
+    public void CollectStar()
     {
-        IMarioObject = new StarMario(this, IMarioObject);
+        game.Mario = new StarMario(this, game);
     }
 
     public void Stop()
@@ -259,9 +270,14 @@ class FireMario : IMario
         decoratedMario.Swim();
     }
 
-    public void Turn()
+    public void SwapDir()
     {
-        decoratedMario.Turn();
+        decoratedMario.SwapDir();
+    }
+
+    public void Turning()
+    {
+        decoratedMario.Turning();
     }
 
     public void Crouch()

@@ -50,8 +50,7 @@
               "RelativeToolTip": "Controllers\\KeyboardController.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAQwAQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T18:39:57.656Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-25T18:39:57.656Z"
             },
             {
               "$type": "Document",
@@ -63,8 +62,7 @@
               "RelativeToolTip": "MarioClasses\\IMarioState.cs",
               "ViewState": "AgIAAFwAAAAAAAAAAAAswGsAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-24T13:52:46.845Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-24T13:52:46.845Z"
             },
             {
               "$type": "Document",
@@ -89,8 +87,7 @@
               "RelativeToolTip": "Game1.cs",
               "ViewState": "AgIAAE8AAAAAAAAAAAAmwEwAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T18:15:02.512Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-16T18:15:02.512Z"
             }
           ]
         }
