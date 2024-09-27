@@ -1,6 +1,10 @@
-﻿using System;
+﻿using Pixel_Plumbers_Fall_2024;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -13,8 +17,6 @@ internal interface IMarioState
     void Jump();
     void Update();
     void Stop();
-    //Seperate walk and run might not be necessary, since I think the sprites are the same
-    void Walk();
     void Run();
     void Swim();
     void SwapDir();
@@ -26,15 +28,23 @@ internal interface IMarioState
 
 public class MarioState : IMarioState
 {
-    private enum MarioStateEnum {Still, Walk, Run, Jump, Crouch, Swim, Turning, Dead };
-    private enum MarioPowerupEnum {Base, Big, Fire };
-
-    private enum MarioDirectionEnum {Left, Right };
+    public enum MarioStateEnum {Still, Run, Jump, Crouch, Swim, Turning, Dead };
+    public enum MarioPowerupEnum {Base, Big, Fire };
+    public enum MarioDirectionEnum {Left, Right };
 
 
     private MarioStateEnum currState = MarioStateEnum.Still;
     private MarioPowerupEnum currPowerup = MarioPowerupEnum.Base;
     private MarioDirectionEnum currDirection = MarioDirectionEnum.Right;
+
+    private Vector2 MarioVelocity;
+
+    Game1 game;
+
+    public MarioState(Game1 game)
+    {
+        this.game = game;
+    }
 
     public void TakeDamage()
     {
@@ -60,20 +70,20 @@ public class MarioState : IMarioState
         currState = MarioStateEnum.Dead;
     }
     public void Jump()
-    {
+    { 
         currState = MarioStateEnum.Jump;
     }
-    public void Update()
-    {
-
-    }
+    
     public void Stop()
     {
         currState = MarioStateEnum.Still;
     }
-    public void Walk()
+    public void Crouch()
     {
-        currState = MarioStateEnum.Walk;
+        if (currState != MarioStateEnum.Jump)
+        {
+            currState = MarioStateEnum.Crouch;
+        }
     }
     public void Run()
     {
@@ -125,9 +135,99 @@ public class MarioState : IMarioState
                 break;
         }
     }
-    public void Crouch()
+
+    public MarioStateEnum GetState()
     {
-        currState = MarioStateEnum.Crouch;
+        return this.currState;
+    }
+
+    public MarioDirectionEnum GetDirection()
+    {
+        return this.currDirection;
+    }
+
+    public MarioPowerupEnum GetPowerup()
+    {
+        return this.currPowerup;
+    }
+    
+    void UpdateCheckIfStill()
+    {
+        if (MarioVelocity.X == 0)
+        {
+            switch (currState)
+            {
+                case MarioStateEnum.Still:
+                case MarioStateEnum.Run:
+                case MarioStateEnum.Turning:
+                    this.Stop();
+                    break;
+                case MarioStateEnum.Jump:
+                case MarioStateEnum.Crouch:
+                case MarioStateEnum.Swim:
+                case MarioStateEnum.Dead:
+                    break;
+            }
+        }
+    }
+    void UpdateCheckIfTurning()
+    {
+        
+        if (MarioVelocity.X > 0)
+        {
+            switch (currDirection)
+            {
+                case MarioDirectionEnum.Left:
+                    this.Turning();
+                    break;
+                case MarioDirectionEnum.Right:
+                    this.Run();
+                    break;
+            }
+        }
+        else if (MarioVelocity.X < 0)
+        {
+            switch (currDirection)
+            {
+                case MarioDirectionEnum.Left:
+                    this.Run();
+                    break;
+                case MarioDirectionEnum.Right:
+                    this.Turning();
+                    break;
+            }
+        }
+    }
+
+    void UpdateStopJumping()
+    {
+        if ((currState == MarioStateEnum.Jump) && (MarioVelocity.Y == 0))
+        {
+            switch (MarioVelocity.X)
+            {
+                case 0:
+                    this.Stop();
+                    break;
+                default:
+                    this.Run();
+                    break;
+            }
+        }
+    }
+
+    
+
+    public void Update()
+    {
+        this.MarioVelocity = game.MarioVelocity;
+
+        this.UpdateCheckIfStill();
+        
+        this.UpdateStopJumping();
+
+        this.UpdateCheckIfTurning();
+
+        MarioSpriteConstructor.ConstructMarioSprite(this, game);
     }
 }
 
