@@ -32,6 +32,7 @@ public class Game1 : Game
     public ICommand SetMovingRightMarioCommand;
     public ICommand SetMovingLeftMarioCommand;
     public ICommand SetJumpingUpMarioCommand;
+    public ICommand EnemySwitch;
 
     public ISprite CurrentMarioSprite;
 
@@ -74,12 +75,14 @@ public class Game1 : Game
         SetJumpingUpMarioCommand = new SetJumpUp(this);
         SetMovingRightMarioCommand = new SetMoveRightCommand(this);
         SetMovingLeftMarioCommand = new SetMoveLeftCommand(this);
+        EnemySwitch = new EnemySwitch(this);
 
         keyboardController = new KeyboardController();
         keyboardController.addCommand(Keys.Right, SetMovingRightMarioCommand);
         keyboardController.addCommand(Keys.Left, SetMovingLeftMarioCommand);
         keyboardController.addCommand(Keys.Up, SetJumpingUpMarioCommand);
-        keyboardController.addCommand(Keys.P, new EnemySwitch(this));
+        keyboardController.addCommand(Keys.P, EnemySwitch);
+        keyboardController.addCommand(Keys.O, EnemySwitch);
 
         CurrentMarioSprite = IdleRightMario;
 
