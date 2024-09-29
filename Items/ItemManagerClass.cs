@@ -47,13 +47,14 @@ public class itemManager : IitemManager
         }
         else if (currentItem == 1)
         {
-            FirePower firePower = new FirePower(itemsText);
-            firePower.Draw(sB, position);
+            FirePower fp = new FirePower(itemsText);
+            fp.Draw(sB, position);
 
         }
         else if (currentItem == 2)
         {
-
+            MushroomPower mp = new MushroomPower(itemsText);
+            mp.Draw(sB, position);
         }
     }
 }
