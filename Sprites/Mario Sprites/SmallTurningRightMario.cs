@@ -1,12 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
-namespace Pixel-Plumbers-Fall-2024.Sprites.Mario_Sprites
+public class SmallTurningRightMario : ISprite
 {
-    internal class SmallTurningRightMario
-{
-}
+    private Texture2D MarioTexture;
+    public SmallTurningRightMario(Texture2D MarioTexture)
+    {
+        this.MarioTexture = MarioTexture;
+    }
+    public void Draw(SpriteBatch spriteBatch, Vector2 position)
+    {
+        //TODO: get correct sprite source
+        Rectangle sourceRectangle = new Rectangle(-1, -1, -1, -1);
+        spriteBatch.Draw(MarioTexture, position, sourceRectangle, Color.White);
+    }
+
+    public void Load(GraphicsDeviceManager graphics)
+    {
+    }
+
+    public void Update(GameTime gametime)
+    {
+    }
 }
