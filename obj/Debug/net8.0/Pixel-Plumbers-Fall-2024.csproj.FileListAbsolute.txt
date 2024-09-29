@@ -98,3 +98,12 @@ C:\Users\kamau\Downloads\CSE3902\MarioRep\obj\Debug\net8.0\refint\Pixel-Plumbers
 C:\Users\kamau\Downloads\CSE3902\MarioRep\obj\Debug\net8.0\Pixel-Plumbers-Fall-2024.pdb
 C:\Users\kamau\Downloads\CSE3902\MarioRep\obj\Debug\net8.0\Pixel-Plumbers-Fall-2024.genruntimeconfig.cache
 C:\Users\kamau\Downloads\CSE3902\MarioRep\obj\Debug\net8.0\ref\Pixel-Plumbers-Fall-2024.dll
+C:\Users\kamau\Downloads\CSE3902\Mariooo\obj\Debug\net8.0\Pixel-Plumbers-Fall-2024.csproj.AssemblyReference.cache
+C:\Users\kamau\Downloads\CSE3902\Mariooo\obj\Debug\net8.0\Pixel-Plumbers-Fall-2024.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kamau\Downloads\CSE3902\Mariooo\obj\Debug\net8.0\Pixel-Plumbers-Fall-2024.AssemblyInfoInputs.cache
+C:\Users\kamau\Downloads\CSE3902\Mariooo\obj\Debug\net8.0\Pixel-Plumbers-Fall-2024.AssemblyInfo.cs
+C:\Users\kamau\Downloads\CSE3902\Mariooo\obj\Debug\net8.0\Pixel-Plumbers-Fall-2024.csproj.CoreCompileInputs.cache
+C:\Users\kamau\Downloads\CSE3902\Mariooo\obj\Debug\net8.0\Pixel-Plumbers-Fall-2024.sourcelink.json
+C:\Users\kamau\Downloads\CSE3902\Mariooo\obj\Debug\net8.0\Pixel-Plumbers-Fall-2024.dll
+C:\Users\kamau\Downloads\CSE3902\Mariooo\obj\Debug\net8.0\refint\Pixel-Plumbers-Fall-2024.dll
+C:\Users\kamau\Downloads\CSE3902\Mariooo\obj\Debug\net8.0\Pixel-Plumbers-Fall-2024.pdb

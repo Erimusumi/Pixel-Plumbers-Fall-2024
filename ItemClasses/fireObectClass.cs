@@ -1,21 +1,17 @@
 ﻿using System;
 using System.Runtime.InteropServices;
-public interface IStarObject
+public interface IFireObject
 {
-    void star();
+    void firePowerItem();
     Boolean idleState();
     Boolean collectedState();
-
-
-
-
 }
-public class StarObject : IStarObject
+public class firePower : IFireObject
 {
     private Boolean idle;
     private Boolean collected;
 
-    public void star()
+    public void firePowerItem()
     {
         this.idle = false;
         this.collected = false;
@@ -29,7 +25,6 @@ public class StarObject : IStarObject
 
         return this.collected;
     }
-    
+
 
 }
-
