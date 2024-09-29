@@ -1,7 +1,7 @@
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public class MovingLeftMario : ISprite
+public class FireRunRightMario : ISprite
 {
     private Texture2D MarioTexture;
     private float GameTicks;
@@ -10,7 +10,7 @@ public class MovingLeftMario : ISprite
     private int currentAnimationIndex = 0;
 
     private Rectangle[] FrameRectangles;
-    public MovingLeftMario(Texture2D MarioTexture)
+    public FireRunRightMario(Texture2D MarioTexture)
     {
         this.MarioTexture = MarioTexture;
     }
@@ -26,9 +26,10 @@ public class MovingLeftMario : ISprite
         AnimationSpeed = 100;
 
         FrameRectangles = new Rectangle[3];
-        FrameRectangles[0] = new Rectangle(150, 52, 16, 32);
-        FrameRectangles[1] = new Rectangle(121, 52, 14, 31);
-        FrameRectangles[2] = new Rectangle(90, 53, 16, 30);
+        //TODO: Get correct sprite source
+        FrameRectangles[0] = new Rectangle(-1, -1, -1, -1);
+        FrameRectangles[1] = new Rectangle(-1, -1, -1, -1);
+        FrameRectangles[2] = new Rectangle(-1, -1, -1, -1);
 
         previousAnimationIndex = 2;
         currentAnimationIndex = 1;

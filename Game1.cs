@@ -22,12 +22,12 @@ public class Game1 : Game
 
     
 
-    public ISprite IdleRightMario;
-    public ISprite IdleLeftMario;
-    public ISprite MovingRightMarioAnimation;
-    public ISprite MovingLeftMarioAnimation;
-    public ISprite JumpingRightMario;
-    public ISprite JumpingLeftMario;
+    public ISprite BigIdleRightMario;
+    public ISprite BigIdleLeftMario;
+    public ISprite BigRunRightMarioAnimation;
+    public ISprite BigRunLeftMarioAnimation;
+    public ISprite BigJumpRightMario;
+    public ISprite BigJumpLeftMario;
 
     public ISprite CurrentMarioSprite;
 
@@ -71,7 +71,7 @@ public class Game1 : Game
         keyboardController = new KeyboardController();
         controlCenter = new CommandControlCenter(this);
 
-        CurrentMarioSprite = IdleRightMario;
+        CurrentMarioSprite = BigIdleRightMario;
         
         Mario = new Mario(this);
         spriteEnemy = new Goomba();
@@ -101,16 +101,16 @@ public class Game1 : Game
         EnemyTexture = Content.Load<Texture2D>("enemies");
         ItemsTexture = Content.Load<Texture2D>("MarioItems");
 
-        IdleRightMario = new IdleRightMario(MarioTexture);
-        IdleLeftMario = new IdleLeftMario(MarioTexture);
-        JumpingRightMario = new JumpingRightMario(MarioTexture);
-        JumpingLeftMario = new JumpingLeftMario(MarioTexture);
+        BigIdleRightMario = new BigIdleRightMario(MarioTexture);
+        BigIdleLeftMario = new BigIdleLeftMario(MarioTexture);
+        BigJumpRightMario = new BigJumpRightMario(MarioTexture);
+        BigJumpLeftMario = new BigJumpLeftMario(MarioTexture);
 
-        MovingRightMarioAnimation = new MovingRightMario(MarioTexture);
-        MovingRightMarioAnimation.Load(graphics);
+        BigRunRightMarioAnimation = new BigRunRightMario(MarioTexture);
+        BigRunRightMarioAnimation.Load(graphics);
 
-        MovingLeftMarioAnimation = new MovingLeftMario(MarioTexture);
-        MovingLeftMarioAnimation.Load(graphics);
+        BigRunLeftMarioAnimation = new BigRunLeftMario(MarioTexture);
+        BigRunLeftMarioAnimation.Load(graphics);
 
         firePower = new FirePower(ItemsTexture);
         starPower = new StarPower(ItemsTexture);
@@ -125,11 +125,11 @@ public class Game1 : Game
     {
         if (!IsJumping && FacingRight)
         {
-            CurrentMarioSprite = IdleRightMario;
+            CurrentMarioSprite = BigIdleRightMario;
         }
         else if (!IsJumping && !FacingRight)
         {
-            CurrentMarioSprite = IdleLeftMario;
+            CurrentMarioSprite = BigIdleLeftMario;
         }
 
         keyboardController.Update(gameTime);
