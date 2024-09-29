@@ -29,11 +29,6 @@ public class Game1 : Game
     public ISprite BigJumpRightMario;
     public ISprite BigJumpLeftMario;
 
-    public ICommand SetMovingRightMarioCommand;
-    public ICommand SetMovingLeftMarioCommand;
-    public ICommand SetJumpingUpMarioCommand;
-    public ICommand EnemySwitch;
-
     public ISprite CurrentMarioSprite;
 
     public Boolean FacingRight = true;
@@ -59,6 +54,7 @@ public class Game1 : Game
     
 
     private KeyboardController keyboardController;
+    private CommandControlCenter controlCenter;
     public Game1()
     {
         graphics = new GraphicsDeviceManager(this);
@@ -72,17 +68,8 @@ public class Game1 : Game
         GroundPosition = graphics.PreferredBackBufferHeight / 2;
         MarioVelocity = Vector2.Zero;
 
-        SetJumpingUpMarioCommand = new SetJumpUp(this);
-        SetMovingRightMarioCommand = new SetMoveRightCommand(this);
-        SetMovingLeftMarioCommand = new SetMoveLeftCommand(this);
-        EnemySwitch = new EnemySwitch(this);
-
         keyboardController = new KeyboardController();
-        keyboardController.addCommand(Keys.Right, SetMovingRightMarioCommand);
-        keyboardController.addCommand(Keys.Left, SetMovingLeftMarioCommand);
-        keyboardController.addCommand(Keys.Up, SetJumpingUpMarioCommand);
-        keyboardController.addCommand(Keys.P, EnemySwitch);
-        keyboardController.addCommand(Keys.O, EnemySwitch);
+        controlCenter = new CommandControlCenter(this);
 
         CurrentMarioSprite = BigIdleRightMario;
         
@@ -98,6 +85,10 @@ public class Game1 : Game
     public void SetEnemyCommand(IController Enemy)
     {
         controlG = Enemy;
+    }
+    public void SetKey(KeyboardController keys)
+    {
+        keyboardController = keys;
     }
 
     protected override void LoadContent()
