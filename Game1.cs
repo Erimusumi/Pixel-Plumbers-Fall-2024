@@ -32,6 +32,7 @@ public class Game1 : Game
     public ICommand SetMovingRightMarioCommand;
     public ICommand SetMovingLeftMarioCommand;
     public ICommand SetJumpingUpMarioCommand;
+    public ICommand EnemySwitch;
 
     public ISprite CurrentMarioSprite;
 
@@ -50,7 +51,11 @@ public class Game1 : Game
     public Texture2D ItemsTexture;
     public ISprite firePower;
     public ISprite starPower;
-    public int[] Items;
+    public ISprite mushroom;
+    Vector2 itemsPos = new Vector2(100, 500);
+    ItemManager manager = new ItemManager();
+    public int numItems = 3;
+    public int currentItem = 0;
     
 
     private KeyboardController keyboardController;
@@ -70,12 +75,14 @@ public class Game1 : Game
         SetJumpingUpMarioCommand = new SetJumpUp(this);
         SetMovingRightMarioCommand = new SetMoveRightCommand(this);
         SetMovingLeftMarioCommand = new SetMoveLeftCommand(this);
+        EnemySwitch = new EnemySwitch(this);
 
         keyboardController = new KeyboardController();
         keyboardController.addCommand(Keys.Right, SetMovingRightMarioCommand);
         keyboardController.addCommand(Keys.Left, SetMovingLeftMarioCommand);
         keyboardController.addCommand(Keys.Up, SetJumpingUpMarioCommand);
-        keyboardController.addCommand(Keys.P, new EnemySwitch(this));
+        keyboardController.addCommand(Keys.P, EnemySwitch);
+        keyboardController.addCommand(Keys.O, EnemySwitch);
 
         CurrentMarioSprite = IdleRightMario;
         
@@ -148,18 +155,17 @@ public class Game1 : Game
         CurrentMarioSprite.Update(gameTime);
         spriteEnemy.Updates();
         controlG.Update(gameTime);
-
+        manager.updateCurrentItem(currentItem, numItems);
         base.Update(gameTime);
     }
 
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
-
         spriteEnemy.Draw(spriteBatch, EnemyTexture);
         spriteBatch.Begin();
         CurrentMarioSprite.Draw(spriteBatch, MarioPosition);
-        //firePower.Draw(spriteBatch, new Vector2(200, 200));
+        manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
         spriteBatch.End();
         base.Draw(gameTime);
     }
