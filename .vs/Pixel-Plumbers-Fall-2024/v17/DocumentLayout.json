@@ -7,6 +7,18 @@
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:items\\itemmanagerclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariooo\\items\\fireobectclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:items\\fireobectclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariooo\\marioclasses\\imario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:marioclasses\\imario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariooo\\marioclasses\\imariostate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:marioclasses\\imariostate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariooo\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,14 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariooo\\items\\starobjectclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:items\\starobjectclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariooo\\marioclasses\\imariostate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:marioclasses\\imariostate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariooo\\marioclasses\\imario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:marioclasses\\imario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,24 +38,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "fireObectClass.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Mariooo\\Items\\fireObectClass.cs",
+              "RelativeDocumentMoniker": "Items\\fireObectClass.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Mariooo\\Items\\fireObectClass.cs",
+              "RelativeToolTip": "Items\\fireObectClass.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T06:03:32.589Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ItemManagerClass.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Mariooo\\Items\\ItemManagerClass.cs",
               "RelativeDocumentMoniker": "Items\\ItemManagerClass.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Mariooo\\Items\\ItemManagerClass.cs",
-              "RelativeToolTip": "Items\\ItemManagerClass.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAA1wAcAAAAuAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Mariooo\\Items\\ItemManagerClass.cs*",
+              "RelativeToolTip": "Items\\ItemManagerClass.cs*",
+              "ViewState": "AgIAACMAAAAAAAAAAAAgwCwAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-29T05:38:26.129Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "StarObjectClass.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Mariooo\\Items\\StarObjectClass.cs",
               "RelativeDocumentMoniker": "Items\\StarObjectClass.cs",
@@ -76,7 +93,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "KeyboardController.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Mariooo\\Controllers\\KeyboardController.cs",
               "RelativeDocumentMoniker": "Controllers\\KeyboardController.cs",
@@ -89,39 +106,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "IMarioState.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Mariooo\\MarioClasses\\IMarioState.cs",
               "RelativeDocumentMoniker": "MarioClasses\\IMarioState.cs",
               "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Mariooo\\MarioClasses\\IMarioState.cs",
               "RelativeToolTip": "MarioClasses\\IMarioState.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAswGsAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-24T13:52:46.845Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "IMario.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Mariooo\\MarioClasses\\IMario.cs",
               "RelativeDocumentMoniker": "MarioClasses\\IMario.cs",
               "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Mariooo\\MarioClasses\\IMario.cs",
               "RelativeToolTip": "MarioClasses\\IMario.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-24T13:51:09.285Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Mariooo\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Mariooo\\Game1.cs",
-              "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAAwDQAAAAOAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Mariooo\\Game1.cs*",
+              "RelativeToolTip": "Game1.cs*",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAuwJoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
               "EditorCaption": ""

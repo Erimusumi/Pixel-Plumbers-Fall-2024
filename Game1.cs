@@ -49,7 +49,7 @@ public class Game1 : Game
     
     public Texture2D ItemsTexture;
     public ISprite firePower;
-    public ISprite starPower;
+    public ISprite starPower; 
     public int numItems = 3;
     public int currentItem = 0;
     
@@ -156,7 +156,6 @@ public class Game1 : Game
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
-
         spriteEnemy.Draw(spriteBatch, EnemyTexture);
         spriteBatch.Begin();
         CurrentMarioSprite.Draw(spriteBatch, MarioPosition);
