@@ -3,12 +3,12 @@ using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
-using System.Numerics;
+using Microsoft.Xna.Framework;
 public interface IitemManager
 {
     void updateCurrentItem(int curr, int num);
 }
-public class itemManager : IitemManager
+public class ItemManager : IitemManager
 {
     public void updateCurrentItem(int currentItem, int numItems)
     {
@@ -38,7 +38,7 @@ public class itemManager : IitemManager
         }
 
     }
-    public void draw(int currentItem, Texture2D itemsText, SpriteBatch sB, Vector2 position)
+    public void draw(int currentItem, Texture2D itemsText, SpriteBatch sB,Vector2 position)
     {
         if (currentItem == 0)
         {

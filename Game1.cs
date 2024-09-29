@@ -49,7 +49,10 @@ public class Game1 : Game
     
     public Texture2D ItemsTexture;
     public ISprite firePower;
-    public ISprite starPower; 
+    public ISprite starPower;
+    public ISprite mushroom;
+    Vector2 itemsPos = new Vector2(100, 500);
+    ItemManager manager = new ItemManager();
     public int numItems = 3;
     public int currentItem = 0;
     
@@ -79,7 +82,7 @@ public class Game1 : Game
         keyboardController.addCommand(Keys.P, new EnemySwitch(this));
 
         CurrentMarioSprite = IdleRightMario;
-        
+
         Mario = new Mario(Mario);
         spriteEnemy = new Goomba();
         controlG = new GoombaCommand(spriteEnemy);
@@ -149,7 +152,7 @@ public class Game1 : Game
         CurrentMarioSprite.Update(gameTime);
         spriteEnemy.Updates();
         controlG.Update(gameTime);
-
+        manager.updateCurrentItem(currentItem, numItems);
         base.Update(gameTime);
     }
 
@@ -159,7 +162,7 @@ public class Game1 : Game
         spriteEnemy.Draw(spriteBatch, EnemyTexture);
         spriteBatch.Begin();
         CurrentMarioSprite.Draw(spriteBatch, MarioPosition);
-        //firePower.Draw(spriteBatch, new Vector2(200, 200));
+        manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
         spriteBatch.End();
         base.Draw(gameTime);
     }
