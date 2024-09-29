@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public class MovingRightMario : ISprite
+public class BigRunRightMario : ISprite
 {
     private Texture2D MarioTexture;
     private float GameTicks;
@@ -10,7 +10,7 @@ public class MovingRightMario : ISprite
     private int currentAnimationIndex = 0;
 
     private Rectangle[] FrameRectangles;
-    public MovingRightMario(Texture2D MarioTexture)
+    public BigRunRightMario(Texture2D MarioTexture)
     {
         this.MarioTexture = MarioTexture;
     }

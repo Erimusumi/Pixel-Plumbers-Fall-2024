@@ -22,16 +22,17 @@ public class Game1 : Game
 
     
 
-    public ISprite IdleRightMario;
-    public ISprite IdleLeftMario;
-    public ISprite MovingRightMarioAnimation;
-    public ISprite MovingLeftMarioAnimation;
-    public ISprite JumpingRightMario;
-    public ISprite JumpingLeftMario;
+    public ISprite BigIdleRightMario;
+    public ISprite BigIdleLeftMario;
+    public ISprite BigRunRightMarioAnimation;
+    public ISprite BigRunLeftMarioAnimation;
+    public ISprite BigJumpRightMario;
+    public ISprite BigJumpLeftMario;
 
     public ICommand SetMovingRightMarioCommand;
     public ICommand SetMovingLeftMarioCommand;
     public ICommand SetJumpingUpMarioCommand;
+    public ICommand EnemySwitch;
 
     public ISprite CurrentMarioSprite;
 
@@ -50,7 +51,11 @@ public class Game1 : Game
     public Texture2D ItemsTexture;
     public ISprite firePower;
     public ISprite starPower;
-    public int[] Items;
+    public ISprite mushroom;
+    Vector2 itemsPos = new Vector2(100, 500);
+    ItemManager manager = new ItemManager();
+    public int numItems = 3;
+    public int currentItem = 0;
     
 
     private KeyboardController keyboardController;
@@ -70,14 +75,16 @@ public class Game1 : Game
         SetJumpingUpMarioCommand = new SetJumpUp(this);
         SetMovingRightMarioCommand = new SetMoveRightCommand(this);
         SetMovingLeftMarioCommand = new SetMoveLeftCommand(this);
+        EnemySwitch = new EnemySwitch(this);
 
         keyboardController = new KeyboardController();
         keyboardController.addCommand(Keys.Right, SetMovingRightMarioCommand);
         keyboardController.addCommand(Keys.Left, SetMovingLeftMarioCommand);
         keyboardController.addCommand(Keys.Up, SetJumpingUpMarioCommand);
-        keyboardController.addCommand(Keys.P, new EnemySwitch(this));
+        keyboardController.addCommand(Keys.P, EnemySwitch);
+        keyboardController.addCommand(Keys.O, EnemySwitch);
 
-        CurrentMarioSprite = IdleRightMario;
+        CurrentMarioSprite = BigIdleRightMario;
         
         Mario = new Mario(this);
         spriteEnemy = new Goomba();
@@ -103,16 +110,16 @@ public class Game1 : Game
         EnemyTexture = Content.Load<Texture2D>("enemies");
         ItemsTexture = Content.Load<Texture2D>("MarioItems");
 
-        IdleRightMario = new IdleRightMario(MarioTexture);
-        IdleLeftMario = new IdleLeftMario(MarioTexture);
-        JumpingRightMario = new JumpingRightMario(MarioTexture);
-        JumpingLeftMario = new JumpingLeftMario(MarioTexture);
+        BigIdleRightMario = new BigIdleRightMario(MarioTexture);
+        BigIdleLeftMario = new BigIdleLeftMario(MarioTexture);
+        BigJumpRightMario = new BigJumpRightMario(MarioTexture);
+        BigJumpLeftMario = new BigJumpLeftMario(MarioTexture);
 
-        MovingRightMarioAnimation = new MovingRightMario(MarioTexture);
-        MovingRightMarioAnimation.Load(graphics);
+        BigRunRightMarioAnimation = new BigRunRightMario(MarioTexture);
+        BigRunRightMarioAnimation.Load(graphics);
 
-        MovingLeftMarioAnimation = new MovingLeftMario(MarioTexture);
-        MovingLeftMarioAnimation.Load(graphics);
+        BigRunLeftMarioAnimation = new BigRunLeftMario(MarioTexture);
+        BigRunLeftMarioAnimation.Load(graphics);
 
         firePower = new FirePower(ItemsTexture);
         starPower = new StarPower(ItemsTexture);
@@ -127,11 +134,11 @@ public class Game1 : Game
     {
         if (!IsJumping && FacingRight)
         {
-            CurrentMarioSprite = IdleRightMario;
+            CurrentMarioSprite = BigIdleRightMario;
         }
         else if (!IsJumping && !FacingRight)
         {
-            CurrentMarioSprite = IdleLeftMario;
+            CurrentMarioSprite = BigIdleLeftMario;
         }
 
         keyboardController.Update(gameTime);
@@ -148,18 +155,17 @@ public class Game1 : Game
         CurrentMarioSprite.Update(gameTime);
         spriteEnemy.Updates();
         controlG.Update(gameTime);
-
+        manager.updateCurrentItem(currentItem, numItems);
         base.Update(gameTime);
     }
 
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
-
         spriteEnemy.Draw(spriteBatch, EnemyTexture);
         spriteBatch.Begin();
         CurrentMarioSprite.Draw(spriteBatch, MarioPosition);
-        //firePower.Draw(spriteBatch, new Vector2(200, 200));
+        manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
         spriteBatch.End();
         base.Draw(gameTime);
     }
