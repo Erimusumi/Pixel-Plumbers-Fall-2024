@@ -16,7 +16,6 @@ public class BigRunRightMario : ISprite
     }
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
-        Rectangle sourceRectangle = new Rectangle(0, 0, 48, 64);
         spriteBatch.Draw(MarioTexture, position, FrameRectangles[currentAnimationIndex], Color.White);
     }
 

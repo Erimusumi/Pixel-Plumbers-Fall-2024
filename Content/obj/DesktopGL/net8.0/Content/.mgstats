@@ -1,4 +1,2 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Projects/Content/enemies.png","C:/Projects/Content/bin/DesktopGL/Content/enemies.xnb","TextureProcessor","Texture2DContent",8295,455269,0.2526416
-"C:/Projects/Content/mario.png","C:/Projects/Content/bin/DesktopGL/Content/mario.xnb","TextureProcessor","Texture2DContent",6584,304645,0.0275167
-"C:/Projects/Content/MarioItems.png","C:/Projects/Content/bin/DesktopGL/Content/MarioItems.xnb","TextureProcessor","Texture2DContent",38427,2532585,0.1467609
+"C:/Users/creat/Source/Repos/Pixel-Plumbers-Fall-2024/Content/enemies.png","C:/Users/creat/Source/Repos/Pixel-Plumbers-Fall-2024/Content/bin/DesktopGL/Content/enemies.xnb","TextureProcessor","Texture2DContent",8295,455269,0.160997
