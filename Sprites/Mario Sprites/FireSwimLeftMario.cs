@@ -27,9 +27,9 @@ public class FireSwimLeftMario : ISprite
 
         FrameRectangles = new Rectangle[3];
         //TODO: Get correct sprite source
-        FrameRectangles[0] = new Rectangle(-1, -1, -1, -1);
-        FrameRectangles[1] = new Rectangle(-1, -1, -1, -1);
-        FrameRectangles[2] = new Rectangle(-1, -1, -1, -1);
+        FrameRectangles[0] = new Rectangle(152, 158, 16, 29);
+        FrameRectangles[1] = new Rectangle(127, 158, 16, 29);
+        FrameRectangles[2] = new Rectangle(103, 158, 14, 30);
 
         previousAnimationIndex = 2;
         currentAnimationIndex = 1;

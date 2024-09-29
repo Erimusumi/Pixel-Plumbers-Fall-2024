@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -42,7 +43,6 @@ public class Game1 : Game
     IController controlG;
     Texture2D EnemyTexture;
 
-    
     public Texture2D ItemsTexture;
     public ISprite firePower;
     public ISprite starPower;
@@ -51,7 +51,16 @@ public class Game1 : Game
     ItemManager manager = new ItemManager();
     public int numItems = 3;
     public int currentItem = 0;
-    
+
+    //Block Code
+    private Texture2D block;
+    private KeyboardController controller;
+    private List<ISprite> sprite1;
+    public int index1 = 0;
+    public int n1;
+    //private List<ISprite> sprite2;
+    //public int index2 = 0;
+    //public int n2;
 
     private KeyboardController keyboardController;
     private CommandControlCenter controlCenter;
@@ -76,6 +85,15 @@ public class Game1 : Game
         Mario = new Mario(this);
         spriteEnemy = new Goomba();
         controlG = new GoombaCommand(spriteEnemy);
+
+        //Make a list for block iteration
+        sprite1 = new List<ISprite>
+            {
+                //new BrokenBrickBlockSprite(),
+                //new LuckyBlockSprite(),
+                //new UsedBlockSprite(),
+                new block1(block)
+            };
     }
     public ISpriteEnemy SetEnemy(ISpriteEnemy enemy)
     {
@@ -100,6 +118,7 @@ public class Game1 : Game
         MarioTexture = Content.Load<Texture2D>("mario");
         EnemyTexture = Content.Load<Texture2D>("enemies");
         ItemsTexture = Content.Load<Texture2D>("MarioItems");
+        block = Content.Load<Texture2D>("blocks");
 
         BigIdleRightMario = new BigIdleRightMario(MarioTexture);
         BigIdleLeftMario = new BigIdleLeftMario(MarioTexture);
@@ -147,6 +166,8 @@ public class Game1 : Game
         spriteEnemy.Updates();
         controlG.Update(gameTime);
         manager.updateCurrentItem(currentItem, numItems);
+        sprite1[index1].Update(gameTime);
+        sprite2[index2].Update(gameTime);
         base.Update(gameTime);
     }
 
@@ -158,6 +179,8 @@ public class Game1 : Game
         CurrentMarioSprite.Draw(spriteBatch, MarioPosition);
         manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
         spriteBatch.End();
+        sprite1[index2].Draw(spriteBatch, new Vector2(0,0));
+        sprite2[index2].Draw(spriteBatch, new Vector2(0,0));
         base.Draw(gameTime);
     }
 }

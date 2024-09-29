@@ -11,7 +11,7 @@ public class FireCrouchLeftMario : ISprite
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
         //TODO: get correct sprite source
-        Rectangle sourceRectangle = new Rectangle(-1, -1, -1, -1);
+        Rectangle sourceRectangle = new Rectangle(0, 127, 16, 22);
         spriteBatch.Draw(MarioTexture, position, sourceRectangle, Color.White);
     }
 
