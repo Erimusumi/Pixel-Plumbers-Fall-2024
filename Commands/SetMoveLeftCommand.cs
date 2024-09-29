@@ -10,14 +10,19 @@ public class SetMoveLeftCommand : ICommand
     }
     public void Execute()
     {
+        if (game.MovingRight == true)
+        {
+            game.Mario.SwapDir();
+        }
+
         game.FacingRight = false;
         game.MovingRight = false;
         game.MovingLeft = true;
         game.MarioPosition.X -= game.updatedMarioSpeed;
 
-        if (!game.IsJumping)
+        if (game.MarioVelocity.Y == 0)
         {
-            game.CurrentMarioSprite = game.MovingLeftMarioAnimation;
+            game.Mario.Run();
         }
     }
 }
