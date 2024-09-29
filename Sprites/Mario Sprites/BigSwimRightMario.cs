@@ -1,12 +1,65 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
-namespace Pixel-Plumbers-Fall-2024.Sprites.Mario_Sprites
+public class BigSwimRightMario : ISprite
 {
-    internal class BigSwimRightMario
-{
-}
+    private Texture2D MarioTexture;
+    private float GameTicks;
+    private int AnimationSpeed;
+    private int previousAnimationIndex = 0;
+    private int currentAnimationIndex = 0;
+
+    private Rectangle[] FrameRectangles;
+    public BigSwimRightMario(Texture2D MarioTexture)
+    {
+        this.MarioTexture = MarioTexture;
+    }
+    public void Draw(SpriteBatch spriteBatch, Vector2 position)
+    {
+        Rectangle sourceRectangle = new Rectangle(0, 0, 48, 64);
+        spriteBatch.Draw(MarioTexture, position, FrameRectangles[currentAnimationIndex], Color.White);
+    }
+
+    public void Load(GraphicsDeviceManager graphics)
+    {
+        GameTicks = 0;
+        AnimationSpeed = 100;
+
+        FrameRectangles = new Rectangle[3];
+        //TODO: Get correct sprite source
+        FrameRectangles[0] = new Rectangle(-1, -1, -1, -1);
+        FrameRectangles[1] = new Rectangle(-1, -1, -1, -1);
+        FrameRectangles[2] = new Rectangle(-1, -1, -1, -1);
+
+        previousAnimationIndex = 2;
+        currentAnimationIndex = 1;
+    }
+
+    public void Update(GameTime gameTime)
+    {
+        if (GameTicks > AnimationSpeed)
+        {
+            if (currentAnimationIndex == 1)
+            {
+                if (previousAnimationIndex == 0)
+                {
+                    currentAnimationIndex = 2;
+                }
+                else
+                {
+                    currentAnimationIndex = 0;
+                }
+                previousAnimationIndex = currentAnimationIndex;
+            }
+            else
+            {
+                currentAnimationIndex = 1;
+            }
+            GameTicks = 0;
+        }
+        else
+        {
+            GameTicks += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+        }
+    }
 }
