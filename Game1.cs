@@ -50,7 +50,8 @@ public class Game1 : Game
     public Texture2D ItemsTexture;
     public ISprite firePower;
     public ISprite starPower;
-    public int[] Items;
+    public int numItems = 3;
+    public int currentItem = 0;
     
 
     private KeyboardController keyboardController;

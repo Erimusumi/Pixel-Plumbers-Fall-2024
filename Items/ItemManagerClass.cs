@@ -2,18 +2,15 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
+using System.Numerics;
 public interface IitemManager
 {
-    void updateCurrentItem(int numItems, int[] itemArray)
-    { 
-
-    }
+    void updateCurrentItem(int curr, int num);
 }
 public class itemManager : IitemManager
 {
-    void updateCurrentItem(int currentItem, int[] itemArray)
+    public void updateCurrentItem(int currentItem, int numItems)
     {
-        int numItems = itemArray.Length;
         var kstate = Keyboard.GetState();
         if (kstate.IsKeyDown(Keys.U))
         {
@@ -39,22 +36,6 @@ public class itemManager : IitemManager
             }
         }
 
-    }
-    void drawCurrentItem(int currentItem, int[] itemArray, SpriteBatch spriteBatch)
-    {
-        if (currentItem == 0)
-        {
-            itemArray[0];
-        }else if(currentItem == 1)
-        {
-            
-        }else if(currentItem == 2)
-        {
-
-        }else if(currentItem == 3)
-        {
-
-        }
     }
 }
 
