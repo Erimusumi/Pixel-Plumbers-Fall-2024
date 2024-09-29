@@ -27,9 +27,9 @@ public class FireRunLeftMario : ISprite
 
         FrameRectangles = new Rectangle[3];
         //TODO: Get correct sprite source
-        FrameRectangles[0] = new Rectangle(-1, -1, -1, -1);
-        FrameRectangles[1] = new Rectangle(-1, -1, -1, -1);
-        FrameRectangles[2] = new Rectangle(-1, -1, -1, -1);
+        FrameRectangles[0] = new Rectangle(152, 122, 16, 32);
+        FrameRectangles[1] = new Rectangle(128, 122, 14, 31);
+        FrameRectangles[2] = new Rectangle(102, 123, 16, 30);
 
         previousAnimationIndex = 2;
         currentAnimationIndex = 1;

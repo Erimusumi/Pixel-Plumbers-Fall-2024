@@ -11,7 +11,7 @@ public class FireIdleRightMario : ISprite
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
         //TODO: Get correct sprite source
-        Rectangle sourceRectangle = new Rectangle(-1, -1, -1, -1);
+        Rectangle sourceRectangle = new Rectangle(209, 122, 16, 32);
         spriteBatch.Draw(MarioTexture, position, sourceRectangle, Color.White);
     }
 
