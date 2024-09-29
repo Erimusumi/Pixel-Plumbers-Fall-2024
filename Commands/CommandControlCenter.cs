@@ -11,6 +11,11 @@ public class CommandControlCenter
     private KeyboardController keyboardController;
     public CommandControlCenter(Game1 game)
 	{
+        SetJumpingUpMarioCommand = new SetJumpUp(game);
+        SetMovingRightMarioCommand = new SetMoveRightCommand(game);
+        SetMovingLeftMarioCommand = new SetMoveLeftCommand(game);
+        EnemySwitch = new EnemySwitch(game);
+
         keyboardController.addCommand(Keys.Right, SetMovingRightMarioCommand);
         keyboardController.addCommand(Keys.Left, SetMovingLeftMarioCommand);
         keyboardController.addCommand(Keys.Up, SetJumpingUpMarioCommand);
