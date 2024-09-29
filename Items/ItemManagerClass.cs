@@ -38,20 +38,23 @@ public class itemManager : IitemManager
         }
 
     }
-    public void draw(int currentItem, Texture2D itemsText, SpriteBatch sB,Vector2 position)
+    public void draw(int currentItem, Texture2D itemsText, SpriteBatch sB, Vector2 position)
     {
         if (currentItem == 0)
         {
             StarPower sp = new StarPower(itemsText);
-            sp.Draw(sB,position );
-        }else if(currentItem == 1)
+            sp.Draw(sB, position);
+        }
+        else if (currentItem == 1)
         {
             FirePower firePower = new FirePower(itemsText);
-            firePower.Draw(sB,position); 
+            firePower.Draw(sB, position);
 
-        }else if(currentItem == 2)
-        {
-            
         }
+        else if (currentItem == 2)
+        {
+
+        }
+    }
 }
 
