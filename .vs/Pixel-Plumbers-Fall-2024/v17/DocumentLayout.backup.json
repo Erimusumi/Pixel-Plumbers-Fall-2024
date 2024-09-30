@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
@@ -55,12 +55,7 @@
               "ViewState": "AgIAAMEAAAAAAAAAAAAQwMoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-29T20:37:08.665Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -80,8 +75,7 @@
               "RelativeToolTip": "MarioClasses\\BaseMario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T00:38:05.172Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-30T00:38:05.172Z"
             },
             {
               "$type": "Document",
@@ -93,8 +87,7 @@
               "RelativeToolTip": "MarioClasses\\IMario.cs",
               "ViewState": "AgIAAAIAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T00:37:57.358Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-30T00:37:57.358Z"
             },
             {
               "$type": "Document",
@@ -106,8 +99,7 @@
               "RelativeToolTip": "MarioClasses\\IMarioState.cs",
               "ViewState": "AgIAAJYAAAAAAAAAAAAiwOUAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T00:27:12.214Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-30T00:27:12.214Z"
             },
             {
               "$type": "Document",
@@ -119,8 +111,7 @@
               "RelativeToolTip": "Commands\\SetMoveRightCommand.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAewBYAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T23:17:31.745Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-29T23:17:31.745Z"
             },
             {
               "$type": "Document",
@@ -132,8 +123,7 @@
               "RelativeToolTip": "Commands\\SetMoveLeftCommand.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAiwBcAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T23:17:27.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-29T23:17:27.381Z"
             },
             {
               "$type": "Document",
@@ -143,7 +133,7 @@
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAAwGMAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAIwPcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-29T23:13:18.456Z",
               "EditorCaption": ""
@@ -158,8 +148,7 @@
               "RelativeToolTip": "Commands\\CommandControlCenter.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAAwBUAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T23:12:32.057Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-29T23:12:32.057Z"
             }
           ]
         }
