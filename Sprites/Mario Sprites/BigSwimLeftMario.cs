@@ -16,7 +16,6 @@ public class BigSwimLeftMario : ISprite
     }
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
-        Rectangle sourceRectangle = new Rectangle(0, 0, 48, 64);
         spriteBatch.Draw(MarioTexture, position, FrameRectangles[currentAnimationIndex], Color.White);
     }
 
@@ -26,10 +25,9 @@ public class BigSwimLeftMario : ISprite
         AnimationSpeed = 100;
 
         FrameRectangles = new Rectangle[3];
-        //TODO: Get correct sprite source
-        FrameRectangles[0] = new Rectangle(-1, -1, -1, -1);
-        FrameRectangles[1] = new Rectangle(-1, -1, -1, -1);
-        FrameRectangles[2] = new Rectangle(-1, -1, -1, -1);
+        FrameRectangles[0] = new Rectangle(103, 88, 116-103, 117-88);
+        FrameRectangles[1] = new Rectangle(78, 88, 91 - 78, 117-88);
+        FrameRectangles[2] = new Rectangle(52, 88, 67 - 52, 117-88);
 
         previousAnimationIndex = 2;
         currentAnimationIndex = 1;

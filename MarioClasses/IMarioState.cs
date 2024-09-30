@@ -215,17 +215,40 @@ public class MarioState : IMarioState
         }
     }
 
-    
+    void UpdateSlowMario()
+    {
+        if (game.MarioVelocity.X > 0f)
+        {
+            game.MarioVelocity.X -= .25f;
+            if (game.MarioVelocity.X < 0f)
+            {
+                game.MarioVelocity.X = 0f;
+            }
+        }
+        if (game.MarioVelocity.X < 0f)
+        {
+            game.MarioVelocity.X += .25f;
+            if (game.MarioVelocity.X > 0f)
+            {
+                game.MarioVelocity.X = 0f;
+            }
+        }
+
+    }
 
     public void Update()
     {
         this.MarioVelocity = game.MarioVelocity;
+
+        this.UpdateSlowMario();
 
         this.UpdateCheckIfStill();
         
         this.UpdateStopJumping();
 
         this.UpdateCheckIfTurning();
+
+        
 
         MarioSpriteConstructor.ConstructMarioSprite(this, game);
     }

@@ -17,14 +17,7 @@ public class SetJumpUp : ICommand
             game.MarioVelocity.Y = game.JumpSpeed;
             game.IsJumping = true;
 
-            if (game.FacingRight)
-            {
-                game.CurrentMarioSprite = game.JumpingRightMario;
-            }
-            else
-            {
-                game.CurrentMarioSprite = game.JumpingLeftMario;
-            }
+            game.Mario.Jump();
         }
     }
 }

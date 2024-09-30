@@ -11,7 +11,7 @@ public class BigCrouchRightMario : ISprite
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
         //TODO: get correct sprite source
-        Rectangle sourceRectangle = new Rectangle(-1, -1, -1, -1);
+        Rectangle sourceRectangle = new Rectangle(389, 57, 404-389, 78-57);
         spriteBatch.Draw(MarioTexture, position, sourceRectangle, Color.White);
     }
 

@@ -21,8 +21,8 @@ public class Game1 : Game
     public float GroundPosition;
     public float updatedMarioSpeed;
 
+    List<ISprite> MarioSpriteList;
     
-
     public ISprite BigIdleRightMario;
     public ISprite BigIdleLeftMario;
     public ISprite BigRunRightMarioAnimation;
@@ -58,9 +58,9 @@ public class Game1 : Game
     private List<ISprite> sprite1;
     public int index1 = 0;
     public int n1;
-    private List<ISprite> sprite2;
-    public int index2 = 0;
-    public int n2;
+    //private List<ISprite> sprite2;
+    //public int index2 = 0;
+    //public int n2;
 
     private KeyboardController keyboardController;
     private CommandControlCenter controlCenter;
@@ -120,6 +120,7 @@ public class Game1 : Game
         ItemsTexture = Content.Load<Texture2D>("MarioItems");
         block = Content.Load<Texture2D>("blocks");
 
+        
         BigIdleRightMario = new BigIdleRightMario(MarioTexture);
         BigIdleLeftMario = new BigIdleLeftMario(MarioTexture);
         BigJumpRightMario = new BigJumpRightMario(MarioTexture);
@@ -142,6 +143,7 @@ public class Game1 : Game
 
     protected override void Update(GameTime gameTime)
     {
+        /*
         if (!IsJumping && FacingRight)
         {
             CurrentMarioSprite = BigIdleRightMario;
@@ -150,11 +152,12 @@ public class Game1 : Game
         {
             CurrentMarioSprite = BigIdleLeftMario;
         }
+        */
+
+        Mario.Update();
 
         keyboardController.Update(gameTime);
         updatedMarioSpeed = MarioSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
-        MarioVelocity.Y += Gravity;
-        MarioPosition.Y += MarioVelocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
         if (MarioPosition.Y >= GroundPosition)
         {
@@ -162,12 +165,17 @@ public class Game1 : Game
             MarioVelocity.Y = 0;
             IsJumping = false;
         }
+
+        //moving temporarily to test
+        MarioVelocity.Y += Gravity;
+        MarioPosition.Y += MarioVelocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;
+
         CurrentMarioSprite.Update(gameTime);
         spriteEnemy.Updates();
         controlG.Update(gameTime);
         manager.updateCurrentItem(currentItem, numItems);
         sprite1[index1].Update(gameTime);
-        sprite2[index2].Update(gameTime);
+        //sprite2[index2].Update(gameTime);
         base.Update(gameTime);
     }
 
@@ -179,8 +187,8 @@ public class Game1 : Game
         CurrentMarioSprite.Draw(spriteBatch, MarioPosition);
         manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
         spriteBatch.End();
-        sprite1[index2].Draw(spriteBatch, new Vector2(0,0));
-        sprite2[index2].Draw(spriteBatch, new Vector2(0,0));
+        //sprite1[index2].Draw(spriteBatch, new Vector2(0,0));
+        //sprite2[index2].Draw(spriteBatch, new Vector2(0,0));
         base.Draw(gameTime);
     }
 }
