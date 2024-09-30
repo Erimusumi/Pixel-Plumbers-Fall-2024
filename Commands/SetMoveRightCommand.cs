@@ -14,9 +14,9 @@ public class SetMoveRightCommand : ICommand
             game.Mario.SwapDir();
         }
 
-        if (game.MarioVelocity.X < 5f)
+        if (game.marioVelocity.X < 5f)
         {
-            game.MarioVelocity.X += .5f;
+            game.marioVelocity.X += .5f;
         }
         if (game.MarioVelocity.X > 5f)
         {

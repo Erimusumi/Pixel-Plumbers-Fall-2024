@@ -26,10 +26,10 @@ public class Game1 : Game
     public MarioMoveState currentMarioMoveState;
     public IMarioSprite currentMarioSprite;
 
-    public Vector2 marioPosition;
-    public Vector2 marioVelocity;
+    public Vector2 MarioPosition;
+    public Vector2 MarioVelocity;
 
-    public float marioSpeed;
+    public float MarioSpeed;
     public float gravity = 9.8f;
     public float jumpSpeed = -350f;
     public float groundPosition;
