@@ -25,7 +25,7 @@ public class KeyboardController : IController
         KeyboardState state = Keyboard.GetState();
         foreach (var key in keysPressed)
         {
-            if (KeyBinds.ContainsKey(key) & previousKeyState.IsKeyUp(Keys.Y))
+            if (KeyBinds.ContainsKey(key) & previousKeyState.IsKeyUp(key))
             {
                 KeyBinds[key].Execute();
             }
