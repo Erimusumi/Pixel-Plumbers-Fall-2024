@@ -4,22 +4,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.Xna.Framework.Graphics;
-using Pixel_Plumbers_Fall_2024;
 
 
-//Was UnknownBlockSprite
-public class BlockInteractions
+public class BlockInteraction
 {
     private Mario mario;
-    private UnknownBlockSprite block;
+    private BrokenBrickSprite block;
     private bool blockMovingUp = false;
     private float moveAmount = 16f;  // How much the block moves up
     private float moveSpeed = 100f;  // Speed of block movement
     private float blockInitialY;
     private double blockMoveTimer = 0;
 
-    public BlockInteractions(Mario mario, UnknownBlockSprite block)
+    public BlockInteraction(Mario mario, BrokenBrickSprite block)
     {
         this.mario = mario;
         this.block = block;
