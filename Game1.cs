@@ -45,7 +45,7 @@ public class Game1 : Game
     public int numItems = 3;
     public int currentItem = 0;
 
-    //Block Code
+    //Block Code instance variables
     private Texture2D block;
     private Texture2D obstacle;
     private List<ISprite> sprite1;
@@ -91,7 +91,7 @@ public class Game1 : Game
 
         idleMarioCommand = new IdleMarioCommand(this, marioTexture);
 
-        //Make a list for block iteration
+        //Make a first list for block iteration
         sprite1 = new List<ISprite>
             {
                 //lucky brick sprites
@@ -152,16 +152,12 @@ public class Game1 : Game
 
         // lucky block sprites
         OWLuckyBlockSprite = new LuckyBlockSprite(block, new Vector2(80, 112), new Vector2(128, 128), 3, 10);
-
         // used block sprites
         OWUsedBlockSprite = new StaticBlockSprite(block, new Rectangle(128, 112, 16, 16));
-
         // brick block sprites
         OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
-
         // broken brick block sprites
         OWBrokenBrickSprite = new BrokenBrickBlockSprite(block, new Vector2(288, 112), new Vector2(352, 128), 4, 1);
-
         // obstacle sprites
         obstacle1 = new block1(obstacle);
         obstacle2 = new Block2(obstacle);
@@ -171,8 +167,6 @@ public class Game1 : Game
 
     protected override void Update(GameTime gameTime)
     {
-
-        
         keyboardController.Update();
 
         updatedMarioSpeed = marioSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -191,7 +185,6 @@ public class Game1 : Game
 
         // lucky block sprites
         OWLuckyBlockSprite.Update(gameTime);
-
         // broken brick block sprites
         if (IsActive)
         {
@@ -218,9 +211,9 @@ public class Game1 : Game
         currentMarioSprite.Draw(spriteBatch, marioPosition);
         spriteBatch.End();
 
-
+        // Draw blocks and obstacles
         sprite1[index1].Draw(spriteBatch, new Vector2(40,10));
-        sprite2[index2].Draw(spriteBatch, new Vector2(0,0));
+        sprite2[index2].Draw(spriteBatch, new Vector2(310,150));
 
         base.Draw(gameTime);
     }
