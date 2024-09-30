@@ -10,7 +10,7 @@ public class MarioMovementCommandInitializer
     public MarioMovementCommandInitializer(Game1 game)
     {
         this.game = game;
-        keyboardController = new KeyboardController(game);
+        keyboardController = new KeyboardController();
     }
 
     public KeyboardController InitializeMarioCommands(Texture2D marioTexture)

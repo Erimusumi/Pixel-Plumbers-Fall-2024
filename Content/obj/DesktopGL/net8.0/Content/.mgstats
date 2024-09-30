@@ -1,1 +1,5 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Project/Content/blocks.gif","C:/Project/Content/bin/DesktopGL/Content/blocks.xnb","TextureProcessor","Texture2DContent",14122,1560241,0.1603356
+"C:/Project/Content/enemies.png","C:/Project/Content/bin/DesktopGL/Content/enemies.xnb","TextureProcessor","Texture2DContent",8295,455269,0.0203396
+"C:/Project/Content/mario.png","C:/Project/Content/bin/DesktopGL/Content/mario.xnb","TextureProcessor","Texture2DContent",6584,304645,0.0164192
+"C:/Project/Content/MarioItems.png","C:/Project/Content/bin/DesktopGL/Content/MarioItems.xnb","TextureProcessor","Texture2DContent",38427,2532585,0.0815985

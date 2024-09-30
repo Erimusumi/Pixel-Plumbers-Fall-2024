@@ -11,7 +11,13 @@ public class Game1 : Game
 
     public IMario Mario;
 
-    private KeyboardController keyboardController;
+    public Texture2D MarioTexture;
+    public Vector2 MarioPosition;
+    public float MarioSpeed;
+    public Vector2 MarioVelocity;
+    public float Gravity = 9.8f;
+    public float JumpSpeed = -350f;
+
     private MarioMovementCommandInitializer marioMovementCommandInitializer;
 
     public enum MarioState { Small, Big, Fire }
@@ -99,7 +105,7 @@ public class Game1 : Game
     //public int index2 = 0;
     //public int n2;
 
-    private KeyboardController keyboardController;
+
     private CommandControlCenter controlCenter;
     public Game1()
     {
@@ -111,8 +117,8 @@ public class Game1 : Game
     protected override void Initialize()
     {
         base.Initialize();
-        GroundPosition = graphics.PreferredBackBufferHeight / 2;
-        MarioVelocity = Vector2.Zero;
+
+
 
         keyboardController = new KeyboardController();
         CurrentMarioSprite = BigIdleRightMario;
@@ -150,25 +156,10 @@ public class Game1 : Game
     protected override void LoadContent()
     {
         spriteBatch = new SpriteBatch(GraphicsDevice);
-        MarioPosition = new Vector2(graphics.PreferredBackBufferWidth / 2, graphics.PreferredBackBufferHeight / 2);
-        MarioSpeed = 150f;
 
-        MarioTexture = Content.Load<Texture2D>("mario");
         EnemyTexture = Content.Load<Texture2D>("enemies");
         ItemsTexture = Content.Load<Texture2D>("MarioItems");
         block = Content.Load<Texture2D>("blocks");
-
-
-        BigIdleRightMario = new BigIdleRightMario(MarioTexture);
-        BigIdleLeftMario = new BigIdleLeftMario(MarioTexture);
-        BigJumpRightMario = new BigJumpRightMario(MarioTexture);
-        BigJumpLeftMario = new BigJumpLeftMario(MarioTexture);
-
-        BigRunRightMarioAnimation = new BigRunRightMario(MarioTexture);
-        BigRunRightMarioAnimation.Load(graphics);
-
-        BigRunLeftMarioAnimation = new BigRunLeftMario(MarioTexture);
-        BigRunLeftMarioAnimation.Load(graphics);
 
         firePower = new FirePower(ItemsTexture);
         starPower = new StarPower(ItemsTexture);
@@ -206,7 +197,6 @@ public class Game1 : Game
     protected override void Update(GameTime gameTime)
     {
         keyboardController.Update(gameTime);
-        updatedMarioSpeed = MarioSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
         Mario.Update();
         // lucky block sprites
@@ -225,18 +215,6 @@ public class Game1 : Game
         }
 
         keyboardController.Update(gameTime);
-        updatedMarioSpeed = MarioSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
-
-        if (MarioPosition.Y >= GroundPosition)
-        {
-            MarioPosition.Y = GroundPosition;
-            MarioVelocity.Y = 0;
-            IsJumping = false;
-        }
-
-        //moving temporarily to test
-        MarioVelocity.Y += Gravity;
-        MarioPosition.Y += MarioVelocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
         CurrentMarioSprite.Update(gameTime);
         spriteEnemy.Updates();
@@ -252,7 +230,7 @@ public class Game1 : Game
         GraphicsDevice.Clear(Color.CornflowerBlue);
         spriteEnemy.Draw(spriteBatch, EnemyTexture);
         spriteBatch.Begin();
-        CurrentMarioSprite.Draw(spriteBatch, MarioPosition);
+        CurrentMarioSprite.Draw(spriteBatch, marioPosition);
         manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
         spriteBatch.End();
 
