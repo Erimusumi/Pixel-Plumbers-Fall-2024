@@ -80,9 +80,9 @@ public class Game1 : Game
     private List<ISprite> sprite1;
     public int index1 = 0;
     public int n1;
-    //private List<ISprite> sprite2;
-    //public int index2 = 0;
-    //public int n2;
+    private List<ISprite> sprite2;
+    public int index2 = 0;
+    public int n2;
 
 
     private IdleMarioCommand idleMarioCommand;
