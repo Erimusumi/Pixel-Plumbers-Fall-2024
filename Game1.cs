@@ -147,13 +147,13 @@ public class Game1 : Game
         starPower = new StarPower(ItemsTexture);
 
         // lucky block sprites
-        OWLuckyBlockSprite = new LuckyBlockSprite(block, new Vector2(80, 112), new Vector2(128, 128), 3, 10);
+        OWLuckyBlockSprite = new LuckyBlockSprite(block, 3, 10);
         // used block sprites
         OWUsedBlockSprite = new StaticBlockSprite(block, new Rectangle(128, 112, 16, 16));
         // brick block sprites
         OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
         // broken brick block sprites
-        OWBrokenBrickSprite = new BrokenBrickBlockSprite(block, new Vector2(288, 112), new Vector2(352, 128), 4, 1);
+        OWBrokenBrickSprite = new BrokenBrickBlockSprite(block, 4, 1);
         // obstacle sprites
         obstacle1 = new obstacle1(obstacle);
         obstacle2 = new obstacle2(obstacle);

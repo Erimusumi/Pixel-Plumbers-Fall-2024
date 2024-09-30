@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
+using System.Numerics;
 public class BrokenBrickBlockSprite : ISprite
 {
     public Texture2D Texture { get; set; }
@@ -18,11 +19,11 @@ public class BrokenBrickBlockSprite : ISprite
     private int height;
     private int currentFrame;
     private Boolean isAnimating;
-    public BrokenBrickBlockSprite(Texture2D texture, Vector2 start, Vector2 end, int frames, double wait)
+    public BrokenBrickBlockSprite(Texture2D texture, int frames, double wait)
     {
         Texture = texture;
-        Start = start;
-        End = end;
+        Start = new Vector2(288, 112);
+        End = new Vector2(352, 128);
         numOfFrames = frames;
         waitTime = wait;            // the amount of time between frame changes, time per frame
         currentFrame = 0;
