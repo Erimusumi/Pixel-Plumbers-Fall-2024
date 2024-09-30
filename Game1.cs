@@ -71,7 +71,7 @@ public class Game1 : Game
     public ISprite firePower;
     public ISprite starPower;
     public ISprite mushroom;
-    Vector2 itemsPos = new Vector2(100, 500);
+    Vector2 itemsPos = new Vector2(400, 250);
     ItemManager manager = new ItemManager();
     public int numItems = 3;
     public int currentItem = 0;
