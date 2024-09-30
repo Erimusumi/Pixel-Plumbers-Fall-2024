@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-public class Block2 : ISprite
+public class obstacle2 : ISprite
 {
     private Rectangle sourceRectangle;
     private Rectangle destinationRectangle;
@@ -13,7 +13,7 @@ public class Block2 : ISprite
     private int height;
     private Texture2D BlockTexture;
 
-    public Block2(Texture2D BlockTexture)
+    public obstacle2(Texture2D BlockTexture)
     {
         this.BlockTexture = BlockTexture;
     }

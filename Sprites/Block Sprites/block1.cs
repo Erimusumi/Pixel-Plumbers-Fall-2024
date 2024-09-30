@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Input;
 using Pixel_Plumbers_Fall_2024;
 
 
-public class block1 : ISprite
+public class obstacle1 : ISprite
 {
     private Rectangle sourceRectangle;
     private Rectangle destinationRectangle;
@@ -15,7 +15,7 @@ public class block1 : ISprite
     private int height;
     private Texture2D BlockTexture;
 
-    public block1(Texture2D BlockTexture)
+    public obstacle1(Texture2D BlockTexture)
     {
         this.BlockTexture = BlockTexture;
     }
