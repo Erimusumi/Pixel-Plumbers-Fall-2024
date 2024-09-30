@@ -88,36 +88,10 @@
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAJEAAAAAZmZmZmYmwIUAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "blockYCommand.cs",
-              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Commands\\Block\\blockYCommand.cs",
-              "RelativeDocumentMoniker": "Commands\\Block\\blockYCommand.cs",
-              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Commands\\Block\\blockYCommand.cs",
-              "RelativeToolTip": "Commands\\Block\\blockYCommand.cs",
-              "ViewState": "AgIAAAsAAADAzMzMzMwiwAsAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T19:22:23.729Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "blockTCommand.cs",
-              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Commands\\Block\\blockTCommand.cs",
-              "RelativeDocumentMoniker": "Commands\\Block\\blockTCommand.cs",
-              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Commands\\Block\\blockTCommand.cs",
-              "RelativeToolTip": "Commands\\Block\\blockTCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T19:22:18.382Z",
               "EditorCaption": ""
             },
             {
@@ -138,6 +112,30 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "blockYCommand.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Commands\\Block\\blockYCommand.cs",
+              "RelativeDocumentMoniker": "Commands\\Block\\blockYCommand.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Commands\\Block\\blockYCommand.cs",
+              "RelativeToolTip": "Commands\\Block\\blockYCommand.cs",
+              "ViewState": "AgIAAAsAAADAzMzMzMwiwAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T19:22:23.729Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "blockTCommand.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Commands\\Block\\blockTCommand.cs",
+              "RelativeDocumentMoniker": "Commands\\Block\\blockTCommand.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Commands\\Block\\blockTCommand.cs",
+              "RelativeToolTip": "Commands\\Block\\blockTCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T19:22:18.382Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
               "Title": "KeyboardController.cs",
               "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Controllers\\KeyboardController.cs",
@@ -146,8 +144,7 @@
               "RelativeToolTip": "Controllers\\KeyboardController.cs",
               "ViewState": "AgIAAA4AAADgzMzMzMwiwBYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T18:12:26.007Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-25T18:12:26.007Z"
             },
             {
               "$type": "Document",
@@ -159,8 +156,7 @@
               "RelativeToolTip": "Sprites\\Block Sprites\\block2.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T16:24:01.655Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T16:24:01.655Z"
             },
             {
               "$type": "Document",
@@ -172,8 +168,7 @@
               "RelativeToolTip": "Sprites\\Block Sprites\\block1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T21:11:22.937Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-29T21:11:22.937Z"
             },
             {
               "$type": "Document",
@@ -185,8 +180,7 @@
               "RelativeToolTip": "Sprites\\Block Sprites\\block3.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T15:05:13.139Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-30T15:05:13.139Z"
             },
             {
               "$type": "Document",
@@ -198,8 +192,7 @@
               "RelativeToolTip": "Sprites\\Block Sprites\\block4.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T18:44:26.222Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-25T18:44:26.222Z"
             },
             {
               "$type": "Document",
@@ -211,8 +204,7 @@
               "RelativeToolTip": "Sprites\\Block Sprites\\LuckyBlockSprite.cs",
               "ViewState": "AgIAAB0AAAAA+FozhN8owAcAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T18:05:30.39Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-25T18:05:30.39Z"
             },
             {
               "$type": "Document",
@@ -224,8 +216,7 @@
               "RelativeToolTip": "Sprites\\Block Sprites\\BrokenBrickBlockSprite.cs",
               "ViewState": "AgIAADIAAAAgg7wq6/kqwEAAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T20:45:57.677Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-29T20:45:57.677Z"
             },
             {
               "$type": "Document",
@@ -237,8 +228,7 @@
               "RelativeToolTip": "Sprites\\ISprite.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T19:24:23.928Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-29T19:24:23.928Z"
             },
             {
               "$type": "Document",
@@ -250,8 +240,7 @@
               "RelativeToolTip": "Goomba\\GoombaSprites.cs",
               "ViewState": "AgIAABAAAADwjC417MkwwAsAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T18:42:12.568Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-30T18:42:12.568Z"
             },
             {
               "$type": "Document",
