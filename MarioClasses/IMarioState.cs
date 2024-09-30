@@ -92,7 +92,10 @@ public class MarioState : IMarioState
     }
     public void Run()
     {
-        currState = MarioStateEnum.Run;
+        if (game.marioVelocity.Y == 0)
+        {
+            currState = MarioStateEnum.Run;
+        }
     }
     public void Swim()
     {

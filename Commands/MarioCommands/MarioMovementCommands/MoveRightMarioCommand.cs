@@ -24,7 +24,7 @@ public class MoveRightMarioCommand : ICommand
         if (game.marioVelocity.X < 5f)
         {
             game.marioVelocity.X += .2f;
-            if (game.marioVelocity.X < 5f)
+            if (game.marioVelocity.X > 5f)
             {
                 game.marioVelocity.X = 5f;
             }
