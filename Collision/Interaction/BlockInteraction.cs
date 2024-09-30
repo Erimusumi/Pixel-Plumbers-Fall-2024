@@ -9,14 +9,14 @@ using System.Threading.Tasks;
 public class MarioBlockCollisionHandler
 {
     private Mario mario;
-    private BrokenBrickBlockSprite block;
+    private MarioBlockCollisionHandler block;
     private bool blockMovingUp = false;
     private float moveAmount = 16f;  // How much the block moves up
     private float moveSpeed = 100f;  // Speed of block movement
     private float blockInitialY;
     private double blockMoveTimer = 0;
 
-    public MarioBlockCollisionHandler(Mario mario, BrokenBrickBlockSprite block)
+    public MarioBlockCollisionHandler(Mario mario, MarioBlockCollisionHandler block)
     {
         this.mario = mario;
         this.block = block;

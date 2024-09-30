@@ -171,7 +171,7 @@ public class Game1 : Game
         OWLuckyBlockSprite = new LuckyBlockSprite(block, 3, 20);
         OWUsedBlockSprite = new StaticBlockSprite(block, new Rectangle(128, 112, 16, 16));
         OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
-        OWBrokenBrickSprite = new BrokenBrickBlockSprite(block, 4, 1);
+        OWBrokenBrickSprite = new MarioBlockCollisionHandler(block, 4, 1);
         obstacle1 = new obstacle1(obstacle);
         obstacle2 = new obstacle2(obstacle);
         obstacle3 = new obstacle3(obstacle);
