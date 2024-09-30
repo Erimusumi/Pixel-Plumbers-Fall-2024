@@ -21,8 +21,8 @@ public class Game1 : Game
     public float GroundPosition;
     public float updatedMarioSpeed;
 
+    List<ISprite> MarioSpriteList;
     
-
     public ISprite BigIdleRightMario;
     public ISprite BigIdleLeftMario;
     public ISprite BigRunRightMarioAnimation;
@@ -121,6 +121,7 @@ public class Game1 : Game
         ItemsTexture = Content.Load<Texture2D>("MarioItems");
         block = Content.Load<Texture2D>("blocks");
 
+        
         BigIdleRightMario = new BigIdleRightMario(MarioTexture);
         BigIdleLeftMario = new BigIdleLeftMario(MarioTexture);
         BigJumpRightMario = new BigJumpRightMario(MarioTexture);
@@ -143,6 +144,7 @@ public class Game1 : Game
 
     protected override void Update(GameTime gameTime)
     {
+        /*
         if (!IsJumping && FacingRight)
         {
             CurrentMarioSprite = BigIdleRightMario;
@@ -151,11 +153,12 @@ public class Game1 : Game
         {
             CurrentMarioSprite = BigIdleLeftMario;
         }
+        */
+
+        Mario.Update();
 
         keyboardController.Update(gameTime);
         updatedMarioSpeed = MarioSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
-        MarioVelocity.Y += Gravity;
-        MarioPosition.Y += MarioVelocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
         if (MarioPosition.Y >= GroundPosition)
         {
@@ -163,6 +166,11 @@ public class Game1 : Game
             MarioVelocity.Y = 0;
             IsJumping = false;
         }
+
+        //moving temporarily to test
+        MarioVelocity.Y += Gravity;
+        MarioPosition.Y += MarioVelocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;
+
         CurrentMarioSprite.Update(gameTime);
         spriteEnemy.Updates();
         controlG.Update(gameTime);

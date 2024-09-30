@@ -15,10 +15,19 @@ public class SetMoveLeftCommand : ICommand
             game.Mario.SwapDir();
         }
 
+        if (game.MarioVelocity.X > -5f)
+        {
+            game.MarioVelocity.X -= .5f;
+        }
+        if (game.MarioVelocity.X < -5f)
+        {
+            game.MarioVelocity.X = -5f;
+        }
+
         game.FacingRight = false;
         game.MovingRight = false;
         game.MovingLeft = true;
-        game.MarioPosition.X -= game.updatedMarioSpeed;
+        game.MarioPosition.X += game.MarioVelocity.X;
 
         if (game.MarioVelocity.Y == 0)
         {
