@@ -33,7 +33,7 @@ public class JumpMarioCommand : ICommand
         {
             // Set Mario into jumping mode and set the upward velocity (jump speed)
             game.isJumping = true;
-            game.marioVelocity.Y = game.jumpSpeed;
+            game.MarioVelocity.Y = game.JumpSpeed;
 
             switch (game.currentMarioState)
             {

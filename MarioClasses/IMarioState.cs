@@ -217,20 +217,20 @@ public class MarioState : IMarioState
 
     void UpdateSlowMario()
     {
-        if (game.marioVelocity.X > 0f)
+        if (game.MarioVelocity.X > 0f)
         {
-            game.marioVelocity.X -= .25f;
-            if (game.marioVelocity.X < 0f)
+            game.MarioVelocity.X -= .25f;
+            if (game.MarioVelocity.X < 0f)
             {
-                game.marioVelocity.X = 0f;
+                game.MarioVelocity.X = 0f;
             }
         }
-        if (game.marioVelocity.X < 0f)
+        if (game.MarioVelocity.X < 0f)
         {
-            game.marioVelocity.X += .25f;
-            if (game.marioVelocity.X > 0f)
+            game.MarioVelocity.X += .25f;
+            if (game.MarioVelocity.X > 0f)
             {
-                game.marioVelocity.X = 0f;
+                game.MarioVelocity.X = 0f;
             }
         }
 
@@ -238,7 +238,7 @@ public class MarioState : IMarioState
 
     public void Update()
     {
-        this.MarioVelocity = game.marioVelocity;
+        this.MarioVelocity = game.MarioVelocity;
 
         this.UpdateSlowMario();
 
@@ -250,7 +250,7 @@ public class MarioState : IMarioState
 
         
 
-        marioSpriteConstructor.ConstructMarioSprite(this, game);
+        MarioSpriteConstructor.ConstructMarioSprite(this, game);
     }
 }
 

@@ -20,18 +20,14 @@ public class Game1 : Game
 
     private MarioMovementCommandInitializer marioMovementCommandInitializer;
 
+    public IController keyboardController;
+
     public enum MarioState { Small, Big, Fire }
     public enum MarioMoveState { Idle, MovingRight, MovingLeft }
     public MarioState currentMarioState;
     public MarioMoveState currentMarioMoveState;
     public IMarioSprite currentMarioSprite;
 
-    public Vector2 MarioPosition;
-    public Vector2 MarioVelocity;
-
-    public float MarioSpeed;
-    public float gravity = 9.8f;
-    public float jumpSpeed = -350f;
     public float groundPosition;
     public float updatedMarioSpeed;
 
@@ -105,7 +101,7 @@ public class Game1 : Game
     //public int index2 = 0;
     //public int n2;
 
-    private KeyboardController keyboardController;
+
     private CommandControlCenter controlCenter;
     public Game1()
     {
@@ -230,7 +226,7 @@ public class Game1 : Game
         GraphicsDevice.Clear(Color.CornflowerBlue);
         spriteEnemy.Draw(spriteBatch, EnemyTexture);
         spriteBatch.Begin();
-        CurrentMarioSprite.Draw(spriteBatch, marioPosition);
+        CurrentMarioSprite.Draw(spriteBatch, MarioPosition);
         manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
         spriteBatch.End();
 
