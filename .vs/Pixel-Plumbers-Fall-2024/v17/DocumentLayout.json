@@ -7,8 +7,8 @@
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\project\\marioclasses\\constructmariosprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:marioclasses\\constructmariosprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\project\\sprites\\mario sprites\\smallidlerightmario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\mario sprites\\smallidlerightmario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -41,20 +41,16 @@
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ConstructMarioSprite.cs",
-              "DocumentMoniker": "C:\\project\\MarioClasses\\ConstructMarioSprite.cs",
-              "RelativeDocumentMoniker": "MarioClasses\\ConstructMarioSprite.cs",
-              "ToolTip": "C:\\project\\MarioClasses\\ConstructMarioSprite.cs",
-              "RelativeToolTip": "MarioClasses\\ConstructMarioSprite.cs",
-              "ViewState": "AgIAALoAAAAAAAAAAAAuwMQAAABGAAAAAAAAAA==",
+              "Title": "SmallIdleRightMario.cs",
+              "DocumentMoniker": "C:\\project\\Sprites\\Mario Sprites\\SmallIdleRightMario.cs",
+              "RelativeDocumentMoniker": "Sprites\\Mario Sprites\\SmallIdleRightMario.cs",
+              "ToolTip": "C:\\project\\Sprites\\Mario Sprites\\SmallIdleRightMario.cs",
+              "RelativeToolTip": "Sprites\\Mario Sprites\\SmallIdleRightMario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T02:22:02.254Z",
+              "WhenOpened": "2024-09-30T02:22:30.277Z",
               "EditorCaption": ""
             },
             {
