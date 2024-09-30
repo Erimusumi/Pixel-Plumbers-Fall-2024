@@ -20,6 +20,7 @@ public class Sweep
         if (item1.GetType() == typeof(Goomba) && item2.GetType() == typeof(Mario) || item2.GetType() == typeof(Mario) && item1.GetType() == typeof(Goomba))
         {
             //handle goomba interaction
+            
         }
         if (item1.GetType() == typeof(Koopa) && item2.GetType() == typeof(Mario) || item2.GetType() == typeof(Mario) && item1.GetType() == typeof(Koopa))
         {
@@ -82,5 +83,6 @@ public class Sweep
         //Rectangle r2 = rectangle;
         //r2.Intersect(Some r3)
         //Get's the area that is intersected and replaces r2. If r2 is rectangle. idk.
+        
     }
 }

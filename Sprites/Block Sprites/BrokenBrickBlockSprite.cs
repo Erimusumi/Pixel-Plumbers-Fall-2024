@@ -17,7 +17,7 @@ public class BrokenBrickBlockSprite : ISprite
     private int height;
     private int currentFrame;
     private Boolean isAnimating;
-    private Rectangle destinationRectangle;
+    public Rectangle destinationRectangle;
     public BrokenBrickBlockSprite(Texture2D texture, int frames, double wait)
     {
         Texture = texture;
