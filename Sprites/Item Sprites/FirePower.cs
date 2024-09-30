@@ -10,7 +10,7 @@ public class FirePower : ISprite
     }
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
-        Rectangle sourceRectangle = new Rectangle(287, 213, 65, 64);
+        Rectangle sourceRectangle = new Rectangle(220, 212, 65, 64);
         spriteBatch.Draw(ItemTexture, position, sourceRectangle, Color.White);
     }
 
