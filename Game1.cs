@@ -200,7 +200,7 @@ public class Game1 : Game
 
         spriteEnemy.Updates();
         controlG.Update();
-        manager.updateCurrentItem(currentItem, numItems);
+        manager.updateCurrentItem(ref currentItem, numItems);
         sprite1[index1].Update(gameTime);
         sprite2[index2].Update(gameTime);
 
