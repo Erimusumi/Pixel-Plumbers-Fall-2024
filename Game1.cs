@@ -76,13 +76,16 @@ public class Game1 : Game
 
     //Block Code
     private Texture2D block;
-    private KeyboardController controller;
     private List<ISprite> sprite1;
-    public int index1 = 0;
+    public int index1;
     public int n1;
     private List<ISprite> sprite2;
-    public int index2 = 0;
+    public int index2;
     public int n2;
+    private ISprite obstacle1;
+    private ISprite obstacle2;
+    private ISprite obstacle3;
+    private ISprite obstacle4;
 
 
     private IdleMarioCommand idleMarioCommand;
@@ -107,14 +110,45 @@ public class Game1 : Game
         controlCenter = new CommandControlCenter(this, marioTexture);
 
         idleMarioCommand = new IdleMarioCommand(this, marioTexture);
+
         //Make a list for block iteration
         sprite1 = new List<ISprite>
             {
-                //new BrokenBrickBlockSprite(),
-                //new LuckyBlockSprite(),
-                //new UsedBlockSprite(),
-                new block1(block)
+                //lucky brick sprites
+                OWLuckyBlockSprite,
+                UWLuckyBlockSprite,
+                UGLuckyBlockSprite,
+                CastleLuckyBlockSprite,
+                //broekn brick sprites
+                OWBrokenBrickSprite,
+                UWBrokenBrickSprite,
+                UGBrokenBrickSprite,
+                CastleBrokenBrickSprite,
+                //brick sprites
+                OWBrickBlockSprite,
+                UWBrickBlockSprite,
+                UGBrickBlockSprite,
+                CastleBrokenBrickSprite,
+                //used block sprites
+                OWUsedBlockSprite,
+                UGUsedBlockSprite,
+                UGUsedBlockSprite,
+                CastleUsedBlockSprite
             };
+
+        sprite2 = new List<ISprite>
+        {
+            obstacle1,
+            obstacle2,
+            obstacle3,
+            obstacle4
+        };
+
+        n1 = sprite1.Count;
+        n2 = sprite2.Count;
+        index1 = 0;
+        index2 = 0;
+
             marioSpeed = 10;
     }
     public ISpriteEnemy SetEnemy(ISpriteEnemy enemy)
@@ -170,6 +204,12 @@ public class Game1 : Game
         UWBrokenBrickSprite = new BrokenBrickBlockSprite(block, new Vector2(288, 160), new Vector2(352, 176), 4, 1);
         UGBrokenBrickSprite = new BrokenBrickBlockSprite(block, new Vector2(288, 128), new Vector2(352, 144), 4, 1);
         CastleBrokenBrickSprite = new BrokenBrickBlockSprite(block, new Vector2(288, 144), new Vector2(352, 160), 4, 1);
+
+        // obstacle sprites
+        obstacle1 = new block1(block);
+        obstacle2 = new Block2(block);
+        obstacle3 = new Block3(block);
+        obstacle4 = new Block4(block);
     }
 
     protected override void Update(GameTime gameTime)
