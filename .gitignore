@@ -396,3 +396,8 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/obj/Debug/net8.0/Pixel-Plumbers-Fall-2024.csproj.FileListAbsolute.txt
+/obj/Debug/net8.0/Pixel-Plumbers-Fall-2024.genruntimeconfig.cache
+/.gitignore
+/obj/Debug/net8.0/Pixel-Plumbers-Fall-2024.GeneratedMSBuildEditorConfig.editorconfig
+/obj/Debug/net8.0/Pixel-Plumbers-Fall-2024.assets.cache
