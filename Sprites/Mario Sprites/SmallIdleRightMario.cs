@@ -12,7 +12,6 @@ public class SmallIdleRightMario : ISprite
     {
         //TODO: Get correct sprite source
         Rectangle sourceRectangle = new Rectangle(211, 0, 12, 15);
-        spriteBatch.Draw(MarioTexture, position, sourceRectangle, Color.White);
     }
 
     public void Load(GraphicsDeviceManager graphics)
