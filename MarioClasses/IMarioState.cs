@@ -137,10 +137,7 @@ public class MarioState : IMarioState
                 }
                 break;
             case 1:
-                if (currPowerup != MarioPowerupEnum.Fire)
-                {
-                    currPowerup = MarioPowerupEnum.Fire;
-                }
+                currPowerup = MarioPowerupEnum.Fire;
                 break;
             default:
                 break;

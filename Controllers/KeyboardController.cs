@@ -2,6 +2,8 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using System.Windows.Input;
+using System.Linq;
+using Microsoft.VisualBasic;
 
 public class KeyboardController : IController
 {
@@ -28,6 +30,7 @@ public class KeyboardController : IController
                 KeyBinds[key].Execute();
             }
         }
+        
         previousKeyState = state;
     }
 }

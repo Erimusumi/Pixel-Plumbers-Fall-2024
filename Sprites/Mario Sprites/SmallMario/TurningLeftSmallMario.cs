@@ -10,7 +10,7 @@ public class TurningLeftSmallMario : IMarioSprite
     }
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
-        Rectangle sourceRectangle = new Rectangle(-1, -1, -1, -1);
+        Rectangle sourceRectangle = new Rectangle(60, 0, 73-60, 15);
         spriteBatch.Draw(MarioTexture, position, sourceRectangle, Color.White);
     }
 

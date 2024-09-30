@@ -6,18 +6,11 @@ public class MoveRightMarioCommand : ICommand
     private Game1 game;
     private Texture2D marioTexture;
 
-    private ICommand movingRightSmallMarioCommand;
-    private ICommand movingRightBigMarioCommand;
-    private ICommand movingRightFireMariocommand;
-
     public MoveRightMarioCommand(Game1 game, Texture2D marioTexture)
     {
         this.game = game;
         this.marioTexture = marioTexture;
 
-        //movingRightBigMarioCommand = new MovingRightBigMarioCommand(game, marioTexture);
-        //movingRightSmallMarioCommand = new MoveRightSmallMarioCommand(game, marioTexture);
-        //movingRightFireMariocommand = new MovingRightFireMarioCommand(game, marioTexture);
     }
     public void Execute()
     {
