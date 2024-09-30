@@ -169,13 +169,13 @@ public class MarioSpriteConstructor
                         switch (marioState.GetPowerup())
                         {
                             case MarioState.MarioPowerupEnum.Base:
-                                game.CurrentMarioSprite = new SmallIdleRightMario(game.MarioTexture);
+                                game.CurrentMarioSprite = new SmallIdleRightMario(game.marioTexture);
                                 break;
                             case MarioState.MarioPowerupEnum.Big:
-                                game.CurrentMarioSprite = new BigCrouchRightMario(game.MarioTexture);
+                                game.CurrentMarioSprite = new BigCrouchRightMario(game.marioTexture);
                                 break;
                             case MarioState.MarioPowerupEnum.Fire:
-                                game.CurrentMarioSprite = new FireCrouchRightMario(game.MarioTexture);
+                                game.CurrentMarioSprite = new FireCrouchRightMario(game.marioTexture);
                                 break;
                         }
                         break;
@@ -183,18 +183,18 @@ public class MarioSpriteConstructor
                         switch (marioState.GetPowerup())
                         {
                             case MarioState.MarioPowerupEnum.Base:
-                                game.CurrentMarioSprite = new SmallJumpRightMario(game.MarioTexture);
+                                game.CurrentMarioSprite = new SmallJumpRightMario(game.marioTexture);
                                 break;
                             case MarioState.MarioPowerupEnum.Big:
-                                game.CurrentMarioSprite = new BigJumpRightMario(game.MarioTexture);
+                                game.CurrentMarioSprite = new BigJumpRightMario(game.marioTexture);
                                 break;
                             case MarioState.MarioPowerupEnum.Fire:
-                                game.CurrentMarioSprite = new FireJumpRightMario(game.MarioTexture);
+                                game.CurrentMarioSprite = new FireJumpRightMario(game.marioTexture);
                                 break;
                         }
                         break;
                     case MarioState.MarioStateEnum.Dead:
-                        game.CurrentMarioSprite = new DeadMario(game.MarioTexture);
+                        game.CurrentMarioSprite = new DeadMario(game.marioTexture);
                         break;
                 }
                 break;

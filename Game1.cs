@@ -11,10 +11,10 @@ public class Game1 : Game
 
     public IMario Mario;
 
-    public Texture2D MarioTexture;
+    public Texture2D marioTexture;
     public Vector2 MarioPosition;
     public float MarioSpeed;
-    public Vector2 marioVelocity;
+    public Vector2 MarioVelocity;
     public float Gravity = 9.8f;
     public float JumpSpeed = -350f;
 
@@ -26,6 +26,10 @@ public class Game1 : Game
     public MarioMoveState currentMarioMoveState;
     public IMarioSprite currentMarioSprite;
 
+    public Vector2 marioPosition;
+    public Vector2 marioVelocity;
+
+    public float marioSpeed;
     public float gravity = 9.8f;
     public float jumpSpeed = -350f;
     public float groundPosition;
@@ -226,7 +230,7 @@ public class Game1 : Game
         GraphicsDevice.Clear(Color.CornflowerBlue);
         spriteEnemy.Draw(spriteBatch, EnemyTexture);
         spriteBatch.Begin();
-        CurrentMarioSprite.Draw(spriteBatch, MarioPosition);
+        CurrentMarioSprite.Draw(spriteBatch, marioPosition);
         manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
         spriteBatch.End();
 
