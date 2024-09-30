@@ -18,6 +18,7 @@ class FireMario : IMario
     public void TakeDamage()
     {
         decoratedMario.TakeDamage();
+        this.RemovePowerup();
     }
     public void Jump()
     {
