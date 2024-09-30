@@ -77,6 +77,7 @@ public class Game1 : Game
 
     //Block Code
     private Texture2D block;
+    private Texture2D obstacle;
     private List<ISprite> sprite1;
     public int index1;
     public int n1;
@@ -174,6 +175,7 @@ public class Game1 : Game
         EnemyTexture = Content.Load<Texture2D>("enemies");
         ItemsTexture = Content.Load<Texture2D>("MarioItems");
         block = Content.Load<Texture2D>("blocks");
+        obstacle = Content.Load<Texture2D>("obstacle");
 
         currentMarioSprite = new IdleLeftBigMario(marioTexture);
         marioPosition = new Vector2(graphics.PreferredBackBufferWidth / 2, graphics.PreferredBackBufferHeight / 2);
@@ -207,10 +209,10 @@ public class Game1 : Game
         CastleBrokenBrickSprite = new BrokenBrickBlockSprite(block, new Vector2(288, 144), new Vector2(352, 160), 4, 1);
 
         // obstacle sprites
-        obstacle1 = new block1(block);
-        obstacle2 = new Block2(block);
-        obstacle3 = new Block3(block);
-        obstacle4 = new Block4(block);
+        obstacle1 = new block1(obstacle);
+        obstacle2 = new Block2(obstacle);
+        obstacle3 = new Block3(obstacle);
+        obstacle4 = new Block4(obstacle);
     }
 
     protected override void Update(GameTime gameTime)
