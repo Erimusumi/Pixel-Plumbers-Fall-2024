@@ -252,28 +252,28 @@ public class Game1 : Game
         spriteBatch.End();
 
         // lucky block sprites
-        OWLuckyBlockSprite.Draw(_spriteBatch, new Vector2(100, 100));
-        UWLuckyBlockSprite.Draw(_spriteBatch, new Vector2(200, 100));
-        UGLuckyBlockSprite.Draw(_spriteBatch, new Vector2(300, 100));
-        CastleLuckyBlockSprite.Draw(_spriteBatch, new Vector2(400, 100));
+        OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(100, 100));
+        UWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200, 100));
+        UGLuckyBlockSprite.Draw(spriteBatch, new Vector2(300, 100));
+        CastleLuckyBlockSprite.Draw(spriteBatch, new Vector2(400, 100));
 
         // used block sprites
-        OWUsedBlockSprite.Draw(_spriteBatch, new Vector2(500, 100));
-        UWUsedBlockSprite.Draw(_spriteBatch, new Vector2(600, 100));
-        UGUsedBlockSprite.Draw(_spriteBatch, new Vector2(700, 100));
-        CastleUsedBlockSprite.Draw(_spriteBatch, new Vector2(750, 100));
+        OWUsedBlockSprite.Draw(spriteBatch, new Vector2(500, 100));
+        UWUsedBlockSprite.Draw(spriteBatch, new Vector2(600, 100));
+        UGUsedBlockSprite.Draw(spriteBatch, new Vector2(700, 100));
+        CastleUsedBlockSprite.Draw(spriteBatch, new Vector2(750, 100));
 
         // brick block sprites
-        OWBrickBlockSprite.Draw(_spriteBatch, new Vector2(100, 200));
-        UWBrickBlockSprite.Draw(_spriteBatch, new Vector2(200, 200));
-        UGBrickBlockSprite.Draw(_spriteBatch, new Vector2(300, 200));
-        CastleBrickBlockSprite.Draw(_spriteBatch, new Vector2(400, 200));
+        OWBrickBlockSprite.Draw(spriteBatch, new Vector2(100, 200));
+        UWBrickBlockSprite.Draw(spriteBatch, new Vector2(200, 200));
+        UGBrickBlockSprite.Draw(spriteBatch, new Vector2(300, 200));
+        CastleBrickBlockSprite.Draw(spriteBatch, new Vector2(400, 200));
 
         // broken brick sprites
-        OWBrokenBrickSprite.Draw(_spriteBatch, new Vector2(500, 200));
-        UWBrokenBrickSprite.Draw(_spriteBatch, new Vector2(600, 200));
-        UGBrokenBrickSprite.Draw(_spriteBatch, new Vector2(700, 200));
-        CastleBrokenBrickSprite.Draw(_spriteBatch, new Vector2(750, 200));
+        OWBrokenBrickSprite.Draw(spriteBatch, new Vector2(500, 200));
+        UWBrokenBrickSprite.Draw(spriteBatch, new Vector2(600, 200));
+        UGBrokenBrickSprite.Draw(spriteBatch, new Vector2(700, 200));
+        CastleBrokenBrickSprite.Draw(spriteBatch, new Vector2(750, 200));
         //sprite1[index2].Draw(spriteBatch, new Vector2(0,0));
         //sprite2[index2].Draw(spriteBatch, new Vector2(0,0));
         base.Draw(gameTime);
