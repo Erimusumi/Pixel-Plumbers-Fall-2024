@@ -58,9 +58,9 @@ public class Game1 : Game
     private List<ISprite> sprite1;
     public int index1 = 0;
     public int n1;
-    private List<ISprite> sprite2;
-    public int index2 = 0;
-    public int n2;
+    //private List<ISprite> sprite2;
+    //public int index2 = 0;
+    //public int n2;
 
     private KeyboardController keyboardController;
     private CommandControlCenter controlCenter;
@@ -167,7 +167,7 @@ public class Game1 : Game
         controlG.Update(gameTime);
         manager.updateCurrentItem(currentItem, numItems);
         sprite1[index1].Update(gameTime);
-        sprite2[index2].Update(gameTime);
+        //sprite2[index2].Update(gameTime);
         base.Update(gameTime);
     }
 
@@ -179,8 +179,8 @@ public class Game1 : Game
         CurrentMarioSprite.Draw(spriteBatch, MarioPosition);
         manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
         spriteBatch.End();
-        sprite1[index2].Draw(spriteBatch, new Vector2(0,0));
-        sprite2[index2].Draw(spriteBatch, new Vector2(0,0));
+        //sprite1[index2].Draw(spriteBatch, new Vector2(0,0));
+        //sprite2[index2].Draw(spriteBatch, new Vector2(0,0));
         base.Draw(gameTime);
     }
 }
