@@ -28,6 +28,7 @@ public class IdleMarioCommand : ICommand
 
     public void Execute()
     {
+        game.isJumping = false;
         switch (game.currentMarioState)
         {
             case Game1.MarioState.Small:

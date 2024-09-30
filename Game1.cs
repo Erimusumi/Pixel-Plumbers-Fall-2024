@@ -84,6 +84,8 @@ public class Game1 : Game
     //public int index2 = 0;
     //public int n2;
 
+
+    private IdleMarioCommand idleMarioCommand;
     public Game1()
     {
         graphics = new GraphicsDeviceManager(this);
@@ -104,7 +106,7 @@ public class Game1 : Game
 
         controlCenter = new CommandControlCenter(this, marioTexture);
 
-
+        idleMarioCommand = new IdleMarioCommand(this, marioTexture);
         //Make a list for block iteration
         sprite1 = new List<ISprite>
             {
@@ -113,6 +115,7 @@ public class Game1 : Game
                 //new UsedBlockSprite(),
                 new block1(block)
             };
+            marioSpeed = 10;
     }
     public ISpriteEnemy SetEnemy(ISpriteEnemy enemy)
     {
@@ -171,9 +174,13 @@ public class Game1 : Game
 
     protected override void Update(GameTime gameTime)
     {
+
+        if (!isJumping)
+        {
+            idleMarioCommand.Execute();
+        }
         keyboardController.Update();
 
-        // mario logic / movement
         updatedMarioSpeed = marioSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
         marioVelocity.Y += gravity;
         marioPosition.Y += marioVelocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;
