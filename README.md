@@ -20,6 +20,7 @@ MARIO CONTROLS:
         
 ENEMIES CONTROLS:
     - O and P keys to switch enemies
+
 KOWN BUGS:
     - Animation frames for fire and small mario wont update while running
     - Mario can move while crouched

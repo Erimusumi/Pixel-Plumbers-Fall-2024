@@ -36,13 +36,22 @@ public class MarioSpriteConstructor
                         switch (marioState.GetPowerup())
                         {
                             case MarioState.MarioPowerupEnum.Base:
-                                game.currentMarioSprite = new MovingLeftSmallMario(texture);
+                                if (!(game.currentMarioSprite.GetType() == new MovingLeftSmallMario(texture).GetType()))
+                                {
+                                    game.currentMarioSprite = new MovingLeftSmallMario(texture);
+                                }
                                 break;
                             case MarioState.MarioPowerupEnum.Big:
-                                game.currentMarioSprite = new MovingLeftBigMario(texture);
+                                if (!(game.currentMarioSprite.GetType() == new MovingLeftBigMario(texture).GetType()))
+                                {
+                                    game.currentMarioSprite = new MovingLeftBigMario(texture);
+                                }
                                 break;
                             case MarioState.MarioPowerupEnum.Fire:
-                                game.currentMarioSprite = new MovingLeftFireMario(texture);
+                                if (!(game.currentMarioSprite.GetType() == new MovingLeftFireMario(texture).GetType()))
+                                {
+                                    game.currentMarioSprite = new MovingLeftFireMario(texture);
+                                }
                                 break;
                         }
                         break;
@@ -130,13 +139,22 @@ public class MarioSpriteConstructor
                         switch (marioState.GetPowerup())
                         {
                             case MarioState.MarioPowerupEnum.Base:
-                                game.currentMarioSprite = new MovingRightSmallMario(texture);
+                                if (!(game.currentMarioSprite.GetType() == new MovingRightSmallMario(texture).GetType()))
+                                {
+                                    game.currentMarioSprite = new MovingRightSmallMario(texture);
+                                }
                                 break;
                             case MarioState.MarioPowerupEnum.Big:
-                                game.currentMarioSprite = new MovingRightBigMario(texture);
+                                if (!(game.currentMarioSprite.GetType() == new MovingRightBigMario(texture).GetType()))
+                                {
+                                    game.currentMarioSprite = new MovingRightBigMario(texture);
+                                }
                                 break;
                             case MarioState.MarioPowerupEnum.Fire:
-                                game.currentMarioSprite = new MovingRightFireMario(texture);
+                                if (!(game.currentMarioSprite.GetType() == new MovingRightFireMario(texture).GetType()))
+                                {
+                                    game.currentMarioSprite = new MovingRightFireMario(texture);
+                                }
                                 break;
                         }
                         break;
