@@ -10,7 +10,6 @@ public class BigTurningLeftMario : ISprite
     }
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
-        //TODO: get correct sprite source
         Rectangle sourceRectangle = new Rectangle(329, 52, 344-329, 83-52);
         spriteBatch.Draw(MarioTexture, position, sourceRectangle, Color.White);
     }

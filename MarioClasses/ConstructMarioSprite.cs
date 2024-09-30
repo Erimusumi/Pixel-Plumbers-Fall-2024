@@ -198,7 +198,6 @@ public class MarioSpriteConstructor
                         break;
                 }
                 break;
-
         }
     }
 }
