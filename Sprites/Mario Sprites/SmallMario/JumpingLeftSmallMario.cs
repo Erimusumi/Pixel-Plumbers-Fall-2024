@@ -10,7 +10,7 @@ public class JumpingLeftSmallMario : IMarioSprite
     }
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
-        Rectangle sourceRectangle = new Rectangle(359, 0, 17, 16);
+        Rectangle sourceRectangle = new Rectangle(29, 0, 17, 16);
         spriteBatch.Draw(MarioTexture, position, sourceRectangle, Color.White);
     }
 

@@ -32,9 +32,9 @@ public class MoveLeftMarioCommand : ICommand
         }
         
         game.marioPosition.X += game.marioVelocity.X;
-        game.facingRight = false;
 
-        if (game.Mario.GetDirection() == MarioState.MarioDirectionEnum.Right)
+        //Only swap direction if Mario is on the ground
+        if ((game.Mario.GetDirection() == MarioState.MarioDirectionEnum.Right) && (game.marioVelocity.Y == 0))
         {
             game.Mario.SwapDir();
         }
