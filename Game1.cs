@@ -58,13 +58,9 @@ public class Game1 : Game
     private ISprite obstacle2;
     private ISprite obstacle3;
     private ISprite obstacle4;
-    // lucky block sprites
     private ISprite OWLuckyBlockSprite;
-    // used block sprites
     private ISprite OWUsedBlockSprite;
-    // brick sprites
     private ISprite OWBrickBlockSprite;
-    // broken brick sprites
     private ISprite OWBrokenBrickSprite;
 
 
