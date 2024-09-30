@@ -1,10 +1,10 @@
-using MarioGame;
 using Microsoft.Xna.Framework.Graphics;
+using Pixel_Plumbers_Fall_2024;
 
 public class JumpMarioCommand : ICommand
 {
-    private Game1 game;
-    private Texture2D marioTexture;
+    private Game1 game1;
+    private Texture2D marioTexture1;
 
     ICommand jumpingRightBigMarioCommand;
     ICommand jumpingLeftBigMarioCommand;
@@ -15,8 +15,8 @@ public class JumpMarioCommand : ICommand
 
     public JumpMarioCommand(Game1 game, Texture2D marioTexture)
     {
-        this.game = game;
-        this.marioTexture = marioTexture;
+        game1 = game;
+        marioTexture1 = marioTexture;
 
         jumpingRightBigMarioCommand = new JumpingRightBigMarioCommand(game, marioTexture);
         jumpingLeftBigMarioCommand = new JumpingLeftBigMarioCommand(game, marioTexture);
