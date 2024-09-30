@@ -4,16 +4,29 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
 using Microsoft.Xna.Framework;
+using System.Security.Cryptography.X509Certificates;
 public interface IitemManager
 {
+   
     void updateCurrentItem(ref int curr, int num);
 }
 public class ItemManager : IitemManager
 {
+    public int lastButton;
+    private KeyboardState state;
+    private KeyboardState previousState;
+    public void itemManager()
+    {
+        this.lastButton = 0;
+    }
+
+        
     public void updateCurrentItem(ref int currentItem, int numItems)
     {
-        var kstate = Keyboard.GetState();
-        if (kstate.IsKeyDown(Keys.U))
+        
+        this.state = Keyboard.GetState();
+        
+        if (state.IsKeyDown(Keys.U) && !(this.previousState.IsKeyDown(Keys.U)))
         {
             if (currentItem == 0)
             {
@@ -23,9 +36,10 @@ public class ItemManager : IitemManager
             {
                 currentItem--;
             }
+            
 
         }
-        if (kstate.IsKeyDown(Keys.I))
+        if (state.IsKeyDown(Keys.I)&& !(this.previousState.IsKeyDown(Keys.I)))
         {
             if (currentItem == (numItems - 1))
             {
@@ -35,7 +49,9 @@ public class ItemManager : IitemManager
             {
                 currentItem++;
             }
+            
         }
+        this.previousState = state;
 
     }
     public void draw(int currentItem, Texture2D itemsText, SpriteBatch sB,Vector2 position)
