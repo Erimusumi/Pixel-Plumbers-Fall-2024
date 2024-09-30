@@ -13,11 +13,6 @@ public class Game1 : Game
     private KeyboardController keyboardController;
     private CommandControlCenter controlCenter;
     public IMario Mario;
-
-    //public enum MarioState { Small, Big, Fire }
-    //public enum MarioMoveState { Idle, MovingRight, MovingLeft }
-    //public MarioState currentMarioState;
-    //public MarioMoveState currentMarioMoveState;
     
     public IMarioSprite currentMarioSprite;
 
