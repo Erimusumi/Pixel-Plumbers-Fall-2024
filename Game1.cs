@@ -78,13 +78,14 @@ public class Game1 : Game
         MarioVelocity = Vector2.Zero;
 
         keyboardController = new KeyboardController();
-        controlCenter = new CommandControlCenter(this);
-
         CurrentMarioSprite = BigIdleRightMario;
         
         Mario = new Mario(this);
         spriteEnemy = new Goomba();
         controlG = new GoombaCommand(spriteEnemy);
+
+        controlCenter = new CommandControlCenter(this);
+
 
         //Make a list for block iteration
         sprite1 = new List<ISprite>
