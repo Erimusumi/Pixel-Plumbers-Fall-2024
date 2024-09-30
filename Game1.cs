@@ -105,7 +105,7 @@ public class Game1 : Game
     //public int index2 = 0;
     //public int n2;
 
-
+    private KeyboardController keyboardController;
     private CommandControlCenter controlCenter;
     public Game1()
     {
