@@ -11,7 +11,7 @@ public class Game1 : Game
 
     public IMario Mario;
 
-    public Texture2D MarioTexture;
+    public Texture2D marioTexture;
     public Vector2 MarioPosition;
     public float MarioSpeed;
     public Vector2 MarioVelocity;
@@ -26,10 +26,10 @@ public class Game1 : Game
     public MarioMoveState currentMarioMoveState;
     public IMarioSprite currentMarioSprite;
 
-    public Vector2 MarioPosition;
-    public Vector2 MarioVelocity;
+    public Vector2 marioPosition;
+    public Vector2 marioVelocity;
 
-    public float MarioSpeed;
+    public float marioSpeed;
     public float gravity = 9.8f;
     public float jumpSpeed = -350f;
     public float groundPosition;
