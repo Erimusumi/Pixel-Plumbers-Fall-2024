@@ -19,8 +19,7 @@ public class CommandControlCenter
         SetMovingLeftMarioCommand = new SetMoveLeftCommand(game);
         SetCrouchMarioCommand = new SetCrouchCommand(game);
         EnemySwitch = new EnemySwitch(game);
-        blockTCommand = new blockTCommand(game);
-        blockYCommand = new blockYCommand(game);
+
 
         keyboardController.addCommand(Keys.Right, SetMovingRightMarioCommand);
         keyboardController.addCommand(Keys.Left, SetMovingLeftMarioCommand);
