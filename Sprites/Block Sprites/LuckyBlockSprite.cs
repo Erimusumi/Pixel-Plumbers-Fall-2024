@@ -1,11 +1,10 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework;
 public class LuckyBlockSprite: ISprite
 {
     public Texture2D Texture { get; set; }
@@ -17,11 +16,11 @@ public class LuckyBlockSprite: ISprite
     private int width;
     private int height;
     private int currentFrame;
-    public LuckyBlockSprite(Texture2D texture, Vector2 start, Vector2 end, int frames, int wait)
+    public LuckyBlockSprite(Texture2D texture, int frames, int wait)
     {
         Texture = texture;
-        Start = start;
-        End = end;
+        Start = new Vector2(80, 112);
+        End = new Vector2(128, 128);
         numOfFrames = frames;
         waitTime = wait;            // the amount of time between frame changes
         buffer = 0;                 // counts up until timeGap to indicate when to change frames
