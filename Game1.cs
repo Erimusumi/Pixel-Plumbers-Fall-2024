@@ -30,31 +30,6 @@ public class Game1 : Game
     public Boolean facingRight = true;
     public Boolean isJumping = false;
 
-    // lucky block sprites
-    private ISprite OWLuckyBlockSprite;
-    private ISprite UWLuckyBlockSprite;
-    private ISprite UGLuckyBlockSprite;
-    private ISprite CastleLuckyBlockSprite;
-
-    // used block sprites
-    private ISprite OWUsedBlockSprite;
-    private ISprite UWUsedBlockSprite;
-    private ISprite UGUsedBlockSprite;
-    private ISprite CastleUsedBlockSprite;
-
-    // brick sprites
-    private ISprite OWBrickBlockSprite;
-    private ISprite UWBrickBlockSprite;
-    private ISprite UGBrickBlockSprite;
-    private ISprite CastleBrickBlockSprite;
-
-    // broken brick sprites
-    private ISprite OWBrokenBrickSprite;
-    private ISprite UWBrokenBrickSprite;
-    private ISprite UGBrokenBrickSprite;
-    private ISprite CastleBrokenBrickSprite;
-
-
 
     //Enemy Code
     ISpriteEnemy spriteEnemy;
@@ -83,6 +58,14 @@ public class Game1 : Game
     private ISprite obstacle2;
     private ISprite obstacle3;
     private ISprite obstacle4;
+    // lucky block sprites
+    private ISprite OWLuckyBlockSprite;
+    // used block sprites
+    private ISprite OWUsedBlockSprite;
+    // brick sprites
+    private ISprite OWBrickBlockSprite;
+    // broken brick sprites
+    private ISprite OWBrokenBrickSprite;
 
 
     private IdleMarioCommand idleMarioCommand;
@@ -113,24 +96,12 @@ public class Game1 : Game
             {
                 //lucky brick sprites
                 OWLuckyBlockSprite,
-                UWLuckyBlockSprite,
-                UGLuckyBlockSprite,
-                CastleLuckyBlockSprite,
                 //broekn brick sprites
                 OWBrokenBrickSprite,
-                UWBrokenBrickSprite,
-                UGBrokenBrickSprite,
-                CastleBrokenBrickSprite,
                 //brick sprites
                 OWBrickBlockSprite,
-                UWBrickBlockSprite,
-                UGBrickBlockSprite,
-                CastleBrokenBrickSprite,
                 //used block sprites
-                OWUsedBlockSprite,
-                UGUsedBlockSprite,
-                UGUsedBlockSprite,
-                CastleUsedBlockSprite
+                OWUsedBlockSprite
             };
 
         sprite2 = new List<ISprite>
@@ -181,27 +152,15 @@ public class Game1 : Game
 
         // lucky block sprites
         OWLuckyBlockSprite = new LuckyBlockSprite(block, new Vector2(80, 112), new Vector2(128, 128), 3, 10);
-        UWLuckyBlockSprite = new LuckyBlockSprite(block, new Vector2(80, 160), new Vector2(128, 176), 3, 10);
-        UGLuckyBlockSprite = new LuckyBlockSprite(block, new Vector2(80, 128), new Vector2(128, 144), 3, 10);
-        CastleLuckyBlockSprite = new LuckyBlockSprite(block, new Vector2(80, 144), new Vector2(128, 160), 3, 10);
 
         // used block sprites
         OWUsedBlockSprite = new StaticBlockSprite(block, new Rectangle(128, 112, 16, 16));
-        UWUsedBlockSprite = new StaticBlockSprite(block, new Rectangle(128, 160, 16, 16));
-        UGUsedBlockSprite = new StaticBlockSprite(block, new Rectangle(128, 128, 16, 16));
-        CastleUsedBlockSprite = new StaticBlockSprite(block, new Rectangle(128, 144, 16, 16));
 
         // brick block sprites
         OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
-        UWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 160, 16, 16));
-        UGBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 128, 16, 16));
-        CastleBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 144, 16, 16));
 
         // broken brick block sprites
         OWBrokenBrickSprite = new BrokenBrickBlockSprite(block, new Vector2(288, 112), new Vector2(352, 128), 4, 1);
-        UWBrokenBrickSprite = new BrokenBrickBlockSprite(block, new Vector2(288, 160), new Vector2(352, 176), 4, 1);
-        UGBrokenBrickSprite = new BrokenBrickBlockSprite(block, new Vector2(288, 128), new Vector2(352, 144), 4, 1);
-        CastleBrokenBrickSprite = new BrokenBrickBlockSprite(block, new Vector2(288, 144), new Vector2(352, 160), 4, 1);
 
         // obstacle sprites
         obstacle1 = new block1(obstacle);
@@ -232,17 +191,11 @@ public class Game1 : Game
 
         // lucky block sprites
         OWLuckyBlockSprite.Update(gameTime);
-        UWLuckyBlockSprite.Update(gameTime);
-        UGLuckyBlockSprite.Update(gameTime);
-        CastleLuckyBlockSprite.Update(gameTime);
 
         // broken brick block sprites
         if (IsActive)
         {
             OWBrokenBrickSprite.Update(gameTime);
-            UWBrokenBrickSprite.Update(gameTime);
-            UGBrokenBrickSprite.Update(gameTime);
-            CastleBrokenBrickSprite.Update(gameTime);
         }
 
         spriteEnemy.Updates();
