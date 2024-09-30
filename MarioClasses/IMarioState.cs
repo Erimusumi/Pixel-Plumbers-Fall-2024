@@ -250,7 +250,7 @@ public class MarioState : IMarioState
 
         
 
-        marioSpriteConstructor.ConstructMarioSprite(this, game);
+        MarioSpriteConstructor.ConstructMarioSprite(this, game);
     }
 }
 

@@ -22,7 +22,7 @@ public class MoveLeftMarioCommand : ICommand
 
     public void Execute()
     {
-        game.marioPosition.X -= 10;
+        game.MarioPosition.X -= 10;
         game.facingRight = false;
 
         switch (game.currentMarioState)

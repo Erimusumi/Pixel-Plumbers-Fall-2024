@@ -14,7 +14,7 @@ public class SetJumpUp : ICommand
     {
         if (!game.IsJumping)
         {
-            game.MarioVelocity.Y = game.JumpSpeed;
+            game.marioVelocity.Y = game.JumpSpeed;
             game.IsJumping = true;
 
             game.Mario.Jump();

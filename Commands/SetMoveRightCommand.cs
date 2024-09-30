@@ -18,17 +18,17 @@ public class SetMoveRightCommand : ICommand
         {
             game.marioVelocity.X += .5f;
         }
-        if (game.MarioVelocity.X > 5f)
+        if (game.marioVelocity.X > 5f)
         {
-            game.MarioVelocity.X = 5f;
+            game.marioVelocity.X = 5f;
         }
 
         game.FacingRight = true;
         game.MovingRight = true;
         game.MovingLeft = false;
-        game.MarioPosition.X += game.MarioVelocity.X;
+        game.MarioPosition.X += game.marioVelocity.X;
         
-        if (game.MarioVelocity.Y == 0)
+        if (game.marioVelocity.Y == 0)
         {
             game.Mario.Run();
         }
