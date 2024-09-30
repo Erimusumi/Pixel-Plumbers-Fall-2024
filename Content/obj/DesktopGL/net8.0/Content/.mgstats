@@ -1,6 +1,2 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/creat/Source/Repos/Pixel-Plumbers-Fall-2024/Content/blocks.gif","C:/Users/creat/Source/Repos/Pixel-Plumbers-Fall-2024/Content/bin/DesktopGL/Content/obstacle.xnb","TextureProcessor","Texture2DContent",14122,1560241,0.3937218
-"C:/Users/creat/Source/Repos/Pixel-Plumbers-Fall-2024/Content/blocks.png","C:/Users/creat/Source/Repos/Pixel-Plumbers-Fall-2024/Content/bin/DesktopGL/Content/blocks.xnb","TextureProcessor","Texture2DContent",13083,458837,0.0266866
-"C:/Users/creat/Source/Repos/Pixel-Plumbers-Fall-2024/Content/enemies.png","C:/Users/creat/Source/Repos/Pixel-Plumbers-Fall-2024/Content/bin/DesktopGL/Content/enemies.xnb","TextureProcessor","Texture2DContent",8295,455269,0.0221538
-"C:/Users/creat/Source/Repos/Pixel-Plumbers-Fall-2024/Content/mario.png","C:/Users/creat/Source/Repos/Pixel-Plumbers-Fall-2024/Content/bin/DesktopGL/Content/mario.xnb","TextureProcessor","Texture2DContent",6584,304645,0.0157704
-"C:/Users/creat/Source/Repos/Pixel-Plumbers-Fall-2024/Content/MarioItems.png","C:/Users/creat/Source/Repos/Pixel-Plumbers-Fall-2024/Content/bin/DesktopGL/Content/MarioItems.xnb","TextureProcessor","Texture2DContent",38427,2532585,0.1308084
+"C:/Users/w6614/Desktop/OSU/2024 Autumn Semester/CSE 3902/Project Code/Sprint 2/Content/blocks.png","C:/Users/w6614/Desktop/OSU/2024 Autumn Semester/CSE 3902/Project Code/Sprint 2/Content/bin/DesktopGL/Content/blocks.xnb","TextureProcessor","Texture2DContent",13083,458837,2.0346982
