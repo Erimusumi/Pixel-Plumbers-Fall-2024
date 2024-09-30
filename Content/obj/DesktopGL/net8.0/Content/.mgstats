@@ -1,6 +1,6 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/kamau/Downloads/CSE3902/mario7/Content/blocks.gif","C:/Users/kamau/Downloads/CSE3902/mario7/Content/bin/DesktopGL/Content/obstacle.xnb","TextureProcessor","Texture2DContent",14122,1560241,0.192392
-"C:/Users/kamau/Downloads/CSE3902/mario7/Content/blocks.png","C:/Users/kamau/Downloads/CSE3902/mario7/Content/bin/DesktopGL/Content/blocks.xnb","TextureProcessor","Texture2DContent",13083,458837,0.0152671
-"C:/Users/kamau/Downloads/CSE3902/mario7/Content/enemies.png","C:/Users/kamau/Downloads/CSE3902/mario7/Content/bin/DesktopGL/Content/enemies.xnb","TextureProcessor","Texture2DContent",8295,455269,0.0107537
-"C:/Users/kamau/Downloads/CSE3902/mario7/Content/mario.png","C:/Users/kamau/Downloads/CSE3902/mario7/Content/bin/DesktopGL/Content/mario.xnb","TextureProcessor","Texture2DContent",6584,304645,0.0085859
-"C:/Users/kamau/Downloads/CSE3902/mario7/Content/MarioItems.png","C:/Users/kamau/Downloads/CSE3902/mario7/Content/bin/DesktopGL/Content/MarioItems.xnb","TextureProcessor","Texture2DContent",38427,2532585,0.0844123
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/blocks.gif","C:/Users/helen/source/repos/PixelPlumbers2/Content/bin/DesktopGL/Content/obstacle.xnb","TextureProcessor","Texture2DContent",14122,1560241,0.6189257
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/blocks.png","C:/Users/helen/source/repos/PixelPlumbers2/Content/bin/DesktopGL/Content/blocks.xnb","TextureProcessor","Texture2DContent",13083,458837,0.0399592
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/enemies.png","C:/Users/helen/source/repos/PixelPlumbers2/Content/bin/DesktopGL/Content/enemies.xnb","TextureProcessor","Texture2DContent",8295,455269,0.0976471
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/mario.png","C:/Users/helen/source/repos/PixelPlumbers2/Content/bin/DesktopGL/Content/mario.xnb","TextureProcessor","Texture2DContent",6584,304645,0.0241508
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/MarioItems.png","C:/Users/helen/source/repos/PixelPlumbers2/Content/bin/DesktopGL/Content/MarioItems.xnb","TextureProcessor","Texture2DContent",38427,2532585,0.1808593

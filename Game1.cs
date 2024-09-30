@@ -147,7 +147,7 @@ public class Game1 : Game
         starPower = new StarPower(ItemsTexture);
 
         // lucky block sprites
-        OWLuckyBlockSprite = new LuckyBlockSprite(block, 3, 10);
+        OWLuckyBlockSprite = new LuckyBlockSprite(block, 3, 20);
         // used block sprites
         OWUsedBlockSprite = new StaticBlockSprite(block, new Rectangle(128, 112, 16, 16));
         // brick block sprites
@@ -210,7 +210,7 @@ public class Game1 : Game
         spriteBatch.End();
 
         // Draw blocks and obstacles
-        sprite1[index1].Draw(spriteBatch, new Vector2(40,10));
+        sprite1[index1].Draw(spriteBatch, new Vector2(200,200));
         sprite2[index2].Draw(spriteBatch, new Vector2(310,150));
 
         base.Draw(gameTime);
