@@ -30,6 +30,30 @@ public class Game1 : Game
     public ISprite BigJumpRightMario;
     public ISprite BigJumpLeftMario;
 
+    // lucky block sprites
+    private ISprite OWLuckyBlockSprite;
+    private ISprite UWLuckyBlockSprite;
+    private ISprite UGLuckyBlockSprite;
+    private ISprite CastleLuckyBlockSprite;
+
+    // used block sprites
+    private ISprite OWUsedBlockSprite;
+    private ISprite UWUsedBlockSprite;
+    private ISprite UGUsedBlockSprite;
+    private ISprite CastleUsedBlockSprite;
+
+    // brick sprites
+    private ISprite OWBrickBlockSprite;
+    private ISprite UWBrickBlockSprite;
+    private ISprite UGBrickBlockSprite;
+    private ISprite CastleBrickBlockSprite;
+
+    // broken brick sprites
+    private ISprite OWBrokenBrickSprite;
+    private ISprite UWBrokenBrickSprite;
+    private ISprite UGBrokenBrickSprite;
+    private ISprite CastleBrokenBrickSprite;
+
     public ISprite CurrentMarioSprite;
 
     public Boolean FacingRight = true;
@@ -136,6 +160,30 @@ public class Game1 : Game
         firePower = new FirePower(ItemsTexture);
         starPower = new StarPower(ItemsTexture);
 
+        // lucky block sprites
+        OWLuckyBlockSprite = new LuckyBlockSprite(block, new Vector2(80, 112), new Vector2(128, 128), 3, 10);
+        UWLuckyBlockSprite = new LuckyBlockSprite(block, new Vector2(80, 160), new Vector2(128, 176), 3, 10);
+        UGLuckyBlockSprite = new LuckyBlockSprite(block, new Vector2(80, 128), new Vector2(128, 144), 3, 10);
+        CastleLuckyBlockSprite = new LuckyBlockSprite(block, new Vector2(80, 144), new Vector2(128, 160), 3, 10);
+
+        // used block sprites
+        OWUsedBlockSprite = new StaticBlockSprite(block, new Rectangle(128, 112, 16, 16));
+        UWUsedBlockSprite = new StaticBlockSprite(block, new Rectangle(128, 160, 16, 16));
+        UGUsedBlockSprite = new StaticBlockSprite(block, new Rectangle(128, 128, 16, 16));
+        CastleUsedBlockSprite = new StaticBlockSprite(block, new Rectangle(128, 144, 16, 16));
+
+        // brick block sprites
+        OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
+        UWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 160, 16, 16));
+        UGBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 128, 16, 16));
+        CastleBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 144, 16, 16));
+
+        // broken brick block sprites
+        OWBrokenBrickSprite = new BrokenBrickBlockSprite(block, new Vector2(288, 112), new Vector2(352, 128), 4, 1);
+        UWBrokenBrickSprite = new BrokenBrickBlockSprite(block, new Vector2(288, 160), new Vector2(352, 176), 4, 1);
+        UGBrokenBrickSprite = new BrokenBrickBlockSprite(block, new Vector2(288, 128), new Vector2(352, 144), 4, 1);
+        CastleBrokenBrickSprite = new BrokenBrickBlockSprite(block, new Vector2(288, 144), new Vector2(352, 160), 4, 1);
+
 
 
 
@@ -156,6 +204,20 @@ public class Game1 : Game
         */
 
         Mario.Update();
+        // lucky block sprites
+        OWLuckyBlockSprite.Update(gameTime);
+        UWLuckyBlockSprite.Update(gameTime);
+        UGLuckyBlockSprite.Update(gameTime);
+        CastleLuckyBlockSprite.Update(gameTime);
+
+        // broken brick block sprites
+        if (IsActive)
+        {
+            OWBrokenBrickSprite.Update(gameTime);
+            UWBrokenBrickSprite.Update(gameTime);
+            UGBrokenBrickSprite.Update(gameTime);
+            CastleBrokenBrickSprite.Update(gameTime);
+        }
 
         keyboardController.Update(gameTime);
         updatedMarioSpeed = MarioSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -188,6 +250,30 @@ public class Game1 : Game
         CurrentMarioSprite.Draw(spriteBatch, MarioPosition);
         manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
         spriteBatch.End();
+
+        // lucky block sprites
+        OWLuckyBlockSprite.Draw(_spriteBatch, new Vector2(100, 100));
+        UWLuckyBlockSprite.Draw(_spriteBatch, new Vector2(200, 100));
+        UGLuckyBlockSprite.Draw(_spriteBatch, new Vector2(300, 100));
+        CastleLuckyBlockSprite.Draw(_spriteBatch, new Vector2(400, 100));
+
+        // used block sprites
+        OWUsedBlockSprite.Draw(_spriteBatch, new Vector2(500, 100));
+        UWUsedBlockSprite.Draw(_spriteBatch, new Vector2(600, 100));
+        UGUsedBlockSprite.Draw(_spriteBatch, new Vector2(700, 100));
+        CastleUsedBlockSprite.Draw(_spriteBatch, new Vector2(750, 100));
+
+        // brick block sprites
+        OWBrickBlockSprite.Draw(_spriteBatch, new Vector2(100, 200));
+        UWBrickBlockSprite.Draw(_spriteBatch, new Vector2(200, 200));
+        UGBrickBlockSprite.Draw(_spriteBatch, new Vector2(300, 200));
+        CastleBrickBlockSprite.Draw(_spriteBatch, new Vector2(400, 200));
+
+        // broken brick sprites
+        OWBrokenBrickSprite.Draw(_spriteBatch, new Vector2(500, 200));
+        UWBrokenBrickSprite.Draw(_spriteBatch, new Vector2(600, 200));
+        UGBrokenBrickSprite.Draw(_spriteBatch, new Vector2(700, 200));
+        CastleBrokenBrickSprite.Draw(_spriteBatch, new Vector2(750, 200));
         //sprite1[index2].Draw(spriteBatch, new Vector2(0,0));
         //sprite2[index2].Draw(spriteBatch, new Vector2(0,0));
         base.Draw(gameTime);

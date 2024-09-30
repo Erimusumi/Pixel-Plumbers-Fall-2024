@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
-public class UsedBlockSprite: ISprite
+public class StaticBlockSprite: ISprite
 {
     public Texture2D texture { get; set; }
     public Rectangle rectangle { get; set; }
-    public UsedBlockSprite(Texture2D texture, Rectangle sourceRectangle)
+    public StaticBlockSprite(Texture2D texture, Rectangle sourceRectangle)
     {
         this.texture = texture;
         this.rectangle = sourceRectangle;
