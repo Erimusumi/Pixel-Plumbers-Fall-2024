@@ -17,7 +17,9 @@ MARIO CONTROLS:
         - 1 to change to "small" mario
         - 2 to change to "big" mario
         - 3 to change to "fire" mario
-
+        
+ENEMIES CONTROLS:
+    - O and P keys to switch enemies
 KOWN BUGS:
     - Animation frames for fire and small mario wont update while running
     - Mario can move while crouched
