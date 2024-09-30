@@ -253,7 +253,7 @@ public class Game1 : Game
         controlG.Update();
         manager.updateCurrentItem(currentItem, numItems);
         sprite1[index1].Update(gameTime);
-        //sprite2[index2].Update(gameTime);
+        sprite2[index2].Update(gameTime);
 
         base.Update(gameTime);
     }
@@ -268,31 +268,10 @@ public class Game1 : Game
         manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
         currentMarioSprite.Draw(spriteBatch, marioPosition);
         spriteBatch.End();
-        // lucky block sprites
-        OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(400, 240));
-        UWLuckyBlockSprite.Draw(spriteBatch, new Vector2(400, 240));
-        UGLuckyBlockSprite.Draw(spriteBatch, new Vector2(400, 240));
-        CastleLuckyBlockSprite.Draw(spriteBatch, new Vector2(400, 240));
 
-        // used block sprites
-        OWUsedBlockSprite.Draw(spriteBatch, new Vector2(400, 240));
-        UWUsedBlockSprite.Draw(spriteBatch, new Vector2(400, 240));
-        UGUsedBlockSprite.Draw(spriteBatch, new Vector2(400, 240));
-        CastleUsedBlockSprite.Draw(spriteBatch, new Vector2(400, 240));
 
-        // brick block sprites
-        OWBrickBlockSprite.Draw(spriteBatch, new Vector2(400, 240));
-        UWBrickBlockSprite.Draw(spriteBatch, new Vector2(400, 240));
-        UGBrickBlockSprite.Draw(spriteBatch, new Vector2(400, 240));
-        CastleBrickBlockSprite.Draw(spriteBatch, new Vector2(400, 240));
-
-        // broken brick sprites
-        OWBrokenBrickSprite.Draw(spriteBatch, new Vector2(400, 240));
-        UWBrokenBrickSprite.Draw(spriteBatch, new Vector2(400, 240));
-        UGBrokenBrickSprite.Draw(spriteBatch, new Vector2(400, 240));
-        CastleBrokenBrickSprite.Draw(spriteBatch, new Vector2(400, 240));
-        //sprite1[index2].Draw(spriteBatch, new Vector2(0,0));
-        //sprite2[index2].Draw(spriteBatch, new Vector2(0,0));
+        sprite1[index2].Draw(spriteBatch, new Vector2(0,0));
+        sprite2[index2].Draw(spriteBatch, new Vector2(0,0));
 
         base.Draw(gameTime);
     }

@@ -30,6 +30,8 @@ public class block1 : ISprite
 
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
+        spriteBatch.Begin();
         spriteBatch.Draw(BlockTexture, destinationRectangle, sourceRectangle, Color.White);
+        spriteBatch.End();
     }
 }
