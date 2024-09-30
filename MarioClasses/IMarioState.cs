@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Text;
 using System.Threading.Tasks;
+using static MarioState;
 
 //Mario State Machine
 
@@ -23,7 +24,9 @@ internal interface IMarioState
     void Turning();
     void CollectPowerup(int powerupType);
     void Crouch();
-
+    MarioStateEnum GetState();
+    MarioDirectionEnum GetDirection();
+    MarioPowerupEnum GetPowerup();
 }
 
 public class MarioState : IMarioState
@@ -39,10 +42,12 @@ public class MarioState : IMarioState
     private Vector2 MarioVelocity;
 
     Game1 game;
+    Texture2D marioTexture;
 
-    public MarioState(Game1 game)
+    public MarioState(Game1 game, Texture2D texture)
     {
         this.game = game;
+        this.marioTexture = texture;
     }
 
     public void TakeDamage()
@@ -66,7 +71,8 @@ public class MarioState : IMarioState
 
     public void Die()
     {
-        currState = MarioStateEnum.Dead;
+        //Death not implemented yet
+        //currState = MarioStateEnum.Dead;
     }
     public void Jump()
     {
@@ -218,7 +224,7 @@ public class MarioState : IMarioState
     {
         if (game.marioVelocity.X > 0f)
         {
-            game.marioVelocity.X -= .25f;
+            game.marioVelocity.X -= .1f;
             if (game.marioVelocity.X < 0f)
             {
                 game.marioVelocity.X = 0f;
@@ -226,7 +232,7 @@ public class MarioState : IMarioState
         }
         if (game.marioVelocity.X < 0f)
         {
-            game.marioVelocity.X += .25f;
+            game.marioVelocity.X += .1f;
             if (game.marioVelocity.X > 0f)
             {
                 game.marioVelocity.X = 0f;
@@ -247,7 +253,7 @@ public class MarioState : IMarioState
 
         this.UpdateCheckIfTurning();
 
-
+        MarioSpriteConstructor.ConstructMarioSprite(this, game, marioTexture);
 
     }
 }

@@ -16,6 +16,6 @@ public class CrouchLeftBigMarioCommand : ICommand
 
     public void Execute()
     {
-        game.currentMarioSprite = crouchLeftBigMario;
+        game.Mario.Crouch();
     }
 }

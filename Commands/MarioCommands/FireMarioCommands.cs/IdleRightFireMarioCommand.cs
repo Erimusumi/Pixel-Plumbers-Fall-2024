@@ -14,6 +14,6 @@ public class IdleRightFireMarioCommand : ICommand
 
     public void Execute()
     {
-        game.currentMarioSprite = new IdleRightFireMario(marioTexture);
+        game.Mario.Stop();
     }
 }

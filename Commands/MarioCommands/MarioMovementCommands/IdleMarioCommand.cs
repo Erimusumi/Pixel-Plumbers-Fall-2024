@@ -18,17 +18,20 @@ public class IdleMarioCommand : ICommand
         this.game = game;
         this.marioTexture = marioTexture;
 
+        /*
         idleLeftSmallMario = new IdleLeftSmallMarioCommand(game, marioTexture);
         idleRightSmallMario = new IdleRightSmallMarioCommand(game, marioTexture);
         idleLeftBigMario = new IdleLeftBigMarioCommand(game, marioTexture);
         idleRightBigMario = new IdleRightBigMarioCommand(game, marioTexture);
         idleLeftFireMario = new IdleLeftFireMarioCommand(game, marioTexture);
         idleRightFireMario = new IdleRightFireMarioCommand(game, marioTexture);
+        */
     }
 
     public void Execute()
     {
         game.isJumping = false;
+        /*
         switch (game.currentMarioState)
         {
             case Game1.MarioState.Small:
@@ -64,5 +67,8 @@ public class IdleMarioCommand : ICommand
                 }
                 break;
         }
+        */
+
+        game.Mario.Stop();
     }
 }

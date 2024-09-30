@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static MarioState;
 
 public interface IMario
 {
@@ -18,6 +19,12 @@ public interface IMario
     void CollectPowerup(int powType);
     void CollectStar();
     void Crouch();
+
+    MarioStateEnum GetState();
+
+    MarioDirectionEnum GetDirection();
+
+    MarioPowerupEnum GetPowerup();
 
 }
 

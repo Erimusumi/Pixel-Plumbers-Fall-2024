@@ -19,12 +19,12 @@ public class JumpMarioCommand : ICommand
         this.marioTexture = marioTexture;
 
         // Initialize the specific jump commands for different Mario states
-        jumpRightSmallMarioCommand = new JumpRightSmallMarioCommand(game, marioTexture);
-        jumpLeftSmallMarioCommand = new JumpLeftSmallMarioCommand(game, marioTexture);
-        jumpRightBigMarioCommand = new JumpingRightBigMarioCommand(game, marioTexture);
-        jumpLeftBigMarioCommand = new JumpingLeftBigMarioCommand(game, marioTexture);
-        jumpRightFireMarioCommand = new JumpingRightFireMarioCommand(game, marioTexture);
-        jumpLeftFireMarioCommand = new JumpingLeftFireMarioCommand(game, marioTexture);
+        //jumpRightSmallMarioCommand = new JumpRightSmallMarioCommand(game, marioTexture);
+        //jumpLeftSmallMarioCommand = new JumpLeftSmallMarioCommand(game, marioTexture);
+        //jumpRightBigMarioCommand = new JumpingRightBigMarioCommand(game, marioTexture);
+        //jumpLeftBigMarioCommand = new JumpingLeftBigMarioCommand(game, marioTexture);
+        //jumpRightFireMarioCommand = new JumpingRightFireMarioCommand(game, marioTexture);
+        //jumpLeftFireMarioCommand = new JumpingLeftFireMarioCommand(game, marioTexture);
     }
 
     public void Execute()
@@ -34,6 +34,7 @@ public class JumpMarioCommand : ICommand
             game.isJumping = true;
             game.marioVelocity.Y = game.jumpSpeed;
 
+            /*
             switch (game.currentMarioState)
             {
                 case Game1.MarioState.Small:
@@ -69,6 +70,9 @@ public class JumpMarioCommand : ICommand
                 default:
                     break;
             }
+            */
+
+            game.Mario.Jump();
         }
     }
 }

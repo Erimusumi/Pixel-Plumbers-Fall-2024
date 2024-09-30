@@ -14,6 +14,6 @@ public class CrouchRightFireMarioCommand : ICommand
 
     public void Execute()
     {
-        game.currentMarioSprite = new CrouchRightFireMario(marioTexture);
+        game.Mario.Crouch();
     }
 }

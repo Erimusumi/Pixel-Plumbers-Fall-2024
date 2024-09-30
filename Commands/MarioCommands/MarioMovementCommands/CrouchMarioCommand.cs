@@ -16,14 +16,17 @@ public class CrouchMarioCommand : ICommand
         this.game = game;
         this.marioTexture = marioTexture;
 
+        /*
         crouchingLeftBigMario = new CrouchLeftBigMarioCommand(game, marioTexture);
         crouchingRightBigMario = new CrouchRightBigMarioCommand(game, marioTexture);
         crouchingLeftFireMario = new CrouchLeftFireMarioCommand(game, marioTexture);
         crouchingRightFireMario = new CrouchRightFireMarioCommand(game, marioTexture);
+        */
     }
 
     public void Execute()
     {
+        /*
         if (!game.isJumping)
         {
             switch (game.currentMarioState)
@@ -50,5 +53,13 @@ public class CrouchMarioCommand : ICommand
                     break;
             }
         }
+        */
+        game.Mario.Crouch();
+    }
+
+    public void Unexecute()
+    {
+        //Do when key is unpressed
+        game.Mario.Stop();
     }
 }

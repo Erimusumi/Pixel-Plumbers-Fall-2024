@@ -17,6 +17,10 @@ public class MovingLeftBigMarioCommand : ICommand
 
     public void Execute()
     {
-        game.currentMarioSprite = movingLeftBigMario;
+        if (game.Mario.GetDirection() == MarioState.MarioDirectionEnum.Right)
+        {
+            game.Mario.SwapDir();
+        }
+        game.Mario.Run();
     }
 }

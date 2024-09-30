@@ -14,6 +14,6 @@ public class JumpingRightFireMarioCommand : ICommand
 
     public void Execute()
     {
-        game.currentMarioSprite = new JumpingRightFireMario(marioTexture);
+        game.Mario.Jump();
     }
 }

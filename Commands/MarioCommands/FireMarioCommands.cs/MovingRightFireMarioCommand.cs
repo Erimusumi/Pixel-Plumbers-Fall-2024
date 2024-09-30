@@ -14,6 +14,10 @@ public class MovingRightFireMarioCommand : ICommand
 
     public void Execute()
     {
-        game.currentMarioSprite = new MovingRightFireMario(marioTexture);
+        if (game.Mario.GetDirection() == MarioState.MarioDirectionEnum.Left)
+        {
+            game.Mario.SwapDir();
+        }
+        game.Mario.Run();
     }
 }

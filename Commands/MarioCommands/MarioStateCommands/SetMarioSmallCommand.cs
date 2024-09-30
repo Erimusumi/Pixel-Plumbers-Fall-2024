@@ -11,6 +11,6 @@ public class SetMarioSmallCommand : ICommand
 
     public void Execute()
     {
-        game.currentMarioState = Game1.MarioState.Small;
+        game.Mario.TakeDamage();
     }
 }

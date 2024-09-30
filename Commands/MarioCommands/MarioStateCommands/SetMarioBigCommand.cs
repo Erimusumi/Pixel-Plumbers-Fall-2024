@@ -11,6 +11,6 @@ public class SetMarioBigCommand : ICommand
 
     public void Execute()
     {
-        game.currentMarioState = Game1.MarioState.Big;
+        game.Mario.CollectPowerup(0);
     }
 }

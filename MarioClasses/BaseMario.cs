@@ -1,4 +1,5 @@
-﻿using Pixel_Plumbers_Fall_2024;
+﻿using Microsoft.Xna.Framework.Graphics;
+using Pixel_Plumbers_Fall_2024;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,11 +12,13 @@ class Mario : IMario
     //IMarioObject is reference to IMario in Game1. Kept here as variable so that the
     //decorators can change it
     Game1 game;
+    Texture2D marioTexture;
 
-    public Mario(Game1 game)
+    public Mario(Game1 game, Texture2D texture)
     {
         this.game = game;
-        state = new MarioState(game);
+        this.marioTexture = texture;
+        state = new MarioState(game, marioTexture);
     }
 
     public void TakeDamage()
@@ -70,6 +73,21 @@ class Mario : IMario
     public void CollectStar()
     {
         game.Mario = new StarMario(this, this.game);
+    }
+
+    public MarioState.MarioStateEnum GetState()
+    {
+        return state.GetState();
+    }
+
+    public MarioState.MarioDirectionEnum GetDirection()
+    {
+        return state.GetDirection();
+    }
+
+    public MarioState.MarioPowerupEnum GetPowerup()
+    {
+        return state.GetPowerup();
     }
 }
 

@@ -11,6 +11,6 @@ public class SetMarioFireCommand : ICommand
 
     public void Execute()
     {
-        game.currentMarioState = Game1.MarioState.Fire;
+        game.Mario.CollectPowerup(1);
     }
 }

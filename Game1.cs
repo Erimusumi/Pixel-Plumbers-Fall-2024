@@ -14,10 +14,11 @@ public class Game1 : Game
     private CommandControlCenter controlCenter;
     public IMario Mario;
 
-    public enum MarioState { Small, Big, Fire }
-    public enum MarioMoveState { Idle, MovingRight, MovingLeft }
-    public MarioState currentMarioState;
-    public MarioMoveState currentMarioMoveState;
+    //public enum MarioState { Small, Big, Fire }
+    //public enum MarioMoveState { Idle, MovingRight, MovingLeft }
+    //public MarioState currentMarioState;
+    //public MarioMoveState currentMarioMoveState;
+    
     public IMarioSprite currentMarioSprite;
 
     public Vector2 marioPosition;
@@ -100,7 +101,7 @@ public class Game1 : Game
         GroundPosition = graphics.PreferredBackBufferHeight / 2;
         keyboardController = new KeyboardController();
 
-        Mario = new Mario(this);
+        Mario = new Mario(this, marioTexture);
         spriteEnemy = new Goomba();
         controlG = new GoombaCommand(spriteEnemy);
 
@@ -142,7 +143,7 @@ public class Game1 : Game
 
         currentMarioSprite = new IdleLeftBigMario(marioTexture);
         marioPosition = new Vector2(graphics.PreferredBackBufferWidth / 2, graphics.PreferredBackBufferHeight / 2);
-        currentMarioState = MarioState.Big;
+        //currentMarioState = MarioState.Big;
 
         firePower = new FirePower(ItemsTexture);
         starPower = new StarPower(ItemsTexture);
@@ -175,10 +176,7 @@ public class Game1 : Game
     protected override void Update(GameTime gameTime)
     {
 
-        if (!isJumping)
-        {
-            idleMarioCommand.Execute();
-        }
+        
         keyboardController.Update();
 
         updatedMarioSpeed = marioSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -192,6 +190,7 @@ public class Game1 : Game
             isJumping = false;
         }
         currentMarioSprite.Update(gameTime);
+        
         Mario.Update();
 
         // lucky block sprites

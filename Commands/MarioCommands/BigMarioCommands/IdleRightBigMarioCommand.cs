@@ -12,11 +12,11 @@ public class IdleRightBigMarioCommand : ICommand
     {
         this.game = game;
         this.marioTexture = marioTexture;
-        idleRightBigMario = new IdleRightBigtMario(marioTexture);
+        idleRightBigMario = new IdleRightBigMario(marioTexture);
     }
 
     public void Execute()
     {
-        game.currentMarioSprite = idleRightBigMario;
+        game.Mario.Stop();
     }
 }

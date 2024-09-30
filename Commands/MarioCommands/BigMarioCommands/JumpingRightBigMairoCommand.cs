@@ -17,6 +17,6 @@ public class JumpingRightBigMarioCommand : ICommand
 
     public void Execute()
     {
-        game.currentMarioSprite = jumpingRightBigMario;
+        game.Mario.Jump();
     }
 }

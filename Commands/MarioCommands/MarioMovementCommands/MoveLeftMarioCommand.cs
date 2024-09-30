@@ -15,33 +15,30 @@ public class MoveLeftMarioCommand : ICommand
         this.game = game;
         this.marioTexture = marioTexture;
 
-        movingLeftBigMarioCommand = new MovingLeftBigMarioCommand(game, marioTexture);
-        movingLeftSmallMarioCommand = new MoveLeftSmallMarioCommand(game, marioTexture);
-        movingLeftFireMarioCommand = new MovingLeftFireMarioCommand(game, marioTexture);
+        //movingLeftBigMarioCommand = new MovingLeftBigMarioCommand(game, marioTexture);
+        //movingLeftSmallMarioCommand = new MoveLeftSmallMarioCommand(game, marioTexture);
+        //movingLeftFireMarioCommand = new MovingLeftFireMarioCommand(game, marioTexture);
     }
 
     public void Execute()
     {
-        game.marioPosition.X -= 3;
-        game.facingRight = false;
-
-
-        if (!game.isJumping)
+        if (game.marioVelocity.X > -5f)
         {
-            switch (game.currentMarioState)
+            game.marioVelocity.X -= .2f;
+            if (game.marioVelocity.X < -5f)
             {
-                case Game1.MarioState.Small:
-
-                    movingLeftSmallMarioCommand.Execute();
-                    break;
-                case Game1.MarioState.Big:
-                    movingLeftBigMarioCommand.Execute();
-                    break;
-                case Game1.MarioState.Fire:
-                    movingLeftFireMarioCommand.Execute();
-                    break;
+                game.marioVelocity.X = -5f;
             }
         }
+        
+        game.marioPosition.X += game.marioVelocity.X;
+        game.facingRight = false;
+
+        if (game.Mario.GetDirection() == MarioState.MarioDirectionEnum.Right)
+        {
+            game.Mario.SwapDir();
+        }
+        game.Mario.Run();
 
     }
 }

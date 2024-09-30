@@ -86,4 +86,19 @@ class StarMario : IMario
     {
         decoratedMario.Crouch();
     }
+
+    public MarioState.MarioStateEnum GetState()
+    {
+        return decoratedMario.GetState();
+    }
+
+    public MarioState.MarioDirectionEnum GetDirection()
+    {
+        return decoratedMario.GetDirection();
+    }
+
+    public MarioState.MarioPowerupEnum GetPowerup()
+    {
+        return decoratedMario.GetPowerup();
+    }
 }

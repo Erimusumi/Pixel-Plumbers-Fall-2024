@@ -16,6 +16,6 @@ public class IdleLeftBigMarioCommand : ICommand
     }
 
     public void Execute()
-    {        game.currentMarioSprite = idleLeftBigMario;
+    {        game.Mario.Stop();
     }
 }
