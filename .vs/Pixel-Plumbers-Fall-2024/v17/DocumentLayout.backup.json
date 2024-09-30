@@ -3,12 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint 2\\controllers\\commandcontrolcenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:controllers\\commandcontrolcenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint 2\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint 2\\sprites\\item sprites\\starpower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\item sprites\\starpower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint 2\\items\\itemmanagerclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:items\\itemmanagerclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint 2\\items\\mushroomobjectclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:items\\mushroomobjectclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint 2\\items\\starobjectclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:items\\starobjectclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint 2\\sprites\\item sprites\\firepower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\item sprites\\firepower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint 2\\sprites\\block sprites\\brokenbrickblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\brokenbrickblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint 2\\code reviews\\michael\u0027s code review.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:code reviews\\michael\u0027s code review.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint 2\\controllers\\commandcontrolcenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:controllers\\commandcontrolcenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint 2\\commands\\icommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,10 +71,6 @@
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:commands\\block\\blocktcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint 2\\sprites\\block sprites\\brokenbrickblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\brokenbrickblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint 2\\sprites\\block sprites\\luckyblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\luckyblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -78,20 +102,98 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAcwB8AAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAcwCwAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ItemManagerClass.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Items\\ItemManagerClass.cs",
+              "RelativeDocumentMoniker": "Items\\ItemManagerClass.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Items\\ItemManagerClass.cs",
+              "RelativeToolTip": "Items\\ItemManagerClass.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T02:45:23.405Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StarPower.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Sprites\\Item Sprites\\StarPower.cs",
+              "RelativeDocumentMoniker": "Sprites\\Item Sprites\\StarPower.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Sprites\\Item Sprites\\StarPower.cs",
+              "RelativeToolTip": "Sprites\\Item Sprites\\StarPower.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAIwAwAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T02:42:50.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MushroomObjectClass.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Items\\MushroomObjectClass.cs",
+              "RelativeDocumentMoniker": "Items\\MushroomObjectClass.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Items\\MushroomObjectClass.cs",
+              "RelativeToolTip": "Items\\MushroomObjectClass.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAA0wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T02:40:45.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StarObjectClass.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Items\\StarObjectClass.cs",
+              "RelativeDocumentMoniker": "Items\\StarObjectClass.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Items\\StarObjectClass.cs",
+              "RelativeToolTip": "Items\\StarObjectClass.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T02:38:43.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FirePower.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Sprites\\Item Sprites\\FirePower.cs",
+              "RelativeDocumentMoniker": "Sprites\\Item Sprites\\FirePower.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Sprites\\Item Sprites\\FirePower.cs",
+              "RelativeToolTip": "Sprites\\Item Sprites\\FirePower.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-01T02:38:18.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MICHAEL\u0027S CODE REVIEW.txt",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Code Reviews\\MICHAEL\u0027S CODE REVIEW.txt",
+              "RelativeDocumentMoniker": "Code Reviews\\MICHAEL\u0027S CODE REVIEW.txt",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Code Reviews\\MICHAEL\u0027S CODE REVIEW.txt",
+              "RelativeToolTip": "Code Reviews\\MICHAEL\u0027S CODE REVIEW.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-10-01T01:58:09.928Z",
               "EditorCaption": ""
             },
             {
@@ -112,32 +214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "KeyboardController.cs",
-              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Controllers\\KeyboardController.cs",
-              "RelativeDocumentMoniker": "Controllers\\KeyboardController.cs",
-              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Controllers\\KeyboardController.cs",
-              "RelativeToolTip": "Controllers\\KeyboardController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAYwBsAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T18:12:26.007Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "block1.cs",
-              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Sprites\\Block Sprites\\block1.cs",
-              "RelativeDocumentMoniker": "Sprites\\Block Sprites\\block1.cs",
-              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Sprites\\Block Sprites\\block1.cs",
-              "RelativeToolTip": "Sprites\\Block Sprites\\block1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T21:11:22.937Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "block3.cs",
               "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Sprites\\Block Sprites\\block3.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\block3.cs",
@@ -149,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "block4.cs",
               "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Sprites\\Block Sprites\\block4.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\block4.cs",
@@ -161,20 +238,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "CommandControlCenter.cs",
               "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Controllers\\CommandControlCenter.cs",
               "RelativeDocumentMoniker": "Controllers\\CommandControlCenter.cs",
               "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Controllers\\CommandControlCenter.cs",
               "RelativeToolTip": "Controllers\\CommandControlCenter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-30T14:46:24.939Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "ICommand.cs",
               "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Commands\\ICommand.cs",
               "RelativeDocumentMoniker": "Commands\\ICommand.cs",
@@ -182,12 +259,48 @@
               "RelativeToolTip": "Commands\\ICommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-25T18:08:58.246Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-25T18:08:58.246Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "BrokenBrickBlockSprite.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Sprites\\Block Sprites\\BrokenBrickBlockSprite.cs",
+              "RelativeDocumentMoniker": "Sprites\\Block Sprites\\BrokenBrickBlockSprite.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Sprites\\Block Sprites\\BrokenBrickBlockSprite.cs",
+              "RelativeToolTip": "Sprites\\Block Sprites\\BrokenBrickBlockSprite.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAADwvxwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T20:45:57.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "block1.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Sprites\\Block Sprites\\block1.cs",
+              "RelativeDocumentMoniker": "Sprites\\Block Sprites\\block1.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Sprites\\Block Sprites\\block1.cs",
+              "RelativeToolTip": "Sprites\\Block Sprites\\block1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T21:11:22.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "KeyboardController.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Controllers\\KeyboardController.cs",
+              "RelativeDocumentMoniker": "Controllers\\KeyboardController.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Controllers\\KeyboardController.cs",
+              "RelativeToolTip": "Controllers\\KeyboardController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAYwBsAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-25T18:12:26.007Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "block2.cs",
               "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Sprites\\Block Sprites\\block2.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\block2.cs",
@@ -199,7 +312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "blockTCommand.cs",
               "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Commands\\Block\\blockTCommand.cs",
               "RelativeDocumentMoniker": "Commands\\Block\\blockTCommand.cs",
@@ -211,7 +324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 15,
               "Title": "blockYCommand.cs",
               "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Commands\\Block\\blockYCommand.cs",
               "RelativeDocumentMoniker": "Commands\\Block\\blockYCommand.cs",
@@ -223,7 +336,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "LuckyBlockSprite.cs",
               "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Sprites\\Block Sprites\\LuckyBlockSprite.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\LuckyBlockSprite.cs",
@@ -235,19 +348,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "BrokenBrickBlockSprite.cs",
-              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Sprites\\Block Sprites\\BrokenBrickBlockSprite.cs",
-              "RelativeDocumentMoniker": "Sprites\\Block Sprites\\BrokenBrickBlockSprite.cs",
-              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Sprites\\Block Sprites\\BrokenBrickBlockSprite.cs",
-              "RelativeToolTip": "Sprites\\Block Sprites\\BrokenBrickBlockSprite.cs",
-              "ViewState": "AgIAADIAAAAgg7wq6/kqwEAAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T20:45:57.677Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 18,
               "Title": "ISprite.cs",
               "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Sprites\\ISprite.cs",
               "RelativeDocumentMoniker": "Sprites\\ISprite.cs",
@@ -259,7 +360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 19,
               "Title": "GoombaSprites.cs",
               "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Goomba\\GoombaSprites.cs",
               "RelativeDocumentMoniker": "Goomba\\GoombaSprites.cs",
@@ -271,7 +372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 20,
               "Title": "IController.cs",
               "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\Controllers\\IController.cs",
               "RelativeDocumentMoniker": "Controllers\\IController.cs",
@@ -283,7 +384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 21,
               "Title": "IMarioState.cs",
               "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\MarioClasses\\IMarioState.cs",
               "RelativeDocumentMoniker": "MarioClasses\\IMarioState.cs",
@@ -295,7 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 22,
               "Title": "IMario.cs",
               "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint 2\\MarioClasses\\IMario.cs",
               "RelativeDocumentMoniker": "MarioClasses\\IMario.cs",
