@@ -17,7 +17,7 @@ public class IdleLeftBigMarioCommand : ICommand
 
     public void Execute()
     {
-        game.MarioPosition.X -= 5;
+        game.marioPosition.X -= 5;
         game.currentMarioSprite = idleLeftBigMario;
     }
 }

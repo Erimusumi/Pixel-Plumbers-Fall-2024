@@ -8,19 +8,11 @@ public class Game1 : Game
 {
     private GraphicsDeviceManager graphics;
     private SpriteBatch spriteBatch;
+    private Texture2D marioTexture;
 
+    private KeyboardController keyboardController;
+    private CommandControlCenter controlCenter;
     public IMario Mario;
-
-    public Texture2D MarioTexture;
-    public Vector2 MarioPosition;
-    public float MarioSpeed;
-    public Vector2 MarioVelocity;
-    public float Gravity = 9.8f;
-    public float JumpSpeed = -350f;
-
-    private MarioMovementCommandInitializer marioMovementCommandInitializer;
-
-    public IController keyboardController;
 
     public enum MarioState { Small, Big, Fire }
     public enum MarioMoveState { Idle, MovingRight, MovingLeft }
@@ -28,6 +20,12 @@ public class Game1 : Game
     public MarioMoveState currentMarioMoveState;
     public IMarioSprite currentMarioSprite;
 
+    public Vector2 marioPosition;
+    public Vector2 marioVelocity;
+
+    public float marioSpeed;
+    public float gravity = 9.8f;
+    public float jumpSpeed = -350f;
     public float groundPosition;
     public float updatedMarioSpeed;
 
@@ -35,15 +33,6 @@ public class Game1 : Game
 
     public Boolean facingRight = true;
     public Boolean isJumping = false;
-
-    List<ISprite> MarioSpriteList;
-
-    public ISprite BigIdleRightMario;
-    public ISprite BigIdleLeftMario;
-    public ISprite BigRunRightMarioAnimation;
-    public ISprite BigRunLeftMarioAnimation;
-    public ISprite BigJumpRightMario;
-    public ISprite BigJumpLeftMario;
 
     // lucky block sprites
     private ISprite OWLuckyBlockSprite;
@@ -69,12 +58,6 @@ public class Game1 : Game
     private ISprite UGBrokenBrickSprite;
     private ISprite CastleBrokenBrickSprite;
 
-    public ISprite CurrentMarioSprite;
-
-    public Boolean FacingRight = true;
-    public Boolean MovingRight = false;
-    public Boolean MovingLeft = false;
-    public Boolean IsJumping = false;
 
 
     //Enemy Code
@@ -101,8 +84,6 @@ public class Game1 : Game
     //public int index2 = 0;
     //public int n2;
 
-
-    private CommandControlCenter controlCenter;
     public Game1()
     {
         graphics = new GraphicsDeviceManager(this);
@@ -114,16 +95,14 @@ public class Game1 : Game
     {
         base.Initialize();
 
-
-
+        GroundPosition = graphics.PreferredBackBufferHeight / 2;
         keyboardController = new KeyboardController();
-        CurrentMarioSprite = BigIdleRightMario;
 
         Mario = new Mario(this);
         spriteEnemy = new Goomba();
         controlG = new GoombaCommand(spriteEnemy);
 
-        controlCenter = new CommandControlCenter(this);
+        controlCenter = new CommandControlCenter(this, marioTexture);
 
 
         //Make a list for block iteration
@@ -153,9 +132,14 @@ public class Game1 : Game
     {
         spriteBatch = new SpriteBatch(GraphicsDevice);
 
+        marioTexture = Content.Load<Texture2D>("mario");
         EnemyTexture = Content.Load<Texture2D>("enemies");
         ItemsTexture = Content.Load<Texture2D>("MarioItems");
         block = Content.Load<Texture2D>("blocks");
+
+        currentMarioSprite = new IdleLeftBigMario(marioTexture);
+        marioPosition = new Vector2(graphics.PreferredBackBufferWidth / 2, graphics.PreferredBackBufferHeight / 2);
+        currentMarioState = MarioState.Big;
 
         firePower = new FirePower(ItemsTexture);
         starPower = new StarPower(ItemsTexture);
@@ -183,18 +167,26 @@ public class Game1 : Game
         UWBrokenBrickSprite = new BrokenBrickBlockSprite(block, new Vector2(288, 160), new Vector2(352, 176), 4, 1);
         UGBrokenBrickSprite = new BrokenBrickBlockSprite(block, new Vector2(288, 128), new Vector2(352, 144), 4, 1);
         CastleBrokenBrickSprite = new BrokenBrickBlockSprite(block, new Vector2(288, 144), new Vector2(352, 160), 4, 1);
-
-
-
-
     }
-
 
     protected override void Update(GameTime gameTime)
     {
-        keyboardController.Update(gameTime);
+        keyboardController.Update();
 
+        // mario logic / movement
+        updatedMarioSpeed = marioSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+        marioVelocity.Y += gravity;
+        marioPosition.Y += marioVelocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+        if (marioPosition.Y >= GroundPosition)
+        {
+            marioPosition.Y = GroundPosition;
+            marioVelocity.Y = 0;
+            isJumping = false;
+        }
+        currentMarioSprite.Update(gameTime);
         Mario.Update();
+
         // lucky block sprites
         OWLuckyBlockSprite.Update(gameTime);
         UWLuckyBlockSprite.Update(gameTime);
@@ -210,26 +202,25 @@ public class Game1 : Game
             CastleBrokenBrickSprite.Update(gameTime);
         }
 
-        keyboardController.Update(gameTime);
-
-        CurrentMarioSprite.Update(gameTime);
         spriteEnemy.Updates();
-        controlG.Update(gameTime);
+        controlG.Update();
         manager.updateCurrentItem(currentItem, numItems);
         sprite1[index1].Update(gameTime);
         //sprite2[index2].Update(gameTime);
+
         base.Update(gameTime);
     }
 
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
+
+        // mari and enemy
         spriteEnemy.Draw(spriteBatch, EnemyTexture);
         spriteBatch.Begin();
-        CurrentMarioSprite.Draw(spriteBatch, MarioPosition);
         manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
+        currentMarioSprite.Draw(spriteBatch, marioPosition);
         spriteBatch.End();
-
         // lucky block sprites
         OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(400, 240));
         UWLuckyBlockSprite.Draw(spriteBatch, new Vector2(400, 240));
@@ -255,6 +246,7 @@ public class Game1 : Game
         CastleBrokenBrickSprite.Draw(spriteBatch, new Vector2(400, 240));
         //sprite1[index2].Draw(spriteBatch, new Vector2(0,0));
         //sprite2[index2].Draw(spriteBatch, new Vector2(0,0));
+
         base.Draw(gameTime);
     }
 }

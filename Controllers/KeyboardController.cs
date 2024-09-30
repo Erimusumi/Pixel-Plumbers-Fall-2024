@@ -17,7 +17,7 @@ public class KeyboardController : IController
         KeyBinds.Add(key, command);
     }
 
-    public void Update(GameTime gameTime)
+    public void Update()
     {
         var keysPressed = Keyboard.GetState().GetPressedKeys();
         KeyboardState state = Keyboard.GetState();

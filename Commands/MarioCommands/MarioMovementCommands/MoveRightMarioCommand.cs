@@ -21,7 +21,7 @@ public class MoveRightMarioCommand : ICommand
     }
     public void Execute()
     {
-        game.MarioPosition.X += 10;
+        game.marioPosition.X += 10;
         game.facingRight = true;
 
         switch (game.currentMarioState)

@@ -15,7 +15,7 @@ public class GoombaCommand : IController
         _sprite = sprite1;
     }
 
-    public void Update(GameTime gameTime)
+    public void Update()
     {
         count++;
         if (count % 50 == 0)

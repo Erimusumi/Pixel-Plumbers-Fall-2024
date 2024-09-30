@@ -23,15 +23,14 @@ internal interface IMarioState
     void Turning();
     void CollectPowerup(int powerupType);
     void Crouch();
-    
+
 }
 
 public class MarioState : IMarioState
 {
-    public enum MarioStateEnum {Still, Run, Jump, Crouch, Swim, Turning, Dead };
-    public enum MarioPowerupEnum {Base, Big, Fire };
-    public enum MarioDirectionEnum {Left, Right };
-
+    public enum MarioStateEnum { Still, Run, Jump, Crouch, Swim, Turning, Dead };
+    public enum MarioPowerupEnum { Base, Big, Fire };
+    public enum MarioDirectionEnum { Left, Right };
 
     private MarioStateEnum currState = MarioStateEnum.Still;
     private MarioPowerupEnum currPowerup = MarioPowerupEnum.Base;
@@ -51,13 +50,13 @@ public class MarioState : IMarioState
         switch (currPowerup)
         {
             case MarioPowerupEnum.Fire:
-                 currPowerup = MarioPowerupEnum.Big;
-                 break;     
-            case MarioPowerupEnum.Big:   
-                 currPowerup = MarioPowerupEnum.Base;
-                 break;       
+                currPowerup = MarioPowerupEnum.Big;
+                break;
+            case MarioPowerupEnum.Big:
+                currPowerup = MarioPowerupEnum.Base;
+                break;
             case MarioPowerupEnum.Base:
-                
+
             default:
                 //die
                 this.Die();
@@ -70,10 +69,10 @@ public class MarioState : IMarioState
         currState = MarioStateEnum.Dead;
     }
     public void Jump()
-    { 
+    {
         currState = MarioStateEnum.Jump;
     }
-    
+
     public void Stop()
     {
         currState = MarioStateEnum.Still;
@@ -150,7 +149,7 @@ public class MarioState : IMarioState
     {
         return this.currPowerup;
     }
-    
+
     void UpdateCheckIfStill()
     {
         if (MarioVelocity.X == 0)
@@ -172,7 +171,7 @@ public class MarioState : IMarioState
     }
     void UpdateCheckIfTurning()
     {
-        
+
         if (MarioVelocity.X > 0)
         {
             switch (currDirection)
@@ -217,20 +216,20 @@ public class MarioState : IMarioState
 
     void UpdateSlowMario()
     {
-        if (game.MarioVelocity.X > 0f)
+        if (game.marioVelocity.X > 0f)
         {
-            game.MarioVelocity.X -= .25f;
-            if (game.MarioVelocity.X < 0f)
+            game.marioVelocity.X -= .25f;
+            if (game.marioVelocity.X < 0f)
             {
-                game.MarioVelocity.X = 0f;
+                game.marioVelocity.X = 0f;
             }
         }
-        if (game.MarioVelocity.X < 0f)
+        if (game.marioVelocity.X < 0f)
         {
-            game.MarioVelocity.X += .25f;
-            if (game.MarioVelocity.X > 0f)
+            game.marioVelocity.X += .25f;
+            if (game.marioVelocity.X > 0f)
             {
-                game.MarioVelocity.X = 0f;
+                game.marioVelocity.X = 0f;
             }
         }
 
@@ -238,19 +237,18 @@ public class MarioState : IMarioState
 
     public void Update()
     {
-        this.MarioVelocity = game.MarioVelocity;
+        this.MarioVelocity = game.marioVelocity;
 
         this.UpdateSlowMario();
 
         this.UpdateCheckIfStill();
-        
+
         this.UpdateStopJumping();
 
         this.UpdateCheckIfTurning();
 
-        
 
-        MarioSpriteConstructor.ConstructMarioSprite(this, game);
+
     }
 }
 

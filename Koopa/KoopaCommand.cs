@@ -16,7 +16,7 @@ public class KoopaCommand : IController
         _sprite = sprite;
     }
 
-    public void Update(GameTime gameTime)
+    public void Update()
     {
         count++;
         

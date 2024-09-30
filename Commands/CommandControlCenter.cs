@@ -1,40 +1,49 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Pixel_Plumbers_Fall_2024;
 using System.Globalization;
 public class CommandControlCenter
 {
-    private ICommand SetMovingRightMarioCommand;
-    private ICommand SetMovingLeftMarioCommand;
-    private ICommand SetJumpingUpMarioCommand;
-    private ICommand SetCrouchMarioCommand;
-    private ICommand EnemySwitch;
+
     private ICommand blockTCommand;
     private ICommand blockYCommand;
+
+    private Texture2D marioTexture;
+    private Game1 game;
     private KeyboardController keyboardController;
-    public CommandControlCenter(Game1 game)
+
+    public CommandControlCenter(Game1 game, Texture2D marioTexture)
     {
-        EnemySwitch = new EnemySwitch(game);
+        this.game = game;
+        this.marioTexture = marioTexture;
         this.keyboardController = new KeyboardController();
-
-
-        keyboardController.addCommand(Keys.Right, SetMovingRightMarioCommand);
-        keyboardController.addCommand(Keys.Left, SetMovingLeftMarioCommand);
-        keyboardController.addCommand(Keys.Up, SetJumpingUpMarioCommand);
-        keyboardController.addCommand(Keys.Down, SetCrouchMarioCommand);
-
-        keyboardController.addCommand(Keys.D, SetMovingRightMarioCommand);
-        keyboardController.addCommand(Keys.A, SetMovingLeftMarioCommand);
-        keyboardController.addCommand(Keys.W, SetJumpingUpMarioCommand);
-        keyboardController.addCommand(Keys.S, SetCrouchMarioCommand);
-
-        keyboardController.addCommand(Keys.P, EnemySwitch);
-        keyboardController.addCommand(Keys.O, EnemySwitch);
-        keyboardController.addCommand(Keys.T, blockTCommand);
-        keyboardController.addCommand(Keys.Y, blockYCommand);
         game.SetKey(keyboardController);
+        InitializeCommmands();
     }
 
+    private void InitializeCommmands()
+    {
+        // commands for switching enemy
+        ICommand EnemySwitch = new EnemySwitch(game);
+        keyboardController.addCommand(Keys.P, EnemySwitch);
+        keyboardController.addCommand(Keys.O, EnemySwitch);
+
+        // commands for mario movement
+        ICommand moveLeftCommand = new MoveLeftMarioCommand(game, marioTexture);
+        ICommand moveRightCommand = new MoveRightMarioCommand(game, marioTexture);
+        ICommand jumpCommand = new JumpMarioCommand(game, marioTexture);
+        ICommand crouchCommand = new CrouchMarioCommand(game, marioTexture);
+        ICommand idleCommand = new IdleMarioCommand(game, marioTexture);
+        keyboardController.addCommand(Keys.A, moveLeftCommand);
+        keyboardController.addCommand(Keys.D, moveRightCommand);
+        keyboardController.addCommand(Keys.W, jumpCommand);
+        keyboardController.addCommand(Keys.S, crouchCommand);
+
+        // command for switching blocks
+        keyboardController.addCommand(Keys.T, blockTCommand);
+        keyboardController.addCommand(Keys.Y, blockYCommand);
+    }
 
 
 }
