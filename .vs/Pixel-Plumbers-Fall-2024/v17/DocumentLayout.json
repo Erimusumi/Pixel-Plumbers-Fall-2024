@@ -1,18 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\project\\",
+  "WorkspaceRootPath": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\project\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\newadditions\\mariomovementcommands\\moverightmariocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:newadditions\\mariomovementcommands\\moverightmariocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\newadditions\\mariomovementcommands\\moveleftmariocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:newadditions\\mariomovementcommands\\moveleftmariocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\newadditions\\mariomovementcommands\\jumpmariocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:newadditions\\mariomovementcommands\\jumpmariocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\newadditions\\bigmariocommands\\idlerightbigmariocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:newadditions\\bigmariocommands\\idlerightbigmariocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\newadditions\\bigmariocommands\\idleleftbigmariocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:newadditions\\bigmariocommands\\idleleftbigmariocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\marioclasses\\constructmariosprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:marioclasses\\constructmariosprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\commands\\setmoverightcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:commands\\setmoverightcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\project\\commands\\enemyswitch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:commands\\enemyswitch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\project\\sprites\\mario sprites\\smallidlerightmario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\mario sprites\\smallidlerightmario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,12 +42,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -37,48 +53,105 @@
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MoveRightMarioCommand.cs",
+              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\NewAdditions\\MarioMovementCommands\\MoveRightMarioCommand.cs",
+              "RelativeDocumentMoniker": "NewAdditions\\MarioMovementCommands\\MoveRightMarioCommand.cs",
+              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\NewAdditions\\MarioMovementCommands\\MoveRightMarioCommand.cs",
+              "RelativeToolTip": "NewAdditions\\MarioMovementCommands\\MoveRightMarioCommand.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAEwBYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T02:23:38.072Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "EnemySwitch.cs",
-              "DocumentMoniker": "C:\\project\\Commands\\EnemySwitch.cs",
-              "RelativeDocumentMoniker": "Commands\\EnemySwitch.cs",
-              "ToolTip": "C:\\project\\Commands\\EnemySwitch.cs",
-              "RelativeToolTip": "Commands\\EnemySwitch.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAzwBMAAAAWAAAAAAAAAA==",
+              "Title": "MoveLeftMarioCommand.cs",
+              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\NewAdditions\\MarioMovementCommands\\MoveLeftMarioCommand.cs",
+              "RelativeDocumentMoniker": "NewAdditions\\MarioMovementCommands\\MoveLeftMarioCommand.cs",
+              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\NewAdditions\\MarioMovementCommands\\MoveLeftMarioCommand.cs",
+              "RelativeToolTip": "NewAdditions\\MarioMovementCommands\\MoveLeftMarioCommand.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAIAxwBgAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T02:25:35.382Z",
+              "WhenOpened": "2024-09-30T02:23:32.905Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "SmallIdleRightMario.cs",
-              "DocumentMoniker": "C:\\project\\Sprites\\Mario Sprites\\SmallIdleRightMario.cs",
-              "RelativeDocumentMoniker": "Sprites\\Mario Sprites\\SmallIdleRightMario.cs",
-              "ToolTip": "C:\\project\\Sprites\\Mario Sprites\\SmallIdleRightMario.cs",
-              "RelativeToolTip": "Sprites\\Mario Sprites\\SmallIdleRightMario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABCAAAAAAAAAA==",
+              "Title": "JumpMarioCommand.cs",
+              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\NewAdditions\\MarioMovementCommands\\JumpMarioCommand.cs",
+              "RelativeDocumentMoniker": "NewAdditions\\MarioMovementCommands\\JumpMarioCommand.cs",
+              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\NewAdditions\\MarioMovementCommands\\JumpMarioCommand.cs",
+              "RelativeToolTip": "NewAdditions\\MarioMovementCommands\\JumpMarioCommand.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAADgvyMAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T02:22:30.277Z",
+              "WhenOpened": "2024-09-30T02:23:23.134Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "IdleRightBigMarioCommand.cs",
+              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\NewAdditions\\BigMarioCommands\\IdleRightBigMarioCommand.cs",
+              "RelativeDocumentMoniker": "NewAdditions\\BigMarioCommands\\IdleRightBigMarioCommand.cs",
+              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\NewAdditions\\BigMarioCommands\\IdleRightBigMarioCommand.cs",
+              "RelativeToolTip": "NewAdditions\\BigMarioCommands\\IdleRightBigMarioCommand.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAEwBMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T02:23:18.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IdleLeftBigMarioCommand.cs",
+              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\NewAdditions\\BigMarioCommands\\IdleLeftBigMarioCommand.cs",
+              "RelativeDocumentMoniker": "NewAdditions\\BigMarioCommands\\IdleLeftBigMarioCommand.cs",
+              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\NewAdditions\\BigMarioCommands\\IdleLeftBigMarioCommand.cs",
+              "RelativeToolTip": "NewAdditions\\BigMarioCommands\\IdleLeftBigMarioCommand.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAWwBMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T02:23:12.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ConstructMarioSprite.cs",
+              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\MarioClasses\\ConstructMarioSprite.cs",
+              "RelativeDocumentMoniker": "MarioClasses\\ConstructMarioSprite.cs",
+              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\MarioClasses\\ConstructMarioSprite.cs",
+              "RelativeToolTip": "MarioClasses\\ConstructMarioSprite.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAWwBoAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T02:23:01.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SetMoveRightCommand.cs",
+              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Commands\\SetMoveRightCommand.cs",
+              "RelativeDocumentMoniker": "Commands\\SetMoveRightCommand.cs",
+              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Commands\\SetMoveRightCommand.cs",
+              "RelativeToolTip": "Commands\\SetMoveRightCommand.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAMwBIAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T02:22:32.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Game1.cs",
-              "DocumentMoniker": "C:\\project\\Game1.cs",
+              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
-              "ToolTip": "C:\\project\\Game1.cs",
+              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAswOQAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-29T23:13:18.456Z",
               "EditorCaption": ""
