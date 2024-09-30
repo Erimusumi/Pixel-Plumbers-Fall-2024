@@ -6,17 +6,17 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-public class MarioBlockCollisionHandler
+public class UnknownBlockSprite
 {
     private Mario mario;
-    private MarioBlockCollisionHandler block;
+    private UnknownBlockSprite block;
     private bool blockMovingUp = false;
     private float moveAmount = 16f;  // How much the block moves up
     private float moveSpeed = 100f;  // Speed of block movement
     private float blockInitialY;
     private double blockMoveTimer = 0;
 
-    public MarioBlockCollisionHandler(Mario mario, MarioBlockCollisionHandler block)
+    public UnknownBlockSprite(Mario mario, UnknownBlockSprite block)
     {
         this.mario = mario;
         this.block = block;
