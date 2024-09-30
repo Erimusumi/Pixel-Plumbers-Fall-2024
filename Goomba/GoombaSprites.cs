@@ -16,7 +16,7 @@ public class GoombaSprites
     private const int countMod = 10;
 
     private const int posX = 480;
-    private const int posY = 320;
+    private const int posY = 400;
     private const int size = 16;
     private const int scaleUp = 2;
     private const int speed = 1;
