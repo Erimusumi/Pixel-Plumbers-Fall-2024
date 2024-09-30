@@ -269,7 +269,7 @@ public class Game1 : Game
         spriteBatch.End();
 
 
-        sprite1[index2].Draw(spriteBatch, new Vector2(0,0));
+        sprite1[index1].Draw(spriteBatch, new Vector2(40,10));
         sprite2[index2].Draw(spriteBatch, new Vector2(0,0));
 
         base.Draw(gameTime);
