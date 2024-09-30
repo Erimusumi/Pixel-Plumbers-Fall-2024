@@ -78,8 +78,6 @@ public class Game1 : Game
         MarioVelocity = Vector2.Zero;
 
         keyboardController = new KeyboardController();
-        controlCenter = new CommandControlCenter(this);
-
         CurrentMarioSprite = BigIdleRightMario;
         
         Mario = new Mario(this);
