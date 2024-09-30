@@ -10,8 +10,8 @@ public class JumpMarioCommand : ICommand
     private ICommand jumpLeftSmallMarioCommand;
     private ICommand jumpRightBigMarioCommand;
     private ICommand jumpLeftBigMarioCommand;
-    private ICommand jumpRightFireMarioCommand;  // Fixed the command initialization
-    private ICommand jumpLeftFireMarioCommand;   // Fixed the command initialization
+    private ICommand jumpRightFireMarioCommand;
+    private ICommand jumpLeftFireMarioCommand;
 
     public JumpMarioCommand(Game1 game, Texture2D marioTexture)
     {
@@ -23,17 +23,16 @@ public class JumpMarioCommand : ICommand
         jumpLeftSmallMarioCommand = new JumpLeftSmallMarioCommand(game, marioTexture);
         jumpRightBigMarioCommand = new JumpingRightBigMarioCommand(game, marioTexture);
         jumpLeftBigMarioCommand = new JumpingLeftBigMarioCommand(game, marioTexture);
-        jumpRightFireMarioCommand = new JumpingRightFireMarioCommand(game, marioTexture);  // Correct assignment
-        jumpLeftFireMarioCommand = new JumpingLeftFireMarioCommand(game, marioTexture);    // Correct assignment
+        jumpRightFireMarioCommand = new JumpingRightFireMarioCommand(game, marioTexture);
+        jumpLeftFireMarioCommand = new JumpingLeftFireMarioCommand(game, marioTexture);
     }
 
     public void Execute()
     {
         if (!game.isJumping)
         {
-            // Set Mario into jumping mode and set the upward velocity (jump speed)
             game.isJumping = true;
-            game.MarioVelocity.Y = game.JumpSpeed;
+            game.marioVelocity.Y = game.jumpSpeed;
 
             switch (game.currentMarioState)
             {

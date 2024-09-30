@@ -21,20 +21,23 @@ public class MoveRightMarioCommand : ICommand
     }
     public void Execute()
     {
-        game.MarioPosition.X += 10;
+        game.marioPosition.X += 3;
         game.facingRight = true;
 
-        switch (game.currentMarioState)
+        if (!game.isJumping)
         {
-            case Game1.MarioState.Small:
-                movingRightSmallMarioCommand.Execute();
-                break;
-            case Game1.MarioState.Big:
-                movingRightBigMarioCommand.Execute();
-                break;
-            case Game1.MarioState.Fire:
-                movingRightFireMariocommand.Execute();
-                break;
+            switch (game.currentMarioState)
+            {
+                case Game1.MarioState.Small:
+                    movingRightSmallMarioCommand.Execute();
+                    break;
+                case Game1.MarioState.Big:
+                    movingRightBigMarioCommand.Execute();
+                    break;
+                case Game1.MarioState.Fire:
+                    movingRightFireMariocommand.Execute();
+                    break;
+            }
         }
     }
 }

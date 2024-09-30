@@ -17,7 +17,7 @@ public class EnemySwitch : ICommand
 
     public void Execute()
     {
-        if (count == 8) {
+        if (count == 20) {
             switch (commandType)
             {
                 case CommandType.GoombaCommand:
