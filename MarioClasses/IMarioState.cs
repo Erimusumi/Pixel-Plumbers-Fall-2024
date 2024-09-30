@@ -118,7 +118,10 @@ public class MarioState : IMarioState
 
     public void Turning()
     {
-        currState = MarioStateEnum.Turning;
+        if (game.marioVelocity.Y == 0)
+        {
+            currState = MarioStateEnum.Turning;
+        }
     }
     public void CollectPowerup(int powerupType)
     {
