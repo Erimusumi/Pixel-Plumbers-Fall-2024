@@ -21,7 +21,7 @@ MARIO CONTROLS:
 ENEMIES CONTROLS:
     - O and P keys to switch enemies
 
-BLOCKS/OBSTACLES CONTROLS
+BLOCKS/OBSTACLES CONTROLS:
     - T and Y keys to switch blocks/obstacles
 
 KNOWN BUGS:
