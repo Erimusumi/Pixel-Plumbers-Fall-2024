@@ -5,10 +5,6 @@ using Pixel_Plumbers_Fall_2024;
 using System.Globalization;
 public class CommandControlCenter
 {
-
-    private ICommand blockTCommand;
-    private ICommand blockYCommand;
-
     private Texture2D marioTexture;
     private Game1 game;
     private KeyboardController keyboardController;
@@ -52,6 +48,8 @@ public class CommandControlCenter
         keyboardController.addCommand(Keys.D3, setMarioFireCommand);
 
         // command for switching blocks
+        ICommand blockTCommand = new blockTCommand(game);
+        ICommand blockYCommand = new blockYCommand(game);
         keyboardController.addCommand(Keys.T, blockTCommand);
         keyboardController.addCommand(Keys.Y, blockYCommand);
     }

@@ -23,7 +23,9 @@ public class Block3 : ISprite
 
     public void Draw(SpriteBatch spriteBatch, Vector2 Position)
     {
+        spriteBatch.Begin();
         spriteBatch.Draw(BlockTexture, destinationRectangle, sourceRectangle, Color.White);
+        spriteBatch.End();
     }
 
     public void Load(GraphicsDeviceManager graphics)
