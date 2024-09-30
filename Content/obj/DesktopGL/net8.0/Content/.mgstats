@@ -1,1 +1,5 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"/Users/arunghimire/Development/Workspace/Pixel-Plumbers-Fall-2024/Content/blocks.gif","/Users/arunghimire/Development/Workspace/Pixel-Plumbers-Fall-2024/Content/bin/DesktopGL/Content/blocks.xnb","TextureProcessor","Texture2DContent",14122,1560241,0.20154
+"/Users/arunghimire/Development/Workspace/Pixel-Plumbers-Fall-2024/Content/enemies.png","/Users/arunghimire/Development/Workspace/Pixel-Plumbers-Fall-2024/Content/bin/DesktopGL/Content/enemies.xnb","TextureProcessor","Texture2DContent",8295,455269,0.01704
+"/Users/arunghimire/Development/Workspace/Pixel-Plumbers-Fall-2024/Content/mario.png","/Users/arunghimire/Development/Workspace/Pixel-Plumbers-Fall-2024/Content/bin/DesktopGL/Content/mario.xnb","TextureProcessor","Texture2DContent",6584,304645,0.011496
+"/Users/arunghimire/Development/Workspace/Pixel-Plumbers-Fall-2024/Content/MarioItems.png","/Users/arunghimire/Development/Workspace/Pixel-Plumbers-Fall-2024/Content/bin/DesktopGL/Content/MarioItems.xnb","TextureProcessor","Texture2DContent",38427,2532585,0.067541

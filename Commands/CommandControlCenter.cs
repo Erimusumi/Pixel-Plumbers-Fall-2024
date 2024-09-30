@@ -13,11 +13,7 @@ public class CommandControlCenter
     private ICommand blockYCommand;
     private KeyboardController keyboardController;
     public CommandControlCenter(Game1 game)
-	{
-        SetJumpingUpMarioCommand = new SetJumpUp(game);
-        SetMovingRightMarioCommand = new SetMoveRightCommand(game);
-        SetMovingLeftMarioCommand = new SetMoveLeftCommand(game);
-        SetCrouchMarioCommand = new SetCrouchCommand(game);
+    {
         EnemySwitch = new EnemySwitch(game);
         this.keyboardController = new KeyboardController();
 
