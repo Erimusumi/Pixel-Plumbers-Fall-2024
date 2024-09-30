@@ -19,12 +19,19 @@ public class CommandControlCenter
         SetMovingLeftMarioCommand = new SetMoveLeftCommand(game);
         SetCrouchMarioCommand = new SetCrouchCommand(game);
         EnemySwitch = new EnemySwitch(game);
+        keyboardController = new KeyboardController();
 
 
         keyboardController.addCommand(Keys.Right, SetMovingRightMarioCommand);
         keyboardController.addCommand(Keys.Left, SetMovingLeftMarioCommand);
         keyboardController.addCommand(Keys.Up, SetJumpingUpMarioCommand);
         keyboardController.addCommand(Keys.Down, SetCrouchMarioCommand);
+
+        keyboardController.addCommand(Keys.D, SetMovingRightMarioCommand);
+        keyboardController.addCommand(Keys.A, SetMovingLeftMarioCommand);
+        keyboardController.addCommand(Keys.W, SetJumpingUpMarioCommand);
+        keyboardController.addCommand(Keys.S, SetCrouchMarioCommand);
+
         keyboardController.addCommand(Keys.P, EnemySwitch);
         keyboardController.addCommand(Keys.O, EnemySwitch);
         keyboardController.addCommand(Keys.T, blockTCommand);

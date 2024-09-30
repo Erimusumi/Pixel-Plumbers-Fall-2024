@@ -84,6 +84,9 @@ public class Game1 : Game
         spriteEnemy = new Goomba();
         controlG = new GoombaCommand(spriteEnemy);
 
+        controlCenter = new CommandControlCenter(this);
+
+
         //Make a list for block iteration
         sprite1 = new List<ISprite>
             {
