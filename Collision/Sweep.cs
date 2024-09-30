@@ -43,7 +43,7 @@ public class Sweep
     {
         Object entity = Entities[index];
         Rectangle rectangle = new Rectangle();
-       // rectangle = entity.GetDestinationRectangle;     
+       // rectangle = entity.GetDestinationRectangle;
         return rectangle;
     }
     public Boolean intersects(List<Object> entities, int index1, int index2)
