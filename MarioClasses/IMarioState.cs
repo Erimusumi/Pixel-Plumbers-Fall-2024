@@ -61,10 +61,8 @@ public class MarioState : IMarioState
                 currPowerup = MarioPowerupEnum.Base;
                 break;
             case MarioPowerupEnum.Base:
-
-            default:
                 //die
-                this.Die();
+                //this.Die();
                 break;
         }
     }

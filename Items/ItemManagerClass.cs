@@ -6,11 +6,11 @@ using System;
 using Microsoft.Xna.Framework;
 public interface IitemManager
 {
-    void updateCurrentItem(int curr, int num);
+    void updateCurrentItem(ref int curr, int num);
 }
 public class ItemManager : IitemManager
 {
-    public void updateCurrentItem(int currentItem, int numItems)
+    public void updateCurrentItem(ref int currentItem, int numItems)
     {
         var kstate = Keyboard.GetState();
         if (kstate.IsKeyDown(Keys.U))

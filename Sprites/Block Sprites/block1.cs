@@ -11,6 +11,8 @@ public class block1 : ISprite
 {
     private Rectangle sourceRectangle;
     private Rectangle destinationRectangle;
+    private int width;
+    private int height;
     private Texture2D BlockTexture;
 
     public block1(Texture2D BlockTexture)
@@ -25,11 +27,13 @@ public class block1 : ISprite
     public void Update(GameTime gameTime)
     {
         sourceRectangle = new Rectangle(86, 5, 80, 35);
-        destinationRectangle = new Rectangle(310, 150, 80, 35);
+        width = 80;
+        height = 35;        
     }
 
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
+        destinationRectangle = new Rectangle((int)position.X, (int)position.Y, width, height);
         spriteBatch.Begin();
         spriteBatch.Draw(BlockTexture, destinationRectangle, sourceRectangle, Color.White);
         spriteBatch.End();
