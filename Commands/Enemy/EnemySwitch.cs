@@ -10,14 +10,11 @@ public class EnemySwitch : ICommand
         game1 = game;
     }
 
-    private int count;
-
     private enum CommandType {GoombaCommand, KoopaCommand};
     private CommandType commandType = CommandType.GoombaCommand;
 
     public void Execute()
     {
-        if (count == 10) {
             switch (commandType)
             {
                 case CommandType.GoombaCommand:
@@ -29,9 +26,6 @@ public class EnemySwitch : ICommand
                     commandType = CommandType.GoombaCommand;
                     break;
             }
-            count = 0;
-        }
-        count++;
 
     }
 }
