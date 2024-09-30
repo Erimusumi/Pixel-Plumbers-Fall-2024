@@ -24,6 +24,9 @@ ENEMIES CONTROLS:
 BLOCKS/OBSTACLES CONTROLS:
     - T and Y keys to switch blocks/obstacles
 
+ITEM/POWERUP CONTROLS:
+    -U and I keys switch through powerup items
+
 KNOWN BUGS:
     - Animation frames for fire and small mario wont update while running
     - Mario can move while crouched
