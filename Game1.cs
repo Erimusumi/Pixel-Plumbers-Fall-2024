@@ -11,7 +11,7 @@ public class Game1 : Game
 
     public IMario Mario;
 
-    public Texture2D marioTexture;
+    public Texture2D MarioTexture;
     public Vector2 MarioPosition;
     public float MarioSpeed;
     public Vector2 MarioVelocity;
