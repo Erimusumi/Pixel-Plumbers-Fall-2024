@@ -159,10 +159,10 @@ public class Game1 : Game
         // broken brick block sprites
         OWBrokenBrickSprite = new BrokenBrickBlockSprite(block, new Vector2(288, 112), new Vector2(352, 128), 4, 1);
         // obstacle sprites
-        obstacle1 = new block1(obstacle);
-        obstacle2 = new Block2(obstacle);
-        obstacle3 = new Block3(obstacle);
-        obstacle4 = new Block4(obstacle);
+        obstacle1 = new obstacle1(obstacle);
+        obstacle2 = new obstacle2(obstacle);
+        obstacle3 = new obstacle3(obstacle);
+        obstacle4 = new obstacle4(obstacle);
     }
 
     protected override void Update(GameTime gameTime)
