@@ -1,6 +1,3 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Projects/Content/blocks.gif","C:/Projects/Content/bin/DesktopGL/Content/obstacle.xnb","TextureProcessor","Texture2DContent",14122,1560241,0.2907141
-"C:/Projects/Content/blocks.webp","C:/Projects/Content/bin/DesktopGL/Content/blocks.xnb","TextureProcessor","Texture2DContent",7374,458837,0.0444911
-"C:/Projects/Content/enemies.png","C:/Projects/Content/bin/DesktopGL/Content/enemies.xnb","TextureProcessor","Texture2DContent",8295,455269,0.0333447
-"C:/Projects/Content/mario.png","C:/Projects/Content/bin/DesktopGL/Content/mario.xnb","TextureProcessor","Texture2DContent",6584,304645,0.0154254
-"C:/Projects/Content/MarioItems.png","C:/Projects/Content/bin/DesktopGL/Content/MarioItems.xnb","TextureProcessor","Texture2DContent",38427,2532585,0.1232195
+"C:/Users/w6614/Desktop/OSU/2024 Autumn Semester/CSE 3902/Project Code/Sprint 2/Content/blocks.gif","C:/Users/w6614/Desktop/OSU/2024 Autumn Semester/CSE 3902/Project Code/Sprint 2/Content/bin/DesktopGL/Content/obstacle.xnb","TextureProcessor","Texture2DContent",14122,1560241,1.1015146
+"C:/Users/w6614/Desktop/OSU/2024 Autumn Semester/CSE 3902/Project Code/Sprint 2/Content/blocks.webp","C:/Users/w6614/Desktop/OSU/2024 Autumn Semester/CSE 3902/Project Code/Sprint 2/Content/bin/DesktopGL/Content/blocks.xnb","TextureProcessor","Texture2DContent",7374,458837,0.9239254
