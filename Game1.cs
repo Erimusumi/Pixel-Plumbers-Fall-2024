@@ -11,7 +11,13 @@ public class Game1 : Game
 
     public IMario Mario;
 
-    private KeyboardController keyboardController;
+    public Texture2D MarioTexture;
+    public Vector2 MarioPosition;
+    public float MarioSpeed;
+    public Vector2 MarioVelocity;
+    public float Gravity = 9.8f;
+    public float JumpSpeed = -350f;
+
     private MarioMovementCommandInitializer marioMovementCommandInitializer;
 
     public enum MarioState { Small, Big, Fire }
