@@ -11,17 +11,31 @@ public class Game1 : Game
 
     public IMario Mario;
 
-    public Texture2D MarioTexture;
-    public Vector2 MarioPosition;
-    public float MarioSpeed;
-    public Vector2 MarioVelocity;
-    public float Gravity = 9.8f;
-    public float JumpSpeed = -350f;
-    public float GroundPosition;
+    private KeyboardController keyboardController;
+    private MarioMovementCommandInitializer marioMovementCommandInitializer;
+
+    public enum MarioState { Small, Big, Fire }
+    public enum MarioMoveState { Idle, MovingRight, MovingLeft }
+    public MarioState currentMarioState;
+    public MarioMoveState currentMarioMoveState;
+    public IMarioSprite currentMarioSprite;
+
+    public Vector2 marioPosition;
+    public Vector2 marioVelocity;
+
+    public float marioSpeed;
+    public float gravity = 9.8f;
+    public float jumpSpeed = -350f;
+    public float groundPosition;
     public float updatedMarioSpeed;
 
+    public float GroundPosition;
+
+    public Boolean facingRight = true;
+    public Boolean isJumping = false;
+
     List<ISprite> MarioSpriteList;
-    
+
     public ISprite BigIdleRightMario;
     public ISprite BigIdleLeftMario;
     public ISprite BigRunRightMarioAnimation;
@@ -60,7 +74,7 @@ public class Game1 : Game
     public Boolean MovingLeft = false;
     public Boolean IsJumping = false;
 
-   
+
     //Enemy Code
     ISpriteEnemy spriteEnemy;
     IController controlG;
@@ -102,7 +116,7 @@ public class Game1 : Game
 
         keyboardController = new KeyboardController();
         CurrentMarioSprite = BigIdleRightMario;
-        
+
         Mario = new Mario(this);
         spriteEnemy = new Goomba();
         controlG = new GoombaCommand(spriteEnemy);
@@ -144,7 +158,7 @@ public class Game1 : Game
         ItemsTexture = Content.Load<Texture2D>("MarioItems");
         block = Content.Load<Texture2D>("blocks");
 
-        
+
         BigIdleRightMario = new BigIdleRightMario(MarioTexture);
         BigIdleLeftMario = new BigIdleLeftMario(MarioTexture);
         BigJumpRightMario = new BigJumpRightMario(MarioTexture);
