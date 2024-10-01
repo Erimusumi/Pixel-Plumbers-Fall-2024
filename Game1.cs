@@ -11,6 +11,7 @@ public class Game1 : Game
     private Texture2D marioTexture;
 
     private KeyboardController keyboardController;
+    private KeyboardControllerMovement keyboardControllerMovement;
     private CommandControlCenter controlCenter;
     public IMario Mario;
     
@@ -78,6 +79,7 @@ public class Game1 : Game
 
         GroundPosition = graphics.PreferredBackBufferHeight / 2;
         keyboardController = new KeyboardController();
+        keyboardControllerMovement = new KeyboardControllerMovement();
 
         Mario = new Mario(this, marioTexture);
         spriteEnemy = new Goomba();
@@ -128,6 +130,10 @@ public class Game1 : Game
     {
         keyboardController = keys;
     }
+    public void SetKeyMovement(KeyboardControllerMovement keys)
+    {
+        keyboardControllerMovement = keys;
+    }
 
     protected override void LoadContent()
     {
@@ -164,6 +170,7 @@ public class Game1 : Game
     protected override void Update(GameTime gameTime)
     {
         keyboardController.Update();
+        keyboardControllerMovement.Update();
 
         updatedMarioSpeed = marioSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
         marioVelocity.Y += gravity;

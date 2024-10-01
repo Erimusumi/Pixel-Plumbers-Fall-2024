@@ -8,13 +8,16 @@ public class CommandControlCenter
     private Texture2D marioTexture;
     private Game1 game;
     private KeyboardController keyboardController;
+    private KeyboardControllerMovement keyboardControllerMovement;
 
     public CommandControlCenter(Game1 game, Texture2D marioTexture)
     {
         this.game = game;
         this.marioTexture = marioTexture;
         this.keyboardController = new KeyboardController();
+        this.keyboardControllerMovement = new KeyboardControllerMovement();
         game.SetKey(keyboardController);
+        game.SetKeyMovement(keyboardControllerMovement);
         InitializeCommmands();
     }
 
@@ -30,14 +33,14 @@ public class CommandControlCenter
         ICommand moveRightCommand = new MoveRightMarioCommand(game, marioTexture);
         ICommand jumpCommand = new JumpMarioCommand(game, marioTexture);
         ICommand crouchCommand = new CrouchMarioCommand(game, marioTexture);
-        keyboardController.addCommand(Keys.A, moveLeftCommand);
-        keyboardController.addCommand(Keys.D, moveRightCommand);
-        keyboardController.addCommand(Keys.W, jumpCommand);
-        keyboardController.addCommand(Keys.S, crouchCommand);
-        keyboardController.addCommand(Keys.Left, moveLeftCommand);
-        keyboardController.addCommand(Keys.Right, moveRightCommand);
-        keyboardController.addCommand(Keys.Up, jumpCommand);
-        keyboardController.addCommand(Keys.Down, crouchCommand);
+        keyboardControllerMovement.addCommand(Keys.A, moveLeftCommand);
+        keyboardControllerMovement.addCommand(Keys.D, moveRightCommand);
+        keyboardControllerMovement.addCommand(Keys.W, jumpCommand);
+        keyboardControllerMovement.addCommand(Keys.S, crouchCommand);
+        keyboardControllerMovement.addCommand(Keys.Left, moveLeftCommand);
+        keyboardControllerMovement.addCommand(Keys.Right, moveRightCommand);
+        keyboardControllerMovement.addCommand(Keys.Up, jumpCommand);
+        keyboardControllerMovement.addCommand(Keys.Down, crouchCommand);
 
         // commands to change mario state
         ICommand setMarioSmallCommand = new SetMarioSmallCommand(game);

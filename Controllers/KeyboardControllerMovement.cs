@@ -5,11 +5,11 @@ using System.Windows.Input;
 using System.Linq;
 using Microsoft.VisualBasic;
 
-public class KeyboardController : IController
+public class KeyboardControllerMovement : IController
 {
     Dictionary<Keys, ICommand> KeyBinds;
     KeyboardState previousKeyState;
-    public KeyboardController()
+    public KeyboardControllerMovement()
     {
         KeyBinds = new Dictionary<Keys, ICommand>();
     }
@@ -25,7 +25,7 @@ public class KeyboardController : IController
         KeyboardState state = Keyboard.GetState();
         foreach (var key in keysPressed)
         {
-            if (KeyBinds.ContainsKey(key) & previousKeyState.IsKeyUp(key))
+            if (KeyBinds.ContainsKey(key))
             {
                 KeyBinds[key].Execute();
             }
