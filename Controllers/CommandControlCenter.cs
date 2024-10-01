@@ -62,6 +62,4 @@ public class CommandControlCenter
         keyboardController.addCommand(Keys.Q, quitCommand);
         keyboardController.addCommand(Keys.R, resetCommand);
     }
-
-
 }

@@ -14,7 +14,7 @@ MARIO CONTROLS:
         - S / Down to crouch
 
     - [1, 2, 3] to change mario states
-        - 1 to change to "small" mario
+        - 1 to take damage and revert to previous mario
         - 2 to change to "big" mario
         - 3 to change to "fire" mario
         
