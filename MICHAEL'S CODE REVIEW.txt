@@ -1,0 +1,34 @@
+MICHAEL'S CODE REVIEW
+
+Koopa.cs
+
+-Readability: Very succinct. Method names are readable and distinct enough to immediately know what they should do, without even seeing the state machine implementation.
+
+-Maintainability: Seems easy enough to add new methods by following the format. Can also be easily renamed and repurposed into a different object of a similar type.
+
+KoopaCommand.cs
+
+-Readability: Short enough to be easily readable. However, Update() is a little confusing; after taking some time to read it, it looks like a timer to cycle through the Koopa's various states. count variable name could be changed to something more descriptive or a brief comment could be added at the top of update. Regardless, this is probably fine for now, since I believe this is temporary until more functionality is added
+
+-Maintainability: Assuming that Update() will be where all of the Koopa behavior and sprite changing is done, this method might become needlessly long and difficult to change. Be careful of not having too many things happening in this method. 
+
+KoopaStateMachine.cs:
+
+-Readability: Very easy to follow, methods follow a simple format, each method is named descriptively
+
+-Maintainability: Again, seems incredibly easy to make changes if needed, and easy to copy/reuse for similar objects.
+
+
+
+
+JumpMarioCommand.cs:
+
+-Readability: Gets passed in game, then changes game.Mario 's state when called. This class is perfectly succinct and works well, but could use a little cleanup when our group has more time, since it was written for a different Mario implementation and has references to things that probably aren't necessary anymore, which obfuscates the code a little.
+
+-Maintainability: Perfectly easy to copy and use as a template for other movement commands. Can also add different state changes as new lines, if wanted.
+
+MovingLeftSmallMario:
+
+-Readability: Setting up the sprites and drawing them makes sense. The code for changing the current animation frame is unreadable. It seems to do something based on how much time has passed, and keeps track of the current frame and previous frame, but the way it does this is incomprehensible.
+
+-Maintainability: With a little finagling, this could definitely be reworked to be used with any animation with multiple sprites. Would take effort to learn how this works, but could be changed if needed without breaking something else.

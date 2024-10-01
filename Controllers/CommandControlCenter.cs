@@ -55,6 +55,12 @@ public class CommandControlCenter
         ICommand blockYCommand = new blockYCommand(game);
         keyboardController.addCommand(Keys.T, blockTCommand);
         keyboardController.addCommand(Keys.Y, blockYCommand);
+
+        // command for other controls
+        ICommand quitCommand = new quitCommand(game);
+        ICommand resetCommand = new resetCommand(game);
+        keyboardController.addCommand(Keys.Q, quitCommand);
+        keyboardController.addCommand(Keys.R, resetCommand);
     }
 
 
