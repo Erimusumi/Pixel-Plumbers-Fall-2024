@@ -1,6 +1,1 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/kamau/Downloads/CSE3902/cse202/Content/blocks.gif","C:/Users/kamau/Downloads/CSE3902/cse202/Content/bin/DesktopGL/Content/obstacle.xnb","TextureProcessor","Texture2DContent",14122,1560241,0.2183793
-"C:/Users/kamau/Downloads/CSE3902/cse202/Content/blocks.png","C:/Users/kamau/Downloads/CSE3902/cse202/Content/bin/DesktopGL/Content/blocks.xnb","TextureProcessor","Texture2DContent",13083,458837,0.0179479
-"C:/Users/kamau/Downloads/CSE3902/cse202/Content/enemies.png","C:/Users/kamau/Downloads/CSE3902/cse202/Content/bin/DesktopGL/Content/enemies.xnb","TextureProcessor","Texture2DContent",8295,455269,0.0128071
-"C:/Users/kamau/Downloads/CSE3902/cse202/Content/mario.png","C:/Users/kamau/Downloads/CSE3902/cse202/Content/bin/DesktopGL/Content/mario.xnb","TextureProcessor","Texture2DContent",6584,304645,0.0082186
-"C:/Users/kamau/Downloads/CSE3902/cse202/Content/MarioItems.png","C:/Users/kamau/Downloads/CSE3902/cse202/Content/bin/DesktopGL/Content/MarioItems.xnb","TextureProcessor","Texture2DContent",38427,2532585,0.0787674
