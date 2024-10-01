@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kamau\\Downloads\\CSE3902\\Mario11\\Pixel-Plumbers-Fall-2024.csproj": {}
+    "C:\\Users\\kamau\\Downloads\\CSE3902\\Mario10\\Pixel-Plumbers-Fall-2024.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kamau\\Downloads\\CSE3902\\Mario11\\Pixel-Plumbers-Fall-2024.csproj": {
+    "C:\\Users\\kamau\\Downloads\\CSE3902\\Mario10\\Pixel-Plumbers-Fall-2024.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kamau\\Downloads\\CSE3902\\Mario11\\Pixel-Plumbers-Fall-2024.csproj",
+        "projectUniqueName": "C:\\Users\\kamau\\Downloads\\CSE3902\\Mario10\\Pixel-Plumbers-Fall-2024.csproj",
         "projectName": "Pixel-Plumbers-Fall-2024",
-        "projectPath": "C:\\Users\\kamau\\Downloads\\CSE3902\\Mario11\\Pixel-Plumbers-Fall-2024.csproj",
+        "projectPath": "C:\\Users\\kamau\\Downloads\\CSE3902\\Mario10\\Pixel-Plumbers-Fall-2024.csproj",
         "packagesPath": "C:\\Users\\kamau\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kamau\\Downloads\\CSE3902\\Mario11\\obj\\",
+        "outputPath": "C:\\Users\\kamau\\Downloads\\CSE3902\\Mario10\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kamau\\AppData\\Roaming\\NuGet\\NuGet.Config",
