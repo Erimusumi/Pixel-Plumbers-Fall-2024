@@ -17,12 +17,18 @@ public class KoopaSprites
 	private const int countMod = 10;
 	private const int posX = 480;
 	private const int posY = 400;
-	private const int width = 16;
-    private const int height = 24;
     private const int scaleUp = 2;
 	private const int speed = 1;
 	private int position = posX;
 	private float rotation = 0f;
+
+    private int width = 16;
+    private int height = 24;
+    private int leftXOne = 180;
+    private int leftXTwo = 150;
+    private int rightY = 0;
+    private int rightXOne = 210;
+    private int rightXTwo = 240;
 
 
     public void LeftLogic()
@@ -32,7 +38,7 @@ public class KoopaSprites
         counter++;
         if (counter == 0)
         {
-            sourceRectangle = new Rectangle(180, 0, width, height);
+            sourceRectangle = new Rectangle(leftXOne, rightY, width, height);
             destinationRectangle = new Rectangle(posX, posY, width*scaleUp, height*scaleUp);
         }
         if ((counter >= countStart) && (counter < countEnd))
@@ -40,10 +46,10 @@ public class KoopaSprites
             position = position - speed;
             if (counter % countMod < (countMod / 2))
             {
-                sourceRectangle = new Rectangle(150, 0, width, height);
+                sourceRectangle = new Rectangle(leftXTwo, rightY, width, height);
             } else
             {
-                sourceRectangle = new Rectangle(180, 0, width, height);
+                sourceRectangle = new Rectangle(leftXOne, rightY, width, height);
             }
             destinationRectangle = new Rectangle(position, posY, width * scaleUp, height * scaleUp);
         }
@@ -60,7 +66,7 @@ public class KoopaSprites
         counter++;
         if (counter == 0)
         {
-            sourceRectangle = new Rectangle(210, 0, width, height);
+            sourceRectangle = new Rectangle(rightXOne, rightY, width, height);
             destinationRectangle = new Rectangle(posX, posY, width * scaleUp, height * scaleUp);
         }
         if ((counter >= countStart) && (counter < countEnd))
@@ -68,11 +74,11 @@ public class KoopaSprites
             position = position + speed;
             if (counter % countMod < (countMod / 2))
             {
-                sourceRectangle = new Rectangle(240, 0, width, height);
+                sourceRectangle = new Rectangle(rightXTwo, rightY, width, height);
             }
             else
             {
-                sourceRectangle = new Rectangle(210, 0, width, height);
+                sourceRectangle = new Rectangle(rightXOne, rightY, width, height);
             }
             destinationRectangle = new Rectangle(position, posY, width * scaleUp, height * scaleUp);
         }
@@ -99,6 +105,42 @@ public class KoopaSprites
         {
             counter = -1;
         }
+    }
+    public void StompedTwiceLogicLeft()
+    {
+        counter2 = 0;
+        int holdHeight = height;
+        int holdLeftXOne = leftXOne;
+        int holdLeftXTwo = leftXTwo;
+        int holdrightY = rightY;
+        height = 15;
+        leftXOne = 360;
+        leftXTwo = 360;
+        rightY = 5;
+        this.LeftLogic();
+        height = holdHeight;
+        leftXOne = holdLeftXOne;
+        leftXTwo = holdLeftXTwo;
+        rightY = holdrightY;
+
+    }
+    public void StompedTwiceLogicRight()
+    {
+        counter2 = 0;
+        int holdHeight = height;
+        int holdRightXOne = rightXOne;
+        int holdRightXTwo = rightXTwo;
+        int holdrightY = rightY;
+        height = 15;
+        rightXOne = 360;
+        rightXTwo = 360;
+        rightY = 5;
+        this.RightLogic();
+        height = holdHeight;
+        rightXOne = holdRightXOne;
+        rightXTwo = holdRightXTwo;
+        rightY = holdrightY;
+
     }
     public void FlippedLogic()
 	{

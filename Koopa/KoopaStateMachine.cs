@@ -8,8 +8,8 @@ using Pixel_Plumbers_Fall_2024;
 
 public class KoopaStateMachine
 {
-	private enum KoopaState {Left, Right, StompedLeft, StompedRight, Flipped};
-	private KoopaState _currentState = KoopaState.Left;
+	private enum KoopaState {Left, Right, StompedLeft, StompedRight, StompedTwiceLeft, StompedTwiceRight, Flipped};
+	private KoopaState _currentState = KoopaState.StompedTwiceRight;
 	private KoopaSprites _sprite;
 
 	public KoopaStateMachine()
@@ -32,6 +32,12 @@ public class KoopaStateMachine
             case KoopaState.StompedRight:
                 _currentState = KoopaState.Right;
                 break;
+			case KoopaState.StompedTwiceLeft:
+				_currentState = KoopaState.StompedTwiceRight;
+				break;
+			case KoopaState.StompedTwiceRight:
+				_currentState = KoopaState.StompedTwiceLeft;
+				break;
         }
 	}
 
@@ -44,6 +50,18 @@ public class KoopaStateMachine
 				break;
 			case KoopaState.Right:
 				_currentState = KoopaState.StompedRight;
+				break;
+			case KoopaState.StompedRight:
+				_currentState = KoopaState.StompedTwiceRight;
+				break;
+			case KoopaState.StompedLeft:
+				_currentState = KoopaState.StompedTwiceLeft;
+				break;
+			case KoopaState.StompedTwiceRight:
+				_currentState = KoopaState.StompedRight;
+				break;
+			case KoopaState.StompedTwiceLeft:
+				_currentState = KoopaState.StompedLeft;
 				break;
 		}
 
@@ -72,6 +90,12 @@ public class KoopaStateMachine
             case KoopaState.StompedRight:
                 _sprite.StompedLogic();
                 break;
+			case KoopaState.StompedTwiceLeft:
+				_sprite.StompedTwiceLogicLeft();
+				break;
+			case KoopaState.StompedTwiceRight:
+				_sprite.StompedTwiceLogicRight();
+				break;
             case KoopaState.Flipped:
 				_sprite.FlippedLogic();
 				break;
