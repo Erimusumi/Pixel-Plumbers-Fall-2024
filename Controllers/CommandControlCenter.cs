@@ -9,15 +9,18 @@ public class CommandControlCenter
     private Game1 game;
     private KeyboardController keyboardController;
     private KeyboardControllerMovement keyboardControllerMovement;
+    private Mario mario;
 
-    public CommandControlCenter(Game1 game, Texture2D marioTexture)
+    public CommandControlCenter(Game1 game, Texture2D marioTexture, Mario mario)
     {
         this.game = game;
+        this.mario = mario;
         this.marioTexture = marioTexture;
         this.keyboardController = new KeyboardController();
         this.keyboardControllerMovement = new KeyboardControllerMovement();
         game.SetKey(keyboardController);
         game.SetKeyMovement(keyboardControllerMovement);
+
         InitializeCommmands();
     }
 
@@ -29,10 +32,10 @@ public class CommandControlCenter
         keyboardController.addCommand(Keys.O, EnemySwitch);
 
         // commands for mario movement
-        ICommand moveLeftCommand = new MoveLeftMarioCommand(game, marioTexture);
-        ICommand moveRightCommand = new MoveRightMarioCommand(game, marioTexture);
-        ICommand jumpCommand = new JumpMarioCommand(game, marioTexture);
-        ICommand crouchCommand = new CrouchMarioCommand(game, marioTexture);
+        ICommand moveLeftCommand = new MarioMoveLeftCommand(mario);
+        ICommand moveRightCommand = new MarioMoveRightCommand(mario);
+        ICommand jumpCommand = new MarioJumpCommand(mario);
+        ICommand crouchCommand = new MarioJumpCommand(mario);
         keyboardControllerMovement.addCommand(Keys.A, moveLeftCommand);
         keyboardControllerMovement.addCommand(Keys.D, moveRightCommand);
         keyboardControllerMovement.addCommand(Keys.W, jumpCommand);
@@ -43,12 +46,12 @@ public class CommandControlCenter
         keyboardControllerMovement.addCommand(Keys.Down, crouchCommand);
 
         // commands to change mario state
-        ICommand setMarioSmallCommand = new SetMarioSmallCommand(game);
-        ICommand setMarioBigCommand = new SetMarioBigCommand(game);
-        ICommand setMarioFireCommand = new SetMarioFireCommand(game);
-        keyboardController.addCommand(Keys.D1, setMarioSmallCommand);
-        keyboardController.addCommand(Keys.D2, setMarioBigCommand);
-        keyboardController.addCommand(Keys.D3, setMarioFireCommand);
+        // ICommand setMarioSmallCommand = new SetMarioSmallCommand(game);
+        // ICommand setMarioBigCommand = new SetMarioBigCommand(game);
+        // ICommand setMarioFireCommand = new SetMarioFireCommand(game);
+        // keyboardController.addCommand(Keys.D1, setMarioSmallCommand);
+        // keyboardController.addCommand(Keys.D2, setMarioBigCommand);
+        // keyboardController.addCommand(Keys.D3, setMarioFireCommand);
 
         // command for switching blocks
         ICommand blockTCommand = new blockTCommand(game);
@@ -62,6 +65,4 @@ public class CommandControlCenter
         keyboardController.addCommand(Keys.Q, quitCommand);
         keyboardController.addCommand(Keys.R, resetCommand);
     }
-
-
 }
