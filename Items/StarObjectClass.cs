@@ -7,6 +7,7 @@ public interface IStarObject
     void star();
     Boolean idleState();
     Boolean collectedState();
+    Boolean roamingState();
     void draw(SpriteBatch sb, Texture2D texture);
 
 
@@ -33,6 +34,10 @@ public class StarObject : IStarObject
     {
 
         return this.collected;
+    }
+    public Boolean roamingState()
+    {
+        return this.roaming;
     }
     public void draw(SpriteBatch sB, Texture2D texture)
     {
