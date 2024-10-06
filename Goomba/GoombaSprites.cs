@@ -109,6 +109,10 @@ public class GoombaSprites
             counter = -1;
         }
     }
+    public Rectangle destinationR()
+    {
+        return destinationRectangle;
+    }
 	public void Draw(SpriteBatch sb, Texture2D Texture)
 	{
         sb.Begin();

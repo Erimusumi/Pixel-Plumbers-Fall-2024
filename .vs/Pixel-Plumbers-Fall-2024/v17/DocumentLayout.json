@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "C:\\Projects\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\koopa\\koopaleftlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:koopa\\koopaleftlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\koopa\\koopafields.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:koopa\\koopafields.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\koopa\\koopasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:koopa\\koopasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\koopa\\kooparightlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:koopa\\kooparightlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\koopa\\koopacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:koopa\\koopacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +26,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Projects\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
@@ -48,14 +40,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "KoopaLeftLogic.cs",
-              "DocumentMoniker": "C:\\Projects\\Koopa\\KoopaLeftLogic.cs",
-              "RelativeDocumentMoniker": "Koopa\\KoopaLeftLogic.cs",
-              "ToolTip": "C:\\Projects\\Koopa\\KoopaLeftLogic.cs",
-              "RelativeToolTip": "Koopa\\KoopaLeftLogic.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBgAAAANAAAAAAAAAA==",
+              "Title": "KoopaSprites.cs",
+              "DocumentMoniker": "C:\\Projects\\Koopa\\KoopaSprites.cs",
+              "RelativeDocumentMoniker": "Koopa\\KoopaSprites.cs",
+              "ToolTip": "C:\\Projects\\Koopa\\KoopaSprites.cs",
+              "RelativeToolTip": "Koopa\\KoopaSprites.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T20:25:31.143Z",
+              "WhenOpened": "2024-10-06T20:34:29.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "KoopaCommand.cs",
+              "DocumentMoniker": "C:\\Projects\\Koopa\\KoopaCommand.cs",
+              "RelativeDocumentMoniker": "Koopa\\KoopaCommand.cs",
+              "ToolTip": "C:\\Projects\\Koopa\\KoopaCommand.cs",
+              "RelativeToolTip": "Koopa\\KoopaCommand.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T20:31:27.908Z",
               "EditorCaption": ""
             },
             {
@@ -77,44 +82,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "KoopaRightLogic.cs",
-              "DocumentMoniker": "C:\\Projects\\Koopa\\KoopaRightLogic.cs",
-              "RelativeDocumentMoniker": "Koopa\\KoopaRightLogic.cs",
-              "ToolTip": "C:\\Projects\\Koopa\\KoopaRightLogic.cs",
-              "RelativeToolTip": "Koopa\\KoopaRightLogic.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T00:53:53.323Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "KoopaSprites.cs",
-              "DocumentMoniker": "C:\\Projects\\Koopa\\KoopaSprites.cs",
-              "RelativeDocumentMoniker": "Koopa\\KoopaSprites.cs",
-              "ToolTip": "C:\\Projects\\Koopa\\KoopaSprites.cs",
-              "RelativeToolTip": "Koopa\\KoopaSprites.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAkwCAAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T00:50:35.154Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "KoopaFields.cs",
-              "DocumentMoniker": "C:\\Projects\\Koopa\\KoopaFields.cs",
-              "RelativeDocumentMoniker": "Koopa\\KoopaFields.cs",
-              "ToolTip": "C:\\Projects\\Koopa\\KoopaFields.cs",
-              "RelativeToolTip": "Koopa\\KoopaFields.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T00:48:35.702Z",
-              "EditorCaption": ""
             }
           ]
         }
