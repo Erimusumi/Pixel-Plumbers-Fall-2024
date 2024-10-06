@@ -1,25 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Projects\\",
+  "WorkspaceRootPath": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\koopa\\koopasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariosprintt\\items\\fireobectclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:items\\fireobectclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariosprintt\\koopa\\koopasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:koopa\\koopasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\koopa\\koopastompedlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariosprintt\\koopa\\koopastompedlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:koopa\\koopastompedlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\koopa\\koopacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariosprintt\\koopa\\koopacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:koopa\\koopacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\koopa\\koopastatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariosprintt\\koopa\\koopastatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:koopa\\koopastatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariosprintt\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -30,33 +34,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Game1.cs",
-              "DocumentMoniker": "C:\\Projects\\Game1.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
-              "ToolTip": "C:\\Projects\\Game1.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "KoopaStompedLogic.cs",
-              "DocumentMoniker": "C:\\Projects\\Koopa\\KoopaStompedLogic.cs",
-              "RelativeDocumentMoniker": "Koopa\\KoopaStompedLogic.cs",
-              "ToolTip": "C:\\Projects\\Koopa\\KoopaStompedLogic.cs",
-              "RelativeToolTip": "Koopa\\KoopaStompedLogic.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "fireObectClass.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Items\\fireObectClass.cs",
+              "RelativeDocumentMoniker": "Items\\fireObectClass.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Items\\fireObectClass.cs",
+              "RelativeToolTip": "Items\\fireObectClass.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T17:53:05.574Z",
+              "WhenOpened": "2024-10-06T16:18:49.704Z",
               "EditorCaption": ""
             },
             {
@@ -81,42 +84,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "KoopaStompedLogic.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Koopa\\KoopaStompedLogic.cs",
+              "RelativeDocumentMoniker": "Koopa\\KoopaStompedLogic.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Koopa\\KoopaStompedLogic.cs",
+              "RelativeToolTip": "Koopa\\KoopaStompedLogic.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-05T17:53:05.574Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "KoopaSprites.cs",
-              "DocumentMoniker": "C:\\Projects\\Koopa\\KoopaSprites.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Koopa\\KoopaSprites.cs",
               "RelativeDocumentMoniker": "Koopa\\KoopaSprites.cs",
-              "ToolTip": "C:\\Projects\\Koopa\\KoopaSprites.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Koopa\\KoopaSprites.cs",
               "RelativeToolTip": "Koopa\\KoopaSprites.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAowEIAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-05T17:48:55.339Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "KoopaCommand.cs",
-              "DocumentMoniker": "C:\\Projects\\Koopa\\KoopaCommand.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Koopa\\KoopaCommand.cs",
               "RelativeDocumentMoniker": "Koopa\\KoopaCommand.cs",
-              "ToolTip": "C:\\Projects\\Koopa\\KoopaCommand.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Koopa\\KoopaCommand.cs",
               "RelativeToolTip": "Koopa\\KoopaCommand.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T17:22:19.554Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-05T17:22:19.554Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "KoopaStateMachine.cs",
-              "DocumentMoniker": "C:\\Projects\\Koopa\\KoopaStateMachine.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Koopa\\KoopaStateMachine.cs",
               "RelativeDocumentMoniker": "Koopa\\KoopaStateMachine.cs",
-              "ToolTip": "C:\\Projects\\Koopa\\KoopaStateMachine.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Koopa\\KoopaStateMachine.cs",
               "RelativeToolTip": "Koopa\\KoopaStateMachine.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-05T16:51:52.738Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-05T16:51:52.738Z"
             }
           ]
         }

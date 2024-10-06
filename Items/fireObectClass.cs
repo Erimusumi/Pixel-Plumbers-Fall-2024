@@ -1,18 +1,21 @@
-﻿using Pixel_Plumbers_Fall_2024;
+﻿using Microsoft.Xna.Framework.Graphics;
+using Pixel_Plumbers_Fall_2024;
 using System;
 using System.Runtime.InteropServices;
 public interface IFireObject
 {
-    void firePowerItem();
     Boolean idleState();
     Boolean collectedState();
+    void draw(SpriteBatch sb, Texture2D texture);
 }
 public class firePower : IFireObject
 {
     private Boolean idle;
     private Boolean collected;
+    private int x;
+    private int y;
 
-    public void firePowerItem()
+    public firePower()
     {
         this.idle = false;
         this.collected = false;
@@ -25,6 +28,10 @@ public class firePower : IFireObject
     {
 
         return this.collected;
+    }
+    public void draw(SpriteBatch sb, Texture2D texture)
+    {
+
     }
 
 
