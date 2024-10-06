@@ -31,7 +31,14 @@ public class firePower : IFireObject
     }
     public void draw(SpriteBatch sb, Texture2D texture)
     {
+        if (this.idle)
+        {
 
+        }
+        else if (this.collected)
+        {
+
+        }
     }
 
 
