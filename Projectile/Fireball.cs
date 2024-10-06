@@ -13,21 +13,31 @@ public class Fireball : IProjectile
      * Use isBouncing and bounceTimer to track this
     */
     private bool isBouncing;
+    private bool goingRight;
     private int bounceTimer;
     private Vector2 pos;
 
     private FireballSprite sprite;
     private GameTime gameTime;
-    public Fireball(Vector2 marioPosition, Texture2D texture, GameTime gameTime)
+    public Fireball(Vector2 marioPosition, Texture2D texture, GameTime gameTime, bool goingRight)
     {
         isBouncing = false;
         pos = marioPosition;
         sprite = new FireballSprite(texture);
         this.gameTime = gameTime;
+        this.goingRight = goingRight;
     }
     private void Move()
     {
-        //TODO: Move right some amount
+        if (goingRight)
+        {
+            //If mario was facing right when shooting, move to the right
+        }
+        else
+        {
+            //Same as above, but for left
+        }
+
         if (isBouncing)
         {
             //Move up some
