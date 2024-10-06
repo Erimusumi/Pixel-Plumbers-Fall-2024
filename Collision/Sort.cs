@@ -7,5 +7,13 @@ using Pixel_Plumbers_Fall_2024;
 
 public class Sort
 {
+    public void add()
+    {
 
+    }
+
+    public void remove()
+    {
+
+    }
 }
