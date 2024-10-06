@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariosprintt\\sprites\\item sprites\\firepower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\item sprites\\firepower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariosprintt\\sprites\\item sprites\\mushroompower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\item sprites\\mushroompower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariosprintt\\sprites\\item sprites\\firepower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\item sprites\\firepower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariosprintt\\sprites\\item sprites\\starpower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\item sprites\\starpower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariosprintt\\content\\itemsandpowerups.png||{177559E0-D141-11D0-92DF-00A0C9138C45}",
@@ -70,11 +74,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
@@ -85,68 +89,6 @@
               "WhenOpened": "2024-09-16T18:15:02.512Z",
               "IsPinned": true,
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MushroomPower.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Sprites\\Item Sprites\\MushroomPower.cs",
-              "RelativeDocumentMoniker": "Sprites\\Item Sprites\\MushroomPower.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Sprites\\Item Sprites\\MushroomPower.cs",
-              "RelativeToolTip": "Sprites\\Item Sprites\\MushroomPower.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T18:51:45.416Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FirePower.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Sprites\\Item Sprites\\FirePower.cs",
-              "RelativeDocumentMoniker": "Sprites\\Item Sprites\\FirePower.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Sprites\\Item Sprites\\FirePower.cs",
-              "RelativeToolTip": "Sprites\\Item Sprites\\FirePower.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T18:51:23.85Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "itemsAndPowerups.png - PNG [576x224, 32 bit, PNG]",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Content\\itemsAndPowerups.png",
-              "RelativeDocumentMoniker": "Content\\itemsAndPowerups.png",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Content\\itemsAndPowerups.png - PNG [576x224, 32 bit, PNG]",
-              "RelativeToolTip": "Content\\itemsAndPowerups.png - PNG [576x224, 32 bit, PNG]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-10-06T18:50:04.178Z",
-              "EditorCaption": " - PNG [576x224, 32 bit, PNG]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "mario.png - PNG [405x188, 32 bit, PNG]",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Content\\mario.png",
-              "RelativeDocumentMoniker": "Content\\mario.png",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Content\\mario.png - PNG [405x188, 32 bit, PNG]",
-              "RelativeToolTip": "Content\\mario.png - PNG [405x188, 32 bit, PNG]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-10-06T18:43:25.836Z",
-              "EditorCaption": " - PNG [405x188, 32 bit, PNG]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "blocks.png - PNG [448x256, 32 bit, PNG]",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Content\\blocks.png",
-              "RelativeDocumentMoniker": "Content\\blocks.png",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Content\\blocks.png - PNG [448x256, 32 bit, PNG]",
-              "RelativeToolTip": "Content\\blocks.png - PNG [448x256, 32 bit, PNG]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-10-06T18:43:13.423Z",
-              "EditorCaption": " - PNG [448x256, 32 bit, PNG]"
             },
             {
               "$type": "Bookmark",
@@ -169,8 +111,87 @@
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "StarPower.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Sprites\\Item Sprites\\StarPower.cs",
+              "RelativeDocumentMoniker": "Sprites\\Item Sprites\\StarPower.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Sprites\\Item Sprites\\StarPower.cs",
+              "RelativeToolTip": "Sprites\\Item Sprites\\StarPower.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T18:53:20.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MushroomPower.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Sprites\\Item Sprites\\MushroomPower.cs",
+              "RelativeDocumentMoniker": "Sprites\\Item Sprites\\MushroomPower.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Sprites\\Item Sprites\\MushroomPower.cs",
+              "RelativeToolTip": "Sprites\\Item Sprites\\MushroomPower.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T18:51:45.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FirePower.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Sprites\\Item Sprites\\FirePower.cs",
+              "RelativeDocumentMoniker": "Sprites\\Item Sprites\\FirePower.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Sprites\\Item Sprites\\FirePower.cs",
+              "RelativeToolTip": "Sprites\\Item Sprites\\FirePower.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-06T18:51:23.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "itemsAndPowerups.png - PNG [576x224, 32 bit, PNG]",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Content\\itemsAndPowerups.png",
+              "RelativeDocumentMoniker": "Content\\itemsAndPowerups.png",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Content\\itemsAndPowerups.png - PNG [576x224, 32 bit, PNG]",
+              "RelativeToolTip": "Content\\itemsAndPowerups.png - PNG [576x224, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2024-10-06T18:50:04.178Z",
+              "EditorCaption": " - PNG [576x224, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "mario.png - PNG [405x188, 32 bit, PNG]",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Content\\mario.png",
+              "RelativeDocumentMoniker": "Content\\mario.png",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Content\\mario.png - PNG [405x188, 32 bit, PNG]",
+              "RelativeToolTip": "Content\\mario.png - PNG [405x188, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2024-10-06T18:43:25.836Z",
+              "EditorCaption": " - PNG [405x188, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "blocks.png - PNG [448x256, 32 bit, PNG]",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Content\\blocks.png",
+              "RelativeDocumentMoniker": "Content\\blocks.png",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Content\\blocks.png - PNG [448x256, 32 bit, PNG]",
+              "RelativeToolTip": "Content\\blocks.png - PNG [448x256, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2024-10-06T18:43:13.423Z",
+              "EditorCaption": " - PNG [448x256, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "MarioItems.png - PNG [1013x625, 32 bit, PNG]",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Content\\MarioItems.png",
               "RelativeDocumentMoniker": "Content\\MarioItems.png",
@@ -181,12 +202,8 @@
               "EditorCaption": " - PNG [1013x625, 32 bit, PNG]"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "StarObjectClass.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Items\\StarObjectClass.cs",
               "RelativeDocumentMoniker": "Items\\StarObjectClass.cs",
@@ -199,7 +216,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "CommandControlCenter.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Controllers\\CommandControlCenter.cs",
               "RelativeDocumentMoniker": "Controllers\\CommandControlCenter.cs",
@@ -212,7 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "MushroomObject.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Items\\MushroomObject.cs",
               "RelativeDocumentMoniker": "Items\\MushroomObject.cs",
@@ -225,7 +242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "fireObect.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Items\\fireObect.cs",
               "RelativeDocumentMoniker": "Items\\fireObect.cs",
@@ -238,7 +255,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "KoopaStompedLogic.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Koopa\\KoopaStompedLogic.cs",
               "RelativeDocumentMoniker": "Koopa\\KoopaStompedLogic.cs",
@@ -251,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "KoopaSprites.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Koopa\\KoopaSprites.cs",
               "RelativeDocumentMoniker": "Koopa\\KoopaSprites.cs",
@@ -264,7 +281,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "KoopaCommand.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Koopa\\KoopaCommand.cs",
               "RelativeDocumentMoniker": "Koopa\\KoopaCommand.cs",
@@ -276,7 +293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "KoopaStateMachine.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioSprintt\\Koopa\\KoopaStateMachine.cs",
               "RelativeDocumentMoniker": "Koopa\\KoopaStateMachine.cs",
