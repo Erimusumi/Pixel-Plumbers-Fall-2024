@@ -131,7 +131,7 @@ public class Game1 : Game
 
         marioTexture = Content.Load<Texture2D>("mario");
         EnemyTexture = Content.Load<Texture2D>("enemies");
-        ItemsTexture = Content.Load<Texture2D>("MarioItems");
+        ItemsTexture = Content.Load<Texture2D>("itemsAndPowerups");
         block = Content.Load<Texture2D>("blocks");
         obstacle = Content.Load<Texture2D>("obstacle");
 
