@@ -9,28 +9,17 @@ public class Game1 : Game
     private GraphicsDeviceManager graphics;
     private SpriteBatch spriteBatch;
     private Texture2D marioTexture;
+    private GameTime gameTime;
+
 
     private KeyboardController keyboardController;
     private KeyboardControllerMovement keyboardControllerMovement;
     private CommandControlCenter controlCenter;
-    public IMario Mario;
-    
-    public IMarioSprite currentMarioSprite;
 
-    public Vector2 marioPosition;
-    public Vector2 marioVelocity;
 
-    public float marioSpeed;
-    public float gravity = 9.8f;
-    public float jumpSpeed = -350f;
-    public float groundPosition;
-    public float updatedMarioSpeed;
-
-    public float GroundPosition;
-
-    public Boolean facingRight = true;
-    public Boolean isJumping = false;
-
+    // public IMario Mario;
+    // The New Mario
+    private Mario mario;
 
     //Enemy Code
     public ISpriteEnemy spriteEnemy;
@@ -67,7 +56,7 @@ public class Game1 : Game
     // reset instances
     public Vector2 initial_mario_position;
 
-    private IdleMarioCommand idleMarioCommand;
+    // private IdleMarioCommand idleMarioCommand;
     public Game1()
     {
         graphics = new GraphicsDeviceManager(this);
@@ -78,18 +67,18 @@ public class Game1 : Game
     protected override void Initialize()
     {
         base.Initialize();
+        this.gameTime = new GameTime();
 
-        GroundPosition = graphics.PreferredBackBufferHeight / 2;
         keyboardController = new KeyboardController();
         keyboardControllerMovement = new KeyboardControllerMovement();
+        mario = new Mario(marioTexture, gameTime);
 
-        Mario = new Mario(this, marioTexture);
         spriteEnemy = new Goomba();
         controlG = new GoombaCommand(spriteEnemy);
 
-        controlCenter = new CommandControlCenter(this, marioTexture);
+        controlCenter = new CommandControlCenter(this, marioTexture, mario);
 
-        idleMarioCommand = new IdleMarioCommand(this, marioTexture);
+        // idleMarioCommand = new IdleMarioCommand(this, marioTexture);
 
         //Make a first list for block iteration
         sprite1 = new List<ISprite>
@@ -117,7 +106,6 @@ public class Game1 : Game
         index1 = 0;
         index2 = 0;
 
-        marioSpeed = 10;
     }
     public ISpriteEnemy SetEnemy(ISpriteEnemy enemy)
     {
@@ -147,10 +135,9 @@ public class Game1 : Game
         block = Content.Load<Texture2D>("blocks");
         obstacle = Content.Load<Texture2D>("obstacle");
 
-        currentMarioSprite = new IdleLeftBigMario(marioTexture);
-        marioPosition = new Vector2(graphics.PreferredBackBufferWidth / 2, graphics.PreferredBackBufferHeight / 2);
+
         //reset instances initialization
-        initial_mario_position = marioPosition;
+
         //currentMarioState = MarioState.Big;
 
         firePower = new FirePower(ItemsTexture);
@@ -176,19 +163,7 @@ public class Game1 : Game
         keyboardController.Update();
         keyboardControllerMovement.Update();
 
-        updatedMarioSpeed = marioSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
-        marioVelocity.Y += gravity;
-        marioPosition.Y += marioVelocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-        if (marioPosition.Y >= GroundPosition)
-        {
-            marioPosition.Y = GroundPosition;
-            marioVelocity.Y = 0;
-            isJumping = false;
-        }
-        currentMarioSprite.Update(gameTime);
-        
-        Mario.Update();
 
         // lucky block sprites
         OWLuckyBlockSprite.Update(gameTime);
@@ -205,6 +180,7 @@ public class Game1 : Game
         //Update block and obstacle sprites
         sprite1[index1].Update(gameTime);
         sprite2[index2].Update(gameTime);
+        mario.Update(gameTime);
 
         base.Update(gameTime);
     }
@@ -216,13 +192,13 @@ public class Game1 : Game
         // mari and enemy
         spriteEnemy.Draw(spriteBatch, EnemyTexture);
         spriteBatch.Begin();
+        mario.Draw(spriteBatch);
         manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
-        currentMarioSprite.Draw(spriteBatch, marioPosition);
         spriteBatch.End();
 
         // Draw blocks and obstacles
-        sprite1[index1].Draw(spriteBatch, new Vector2(200,200));
-        sprite2[index2].Draw(spriteBatch, new Vector2(310,150));
+        sprite1[index1].Draw(spriteBatch, new Vector2(200, 200));
+        sprite2[index2].Draw(spriteBatch, new Vector2(310, 150));
 
         base.Draw(gameTime);
     }

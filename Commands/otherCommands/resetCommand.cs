@@ -14,15 +14,7 @@ public class resetCommand : ICommand
 
 	public void Execute()
 	{
-        // Reset Mario's position and velocity
-        g.marioPosition = new Vector2(g.initial_mario_position.X, g.initial_mario_position.Y);
-        g.marioVelocity = Vector2.Zero;
-        g.facingRight = true;
-        g.isJumping = false;
 
-        // Reset speed and other variables
-        g.marioSpeed = 10;
-        g.updatedMarioSpeed = 0;
 
         // Reset item management
         g.currentItem = 0;
