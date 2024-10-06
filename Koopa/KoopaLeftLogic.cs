@@ -14,7 +14,6 @@ public class KoopaLeftLogic
         if (vars.counter == 0)
         {
             vars.sourceRectangle = new Rectangle(vars.leftXOne, vars.rightY, vars.width, vars.height);
-            vars.destinationRectangle = new Rectangle(vars.posX, vars.posY, vars.width * vars.scaleUp, vars.height * vars.scaleUp);
         }
         if ((vars.counter >= vars.countStart) && (vars.counter < vars.countEnd))
         {
@@ -27,8 +26,8 @@ public class KoopaLeftLogic
             {
                 vars.sourceRectangle = new Rectangle(vars.leftXOne, vars.rightY, vars.width, vars.height);
             }
-            vars.destinationRectangle = new Rectangle(vars.position, vars.posY, vars.width * vars.scaleUp, vars.height * vars.scaleUp);
         }
+        vars.destinationRectangle = new Rectangle(vars.position, vars.posY, vars.width * vars.scaleUp, vars.height * vars.scaleUp);
         if (vars.counter >= vars.countEnd)
         {
             vars.counter = -1;

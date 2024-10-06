@@ -31,7 +31,6 @@ public class GoombaSprites
         if (counter == 0)
         {
             sourceRectangle = new Rectangle(0, 4, size, size);
-            destinationRectangle = new Rectangle(posX, posY, size*scaleUp, size*scaleUp);
         }
         if ((counter >= countStart) && (counter < countEnd))
         {
@@ -43,8 +42,8 @@ public class GoombaSprites
             {
                 sourceRectangle = new Rectangle(0, 4, size, size);
             }
-            destinationRectangle = new Rectangle(position, posY, size * scaleUp, size * scaleUp);
         }
+        destinationRectangle = new Rectangle(position, posY, size * scaleUp, size * scaleUp);
         if (counter >= countEnd)
         {
             counter = -1;
@@ -58,7 +57,6 @@ public class GoombaSprites
         if (counter == 0)
         {
             sourceRectangle = new Rectangle(0, 4, size, size);
-            destinationRectangle = new Rectangle(posX, posY, size * scaleUp, size * scaleUp);
         }
         if ((counter >= countStart) && (counter < countEnd))
         {
@@ -71,8 +69,8 @@ public class GoombaSprites
             {
                 sourceRectangle = new Rectangle(0, 4, size, size);
             }
-            destinationRectangle = new Rectangle(position, posY, size * scaleUp, size * scaleUp);
         }
+        destinationRectangle = new Rectangle(position, posY, size * scaleUp, size * scaleUp);
         if (counter >= countEnd)
         {
             counter = -1;
@@ -108,6 +106,10 @@ public class GoombaSprites
         {
             counter = -1;
         }
+    }
+    public Rectangle destinationR()
+    {
+        return destinationRectangle;
     }
 	public void Draw(SpriteBatch sb, Texture2D Texture)
 	{
