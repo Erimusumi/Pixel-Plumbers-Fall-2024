@@ -35,14 +35,13 @@ public class MovingLeftBigMario : IMarioSprite
     {
         GameTicks += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
 
-        if (GameTicks > AnimationSpeed)
-        {
-            currentAnimationIndex = (currentAnimationIndex == 1)
-                ? (previousAnimationIndex == 0 ? 2 : 0)
-                : 1;
+        if (GameTicks <= AnimationSpeed) return;
 
-            previousAnimationIndex = currentAnimationIndex;
-            GameTicks = 0;
-        }
+        currentAnimationIndex = currentAnimationIndex == 1
+            ? (previousAnimationIndex == 0 ? 2 : 0)
+            : 1;
+
+        previousAnimationIndex = currentAnimationIndex;
+        GameTicks = 0;
     }
 }

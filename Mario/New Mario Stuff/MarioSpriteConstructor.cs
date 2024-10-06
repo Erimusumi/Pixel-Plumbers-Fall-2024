@@ -31,7 +31,7 @@ public class MarioSpriteConstructor
                         switch (marioStateMachine.CurrentMoveState)
                         {
                             case MarioStateMachine.MarioMoveState.Idle:
-                                return new IdleRightBigMario(texture);
+                                return new IdleRightBigtMario(texture);
                             case MarioStateMachine.MarioMoveState.Moving:
                                 return new MovingRightBigMario(texture);
                             case MarioStateMachine.MarioMoveState.Jumping:
@@ -103,6 +103,6 @@ public class MarioSpriteConstructor
                 }
                 break;
         }
-        return new IdleRightBigMario(texture);
+        return new IdleLeftBigMario(texture);
     }
 }

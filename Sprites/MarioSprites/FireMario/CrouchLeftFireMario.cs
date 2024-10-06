@@ -1,16 +1,17 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public class TurningLeftFireMario : IMarioSprite
+public class CrouchLeftFireMario : IMarioSprite
 {
     private Texture2D MarioTexture;
-    public TurningLeftFireMario(Texture2D MarioTexture)
+    public CrouchLeftFireMario(Texture2D MarioTexture)
     {
         this.MarioTexture = MarioTexture;
     }
+
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
-        Rectangle sourceRectangle = new Rectangle(337, 122, 16, 32);
+        Rectangle sourceRectangle = new Rectangle(389, 127, 16, 22);
         spriteBatch.Draw(MarioTexture, position, sourceRectangle, Color.White);
     }
 

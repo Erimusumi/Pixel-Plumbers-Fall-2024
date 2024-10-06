@@ -20,7 +20,7 @@ public class MovingRightBigMario : IMarioSprite
         FrameRectangles = new Rectangle[3];
         FrameRectangles[0] = new Rectangle(239, 52, 16, 32); // Frame 1
         FrameRectangles[1] = new Rectangle(270, 52, 14, 31); // Frame 2
-        FrameRectangles[2] = new Rectangle(299, 53, 16, 30); // Frame 3
+        FrameRectangles[2] = new Rectangle(299, 53, 16, 30);  // Frame 3
 
         previousAnimationIndex = 2;
         currentAnimationIndex = 1;

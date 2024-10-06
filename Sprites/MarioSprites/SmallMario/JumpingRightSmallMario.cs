@@ -1,16 +1,16 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public class TurningRightSmallMario : IMarioSprite
+public class JumpingRightSmallMario : IMarioSprite
 {
     private Texture2D MarioTexture;
-    public TurningRightSmallMario(Texture2D MarioTexture)
+    public  JumpingRightSmallMario(Texture2D MarioTexture)
     {
         this.MarioTexture = MarioTexture;
     }
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
-        Rectangle sourceRectangle = new Rectangle(331, 0, 344-331, 15);
+        Rectangle sourceRectangle = new Rectangle(29, 0, 17, 16);
         spriteBatch.Draw(MarioTexture, position, sourceRectangle, Color.White);
     }
 
