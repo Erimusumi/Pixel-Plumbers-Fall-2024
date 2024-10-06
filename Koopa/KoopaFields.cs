@@ -18,11 +18,11 @@ public class KoopaFields
     public int posY = 400;
     public int scaleUp = 2;
     public int speed = 1;
+    public int width = 16;
+    public int height = 24;
     public int position = 480;
     public float rotation = 0f;
 
-    public int width = 16;
-    public int height = 24;
     public int leftXOne = 180;
     public int leftXTwo = 150;
     public int rightY = 0;

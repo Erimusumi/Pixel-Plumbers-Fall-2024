@@ -8,7 +8,7 @@ using Pixel_Plumbers_Fall_2024;
 public class KoopaLeftLogic
 {
     public void Updates(KoopaFields vars)
-	{
+    {
         vars.counter2 = -1;
         vars.counter++;
         if (vars.counter == 0)
