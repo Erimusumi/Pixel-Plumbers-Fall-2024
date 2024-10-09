@@ -1,3 +1,10 @@
+Dylan Moore
+9 / 30 / 24 Updated on 10 / 7 / 24 (forgot this heading and the one below)
+Sprint 2
+JumpingLeftBigMario.cs && TurningLeftBigMario.cs && MovingLeftBigMario.cs
+Arun Ghimire
+20~ Minutes
+
 Sprites -> Mario Sprites -> JumpingLeftBigMario.cs && TurningLeftBigMario.cs && MovingLeftBigMario.cs
 
 Readability: JumpingLeftBigMario.cs && TurningLeftBigMario.cs
@@ -24,6 +31,13 @@ The fields at the top are private which is good.
 It's only about 50 lines of code so changing which frames are used and how update functions wouldn't be too bad.
 I think all 3 are very maintainable. If updates would ever need to expand, it wouldn't be difficult to make a change.
 
+
+Dylan Moore
+9 / 30 / 24 Updated on 10 / 7 / 24
+Sprint 2
+FireMario
+Michael
+15~ Minutes
 
 MarioClasses -> FireMario
 
