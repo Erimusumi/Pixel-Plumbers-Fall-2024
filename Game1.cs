@@ -54,6 +54,9 @@ public class Game1 : Game
     private ISprite OWBrickBlockSprite;
     private ISprite OWBrokenBrickSprite;
 
+    private ISprite StartText;
+    private SpriteFont MyFont;
+
     // reset instances
     public Vector2 initial_mario_position;
     private bool gameStarted = false;
@@ -146,6 +149,9 @@ public class Game1 : Game
         marioTexture = Content.Load<Texture2D>("mario");
         EnemyTexture = Content.Load<Texture2D>("enemies");
         ItemsTexture = Content.Load<Texture2D>("itemsAndPowerups");
+        MyFont = Content.Load<SpriteFont>("MyFont");
+        StartText = new StartScreenText(MyFont);
+
         block = Content.Load<Texture2D>("blocks");
         obstacle = Content.Load<Texture2D>("obstacle");
 
@@ -234,6 +240,11 @@ public class Game1 : Game
             // Draw blocks and obstacles
             sprite1[index1].Draw(spriteBatch, new Vector2(200, 200));
             sprite2[index2].Draw(spriteBatch, new Vector2(310, 150));
+        }else{
+            spriteBatch.Begin();
+            StartText.Draw(spriteBatch, new Vector2(200, 200));
+
+            spriteBatch.End();
         }
 
         base.Draw(gameTime);
