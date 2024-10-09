@@ -17,10 +17,13 @@ public class Mario
     private float jumpSpeed = -350f;
     private bool isOnGround = true;
 
+    private Vector2 initialPosition;
+
     public Mario(Texture2D marioTexture, GameTime gameTime)
     {
         this.marioTexture = marioTexture;
-        marioPosition = new Vector2(400, groundPosition);
+        initialPosition = new Vector2(400, groundPosition); // Set the initial position
+        marioPosition = initialPosition;
         marioStateMachine = new MarioStateMachine();
         this.gameTime = gameTime;
 
@@ -118,5 +121,15 @@ public class Mario
     public void Draw(SpriteBatch spriteBatch)
     {
         currentMarioSprite.Draw(spriteBatch, marioPosition);
+    }
+
+    // Reset Mario to its initial state
+    public void Reset()
+    {
+        marioPosition = initialPosition;  // Reset Mario's position
+        marioVelocity = Vector2.Zero;     // Reset velocity
+        marioStateMachine.Reset();        // Reset Mario's state machine to the default state
+        isOnGround = true;                // Set Mario as standing on the ground
+        UpdateCurrentSprite();            // Update the sprite to reflect the reset state
     }
 }
