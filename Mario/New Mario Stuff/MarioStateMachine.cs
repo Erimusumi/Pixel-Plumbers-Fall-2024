@@ -10,6 +10,7 @@ public class MarioStateMachine
 
     public MarioStateMachine()
     {
+        // Initialize default state
         CurrentGameState = MarioGameState.Big;
         CurrentFaceState = MarioFaceState.Right;
         CurrentMoveState = MarioMoveState.Idle;
@@ -49,5 +50,13 @@ public class MarioStateMachine
     public bool IsJumping()
     {
         return CurrentMoveState == MarioMoveState.Jumping;
+    }
+
+    // Reset Mario state machine to its initial state
+    public void Reset()
+    {
+        CurrentGameState = MarioGameState.Big;  // Reset to 'Big' state
+        CurrentFaceState = MarioFaceState.Right; // Reset to facing right
+        CurrentMoveState = MarioMoveState.Idle;  // Reset to idle movement state
     }
 }
