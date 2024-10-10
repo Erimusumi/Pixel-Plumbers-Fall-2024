@@ -60,6 +60,7 @@ public class Game1 : Game
     // reset instances
     public Vector2 initial_mario_position;
     private bool gameStarted = false;
+    private bool gamePaused = false;
     private bool gameReset = true;
 
     // private IdleMarioCommand idleMarioCommand;
@@ -185,6 +186,22 @@ public class Game1 : Game
         {
             gameStarted = true;
         }
+        if (Keyboard.GetState().IsKeyDown(Keys.D8))
+        {
+            if (gamePaused)
+            {
+                gamePaused = false;
+            }
+            else
+            {
+                gamePaused = true;
+            }
+        }
+        if (gamePaused)
+        {
+            return;
+        }
+
         if (Keyboard.GetState().IsKeyDown(Keys.D9))
         {
             gameReset = true;
@@ -220,13 +237,14 @@ public class Game1 : Game
         }
 
 
-
         base.Update(gameTime);
     }
 
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
+
+
 
         if (gameStarted)
         {
@@ -240,7 +258,9 @@ public class Game1 : Game
             // Draw blocks and obstacles
             sprite1[index1].Draw(spriteBatch, new Vector2(200, 200));
             sprite2[index2].Draw(spriteBatch, new Vector2(310, 150));
-        }else{
+        }
+        else
+        {
             spriteBatch.Begin();
             StartText.Draw(spriteBatch, new Vector2(200, 200));
 
