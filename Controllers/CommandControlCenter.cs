@@ -9,13 +9,11 @@ public class CommandControlCenter
     private Game1 game;
     private KeyboardController keyboardController;
     private KeyboardControllerMovement keyboardControllerMovement;
-    private Mario mario;
 
-    public CommandControlCenter(Game1 game, Texture2D marioTexture, Mario mario)
+    public CommandControlCenter(Game1 game)
     {
         this.game = game;
-        this.mario = mario;
-        this.marioTexture = marioTexture;
+
         this.keyboardController = new KeyboardController();
         this.keyboardControllerMovement = new KeyboardControllerMovement();
         game.SetKey(keyboardController);
@@ -30,28 +28,6 @@ public class CommandControlCenter
         ICommand EnemySwitch = new EnemySwitch(game);
         keyboardController.addCommand(Keys.P, EnemySwitch);
         keyboardController.addCommand(Keys.O, EnemySwitch);
-
-        // commands for mario movement
-        ICommand moveLeftCommand = new MarioMoveLeftCommand(mario);
-        ICommand moveRightCommand = new MarioMoveRightCommand(mario);
-        ICommand jumpCommand = new MarioJumpCommand(mario);
-        ICommand crouchCommand = new MarioJumpCommand(mario);
-        keyboardControllerMovement.addCommand(Keys.A, moveLeftCommand);
-        keyboardControllerMovement.addCommand(Keys.D, moveRightCommand);
-        keyboardControllerMovement.addCommand(Keys.W, jumpCommand);
-        keyboardControllerMovement.addCommand(Keys.S, crouchCommand);
-        keyboardControllerMovement.addCommand(Keys.Left, moveLeftCommand);
-        keyboardControllerMovement.addCommand(Keys.Right, moveRightCommand);
-        keyboardControllerMovement.addCommand(Keys.Up, jumpCommand);
-        keyboardControllerMovement.addCommand(Keys.Down, crouchCommand);
-
-        // commands to change mario state
-        // ICommand setMarioSmallCommand = new SetMarioSmallCommand(game);
-        // ICommand setMarioBigCommand = new SetMarioBigCommand(game);
-        // ICommand setMarioFireCommand = new SetMarioFireCommand(game);
-        // keyboardController.addCommand(Keys.D1, setMarioSmallCommand);
-        // keyboardController.addCommand(Keys.D2, setMarioBigCommand);
-        // keyboardController.addCommand(Keys.D3, setMarioFireCommand);
 
         // command for switching blocks
         ICommand blockTCommand = new blockTCommand(game);

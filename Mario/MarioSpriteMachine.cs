@@ -1,13 +1,13 @@
 using System.Reflection.Metadata.Ecma335;
+using System.Runtime.CompilerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Pixel_Plumbers_Fall_2024;
 
 namespace Pixel_Plumbers_Fall_2024;
 
-public class MarioSpriteConstructor
+public class MarioSpriteMachine
 {
-
-    public static IMarioSprite ConstructMarioSprite(MarioStateMachine marioStateMachine, Texture2D texture)
+    public static IMarioSprite UpdateMarioSprite(MarioStateMachine marioStateMachine, Texture2D texture)
     {
         switch (marioStateMachine.CurrentFaceState)
         {
@@ -23,7 +23,6 @@ public class MarioSpriteConstructor
                                 return new MovingRightSmallMario(texture);
                             case MarioStateMachine.MarioMoveState.Jumping:
                                 return new JumpingRightSmallMario(texture);
-
                         }
                         break;
 

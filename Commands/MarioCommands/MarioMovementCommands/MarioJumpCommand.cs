@@ -1,4 +1,4 @@
-public class MarioJumpCommand : ICommand
+public class MarioJumpCommand : IPlayerCommand
 {
     private Mario mario;
 
@@ -10,5 +10,9 @@ public class MarioJumpCommand : ICommand
     public void Execute()
     {
         mario.Jump();
+    }
+
+    public void Unexecute()
+    {
     }
 }
