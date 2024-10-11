@@ -12,7 +12,7 @@ public class CrouchRightFireMario : IMarioSprite
 
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
-        Rectangle sourceRectangle = new Rectangle(0, 127, 16, 22); 
+        Rectangle sourceRectangle = new Rectangle(389, 127, 16, 22);
         spriteBatch.Draw(MarioTexture, position, sourceRectangle, Color.White);
     }
 

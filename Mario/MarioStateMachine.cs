@@ -13,7 +13,7 @@ public class MarioStateMachine
 
     public MarioStateMachine()
     {
-        CurrentGameState = MarioGameState.Big;
+        CurrentGameState = MarioGameState.Small;
         CurrentFaceState = MarioFaceState.Right;
         CurrentMoveState = MarioMoveState.Idle;
     }
@@ -93,7 +93,7 @@ public class MarioStateMachine
 
     public void Reset()
     {
-        CurrentGameState = MarioGameState.Big;
+        CurrentGameState = MarioGameState.Small;
         CurrentFaceState = MarioFaceState.Right;
         CurrentMoveState = MarioMoveState.Idle;
     }
