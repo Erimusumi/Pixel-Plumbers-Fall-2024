@@ -1,10 +1,10 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public class IdleRightBigtMario : IMarioSprite
+public class IdleRightBigMario : IMarioSprite
 {
     private Texture2D MarioTexture;
-    public IdleRightBigtMario(Texture2D MarioTexture)
+    public IdleRightBigMario(Texture2D MarioTexture)
     {
         this.MarioTexture = MarioTexture;
     }

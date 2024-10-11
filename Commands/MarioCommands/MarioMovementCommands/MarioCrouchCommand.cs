@@ -1,4 +1,4 @@
-public class MarioCrouchCommand : ICommand
+public class MarioCrouchCommand : IPlayerCommand
 {
     private Mario mario;
 
@@ -10,5 +10,10 @@ public class MarioCrouchCommand : ICommand
     public void Execute()
     {
         mario.Crouch();
+    }
+
+    public void Unexecute()
+    {
+        mario.Stop();
     }
 }

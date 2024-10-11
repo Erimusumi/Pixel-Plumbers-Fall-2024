@@ -1,14 +1,16 @@
-using System.Reflection.Metadata.Ecma335;
 using Microsoft.Xna.Framework.Graphics;
 using Pixel_Plumbers_Fall_2024;
 
 namespace Pixel_Plumbers_Fall_2024;
 
-public class MarioSpriteConstructor
+public class MarioSpriteMachine
 {
+    private static IMarioSprite lastValidSprite;  // Store the last valid sprite
 
-    public static IMarioSprite ConstructMarioSprite(MarioStateMachine marioStateMachine, Texture2D texture)
+    public static IMarioSprite UpdateMarioSprite(MarioStateMachine marioStateMachine, Texture2D texture)
     {
+        IMarioSprite newSprite = null;
+
         switch (marioStateMachine.CurrentFaceState)
         {
             case MarioStateMachine.MarioFaceState.Right:
@@ -18,12 +20,14 @@ public class MarioSpriteConstructor
                         switch (marioStateMachine.CurrentMoveState)
                         {
                             case MarioStateMachine.MarioMoveState.Idle:
-                                return new IdleRightSmallMario(texture);
+                                newSprite = new IdleRightSmallMario(texture);
+                                break;
                             case MarioStateMachine.MarioMoveState.Moving:
-                                return new MovingRightSmallMario(texture);
+                                newSprite = new MovingRightSmallMario(texture);
+                                break;
                             case MarioStateMachine.MarioMoveState.Jumping:
-                                return new JumpingRightSmallMario(texture);
-
+                                newSprite = new JumpingRightSmallMario(texture);
+                                break;
                         }
                         break;
 
@@ -31,13 +35,17 @@ public class MarioSpriteConstructor
                         switch (marioStateMachine.CurrentMoveState)
                         {
                             case MarioStateMachine.MarioMoveState.Idle:
-                                return new IdleRightBigtMario(texture);
+                                newSprite = new IdleRightBigMario(texture);
+                                break;
                             case MarioStateMachine.MarioMoveState.Moving:
-                                return new MovingRightBigMario(texture);
+                                newSprite = new MovingRightBigMario(texture);
+                                break;
                             case MarioStateMachine.MarioMoveState.Jumping:
-                                return new JumpingRightBigMario(texture);
+                                newSprite = new JumpingRightBigMario(texture);
+                                break;
                             case MarioStateMachine.MarioMoveState.Crouching:
-                                return new CrouchRightBigMario(texture);
+                                newSprite = new CrouchRightBigMario(texture);
+                                break;
                         }
                         break;
 
@@ -45,13 +53,17 @@ public class MarioSpriteConstructor
                         switch (marioStateMachine.CurrentMoveState)
                         {
                             case MarioStateMachine.MarioMoveState.Idle:
-                                return new IdleRightFireMario(texture);
+                                newSprite = new IdleRightFireMario(texture);
+                                break;
                             case MarioStateMachine.MarioMoveState.Moving:
-                                return new MovingRightFireMario(texture);
+                                newSprite = new MovingRightFireMario(texture);
+                                break;
                             case MarioStateMachine.MarioMoveState.Jumping:
-                                return new JumpingRightFireMario(texture);
+                                newSprite = new JumpingRightFireMario(texture);
+                                break;
                             case MarioStateMachine.MarioMoveState.Crouching:
-                                return new CrouchRightFireMario(texture);
+                                newSprite = new CrouchRightFireMario(texture);
+                                break;
                         }
                         break;
                 }
@@ -64,12 +76,14 @@ public class MarioSpriteConstructor
                         switch (marioStateMachine.CurrentMoveState)
                         {
                             case MarioStateMachine.MarioMoveState.Idle:
-                                return new IdleLeftSmallMario(texture);
+                                newSprite = new IdleLeftSmallMario(texture);
+                                break;
                             case MarioStateMachine.MarioMoveState.Moving:
-                                return new MovingLeftSmallMario(texture);
+                                newSprite = new MovingLeftSmallMario(texture);
+                                break;
                             case MarioStateMachine.MarioMoveState.Jumping:
-                                return new JumpingLeftSmallMario(texture);
-
+                                newSprite = new JumpingLeftSmallMario(texture);
+                                break;
                         }
                         break;
 
@@ -77,13 +91,17 @@ public class MarioSpriteConstructor
                         switch (marioStateMachine.CurrentMoveState)
                         {
                             case MarioStateMachine.MarioMoveState.Idle:
-                                return new IdleLeftBigMario(texture);
+                                newSprite = new IdleLeftBigMario(texture);
+                                break;
                             case MarioStateMachine.MarioMoveState.Moving:
-                                return new MovingLeftBigMario(texture);
+                                newSprite = new MovingLeftBigMario(texture);
+                                break;
                             case MarioStateMachine.MarioMoveState.Jumping:
-                                return new JumpingLeftBigMario(texture);
+                                newSprite = new JumpingLeftBigMario(texture);
+                                break;
                             case MarioStateMachine.MarioMoveState.Crouching:
-                                return new CrouchLeftBigMario(texture);
+                                newSprite = new CrouchLeftBigMario(texture);
+                                break;
                         }
                         break;
 
@@ -91,17 +109,32 @@ public class MarioSpriteConstructor
                         switch (marioStateMachine.CurrentMoveState)
                         {
                             case MarioStateMachine.MarioMoveState.Idle:
-                                return new IdleLeftFireMario(texture);
+                                newSprite = new IdleLeftFireMario(texture);
+                                break;
                             case MarioStateMachine.MarioMoveState.Moving:
-                                return new MovingLeftFireMario(texture);
+                                newSprite = new MovingLeftFireMario(texture);
+                                break;
                             case MarioStateMachine.MarioMoveState.Jumping:
-                                return new JumpingLeftFireMario(texture);
+                                newSprite = new JumpingLeftFireMario(texture);
+                                break;
                             case MarioStateMachine.MarioMoveState.Crouching:
-                                return new CrouchLeftFireMario(texture);
+                                newSprite = new CrouchLeftFireMario(texture);
+                                break;
                         }
                         break;
                 }
                 break;
+        }
+
+        if (newSprite != null)
+        {
+            lastValidSprite = newSprite;
+            return newSprite;
+        }
+
+        if (lastValidSprite != null)
+        {
+            return lastValidSprite;
         }
         return new IdleLeftBigMario(texture);
     }
