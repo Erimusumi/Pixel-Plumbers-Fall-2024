@@ -9,14 +9,11 @@ public class CommandControlCenter
     private Game1 game;
     private KeyboardController keyboardController;
     private KeyboardControllerMovement keyboardControllerMovement;
-    private PlayerMovementController playerMovementController;
-    private Mario mario;
 
     public CommandControlCenter(Game1 game)
     {
         this.game = game;
-        this.mario = mario;
-        this.marioTexture = marioTexture;
+
         this.keyboardController = new KeyboardController();
         this.keyboardControllerMovement = new KeyboardControllerMovement();
         game.SetKey(keyboardController);
@@ -31,8 +28,6 @@ public class CommandControlCenter
         ICommand EnemySwitch = new EnemySwitch(game);
         keyboardController.addCommand(Keys.P, EnemySwitch);
         keyboardController.addCommand(Keys.O, EnemySwitch);
-
-        // keyboardController.addCommand(Keys.D3, setMarioFireCommand);
 
         // command for switching blocks
         ICommand blockTCommand = new blockTCommand(game);
