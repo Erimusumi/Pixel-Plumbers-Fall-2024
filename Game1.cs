@@ -65,7 +65,7 @@ public class Game1 : Game
 
     //List
     private List<Object> entities = new List<Object>();
-    private Sort sort = new Sort();
+    // private Sort sort = new Sort();
 
 
     // reset instances
@@ -106,7 +106,7 @@ public class Game1 : Game
 
         controlCenter = new CommandControlCenter(this);
 
-        // idleMarioCommand = new IdleMarioCommand(this, marioTexture);
+        idleMarioCommand = new IdleMarioCommand(this, marioTexture);
 
         //Make a first list for block iteration
         sprite1 = new List<ISprite>

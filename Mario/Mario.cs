@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Pixel_Plumbers_Fall_2024;
@@ -18,9 +19,11 @@ public class Mario
     private float jumpSpeed = -350f;
     private bool isOnGround = true;
 
+    private bool canPowerUp = true;
+    private bool canTakeDamage = true;
+
     private const float maxSpeed = 3f;
     private const float acceleration = 0.03f;
-
 
     public Mario(Texture2D marioTexture, GameTime gametime)
     {
@@ -31,7 +34,7 @@ public class Mario
         this.gameTime = gametime;
         marioPosition = initialPosition;
 
-        UpdateCurrentSprite();
+        currentMarioSprite = new IdleRightSmallMario(marioTexture);
     }
 
     public void MoveRight()
@@ -58,13 +61,7 @@ public class Mario
             {
                 marioStateMachine.SetMarioRight();
                 marioStateMachine.SetMarioMoving();
-
-                if (!(currentMarioSprite is MovingRightBigMario))
-                {
-                    currentMarioSprite = new MovingRightBigMario(marioTexture);
-                }
             }
-            currentMarioSprite.Update(gameTime);
         }
     }
 
@@ -92,13 +89,7 @@ public class Mario
             {
                 marioStateMachine.SetMarioLeft();
                 marioStateMachine.SetMarioMoving();
-
-                if (!(currentMarioSprite is MovingLeftBigMario))
-                {
-                    currentMarioSprite = new MovingLeftBigMario(marioTexture);
-                }
             }
-            currentMarioSprite.Update(gameTime);
         }
     }
 
@@ -109,7 +100,6 @@ public class Mario
             marioVelocity.Y = jumpSpeed;
             marioStateMachine.SetMarioJumping();
             isOnGround = false;
-            UpdateCurrentSprite();
         }
     }
 
@@ -118,7 +108,6 @@ public class Mario
         if (!marioStateMachine.IsJumping())
         {
             marioStateMachine.SetMarioCrouching();
-            UpdateCurrentSprite();
         }
     }
 
@@ -135,50 +124,49 @@ public class Mario
                 marioVelocity.Y = 0;
                 isOnGround = true;
                 marioStateMachine.UpdateMoveStateForJumping();
-
-                UpdateCurrentSprite();
             }
         }
     }
 
     public void MarioPowerUp()
     {
+        if (!canPowerUp) return; // Prevent power-ups if not allowed
         switch (marioStateMachine.CurrentGameState)
         {
             case MarioStateMachine.MarioGameState.Small:
                 marioStateMachine.SetMarioBig();
-                UpdateCurrentSprite();
                 break;
 
             case MarioStateMachine.MarioGameState.Big:
                 marioStateMachine.SetMarioFire();
-                UpdateCurrentSprite();
                 break;
 
             case MarioStateMachine.MarioGameState.Fire:
-                // Mario is already in Fire state, maybe reset timer
                 break;
         }
+        canPowerUp = false;
+        Task.Delay(1000).ContinueWith(t => canPowerUp = true); // Reset after 1 second
     }
 
     public void MarioTakeDamage()
     {
+        if (!canTakeDamage) return;
         switch (marioStateMachine.CurrentGameState)
         {
             case MarioStateMachine.MarioGameState.Fire:
                 marioStateMachine.SetMarioBig();
-                UpdateCurrentSprite();
                 break;
 
             case MarioStateMachine.MarioGameState.Big:
                 marioStateMachine.SetMarioSmall();
-                UpdateCurrentSprite();
                 break;
 
             case MarioStateMachine.MarioGameState.Small:
-                // Mario is dead, maybe add some gameover functions
+                Console.WriteLine("Died");
                 break;
         }
+        canTakeDamage = false;
+        Task.Delay(1000).ContinueWith(t => canTakeDamage = true); // Reset after 1 second
     }
 
     public void SwapDirection()
@@ -188,20 +176,19 @@ public class Mario
             marioStateMachine.SetMarioTurning();
             marioVelocity.X = 0f;
         }
-        UpdateCurrentSprite();
     }
 
     public void Stop()
     {
         marioVelocity.X = 0f;
         marioStateMachine.SetMarioIdle();
-        UpdateCurrentSprite();
     }
 
     public void Update(GameTime gameTime)
     {
         ApplyGravity(gameTime);
         marioPosition.X += marioVelocity.X;
+        currentMarioSprite = MarioSpriteMachine.UpdateMarioSprite(marioStateMachine, marioTexture);
         currentMarioSprite.Update(gameTime);
     }
 
@@ -210,17 +197,12 @@ public class Mario
         currentMarioSprite.Draw(spriteBatch, marioPosition);
     }
 
-    private void UpdateCurrentSprite()
-    {
-        currentMarioSprite = MarioSpriteMachine.UpdateMarioSprite(marioStateMachine, marioTexture);
-
-    }
     public void Reset()
     {
-        marioPosition = initialPosition;  // Reset Mario's position
-        marioVelocity = Vector2.Zero;     // Reset velocity
-        marioStateMachine.Reset();        // Reset Mario's state machine to the default state
-        isOnGround = true;                // Set Mario as standing on the ground
-        UpdateCurrentSprite();            // Update the sprite to reflect the reset state
+        marioPosition = initialPosition;                                                    // Reset Mario's position
+        marioVelocity = Vector2.Zero;                                                       // Reset velocity
+        marioStateMachine.Reset();                                                          // Reset Mario's state machine to the default state
+        isOnGround = true;                                                                  // Set Mario as standing on the ground
+        currentMarioSprite = new IdleRightSmallMario(marioTexture);                         // Set mario to small idle right again
     }
 }
