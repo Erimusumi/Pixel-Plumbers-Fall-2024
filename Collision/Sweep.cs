@@ -9,7 +9,7 @@ using Pixel_Plumbers_Fall_2024;
 public class Sweep
 {
     //Pass some list
-    public void Compare()
+    public void Compare(List<Object> entities)
     {
         //mario, item, block, enemy
         /*

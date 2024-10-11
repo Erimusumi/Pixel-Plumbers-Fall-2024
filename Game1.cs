@@ -57,6 +57,11 @@ public class Game1 : Game
     private ISprite StartText;
     private SpriteFont MyFont;
 
+    //List
+    private List<Object> entities = new List<Object>();
+    private Sort sort = new Sort();
+
+
     // reset instances
     public Vector2 initial_mario_position;
     private bool gameStarted = false;
@@ -123,6 +128,11 @@ public class Game1 : Game
         n2 = sprite2.Count;
         index1 = 0;
         index2 = 0;
+
+        entities.Add(mario);
+        entities.Add(spriteEnemy);
+        entities.Add(sprite1);
+        entities.Add(sprite2);
 
     }
     public ISpriteEnemy SetEnemy(ISpriteEnemy enemy)
