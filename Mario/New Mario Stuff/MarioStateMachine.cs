@@ -1,8 +1,11 @@
+using System;
+using System.Configuration.Assemblies;
+
 public class MarioStateMachine
 {
     public enum MarioGameState { Small, Big, Fire }
     public enum MarioFaceState { Left, Right }
-    public enum MarioMoveState { Idle, Moving, Jumping, Crouching }
+    public enum MarioMoveState { Idle, Moving, Jumping, Crouching, Turning }
 
     public MarioGameState CurrentGameState { get; private set; }
     public MarioFaceState CurrentFaceState { get; private set; }
@@ -10,28 +13,59 @@ public class MarioStateMachine
 
     public MarioStateMachine()
     {
-        // Initialize default state
         CurrentGameState = MarioGameState.Big;
         CurrentFaceState = MarioFaceState.Right;
         CurrentMoveState = MarioMoveState.Idle;
     }
 
-    public void SetGameState(MarioGameState gameState)
+    public void SetMarioSmall()
     {
-        CurrentGameState = gameState;
+        CurrentGameState = MarioGameState.Small;
     }
 
-    public void SetFaceState(MarioFaceState faceState)
+    public void SetMarioBig()
     {
-        CurrentFaceState = faceState;
+        CurrentGameState = MarioGameState.Big;
     }
 
-    public void SetMoveState(MarioMoveState moveState)
+    public void SetMarioFire()
     {
-        if (moveState != MarioMoveState.Crouching || CurrentMoveState != MarioMoveState.Jumping)
-        {
-            CurrentMoveState = moveState;
-        }
+        CurrentGameState = MarioGameState.Fire;
+    }
+
+    public void SetMarioIdle()
+    {
+        CurrentMoveState = MarioMoveState.Idle;
+    }
+
+    public void SetMarioMoving()
+    {
+        CurrentMoveState = MarioMoveState.Moving;
+    }
+
+    public void SetMarioJumping()
+    {
+        CurrentMoveState = MarioMoveState.Jumping;
+    }
+
+    public void SetMarioCrouching()
+    {
+        CurrentMoveState = MarioMoveState.Crouching;
+    }
+
+    public void SetMarioTurning()
+    {
+        CurrentMoveState = MarioMoveState.Turning;
+    }
+
+    public void SetMarioLeft()
+    {
+        CurrentFaceState = MarioFaceState.Left;
+    }
+
+    public void SetMarioRight()
+    {
+        CurrentFaceState = MarioFaceState.Right;
     }
 
     public void UpdateMoveStateForJumping()
@@ -52,11 +86,15 @@ public class MarioStateMachine
         return CurrentMoveState == MarioMoveState.Jumping;
     }
 
-    // Reset Mario state machine to its initial state
+    public bool IsTurning()
+    {
+        return CurrentMoveState == MarioMoveState.Turning;
+    }
+
     public void Reset()
     {
-        CurrentGameState = MarioGameState.Big;  // Reset to 'Big' state
-        CurrentFaceState = MarioFaceState.Right; // Reset to facing right
-        CurrentMoveState = MarioMoveState.Idle;  // Reset to idle movement state
+        CurrentGameState = MarioGameState.Big;
+        CurrentFaceState = MarioFaceState.Right;
+        CurrentMoveState = MarioMoveState.Idle;
     }
 }

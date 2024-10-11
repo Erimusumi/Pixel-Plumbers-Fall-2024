@@ -18,9 +18,15 @@ public class Game1 : Game
     private CommandControlCenter controlCenter;
 
 
+    private Mario mario;
+    private PlayerMovementController marioMovementController;
+    private PlayerCommandControlCenter playerCommandControlCenter;
+
+
+
+
     // public IMario Mario;
     // The New Mario
-    private Mario mario;
 
     //Enemy Code
     public ISpriteEnemy spriteEnemy;
@@ -75,7 +81,6 @@ public class Game1 : Game
     {
         spriteEnemy = new Goomba(); // Create a new Goomba object
         controlG = new GoombaCommand(spriteEnemy); // Reset Goomba's control command
-        mario.Reset();
         currentItem = 0;
         index1 = 0;
         index2 = 0;
@@ -89,12 +94,12 @@ public class Game1 : Game
 
         keyboardController = new KeyboardController();
         keyboardControllerMovement = new KeyboardControllerMovement();
-        mario = new Mario(marioTexture, gameTime);
+
 
         spriteEnemy = new Goomba();
         controlG = new GoombaCommand(spriteEnemy);
 
-        controlCenter = new CommandControlCenter(this, marioTexture, mario);
+        controlCenter = new CommandControlCenter(this);
 
         // idleMarioCommand = new IdleMarioCommand(this, marioTexture);
 
@@ -156,28 +161,26 @@ public class Game1 : Game
         block = Content.Load<Texture2D>("blocks");
         obstacle = Content.Load<Texture2D>("obstacle");
 
+        mario = new Mario(marioTexture, new GameTime());
+        marioMovementController = new PlayerMovementController();
+        playerCommandControlCenter = new PlayerCommandControlCenter(mario, marioMovementController);
 
-        //reset instances initialization
-
-        //currentMarioState = MarioState.Big;
+        // Reset instances initialization
 
         firePower = new FirePower(ItemsTexture);
         starPower = new StarPower(ItemsTexture);
 
-        // lucky block sprites
+        // Initialize block and obstacle sprites
         OWLuckyBlockSprite = new LuckyBlockSprite(block, 3, 20);
-        // used block sprites
         OWUsedBlockSprite = new StaticBlockSprite(block, new Rectangle(128, 112, 16, 16));
-        // brick block sprites
         OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
-        // broken brick block sprites
         OWBrokenBrickSprite = new BrokenBrickBlockSprite(block, 4, 1);
-        // obstacle sprites
         obstacle1 = new obstacle1(obstacle);
         obstacle2 = new obstacle2(obstacle);
         obstacle3 = new obstacle3(obstacle);
         obstacle4 = new obstacle4(obstacle);
     }
+
 
     protected override void Update(GameTime gameTime)
     {
@@ -218,6 +221,12 @@ public class Game1 : Game
             keyboardController.Update();
             keyboardControllerMovement.Update();
 
+            marioMovementController.Update();
+
+            // Update Mario's state
+            mario.Update(gameTime);
+
+
             // lucky block sprites
             OWLuckyBlockSprite.Update(gameTime);
             // broken brick block sprites
@@ -233,7 +242,6 @@ public class Game1 : Game
             //Update block and obstacle sprites
             sprite1[index1].Update(gameTime);
             sprite2[index2].Update(gameTime);
-            mario.Update(gameTime);
         }
 
 

@@ -1,7 +1,4 @@
-using Microsoft.Xna.Framework.Graphics;
-
-
-public class MarioMoveLeftCommand : ICommand
+public class MarioMoveLeftCommand : IPlayerCommand
 {
     private Mario mario;
 
@@ -12,5 +9,10 @@ public class MarioMoveLeftCommand : ICommand
     public void Execute()
     {
         mario.MoveLeft();
+    }
+
+    public void Unexecute()
+    {
+        mario.Stop();
     }
 }
