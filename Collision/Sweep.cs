@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 using Pixel_Plumbers_Fall_2024;
@@ -10,14 +11,20 @@ public class Sweep
 {
     //Pass some list
     //Sweep should 
-    public Boolean IntersectsWith(Rectangle rectangle1, Rectangle rectangle2)
+    public void interactionType(List<Object> entitites, int index1, int index2)
     {
-        Boolean intersectsVert = false;
-        Boolean intersectsHoriz = false;
-
+       /* if (entities[index1].)
+            entities[index1].
+       /* if(index1.GetType() == typeof())
+        * 
+        * 
+        * 
+        * 
+        */
     }
     public void Compare(List<Object> entities)
     {
+
         /*This 
         //mario, item, block, enemy
         /*
@@ -37,7 +44,7 @@ public class Sweep
             send to mario or enemy command
         */
 
-        //if(item && item || item && block || item && enemy || enemy && enemy || enemy && block)
+        //if(item && item || item && block || item && enemy || enemy && enemy || enemy && block) 
         //These should all act the same, so else?
         //Rectangle rectangle = new Rectangle(0,0,0,0);
         //Rectangle r2 = rectangle;
