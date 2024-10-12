@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 public class IdleRightBigMario : IMarioSprite
 {
+    private Vector2 _position;
     private Texture2D MarioTexture;
     public IdleRightBigMario(Texture2D MarioTexture)
     {
@@ -19,8 +20,14 @@ public class IdleRightBigMario : IMarioSprite
     {
 
     }
-    public Rectangle GetDestinationRectangle(Vector2 position)
+    public void SetVector(Vector2 position)
     {
-        return new Rectangle((int)position.X, (int)position.Y, 16, 32);
+        _position = position;
     }
+    
+    public Rectangle GetDestination()
+    {
+        return new Rectangle((int)_position.X, (int)_position.Y, 16, 32);
+    }
+    
 }

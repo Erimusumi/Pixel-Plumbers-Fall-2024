@@ -1,42 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioMyCpy\\",
+  "WorkspaceRootPath": "C:\\Projects\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariomycpy\\collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\sprites\\mariosprites\\bigmario\\idlerightbigmario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\mariosprites\\bigmario\\idlerightbigmario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariomycpy\\dungeons-levels\\room1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:dungeons-levels\\room1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\goomba\\goombasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:goomba\\goombasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariomycpy\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariomycpy\\pixel-plumbers-fall-2024.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:pixel-plumbers-fall-2024.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariomycpy\\sprites\\ispriteenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\ispriteenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariomycpy\\items\\itemmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:items\\itemmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariomycpy\\ientity\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:ientity\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariomycpy\\sprites\\isprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\isprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\mariomycpy\\collision\\sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -52,68 +28,40 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Game1.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioMyCpy\\Game1.cs",
+              "DocumentMoniker": "C:\\Projects\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioMyCpy\\Game1.cs",
+              "ToolTip": "C:\\Projects\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAKAAAAAAAAAAAADwv1gAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T23:13:18.456Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Sort.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioMyCpy\\Collision\\Sort.cs",
-              "RelativeDocumentMoniker": "Collision\\Sort.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioMyCpy\\Collision\\Sort.cs",
-              "RelativeToolTip": "Collision\\Sort.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBsAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T21:05:18.203Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Sweep.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioMyCpy\\Collision\\Sweep.cs",
-              "RelativeDocumentMoniker": "Collision\\Sweep.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioMyCpy\\Collision\\Sweep.cs",
-              "RelativeToolTip": "Collision\\Sweep.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAwBYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T18:18:02.343Z",
+              "WhenOpened": "2024-09-16T18:15:02.512Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Room1.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioMyCpy\\Dungeons-Levels\\Room1.cs",
-              "RelativeDocumentMoniker": "Dungeons-Levels\\Room1.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioMyCpy\\Dungeons-Levels\\Room1.cs",
-              "RelativeToolTip": "Dungeons-Levels\\Room1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Title": "GoombaSprites.cs",
+              "DocumentMoniker": "C:\\Projects\\Goomba\\GoombaSprites.cs",
+              "RelativeDocumentMoniker": "Goomba\\GoombaSprites.cs",
+              "ToolTip": "C:\\Projects\\Goomba\\GoombaSprites.cs",
+              "RelativeToolTip": "Goomba\\GoombaSprites.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAqwG0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T16:50:31.968Z",
+              "WhenOpened": "2024-10-12T19:23:58.35Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Pixel-Plumbers-Fall-2024",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioMyCpy\\Pixel-Plumbers-Fall-2024.csproj",
-              "RelativeDocumentMoniker": "Pixel-Plumbers-Fall-2024.csproj",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioMyCpy\\Pixel-Plumbers-Fall-2024.csproj",
-              "RelativeToolTip": "Pixel-Plumbers-Fall-2024.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-10-12T16:49:22.274Z",
+              "DocumentIndex": 0,
+              "Title": "IdleRightBigMario.cs",
+              "DocumentMoniker": "C:\\Projects\\Sprites\\MarioSprites\\BigMario\\IdleRightBigMario.cs",
+              "RelativeDocumentMoniker": "Sprites\\MarioSprites\\BigMario\\IdleRightBigMario.cs",
+              "ToolTip": "C:\\Projects\\Sprites\\MarioSprites\\BigMario\\IdleRightBigMario.cs",
+              "RelativeToolTip": "Sprites\\MarioSprites\\BigMario\\IdleRightBigMario.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwB4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T19:22:25.766Z",
               "EditorCaption": ""
             },
             {
@@ -135,62 +83,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ISpriteEnemy.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioMyCpy\\Sprites\\ISpriteEnemy.cs",
-              "RelativeDocumentMoniker": "Sprites\\ISpriteEnemy.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioMyCpy\\Sprites\\ISpriteEnemy.cs",
-              "RelativeToolTip": "Sprites\\ISpriteEnemy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T20:44:39.949Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IEntity.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioMyCpy\\IEntity\\IEntity.cs",
-              "RelativeDocumentMoniker": "IEntity\\IEntity.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioMyCpy\\IEntity\\IEntity.cs",
-              "RelativeToolTip": "IEntity\\IEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T20:43:41.2Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ItemManager.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioMyCpy\\Items\\ItemManager.cs",
-              "RelativeDocumentMoniker": "Items\\ItemManager.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioMyCpy\\Items\\ItemManager.cs",
-              "RelativeToolTip": "Items\\ItemManager.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T20:57:47.931Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ISprite.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioMyCpy\\Sprites\\ISprite.cs",
-              "RelativeDocumentMoniker": "Sprites\\ISprite.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\MarioMyCpy\\Sprites\\ISprite.cs",
-              "RelativeToolTip": "Sprites\\ISprite.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T20:36:24.404Z",
-              "EditorCaption": ""
             }
           ]
         }
