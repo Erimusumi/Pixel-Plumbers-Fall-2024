@@ -66,7 +66,13 @@ public class KoopaSprites
 	{
         flipped.Updates(vars);
     }
-	public void Draw(SpriteBatch sb, Texture2D Texture)
+
+    public Rectangle GetDestination()
+    {
+        return vars.destinationRectangle;
+    }
+
+    public void Draw(SpriteBatch sb, Texture2D Texture)
 	{
         sb.Begin();
         sb.Draw(Texture, vars.destinationRectangle, vars.sourceRectangle, Color.White, vars.rotation, new Vector2(vars.width / 2, vars.height / 2), SpriteEffects.None, 0f);

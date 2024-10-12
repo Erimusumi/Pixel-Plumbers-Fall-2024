@@ -32,7 +32,12 @@ public class Goomba : ISpriteEnemy
 		stateMachine.Update();
 	}
 
-	public void Draw(SpriteBatch sb, Texture2D Texture)
+	public Rectangle GetDestination()
+	{
+		return stateMachine.GetDestination();
+	}
+
+    public void Draw(SpriteBatch sb, Texture2D Texture)
 	{
         stateMachine.Draw(sb, Texture);
     }

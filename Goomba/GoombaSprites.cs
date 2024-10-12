@@ -107,7 +107,7 @@ public class GoombaSprites
             counter = -1;
         }
     }
-    public Rectangle destinationR()
+    public Rectangle GetDestination()
     {
         return destinationRectangle;
     }
