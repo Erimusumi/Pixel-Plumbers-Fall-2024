@@ -20,12 +20,7 @@ public class IdleRightBigMario : IMarioSprite
     {
 
     }
-    public void SetVector(Vector2 position)
-    {
-        _position = position;
-    }
-    
-    public Rectangle GetDestination()
+    public Rectangle GetDestination(Vector2 position)
     {
         return new Rectangle((int)_position.X, (int)_position.Y, 16, 32);
     }

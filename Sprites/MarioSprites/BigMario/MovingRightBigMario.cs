@@ -45,7 +45,7 @@ public class MovingRightBigMario : IMarioSprite
         GameTicks = 0;
     }
 
-    public Rectangle GetDestinationRectangle(Vector2 position)
+    public Rectangle GetDestination(Vector2 position)
     {
         switch (currentAnimationIndex)
         {

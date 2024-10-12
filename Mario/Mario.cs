@@ -206,8 +206,8 @@ public class Mario : IEntity
         currentMarioSprite = new IdleRightSmallMario(marioTexture);                         // Set mario to small idle right again
     }
 
-    public Rectangle GetDestinationRectangle()
+    public Rectangle GetDestination()
     {
-        return currentMarioSprite.GetDestinationRectangle(marioPosition);
+        return currentMarioSprite.GetDestination(marioPosition);
     }
 }

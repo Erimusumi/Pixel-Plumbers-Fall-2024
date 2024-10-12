@@ -18,7 +18,7 @@ public class JumpingLeftBigMario : IMarioSprite
     {
     }
 
-    public Rectangle GetDestinationRectangle(Vector2 position)
+    public Rectangle GetDestination(Vector2 position)
     {
         return new Rectangle((int)position.X, (int)position.Y, 16, 32);
     }

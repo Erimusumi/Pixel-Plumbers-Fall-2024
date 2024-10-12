@@ -63,4 +63,10 @@ public class Fireball : IProjectile
     {
         sprite.Draw(sb, pos);
     }
+
+    public Rectangle GetDestination()
+    {
+        //All fireball sprites are 8*8
+        return new Rectangle((int)pos.X, (int)pos.Y, 8, 8);
+    }
 }
