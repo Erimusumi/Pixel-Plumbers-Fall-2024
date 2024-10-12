@@ -12,7 +12,7 @@ public class Sweep
 {
     //Pass some list
     //Sweep should 
-    public void handleInteraction(List<Object> entities, int index1, int index2)
+    public void getInteraction(List<Object> entities, int index1, int index2)
     {
         /*Should determine the interactionType of two entities and call the appropriate method */
         Object item1 = entities[index1];
