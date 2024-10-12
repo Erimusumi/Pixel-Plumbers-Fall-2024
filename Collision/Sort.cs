@@ -25,9 +25,12 @@ public class Sort
 
     public void SortList(List<Object> objects)
     {
-
+        
 
     }
+    public void clearList(List<Object> objects)
+    {
+        objects.Clear();
 
-
+    }
 }
