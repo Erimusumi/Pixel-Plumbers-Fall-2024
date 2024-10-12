@@ -41,10 +41,9 @@ public class Sweep
     }
     public Rectangle getRectangle(List<Object> Entities, int index)
     {
+        Object entity = Entities[index];
         Rectangle rectangle = new Rectangle();
-        //TODO: retreive rectangle from entitity at index
-
-
+       // rectangle = entity.GetDestinationRectangle;     
         return rectangle;
     }
     public Boolean intersects(List<Object> entities, int index1, int index2)
