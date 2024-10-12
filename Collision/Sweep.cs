@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,16 +14,32 @@ public class Sweep
     //Sweep should 
     public void interactionType(List<Object> entities, int index1, int index2)
     {
-        /*Should determine the interactionType of two entities */
+        /*Should determine the interactionType of two entities and call the appropriate method */
         Object item1 = entities[index1];
         Object item2 = entities[index2];
-        if (item1.GetType() == typeof(Goomba) && item2.GetType() == typeof(Mario))
+        if (item1.GetType() == typeof(Goomba) && item2.GetType() == typeof(Mario) || item2.GetType() == typeof(Mario) && item1.GetType() == typeof(Goomba))
         {
-
+            //handle goomba interaction
+        }
+        if (item1.GetType() == typeof(Koopa) && item2.GetType() == typeof(Mario) || item2.GetType() == typeof(Mario) && item1.GetType() == typeof(Koopa))
+        {
+            //handle koopa interaction
+        }
+        if (item1.GetType() == typeof(firePower) && item2.GetType() == typeof(Mario) || item2.GetType() == typeof(Mario) && item1.GetType() == typeof(firePower))
+        {
+            //handle firePower interaction
+        }
+        if (item1.GetType() == typeof(MushroomPower) && item2.GetType() == typeof(Mario) || item2.GetType() == typeof(Mario) && item1.GetType() == typeof(MushroomPower))
+        {
+            //handle mushroomPower interaction
+        }
+        if (item1.GetType() == typeof(BlockObject) && item2.GetType() == typeof(Mario) || item2.GetType() == typeof(Mario) && item1.GetType() == typeof(BlockObject))
+        {
+            //handle block interaction
         }
         //[...]
-       
-      
+
+
     }
     public void Compare(List<Object> entities)
     {
