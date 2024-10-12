@@ -11,16 +11,17 @@ public class Sweep
 {
     //Pass some list
     //Sweep should 
-    public void interactionType(List<Object> entitites, int index1, int index2)
+    public void interactionType(List<Object> entities, int index1, int index2)
     {
-       /* if (entities[index1].)
-            entities[index1].
-       /* if(index1.GetType() == typeof())
-        * 
-        * 
-        * 
-        * 
-        */
+        /*Should determine the interactionType of two entities */
+        Object item1 = entities[index1];
+        Object item2 = entities[index2];
+        if (item1.GetType() == typeof(Goomba) && item2.GetType() == typeof(Mario))
+        {
+
+        }
+       
+      
     }
     public void Compare(List<Object> entities)
     {
