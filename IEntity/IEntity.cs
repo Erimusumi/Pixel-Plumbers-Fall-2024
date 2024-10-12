@@ -13,5 +13,5 @@ public interface IEntity
 
     void Draw(SpriteBatch sb);
 
-    public Rectangle GetDestinationRectangle(int index);
+    public Rectangle GetDestinationRectangle();
 }
