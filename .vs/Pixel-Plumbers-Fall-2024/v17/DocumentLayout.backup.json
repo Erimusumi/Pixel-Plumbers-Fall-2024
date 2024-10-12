@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Projects\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\koopa\\koopasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:koopa\\koopasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\koopa\\koopastatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:koopa\\koopastatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\koopa\\koopa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:koopa\\koopa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\goomba\\goomba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:goomba\\goomba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\goomba\\goombastatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:goomba\\goombastatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\sprites\\ispriteenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\ispriteenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\goomba\\goombacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:goomba\\goombacommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\goomba\\goombasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:goomba\\goombasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\sprites\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,11 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Projects\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
@@ -59,72 +55,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ISpriteEnemy.cs",
-              "DocumentMoniker": "C:\\Projects\\Sprites\\ISpriteEnemy.cs",
-              "RelativeDocumentMoniker": "Sprites\\ISpriteEnemy.cs",
-              "ToolTip": "C:\\Projects\\Sprites\\ISpriteEnemy.cs",
-              "RelativeToolTip": "Sprites\\ISpriteEnemy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "KoopaSprites.cs",
+              "DocumentMoniker": "C:\\Projects\\Koopa\\KoopaSprites.cs",
+              "RelativeDocumentMoniker": "Koopa\\KoopaSprites.cs",
+              "ToolTip": "C:\\Projects\\Koopa\\KoopaSprites.cs",
+              "RelativeToolTip": "Koopa\\KoopaSprites.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAowEcAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T00:22:30.315Z",
+              "WhenOpened": "2024-10-12T00:28:20.368Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "GoombaStateMachine.cs",
-              "DocumentMoniker": "C:\\Projects\\Goomba\\GoombaStateMachine.cs",
-              "RelativeDocumentMoniker": "Goomba\\GoombaStateMachine.cs",
-              "ToolTip": "C:\\Projects\\Goomba\\GoombaStateMachine.cs",
-              "RelativeToolTip": "Goomba\\GoombaStateMachine.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Title": "KoopaStateMachine.cs",
+              "DocumentMoniker": "C:\\Projects\\Koopa\\KoopaStateMachine.cs",
+              "RelativeDocumentMoniker": "Koopa\\KoopaStateMachine.cs",
+              "ToolTip": "C:\\Projects\\Koopa\\KoopaStateMachine.cs",
+              "RelativeToolTip": "Koopa\\KoopaStateMachine.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAuwGsAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T00:17:43.126Z",
+              "WhenOpened": "2024-10-12T00:27:41.76Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "Koopa.cs",
+              "DocumentMoniker": "C:\\Projects\\Koopa\\Koopa.cs",
+              "RelativeDocumentMoniker": "Koopa\\Koopa.cs",
+              "ToolTip": "C:\\Projects\\Koopa\\Koopa.cs",
+              "RelativeToolTip": "Koopa\\Koopa.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAgwCQAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T00:26:55.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Goomba.cs",
               "DocumentMoniker": "C:\\Projects\\Goomba\\Goomba.cs",
               "RelativeDocumentMoniker": "Goomba\\Goomba.cs",
               "ToolTip": "C:\\Projects\\Goomba\\Goomba.cs",
               "RelativeToolTip": "Goomba\\Goomba.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAkwCIAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-12T00:17:20.23Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GoombaCommand.cs",
-              "DocumentMoniker": "C:\\Projects\\Goomba\\GoombaCommand.cs",
-              "RelativeDocumentMoniker": "Goomba\\GoombaCommand.cs",
-              "ToolTip": "C:\\Projects\\Goomba\\GoombaCommand.cs",
-              "RelativeToolTip": "Goomba\\GoombaCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T00:17:00.421Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GoombaSprites.cs",
-              "DocumentMoniker": "C:\\Projects\\Goomba\\GoombaSprites.cs",
-              "RelativeDocumentMoniker": "Goomba\\GoombaSprites.cs",
-              "ToolTip": "C:\\Projects\\Goomba\\GoombaSprites.cs",
-              "RelativeToolTip": "Goomba\\GoombaSprites.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG8AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T00:16:42.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "IMarioSprite.cs",
               "DocumentMoniker": "C:\\Projects\\Sprites\\MarioSprites\\IMarioSprite.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\IMarioSprite.cs",
@@ -137,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "IEntity.cs",
               "DocumentMoniker": "C:\\Projects\\Sprites\\IEntity.cs",
               "RelativeDocumentMoniker": "Sprites\\IEntity.cs",

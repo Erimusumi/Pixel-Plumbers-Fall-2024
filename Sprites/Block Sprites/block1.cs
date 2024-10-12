@@ -30,15 +30,15 @@ public class obstacle1 : ISprite
         width = 80;
         height = 35;        
     }
-    public Rectangle GetDestination()
-    {
-        return destinationRectangle;
-    }
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
         destinationRectangle = new Rectangle((int)position.X, (int)position.Y, width, height);
         spriteBatch.Begin();
         spriteBatch.Draw(BlockTexture, destinationRectangle, sourceRectangle, Color.White);
         spriteBatch.End();
+    }
+    public Rectangle GetDestination()
+    {
+        return destinationRectangle;
     }
 }

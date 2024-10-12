@@ -3,28 +3,20 @@
   "WorkspaceRootPath": "C:\\Projects\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\koopa\\koopasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:koopa\\koopasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\sprites\\block sprites\\block4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\block4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\koopa\\koopastatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:koopa\\koopastatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\sprites\\block sprites\\block3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\block3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\koopa\\koopa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:koopa\\koopa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\sprites\\block sprites\\block1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\block1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\goomba\\goomba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:goomba\\goomba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\sprites\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\sprites\\mariosprites\\imariosprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\mariosprites\\imariosprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\projectile\\fireballsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:projectile\\fireballsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,7 +34,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Projects\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
@@ -51,84 +43,59 @@
               "ViewState": "AgIAADMAAAAAAAAAAAAAwBoAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "KoopaSprites.cs",
-              "DocumentMoniker": "C:\\Projects\\Koopa\\KoopaSprites.cs",
-              "RelativeDocumentMoniker": "Koopa\\KoopaSprites.cs",
-              "ToolTip": "C:\\Projects\\Koopa\\KoopaSprites.cs",
-              "RelativeToolTip": "Koopa\\KoopaSprites.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAowEcAAAApAAAAAAAAAA==",
+              "Title": "block4.cs",
+              "DocumentMoniker": "C:\\Projects\\Sprites\\Block Sprites\\block4.cs",
+              "RelativeDocumentMoniker": "Sprites\\Block Sprites\\block4.cs",
+              "ToolTip": "C:\\Projects\\Sprites\\Block Sprites\\block4.cs",
+              "RelativeToolTip": "Sprites\\Block Sprites\\block4.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBgAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T00:28:20.368Z",
+              "WhenOpened": "2024-10-12T00:37:57.667Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "KoopaStateMachine.cs",
-              "DocumentMoniker": "C:\\Projects\\Koopa\\KoopaStateMachine.cs",
-              "RelativeDocumentMoniker": "Koopa\\KoopaStateMachine.cs",
-              "ToolTip": "C:\\Projects\\Koopa\\KoopaStateMachine.cs",
-              "RelativeToolTip": "Koopa\\KoopaStateMachine.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAuwGsAAAAiAAAAAAAAAA==",
+              "Title": "block3.cs",
+              "DocumentMoniker": "C:\\Projects\\Sprites\\Block Sprites\\block3.cs",
+              "RelativeDocumentMoniker": "Sprites\\Block Sprites\\block3.cs",
+              "ToolTip": "C:\\Projects\\Sprites\\Block Sprites\\block3.cs",
+              "RelativeToolTip": "Sprites\\Block Sprites\\block3.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAuwCMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T00:27:41.76Z",
+              "WhenOpened": "2024-10-12T00:37:43.601Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Koopa.cs",
-              "DocumentMoniker": "C:\\Projects\\Koopa\\Koopa.cs",
-              "RelativeDocumentMoniker": "Koopa\\Koopa.cs",
-              "ToolTip": "C:\\Projects\\Koopa\\Koopa.cs",
-              "RelativeToolTip": "Koopa\\Koopa.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAgwCQAAAAnAAAAAAAAAA==",
+              "Title": "block1.cs",
+              "DocumentMoniker": "C:\\Projects\\Sprites\\Block Sprites\\block1.cs",
+              "RelativeDocumentMoniker": "Sprites\\Block Sprites\\block1.cs",
+              "ToolTip": "C:\\Projects\\Sprites\\Block Sprites\\block1.cs",
+              "RelativeToolTip": "Sprites\\Block Sprites\\block1.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwCcAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T00:26:55.726Z",
+              "WhenOpened": "2024-10-12T00:35:26.42Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Goomba.cs",
-              "DocumentMoniker": "C:\\Projects\\Goomba\\Goomba.cs",
-              "RelativeDocumentMoniker": "Goomba\\Goomba.cs",
-              "ToolTip": "C:\\Projects\\Goomba\\Goomba.cs",
-              "RelativeToolTip": "Goomba\\Goomba.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAkwCIAAAAiAAAAAAAAAA==",
+              "Title": "FireballSprite.cs",
+              "DocumentMoniker": "C:\\Projects\\Projectile\\FireballSprite.cs",
+              "RelativeDocumentMoniker": "Projectile\\FireballSprite.cs",
+              "ToolTip": "C:\\Projects\\Projectile\\FireballSprite.cs",
+              "RelativeToolTip": "Projectile\\FireballSprite.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T00:17:20.23Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IMarioSprite.cs",
-              "DocumentMoniker": "C:\\Projects\\Sprites\\MarioSprites\\IMarioSprite.cs",
-              "RelativeDocumentMoniker": "Sprites\\MarioSprites\\IMarioSprite.cs",
-              "ToolTip": "C:\\Projects\\Sprites\\MarioSprites\\IMarioSprite.cs",
-              "RelativeToolTip": "Sprites\\MarioSprites\\IMarioSprite.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T00:16:05.47Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IEntity.cs",
-              "DocumentMoniker": "C:\\Projects\\Sprites\\IEntity.cs",
-              "RelativeDocumentMoniker": "Sprites\\IEntity.cs",
-              "ToolTip": "C:\\Projects\\Sprites\\IEntity.cs",
-              "RelativeToolTip": "Sprites\\IEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T00:13:32.23Z",
+              "WhenOpened": "2024-10-12T00:35:23.611Z",
               "EditorCaption": ""
             },
             {

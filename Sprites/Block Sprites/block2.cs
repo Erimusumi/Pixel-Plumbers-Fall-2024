@@ -23,16 +23,16 @@ public class obstacle2 : ISprite
         width = 48;
         height = 40;
     }
-    public Rectangle GetDestination()
-    {
-        return destinationRectangle;
-    }
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
         destinationRectangle = new Rectangle((int)position.X, (int)position.Y, width, height);
         spriteBatch.Begin();
         spriteBatch.Draw(BlockTexture, destinationRectangle, sourceRectangle, Color.White);
         spriteBatch.End();
+    }
+    public Rectangle GetDestination()
+    {
+        return destinationRectangle;
     }
     public void Load(GraphicsDeviceManager graphics)
     {
