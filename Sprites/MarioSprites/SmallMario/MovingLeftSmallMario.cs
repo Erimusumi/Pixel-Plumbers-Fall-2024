@@ -47,7 +47,7 @@ public class MovingLeftSmallMario : IMarioSprite
         }
     }
 
-    public Rectangle GetDestinationRectangle(Vector2 position)
+    public Rectangle GetDestination(Vector2 position)
     {
         switch (currentAnimationIndex)
         {

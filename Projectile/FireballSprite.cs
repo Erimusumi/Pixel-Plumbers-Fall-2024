@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class FireballSprite : ISprite
+public class FireballSprite
 {
     private Texture2D texture;
     private float GameTicks;
