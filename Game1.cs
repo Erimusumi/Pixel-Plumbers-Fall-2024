@@ -23,11 +23,6 @@ public class Game1 : Game
     private PlayerCommandControlCenter playerCommandControlCenter;
 
 
-
-
-    // public IMario Mario;
-    // The New Mario
-
     //Enemy Code
     public ISpriteEnemy spriteEnemy;
     public IController controlG;
@@ -63,8 +58,7 @@ public class Game1 : Game
     private ISprite StartText;
     private SpriteFont MyFont;
 
-    //List
-    private List<Object> entities = new List<Object>();
+    private List<IEntity> entities = new List<IEntity>();
     private Sort sort = new Sort();
 
 
@@ -106,8 +100,6 @@ public class Game1 : Game
 
         controlCenter = new CommandControlCenter(this);
 
-        // idleMarioCommand = new IdleMarioCommand(this, marioTexture);
-
         //Make a first list for block iteration
         sprite1 = new List<ISprite>
             {
@@ -133,11 +125,6 @@ public class Game1 : Game
         n2 = sprite2.Count;
         index1 = 0;
         index2 = 0;
-
-        entities.Add(mario);
-        entities.Add(spriteEnemy);
-        entities.Add(sprite1);
-        entities.Add(sprite2);
 
     }
     public ISpriteEnemy SetEnemy(ISpriteEnemy enemy)
@@ -171,7 +158,7 @@ public class Game1 : Game
         block = Content.Load<Texture2D>("blocks");
         obstacle = Content.Load<Texture2D>("obstacle");
 
-        mario = new Mario(marioTexture, new GameTime());
+        mario = new Mario(marioTexture, gameTime);
         marioMovementController = new PlayerMovementController();
         playerCommandControlCenter = new PlayerCommandControlCenter(mario, marioMovementController);
 
@@ -190,7 +177,6 @@ public class Game1 : Game
         obstacle3 = new obstacle3(obstacle);
         obstacle4 = new obstacle4(obstacle);
     }
-
 
     protected override void Update(GameTime gameTime)
     {
@@ -254,15 +240,12 @@ public class Game1 : Game
             sprite2[index2].Update(gameTime);
         }
 
-
         base.Update(gameTime);
     }
 
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
-
-
 
         if (gameStarted)
         {

@@ -35,7 +35,5 @@ public class Sweep
         //Rectangle r2 = rectangle;
         //r2.Intersect(Some r3)
         //Get's the area that is intersected and replaces r2. If r2 is rectangle. idk.
-
-
     }
 }

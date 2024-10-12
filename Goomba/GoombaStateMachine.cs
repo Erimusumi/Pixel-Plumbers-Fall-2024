@@ -5,7 +5,6 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Pixel_Plumbers_Fall_2024;
 
-
 public class GoombaStateMachine
 {
 	private enum GoombaState {Left, Right, Stomped, Flipped};
@@ -62,6 +61,11 @@ public class GoombaStateMachine
 				_sprite.FlippedLogic();
 				break;
         }
+
+    }
+	public Rectangle GetDestination()
+	{
+		return _sprite.GetDestination();
 
     }
 	public void Draw(SpriteBatch sb, Texture2D Texture)
