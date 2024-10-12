@@ -23,7 +23,10 @@ public class obstacle3 : ISprite
         width = 62;
         height = 128;
     }
-
+    public Rectangle GetDestination()
+    {
+        return destinationRectangle;
+    }
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
         destinationRectangle = new Rectangle((int)position.X, (int)position.Y, width, height);
@@ -31,7 +34,6 @@ public class obstacle3 : ISprite
         spriteBatch.Draw(BlockTexture, destinationRectangle, sourceRectangle, Color.White);
         spriteBatch.End();
     }
-
     public void Load(GraphicsDeviceManager graphics)
     {
         throw new NotImplementedException();

@@ -23,7 +23,10 @@ public class obstacle4 : ISprite
         width = 80;
         height = 81;
     }
-
+    public Rectangle GetDestination()
+    {
+        return destinationRectangle;
+    }
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
         destinationRectangle = new Rectangle((int)position.X, (int)position.Y, width, height);
