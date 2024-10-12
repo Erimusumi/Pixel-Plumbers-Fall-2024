@@ -9,8 +9,16 @@ using Pixel_Plumbers_Fall_2024;
 public class Sweep
 {
     //Pass some list
+    //Sweep should 
+    public Boolean IntersectsWith(Rectangle rectangle1, Rectangle rectangle2)
+    {
+        Boolean intersectsVert = false;
+        Boolean intersectsHoriz = false;
+
+    }
     public void Compare(List<Object> entities)
     {
+        /*This 
         //mario, item, block, enemy
         /*
           Rectangle rectangle = new Rectangle();
