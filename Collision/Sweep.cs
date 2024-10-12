@@ -12,7 +12,7 @@ public class Sweep
 {
     //Pass some list
     //Sweep should 
-    public void getInteraction(List<Object> entities, int index1, int index2)
+    public void handleInteraction(List<Object> entities, int index1, int index2)
     {
         /*Should determine the interactionType of two entities and call the appropriate method */
         Object item1 = entities[index1];
@@ -38,8 +38,22 @@ public class Sweep
             //handle block interaction
         }
         //[...]
+    }
+    public Rectangle getRectangle(List<Object> Entities, int index)
+    {
+        Rectangle rectangle = new Rectangle();
+        //TODO: retreive rectangle from entitity at index
 
 
+        return rectangle;
+    }
+    public Boolean intersects(List<Object> entities, int index1, int index2)
+    {
+        Boolean intersects = false;
+       // if (entities[index1].getRectangle.IntersectsWith(entitities[index2]){
+       //     intersects = true;
+       // }
+            return intersects;
     }
     public void Compare(List<Object> entities)
     {
