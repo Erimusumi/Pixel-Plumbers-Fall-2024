@@ -19,4 +19,11 @@ public class IdleRightSmallMario : IMarioSprite
     {
     }
 
+    public Rectangle GetDestinationRectangle(Vector2 position)
+    {
+        return new Rectangle((int)position.X, (int)position.Y, 13, 16);
+
+
+    }
+
 }

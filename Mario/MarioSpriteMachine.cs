@@ -5,12 +5,11 @@ namespace Pixel_Plumbers_Fall_2024;
 
 public class MarioSpriteMachine
 {
-    private static IMarioSprite lastValidSprite;  // Store the last valid sprite
+    private static IMarioSprite lastValidSprite;
 
     public static IMarioSprite UpdateMarioSprite(MarioStateMachine marioStateMachine, Texture2D texture)
     {
         IMarioSprite newSprite = null;
-
         switch (marioStateMachine.CurrentFaceState)
         {
             case MarioStateMachine.MarioFaceState.Right:
@@ -125,6 +124,10 @@ public class MarioSpriteMachine
                 }
                 break;
         }
+        if (lastValidSprite != null && newSprite != null && newSprite.GetType() == lastValidSprite.GetType())
+        {
+            return lastValidSprite;
+        }
 
         if (newSprite != null)
         {
@@ -132,10 +135,6 @@ public class MarioSpriteMachine
             return newSprite;
         }
 
-        if (lastValidSprite != null)
-        {
-            return lastValidSprite;
-        }
-        return new IdleLeftBigMario(texture);
+        return lastValidSprite ?? new IdleLeftBigMario(texture);
     }
 }

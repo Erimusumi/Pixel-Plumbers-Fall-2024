@@ -19,4 +19,11 @@ public class TurningLeftSmallMario : IMarioSprite
     {
     }
 
+    public Rectangle GetDestinationRectangle(Vector2 position)
+    {
+        return new Rectangle((int)position.X, (int)position.Y, 14, 16);
+
+
+    }
+
 }

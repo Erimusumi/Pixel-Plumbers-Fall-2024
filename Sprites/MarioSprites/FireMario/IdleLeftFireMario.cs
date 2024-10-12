@@ -18,5 +18,11 @@ public class IdleLeftFireMario : IMarioSprite
     public void Update(GameTime gametime)
     {
     }
+    public Rectangle GetDestinationRectangle(Vector2 position)
+    {
+        return new Rectangle((int)position.X, (int)position.Y, 16, 32);
+
+
+    }
 
 }

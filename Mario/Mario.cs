@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Pixel_Plumbers_Fall_2024;
 
-public class Mario
+public class Mario : IEntity
 {
     private Texture2D marioTexture;
     private IMarioSprite currentMarioSprite;
@@ -204,5 +204,10 @@ public class Mario
         marioStateMachine.Reset();                                                          // Reset Mario's state machine to the default state
         isOnGround = true;                                                                  // Set Mario as standing on the ground
         currentMarioSprite = new IdleRightSmallMario(marioTexture);                         // Set mario to small idle right again
+    }
+
+    public Rectangle GetDestinationRectangle()
+    {
+        return currentMarioSprite.GetDestinationRectangle(marioPosition);
     }
 }
