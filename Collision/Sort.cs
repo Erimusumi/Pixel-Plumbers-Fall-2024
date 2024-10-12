@@ -28,6 +28,9 @@ public class Sort
 
 
     }
+    public void clearList(List<Object> objects)
+    {
+        objects.Clear();
 
-
+    }
 }
