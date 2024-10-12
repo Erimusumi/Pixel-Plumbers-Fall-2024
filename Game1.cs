@@ -58,7 +58,7 @@ public class Game1 : Game
     private ISprite StartText;
     private SpriteFont MyFont;
 
-    private List<Object> entities = new List<Object>();
+    private List<IEntity> entities = new List<IEntity>();
     private Sort sort = new Sort();
 
 
@@ -125,11 +125,6 @@ public class Game1 : Game
         n2 = sprite2.Count;
         index1 = 0;
         index2 = 0;
-
-        entities.Add(mario);
-        entities.Add(spriteEnemy);
-        entities.Add(sprite1);
-        entities.Add(sprite2);
 
     }
     public ISpriteEnemy SetEnemy(ISpriteEnemy enemy)
