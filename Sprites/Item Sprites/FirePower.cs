@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 public class FirePower : ISprite
 {
     private Texture2D ItemTexture;
+    
     public FirePower(Texture2D ItemTexture)
     {
         this.ItemTexture = ItemTexture;
