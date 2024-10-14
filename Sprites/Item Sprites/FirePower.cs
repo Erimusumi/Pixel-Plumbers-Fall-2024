@@ -21,4 +21,5 @@ public class FirePower : ISprite
     {
         return new Rectangle((int)position.X, (int)position.Y, 15, 15);
     }
+
 }

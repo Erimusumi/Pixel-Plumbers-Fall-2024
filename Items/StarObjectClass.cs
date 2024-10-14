@@ -1,8 +1,9 @@
-﻿using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Numerics;
 using System.Runtime.InteropServices;
-public interface IStarObject
+public interface IStarObject : IEntity
 {
     void star();
     Boolean idleState();
@@ -20,6 +21,7 @@ public class StarObject : IStarObject
     private Boolean collected;
     private Boolean roaming;
     private Vector2 position;
+    private StarPower sp;
     public void star()
     {
         this.idle = false;
@@ -54,6 +56,11 @@ public class StarObject : IStarObject
         {
 
         }
+    }
+
+    public Rectangle GetDestination()
+    {
+        return this.sp.GetDestination(position);
     }
 
 
