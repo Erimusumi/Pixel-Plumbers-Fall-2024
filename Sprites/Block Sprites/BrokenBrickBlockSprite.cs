@@ -17,6 +17,7 @@ public class BrokenBrickBlockSprite : ISprite
     private int height;
     private int currentFrame;
     private Boolean isAnimating;
+    private Rectangle destinationRectangle;
     public BrokenBrickBlockSprite(Texture2D texture, int frames, double wait)
     {
         Texture = texture;
@@ -60,7 +61,7 @@ public class BrokenBrickBlockSprite : ISprite
             height
         );
 
-        Rectangle destinationRectangle = new Rectangle(
+        destinationRectangle = new Rectangle(
             (int)location.X,
             (int)location.Y,
             width,
@@ -70,6 +71,10 @@ public class BrokenBrickBlockSprite : ISprite
         spriteBatch.Begin();
         spriteBatch.Draw(Texture, destinationRectangle, sourceRectangle, Color.White);
         spriteBatch.End();
+    }
+    public Rectangle GetDestination()
+    {
+        return destinationRectangle;
     }
     public void Load(GraphicsDeviceManager graphics)
     {
