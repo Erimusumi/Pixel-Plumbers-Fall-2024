@@ -4,9 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pixel-Plumbers-Fall-2024.Collision.Interaction
-{
     internal class MushroomInteraction
 {
+    /*
+     * 
+     * if(mario is small){
+     * mario is big
+     * change mario's current state to big mario
+     * }
+     * 
+     */
 }
-}
+
