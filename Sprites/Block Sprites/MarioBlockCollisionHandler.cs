@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
-public class BrokenBrickBlockSprite : ISprite
+public class MarioBlockCollisionHandler : ISprite
 {
     public Texture2D Texture { get; set; }
     public Vector2 Start { get; set; }
@@ -18,7 +18,7 @@ public class BrokenBrickBlockSprite : ISprite
     private int currentFrame;
     private Boolean isAnimating;
     public Rectangle destinationRectangle;
-    public BrokenBrickBlockSprite(Texture2D texture, int frames, double wait)
+    public MarioBlockCollisionHandler(Texture2D texture, int frames, double wait)
     {
         Texture = texture;
         Start = new Vector2(288, 112);

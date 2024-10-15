@@ -13,7 +13,7 @@ public class Mario : IEntity
 
     private Vector2 initialPosition;
     private Vector2 marioPosition;
-    private Vector2 marioVelocity;
+    public Vector2 marioVelocity;
     private float groundPosition = 200f;
     private float gravity = 980f;
     private float jumpSpeed = -350f;
