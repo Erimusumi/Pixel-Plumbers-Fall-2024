@@ -20,19 +20,19 @@ public class CheepsSprites
                 LeftPosX1 = 0;
                 LeftPosX2 = 30;
                 RightPosX1 = 60;
-                RightPosX1 = 90;
+                RightPosX2 = 90;
                 break;
             case 1:
                 LeftPosX1 = 120;
                 LeftPosX2 = 150;
                 RightPosX1 = 180;
-                RightPosX1 = 210;
+                RightPosX2 = 210;
                 break;
             case 2:
                 LeftPosX1 = 240;
                 LeftPosX2 = 270;
                 RightPosX1 = 300;
-                RightPosX1 = 330;
+                RightPosX2 = 330;
                 break;
         }
     } 

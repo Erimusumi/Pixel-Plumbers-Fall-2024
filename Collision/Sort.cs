@@ -41,6 +41,7 @@ public class Sort
         camera.Deconstruct(out cameraX, out cy, out cw, out ch);
         for (int i = 1; (i < objects.Count) && (startX < cameraX); i++)
         {
+            smallestX = cameraX;
             start = objects[i].GetDestination();
             for(int j = 2; (j < objects.Count) && (i != j) && (nextX < cameraX); j++)
             {
