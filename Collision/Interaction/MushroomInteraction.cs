@@ -6,10 +6,10 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-    public class MushroomInteraction
+public class MushroomInteraction
 {
-     private Mario mario;
-     private MushroomObject mushroom;
+    private Mario mario;
+    private MushroomObject mushroom;
     int mushroomIndex;
     int marioIndex;
     
@@ -25,9 +25,11 @@ using System.Threading.Tasks;
         mushroom.idle = false;
         mushroom.collected = true;
 
-        mario.MarioPowerUp();
+        if (mario.GetMarioGameState() == MarioStateMachine.MarioGameState.Small)
+        {
+            mario.MarioPowerUp();
+        }
         
-
     }
     private void removeFromList()
     {
@@ -35,5 +37,8 @@ using System.Threading.Tasks;
 
 
     }
+
 }
+    
+
 
