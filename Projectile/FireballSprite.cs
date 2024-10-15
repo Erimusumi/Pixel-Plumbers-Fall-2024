@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 public class FireballSprite
 {
     private Texture2D texture;
-    private float GameTicks;
-    private int AnimationSpeed;
+    private float gameTicks;
+    private int animationSpeed;
     private int previousAnimationIndex = 0;
     private int currentAnimationIndex = 0;
 
@@ -19,8 +19,8 @@ public class FireballSprite
     {
         this.texture = Texture;
 
-        GameTicks = 0;
-        AnimationSpeed = 100;
+        gameTicks = 0;
+        animationSpeed = 100;
 
         FrameRectangles = new Rectangle[4];
         FrameRectangles[0] = new Rectangle(96, 144, 8, 8); // Frame 1
@@ -38,16 +38,16 @@ public class FireballSprite
     }
     public void Update(GameTime gameTime)
     {
-        GameTicks += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+        this.gameTicks += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
 
-        if (GameTicks <= AnimationSpeed) return;
+        if (gameTicks <= animationSpeed) return;
 
         currentAnimationIndex = currentAnimationIndex == 1
             ? (previousAnimationIndex == 0 ? 3 : 0)
             : 1;
 
         previousAnimationIndex = currentAnimationIndex;
-        GameTicks = 0;
+        gameTicks = 0;
     }
 
     public void Draw(SpriteBatch sb, Vector2 pos)

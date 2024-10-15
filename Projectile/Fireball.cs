@@ -25,6 +25,7 @@ public class Fireball : IProjectile
         pos = marioPosition;
         sprite = new FireballSprite(texture);
         this.gameTime = gameTime;
+        bounceTimer = 0;
         goingRight = (direction == MarioStateMachine.MarioFaceState.Right);
     }
     private void Move()
@@ -37,14 +38,14 @@ public class Fireball : IProjectile
         else
         {
             //Same as above, but for left
-            pos.X -= 1;
+            pos.X += -1;
         }
 
         if (isBouncing)
         {
             //Move up some
-            pos.Y -= 1;
-            bounceTimer -= 5;
+            pos.Y += -1;
+            bounceTimer += -5;
             if (bounceTimer <= 0)
             {
                 isBouncing = false;
@@ -53,7 +54,7 @@ public class Fireball : IProjectile
         else
         {
             //Move down some
-            pos.X += 1;
+            pos.Y += 1;
         }
     }
     public void Bounce()
@@ -62,7 +63,7 @@ public class Fireball : IProjectile
         isBouncing = true;
         bounceTimer = 200;
     }
-    public void Update()
+    public void Update(GameTime gameTime)
     {
         this.Move();
         sprite.Update(gameTime);

@@ -86,6 +86,7 @@ public class Game1 : Game
         currentItem = 0;
         index1 = 0;
         index2 = 0;
+        fireballs.Clear();
         gameReset = false;  // Ensure reset only happens once per key press
     }
 
@@ -241,6 +242,11 @@ public class Game1 : Game
             //Update block and obstacle sprites
             sprite1[index1].Update(gameTime);
             sprite2[index2].Update(gameTime);
+
+            foreach (var item in fireballs)
+            {
+                item.Update(gameTime);
+            }
         }
 
         base.Update(gameTime);
@@ -258,12 +264,9 @@ public class Game1 : Game
             mario.Draw(spriteBatch);
             manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
 
-            if (fireballs.Count > 0)
+            foreach (var item in fireballs)
             {
-                foreach (var item in fireballs)
-                {
-                    item.Draw(spriteBatch);
-                }
+                item.Draw(spriteBatch);
             }
 
             spriteBatch.End();

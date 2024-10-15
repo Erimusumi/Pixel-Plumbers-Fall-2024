@@ -23,6 +23,8 @@ using System.Threading.Tasks;
         FirePower.collected = true;
         FirePower.idle = false;
         FirePower.roaming = false;
+
+        mario.MarioPowerUp();
     }
 }
 
