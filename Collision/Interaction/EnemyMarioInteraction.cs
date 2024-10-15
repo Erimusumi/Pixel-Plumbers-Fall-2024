@@ -23,8 +23,8 @@ public class EnemyMarioInteraction
         if (((int)Math.Abs(enemyDestination.X-marioDestination.X)) >= ((int)Math.Abs(enemyDestination.Y - marioDestination.Y)))
         {
             enemy.beStomped();
-            //make mario's velocity x, or slightly negative, so he can sort of bounce off the enemy.
-            //mario.velocityX = 0;
+            //make mario's velocity y, or slightly negative, so he can sort of bounce off the enemy.
+            //mario.velocityy = 0;
         }
         else
         {
