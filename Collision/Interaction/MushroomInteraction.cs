@@ -21,5 +21,12 @@ using System.Threading.Tasks;
         this.mushroom = mush;
     }
 
+    public void update()
+    {
+        mushroom.collectedState();
+       
+    }
+
+
 }
 
