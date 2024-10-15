@@ -20,9 +20,22 @@ public class EnemyMarioInteraction
     }
     public void update()
     {
-        if (1 == 1)
+        if (((int)Math.Abs(enemyDestination.X-marioDestination.X)) >= ((int)Math.Abs(enemyDestination.Y - marioDestination.Y)))
         {
-
+            enemy.beStomped();
+            //make mario's velocity x, or slightly negative, so he can sort of bounce off the enemy.
+            //mario.velocityX = 0;
+        }
+        else
+        {
+            //Not correct, I need star mario
+            if(mario.GetType() == typeof(StarPower))
+            {
+                enemy.beFlipped();
+            } else
+            {
+                mario.MarioTakeDamage();
+            }
         }
     }
 }
