@@ -6,5 +6,12 @@ using System.Threading.Tasks;
 
     public class FirePowerInteraction
 {
+    /*if
+     * 
+     * 
+     * 
+     * 
+     * 
+     */
 }
 
