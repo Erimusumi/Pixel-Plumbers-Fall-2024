@@ -10,6 +10,8 @@ using Pixel_Plumbers_Fall_2024;
 
 public class Sweep
 {
+    public enum CollisionType { Top, Bottom, Left, Right };
+
     //Pass some list
     //Sweep should 
     public void handleInteraction(List<Object> entities, int index1, int index2)

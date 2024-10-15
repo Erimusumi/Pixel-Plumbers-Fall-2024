@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 public class MushroomPower: ISprite
 {
     private Texture2D ItemTexture;
-    private Vector2 position;
+    //private Vector2 position;
     public MushroomPower(Texture2D ItemTexture)
     {
         this.ItemTexture = ItemTexture;
@@ -18,7 +18,7 @@ public class MushroomPower: ISprite
     public void Update(GameTime gametime)
     {
     }
-    public Rectangle GetDestination()
+    public Rectangle GetDestination(Vector2 position)
     {
         return new Rectangle((int)position.X, (int)position.Y, 15, 15);
     }

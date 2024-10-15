@@ -13,7 +13,7 @@ public class Mario : IEntity
 
     private Vector2 initialPosition;
     private Vector2 marioPosition;
-    public Vector2 marioVelocity;
+    private Vector2 marioVelocity;
     private float groundPosition = 200f;
     private float gravity = 980f;
     private float jumpSpeed = -350f;
@@ -209,5 +209,39 @@ public class Mario : IEntity
     public Rectangle GetDestination()
     {
         return currentMarioSprite.GetDestination(marioPosition);
+    }
+
+    public void HandleCollision(IEntity entityTouched, Sweep.CollisionType collisionType)
+    {
+        switch (entityTouched.GetType())
+        {
+            case ISpriteEnemy:
+                if (collisionType != Sweep.CollisionType.Top)
+                {
+                    this.MarioTakeDamage();
+                }
+                break;
+
+            case IBlockObject:
+                if ((collisionType == Sweep.CollisionType.Top) || (collisionType == Sweep.CollisionType.Bottom))
+                {
+                    marioVelocity.Y = 0;
+                }
+                else
+                {
+                    //Must be left/right collision
+                    marioVelocity.X = 0;
+                }
+                break;
+            case IMushroomObject:
+                break;
+            case IFireObject:
+                break;
+            case IStarObject:
+                break;
+
+            default:
+                break;
+        }
     }
 }
