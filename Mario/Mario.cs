@@ -234,10 +234,11 @@ public class Mario : IEntity
                 }
                 break;
             case IMushroomObject:
-                break;
             case IFireObject:
+                this.MarioPowerUp();
                 break;
             case IStarObject:
+                //Get Star
                 break;
 
             default:
