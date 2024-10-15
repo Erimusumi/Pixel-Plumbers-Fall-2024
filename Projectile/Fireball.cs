@@ -19,32 +19,41 @@ public class Fireball : IProjectile
 
     private FireballSprite sprite;
     private GameTime gameTime;
-    public Fireball(Vector2 marioPosition, Texture2D texture, GameTime gameTime, bool goingRight)
+    public Fireball(Vector2 marioPosition, Texture2D texture, GameTime gameTime, MarioStateMachine.MarioFaceState direction)
     {
         isBouncing = false;
         pos = marioPosition;
         sprite = new FireballSprite(texture);
         this.gameTime = gameTime;
-        this.goingRight = goingRight;
+        goingRight = (direction == MarioStateMachine.MarioFaceState.Right);
     }
     private void Move()
     {
         if (goingRight)
         {
             //If mario was facing right when shooting, move to the right
+            pos.X += 1;
         }
         else
         {
             //Same as above, but for left
+            pos.X -= 1;
         }
 
         if (isBouncing)
         {
             //Move up some
+            pos.Y -= 1;
+            bounceTimer -= 5;
+            if (bounceTimer <= 0)
+            {
+                isBouncing = false;
+            }
         }
         else
         {
             //Move down some
+            pos.X += 1;
         }
     }
     public void Bounce()
