@@ -20,7 +20,7 @@ public class StarObject : IStarObject
     private Boolean idle;
     private Boolean collected;
     private Boolean roaming;
-    private Vector2 position;
+    private Microsoft.Xna.Framework.Vector2 position;
     private StarPower sp;
     public void star()
     {

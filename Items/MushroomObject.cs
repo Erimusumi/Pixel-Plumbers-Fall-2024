@@ -1,9 +1,10 @@
-﻿using Microsoft.Xna.Framework.Graphics;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Numerics;
 using System.Runtime.InteropServices;
 using System.Text;
-public interface IMushroomObject
+public interface IMushroomObject : IEntity
 {
     void mushroom();
     Boolean idleState();
@@ -17,8 +18,8 @@ public class MushroomObject : IMushroomObject
     private Boolean idle;
     private Boolean collected;
     private Boolean roaming;
-    private Vector2 position;
-
+    private Microsoft.Xna.Framework.Vector2 position;
+    private MushroomPower mp;
     public void mushroom()
     {
         this.idle = false;
@@ -42,7 +43,7 @@ public class MushroomObject : IMushroomObject
     {
         if (this.idle)
         {
-            MushroomPower mp = new MushroomPower(texture);
+            this.mp = new MushroomPower(texture);
             mp.Draw(sB, position);
         }
         else if (this.collected)
@@ -53,6 +54,11 @@ public class MushroomObject : IMushroomObject
         {
 
         }
+    }
+
+    public Rectangle GetDestination()
+    {
+        return this.mp.GetDestination(position);
     }
 
 

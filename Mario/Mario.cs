@@ -233,6 +233,12 @@ public class Mario : IEntity
                     marioVelocity.X = 0;
                 }
                 break;
+            case IMushroomObject:
+                break;
+            case IFireObject:
+                break;
+            case IStarObject:
+                break;
             
             default:
                 break;
