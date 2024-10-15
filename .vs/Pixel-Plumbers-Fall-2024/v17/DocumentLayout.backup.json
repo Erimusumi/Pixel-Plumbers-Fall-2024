@@ -11,6 +11,10 @@
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\item sprites\\mushroompower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\marioooo\\sprites\\isprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\isprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\marioooo\\sprites\\item sprites\\firepower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\item sprites\\firepower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -67,10 +71,6 @@
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\luckyblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\marioooo\\sprites\\isprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\isprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\marioooo\\goomba\\goombasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:goomba\\goombasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -104,11 +104,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marioooo\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
@@ -128,7 +128,7 @@
               "RelativeDocumentMoniker": "Sprites\\Item Sprites\\MushroomPower.cs",
               "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marioooo\\Sprites\\Item Sprites\\MushroomPower.cs",
               "RelativeToolTip": "Sprites\\Item Sprites\\MushroomPower.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-15T00:23:27.193Z",
               "EditorCaption": ""
@@ -155,13 +155,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "FirePower.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marioooo\\Sprites\\Item Sprites\\FirePower.cs",
               "RelativeDocumentMoniker": "Sprites\\Item Sprites\\FirePower.cs",
               "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marioooo\\Sprites\\Item Sprites\\FirePower.cs",
               "RelativeToolTip": "Sprites\\Item Sprites\\FirePower.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-01T02:38:18.419Z",
               "EditorCaption": ""
@@ -169,18 +169,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "CommandControlCenter.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marioooo\\Controllers\\CommandControlCenter.cs",
-              "RelativeDocumentMoniker": "Controllers\\CommandControlCenter.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marioooo\\Controllers\\CommandControlCenter.cs",
-              "RelativeToolTip": "Controllers\\CommandControlCenter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T14:46:24.939Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "block1.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marioooo\\Sprites\\Block Sprites\\block1.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\block1.cs",
@@ -222,14 +210,39 @@
               "RelativeDocumentMoniker": "Sprites\\Item Sprites\\StarPower.cs",
               "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marioooo\\Sprites\\Item Sprites\\StarPower.cs",
               "RelativeToolTip": "Sprites\\Item Sprites\\StarPower.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-01T02:42:50.768Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
+              "Title": "ISprite.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marioooo\\Sprites\\ISprite.cs",
+              "RelativeDocumentMoniker": "Sprites\\ISprite.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marioooo\\Sprites\\ISprite.cs",
+              "RelativeToolTip": "Sprites\\ISprite.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T19:24:23.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CommandControlCenter.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marioooo\\Controllers\\CommandControlCenter.cs",
+              "RelativeDocumentMoniker": "Controllers\\CommandControlCenter.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marioooo\\Controllers\\CommandControlCenter.cs",
+              "RelativeToolTip": "Controllers\\CommandControlCenter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-30T14:46:24.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "StarObjectClass.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marioooo\\Items\\StarObjectClass.cs",
               "RelativeDocumentMoniker": "Items\\StarObjectClass.cs",
@@ -253,7 +266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "KeyboardControllerMovement.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marioooo\\Controllers\\KeyboardControllerMovement.cs",
               "RelativeDocumentMoniker": "Controllers\\KeyboardControllerMovement.cs",
@@ -277,7 +290,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "MICHAEL\u0027S CODE REVIEW.txt",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marioooo\\Code Reviews\\MICHAEL\u0027S CODE REVIEW.txt",
               "RelativeDocumentMoniker": "Code Reviews\\MICHAEL\u0027S CODE REVIEW.txt",
@@ -289,7 +302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "block3.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marioooo\\Sprites\\Block Sprites\\block3.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\block3.cs",
@@ -301,7 +314,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "block4.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marioooo\\Sprites\\Block Sprites\\block4.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\block4.cs",
@@ -313,7 +326,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "ICommand.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marioooo\\Commands\\ICommand.cs",
               "RelativeDocumentMoniker": "Commands\\ICommand.cs",
@@ -325,7 +338,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "BrokenBrickBlockSprite.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marioooo\\Sprites\\Block Sprites\\BrokenBrickBlockSprite.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\BrokenBrickBlockSprite.cs",
@@ -337,7 +350,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "KeyboardController.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marioooo\\Controllers\\KeyboardController.cs",
               "RelativeDocumentMoniker": "Controllers\\KeyboardController.cs",
@@ -349,7 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "block2.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marioooo\\Sprites\\Block Sprites\\block2.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\block2.cs",
@@ -361,7 +374,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "LuckyBlockSprite.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marioooo\\Sprites\\Block Sprites\\LuckyBlockSprite.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\LuckyBlockSprite.cs",
@@ -370,18 +383,6 @@
               "ViewState": "AgIAAB0AAAAA+FozhN8owAcAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-25T18:05:30.39Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ISprite.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marioooo\\Sprites\\ISprite.cs",
-              "RelativeDocumentMoniker": "Sprites\\ISprite.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marioooo\\Sprites\\ISprite.cs",
-              "RelativeToolTip": "Sprites\\ISprite.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-29T19:24:23.928Z"
             },
             {
               "$type": "Document",
