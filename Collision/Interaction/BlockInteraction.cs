@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-/*
+
 public class BlockInteraction
 {
     private Mario mario;
@@ -69,13 +69,16 @@ public class BlockInteraction
     // Check if Mario is moving upward (negative Y velocity)
     private bool MarioIsMovingUp()
     {
-        return mario.marioVelocity.Y < 0;
+        return mario.GetVelocity().Y < 0;
     }
 
     // Stop Mario's vertical movement
     private void StopMarioVerticalMovement()
     {
-        mario.marioVelocity.Y = 0;  // Set Mario's upward velocity to 0
+        // Set Mario's upward velocity to 0
+        Vector2 mVelocity = mario.GetVelocity();
+        mVelocity.Y = 0;
+        mario.SetVelocity(mVelocity);
     }
 
     // Move block upwards
@@ -103,4 +106,4 @@ public class BlockInteraction
     }
 }
 
-*/
+
