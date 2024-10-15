@@ -211,38 +211,15 @@ public class Mario : IEntity
         return currentMarioSprite.GetDestination(marioPosition);
     }
 
-    public void HandleCollision(IEntity entityTouched, Sweep.CollisionType collisionType)
+    public Vector2 GetVelocity()
     {
-        switch (entityTouched.GetType())
-        {
-            case ISpriteEnemy:
-                if (collisionType != Sweep.CollisionType.Top)
-                {
-                    this.MarioTakeDamage();
-                }
-                break;
-
-            case IBlockObject:
-                if ((collisionType == Sweep.CollisionType.Top) || (collisionType == Sweep.CollisionType.Bottom))
-                {
-                    marioVelocity.Y = 0;
-                }
-                else
-                {
-                    //Must be left/right collision
-                    marioVelocity.X = 0;
-                }
-                break;
-            case IMushroomObject:
-            case IFireObject:
-                this.MarioPowerUp();
-                break;
-            case IStarObject:
-                //Get Star
-                break;
-
-            default:
-                break;
-        }
+        return marioVelocity;
     }
+
+    public void SetVelocity(Vector2 newVelocity)
+    {
+        marioVelocity = newVelocity;
+    }
+
+    
 }

@@ -10,46 +10,51 @@ using Pixel_Plumbers_Fall_2024;
 
 public class Sweep
 {
-    public enum CollisionType { Top, Bottom, Left, Right };
+    public enum CollisionType { Top, Bottom, Left, Right, DontCare };
 
     //Pass some list
     //Sweep should 
-    public void handleInteraction(List<Object> entities, int index1, int index2)
+    public void handleInteraction(List<IEntity> entities, int index1, int index2)
     {
+
         /*Should determine the interactionType of two entities and call the appropriate method */
-        Object item1 = entities[index1];
-        Object item2 = entities[index2];
-        if (item1.GetType() == typeof(Goomba) && item2.GetType() == typeof(Mario) || item2.GetType() == typeof(Mario) && item1.GetType() == typeof(Goomba))
+        IEntity item1 = entities[index1];
+        IEntity item2 = entities[index2];
+        if (item1.GetType() == typeof(ISpriteEnemy) && item2.GetType() == typeof(Mario) || item1.GetType() == typeof(Mario) && item2.GetType() == typeof(ISpriteEnemy))
         {
-            //handle goomba interaction
+            //handle enemy interaction
             
         }
+        //Shouldn't need different methods for different types of enemies,
+        //keep here just in case though
+        /*
         if (item1.GetType() == typeof(Koopa) && item2.GetType() == typeof(Mario) || item2.GetType() == typeof(Mario) && item1.GetType() == typeof(Koopa))
         {
             //handle koopa interaction
         }
-        if (item1.GetType() == typeof(firePower) && item2.GetType() == typeof(Mario) || item2.GetType() == typeof(Mario) && item1.GetType() == typeof(firePower))
+        */
+        if (item1.GetType() == typeof(firePower) && item2.GetType() == typeof(Mario) || item1.GetType() == typeof(Mario) && item1.GetType() == typeof(firePower))
         {
             //handle firePower interaction
         }
-        if (item1.GetType() == typeof(MushroomPower) && item2.GetType() == typeof(Mario) || item2.GetType() == typeof(Mario) && item1.GetType() == typeof(MushroomPower))
+        if (item1.GetType() == typeof(MushroomPower) && item2.GetType() == typeof(Mario) || item1.GetType() == typeof(Mario) && item1.GetType() == typeof(MushroomPower))
         {
             //handle mushroomPower interaction
         }
-        if (item1.GetType() == typeof(BlockObject) && item2.GetType() == typeof(Mario) || item2.GetType() == typeof(Mario) && item1.GetType() == typeof(BlockObject))
+        if (item1.GetType() == typeof(BlockObject) && item2.GetType() == typeof(Mario) || item1.GetType() == typeof(Mario) && item1.GetType() == typeof(BlockObject))
         {
             //handle block interaction
         }
         //[...]
     }
-    public Rectangle getRectangle(List<Object> Entities, int index)
+    public Rectangle getRectangle(List<IEntity> Entities, int index)
     {
-        Object entity = Entities[index];
+        IEntity entity = Entities[index];
         Rectangle rectangle = new Rectangle();
        // rectangle = entity.GetDestinationRectangle;
         return rectangle;
     }
-    public Boolean intersects(List<Object> entities, int index1, int index2)
+    public Boolean intersects(List<IEntity> entities, int index1, int index2)
     {
         Boolean intersects = false;
        // if (entities[index1].getRectangle.IntersectsWith(entitities[index2]){
@@ -57,7 +62,7 @@ public class Sweep
        // }
             return intersects;
     }
-    public void Compare(List<Object> entities)
+    public void Compare(List<IEntity> entities)
     {
 
         /*This 
