@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public class StarPower : ISprite
+public class StarPower 
 {
     private Texture2D ItemTexture;
     public StarPower(Texture2D ItemTexture)

@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public class MushroomPower : ISprite
+public class MushroomPower 
 {
     private Texture2D ItemTexture;
     public MushroomPower(Texture2D ItemTexture)

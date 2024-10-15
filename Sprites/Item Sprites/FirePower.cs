@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public class FirePower : ISprite
+public class FirePower 
 {
     private Texture2D ItemTexture;
     
