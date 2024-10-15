@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,6 +10,8 @@ using System.Threading.Tasks;
 {
      private Mario mario;
      private MushroomObject mushroom;
+    int mushroomIndex;
+    int marioIndex;
     
     public MushroomInteraction(Mario mar, MushroomObject mush)
     {
@@ -22,13 +25,15 @@ using System.Threading.Tasks;
         mushroom.idle = false;
         mushroom.collected = true;
 
-      /*  if (mario.isSmall)
-        {
-             change mario to big mario 
-        }
-      */
+        mario.MarioPowerUp();
+        
+
     }
+    private void removeFromList()
+    {
+        //remove mushroom from list of entities
 
 
+    }
 }
 

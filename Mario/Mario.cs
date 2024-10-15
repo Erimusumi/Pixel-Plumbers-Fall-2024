@@ -25,7 +25,10 @@ public class Mario : IEntity
     private const float maxSpeed = 3f;
     private const float acceleration = 0.03f;
 
-    public Mario(Texture2D marioTexture, GameTime gametime)
+    //Need Game1 reference to correctly create fireballs
+    private Game1 game;
+
+    public Mario(Texture2D marioTexture, GameTime gametime, Game1 game)
     {
         this.marioTexture = marioTexture;
         marioPosition = new Vector2(400, groundPosition);
@@ -35,6 +38,7 @@ public class Mario : IEntity
         marioPosition = initialPosition;
 
         currentMarioSprite = new IdleRightSmallMario(marioTexture);
+        this.game = game;
     }
 
     public void MoveRight()
@@ -182,6 +186,15 @@ public class Mario : IEntity
     {
         marioVelocity.X = 0f;
         marioStateMachine.SetMarioIdle();
+    }
+
+    public void ShootFireball()
+    {
+        if (marioStateMachine.CurrentGameState == MarioStateMachine.MarioGameState.Fire)
+        {
+            Fireball f = new Fireball(marioPosition, game.ItemsTexture, gameTime, marioStateMachine.CurrentFaceState);
+            game.fireballs.Add(f);
+        }
     }
 
     public void Update(GameTime gameTime)

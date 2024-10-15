@@ -13,9 +13,9 @@ public interface IFireObject : IEntity
 }
 public class firePower : IFireObject
 {
-    private Boolean idle;
-    private Boolean collected;
-    private Boolean roaming;
+    public Boolean idle;
+    public Boolean collected;
+    public Boolean roaming;
     private Microsoft.Xna.Framework.Vector2 position;
     private int x;
     private int y;
@@ -52,6 +52,15 @@ public class firePower : IFireObject
 
         }
     }
+    private void destroy()
+    {
+        if (this.collected)
+        {
+            this.fp = null;
+        }
+    }
+    
+    
 
     public Rectangle GetDestination()
     {

@@ -55,6 +55,9 @@ public class Game1 : Game
     private ISprite OWBrickBlockSprite;
     private ISprite OWBrokenBrickSprite;
 
+    //Fireballs
+    public List<Fireball> fireballs = new List<Fireball>();
+
     private ISprite StartText;
     private SpriteFont MyFont;
 
@@ -158,7 +161,7 @@ public class Game1 : Game
         block = Content.Load<Texture2D>("blocks");
         obstacle = Content.Load<Texture2D>("obstacle");
 
-        mario = new Mario(marioTexture, gameTime);
+        mario = new Mario(marioTexture, gameTime, this);
         marioMovementController = new PlayerMovementController();
         playerCommandControlCenter = new PlayerCommandControlCenter(mario, marioMovementController);
 
@@ -254,11 +257,22 @@ public class Game1 : Game
             spriteBatch.Begin();
             mario.Draw(spriteBatch);
             manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
+
+            if (fireballs.Count > 0)
+            {
+                foreach (var item in fireballs)
+                {
+                    item.Draw(spriteBatch);
+                }
+            }
+
             spriteBatch.End();
 
             // Draw blocks and obstacles
             sprite1[index1].Draw(spriteBatch, new Vector2(200, 200));
             sprite2[index2].Draw(spriteBatch, new Vector2(310, 150));
+
+            
         }
         else
         {
