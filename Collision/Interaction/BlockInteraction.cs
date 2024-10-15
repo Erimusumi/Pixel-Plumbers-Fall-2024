@@ -4,9 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Xna.Framework.Graphics;
+using Pixel_Plumbers_Fall_2024;
 
 
-public class UnknownBlockSprite
+//Was UnknownBlockSprite
+public class BlockInteractions
 {
     private Mario mario;
     private UnknownBlockSprite block;
@@ -16,7 +19,7 @@ public class UnknownBlockSprite
     private float blockInitialY;
     private double blockMoveTimer = 0;
 
-    public UnknownBlockSprite(Mario mario, UnknownBlockSprite block)
+    public BlockInteractions(Mario mario, UnknownBlockSprite block)
     {
         this.mario = mario;
         this.block = block;
