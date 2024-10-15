@@ -56,6 +56,11 @@ public class MushroomObject : IMushroomObject
 
         }
     }
+    private void destroy()
+    {
+            this.mp = null;
+      
+    }
 
     public Rectangle GetDestination()
     {

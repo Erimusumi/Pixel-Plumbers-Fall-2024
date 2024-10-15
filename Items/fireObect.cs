@@ -52,6 +52,15 @@ public class firePower : IFireObject
 
         }
     }
+    private void destroy()
+    {
+        if (this.collected)
+        {
+            this.fp = null;
+        }
+    }
+    
+    
 
     public Rectangle GetDestination()
     {
