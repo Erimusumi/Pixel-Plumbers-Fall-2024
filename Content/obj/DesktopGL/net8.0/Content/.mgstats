@@ -1,1 +1,8 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/kamau/Downloads/CSE3902/Marioooo/Content/blocks.gif","C:/Users/kamau/Downloads/CSE3902/Marioooo/Content/bin/DesktopGL/Content/obstacle.xnb","TextureProcessor","Texture2DContent",14122,1560241,0.2196008
+"C:/Users/kamau/Downloads/CSE3902/Marioooo/Content/blocks.png","C:/Users/kamau/Downloads/CSE3902/Marioooo/Content/bin/DesktopGL/Content/blocks.xnb","TextureProcessor","Texture2DContent",13083,458837,0.0157838
+"C:/Users/kamau/Downloads/CSE3902/Marioooo/Content/enemies.png","C:/Users/kamau/Downloads/CSE3902/Marioooo/Content/bin/DesktopGL/Content/enemies.xnb","TextureProcessor","Texture2DContent",8295,455269,0.0125132
+"C:/Users/kamau/Downloads/CSE3902/Marioooo/Content/itemsAndPowerups.png","C:/Users/kamau/Downloads/CSE3902/Marioooo/Content/bin/DesktopGL/Content/itemsAndPowerups.xnb","TextureProcessor","Texture2DContent",32550,516181,0.0160351
+"C:/Users/kamau/Downloads/CSE3902/Marioooo/Content/mario.png","C:/Users/kamau/Downloads/CSE3902/Marioooo/Content/bin/DesktopGL/Content/mario.xnb","TextureProcessor","Texture2DContent",6584,304645,0.0085707
+"C:/Users/kamau/Downloads/CSE3902/Marioooo/Content/MarioItems.png","C:/Users/kamau/Downloads/CSE3902/Marioooo/Content/bin/DesktopGL/Content/MarioItems.xnb","TextureProcessor","Texture2DContent",38427,2532585,0.0750365
+"C:/Users/kamau/Downloads/CSE3902/Marioooo/Content/MyFont.spritefont","C:/Users/kamau/Downloads/CSE3902/Marioooo/Content/bin/DesktopGL/Content/MyFont.xnb","FontDescriptionProcessor","SpriteFontContent",2065,21538,0.1159126

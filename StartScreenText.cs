@@ -20,4 +20,8 @@ public class StartScreenText : ISprite
     {
         throw new System.NotImplementedException();
     }
+    public Rectangle GetDestination()
+    {
+        return new Rectangle();
+    }
 }
