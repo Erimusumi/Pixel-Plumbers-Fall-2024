@@ -15,9 +15,9 @@ public interface IMushroomObject
 }
 public class MushroomObject : IMushroomObject
 {
-    private Boolean idle;
-    private Boolean collected;
-    private Boolean roaming;
+    public Boolean idle;
+    public Boolean collected;
+    public Boolean roaming;
     private Microsoft.Xna.Framework.Vector2 position;
     private MushroomPower mp;
 

@@ -32,18 +32,18 @@ public class Sort
         }
     }
     //Assume the list has at least 2 elements, besides a floor at [0]
-    //[0, 30, 10, 20]
-    //[0, 20, 10, 30]
-    //[0, 30, 20, 10]
-    //[0, 20, 30, 10]
+    //[30, 10, 20...]
+    //[20, 10, 30...]
+    //[30, 20, 10...]
+    //[20, 30, 10...]
     public void SortList(List<IEntity> objects, Rectangle camera)
     {
         camera.Deconstruct(out cameraX, out cy, out cw, out ch);
-        for (int i = 1; (i < objects.Count) && (startX < cameraX); i++)
+        for (int i = 0; (i < objects.Count) && (startX < cameraX); i++)
         {
             smallestX = cameraX;
             start = objects[i].GetDestination();
-            for(int j = 2; (j < objects.Count) && (i != j) && (nextX < cameraX); j++)
+            for(int j = 1; (j < objects.Count) && (i != j) && (nextX < cameraX); j++)
             {
                 next = objects[j].GetDestination();
                 start.Deconstruct(out startX, out sy, out sw, out sh);
