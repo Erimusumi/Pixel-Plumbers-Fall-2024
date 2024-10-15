@@ -25,9 +25,10 @@ public class CommandControlCenter
     private void InitializeCommmands()
     {
         // commands for switching enemy
-        ICommand EnemySwitch = new EnemySwitch(game);
-        keyboardController.addCommand(Keys.P, EnemySwitch);
-        keyboardController.addCommand(Keys.O, EnemySwitch);
+        ICommand EnemySwitchP = new EnemySwitch(game, 0);
+        ICommand EnemySwitchO = new EnemySwitch(game, 1);
+        keyboardController.addCommand(Keys.P, EnemySwitchP);
+        keyboardController.addCommand(Keys.O, EnemySwitchO);
 
         // command for switching blocks
         ICommand blockTCommand = new blockTCommand(game);
