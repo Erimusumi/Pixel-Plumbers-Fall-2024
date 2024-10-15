@@ -22,11 +22,7 @@ using System.Threading.Tasks;
         mushroom.idle = false;
         mushroom.collected = true;
 
-      /*  if (mario.isSmall)
-        {
-             change mario to big mario 
-        }
-      */
+        mario.MarioPowerUp();
     }
 
 
