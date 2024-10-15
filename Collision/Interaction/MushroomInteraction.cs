@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,14 +8,8 @@ using System.Threading.Tasks;
     public class MushroomInteraction
 {
      private Mario mario;
-    private MushroomObject mushroom;
-    /* 
-     * if(mario is small){
-     * mario is big
-     * change mario's current state to big mario
-     * }
-     * 
-     */
+     private MushroomObject mushroom;
+    
     public MushroomInteraction(Mario mar, MushroomObject mush)
     {
         this.mario = mar;
@@ -23,8 +18,15 @@ using System.Threading.Tasks;
 
     public void update()
     {
-        mushroom.collectedState();
-       
+        mushroom.roaming = false;
+        mushroom.idle = false;
+        mushroom.collected = true;
+
+      /*  if (mario.isSmall)
+        {
+             change mario to big mario 
+        }
+      */
     }
 
 
