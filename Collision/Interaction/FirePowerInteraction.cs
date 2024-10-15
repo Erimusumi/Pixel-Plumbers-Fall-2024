@@ -24,9 +24,11 @@ using System.Threading.Tasks;
         FirePower.idle = false;
         FirePower.roaming = false;
 
-        mario.MarioPowerUp();
-
-     
+        mario.MarioPowerUp();  
+    }
+    private void removeFromList()
+    {
+        //remove fire power from list of entities
     }
 }
 
