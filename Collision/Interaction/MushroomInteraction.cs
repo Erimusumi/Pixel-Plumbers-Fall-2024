@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 public class MushroomInteraction
 {
     private Mario mario;
-    private MushroomObject mushroom;
+    private Mushroom mushroom;
     int mushroomIndex;
     int marioIndex;
     
-    public MushroomInteraction(Mario mar, MushroomObject mush)
+    public MushroomInteraction(Mario mar, Mushroom mush)
     {
         this.mario = mar;
         this.mushroom = mush;

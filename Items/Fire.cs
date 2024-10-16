@@ -1,27 +1,27 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Pixel_Plumbers_Fall_2024;
 using System;
 using System.Numerics;
 using System.Runtime.InteropServices;
-using System.Text;
-public interface IMushroomObject
+public interface IFireObject : IEntity
 {
-    void mushroom();
     Boolean idleState();
     Boolean collectedState();
-    Boolean roamingState();
     void draw(SpriteBatch sb, Texture2D texture);
 
 }
-public class MushroomObject : IMushroomObject
+public class Fire : IFireObject
 {
     public Boolean idle;
     public Boolean collected;
     public Boolean roaming;
     private Microsoft.Xna.Framework.Vector2 position;
-    private MushroomPower mp;
+    private int x;
+    private int y;
+    private FirePower fp;
 
-    public void mushroom()
+    public Fire()
     {
         this.idle = false;
         this.collected = false;
@@ -36,35 +36,35 @@ public class MushroomObject : IMushroomObject
 
         return this.collected;
     }
-    public Boolean roamingState()
-    {
-        return this.roaming;
-    }
     public void draw(SpriteBatch sB, Texture2D texture)
     {
         if (this.idle)
         {
-            this.mp = new MushroomPower(texture);
-            this.mp.Draw(sB, position);
+            this.fp = new FirePower(texture);
+            this.fp.Draw(sB, position);
         }
-        else if (this.collected)
+         if (this.collected)
         {
 
         }
-        else if (this.roaming)
+         if (this.roaming)
         {
 
         }
     }
     private void destroy()
     {
-            this.mp = null;
-      
+        if (this.collected)
+        {
+            this.fp = null;
+        }
     }
+    
+    
 
     public Rectangle GetDestination()
     {
-        return this.mp.GetDestination(position);
+        return this.fp.GetDestination(position);
     }
 
 
