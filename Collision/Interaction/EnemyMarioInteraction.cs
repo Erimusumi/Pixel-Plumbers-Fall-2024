@@ -21,8 +21,7 @@ public class EnemyMarioInteraction
         if (Overlap.X >= Overlap.Y)
         {
             enemy.beStomped();
-            //make mario's velocity y, or slightly negative, so he can sort of bounce off the enemy.
-            //mario.velocityy = 0;
+            mario.marioVelocity.Y = 0;
         }
         else
         {
