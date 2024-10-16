@@ -12,7 +12,6 @@ public class Sweep
 {
     public enum CollisionType { Top, Bottom, Left, Right, DontCare };
 
-
     EnemyMarioInteraction EnemyMarioInteraction;
     OtherEnemyInteraction OtherEnemyInteraction;
     //Pass some list
@@ -23,15 +22,13 @@ public class Sweep
         /*Should determine the interactionType of two entities and call the appropriate method */
         IEntity item1 = entities[index1];
         IEntity item2 = entities[index2];
-        Rectangle overlap = item1.GetDestination();
-        //soverlap.Intersect(item2.GetDestination());
 
         if (item1.GetType() == typeof(ISpriteEnemy) && item2.GetType() == typeof(Mario))
         {
-            EnemyMarioInteraction = new EnemyMarioInteraction((ISpriteEnemy)item1, (Mario)item2, overlap);
+            EnemyMarioInteraction = new EnemyMarioInteraction((ISpriteEnemy)item1, (Mario)item2, Rectangle.Intersect(item1.GetDestination(), item2.GetDestination()));
         } else if (item1.GetType() == typeof(Mario) && item2.GetType() == typeof(ISpriteEnemy))
         {
-            EnemyMarioInteraction = new EnemyMarioInteraction((ISpriteEnemy)item2, (Mario)item1, overlap);
+            EnemyMarioInteraction = new EnemyMarioInteraction((ISpriteEnemy)item2, (Mario)item1, Rectangle.Intersect(item1.GetDestination(), item2.GetDestination()));
         } else if (item1.GetType() == typeof(ISpriteEnemy))
         {
             OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item1);
@@ -63,14 +60,6 @@ public class Sweep
         Rectangle rectangle = new Rectangle();
        // rectangle = entity.GetDestinationRectangle;
         return rectangle;
-    }
-    public Boolean intersects(List<IEntity> entities, int index1, int index2)
-    {
-        Boolean intersects = false;
-       // if (entities[index1].getRectangle.IntersectsWith(entitities[index2]){
-       //     intersects = true;
-       // }
-            return intersects;
     }
     public void Compare(List<IEntity> entities)
     {
