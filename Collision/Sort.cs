@@ -22,11 +22,9 @@ public class Sort
     {
         if (objects.Count != 0)
         {
-            int i = 0;
-            while ((objects.Count > 0) && (objects[i].GetDestination().X < camera.X))
+            while ((objects.Count > 0) && (objects[0].GetDestination().X < camera.X))
             {
                 objects.RemoveAt(0);
-                i++;
             }
         }
         return objects;
