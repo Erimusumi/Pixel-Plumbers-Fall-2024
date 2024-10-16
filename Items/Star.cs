@@ -1,27 +1,27 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Pixel_Plumbers_Fall_2024;
 using System;
 using System.Numerics;
 using System.Runtime.InteropServices;
-public interface IFireObject : IEntity
+public interface IStarObject : IEntity
 {
     Boolean idleState();
     Boolean collectedState();
+    Boolean roamingState();
     void draw(SpriteBatch sb, Texture2D texture);
 
+
+
+
 }
-public class firePower : IFireObject
+public class Star : IStarObject
 {
     public Boolean idle;
     public Boolean collected;
     public Boolean roaming;
     private Microsoft.Xna.Framework.Vector2 position;
-    private int x;
-    private int y;
-    private FirePower fp;
-
-    public firePower()
+    private StarPower sp;
+    public Star()
     {
         this.idle = false;
         this.collected = false;
@@ -36,12 +36,16 @@ public class firePower : IFireObject
 
         return this.collected;
     }
+    public Boolean roamingState()
+    {
+        return this.roaming;
+    }
     public void draw(SpriteBatch sB, Texture2D texture)
     {
         if (this.idle)
         {
-            this.fp = new FirePower(texture);
-            this.fp.Draw(sB, position);
+            this.sp = new StarPower(texture);
+            this.sp.Draw(sB, position);
         }
         else if (this.collected)
         {
@@ -52,19 +56,10 @@ public class firePower : IFireObject
 
         }
     }
-    private void destroy()
-    {
-        if (this.collected)
-        {
-            this.fp = null;
-        }
-    }
-    
-    
 
     public Rectangle GetDestination()
     {
-        return this.fp.GetDestination(position);
+        return this.sp.GetDestination(position);
     }
 
 

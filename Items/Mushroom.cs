@@ -3,26 +3,25 @@ using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Numerics;
 using System.Runtime.InteropServices;
-public interface IStarObject : IEntity
+using System.Text;
+public interface IMushroomObject : IEntity
 {
-    void star();
+  
     Boolean idleState();
     Boolean collectedState();
     Boolean roamingState();
     void draw(SpriteBatch sb, Texture2D texture);
 
-
-
-
 }
-public class StarObject : IStarObject
+public class Mushroom : IMushroomObject
 {
-    private Boolean idle;
-    private Boolean collected;
-    private Boolean roaming;
+    public Boolean idle;
+    public Boolean collected;
+    public Boolean roaming;
     private Microsoft.Xna.Framework.Vector2 position;
-    private StarPower sp;
-    public void star()
+    private MushroomPower mp;
+
+    public  Mushroom()
     {
         this.idle = false;
         this.collected = false;
@@ -45,8 +44,8 @@ public class StarObject : IStarObject
     {
         if (this.idle)
         {
-            this.sp = new StarPower(texture);
-            this.sp.Draw(sB, position);
+            this.mp = new MushroomPower(texture);
+            this.mp.Draw(sB, position);
         }
         else if (this.collected)
         {
@@ -57,10 +56,15 @@ public class StarObject : IStarObject
 
         }
     }
+    private void destroy()
+    {
+            this.mp = null;
+      
+    }
 
     public Rectangle GetDestination()
     {
-        return this.sp.GetDestination(position);
+        return this.mp.GetDestination(position);
     }
 
 

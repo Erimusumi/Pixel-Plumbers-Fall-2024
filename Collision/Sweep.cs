@@ -12,6 +12,9 @@ public class Sweep
 {
     public enum CollisionType { Top, Bottom, Left, Right, DontCare };
 
+
+    EnemyMarioInteraction EnemyMarioInteraction;
+    OtherEnemyInteraction OtherEnemyInteraction;
     //Pass some list
     //Sweep should 
     public void handleInteraction(List<IEntity> entities, int index1, int index2)
@@ -20,19 +23,22 @@ public class Sweep
         /*Should determine the interactionType of two entities and call the appropriate method */
         IEntity item1 = entities[index1];
         IEntity item2 = entities[index2];
-        if (item1.GetType() == typeof(ISpriteEnemy) && item2.GetType() == typeof(Mario) || item1.GetType() == typeof(Mario) && item2.GetType() == typeof(ISpriteEnemy))
+        if (item1.GetType() == typeof(ISpriteEnemy) && item2.GetType() == typeof(Mario))
         {
-            //handle enemy interaction
-            
-        }
-        //Shouldn't need different methods for different types of enemies,
-        //keep here just in case though
-        /*
-        if (item1.GetType() == typeof(Koopa) && item2.GetType() == typeof(Mario) || item2.GetType() == typeof(Mario) && item1.GetType() == typeof(Koopa))
+            EnemyMarioInteraction = new EnemyMarioInteraction((ISpriteEnemy)item1, (Mario)item2, item1.GetDestination(), item2.GetDestination());
+        } else if (item1.GetType() == typeof(Mario) && item2.GetType() == typeof(ISpriteEnemy))
         {
-            //handle koopa interaction
+            EnemyMarioInteraction = new EnemyMarioInteraction((ISpriteEnemy)item2, (Mario)item1, item2.GetDestination(), item1.GetDestination());
+        } else if (item1.GetType() == typeof(ISpriteEnemy))
+        {
+            OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item1);
+        } else if (item2.GetType() == typeof(ISpriteEnemy))
+        {
+            OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item2);
         }
-        */
+
+
+
         if (item1.GetType() == typeof(firePower) && item2.GetType() == typeof(Mario) || item1.GetType() == typeof(Mario) && item1.GetType() == typeof(firePower))
         {
             //handle firePower interaction
@@ -44,6 +50,7 @@ public class Sweep
         if (item1.GetType() == typeof(BlockObject) && item2.GetType() == typeof(Mario) || item1.GetType() == typeof(Mario) && item1.GetType() == typeof(BlockObject))
         {
             //handle block interaction
+            //new BlockInteraction(item1, item2);
         }
         //[...]
     }

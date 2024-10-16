@@ -9,10 +9,10 @@ using System.Threading.Tasks;
     public class FirePowerInteraction
 {
     private Mario mario;
-    private firePower FirePower;
+    private Fire FirePower;
 
 
-    public FirePowerInteraction(Mario mar, firePower fp)
+    public FirePowerInteraction(Mario mar, Fire fp)
     {
         this.FirePower = fp;
         this.mario = mar;
