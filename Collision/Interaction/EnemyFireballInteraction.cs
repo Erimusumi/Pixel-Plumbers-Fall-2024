@@ -20,7 +20,8 @@ using System.Threading.Tasks;
     }
     public void update()
     {
-        enemy.beFlipped(); 
+        enemy.beFlipped();
+        fireball.Remove();
     }
     private void removeFromList()
     {

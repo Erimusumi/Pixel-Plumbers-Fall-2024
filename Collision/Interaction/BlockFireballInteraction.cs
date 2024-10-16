@@ -34,7 +34,7 @@ using System.Threading.Tasks;
         }
         else
         {
-            //Delete fireball
+            fireball.Remove();
         }
     }
     private void removeFromList()

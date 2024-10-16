@@ -15,6 +15,8 @@ public class Sweep
 
     EnemyMarioInteraction EnemyMarioInteraction;
     OtherEnemyInteraction OtherEnemyInteraction;
+    EnemyFireballInteraction EnemyFireballInteraction;
+    BlockFireballInteraction BlockFireballInteraction;
     //Pass some list
     //Sweep should 
     public void handleInteraction(List<IEntity> entities, int index1, int index2)
@@ -29,7 +31,16 @@ public class Sweep
         } else if (item1.GetType() == typeof(Mario) && item2.GetType() == typeof(ISpriteEnemy))
         {
             EnemyMarioInteraction = new EnemyMarioInteraction((ISpriteEnemy)item2, (Mario)item1, item2.GetDestination(), item1.GetDestination());
-        } else if (item1.GetType() == typeof(ISpriteEnemy))
+        }
+        else if (item1.GetType() == typeof(Fireball) && item2.GetType() == typeof(ISpriteEnemy))
+        {
+            EnemyFireballInteraction = new EnemyFireballInteraction((Fireball)item1, (ISpriteEnemy)item2);
+        }
+        else if (item2.GetType() == typeof(Fireball) && item1.GetType() == typeof(ISpriteEnemy))
+        {
+            EnemyFireballInteraction = new EnemyFireballInteraction((Fireball)item2, (ISpriteEnemy)item1);
+        }
+        else if (item1.GetType() == typeof(ISpriteEnemy))
         {
             OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item1);
         } else if (item2.GetType() == typeof(ISpriteEnemy))
@@ -37,20 +48,31 @@ public class Sweep
             OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item2);
         }
 
+        else if (item1.GetType() == typeof(Fireball) && item2.GetType() == typeof(ISpriteEnemy))
+        {
+            EnemyFireballInteraction = new EnemyFireballInteraction((Fireball)item1, (ISpriteEnemy)item2);
+        }
 
-
-        if (item1.GetType() == typeof(firePower) && item2.GetType() == typeof(Mario) || item1.GetType() == typeof(Mario) && item1.GetType() == typeof(firePower))
+        if (item1.GetType() == typeof(FirePower) && item2.GetType() == typeof(Mario) || item1.GetType() == typeof(Mario) && item2.GetType() == typeof(FirePower))
         {
             //handle firePower interaction
         }
-        if (item1.GetType() == typeof(MushroomPower) && item2.GetType() == typeof(Mario) || item1.GetType() == typeof(Mario) && item1.GetType() == typeof(MushroomPower))
+        if (item1.GetType() == typeof(MushroomPower) && item2.GetType() == typeof(Mario) || item1.GetType() == typeof(Mario) && item2.GetType() == typeof(MushroomPower))
         {
             //handle mushroomPower interaction
         }
-        if (item1.GetType() == typeof(BlockObject) && item2.GetType() == typeof(Mario) || item1.GetType() == typeof(Mario) && item1.GetType() == typeof(BlockObject))
+        if (item1.GetType() == typeof(BlockObject) && item2.GetType() == typeof(Mario) || item1.GetType() == typeof(Mario) && item2.GetType() == typeof(BlockObject))
         {
             //handle block interaction
             //new BlockInteraction(item1, item2);
+        }
+        if (item1.GetType() == typeof(Fireball) && item2.GetType() == typeof(UnknownBlockSprite))
+        {
+            BlockFireballInteraction = new BlockFireballInteraction((Fireball)item1, (UnknownBlockSprite)item2);
+        }
+        else if (item2.GetType() == typeof(Fireball) && item1.GetType() == typeof(UnknownBlockSprite))
+        {
+            BlockFireballInteraction = new BlockFireballInteraction((Fireball)item2, (UnknownBlockSprite)item1);
         }
         //[...]
     }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Pixel_Plumbers_Fall_2024;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,8 @@ public class Fireball : IProjectile
 
     private FireballSprite sprite;
     private GameTime gameTime;
-    public Fireball(Vector2 marioPosition, Texture2D texture, GameTime gameTime, MarioStateMachine.MarioFaceState direction)
+    private Game1 game;
+    public Fireball(Vector2 marioPosition, Texture2D texture, GameTime gameTime, MarioStateMachine.MarioFaceState direction, Game1 game)
     {
         isBouncing = false;
         pos = marioPosition;
@@ -27,6 +29,7 @@ public class Fireball : IProjectile
         this.gameTime = gameTime;
         bounceTimer = 0;
         goingRight = (direction == MarioStateMachine.MarioFaceState.Right);
+        this.game = game;
     }
     private void Move()
     {
@@ -62,6 +65,11 @@ public class Fireball : IProjectile
         //Call when top/bottom collision with a block
         isBouncing = true;
         bounceTimer = 200;
+    }
+
+    public void Remove()
+    {
+        game.fireballs.Remove(this);
     }
     public void Update(GameTime gameTime)
     {
