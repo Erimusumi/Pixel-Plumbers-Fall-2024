@@ -50,6 +50,7 @@ public class Sweep
         if (item1.GetType() == typeof(BlockObject) && item2.GetType() == typeof(Mario) || item1.GetType() == typeof(Mario) && item1.GetType() == typeof(BlockObject))
         {
             //handle block interaction
+            //new BlockInteraction(item1, item2);
         }
         //[...]
     }
