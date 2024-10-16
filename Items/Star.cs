@@ -14,14 +14,14 @@ public interface IStarObject : IEntity
 
 
 }
-public class starPower : IStarObject
+public class Star : IStarObject
 {
     private Boolean idle;
     private Boolean collected;
     private Boolean roaming;
     private Microsoft.Xna.Framework.Vector2 position;
     private StarPower sp;
-    public starPower()
+    public Star()
     {
         this.idle = false;
         this.collected = false;

@@ -11,7 +11,7 @@ public interface IFireObject : IEntity
     void draw(SpriteBatch sb, Texture2D texture);
 
 }
-public class firePower : IFireObject
+public class Fire : IFireObject
 {
     public Boolean idle;
     public Boolean collected;
@@ -21,7 +21,7 @@ public class firePower : IFireObject
     private int y;
     private FirePower fp;
 
-    public firePower()
+    public Fire()
     {
         this.idle = false;
         this.collected = false;

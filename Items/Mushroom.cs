@@ -13,7 +13,7 @@ public interface IMushroomObject : IEntity
     void draw(SpriteBatch sb, Texture2D texture);
 
 }
-public class mushroomPower : IMushroomObject
+public class Mushroom : IMushroomObject
 {
     public Boolean idle;
     public Boolean collected;
@@ -21,7 +21,7 @@ public class mushroomPower : IMushroomObject
     private Microsoft.Xna.Framework.Vector2 position;
     private MushroomPower mp;
 
-    public mushroomPower()
+    public  Mushroom()
     {
         this.idle = false;
         this.collected = false;
