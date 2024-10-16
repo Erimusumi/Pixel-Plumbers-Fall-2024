@@ -194,9 +194,9 @@ public class Mario : IEntity
 
     public void Draw(SpriteBatch spriteBatch)
     {
-        currentMarioSprite.Draw(spriteBatch, marioPosition);
+        currentMarioSprite.Draw(spriteBatch, marioPosition);a
     }
-
+//asfasfasf
     public void Reset()
     {
         marioPosition = initialPosition;                                                    // Reset Mario's position
