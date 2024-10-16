@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Security.Cryptography.X509Certificates;
-using Microsoft.Xna.Framework;
+using System.Drawing;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Pixel_Plumbers_Fall_2024;
@@ -9,18 +9,16 @@ public class EnemyMarioInteraction
 {
     ISpriteEnemy enemy;
     Mario mario;
-    Rectangle enemyDestination;
-    Rectangle marioDestination;
-    public EnemyMarioInteraction(ISpriteEnemy _enemy, Mario _mario, Rectangle _enemyDestination, Rectangle _marioDestination)
+    Rectangle Overlap;
+    public EnemyMarioInteraction(ISpriteEnemy _enemy, Mario _mario, Rectangle _Overlap)
     {
         enemy = _enemy;
         mario = _mario;
-        enemyDestination = _enemyDestination;
-        marioDestination = _marioDestination;
+        Overlap = _Overlap;
     }
     public void update()
     {
-        if (((int)Math.Abs(enemyDestination.X-marioDestination.X)) >= ((int)Math.Abs(enemyDestination.Y - marioDestination.Y)))
+        if (Overlap.X >= Overlap.Y)
         {
             enemy.beStomped();
             //make mario's velocity y, or slightly negative, so he can sort of bounce off the enemy.

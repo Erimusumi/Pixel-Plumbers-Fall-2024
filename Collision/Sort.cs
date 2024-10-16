@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
-using Microsoft.Xna.Framework;
+using System.Drawing;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Pixel_Plumbers_Fall_2024;
@@ -55,8 +55,8 @@ public class Sort
             for(int j = 1; (j < objects.Count) && (i != j) && (nextX < (camera.X + camera.Width)); j++)
             {
                 next = objects[j].GetDestination();
-                start.Deconstruct(out startX, out sy, out sw, out sh);
-                next.Deconstruct(out nextX, out ny, out nw, out nh);
+                startX = start.X;
+                nextX = next.X;
                 if ((nextX < startX) && (nextX < smallestX))
                 {
                     smallestX = nextX;
