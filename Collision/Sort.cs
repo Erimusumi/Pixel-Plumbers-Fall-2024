@@ -8,14 +8,6 @@ using Pixel_Plumbers_Fall_2024;
 
 public class Sort
 {
-    Rectangle start;
-    Rectangle next;
-    int holdElementNumber = 0;
-    int entered = 0;
-    int startX = 0, sy, sw, sh;
-    int nextX = 0, ny, nw, nh;
-    int smallestX = 0;
-
     public void Remove(List<IEntity> objects, IEntity objToRemove)
     {
         if (!objects.Remove(objToRemove))
@@ -30,11 +22,11 @@ public class Sort
     {
         if (objects.Count != 0)
         {
-            start = objects[0].GetDestination();
-            while ((objects.Count > 0) && (start.X < camera.X))
+            int i = 0;
+            while ((objects.Count > 0) && (objects[i].GetDestination().X < camera.X))
             {
                 objects.RemoveAt(0);
-                start = objects[0].GetDestination();
+                i++;
             }
         }
         return objects;
