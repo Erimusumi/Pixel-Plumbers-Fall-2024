@@ -36,14 +36,9 @@ public class Sweep
         {
             OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item2);
         }
-        //Shouldn't need different methods for different types of enemies,
-        //keep here just in case though
-        /*
-        if (item1.GetType() == typeof(Koopa) && item2.GetType() == typeof(Mario) || item2.GetType() == typeof(Mario) && item1.GetType() == typeof(Koopa))
-        {
-            //handle koopa interaction
-        }
-        */
+
+
+
         if (item1.GetType() == typeof(firePower) && item2.GetType() == typeof(Mario) || item1.GetType() == typeof(Mario) && item1.GetType() == typeof(firePower))
         {
             //handle firePower interaction
