@@ -7,21 +7,20 @@ using System.Threading.Tasks;
 public class StarInteraction
 {
     private Mario mario;
-    private firePower FirePower;
+    private Star star;
 
 
-    public StarInteraction(Mario mar, firePower fp)
+    public StarInteraction(Mario mar, Star s)
     {
-        this.FirePower = fp;
+        this.star = s;
         this.mario = mar;
 
     }
     public void update()
     {
-        Star
-        FirePower.collected = true;
-        FirePower.idle = false;
-        FirePower.roaming = false;
+        star.collected = true;
+        star.roaming = false;
+        star.idle = false;
 
         mario.MarioPowerUp();
     }

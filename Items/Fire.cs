@@ -43,11 +43,11 @@ public class Fire : IFireObject
             this.fp = new FirePower(texture);
             this.fp.Draw(sB, position);
         }
-        else if (this.collected)
+         if (this.collected)
         {
 
         }
-        else if (this.roaming)
+         if (this.roaming)
         {
 
         }

@@ -16,9 +16,9 @@ public interface IStarObject : IEntity
 }
 public class Star : IStarObject
 {
-    private Boolean idle;
-    private Boolean collected;
-    private Boolean roaming;
+    public Boolean idle;
+    public Boolean collected;
+    public Boolean roaming;
     private Microsoft.Xna.Framework.Vector2 position;
     private StarPower sp;
     public Star()
