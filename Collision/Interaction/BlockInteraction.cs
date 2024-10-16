@@ -42,6 +42,12 @@ public class BlockInteraction
                 blockMovingUp = true;
                 blockMoveTimer = 0;
             }
+            // Check if Mario is hitting the top of the block, i.e. standing on it
+            if (marioRect.Bottom >= blockRect.Top && marioRect.Top < blockRect.Top && !MarioIsMovingUp())
+            {
+
+            }
+
         }
 
         // Handle block movement if it was hit
