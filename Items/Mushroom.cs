@@ -4,16 +4,16 @@ using System;
 using System.Numerics;
 using System.Runtime.InteropServices;
 using System.Text;
-public interface IMushroomObject
+public interface IMushroomObject : IEntity
 {
-    void mushroom();
+  
     Boolean idleState();
     Boolean collectedState();
     Boolean roamingState();
     void draw(SpriteBatch sb, Texture2D texture);
 
 }
-public class MushroomObject : IMushroomObject
+public class mushroomPower : IMushroomObject
 {
     public Boolean idle;
     public Boolean collected;
@@ -21,7 +21,7 @@ public class MushroomObject : IMushroomObject
     private Microsoft.Xna.Framework.Vector2 position;
     private MushroomPower mp;
 
-    public void mushroom()
+    public mushroomPower()
     {
         this.idle = false;
         this.collected = false;

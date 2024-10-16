@@ -5,7 +5,6 @@ using System.Numerics;
 using System.Runtime.InteropServices;
 public interface IStarObject : IEntity
 {
-    void star();
     Boolean idleState();
     Boolean collectedState();
     Boolean roamingState();
@@ -15,14 +14,14 @@ public interface IStarObject : IEntity
 
 
 }
-public class StarObject : IStarObject
+public class starPower : IStarObject
 {
     private Boolean idle;
     private Boolean collected;
     private Boolean roaming;
     private Microsoft.Xna.Framework.Vector2 position;
     private StarPower sp;
-    public void star()
+    public starPower()
     {
         this.idle = false;
         this.collected = false;
