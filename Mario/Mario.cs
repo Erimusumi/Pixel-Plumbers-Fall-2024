@@ -199,9 +199,9 @@ public class Mario : IEntity
         }
         if (marioStateMachine.CurrentGameState == MarioStateMachine.MarioGameState.Fire)
         {
-            Fireball f = new Fireball(marioPosition, game.ItemsTexture, gameTime, marioStateMachine.CurrentFaceState);
+            Fireball f = new Fireball(marioPosition, game.ItemsTexture, gameTime, marioStateMachine.CurrentFaceState, game);
             game.fireballs.Add(f);
-            fireballTimer = 30;
+            fireballTimer = 20;
         }
     }
 
@@ -231,16 +231,6 @@ public class Mario : IEntity
     public Rectangle GetDestination()
     {
         return currentMarioSprite.GetDestination(marioPosition);
-    }
-
-    public Vector2 GetVelocity()
-    {
-        return marioVelocity;
-    }
-
-    public void SetVelocity(Vector2 newVelocity)
-    {
-        marioVelocity = newVelocity;
     }
 
     public MarioStateMachine.MarioGameState GetMarioGameState()
