@@ -9,6 +9,7 @@ public class StaticBlockSprite: ISprite
 {
     public Texture2D texture { get; set; }
     public Rectangle rectangle { get; set; }
+    private Rectangle destinationRectangle;
     public StaticBlockSprite(Texture2D texture, Rectangle sourceRectangle)
     {
         this.texture = texture;
@@ -24,6 +25,10 @@ public class StaticBlockSprite: ISprite
         spriteBatch.Begin();
         spriteBatch.Draw(texture, destinationRectangle, rectangle, Color.White);
         spriteBatch.End();
+    }
+    public Rectangle GetDestination()
+    {
+        return destinationRectangle;
     }
     public void Load(GraphicsDeviceManager graphics)
     {

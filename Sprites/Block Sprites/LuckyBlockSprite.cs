@@ -16,6 +16,7 @@ public class LuckyBlockSprite: ISprite
     private int width;
     private int height;
     private int currentFrame;
+    private Rectangle destinationRectangle;
     public LuckyBlockSprite(Texture2D texture, int frames, int wait)
     {
         Texture = texture;
@@ -51,6 +52,10 @@ public class LuckyBlockSprite: ISprite
         spriteBatch.Begin();
         spriteBatch.Draw(Texture, destinationRectangle, sourceRectangle, Color.White);
         spriteBatch.End();
+    }
+    public Rectangle GetDestination()
+    {
+        return destinationRectangle;
     }
     public void Load(GraphicsDeviceManager graphics)
     {

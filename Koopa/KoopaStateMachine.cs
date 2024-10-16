@@ -102,7 +102,13 @@ public class KoopaStateMachine
         }
 
     }
-	public void Draw(SpriteBatch sb, Texture2D Texture)
+
+	public Rectangle GetDestination()
+	{
+		return _sprite.GetDestination();
+    }
+
+    public void Draw(SpriteBatch sb, Texture2D Texture)
 	{
 		_sprite.Draw(sb, Texture);
 	}

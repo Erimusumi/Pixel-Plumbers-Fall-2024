@@ -30,7 +30,7 @@ public class KeyboardController : IController
                 KeyBinds[key].Execute();
             }
         }
-        
+
         previousKeyState = state;
     }
 }

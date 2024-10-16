@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Pixel_Plumbers_Fall_2024;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,32 +20,44 @@ public class Fireball : IProjectile
 
     private FireballSprite sprite;
     private GameTime gameTime;
-    public Fireball(Vector2 marioPosition, Texture2D texture, GameTime gameTime, bool goingRight)
+    private Game1 game;
+    public Fireball(Vector2 marioPosition, Texture2D texture, GameTime gameTime, MarioStateMachine.MarioFaceState direction, Game1 game)
     {
         isBouncing = false;
         pos = marioPosition;
         sprite = new FireballSprite(texture);
         this.gameTime = gameTime;
-        this.goingRight = goingRight;
+        bounceTimer = 0;
+        goingRight = (direction == MarioStateMachine.MarioFaceState.Right);
+        this.game = game;
     }
     private void Move()
     {
         if (goingRight)
         {
             //If mario was facing right when shooting, move to the right
+            pos.X += 1;
         }
         else
         {
             //Same as above, but for left
+            pos.X += -1;
         }
 
         if (isBouncing)
         {
             //Move up some
+            pos.Y += -1;
+            bounceTimer += -5;
+            if (bounceTimer <= 0)
+            {
+                isBouncing = false;
+            }
         }
         else
         {
             //Move down some
+            pos.Y += 1;
         }
     }
     public void Bounce()
@@ -53,7 +66,12 @@ public class Fireball : IProjectile
         isBouncing = true;
         bounceTimer = 200;
     }
-    public void Update()
+
+    public void Remove()
+    {
+        game.fireballs.Remove(this);
+    }
+    public void Update(GameTime gameTime)
     {
         this.Move();
         sprite.Update(gameTime);
@@ -62,5 +80,11 @@ public class Fireball : IProjectile
     public void Draw(SpriteBatch sb)
     {
         sprite.Draw(sb, pos);
+    }
+
+    public Rectangle GetDestination()
+    {
+        //All fireball sprites are 8*8
+        return new Rectangle((int)pos.X, (int)pos.Y, 8, 8);
     }
 }

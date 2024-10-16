@@ -20,7 +20,7 @@ public class MovingRightFireMario : IMarioSprite
         FrameRectangles = new Rectangle[3];
         FrameRectangles[0] = new Rectangle(237, 122, 16, 32); // Frame 1
         FrameRectangles[1] = new Rectangle(263, 122, 14, 31); // Frame 2
-        FrameRectangles[2] = new Rectangle(312, 122, 16, 30);  // Frame 3
+        FrameRectangles[2] = new Rectangle(287, 122, 16, 30);  // Frame 3
 
         previousAnimationIndex = 2;
         currentAnimationIndex = 1;
@@ -43,5 +43,17 @@ public class MovingRightFireMario : IMarioSprite
 
         previousAnimationIndex = currentAnimationIndex;
         GameTicks = 0;
+    }
+
+    public Rectangle GetDestination(Vector2 position)
+    {
+        switch (currentAnimationIndex)
+        {
+            case 0: return new Rectangle((int)position.X, (int)position.Y, 16, 32);
+            case 1: return new Rectangle((int)position.X, (int)position.Y, 14, 31);
+            case 2:
+            default: return new Rectangle((int)position.X, (int)position.Y, 16, 30);
+        }
+
     }
 }

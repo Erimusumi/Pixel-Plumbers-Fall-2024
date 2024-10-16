@@ -46,4 +46,16 @@ public class MovingLeftSmallMario : IMarioSprite
             GameTicks = 0;
         }
     }
+
+    public Rectangle GetDestination(Vector2 position)
+    {
+        switch (currentAnimationIndex)
+        {
+            case 0: return new Rectangle((int)position.X, (int)position.Y, 14, 15);
+            case 1: return new Rectangle((int)position.X, (int)position.Y, 14, 15);
+            case 2:
+            default: return new Rectangle((int)position.X, (int)position.Y, 14, 15);
+        }
+
+    }
 }

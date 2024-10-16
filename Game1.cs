@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 namespace Pixel_Plumbers_Fall_2024;
 
 public class Game1 : Game
@@ -17,9 +18,10 @@ public class Game1 : Game
     private CommandControlCenter controlCenter;
 
 
-    // public IMario Mario;
-    // The New Mario
     private Mario mario;
+    private PlayerMovementController marioMovementController;
+    private PlayerCommandControlCenter playerCommandControlCenter;
+
 
     //Enemy Code
     public ISpriteEnemy spriteEnemy;
@@ -53,8 +55,21 @@ public class Game1 : Game
     private ISprite OWBrickBlockSprite;
     private ISprite OWBrokenBrickSprite;
 
+    //Fireballs
+    public List<Fireball> fireballs = new List<Fireball>();
+
+    private ISprite StartText;
+    private SpriteFont MyFont;
+
+    private List<IEntity> entities = new List<IEntity>();
+    private Sort sort = new Sort();
+
+
     // reset instances
     public Vector2 initial_mario_position;
+    private bool gameStarted = false;
+    private bool gamePaused = false;
+    private bool gameReset = true;
 
     // private IdleMarioCommand idleMarioCommand;
     public Game1()
@@ -64,6 +79,17 @@ public class Game1 : Game
         IsMouseVisible = true;
     }
 
+    private void ResetGame()
+    {
+        spriteEnemy = new Goomba(); // Create a new Goomba object
+        controlG = new GoombaCommand(spriteEnemy); // Reset Goomba's control command
+        currentItem = 0;
+        index1 = 0;
+        index2 = 0;
+        fireballs.Clear();
+        gameReset = false;  // Ensure reset only happens once per key press
+    }
+
     protected override void Initialize()
     {
         base.Initialize();
@@ -71,14 +97,12 @@ public class Game1 : Game
 
         keyboardController = new KeyboardController();
         keyboardControllerMovement = new KeyboardControllerMovement();
-        mario = new Mario(marioTexture, gameTime);
+
 
         spriteEnemy = new Goomba();
         controlG = new GoombaCommand(spriteEnemy);
 
-        controlCenter = new CommandControlCenter(this, marioTexture, mario);
-
-        // idleMarioCommand = new IdleMarioCommand(this, marioTexture);
+        controlCenter = new CommandControlCenter(this);
 
         //Make a first list for block iteration
         sprite1 = new List<ISprite>
@@ -132,26 +156,26 @@ public class Game1 : Game
         marioTexture = Content.Load<Texture2D>("mario");
         EnemyTexture = Content.Load<Texture2D>("enemies");
         ItemsTexture = Content.Load<Texture2D>("itemsAndPowerups");
+        MyFont = Content.Load<SpriteFont>("MyFont");
+        StartText = new StartScreenText(MyFont);
+
         block = Content.Load<Texture2D>("blocks");
         obstacle = Content.Load<Texture2D>("obstacle");
 
+        mario = new Mario(marioTexture, gameTime, this);
+        marioMovementController = new PlayerMovementController();
+        playerCommandControlCenter = new PlayerCommandControlCenter(mario, marioMovementController);
 
-        //reset instances initialization
-
-        //currentMarioState = MarioState.Big;
+        // Reset instances initialization
 
         firePower = new FirePower(ItemsTexture);
         starPower = new StarPower(ItemsTexture);
 
-        // lucky block sprites
+        // Initialize block and obstacle sprites
         OWLuckyBlockSprite = new LuckyBlockSprite(block, 3, 20);
-        // used block sprites
         OWUsedBlockSprite = new StaticBlockSprite(block, new Rectangle(128, 112, 16, 16));
-        // brick block sprites
         OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
-        // broken brick block sprites
-        OWBrokenBrickSprite = new BrokenBrickBlockSprite(block, 4, 1);
-        // obstacle sprites
+        OWBrokenBrickSprite = new UnknownBlockSprite(block, 4, 1);
         obstacle1 = new obstacle1(obstacle);
         obstacle2 = new obstacle2(obstacle);
         obstacle3 = new obstacle3(obstacle);
@@ -160,27 +184,70 @@ public class Game1 : Game
 
     protected override void Update(GameTime gameTime)
     {
-        keyboardController.Update();
-        keyboardControllerMovement.Update();
 
-
-
-        // lucky block sprites
-        OWLuckyBlockSprite.Update(gameTime);
-        // broken brick block sprites
-        if (IsActive)
+        if (Keyboard.GetState().IsKeyDown(Keys.D0))
         {
-            OWBrokenBrickSprite.Update(gameTime);
+            gameStarted = true;
+        }
+        if (Keyboard.GetState().IsKeyDown(Keys.D8))
+        {
+            if (gamePaused)
+            {
+                gamePaused = false;
+            }
+            else
+            {
+                gamePaused = true;
+            }
+        }
+        if (gamePaused)
+        {
+            return;
         }
 
-        spriteEnemy.Updates();
-        controlG.Update();
-        manager.updateCurrentItem(ref currentItem, numItems);
+        if (Keyboard.GetState().IsKeyDown(Keys.D9))
+        {
+            gameReset = true;
+            gameStarted = false;
+        }
 
-        //Update block and obstacle sprites
-        sprite1[index1].Update(gameTime);
-        sprite2[index2].Update(gameTime);
-        mario.Update(gameTime);
+        if (gameReset)
+        {
+            ResetGame();
+        }
+
+        if (gameStarted)
+        {
+            keyboardController.Update();
+            keyboardControllerMovement.Update();
+
+            marioMovementController.Update();
+
+            // Update Mario's state
+            mario.Update(gameTime);
+
+
+            // lucky block sprites
+            OWLuckyBlockSprite.Update(gameTime);
+            // broken brick block sprites
+            if (IsActive)
+            {
+                OWBrokenBrickSprite.Update(gameTime);
+            }
+
+            spriteEnemy.Updates();
+            controlG.Update();
+            manager.updateCurrentItem(ref currentItem, numItems);
+
+            //Update block and obstacle sprites
+            sprite1[index1].Update(gameTime);
+            sprite2[index2].Update(gameTime);
+
+            foreach (var item in fireballs)
+            {
+                item.Update(gameTime);
+            }
+        }
 
         base.Update(gameTime);
     }
@@ -189,16 +256,34 @@ public class Game1 : Game
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
 
-        // mari and enemy
-        spriteEnemy.Draw(spriteBatch, EnemyTexture);
-        spriteBatch.Begin();
-        mario.Draw(spriteBatch);
-        manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
-        spriteBatch.End();
+        if (gameStarted)
+        {
+            // mari and enemy
+            spriteEnemy.Draw(spriteBatch, EnemyTexture);
+            spriteBatch.Begin();
+            mario.Draw(spriteBatch);
+            manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
 
-        // Draw blocks and obstacles
-        sprite1[index1].Draw(spriteBatch, new Vector2(200, 200));
-        sprite2[index2].Draw(spriteBatch, new Vector2(310, 150));
+            foreach (var item in fireballs)
+            {
+                item.Draw(spriteBatch);
+            }
+
+            spriteBatch.End();
+
+            // Draw blocks and obstacles
+            sprite1[index1].Draw(spriteBatch, new Vector2(200, 200));
+            sprite2[index2].Draw(spriteBatch, new Vector2(310, 150));
+
+            
+        }
+        else
+        {
+            spriteBatch.Begin();
+            StartText.Draw(spriteBatch, new Vector2(200, 200));
+
+            spriteBatch.End();
+        }
 
         base.Draw(gameTime);
     }

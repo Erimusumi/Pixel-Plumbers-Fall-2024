@@ -30,7 +30,7 @@ public class KeyboardControllerMovement : IController
                 KeyBinds[key].Execute();
             }
         }
-        
+
         previousKeyState = state;
     }
 }

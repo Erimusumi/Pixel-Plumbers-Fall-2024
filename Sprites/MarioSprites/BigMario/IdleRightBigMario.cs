@@ -1,10 +1,11 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public class IdleRightBigtMario : IMarioSprite
+public class IdleRightBigMario : IMarioSprite
 {
+    private Vector2 _position;
     private Texture2D MarioTexture;
-    public IdleRightBigtMario(Texture2D MarioTexture)
+    public IdleRightBigMario(Texture2D MarioTexture)
     {
         this.MarioTexture = MarioTexture;
     }
@@ -19,4 +20,9 @@ public class IdleRightBigtMario : IMarioSprite
     {
 
     }
+    public Rectangle GetDestination(Vector2 position)
+    {
+        return new Rectangle((int)_position.X, (int)_position.Y, 16, 32);
+    }
+    
 }

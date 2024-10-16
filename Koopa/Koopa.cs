@@ -32,8 +32,13 @@ public class Koopa : ISpriteEnemy
 	{
 		stateMachine.Update();
 	}
+	public Rectangle GetDestination()
+	{
+		return stateMachine.GetDestination();
 
-	public void Draw(SpriteBatch sb, Texture2D Texture)
+    }
+
+    public void Draw(SpriteBatch sb, Texture2D Texture)
 	{
         stateMachine.Draw(sb, Texture);
     }

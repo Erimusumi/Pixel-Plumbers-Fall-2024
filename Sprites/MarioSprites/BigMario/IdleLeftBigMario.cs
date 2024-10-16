@@ -17,4 +17,9 @@ public class IdleLeftBigMario : IMarioSprite
     public void Update(GameTime gametime)
     {
     }
+
+    public Rectangle GetDestination(Vector2 position)
+    {
+        return new Rectangle((int)position.X, (int)position.Y, 16, 32);
+    }
 }
