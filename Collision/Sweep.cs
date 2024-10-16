@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
+using Microsoft.Xna.Framework;
 using System.Linq;
 using System.Reflection.Metadata;
 using System.Security.AccessControl;
@@ -24,7 +24,7 @@ public class Sweep
         IEntity item1 = entities[index1];
         IEntity item2 = entities[index2];
         Rectangle overlap = item1.GetDestination();
-        overlap.Intersect(item2.GetDestination());
+        //soverlap.Intersect(item2.GetDestination());
 
         if (item1.GetType() == typeof(ISpriteEnemy) && item2.GetType() == typeof(Mario))
         {
@@ -42,7 +42,7 @@ public class Sweep
 
 
 
-        if (item1.GetType() == typeof(firePower) && item2.GetType() == typeof(Mario) || item1.GetType() == typeof(Mario) && item1.GetType() == typeof(firePower))
+        if (item1.GetType() == typeof(FirePower) && item2.GetType() == typeof(Mario) || item1.GetType() == typeof(Mario) && item1.GetType() == typeof(FirePower))
         {
             //handle firePower interaction
         }
