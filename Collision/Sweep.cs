@@ -23,12 +23,15 @@ public class Sweep
         /*Should determine the interactionType of two entities and call the appropriate method */
         IEntity item1 = entities[index1];
         IEntity item2 = entities[index2];
+        Rectangle overlap = item1.GetDestination();
+        overlap.Intersect(item2.GetDestination());
+
         if (item1.GetType() == typeof(ISpriteEnemy) && item2.GetType() == typeof(Mario))
         {
-            EnemyMarioInteraction = new EnemyMarioInteraction((ISpriteEnemy)item1, (Mario)item2, item1.GetDestination(), item2.GetDestination());
+            EnemyMarioInteraction = new EnemyMarioInteraction((ISpriteEnemy)item1, (Mario)item2, overlap);
         } else if (item1.GetType() == typeof(Mario) && item2.GetType() == typeof(ISpriteEnemy))
         {
-            EnemyMarioInteraction = new EnemyMarioInteraction((ISpriteEnemy)item2, (Mario)item1, item2.GetDestination(), item1.GetDestination());
+            EnemyMarioInteraction = new EnemyMarioInteraction((ISpriteEnemy)item2, (Mario)item1, overlap);
         } else if (item1.GetType() == typeof(ISpriteEnemy))
         {
             OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item1);
