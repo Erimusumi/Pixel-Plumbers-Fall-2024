@@ -37,7 +37,7 @@ public class EnemySwitch : ICommand
                     commandType = CommandType.CheepGreenCommand;
                     break;
                 case CommandType.CheepGreenCommand:
-                    game1.SetEnemyCommand(new GoombaCommand(game1.SetEnemy(new Goomba())));
+                    game1.SetEnemyCommand(new GoombaCommand(game1.SetEnemy(new Goomba(480, 400))));
                     commandType = CommandType.GoombaCommand;
                     break;
             }
@@ -49,7 +49,7 @@ public class EnemySwitch : ICommand
                     commandType = CommandType.CheepGreenCommand;
                     break;
                 case CommandType.CheepRedCommand:
-                    game1.SetEnemyCommand(new GoombaCommand(game1.SetEnemy(new Goomba())));
+                    game1.SetEnemyCommand(new GoombaCommand(game1.SetEnemy(new Goomba(480, 400))));
                     commandType = CommandType.GoombaCommand;
                     break;
                 case CommandType.KoopaCommand:

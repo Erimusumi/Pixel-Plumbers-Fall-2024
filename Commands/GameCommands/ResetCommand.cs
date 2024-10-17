@@ -18,8 +18,8 @@ public class resetCommand : ICommand
         g.currentItem = 0;
 
         // Reset enemies (if applicable)
-        g.spriteEnemy = new Goomba(); // or whichever enemy you are using
-        g.controlG = new GoombaCommand(new Goomba()); // Reset enemy control
+        g.spriteEnemy = new Goomba(480, 400); // or whichever enemy you are using
+        g.controlG = new GoombaCommand(new Goomba(480, 400)); // Reset enemy control
 
         // Reset blocks and obstacles
         g.index1 = 0;

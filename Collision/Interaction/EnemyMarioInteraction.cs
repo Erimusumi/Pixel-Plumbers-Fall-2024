@@ -16,7 +16,7 @@ public class EnemyMarioInteraction
         mario = _mario;
         Overlap = _Overlap;
     }
-    public void update()
+    public void Update()
     {
         if (Overlap.X >= Overlap.Y)
         {

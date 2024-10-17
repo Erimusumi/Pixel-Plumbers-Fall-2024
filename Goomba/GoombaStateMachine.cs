@@ -11,9 +11,9 @@ public class GoombaStateMachine
 	private GoombaState _currentState = GoombaState.Left;
 	private GoombaSprites _sprite;
 
-	public GoombaStateMachine()
+	public GoombaStateMachine(int posX, int posY)
 	{
-		_sprite = new GoombaSprites();
+		_sprite = new GoombaSprites(posX, posY);
 	}
     public void changeDirection()
 	{

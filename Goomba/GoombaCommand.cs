@@ -17,6 +17,7 @@ public class GoombaCommand : IController
 
     public void Update()
     {
+        /*
         count++;
         if (count % 50 == 0)
         {
@@ -34,6 +35,6 @@ public class GoombaCommand : IController
         {
             count = 0;
         }
-
+        */
     }
 }

@@ -26,6 +26,8 @@ public class Game1 : Game
     //Enemy Code
     public ISpriteEnemy spriteEnemy;
     public IController controlG;
+    public ISpriteEnemy spriteEnemy2;
+    public IController controlG2;
     Texture2D EnemyTexture;
 
     public Texture2D ItemsTexture;
@@ -63,7 +65,7 @@ public class Game1 : Game
 
     private List<IEntity> entities = new List<IEntity>();
     private Sort sort = new Sort();
-
+    private Sweep sweep = new Sweep();
 
     // reset instances
     public Vector2 initial_mario_position;
@@ -81,8 +83,12 @@ public class Game1 : Game
 
     private void ResetGame()
     {
-        spriteEnemy = new Goomba(); // Create a new Goomba object
+        spriteEnemy = new Goomba(480, 400); // Create a new Goomba object
+        spriteEnemy2 = new Goomba2(240, 400);
+        entities.Add(spriteEnemy2);
+        entities.Add(spriteEnemy);
         controlG = new GoombaCommand(spriteEnemy); // Reset Goomba's control command
+        controlG2 = new GoombaCommand(spriteEnemy2);
         currentItem = 0;
         index1 = 0;
         index2 = 0;
@@ -99,8 +105,8 @@ public class Game1 : Game
         keyboardControllerMovement = new KeyboardControllerMovement();
 
 
-        spriteEnemy = new Goomba();
-        controlG = new GoombaCommand(spriteEnemy);
+        //spriteEnemy = new Goomba(480, 400);
+        //controlG = new GoombaCommand(spriteEnemy);
 
         controlCenter = new CommandControlCenter(this);
 
@@ -184,7 +190,8 @@ public class Game1 : Game
 
     protected override void Update(GameTime gameTime)
     {
-
+        //List<IEntity> temp = entities;
+        //entities = sort.SortList(entities, entities.Count, temp);
         if (Keyboard.GetState().IsKeyDown(Keys.D0))
         {
             gameStarted = true;
@@ -236,7 +243,9 @@ public class Game1 : Game
             }
 
             spriteEnemy.Updates();
+            spriteEnemy2.Updates();
             controlG.Update();
+
             manager.updateCurrentItem(ref currentItem, numItems);
 
             //Update block and obstacle sprites
@@ -246,6 +255,10 @@ public class Game1 : Game
             foreach (var item in fireballs)
             {
                 item.Update(gameTime);
+            }
+            if (entities[0].GetDestination().Intersects(entities[1].GetDestination()))
+            {
+                //sweep.handleInteraction(entities, 0, 1);
             }
         }
 
@@ -260,6 +273,7 @@ public class Game1 : Game
         {
             // mari and enemy
             spriteEnemy.Draw(spriteBatch, EnemyTexture);
+            spriteEnemy2.Draw(spriteBatch, EnemyTexture);
             spriteBatch.Begin();
             mario.Draw(spriteBatch);
             manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);

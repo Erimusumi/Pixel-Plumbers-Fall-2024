@@ -32,10 +32,13 @@ public class Sweep
         } else if (item1.GetType() == typeof(ISpriteEnemy))
         {
             OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item1);
-        } else if (item2.GetType() == typeof(ISpriteEnemy))
+        } 
+        /*
+        else if (item2.GetType() == typeof(ISpriteEnemy))
         {
             OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item2);
         }
+        */
 
 
 
