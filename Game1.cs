@@ -235,6 +235,7 @@ public class Game1 : Game
         if (gameReset)
         {
             ResetGame();
+            System.Diagnostics.Debug.WriteLine("");
         }
 
         if (gameStarted)

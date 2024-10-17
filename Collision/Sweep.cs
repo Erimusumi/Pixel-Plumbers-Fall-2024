@@ -12,6 +12,18 @@ public class Sweep
 {
     public enum CollisionType { Top, Bottom, Left, Right, DontCare };
 
+    private Boolean ContainsEnemy(List<IEntity> entities, int index)
+    {
+        Boolean containsEnemy = false;
+        Type type = entities[index].GetType();
+        if (type == typeof(Goomba) || type == typeof(Goomba2) || type == typeof(Koopa) || type == typeof(Cheeps))
+        {
+            containsEnemy = true;
+        }
+        return containsEnemy;
+    }
+
+
     EnemyMarioInteraction EnemyMarioInteraction;
     OtherEnemyInteraction OtherEnemyInteraction;
     EnemyFireballInteraction EnemyFireballInteraction;
@@ -28,20 +40,20 @@ public class Sweep
         IEntity item2 = entities[index2];
 
         //System.Diagnostics.Debug.WriteLine(item1.GetType() == typeof(Goomba));
-        if (item1.GetType() == typeof(ISpriteEnemy) && item2.GetType() == typeof(Mario))
+        if (ContainsEnemy(entities, index1) && item2.GetType() == typeof(Mario))
         {
             EnemyMarioInteraction = new EnemyMarioInteraction((ISpriteEnemy)item1, (Mario)item2, Rectangle.Intersect(item1.GetDestination(), item2.GetDestination()));
         }
-        else if (item1.GetType() == typeof(Mario) && item2.GetType() == typeof(ISpriteEnemy))
+        else if (item1.GetType() == typeof(Mario) && ContainsEnemy(entities, index2))
         {
             EnemyMarioInteraction = new EnemyMarioInteraction((ISpriteEnemy)item2, (Mario)item1, Rectangle.Intersect(item1.GetDestination(), item2.GetDestination()));
         }
-        if (item1.GetType() == typeof(Goomba2) && item2.GetType() != typeof(Mario))
+        if (ContainsEnemy(entities, index1) && item2.GetType() != typeof(Mario))
         {
             OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item1, item2);
             OtherEnemyInteraction.update();
         }
-        if (item2.GetType() == typeof(Goomba) && item1.GetType() != typeof(Mario))
+        if (ContainsEnemy(entities, index2) && item1.GetType() != typeof(Mario))
         {
             OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item2, item1);
             OtherEnemyInteraction.update();
