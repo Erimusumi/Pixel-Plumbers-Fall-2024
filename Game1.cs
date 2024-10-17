@@ -93,7 +93,7 @@ public class Game1 : Game
         entities.Clear();
         spriteEnemy = new Goomba(480, 400); // Create a new Goomba object
         spriteEnemy2 = new Goomba2(240, 400);
-        spriteEnemy = new Koopa();
+        spriteEnemy = new Koopa(480, 400);
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
        

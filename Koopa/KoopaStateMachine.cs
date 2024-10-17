@@ -13,9 +13,9 @@ public class KoopaStateMachine
 	private KoopaSprites _sprite;
 	private Boolean _isMovingShell = false;
 
-	public KoopaStateMachine()
+	public KoopaStateMachine(int posX, int posY)
 	{
-		_sprite = new KoopaSprites();
+		_sprite = new KoopaSprites(posX, posY);
 	}
 	public Boolean IsMovingShell()
 	{
