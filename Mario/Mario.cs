@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Pixel_Plumbers_Fall_2024;
 
@@ -22,6 +23,8 @@ public class Mario : IEntity
     private bool canPowerUp = true;
     private bool canTakeDamage = true;
 
+    private int starTimer;
+
     private const float maxSpeed = 3f;
     private const float acceleration = 0.03f;
 
@@ -39,6 +42,7 @@ public class Mario : IEntity
         this.gameTime = gametime;
         marioPosition = initialPosition;
         fireballTimer = 0;
+        starTimer = 0;
 
         currentMarioSprite = new IdleRightSmallMario(marioTexture);
         this.game = game;
@@ -118,7 +122,7 @@ public class Mario : IEntity
         }
     }
 
-    private void ApplyGravity(GameTime gameTime)
+    public void ApplyGravity(GameTime gameTime)
     {
         if (!isOnGround)
         {
@@ -216,6 +220,8 @@ public class Mario : IEntity
         currentMarioSprite = MarioSpriteMachine.UpdateMarioSprite(marioStateMachine, marioTexture);
         currentMarioSprite.Update(gameTime);
         fireballTimer += -1;
+        starTimer += -1;
+        this.RemoveStar();
     }
 
     public void Draw(SpriteBatch spriteBatch)
@@ -242,4 +248,23 @@ public class Mario : IEntity
         return marioStateMachine.CurrentGameState;
     }
 
+    public bool HasStar()
+    {
+        return marioStateMachine.HasStar;
+    }
+
+    public void CollectStar()
+    {
+        starTimer = 300;
+        marioStateMachine.SetStar();
+    }
+
+    public void RemoveStar()
+    {
+        if (this.HasStar() && starTimer <= 0)
+        {
+            marioStateMachine.RemoveStar();
+        }
+    }
+    
 }

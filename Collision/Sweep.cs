@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using Microsoft.Xna.Framework;
+//using System.Drawing;
 using System.Linq;
 using System.Reflection.Metadata;
 using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Xna.Framework;
 using Pixel_Plumbers_Fall_2024;
 
 public class Sweep
@@ -22,12 +23,24 @@ public class Sweep
         /*Should determine the interactionType of two entities and call the appropriate method */
         IEntity item1 = entities[index1];
         IEntity item2 = entities[index2];
+        overlap.Intersect(item2.GetDestination());
 
         if (item1.GetType() == typeof(ISpriteEnemy) && item2.GetType() == typeof(Mario))
         {
             EnemyMarioInteraction = new EnemyMarioInteraction((ISpriteEnemy)item1, (Mario)item2, Rectangle.Intersect(item1.GetDestination(), item2.GetDestination()));
         } else if (item1.GetType() == typeof(Mario) && item2.GetType() == typeof(ISpriteEnemy))
         {
+            EnemyMarioInteraction = new EnemyMarioInteraction((ISpriteEnemy)item2, (Mario)item1, overlap);
+        }
+        else if (item1.GetType() == typeof(Fireball) && item2.GetType() == typeof(ISpriteEnemy))
+        {
+            EnemyFireballInteraction = new EnemyFireballInteraction((Fireball)item1, (ISpriteEnemy)item2);
+        }
+        else if (item2.GetType() == typeof(Fireball) && item1.GetType() == typeof(ISpriteEnemy))
+        {
+            EnemyFireballInteraction = new EnemyFireballInteraction((Fireball)item2, (ISpriteEnemy)item1);
+        }
+        else if (item1.GetType() == typeof(ISpriteEnemy))
             EnemyMarioInteraction = new EnemyMarioInteraction((ISpriteEnemy)item2, (Mario)item1, Rectangle.Intersect(item1.GetDestination(), item2.GetDestination()));
         } else if (item1.GetType() == typeof(ISpriteEnemy))
         {
