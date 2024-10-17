@@ -95,6 +95,7 @@ public class Game1 : Game
         spriteEnemy2 = new Goomba2(240, 400);
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
+       
         controlG = new GoombaCommand(spriteEnemy); // Reset Goomba's control command
         controlG2 = new GoombaCommand(spriteEnemy2);
         currentItem = 0;
@@ -117,6 +118,7 @@ public class Game1 : Game
         spriteEnemy2 = new Goomba2(240, 400);
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
+        
         controlG = new GoombaCommand(spriteEnemy);
         controlG2 = new GoombaCommand(spriteEnemy2);
 
@@ -151,7 +153,7 @@ public class Game1 : Game
         index2 = 0;
 
         //Item initialization
-         //f = new Fire(spriteBatch, ItemsTexture, new Vector2(440,190));
+        f = new Fire(spriteBatch, ItemsTexture, new Vector2(440,190));
         s = new Star(spriteBatch, ItemsTexture, new Vector2(440, 190));
 
     }
