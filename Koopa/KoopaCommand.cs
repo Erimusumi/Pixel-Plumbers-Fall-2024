@@ -18,6 +18,7 @@ public class KoopaCommand : IController
 
     public void Update()
     {
+        /*
         count++;
         
         if ((count % 50 == 0) && (count < 175))
@@ -51,6 +52,7 @@ public class KoopaCommand : IController
         {
             count = 0;
         }
+        */
 
     }
 }

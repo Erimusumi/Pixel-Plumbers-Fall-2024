@@ -10,11 +10,17 @@ public class GoombaStateMachine
 	private enum GoombaState {Left, Right, Stomped, Flipped};
 	private GoombaState _currentState = GoombaState.Left;
 	private GoombaSprites _sprite;
+	private Boolean _isFlipped = false;
 
 	public GoombaStateMachine(int posX, int posY)
 	{
 		_sprite = new GoombaSprites(posX, posY);
 	}
+
+    public Boolean IsFlipped()
+    {
+        return _isFlipped;
+    }
     public void changeDirection()
 	{
 		switch (_currentState)

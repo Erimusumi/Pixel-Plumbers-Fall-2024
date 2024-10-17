@@ -91,9 +91,10 @@ public class Game1 : Game
         entities.Clear();
         spriteEnemy = new Goomba(480, 400); // Create a new Goomba object
         spriteEnemy2 = new Goomba2(240, 400);
+        spriteEnemy = new Koopa();
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
-        controlG = new GoombaCommand(spriteEnemy); // Reset Goomba's control command
+        //controlG = new GoombaCommand(spriteEnemy); // Reset Goomba's control command
         controlG2 = new GoombaCommand(spriteEnemy2);
         currentItem = 0;
         index1 = 0;

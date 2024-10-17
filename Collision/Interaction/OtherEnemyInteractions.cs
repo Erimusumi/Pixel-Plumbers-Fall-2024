@@ -10,23 +10,23 @@ public class OtherEnemyInteraction
     ISpriteEnemy enemy;
     IEntity item2;
     Mario mario;
+    int count = 0;
     public OtherEnemyInteraction(ISpriteEnemy _enemy, IEntity _item2)
     {
         enemy = _enemy;
         item2 = _item2;
     }
-    public void update()
+    public void Update()
     {
-        if (item2.GetType() == typeof(ISpriteEnemy) && item2.GetType().GetType() == typeof(Koopa))
-        {
-            Koopa temp = (Koopa)item2;
-            if (temp.IsMovingShell())
-            {
-                enemy.beFlipped();
-            }
-        }
-        //System.Diagnostics.Debug.WriteLine("Got Here");
         enemy.changeDirection();
+
+        if (item2.GetType() == typeof(Koopa))
+        {
+            enemy.beFlipped();
+            Koopa hold = (Koopa)item2;
+            hold.changeDirection();
+        }
+        
     }
 }
 

@@ -12,7 +12,10 @@ public class Goomba : ISpriteEnemy
 	{
 		stateMachine = new GoombaStateMachine(posX, posY);
 	}
-
+	public Boolean IsFlipped()
+	{
+		return stateMachine.IsFlipped();
+	}
 	public void changeDirection()
 	{
 		stateMachine.changeDirection();

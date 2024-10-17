@@ -1,9 +1,1 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/kamau/Downloads/CSE3902/Marrrrrrio/Content/blocks.gif","C:/Users/kamau/Downloads/CSE3902/Marrrrrrio/Content/bin/DesktopGL/Content/obstacle.xnb","TextureProcessor","Texture2DContent",14122,1560241,0.2593429
-"C:/Users/kamau/Downloads/CSE3902/Marrrrrrio/Content/blocks.png","C:/Users/kamau/Downloads/CSE3902/Marrrrrrio/Content/bin/DesktopGL/Content/blocks.xnb","TextureProcessor","Texture2DContent",13083,458837,0.0161259
-"C:/Users/kamau/Downloads/CSE3902/Marrrrrrio/Content/dance.png","C:/Users/kamau/Downloads/CSE3902/Marrrrrrio/Content/bin/DesktopGL/Content/dance.xnb","TextureProcessor","Texture2DContent",9654755,42493149,1.8723695
-"C:/Users/kamau/Downloads/CSE3902/Marrrrrrio/Content/enemies.png","C:/Users/kamau/Downloads/CSE3902/Marrrrrrio/Content/bin/DesktopGL/Content/enemies.xnb","TextureProcessor","Texture2DContent",8295,455269,0.0171467
-"C:/Users/kamau/Downloads/CSE3902/Marrrrrrio/Content/itemsAndPowerups.png","C:/Users/kamau/Downloads/CSE3902/Marrrrrrio/Content/bin/DesktopGL/Content/itemsAndPowerups.xnb","TextureProcessor","Texture2DContent",32550,516181,0.0242675
-"C:/Users/kamau/Downloads/CSE3902/Marrrrrrio/Content/mario.png","C:/Users/kamau/Downloads/CSE3902/Marrrrrrio/Content/bin/DesktopGL/Content/mario.xnb","TextureProcessor","Texture2DContent",6584,304645,0.0125425
-"C:/Users/kamau/Downloads/CSE3902/Marrrrrrio/Content/MarioItems.png","C:/Users/kamau/Downloads/CSE3902/Marrrrrrio/Content/bin/DesktopGL/Content/MarioItems.xnb","TextureProcessor","Texture2DContent",38427,2532585,0.1112467
-"C:/Users/kamau/Downloads/CSE3902/Marrrrrrio/Content/MyFont.spritefont","C:/Users/kamau/Downloads/CSE3902/Marrrrrrio/Content/bin/DesktopGL/Content/MyFont.xnb","FontDescriptionProcessor","SpriteFontContent",2065,21538,0.1431321
