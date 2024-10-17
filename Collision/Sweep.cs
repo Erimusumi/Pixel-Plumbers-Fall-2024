@@ -52,12 +52,12 @@ public class Sweep
         if (ContainsEnemy(entities, index1) && item2.GetType() != typeof(Mario))
         {
             OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item1, item2);
-            OtherEnemyInteraction.update();
+            // OtherEnemyInteraction.update();
         }
         if (ContainsEnemy(entities, index2) && item1.GetType() != typeof(Mario))
         {
             OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item2, item1);
-            OtherEnemyInteraction.update();
+            // OtherEnemyInteraction.update();
         }
 
 
@@ -71,19 +71,19 @@ public class Sweep
             MarioStarInteraction = new MarioStarInteraction((Mario)item1, (Star)item2);
             MarioStarInteraction.update();
         }
-        if (item1.GetType() == typeof(Fire) && item2.GetType() == typeof(Mario)  )
+        if (item1.GetType() == typeof(Fire) && item2.GetType() == typeof(Mario))
         {
             MarioFirePowerInteraction = new MarioFirePowerInteraction((Mario)item2, (Fire)item1);
-            MarioFirePowerInteraction.update(); 
+            MarioFirePowerInteraction.update();
         }
         else if (item2.GetType() == typeof(Mario) && item1.GetType() == typeof(Fire))
         {
-            MarioFirePowerInteraction = new MarioFirePowerInteraction((Mario)item2,(Fire)item1);
-            MarioFirePowerInteraction.update(); 
+            MarioFirePowerInteraction = new MarioFirePowerInteraction((Mario)item2, (Fire)item1);
+            MarioFirePowerInteraction.update();
         }
         if (item1.GetType() == typeof(Mushroom) && item2.GetType() == typeof(Mario))
         {
-            MarioMushroomInteraction = new MarioMushroomInteraction((Mario)item2,(Mushroom)item1);
+            MarioMushroomInteraction = new MarioMushroomInteraction((Mario)item2, (Mushroom)item1);
             MarioMushroomInteraction.update();
         }
         else if (item1.GetType() == typeof(Mario) && item1.GetType() == typeof(MushroomPower))

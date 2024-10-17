@@ -13,6 +13,7 @@ public class Game1 : Game
     private GameTime gameTime;
 
 
+
     private KeyboardController keyboardController;
     private KeyboardControllerMovement keyboardControllerMovement;
     private CommandControlCenter controlCenter;
@@ -22,6 +23,9 @@ public class Game1 : Game
     private PlayerMovementController marioMovementController;
     private PlayerCommandControlCenter playerCommandControlCenter;
 
+    private GameStateMachine gameStateMachine;
+    private GameStateControlCenter gameStateControlCenter;
+    private KeyboardController gameStateKeyboardController;
 
     //Enemy Code
     public ISpriteEnemy spriteEnemy;
@@ -96,7 +100,7 @@ public class Game1 : Game
         spriteEnemy = new Koopa();
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
-       
+
         controlG = new GoombaCommand(spriteEnemy); // Reset Goomba's control command
         controlG2 = new GoombaCommand(spriteEnemy2);
         currentItem = 0;
@@ -119,7 +123,7 @@ public class Game1 : Game
         spriteEnemy2 = new Goomba2(240, 400);
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
-        
+
         controlG = new GoombaCommand(spriteEnemy);
         controlG2 = new GoombaCommand(spriteEnemy2);
 
@@ -154,7 +158,7 @@ public class Game1 : Game
         index2 = 0;
 
         //Item initialization
-        f = new Fire(spriteBatch, ItemsTexture, new Vector2(440,190));
+        f = new Fire(spriteBatch, ItemsTexture, new Vector2(440, 190));
         s = new Star(spriteBatch, ItemsTexture, new Vector2(440, 190));
 
     }
@@ -194,6 +198,11 @@ public class Game1 : Game
         marioMovementController = new PlayerMovementController();
         playerCommandControlCenter = new PlayerCommandControlCenter(mario, marioMovementController);
 
+        gameStateMachine = new GameStateMachine();
+
+        gameStateKeyboardController = new KeyboardController();
+        gameStateControlCenter = new GameStateControlCenter(gameStateMachine, gameStateKeyboardController);
+
         // Reset instances initialization
 
         firePower = new FirePower(ItemsTexture);
@@ -212,42 +221,11 @@ public class Game1 : Game
 
     protected override void Update(GameTime gameTime)
     {
+        gameStateKeyboardController.Update();
         List<IEntity> temp = entities;
         entities = sort.SortList(entities, entities.Count, temp);
-        if (Keyboard.GetState().IsKeyDown(Keys.D0))
-        {
-            gameStarted = true;
-            //System.Diagnostics.Debug.WriteLine("Hello World");
-        }
-        if (Keyboard.GetState().IsKeyDown(Keys.D8))
-        {
-            if (gamePaused)
-            {
-                gamePaused = false;
-            }
-            else
-            {
-                gamePaused = true;
-            }
-        }
-        if (gamePaused)
-        {
-            return;
-        }
 
-        if (Keyboard.GetState().IsKeyDown(Keys.D9))
-        {
-            gameReset = true;
-            gameStarted = false;
-        }
-
-        if (gameReset)
-        {
-            ResetGame();
-            System.Diagnostics.Debug.WriteLine("");
-        }
-
-        if (gameStarted)
+        if (gameStateMachine.isCurrentStateRunning())
         {
             keyboardController.Update();
             keyboardControllerMovement.Update();
@@ -294,7 +272,7 @@ public class Game1 : Game
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
 
-        if (gameStarted)
+       if(gameStateMachine.isCurrentStateRunning())
         {
             // mari and enemy
             spriteEnemy.Draw(spriteBatch, EnemyTexture);
@@ -308,7 +286,7 @@ public class Game1 : Game
             {
                 item.Draw(spriteBatch);
             }
-            
+
             s.draw(); //draw star collision test
             spriteBatch.End();
 
@@ -316,8 +294,8 @@ public class Game1 : Game
             sprite1[index1].Draw(spriteBatch, new Vector2(200, 200));
             sprite2[index2].Draw(spriteBatch, new Vector2(310, 150));
 
-            
-            
+
+
         }
         else
         {
