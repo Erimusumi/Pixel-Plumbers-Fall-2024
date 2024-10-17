@@ -14,6 +14,11 @@ public class Koopa : ISpriteEnemy
 		stateMachine = new KoopaStateMachine();
 	}
 
+	public Boolean IsMovingShell()
+	{
+		return stateMachine.IsMovingShell();
+	}
+
 	public void changeDirection()
 	{
 		stateMachine.changeDirection();

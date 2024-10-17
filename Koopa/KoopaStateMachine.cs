@@ -11,11 +11,17 @@ public class KoopaStateMachine
 	private enum KoopaState {Left, Right, StompedLeft, StompedRight, StompedTwiceLeft, StompedTwiceRight, Flipped};
 	private KoopaState _currentState = KoopaState.StompedTwiceRight;
 	private KoopaSprites _sprite;
+	private Boolean _isMovingShell = false;
 
 	public KoopaStateMachine()
 	{
 		_sprite = new KoopaSprites();
 	}
+	public Boolean IsMovingShell()
+	{
+		return _isMovingShell;
+	}
+
     public void changeDirection()
 	{
 		switch (_currentState)
@@ -53,16 +59,20 @@ public class KoopaStateMachine
 				break;
 			case KoopaState.StompedRight:
 				_currentState = KoopaState.StompedTwiceRight;
+				_isMovingShell = true;
 				break;
 			case KoopaState.StompedLeft:
 				_currentState = KoopaState.StompedTwiceLeft;
-				break;
+                _isMovingShell = true;
+                break;
 			case KoopaState.StompedTwiceRight:
 				_currentState = KoopaState.StompedRight;
-				break;
+                _isMovingShell = false;
+                break;
 			case KoopaState.StompedTwiceLeft:
 				_currentState = KoopaState.StompedLeft;
-				break;
+                _isMovingShell = false;
+                break;
 		}
 
 	}

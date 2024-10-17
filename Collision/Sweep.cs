@@ -33,11 +33,11 @@ public class Sweep
         }
         else if (item1.GetType() == typeof(ISpriteEnemy))
         {
-            OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item1);
+            OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item1, item2);
         }
         else if (item2.GetType() == typeof(ISpriteEnemy))
         {
-            OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item2);
+            OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item2, item1);
         }
 
 
