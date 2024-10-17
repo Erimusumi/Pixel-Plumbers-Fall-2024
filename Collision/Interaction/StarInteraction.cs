@@ -21,7 +21,6 @@ public class StarInteraction
         star.collected = true;
         star.roaming = false;
         star.idle = false;
-
         mario.CollectStar();
     }
     private void removeFromList()
