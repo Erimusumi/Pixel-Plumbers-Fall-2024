@@ -14,6 +14,7 @@ public class Sweep
 
     EnemyMarioInteraction EnemyMarioInteraction;
     OtherEnemyInteraction OtherEnemyInteraction;
+    EnemyFireballInteraction EnemyFireballInteraction;
     //Pass some list
     //Sweep should 
     public void handleInteraction(List<IEntity> entities, int index1, int index2)
