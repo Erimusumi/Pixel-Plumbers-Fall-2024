@@ -50,15 +50,19 @@ public class Sweep
 
         if (item1.GetType() == typeof(FirePower) && item2.GetType() == typeof(Mario)  )
         {
-            MarioFirePowerInteraction = new MarioFirePowerInteraction;
+            MarioFirePowerInteraction = new MarioFirePowerInteraction((Mario)item2, (Fire)item1);
         }
         else if (item1.GetType() == typeof(Mario) && item1.GetType() == typeof(FirePower))
         {
-
+            MarioFirePowerInteraction = new MarioFirePowerInteraction((Mario)item2,(Fire)item1);
         }
-        if (item1.GetType() == typeof(MushroomPower) && item2.GetType() == typeof(Mario) || item1.GetType() == typeof(Mario) && item1.GetType() == typeof(MushroomPower))
+        if (item1.GetType() == typeof(MushroomPower) && item2.GetType() == typeof(Mario) )
         {
-            //handle mushroomPower interaction
+            
+        }
+        else if (item1.GetType() == typeof(Mario) && item1.GetType() == typeof(MushroomPower))
+        {
+
         }
         if (item1.GetType() == typeof(BlockObject) && item2.GetType() == typeof(Mario) || item1.GetType() == typeof(Mario) && item1.GetType() == typeof(BlockObject))
         {

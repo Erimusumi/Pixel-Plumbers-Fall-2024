@@ -14,8 +14,8 @@ using System.Threading.Tasks;
 
     public MarioFirePowerInteraction(Mario mar, Fire fp)
     {
-        this.FirePower = fp;
-        this.mario = mar;
+        FirePower = fp;
+        mario = mar;
        
     }
     public void update()

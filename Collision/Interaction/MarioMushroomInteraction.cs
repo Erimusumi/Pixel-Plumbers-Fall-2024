@@ -6,14 +6,14 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-public class MushroomInteraction
+public class MarioMushroomInteraction
 {
     private Mario mario;
     private Mushroom mushroom;
     int mushroomIndex;
     int marioIndex;
     
-    public MushroomInteraction(Mario mar, Mushroom mush)
+    public MarioMushroomInteraction(Mario mar, Mushroom mush)
     {
         this.mario = mar;
         this.mushroom = mush;
