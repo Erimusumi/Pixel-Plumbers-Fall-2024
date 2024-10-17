@@ -15,6 +15,8 @@ public class Sweep
     EnemyMarioInteraction EnemyMarioInteraction;
     OtherEnemyInteraction OtherEnemyInteraction;
     EnemyFireballInteraction EnemyFireballInteraction;
+    MarioFirePowerInteraction MarioFirePowerInteraction;
+
     //Pass some list
     //Sweep should 
     public void handleInteraction(List<IEntity> entities, int index1, int index2)
@@ -46,9 +48,13 @@ public class Sweep
 
 
 
-        if (item1.GetType() == typeof(FirePower) && item2.GetType() == typeof(Mario) || item1.GetType() == typeof(Mario) && item1.GetType() == typeof(FirePower))
+        if (item1.GetType() == typeof(FirePower) && item2.GetType() == typeof(Mario)  )
         {
-            //handle firePower interaction
+            MarioFirePowerInteraction = new MarioFirePowerInteraction;
+        }
+        else if (item1.GetType() == typeof(Mario) && item1.GetType() == typeof(FirePower))
+        {
+
         }
         if (item1.GetType() == typeof(MushroomPower) && item2.GetType() == typeof(Mario) || item1.GetType() == typeof(Mario) && item1.GetType() == typeof(MushroomPower))
         {

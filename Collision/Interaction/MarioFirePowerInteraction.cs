@@ -6,13 +6,13 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-    public class FirePowerInteraction
+    public class MarioFirePowerInteraction
 {
     private Mario mario;
     private Fire FirePower;
 
 
-    public FirePowerInteraction(Mario mar, Fire fp)
+    public MarioFirePowerInteraction(Mario mar, Fire fp)
     {
         this.FirePower = fp;
         this.mario = mar;
