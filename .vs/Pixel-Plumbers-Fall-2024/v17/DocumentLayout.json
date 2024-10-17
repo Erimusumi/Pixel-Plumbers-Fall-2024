@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\marrrrrrio\\items\\star.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:items\\star.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\marrrrrrio\\sprites\\item sprites\\firepower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\item sprites\\firepower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -64,7 +68,7 @@
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marrrrrrio\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAIMAAAAAAAAAAAAlwJgAAABEAAAAAAAAAA==",
+              "ViewState": "AgIAACgBAAAAAAAAAAAewDMBAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
               "IsPinned": true,
@@ -101,32 +105,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Star.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marrrrrrio\\Items\\Star.cs",
+              "RelativeDocumentMoniker": "Items\\Star.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marrrrrrio\\Items\\Star.cs",
+              "RelativeToolTip": "Items\\Star.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAiwAoAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T20:12:33.09Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "FirePower.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marrrrrrio\\Sprites\\Item Sprites\\FirePower.cs",
               "RelativeDocumentMoniker": "Sprites\\Item Sprites\\FirePower.cs",
               "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marrrrrrio\\Sprites\\Item Sprites\\FirePower.cs",
               "RelativeToolTip": "Sprites\\Item Sprites\\FirePower.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwA8AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-17T19:44:24.172Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Fire.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marrrrrrio\\Items\\Fire.cs",
               "RelativeDocumentMoniker": "Items\\Fire.cs",
               "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marrrrrrio\\Items\\Fire.cs",
               "RelativeToolTip": "Items\\Fire.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAwwAoAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-17T19:41:12.009Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "MarioMushroomInteraction.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marrrrrrio\\Collision\\Interaction\\MarioMushroomInteraction.cs",
               "RelativeDocumentMoniker": "Collision\\Interaction\\MarioMushroomInteraction.cs",
@@ -139,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "MarioFirePowerInteraction.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marrrrrrio\\Collision\\Interaction\\MarioFirePowerInteraction.cs",
               "RelativeDocumentMoniker": "Collision\\Interaction\\MarioFirePowerInteraction.cs",
@@ -152,7 +169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "StarInteraction.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marrrrrrio\\Collision\\Interaction\\StarInteraction.cs",
               "RelativeDocumentMoniker": "Collision\\Interaction\\StarInteraction.cs",
@@ -165,7 +182,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Sweep.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marrrrrrio\\Collision\\Sweep.cs",
               "RelativeDocumentMoniker": "Collision\\Sweep.cs",
@@ -178,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Sort.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marrrrrrio\\Collision\\Sort.cs",
               "RelativeDocumentMoniker": "Collision\\Sort.cs",
@@ -190,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "IEntity.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marrrrrrio\\Sprites\\IEntity.cs",
               "RelativeDocumentMoniker": "Sprites\\IEntity.cs",
@@ -202,7 +219,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "MarioStateMachine.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marrrrrrio\\Mario\\MarioStateMachine.cs",
               "RelativeDocumentMoniker": "Mario\\MarioStateMachine.cs",
@@ -214,7 +231,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Mario.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Marrrrrrio\\Mario\\Mario.cs",
               "RelativeDocumentMoniker": "Mario\\Mario.cs",

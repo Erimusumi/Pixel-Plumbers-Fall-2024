@@ -151,8 +151,8 @@ public class Game1 : Game
         index2 = 0;
 
         //Item initialization
-         f = new Fire(spriteBatch, ItemsTexture, new Vector2(440,190));
-        s = new Star();
+         //f = new Fire(spriteBatch, ItemsTexture, new Vector2(440,190));
+        s = new Star(spriteBatch, ItemsTexture, new Vector2(440, 190));
 
     }
     public ISpriteEnemy SetEnemy(ISpriteEnemy enemy)
@@ -305,7 +305,7 @@ public class Game1 : Game
             {
                 item.Draw(spriteBatch);
             }
-            f.draw();
+            s.draw(); //draw star collision test
             spriteBatch.End();
 
             // Draw blocks and obstacles
