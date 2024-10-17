@@ -7,6 +7,8 @@ public class MarioStateMachine
     public enum MarioFaceState { Left, Right }
     public enum MarioMoveState { Idle, Moving, Jumping, Crouching, Turning }
 
+    public bool HasStar;
+
     public MarioGameState CurrentGameState { get; private set; }
     public MarioFaceState CurrentFaceState { get; private set; }
     public MarioMoveState CurrentMoveState { get; private set; }
@@ -16,6 +18,7 @@ public class MarioStateMachine
         CurrentGameState = MarioGameState.Small;
         CurrentFaceState = MarioFaceState.Right;
         CurrentMoveState = MarioMoveState.Idle;
+        HasStar = false;
     }
 
     public void SetMarioSmall()
@@ -66,6 +69,16 @@ public class MarioStateMachine
     public void SetMarioRight()
     {
         CurrentFaceState = MarioFaceState.Right;
+    }
+
+    public void SetStar()
+    {
+        HasStar = true;
+    }
+
+    public void RemoveStar()
+    {
+        HasStar = false;
     }
 
     public void UpdateMoveStateForJumping()

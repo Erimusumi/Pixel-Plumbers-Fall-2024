@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
+//using System.Drawing;
 using System.Linq;
 using System.Reflection.Metadata;
 using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Xna.Framework;
 using Pixel_Plumbers_Fall_2024;
 
 public class Sweep
@@ -25,8 +26,7 @@ public class Sweep
         /*Should determine the interactionType of two entities and call the appropriate method */
         IEntity item1 = entities[index1];
         IEntity item2 = entities[index2];
-        Rectangle overlap = item1.GetDestination();
-        overlap.Intersect(item2.GetDestination());
+        Rectangle overlap = Rectangle.Intersect(item1.GetDestination(), item2.GetDestination());
 
         if (item1.GetType() == typeof(ISpriteEnemy) && item2.GetType() == typeof(Mario))
         {
@@ -34,8 +34,6 @@ public class Sweep
         } else if (item1.GetType() == typeof(Mario) && item2.GetType() == typeof(ISpriteEnemy))
         {
             EnemyMarioInteraction = new EnemyMarioInteraction((ISpriteEnemy)item2, (Mario)item1, overlap);
-        } else if (item1.GetType() == typeof(ISpriteEnemy))
-            EnemyMarioInteraction = new EnemyMarioInteraction((ISpriteEnemy)item2, (Mario)item1, item2.GetDestination(), item1.GetDestination());
         }
         else if (item1.GetType() == typeof(Fireball) && item2.GetType() == typeof(ISpriteEnemy))
         {
