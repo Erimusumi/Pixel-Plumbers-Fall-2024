@@ -22,7 +22,7 @@ public class StarInteraction
         star.roaming = false;
         star.idle = false;
 
-        mario.MarioPowerUp();
+        mario.CollectStar();
     }
     private void removeFromList()
     {
