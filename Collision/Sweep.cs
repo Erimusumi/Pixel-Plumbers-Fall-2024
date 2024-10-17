@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-//using System.Drawing;
 using System.Linq;
 using System.Reflection.Metadata;
 using System.Security.AccessControl;
@@ -15,6 +14,7 @@ public class Sweep
 
     EnemyMarioInteraction EnemyMarioInteraction;
     OtherEnemyInteraction OtherEnemyInteraction;
+    EnemyFireballInteraction EnemyFireballInteraction;
     //Pass some list
     //Sweep should 
     public void handleInteraction(List<IEntity> entities, int index1, int index2)
@@ -40,7 +40,7 @@ public class Sweep
         {
             EnemyFireballInteraction = new EnemyFireballInteraction((Fireball)item2, (ISpriteEnemy)item1);
         }
-        else if (item1.GetType() == typeof(ISpriteEnemy))
+        else if (item1.GetType() == typeof(ISpriteEnemy)) { 
             EnemyMarioInteraction = new EnemyMarioInteraction((ISpriteEnemy)item2, (Mario)item1, Rectangle.Intersect(item1.GetDestination(), item2.GetDestination()));
         } else if (item1.GetType() == typeof(ISpriteEnemy))
         {
