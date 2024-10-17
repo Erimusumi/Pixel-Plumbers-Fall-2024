@@ -13,7 +13,9 @@ public class FirePower : ISprite
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
         Rectangle sourceRectangle = new Rectangle(0, 33, 15, 15);
+        spriteBatch.Begin();
         spriteBatch.Draw(ItemTexture, position, sourceRectangle, Color.White);
+        spriteBatch.End();
     }
 
     public void Update(GameTime gametime)
