@@ -30,6 +30,11 @@ public class Game1 : Game
     public IController controlG2;
     Texture2D EnemyTexture;
 
+    //Dance
+    private ISpriteAnimation Dance;
+    private Texture2D DanceTexture;
+
+
     public Texture2D ItemsTexture;
     public ISprite firePower;
     public ISprite starPower;
@@ -105,8 +110,12 @@ public class Game1 : Game
         keyboardControllerMovement = new KeyboardControllerMovement();
 
 
-        //spriteEnemy = new Goomba(480, 400);
-        //controlG = new GoombaCommand(spriteEnemy);
+        spriteEnemy = new Goomba(480, 400);
+        spriteEnemy2 = new Goomba2(240, 400);
+        controlG = new GoombaCommand(spriteEnemy);
+        controlG2 = new GoombaCommand(spriteEnemy2);
+
+        Dance = new DancePole();
 
         controlCenter = new CommandControlCenter(this);
 
@@ -161,6 +170,7 @@ public class Game1 : Game
 
         marioTexture = Content.Load<Texture2D>("mario");
         EnemyTexture = Content.Load<Texture2D>("enemies");
+        DanceTexture = Content.Load<Texture2D>("dance");
         ItemsTexture = Content.Load<Texture2D>("itemsAndPowerups");
         MyFont = Content.Load<SpriteFont>("MyFont");
         StartText = new StartScreenText(MyFont);
@@ -244,6 +254,7 @@ public class Game1 : Game
 
             spriteEnemy.Updates();
             spriteEnemy2.Updates();
+            Dance.Updates();
             controlG.Update();
 
             manager.updateCurrentItem(ref currentItem, numItems);
@@ -274,6 +285,7 @@ public class Game1 : Game
             // mari and enemy
             spriteEnemy.Draw(spriteBatch, EnemyTexture);
             spriteEnemy2.Draw(spriteBatch, EnemyTexture);
+            Dance.Draw(spriteBatch, DanceTexture);
             spriteBatch.Begin();
             mario.Draw(spriteBatch);
             manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);

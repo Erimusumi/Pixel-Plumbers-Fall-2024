@@ -26,7 +26,7 @@ public class EnemyMarioInteraction
         else
         {
             //Not correct, I need star mario
-            if(mario.GetType() == typeof(StarPower))
+            if(mario.HasStar())
             {
                 enemy.beFlipped();
             } else
