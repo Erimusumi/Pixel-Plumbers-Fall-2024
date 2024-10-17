@@ -188,8 +188,12 @@ public class Mario : IEntity
     public void Stop()
     {
         marioVelocity.X = 0f;
-        marioStateMachine.SetMarioIdle();
+        if (isOnGround)
+        {
+            marioStateMachine.SetMarioIdle();
+        }
     }
+
 
     public void ShootFireball()
     {
@@ -237,5 +241,5 @@ public class Mario : IEntity
     {
         return marioStateMachine.CurrentGameState;
     }
-    
+
 }

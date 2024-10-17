@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 public class MovingLeftBigMario : IMarioSprite
 {
+    private float scale = 2f;
     private Texture2D MarioTexture;
     private float GameTicks;
     private int AnimationSpeed;
@@ -28,7 +29,7 @@ public class MovingLeftBigMario : IMarioSprite
 
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
-        spriteBatch.Draw(MarioTexture, position, FrameRectangles[currentAnimationIndex], Color.White);
+        spriteBatch.Draw(MarioTexture, position, FrameRectangles[currentAnimationIndex], Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
     }
 
     public void Update(GameTime gameTime)
@@ -54,6 +55,6 @@ public class MovingLeftBigMario : IMarioSprite
             case 2:
             default: return new Rectangle((int)position.X, (int)position.Y, 16, 30);
         }
-        
+
     }
 }
