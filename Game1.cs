@@ -40,6 +40,7 @@ public class Game1 : Game
     public ISprite starPower;
     public ISprite mushroom;
     public Fire f;
+    public Star s;
     Vector2 itemsPos = new Vector2(400, 250);
     public ItemManager manager = new ItemManager();
     public int numItems = 3;
@@ -150,7 +151,8 @@ public class Game1 : Game
         index2 = 0;
 
         //Item initialization
-         f = new Fire(spriteBatch, ItemsTexture, new Vector2(300, 400));
+         f = new Fire(spriteBatch, ItemsTexture, new Vector2(440,190));
+        s = new Star();
 
     }
     public ISpriteEnemy SetEnemy(ISpriteEnemy enemy)
@@ -303,14 +305,14 @@ public class Game1 : Game
             {
                 item.Draw(spriteBatch);
             }
-
+            f.draw();
             spriteBatch.End();
 
             // Draw blocks and obstacles
             sprite1[index1].Draw(spriteBatch, new Vector2(200, 200));
             sprite2[index2].Draw(spriteBatch, new Vector2(310, 150));
 
-            f.draw();
+            
             
         }
         else

@@ -21,11 +21,20 @@ public class Star : IStarObject
     public Boolean roaming;
     private Microsoft.Xna.Framework.Vector2 position;
     private StarPower sp;
-    public Star()
+    private SpriteBatch sB;
+    private Texture2D texture;
+    
+
+    public Star(SpriteBatch sb,Texture2D text, Microsoft.Xna.Framework.Vector2 pos)
     {
-        this.idle = false;
+        this.idle = true;
         this.collected = false;
         this.roaming = false;
+        sB = sb;
+        position = pos;
+        texture = text;
+
+
     }
     public Boolean idleState()
     {
@@ -42,14 +51,14 @@ public class Star : IStarObject
     }
     public void draw(SpriteBatch sB, Texture2D texture)
     {
-        if (this.idle)
+        if (this.collected)
+        {
+            
+        }
+        else if (this.idle)
         {
             this.sp = new StarPower(texture);
             this.sp.Draw(sB, position);
-        }
-        else if (this.collected)
-        {
-
         }
         else if (this.roaming)
         {
