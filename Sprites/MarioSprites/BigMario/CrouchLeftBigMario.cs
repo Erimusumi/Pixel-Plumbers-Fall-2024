@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 public class CrouchLeftBigMario : IMarioSprite
 {
+    private float scale = 2f;
     private Texture2D MarioTexture;
     public CrouchLeftBigMario(Texture2D MarioTexture)
     {
@@ -12,7 +13,7 @@ public class CrouchLeftBigMario : IMarioSprite
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
         Rectangle sourceRectangle = new Rectangle(0, 57, 16, 22);
-        spriteBatch.Draw(MarioTexture, position, sourceRectangle, Color.White);
+        spriteBatch.Draw(MarioTexture, position, sourceRectangle, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
     }
 
     public void Update(GameTime gametime)

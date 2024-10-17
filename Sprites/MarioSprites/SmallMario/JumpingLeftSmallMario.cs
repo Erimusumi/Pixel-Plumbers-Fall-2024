@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 public class JumpingLeftSmallMario : IMarioSprite
 {
+    private float scale = 2f;
     private Texture2D MarioTexture;
     public JumpingLeftSmallMario(Texture2D MarioTexture)
     {
@@ -11,7 +12,7 @@ public class JumpingLeftSmallMario : IMarioSprite
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
         Rectangle sourceRectangle = new Rectangle(29, 0, 17, 16);
-        spriteBatch.Draw(MarioTexture, position, sourceRectangle, Color.White);
+        spriteBatch.Draw(MarioTexture, position, sourceRectangle, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f); 
     }
 
     public void Update(GameTime gametime)

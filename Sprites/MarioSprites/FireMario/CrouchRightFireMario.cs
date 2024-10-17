@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 public class CrouchRightFireMario : IMarioSprite
 {
+    private float scale = 2f;
     private Texture2D MarioTexture;
     public CrouchRightFireMario(Texture2D MarioTexture)
     {
@@ -13,7 +14,7 @@ public class CrouchRightFireMario : IMarioSprite
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
         Rectangle sourceRectangle = new Rectangle(389, 127, 16, 22);
-        spriteBatch.Draw(MarioTexture, position, sourceRectangle, Color.White);
+        spriteBatch.Draw(MarioTexture, position, sourceRectangle, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
     }
 
     public void Update(GameTime gametime)

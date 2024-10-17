@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 public class MovingLeftFireMario : IMarioSprite
 {
+    private float scale = 2f;
     private Texture2D MarioTexture;
     private float GameTicks;
     private int AnimationSpeed;
@@ -28,22 +29,21 @@ public class MovingLeftFireMario : IMarioSprite
 
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
-        spriteBatch.Draw(MarioTexture, position, FrameRectangles[currentAnimationIndex], Color.White);
+        spriteBatch.Draw(MarioTexture, position, FrameRectangles[currentAnimationIndex], Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
     }
 
     public void Update(GameTime gameTime)
     {
         GameTicks += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
 
-        if (GameTicks > AnimationSpeed)
-        {
-            currentAnimationIndex = (currentAnimationIndex == 1)
-                ? (previousAnimationIndex == 0 ? 2 : 0)
-                : 1;
+        if (GameTicks <= AnimationSpeed) return;
 
-            previousAnimationIndex = currentAnimationIndex;
-            GameTicks = 0;
-        }
+        currentAnimationIndex = currentAnimationIndex == 1
+            ? (previousAnimationIndex == 0 ? 2 : 0)
+            : 1;
+
+        previousAnimationIndex = currentAnimationIndex;
+        GameTicks = 0;
     }
 
     public Rectangle GetDestination(Vector2 position)

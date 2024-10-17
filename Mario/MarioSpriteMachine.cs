@@ -27,6 +27,9 @@ public class MarioSpriteMachine
                             case MarioStateMachine.MarioMoveState.Jumping:
                                 newSprite = new JumpingRightSmallMario(texture);
                                 break;
+                            case MarioStateMachine.MarioMoveState.Turning:
+                                newSprite = new TurningRightSmallMario(texture);
+                                break;
                         }
                         break;
 
@@ -45,6 +48,9 @@ public class MarioSpriteMachine
                             case MarioStateMachine.MarioMoveState.Crouching:
                                 newSprite = new CrouchRightBigMario(texture);
                                 break;
+                            case MarioStateMachine.MarioMoveState.Turning:
+                                newSprite = new TurningRightBigMario(texture);
+                                break;
                         }
                         break;
 
@@ -62,6 +68,10 @@ public class MarioSpriteMachine
                                 break;
                             case MarioStateMachine.MarioMoveState.Crouching:
                                 newSprite = new CrouchRightFireMario(texture);
+                                break;
+
+                            case MarioStateMachine.MarioMoveState.Turning:
+                                newSprite = new TurningRightFireMario(texture);
                                 break;
                         }
                         break;
@@ -83,6 +93,9 @@ public class MarioSpriteMachine
                             case MarioStateMachine.MarioMoveState.Jumping:
                                 newSprite = new JumpingLeftSmallMario(texture);
                                 break;
+                            case MarioStateMachine.MarioMoveState.Turning:
+                                newSprite = new TurningLeftSmallMario(texture);
+                                break;
                         }
                         break;
 
@@ -101,6 +114,9 @@ public class MarioSpriteMachine
                             case MarioStateMachine.MarioMoveState.Crouching:
                                 newSprite = new CrouchLeftBigMario(texture);
                                 break;
+                            case MarioStateMachine.MarioMoveState.Turning:
+                                newSprite = new TurningLeftBigMario(texture);
+                                break;
                         }
                         break;
 
@@ -118,6 +134,9 @@ public class MarioSpriteMachine
                                 break;
                             case MarioStateMachine.MarioMoveState.Crouching:
                                 newSprite = new CrouchLeftFireMario(texture);
+                                break;
+                            case MarioStateMachine.MarioMoveState.Turning:
+                                newSprite = new TurningRightFireMario(texture);
                                 break;
                         }
                         break;
