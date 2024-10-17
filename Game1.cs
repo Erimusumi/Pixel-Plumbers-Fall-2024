@@ -34,11 +34,12 @@ public class Game1 : Game
     private ISpriteAnimation Dance;
     private Texture2D DanceTexture;
 
-
+    //Items
     public Texture2D ItemsTexture;
     public ISprite firePower;
     public ISprite starPower;
     public ISprite mushroom;
+    public Fire f;
     Vector2 itemsPos = new Vector2(400, 250);
     public ItemManager manager = new ItemManager();
     public int numItems = 3;
@@ -149,7 +150,7 @@ public class Game1 : Game
         index2 = 0;
 
         //Item initialization
-        Fire = new Fire();
+         f = new Fire(spriteBatch, ItemsTexture, new Vector2(300, 400));
 
     }
     public ISpriteEnemy SetEnemy(ISpriteEnemy enemy)
@@ -309,6 +310,7 @@ public class Game1 : Game
             sprite1[index1].Draw(spriteBatch, new Vector2(200, 200));
             sprite2[index2].Draw(spriteBatch, new Vector2(310, 150));
 
+            f.draw();
             
         }
         else

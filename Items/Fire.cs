@@ -8,7 +8,7 @@ public interface IFireObject : IEntity
 {
     Boolean idleState();
     Boolean collectedState();
-    void draw(SpriteBatch sb, Texture2D texture);
+    void draw();
 
 }
 public class Fire : IFireObject
@@ -41,15 +41,15 @@ public class Fire : IFireObject
 
         return this.collected;
     }
-    public void draw(SpriteBatch sB, Texture2D texture)
+    public void draw()
     {
          if (this.collected)
         {
 
         }
         else if(this.idle) {
-            this.fp = new FirePower(texture);
-            this.fp.Draw(sB, position);
+            fp = new FirePower(texture);
+            fp.Draw(this.sB, position);
         }
          if (this.roaming)
         {
