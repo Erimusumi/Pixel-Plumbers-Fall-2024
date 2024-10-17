@@ -148,6 +148,9 @@ public class Game1 : Game
         index1 = 0;
         index2 = 0;
 
+        //Item initialization
+        Fire = new Fire();
+
     }
     public ISpriteEnemy SetEnemy(ISpriteEnemy enemy)
     {
