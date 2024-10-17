@@ -8,7 +8,7 @@ public interface IFireObject : IEntity
 {
     Boolean idleState();
     Boolean collectedState();
-    void draw(SpriteBatch sb, Texture2D texture);
+    void draw();
 
 }
 public class Fire : IFireObject
@@ -20,12 +20,17 @@ public class Fire : IFireObject
     private int x;
     private int y;
     private FirePower fp;
+    private SpriteBatch sB;
+    private Texture2D texture;
 
-    public Fire()
+    public Fire(SpriteBatch sB, Texture2D texture, Microsoft.Xna.Framework.Vector2 position)
     {
-        this.idle = false;
+        this.idle = true;
         this.collected = false;
         this.roaming = false;
+        this.sB = sB;
+        this.texture = texture;
+        this.position = position;
     }
     public Boolean idleState()
     {
@@ -36,16 +41,15 @@ public class Fire : IFireObject
 
         return this.collected;
     }
-    public void draw(SpriteBatch sB, Texture2D texture)
+    public void draw()
     {
-        if (this.idle)
-        {
-            this.fp = new FirePower(texture);
-            this.fp.Draw(sB, position);
-        }
          if (this.collected)
         {
 
+        }
+        else if(this.idle) {
+            fp = new FirePower(texture);
+            fp.Draw(this.sB, position);
         }
          if (this.roaming)
         {

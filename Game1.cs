@@ -34,11 +34,13 @@ public class Game1 : Game
     private ISpriteAnimation Dance;
     private Texture2D DanceTexture;
 
-
+    //Items
     public Texture2D ItemsTexture;
     public ISprite firePower;
     public ISprite starPower;
     public ISprite mushroom;
+    public Fire f;
+    public Star s;
     Vector2 itemsPos = new Vector2(400, 250);
     public ItemManager manager = new ItemManager();
     public int numItems = 3;
@@ -91,10 +93,10 @@ public class Game1 : Game
         entities.Clear();
         spriteEnemy = new Goomba(480, 400); // Create a new Goomba object
         spriteEnemy2 = new Goomba2(240, 400);
-        spriteEnemy = new Koopa();
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
-        //controlG = new GoombaCommand(spriteEnemy); // Reset Goomba's control command
+       
+        controlG = new GoombaCommand(spriteEnemy); // Reset Goomba's control command
         controlG2 = new GoombaCommand(spriteEnemy2);
         currentItem = 0;
         index1 = 0;
@@ -116,6 +118,7 @@ public class Game1 : Game
         spriteEnemy2 = new Goomba2(240, 400);
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
+        
         controlG = new GoombaCommand(spriteEnemy);
         controlG2 = new GoombaCommand(spriteEnemy2);
 
@@ -148,6 +151,10 @@ public class Game1 : Game
         n2 = sprite2.Count;
         index1 = 0;
         index2 = 0;
+
+        //Item initialization
+        f = new Fire(spriteBatch, ItemsTexture, new Vector2(440,190));
+        s = new Star(spriteBatch, ItemsTexture, new Vector2(440, 190));
 
     }
     public ISpriteEnemy SetEnemy(ISpriteEnemy enemy)
@@ -300,13 +307,14 @@ public class Game1 : Game
             {
                 item.Draw(spriteBatch);
             }
-
+            s.draw(); //draw star collision test
             spriteBatch.End();
 
             // Draw blocks and obstacles
             sprite1[index1].Draw(spriteBatch, new Vector2(200, 200));
             sprite2[index2].Draw(spriteBatch, new Vector2(310, 150));
 
+            
             
         }
         else

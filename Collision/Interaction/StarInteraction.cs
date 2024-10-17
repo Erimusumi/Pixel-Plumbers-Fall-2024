@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class StarInteraction
+public class MarioStarInteraction
 {
     private Mario mario;
     private Star star;
 
 
-    public StarInteraction(Mario mar, Star s)
+    public MarioStarInteraction(Mario mar, Star s)
     {
         this.star = s;
         this.mario = mar;
@@ -21,7 +21,6 @@ public class StarInteraction
         star.collected = true;
         star.roaming = false;
         star.idle = false;
-
         mario.CollectStar();
     }
     private void removeFromList()

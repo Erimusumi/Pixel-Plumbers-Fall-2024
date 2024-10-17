@@ -12,13 +12,6 @@ public class Sweep
 {
     public enum CollisionType { Top, Bottom, Left, Right, DontCare };
 
-    EnemyMarioInteraction EnemyMarioInteraction;
-    OtherEnemyInteraction OtherEnemyInteraction;
-    EnemyFireballInteraction EnemyFireballInteraction;
-    MarioFirePowerInteraction MarioFirePowerInteraction;
-    MarioMushroomInteraction MarioMushroomInteraction;
-
-
     private Boolean ContainsEnemy(List<IEntity> entities, int index)
     {
         Boolean containsEnemy = false;
@@ -29,6 +22,15 @@ public class Sweep
         }
         return containsEnemy;
     }
+
+
+    EnemyMarioInteraction EnemyMarioInteraction;
+    OtherEnemyInteraction OtherEnemyInteraction;
+    EnemyFireballInteraction EnemyFireballInteraction;
+    MarioFirePowerInteraction MarioFirePowerInteraction;
+    MarioMushroomInteraction MarioMushroomInteraction;
+    MarioStarInteraction MarioStarInteraction;
+
     //Pass some list
     //Sweep should 
     public void handleInteraction(List<IEntity> entities, int index1, int index2)
@@ -42,34 +44,39 @@ public class Sweep
         if (ContainsEnemy(entities, index1) && item2.GetType() == typeof(Mario))
         {
             EnemyMarioInteraction = new EnemyMarioInteraction((ISpriteEnemy)item1, (Mario)item2, Rectangle.Intersect(item1.GetDestination(), item2.GetDestination()));
-            EnemyMarioInteraction.Update();
         }
         else if (item1.GetType() == typeof(Mario) && ContainsEnemy(entities, index2))
         {
             EnemyMarioInteraction = new EnemyMarioInteraction((ISpriteEnemy)item2, (Mario)item1, Rectangle.Intersect(item1.GetDestination(), item2.GetDestination()));
-            EnemyMarioInteraction.Update();
         }
         if (ContainsEnemy(entities, index1) && item2.GetType() != typeof(Mario))
         {
             OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item1, item2);
-            OtherEnemyInteraction.Update();
+            OtherEnemyInteraction.update();
         }
-
         if (ContainsEnemy(entities, index2) && item1.GetType() != typeof(Mario))
         {
             OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item2, item1);
-            OtherEnemyInteraction.Update();
+            OtherEnemyInteraction.update();
         }
-        
 
 
-
-        if (item1.GetType() == typeof(FirePower) && item2.GetType() == typeof(Mario)  )
+        if (item1.GetType() == typeof(Star) && item2.GetType() == typeof(Mario))
+        {
+            MarioStarInteraction = new MarioStarInteraction((Mario)item2, (Star)item1);
+            MarioStarInteraction.update();
+        }
+        else if (item1.GetType() == typeof(Mario) && item2.GetType() == typeof(Star))
+        {
+            MarioStarInteraction = new MarioStarInteraction((Mario)item1, (Star)item2);
+            MarioStarInteraction.update();
+        }
+        if (item1.GetType() == typeof(Fire) && item2.GetType() == typeof(Mario)  )
         {
             MarioFirePowerInteraction = new MarioFirePowerInteraction((Mario)item2, (Fire)item1);
             MarioFirePowerInteraction.update(); 
         }
-        else if (item1.GetType() == typeof(Mario) && item1.GetType() == typeof(FirePower))
+        else if (item2.GetType() == typeof(Mario) && item1.GetType() == typeof(Fire))
         {
             MarioFirePowerInteraction = new MarioFirePowerInteraction((Mario)item2,(Fire)item1);
             MarioFirePowerInteraction.update(); 
