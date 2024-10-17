@@ -16,6 +16,7 @@ public class Sweep
     OtherEnemyInteraction OtherEnemyInteraction;
     EnemyFireballInteraction EnemyFireballInteraction;
     MarioFirePowerInteraction MarioFirePowerInteraction;
+    MarioMushroomInteraction MarioMushroomInteraction;
 
     //Pass some list
     //Sweep should 
@@ -51,18 +52,22 @@ public class Sweep
         if (item1.GetType() == typeof(FirePower) && item2.GetType() == typeof(Mario)  )
         {
             MarioFirePowerInteraction = new MarioFirePowerInteraction((Mario)item2, (Fire)item1);
+            MarioFirePowerInteraction.update(); 
         }
         else if (item1.GetType() == typeof(Mario) && item1.GetType() == typeof(FirePower))
         {
             MarioFirePowerInteraction = new MarioFirePowerInteraction((Mario)item2,(Fire)item1);
+            MarioFirePowerInteraction.update(); 
         }
-        if (item1.GetType() == typeof(MushroomPower) && item2.GetType() == typeof(Mario) )
+        if (item1.GetType() == typeof(Mushroom) && item2.GetType() == typeof(Mario))
         {
-            
+            MarioMushroomInteraction = new MarioMushroomInteraction((Mario)item2,(Mushroom)item1);
+            MarioMushroomInteraction.update();
         }
         else if (item1.GetType() == typeof(Mario) && item1.GetType() == typeof(MushroomPower))
         {
-
+            MarioMushroomInteraction = new MarioMushroomInteraction((Mario)item1, (Mushroom)item2);
+            MarioMushroomInteraction.update();
         }
         if (item1.GetType() == typeof(BlockObject) && item2.GetType() == typeof(Mario) || item1.GetType() == typeof(Mario) && item1.GetType() == typeof(BlockObject))
         {

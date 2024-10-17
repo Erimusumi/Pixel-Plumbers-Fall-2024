@@ -15,8 +15,8 @@ public class MarioMushroomInteraction
     
     public MarioMushroomInteraction(Mario mar, Mushroom mush)
     {
-        this.mario = mar;
-        this.mushroom = mush;
+        mario = mar;
+        mushroom = mush;
     }
 
     public void update()
