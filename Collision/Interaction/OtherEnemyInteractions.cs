@@ -25,6 +25,7 @@ public class OtherEnemyInteraction
                 enemy.beFlipped();
             }
         }
+        //System.Diagnostics.Debug.WriteLine("Got Here");
         enemy.changeDirection();
     }
 }

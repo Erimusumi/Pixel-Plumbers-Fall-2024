@@ -23,6 +23,7 @@ public class Sweep
         IEntity item1 = entities[index1];
         IEntity item2 = entities[index2];
 
+        //System.Diagnostics.Debug.WriteLine(item1.GetType() == typeof(Goomba));
         if (item1.GetType() == typeof(ISpriteEnemy) && item2.GetType() == typeof(Mario))
         {
             EnemyMarioInteraction = new EnemyMarioInteraction((ISpriteEnemy)item1, (Mario)item2, Rectangle.Intersect(item1.GetDestination(), item2.GetDestination()));
@@ -31,13 +32,15 @@ public class Sweep
         {
             EnemyMarioInteraction = new EnemyMarioInteraction((ISpriteEnemy)item2, (Mario)item1, Rectangle.Intersect(item1.GetDestination(), item2.GetDestination()));
         }
-        else if (item1.GetType() == typeof(ISpriteEnemy))
+        if (item1.GetType() == typeof(Goomba2) && item2.GetType() != typeof(Mario))
         {
             OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item1, item2);
+            OtherEnemyInteraction.update();
         }
-        else if (item2.GetType() == typeof(ISpriteEnemy))
+        if (item2.GetType() == typeof(Goomba) && item1.GetType() != typeof(Mario))
         {
             OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item2, item1);
+            OtherEnemyInteraction.update();
         }
 
 

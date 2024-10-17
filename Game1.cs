@@ -88,6 +88,7 @@ public class Game1 : Game
 
     private void ResetGame()
     {
+        entities.Clear();
         spriteEnemy = new Goomba(480, 400); // Create a new Goomba object
         spriteEnemy2 = new Goomba2(240, 400);
         entities.Add(spriteEnemy2);
@@ -112,6 +113,8 @@ public class Game1 : Game
 
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
+        entities.Add(spriteEnemy2);
+        entities.Add(spriteEnemy);
         controlG = new GoombaCommand(spriteEnemy);
         controlG2 = new GoombaCommand(spriteEnemy2);
 
@@ -200,11 +203,12 @@ public class Game1 : Game
 
     protected override void Update(GameTime gameTime)
     {
-        //List<IEntity> temp = entities;
-        //entities = sort.SortList(entities, entities.Count, temp);
+        List<IEntity> temp = entities;
+        entities = sort.SortList(entities, entities.Count, temp);
         if (Keyboard.GetState().IsKeyDown(Keys.D0))
         {
             gameStarted = true;
+            //System.Diagnostics.Debug.WriteLine("Hello World");
         }
         if (Keyboard.GetState().IsKeyDown(Keys.D8))
         {
@@ -254,7 +258,7 @@ public class Game1 : Game
 
             spriteEnemy.Updates();
             spriteEnemy2.Updates();
-            Dance.Updates();
+            //Dance.Updates();
             controlG.Update();
 
             manager.updateCurrentItem(ref currentItem, numItems);
@@ -269,7 +273,7 @@ public class Game1 : Game
             }
             if (entities[0].GetDestination().Intersects(entities[1].GetDestination()))
             {
-                //sweep.handleInteraction(entities, 0, 1);
+                sweep.handleInteraction(entities, 0, 1);
             }
         }
 
@@ -285,7 +289,7 @@ public class Game1 : Game
             // mari and enemy
             spriteEnemy.Draw(spriteBatch, EnemyTexture);
             spriteEnemy2.Draw(spriteBatch, EnemyTexture);
-            Dance.Draw(spriteBatch, DanceTexture);
+            //Dance.Draw(spriteBatch, DanceTexture);
             spriteBatch.Begin();
             mario.Draw(spriteBatch);
             manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
