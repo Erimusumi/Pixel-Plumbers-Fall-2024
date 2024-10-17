@@ -250,7 +250,7 @@ public class Mario : IEntity
 
     public bool HasStar()
     {
-        return marioStateMachine.HasStar;
+        return marioStateMachine.HasStar();
     }
 
     public void CollectStar()
