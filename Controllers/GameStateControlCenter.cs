@@ -19,7 +19,7 @@ public class GameStateControlCenter
     private void InitializeCommands()
     {
         ICommand startGameCommand = new RunGameCommand(gameStateMachine);
-        gameController.addCommand(Keys.D0, startGameCommand);
+        gameController.addCommand(Keys.D9, startGameCommand);
 
         ICommand quitGameCommand = new QuitGameCommand(game);
         gameController.addCommand(Keys.Q, quitGameCommand);
@@ -29,5 +29,8 @@ public class GameStateControlCenter
 
         ICommand pauseGameCommand = new PauseGameCommand(gameStateMachine);
         gameController.addCommand(Keys.D3, pauseGameCommand);
+
+        ICommand startScreenCommand = new StartScreeGameCommand(gameStateMachine);
+        gameController.addCommand(Keys.D0, startScreenCommand);
     }
 }
