@@ -1,14 +1,16 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
+using System.ComponentModel.Design.Serialization;
+using System.Diagnostics;
 using System.Numerics;
 using System.Runtime.InteropServices;
 public interface IStarObject : IEntity
 {
-    Boolean idleState();
-    Boolean collectedState();
-    Boolean roamingState();
-    void draw(SpriteBatch sb, Texture2D texture);
+    void idling();
+    void collect();
+    void roams();
+    void draw();
 
 
 
@@ -16,40 +18,57 @@ public interface IStarObject : IEntity
 }
 public class Star : IStarObject
 {
-    public Boolean idle;
-    public Boolean collected;
-    public Boolean roaming;
+    private Boolean idle;
+    private Boolean collected;
+    private Boolean roaming;
     private Microsoft.Xna.Framework.Vector2 position;
     private StarPower sp;
-    public Star()
+    private SpriteBatch sB;
+    private Texture2D texture;
+    
+
+    public Star(SpriteBatch sb,Texture2D text, Microsoft.Xna.Framework.Vector2 pos)
     {
-        this.idle = false;
-        this.collected = false;
-        this.roaming = false;
+        sp = new StarPower(texture);
+        idle = true;
+        collected = false;
+        roaming = false;
+        sB = sb;
+        position = pos;
+        texture = text;
+
+
     }
-    public Boolean idleState()
+    public void idling()
     {
-        return this.idle;
+        idle = true;
+        collected = false;
+        roaming = false;
     }
-    public Boolean collectedState()
+    public void collect()
     {
 
-        return this.collected;
+        collected = true;
+        idle = false;
+        roaming = false;
+
     }
-    public Boolean roamingState()
+    public void roams()
     {
-        return this.roaming;
+        roaming = true;
+        collected = false;
+        idle = false;
     }
-    public void draw(SpriteBatch sB, Texture2D texture)
+    public void draw()
     {
-        if (this.idle)
+        if (this.collected)
         {
-            this.sp = new StarPower(texture);
-            this.sp.Draw(sB, position);
+           
         }
-        else if (this.collected)
+        else if (this.idle)
         {
-
+            sp = new StarPower(texture);
+            this.sp.Draw(sB, position);
         }
         else if (this.roaming)
         {

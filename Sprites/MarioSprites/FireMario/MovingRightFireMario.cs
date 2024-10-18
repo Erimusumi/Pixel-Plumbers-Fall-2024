@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 public class MovingRightFireMario : IMarioSprite
 {
+    private float scale = 2f;
     private Texture2D MarioTexture;
     private float GameTicks;
     private int AnimationSpeed;
@@ -28,7 +29,7 @@ public class MovingRightFireMario : IMarioSprite
 
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
-        spriteBatch.Draw(MarioTexture, position, FrameRectangles[currentAnimationIndex], Color.White);
+        spriteBatch.Draw(MarioTexture, position, FrameRectangles[currentAnimationIndex], Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
     }
 
     public void Update(GameTime gameTime)
@@ -49,10 +50,10 @@ public class MovingRightFireMario : IMarioSprite
     {
         switch (currentAnimationIndex)
         {
-            case 0: return new Rectangle((int)position.X, (int)position.Y, 16, 32);
-            case 1: return new Rectangle((int)position.X, (int)position.Y, 14, 31);
+            case 0: return new Rectangle((int)position.X, (int)position.Y, 16 * (int)scale, 32 * (int)scale);
+            case 1: return new Rectangle((int)position.X, (int)position.Y, 14 * (int)scale, 31 * (int)scale);
             case 2:
-            default: return new Rectangle((int)position.X, (int)position.Y, 16, 30);
+            default: return new Rectangle((int)position.X, (int)position.Y, 16 * (int)scale, 30 * (int)scale);
         }
 
     }

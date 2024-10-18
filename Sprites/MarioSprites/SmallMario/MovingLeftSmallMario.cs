@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 public class MovingLeftSmallMario : IMarioSprite
 {
+    private float scale = 2f;
     private Texture2D MarioTexture;
     private float GameTicks;
     private int AnimationSpeed;
@@ -29,7 +30,7 @@ public class MovingLeftSmallMario : IMarioSprite
 
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
-        spriteBatch.Draw(MarioTexture, position, FrameRectangles[currentAnimationIndex], Color.White);
+        spriteBatch.Draw(MarioTexture, position, FrameRectangles[currentAnimationIndex], Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
     }
 
     public void Update(GameTime gameTime)
@@ -51,10 +52,10 @@ public class MovingLeftSmallMario : IMarioSprite
     {
         switch (currentAnimationIndex)
         {
-            case 0: return new Rectangle((int)position.X, (int)position.Y, 14, 15);
-            case 1: return new Rectangle((int)position.X, (int)position.Y, 14, 15);
+            case 0: return new Rectangle((int)position.X, (int)position.Y, 14 * (int)scale, 15 * (int)scale);
+            case 1: return new Rectangle((int)position.X, (int)position.Y, 14 * (int)scale, 15 * (int)scale);
             case 2:
-            default: return new Rectangle((int)position.X, (int)position.Y, 14, 15);
+            default: return new Rectangle((int)position.X, (int)position.Y, 14 * (int)scale, 15 * (int)scale);
         }
 
     }

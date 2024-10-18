@@ -8,11 +8,14 @@ using Pixel_Plumbers_Fall_2024;
 public class Goomba : ISpriteEnemy
 {
     private GoombaStateMachine stateMachine;
-	public Goomba()
+	public Goomba(int posX, int posY)
 	{
-		stateMachine = new GoombaStateMachine();
+		stateMachine = new GoombaStateMachine(posX, posY);
 	}
-
+	public Boolean IsFlipped()
+	{
+		return stateMachine.IsFlipped();
+	}
 	public void changeDirection()
 	{
 		stateMachine.changeDirection();

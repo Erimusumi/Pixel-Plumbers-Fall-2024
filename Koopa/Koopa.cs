@@ -9,9 +9,14 @@ using Pixel_Plumbers_Fall_2024;
 public class Koopa : ISpriteEnemy
 {
     private KoopaStateMachine stateMachine;
-	public Koopa()
+	public Koopa(int posX, int posY)
 	{
-		stateMachine = new KoopaStateMachine();
+		stateMachine = new KoopaStateMachine(posX, posY);
+	}
+
+	public Boolean IsMovingShell()
+	{
+		return stateMachine.IsMovingShell();
 	}
 
 	public void changeDirection()

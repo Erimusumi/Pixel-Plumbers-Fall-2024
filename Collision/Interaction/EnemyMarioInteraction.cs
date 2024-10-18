@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Security.Cryptography.X509Certificates;
-using System.Drawing;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Pixel_Plumbers_Fall_2024;
@@ -16,18 +16,17 @@ public class EnemyMarioInteraction
         mario = _mario;
         Overlap = _Overlap;
     }
-    public void update()
+    public void Update()
     {
-        if (Overlap.X >= Overlap.Y)
+        if (Overlap.Width >= Overlap.Height)
         {
             enemy.beStomped();
-            //make mario's velocity y, or slightly negative, so he can sort of bounce off the enemy.
-            //mario.velocityy = 0;
+            mario.marioVelocity.Y = 0;
         }
         else
         {
             //Not correct, I need star mario
-            if(mario.GetType() == typeof(StarPower))
+            if(mario.HasStar())
             {
                 enemy.beFlipped();
             } else

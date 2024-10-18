@@ -9,37 +9,38 @@ using System.Threading.Tasks;
 
     public class BlockFireballInteraction
 {
-    private Fireball fireball;
-    private UnknownBlockSprite block;
+    private Fireball _fireball;
+    private UnknownBlockSprite _block;
+    private List<IEntity> _entities;
 
-
-    public BlockFireballInteraction(Fireball _fireball, UnknownBlockSprite _block)
+    public BlockFireballInteraction(Fireball fireball, UnknownBlockSprite block, List<IEntity> entities)
     {
-        this.block = _block;
-        this.fireball = _fireball;
-       
+        this._block = block;
+        this._fireball = fireball;
+        this._entities = entities;
     }
     public void update()
     {
         //Check if overlap in rectangles has more horizontal area than vertical area
         //This means collision type is a top/bottom
-        Rectangle temp = Rectangle.Intersect(block.GetDestination(), fireball.GetDestination());
+        Rectangle temp = Rectangle.Intersect(_block.GetDestination(), _fireball.GetDestination());
         if (temp.Width > temp.Height)
         {
             //Check if fireball is on top or bottom
-            if (fireball.GetDestination().Center.Y > block.GetDestination().Center.Y)
+            if (_fireball.GetDestination().Center.Y > _block.GetDestination().Center.Y)
             {
-                fireball.Bounce();
+                _fireball.Bounce();
             }
         }
         else
         {
-            fireball.Remove();
+            _fireball.Remove();
+            removeFromList();
         }
     }
     private void removeFromList()
     {
-        //remove fireball from list of entities
+        _entities.Remove(_fireball);
     }
 }
 

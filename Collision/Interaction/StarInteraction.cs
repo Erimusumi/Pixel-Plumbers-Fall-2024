@@ -4,28 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class StarInteraction
+public class MarioStarInteraction
 {
     private Mario mario;
     private Star star;
+    int count = 0;
 
 
-    public StarInteraction(Mario mar, Star s)
+    public MarioStarInteraction(Mario mar, Star s)
     {
         this.star = s;
         this.mario = mar;
 
+
     }
     public void update()
     {
-        star.collected = true;
-        star.roaming = false;
-        star.idle = false;
-
-        mario.MarioPowerUp();
+        if (count == 0)
+        {
+            star.collect();
+            mario.CollectStar();
+            count++;
+        }
     }
-    private void removeFromList()
+    private void removeFromList(List<object> entit,int index)
     {
-        //remove fire power from list of entities
+      //  entit.Remove(index);
     }
 }

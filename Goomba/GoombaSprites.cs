@@ -7,6 +7,17 @@ using Pixel_Plumbers_Fall_2024;
 
 public class GoombaSprites
 {
+
+    private int posX = 0;
+    private int posY = 0;
+    private int position = 0;
+    public GoombaSprites(int _posX, int _posY)
+    {
+        posX = _posX;
+        position = _posX;
+        posY = _posY;
+    }
+
     private Rectangle sourceRectangle;
     private Rectangle destinationRectangle;
     private int counter = -1;
@@ -15,12 +26,9 @@ public class GoombaSprites
     private const int countStart = 10;
     private const int countMod = 10;
 
-    private const int posX = 480;
-    private const int posY = 400;
     private const int size = 16;
     private const int scaleUp = 2;
     private const int speed = 1;
-    private int position = posX;
 
     private float rotation = 0f;
 
@@ -60,7 +68,7 @@ public class GoombaSprites
         }
         if ((counter >= countStart) && (counter < countEnd))
         {
-            position = position + speed;
+            position += speed;
             if (counter % countMod < (countMod / 2))
             {
                 sourceRectangle = new Rectangle(30, 4, size, size);

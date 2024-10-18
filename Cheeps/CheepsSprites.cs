@@ -11,9 +11,15 @@ public class CheepsSprites
     private int LeftPosX2;
     private int RightPosX1;
     private int RightPosX2;
+    private int posX = 0;
+    private int posY = 0;
+    private int position = 0;
     //0 is red, 1 is green, 2 is white
-    public CheepsSprites(int color)
+    public CheepsSprites(int color, int _posX, int _posY)
     {
+        posX = _posX;
+        position = _posX;
+        posY = _posY;
         switch (color)
         {
             case 0:
@@ -44,13 +50,10 @@ public class CheepsSprites
     private const int countStart = 10;
     private const int countMod = 10;
 
-    private const int posX = 480;
-    private const int posY = 400;
     private const int SourceHeight = 184;
     private const int size = 16;
     private const int scaleUp = 2;
     private const int speed = 1;
-    private int position = posX;
 
     private float rotation = 0f;
 

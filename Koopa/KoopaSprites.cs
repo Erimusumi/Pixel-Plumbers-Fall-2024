@@ -8,7 +8,11 @@ using Pixel_Plumbers_Fall_2024;
 
 public class KoopaSprites
 {
-    KoopaFields vars = new KoopaFields();
+    KoopaFields vars;
+    public KoopaSprites(int _posX, int _posY)
+    {
+        vars = new KoopaFields(_posX, _posY);
+    }
     KoopaLeftLogic left = new KoopaLeftLogic();
     KoopaRightLogic right = new KoopaRightLogic();
     KoopaStompedLogic stomped = new KoopaStompedLogic();
