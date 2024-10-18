@@ -20,7 +20,7 @@ public class JumpingLeftSmallMario : IMarioSprite
     }
     public Rectangle GetDestination(Vector2 position)
     {
-        return new Rectangle((int)position.X, (int)position.Y, 17, 16);
+        return new Rectangle((int)position.X, (int)position.Y, 17 * (int)scale, 16 * (int)scale);
 
 
     }

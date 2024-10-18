@@ -1,9 +1,1 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/kamau/Downloads/CSE3902/Luiiggi/Content/blocks.gif","C:/Users/kamau/Downloads/CSE3902/Luiiggi/Content/bin/DesktopGL/Content/obstacle.xnb","TextureProcessor","Texture2DContent",14122,1560241,0.2181776
-"C:/Users/kamau/Downloads/CSE3902/Luiiggi/Content/blocks.png","C:/Users/kamau/Downloads/CSE3902/Luiiggi/Content/bin/DesktopGL/Content/blocks.xnb","TextureProcessor","Texture2DContent",13083,458837,0.0198627
-"C:/Users/kamau/Downloads/CSE3902/Luiiggi/Content/dance.png","C:/Users/kamau/Downloads/CSE3902/Luiiggi/Content/bin/DesktopGL/Content/dance.xnb","TextureProcessor","Texture2DContent",9654755,42493149,2.35743
-"C:/Users/kamau/Downloads/CSE3902/Luiiggi/Content/enemies.png","C:/Users/kamau/Downloads/CSE3902/Luiiggi/Content/bin/DesktopGL/Content/enemies.xnb","TextureProcessor","Texture2DContent",8295,455269,0.0151427
-"C:/Users/kamau/Downloads/CSE3902/Luiiggi/Content/itemsAndPowerups.png","C:/Users/kamau/Downloads/CSE3902/Luiiggi/Content/bin/DesktopGL/Content/itemsAndPowerups.xnb","TextureProcessor","Texture2DContent",32550,516181,0.015047
-"C:/Users/kamau/Downloads/CSE3902/Luiiggi/Content/mario.png","C:/Users/kamau/Downloads/CSE3902/Luiiggi/Content/bin/DesktopGL/Content/mario.xnb","TextureProcessor","Texture2DContent",6584,304645,0.0106845
-"C:/Users/kamau/Downloads/CSE3902/Luiiggi/Content/MarioItems.png","C:/Users/kamau/Downloads/CSE3902/Luiiggi/Content/bin/DesktopGL/Content/MarioItems.xnb","TextureProcessor","Texture2DContent",38427,2532585,0.0676009
-"C:/Users/kamau/Downloads/CSE3902/Luiiggi/Content/MyFont.spritefont","C:/Users/kamau/Downloads/CSE3902/Luiiggi/Content/bin/DesktopGL/Content/MyFont.xnb","FontDescriptionProcessor","SpriteFontContent",2065,21538,0.1186015
