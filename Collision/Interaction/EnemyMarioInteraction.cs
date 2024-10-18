@@ -18,7 +18,7 @@ public class EnemyMarioInteraction
     }
     public void Update()
     {
-        if (Overlap.X >= Overlap.Y)
+        if (Overlap.Width >= Overlap.Height)
         {
             enemy.beStomped();
             mario.marioVelocity.Y = 0;
