@@ -12,12 +12,9 @@ public class Game1 : Game
     private Texture2D marioTexture;
     private GameTime gameTime;
 
-
-
     private KeyboardController keyboardController;
     private KeyboardControllerMovement keyboardControllerMovement;
     private CommandControlCenter controlCenter;
-
 
     private Mario mario;
     private PlayerMovementController marioMovementController;
@@ -71,15 +68,17 @@ public class Game1 : Game
     //Fireballs
     public List<Fireball> fireballs = new List<Fireball>();
 
-    private ISprite StartText;
-    private SpriteFont MyFont;
-
     private List<IEntity> entities = new List<IEntity>();
     private Sort sort = new Sort();
     private Sweep sweep = new Sweep();
 
     // reset instances
     public Vector2 initial_mario_position;
+
+    // Start Screen
+    private ISprite StartText;
+    private SpriteFont MyFont;
+
     public Game1()
     {
         graphics = new GraphicsDeviceManager(this);
@@ -90,13 +89,13 @@ public class Game1 : Game
     private void ResetGame()
     {
         entities.Clear();
-        spriteEnemy = new Goomba(480, 400); // Create a new Goomba object
+        spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
         spriteEnemy = new Koopa(480, 400);
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
 
-        controlG = new GoombaCommand(spriteEnemy); // Reset Goomba's control command
+        controlG = new GoombaCommand(spriteEnemy);
         controlG2 = new GoombaCommand(spriteEnemy2);
         currentItem = 0;
         index1 = 0;
@@ -112,7 +111,6 @@ public class Game1 : Game
         keyboardController = new KeyboardController();
         keyboardControllerMovement = new KeyboardControllerMovement();
 
-
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
         entities.Add(spriteEnemy2);
@@ -120,12 +118,10 @@ public class Game1 : Game
 
         controlG = new GoombaCommand(spriteEnemy);
         controlG2 = new GoombaCommand(spriteEnemy2);
+        controlCenter = new CommandControlCenter(this);
 
         Dance = new DancePole();
 
-        controlCenter = new CommandControlCenter(this);
-
-        //Make a first list for block iteration
         sprite1 = new List<ISprite>
             {
                 //lucky brick sprites
@@ -156,15 +152,18 @@ public class Game1 : Game
         s = new Star(spriteBatch, ItemsTexture, new Vector2(440, 190));
 
     }
+
     public ISpriteEnemy SetEnemy(ISpriteEnemy enemy)
     {
         spriteEnemy = enemy;
         return spriteEnemy;
     }
+
     public void SetEnemyCommand(IController Enemy)
     {
         controlG = Enemy;
     }
+
     public void SetKey(KeyboardController keys)
     {
         keyboardController = keys;
@@ -194,7 +193,6 @@ public class Game1 : Game
         gameStateControlCenter = new GameStateControlCenter(gameStateMachine, gameStateKeyboardController, this);
 
         // Reset instances initialization
-
         firePower = new FirePower(ItemsTexture);
         starPower = new StarPower(ItemsTexture);
 
@@ -219,7 +217,6 @@ public class Game1 : Game
         {
             keyboardController.Update();
             keyboardControllerMovement.Update();
-
             marioMovementController.Update();
 
             // Update Mario's state
@@ -236,9 +233,9 @@ public class Game1 : Game
 
             spriteEnemy.Updates();
             spriteEnemy2.Updates();
+
             //Dance.Updates();
             controlG.Update();
-
             manager.updateCurrentItem(ref currentItem, numItems);
 
             //Update block and obstacle sprites
