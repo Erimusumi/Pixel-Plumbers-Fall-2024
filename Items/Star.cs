@@ -27,6 +27,7 @@ public class Star : IStarObject
 
     public Star(SpriteBatch sb,Texture2D text, Microsoft.Xna.Framework.Vector2 pos)
     {
+        sp = new StarPower(texture);
         this.idle = true;
         this.collected = false;
         this.roaming = false;

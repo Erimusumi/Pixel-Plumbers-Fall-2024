@@ -23,14 +23,15 @@ public class Fire : IFireObject
     private SpriteBatch sB;
     private Texture2D texture;
 
-    public Fire(SpriteBatch sB, Texture2D texture, Microsoft.Xna.Framework.Vector2 position)
+    public Fire(SpriteBatch sB, Texture2D texture, Microsoft.Xna.Framework.Vector2 pos)
     {
-        this.idle = true;
-        this.collected = false;
-        this.roaming = false;
-        this.sB = sB;
-        this.texture = texture;
-        this.position = position;
+        fp = new FirePower(texture);
+        idle = true;
+        collected = false;
+        roaming = false;
+        sB = sB;
+        texture = texture;
+        position = pos;
     }
     public Boolean idleState()
     {

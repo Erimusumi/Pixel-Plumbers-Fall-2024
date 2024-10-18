@@ -92,8 +92,10 @@ public class Game1 : Game
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
         spriteEnemy = new Koopa(480, 400);
+        f = new Fire(spriteBatch, ItemsTexture, new Vector2(240, 190));
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
+        entities.Add(f);
 
         controlG = new GoombaCommand(spriteEnemy);
         controlG2 = new GoombaCommand(spriteEnemy2);
@@ -114,8 +116,10 @@ public class Game1 : Game
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
         spriteEnemy = new Koopa(480, 400);
+        f = new Fire(spriteBatch, ItemsTexture, new Vector2(440, 190));
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
+        entities.Add(f);
 
         controlG = new GoombaCommand(spriteEnemy);
         controlG2 = new GoombaCommand(spriteEnemy2);
