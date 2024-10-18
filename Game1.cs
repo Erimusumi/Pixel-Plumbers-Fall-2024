@@ -272,7 +272,14 @@ public class Game1 : Game
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
 
-       if(gameStateMachine.isCurrentStateRunning())
+        if (gameStateMachine.isCurrentStateStart())
+        {
+            spriteBatch.Begin();
+            StartText.Draw(spriteBatch, new Vector2(200, 200));
+
+            spriteBatch.End();
+        }
+        if (gameStateMachine.isCurrentStateRunning())
         {
             // mari and enemy
             spriteEnemy.Draw(spriteBatch, EnemyTexture);
@@ -293,18 +300,7 @@ public class Game1 : Game
             // Draw blocks and obstacles
             sprite1[index1].Draw(spriteBatch, new Vector2(200, 200));
             sprite2[index2].Draw(spriteBatch, new Vector2(310, 150));
-
-
-
         }
-        else
-        {
-            spriteBatch.Begin();
-            StartText.Draw(spriteBatch, new Vector2(200, 200));
-
-            spriteBatch.End();
-        }
-
         base.Draw(gameTime);
     }
 }

@@ -13,7 +13,7 @@ public class StartScreenText : ISprite
     {
         spriteBatch.DrawString(MyFont, "SUPER MARIO", new Vector2(100, 350), Color.Black);
         spriteBatch.DrawString(MyFont, "BY THE PIXEL PLUMBERS", new Vector2(100, 370), Color.Black);
-        spriteBatch.DrawString(MyFont, "PRESS 0 TO START & 9 TO RESTART", new Vector2(100, 390), Color.Black);
+        spriteBatch.DrawString(MyFont, "PRESS 0 TO START THE GAME", new Vector2(100, 390), Color.Black);
     }
 
     public void Update(GameTime gametime)

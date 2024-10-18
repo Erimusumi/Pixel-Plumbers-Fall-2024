@@ -1,9 +1,9 @@
 using System.Runtime.CompilerServices;
 
-public class StartGameCommand : ICommand
+public class RunGameCommand : ICommand
 {
     private GameStateMachine gameStateMachine;
-    public StartGameCommand(GameStateMachine gameStateMachine)
+    public RunGameCommand(GameStateMachine gameStateMachine)
     {
         this.gameStateMachine = gameStateMachine;
     }

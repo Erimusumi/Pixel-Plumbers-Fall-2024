@@ -14,7 +14,7 @@ public class GameStateControlCenter
     }
     private void InitializeCommmands()
     {
-        ICommand startGameCommand = new StartGameCommand(gameStateMachine);
-        gameController.addCommand(Keys.D0, startGameCommand);
+        ICommand runGameCommand = new RunGameCommand(gameStateMachine);
+        gameController.addCommand(Keys.D0, runGameCommand);
     }
 }
