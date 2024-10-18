@@ -16,5 +16,8 @@ public class GameStateControlCenter
     {
         ICommand runGameCommand = new RunGameCommand(gameStateMachine);
         gameController.addCommand(Keys.D0, runGameCommand);
+
+        ICommand pauseGameCommand = new PauseGameCommand(gameStateMachine);
+        gameController.addCommand(Keys.D3, pauseGameCommand);
     }
 }

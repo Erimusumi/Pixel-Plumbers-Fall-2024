@@ -175,10 +175,6 @@ public class Game1 : Game
     {
         keyboardController = keys;
     }
-    public void SetKeyMovement(KeyboardControllerMovement keys)
-    {
-        keyboardControllerMovement = keys;
-    }
 
     protected override void LoadContent()
     {
@@ -279,7 +275,7 @@ public class Game1 : Game
 
             spriteBatch.End();
         }
-        if (gameStateMachine.isCurrentStateRunning())
+        if (gameStateMachine.isCurrentStateRunning() || gameStateMachine.isCurrentStatePaused())
         {
             // mari and enemy
             spriteEnemy.Draw(spriteBatch, EnemyTexture);
