@@ -110,6 +110,20 @@ public class MarioStateMachine
         return CurrentMoveState == MarioMoveState.Turning;
     }
 
+    public bool IsRight()
+    {
+        return CurrentFaceState == MarioFaceState.Right;
+    }
+
+    public bool IsMoving()
+    {
+        return CurrentMoveState == MarioMoveState.Moving;
+    }
+
+    public bool IsFire()
+    {
+        return CurrentGameState == MarioGameState.Fire;
+    }
     public void Reset()
     {
         CurrentGameState = MarioGameState.Small;

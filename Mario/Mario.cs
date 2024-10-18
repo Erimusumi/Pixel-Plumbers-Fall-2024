@@ -52,7 +52,7 @@ public class Mario : IEntity
 
     public void MoveRight()
     {
-        if (marioStateMachine.CurrentFaceState == MarioStateMachine.MarioFaceState.Left)
+        if (!marioStateMachine.IsRight())
         {
             SwapDirection();
         }
@@ -66,7 +66,7 @@ public class Mario : IEntity
 
             marioPosition.X += marioVelocity.X;
 
-            if (marioStateMachine.CurrentMoveState != MarioStateMachine.MarioMoveState.Jumping)
+            if (!marioStateMachine.IsJumping())
             {
                 marioStateMachine.SetMarioRight();
                 marioStateMachine.SetMarioMoving();
@@ -76,7 +76,7 @@ public class Mario : IEntity
 
     public void MoveLeft()
     {
-        if (marioStateMachine.CurrentFaceState == MarioStateMachine.MarioFaceState.Right)
+        if (marioStateMachine.IsRight())
         {
             SwapDirection();
         }
@@ -90,7 +90,7 @@ public class Mario : IEntity
 
             marioPosition.X += marioVelocity.X;
 
-            if (marioStateMachine.CurrentMoveState != MarioStateMachine.MarioMoveState.Jumping)
+            if (!marioStateMachine.IsJumping())
             {
                 marioStateMachine.SetMarioLeft();
                 marioStateMachine.SetMarioMoving();
@@ -176,7 +176,7 @@ public class Mario : IEntity
 
     public void SwapDirection()
     {
-        if (marioStateMachine.CurrentMoveState == MarioStateMachine.MarioMoveState.Moving)
+        if (marioStateMachine.IsMoving())
         {
             marioStateMachine.SetMarioTurning();
             marioVelocity.X = 0f;
@@ -198,7 +198,7 @@ public class Mario : IEntity
         {
             return;
         }
-        if (marioStateMachine.CurrentGameState == MarioStateMachine.MarioGameState.Fire)
+        if (marioStateMachine.IsFire())
         {
             Fireball f = new Fireball(marioPosition, game.ItemsTexture, gameTime, marioStateMachine.CurrentFaceState, game, _entities);
             game.fireballs.Add(f);
