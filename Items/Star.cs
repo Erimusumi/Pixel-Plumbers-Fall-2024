@@ -58,7 +58,7 @@ public class Star : IStarObject
         }
         else if (this.idle)
         {
-            this.sp = new StarPower(texture);
+            sp = new StarPower(texture);
             this.sp.Draw(sB, position);
         }
         else if (this.roaming)
