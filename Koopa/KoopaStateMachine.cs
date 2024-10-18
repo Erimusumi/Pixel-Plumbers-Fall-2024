@@ -11,11 +11,11 @@ public class KoopaStateMachine
 	private enum KoopaState {Left, Right, StompedLeft, StompedRight, StompedTwiceLeft, StompedTwiceRight, Flipped};
 	private KoopaState _currentState = KoopaState.StompedTwiceLeft;
 	private KoopaSprites _sprite;
-	private Boolean _isMovingShell = false;
+	private Boolean _isMovingShell = true;
 
-	public KoopaStateMachine()
+	public KoopaStateMachine(int posX, int posY)
 	{
-		_sprite = new KoopaSprites();
+		_sprite = new KoopaSprites(posX, posY);
 	}
 	public Boolean IsMovingShell()
 	{

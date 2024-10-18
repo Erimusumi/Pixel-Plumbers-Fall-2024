@@ -11,9 +11,9 @@ public class CheepsStateMachine
 	private CheepsState _currentState = CheepsState.Left;
 	private CheepsSprites _sprite;
 
-	public CheepsStateMachine(int color)
+	public CheepsStateMachine(int color, int posX, int posY)
 	{
-		_sprite = new CheepsSprites(color);
+		_sprite = new CheepsSprites(color, posX, posY);
 	}
     public void changeDirection()
 	{

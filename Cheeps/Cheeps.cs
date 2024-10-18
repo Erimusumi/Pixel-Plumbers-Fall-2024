@@ -8,9 +8,9 @@ using Pixel_Plumbers_Fall_2024;
 public class Cheeps : ISpriteEnemy
 {
     private CheepsStateMachine stateMachine;
-	public Cheeps(int color)
+	public Cheeps(int color, int posX, int posY)
 	{
-		stateMachine = new CheepsStateMachine(color);
+		stateMachine = new CheepsStateMachine(color, posX, posY);
 	}
 
 	public void changeDirection()

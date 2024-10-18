@@ -22,9 +22,12 @@ public class OtherEnemyInteraction
 
         if (item2.GetType() == typeof(Koopa))
         {
-            enemy.beFlipped();
-            Koopa hold = (Koopa)item2;
-            hold.changeDirection();
+            Koopa koopa = (Koopa)item2;
+            if (koopa.IsMovingShell())
+            {
+                enemy.beFlipped();
+                koopa.changeDirection();
+            }
         }
         
     }

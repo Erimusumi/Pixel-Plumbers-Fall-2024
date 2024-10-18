@@ -25,15 +25,15 @@ public class EnemySwitch : ICommand
             switch (commandType)
             {
                 case CommandType.GoombaCommand:
-                    game1.SetEnemyCommand(new CheepsCommand(game1.SetEnemy(new Cheeps(0))));
+                    game1.SetEnemyCommand(new CheepsCommand(game1.SetEnemy(new Cheeps(0, 480, 400))));
                     commandType = CommandType.CheepRedCommand;
                     break;
                 case CommandType.CheepRedCommand:
-                    game1.SetEnemyCommand(new KoopaCommand(game1.SetEnemy(new Koopa())));
+                    game1.SetEnemyCommand(new KoopaCommand(game1.SetEnemy(new Koopa(480, 400))));
                     commandType = CommandType.KoopaCommand;
                     break;
                 case CommandType.KoopaCommand:
-                    game1.SetEnemyCommand(new CheepsCommand(game1.SetEnemy(new Cheeps(1))));
+                    game1.SetEnemyCommand(new CheepsCommand(game1.SetEnemy(new Cheeps(1, 480, 400))));
                     commandType = CommandType.CheepGreenCommand;
                     break;
                 case CommandType.CheepGreenCommand:
@@ -45,7 +45,7 @@ public class EnemySwitch : ICommand
         {
             switch (commandType) {
                 case CommandType.GoombaCommand:
-                    game1.SetEnemyCommand(new CheepsCommand(game1.SetEnemy(new Cheeps(1))));
+                    game1.SetEnemyCommand(new CheepsCommand(game1.SetEnemy(new Cheeps(1, 480, 400))));
                     commandType = CommandType.CheepGreenCommand;
                     break;
                 case CommandType.CheepRedCommand:
@@ -53,11 +53,11 @@ public class EnemySwitch : ICommand
                     commandType = CommandType.GoombaCommand;
                     break;
                 case CommandType.KoopaCommand:
-                    game1.SetEnemyCommand(new CheepsCommand(game1.SetEnemy(new Cheeps(0))));
+                    game1.SetEnemyCommand(new CheepsCommand(game1.SetEnemy(new Cheeps(0, 480, 400))));
                     commandType = CommandType.CheepRedCommand;
                     break;
                 case CommandType.CheepGreenCommand:
-                    game1.SetEnemyCommand(new KoopaCommand(game1.SetEnemy(new Koopa())));
+                    game1.SetEnemyCommand(new KoopaCommand(game1.SetEnemy(new Koopa(480, 400))));
                     commandType = CommandType.KoopaCommand;
                     break;
                 }
