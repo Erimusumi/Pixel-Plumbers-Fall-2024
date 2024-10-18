@@ -79,13 +79,13 @@ public class Sweep
         {
             MarioStarInteraction = new MarioStarInteraction((Mario)item2, (Star)item1);
             MarioStarInteraction.update();
-            entities.RemoveAt(index1);
+            //entities.RemoveAt(index1);
         }
         else if (item1.GetType() == typeof(Mario) && item2.GetType() == typeof(Star))
         {
             MarioStarInteraction = new MarioStarInteraction((Mario)item1, (Star)item2);
             MarioStarInteraction.update();
-            entities.RemoveAt(index2);
+            //entities.RemoveAt(index2);
         }
         if (item1.GetType() == typeof(Fire) && item2.GetType() == typeof(Mario))
         {
@@ -122,7 +122,7 @@ public class Sweep
     {
         IEntity entity = Entities[index];
         Rectangle rectangle = new Rectangle();
-        // rectangle = entity.GetDestinationRectangle;
+        rectangle = entity.GetDestination();
         return rectangle;
     }
     public void Compare(List<IEntity> entities)

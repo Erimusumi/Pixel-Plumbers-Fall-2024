@@ -8,6 +8,7 @@ public class MarioStarInteraction
 {
     private Mario mario;
     private Star star;
+    int count = 0;
 
 
     public MarioStarInteraction(Mario mar, Star s)
@@ -15,16 +16,19 @@ public class MarioStarInteraction
         this.star = s;
         this.mario = mar;
 
+
     }
     public void update()
     {
-        star.collected = true;
-        star.roaming = false;
-        star.idle = false;
-        mario.CollectStar();
+        if (count == 0)
+        {
+            star.collect();
+            mario.CollectStar();
+            count++;
+        }
     }
     private void removeFromList(List<object> entit,int index)
     {
-        entit.Remove(index);
+      //  entit.Remove(index);
     }
 }

@@ -39,9 +39,10 @@ public class Game1 : Game
     public Texture2D ItemsTexture;
     public ISprite firePower;
     public ISprite starPower;
-    public ISprite mushroom;
+    public ISprite mushroomPower;
     public Fire f;
     public Star s;
+    public Mushroom m;
     Vector2 itemsPos = new Vector2(400, 250);
     public ItemManager manager = new ItemManager();
     public int numItems = 3;
@@ -92,10 +93,12 @@ public class Game1 : Game
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
         spriteEnemy = new Koopa(480, 400);
-        f = new Fire(spriteBatch, ItemsTexture, new Vector2(240, 190));
+        s = new Star(spriteBatch, ItemsTexture, new Vector2(240, 190));
+        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(240, 190));
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
-        entities.Add(f);
+        entities.Add(mario);
+        entities.Add(m);
 
         controlG = new GoombaCommand(spriteEnemy);
         controlG2 = new GoombaCommand(spriteEnemy2);
@@ -116,10 +119,12 @@ public class Game1 : Game
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
         spriteEnemy = new Koopa(480, 400);
-        f = new Fire(spriteBatch, ItemsTexture, new Vector2(440, 190));
+        s = new Star(spriteBatch, ItemsTexture, new Vector2(440, 190));
+        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(240, 190));
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
-        entities.Add(f);
+        entities.Add(mario);
+        entities.Add(m);
 
         controlG = new GoombaCommand(spriteEnemy);
         controlG2 = new GoombaCommand(spriteEnemy2);
@@ -155,6 +160,7 @@ public class Game1 : Game
         //Item initialization
         f = new Fire(spriteBatch, ItemsTexture, new Vector2(440, 190));
         s = new Star(spriteBatch, ItemsTexture, new Vector2(440, 190));
+        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 190));
 
     }
 
@@ -200,6 +206,8 @@ public class Game1 : Game
         // Reset instances initialization
         firePower = new FirePower(ItemsTexture);
         starPower = new StarPower(ItemsTexture);
+        mushroomPower = new MushroomPower(ItemsTexture);
+        
 
         // Initialize block and obstacle sprites
         OWLuckyBlockSprite = new LuckyBlockSprite(block, 3, 20);
@@ -255,6 +263,10 @@ public class Game1 : Game
             {
                 sweep.handleInteraction(entities, 0, 1);
             }
+            if (entities[2].GetDestination().Intersects(entities[3].GetDestination()))
+            {
+                sweep.handleInteraction(entities, 2, 3);
+            }
 
 
         }
@@ -288,7 +300,7 @@ public class Game1 : Game
                 item.Draw(spriteBatch);
             }
 
-            s.draw(); //draw star collision test
+            m.draw(); //draw mush collision test
             spriteBatch.End();
 
             // Draw blocks and obstacles

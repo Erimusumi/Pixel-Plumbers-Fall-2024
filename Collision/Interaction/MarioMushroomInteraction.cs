@@ -21,9 +21,8 @@ public class MarioMushroomInteraction
 
     public void update()
     {
-        mushroom.roaming = false;
-        mushroom.idle = false;
-        mushroom.collected = true;
+     
+        mushroom.collect();
 
         if (mario.GetMarioGameState() == MarioStateMachine.MarioGameState.Small)
         {
