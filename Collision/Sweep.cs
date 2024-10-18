@@ -52,12 +52,12 @@ public class Sweep
         if (ContainsEnemy(entities, index1) && item2.GetType() != typeof(Mario))
         {
             OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item1, item2);
-            // OtherEnemyInteraction.update();
+            OtherEnemyInteraction.Update();
         }
         if (ContainsEnemy(entities, index2) && item1.GetType() != typeof(Mario))
         {
             OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item2, item1);
-            // OtherEnemyInteraction.update();
+            OtherEnemyInteraction.Update();
         }
 
 

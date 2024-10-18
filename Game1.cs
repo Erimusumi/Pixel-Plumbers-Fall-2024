@@ -113,6 +113,7 @@ public class Game1 : Game
 
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
+        spriteEnemy = new Koopa(480, 400);
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
 
