@@ -1,16 +1,17 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
+using System.ComponentModel.Design.Serialization;
 using System.Numerics;
 using System.Runtime.InteropServices;
 using System.Text;
 public interface IMushroomObject : IEntity
 {
   
-    Boolean idleState();
-    Boolean collectedState();
-    Boolean roamingState();
-    void draw(SpriteBatch sb, Texture2D texture);
+    void idling();
+    void collect();
+    void roams();
+    void draw();
 
 }
 public class Mushroom : IMushroomObject
@@ -20,32 +21,46 @@ public class Mushroom : IMushroomObject
     public Boolean roaming;
     private Microsoft.Xna.Framework.Vector2 position;
     private MushroomPower mp;
+    private SpriteBatch sb;
+    private Texture2D texture;
+    
 
-    public  Mushroom()
+    public  Mushroom(SpriteBatch sB, Texture2D texture, Microsoft.Xna.Framework.Vector2 position)
     {
-        this.idle = false;
+        mp = new MushroomPower(texture);
+        this.idle = true;
         this.collected = false;
         this.roaming = false;
+        this.position = position;
+        this.texture = texture;
+        this.sb = sB;
     }
-    public Boolean idleState()
+    public void idling()
     {
-        return this.idle;
+        idle = true;
+        collected = false;
+        roaming = false;
     }
-    public Boolean collectedState()
+    public void collect()
     {
-
-        return this.collected;
+        collected = true;
+        idle = false;
+        roaming = false;
+      
     }
-    public Boolean roamingState()
+    public void roams()
     {
-        return this.roaming;
+        roaming = true;
+        idle = false;
+        roaming = false;
+       
     }
-    public void draw(SpriteBatch sB, Texture2D texture)
+    public void draw()
     {
         if (this.idle)
         {
             this.mp = new MushroomPower(texture);
-            this.mp.Draw(sB, position);
+            this.mp.Draw(sb, position);
         }
         else if (this.collected)
         {
