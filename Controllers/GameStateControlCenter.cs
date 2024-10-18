@@ -5,17 +5,27 @@ public class GameStateControlCenter
 {
     private GameStateMachine gameStateMachine;
     private KeyboardController gameController;
+    private Game1 game;
 
-    public GameStateControlCenter(GameStateMachine gameStateMachine, KeyboardController gameController)
+    public GameStateControlCenter(GameStateMachine gameStateMachine, KeyboardController gameController, Game1 game)
     {
         this.gameController = gameController;
         this.gameStateMachine = gameStateMachine;
-        InitializeCommmands();
+        this.game = game;
+
+        InitializeCommands();
     }
-    private void InitializeCommmands()
+
+    private void InitializeCommands()
     {
-        ICommand runGameCommand = new RunGameCommand(gameStateMachine);
-        gameController.addCommand(Keys.D0, runGameCommand);
+        ICommand startGameCommand = new RunGameCommand(gameStateMachine);
+        gameController.addCommand(Keys.D0, startGameCommand);
+
+        ICommand quitGameCommand = new QuitGameCommand(game);
+        gameController.addCommand(Keys.Q, quitGameCommand);
+
+        ICommand resetGameCommand = new ResetGameCommand(game);
+        gameController.addCommand(Keys.R, resetGameCommand);
 
         ICommand pauseGameCommand = new PauseGameCommand(gameStateMachine);
         gameController.addCommand(Keys.D3, pauseGameCommand);

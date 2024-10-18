@@ -33,6 +33,11 @@ public class PlayerCommandControlCenter
         playerMovementController.addCommand(Keys.Down, marioCrouchCommand);
         playerMovementController.addCommand(Keys.LeftShift, marioFireballCommand);
 
+        playerMovementController.addCommand(Keys.A, marioMoveRight);
+        playerMovementController.addCommand(Keys.D, marioMoveLeft);
+        playerMovementController.addCommand(Keys.W, marioJumpCommand);
+        playerMovementController.addCommand(Keys.S, marioCrouchCommand);
+
         playerMovementController.addCommand(Keys.D1, marioPowerUpCommand);
         playerMovementController.addCommand(Keys.D2, marioTakeDamageCommand);
     }

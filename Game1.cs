@@ -80,11 +80,6 @@ public class Game1 : Game
 
     // reset instances
     public Vector2 initial_mario_position;
-    private bool gameStarted = false;
-    private bool gamePaused = false;
-    private bool gameReset = true;
-
-    // private IdleMarioCommand idleMarioCommand;
     public Game1()
     {
         graphics = new GraphicsDeviceManager(this);
@@ -107,7 +102,6 @@ public class Game1 : Game
         index1 = 0;
         index2 = 0;
         fireballs.Clear();
-        gameReset = false;  // Ensure reset only happens once per key press
     }
 
     protected override void Initialize()
@@ -197,7 +191,7 @@ public class Game1 : Game
         gameStateMachine = new GameStateMachine();
 
         gameStateKeyboardController = new KeyboardController();
-        gameStateControlCenter = new GameStateControlCenter(gameStateMachine, gameStateKeyboardController);
+        gameStateControlCenter = new GameStateControlCenter(gameStateMachine, gameStateKeyboardController, this);
 
         // Reset instances initialization
 

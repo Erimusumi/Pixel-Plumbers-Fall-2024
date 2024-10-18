@@ -5,7 +5,6 @@ using Pixel_Plumbers_Fall_2024;
 using System.Globalization;
 public class CommandControlCenter
 {
-    private Texture2D marioTexture;
     private Game1 game;
     private KeyboardController keyboardController;
 
