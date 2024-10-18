@@ -19,17 +19,16 @@ public class Mario : IEntity
     private float groundPosition = 200f;
     private float gravity = 980f;
     private float jumpSpeed = -350f;
-    private bool isOnGround = true;
 
+    private bool isOnGround = true;
     private bool canPowerUp = true;
     private bool canTakeDamage = true;
-
-    private int starTimer;
 
     private const float maxSpeed = 3f;
     private const float acceleration = 0.03f;
 
     private int fireballTimer;
+    private int starTimer;
 
     //Need Game1 reference to correctly create fireballs
     private Game1 game;
@@ -63,10 +62,6 @@ public class Mario : IEntity
             if (marioVelocity.X < maxSpeed)
             {
                 marioVelocity.X += acceleration;
-                if (marioVelocity.X > maxSpeed)
-                {
-                    marioVelocity.X = maxSpeed;
-                }
             }
 
             marioPosition.X += marioVelocity.X;
@@ -91,10 +86,6 @@ public class Mario : IEntity
             if (marioVelocity.X > -maxSpeed)
             {
                 marioVelocity.X -= acceleration;
-                if (marioVelocity.X < -maxSpeed)
-                {
-                    marioVelocity.X = -maxSpeed;
-                }
             }
 
             marioPosition.X += marioVelocity.X;
@@ -201,7 +192,6 @@ public class Mario : IEntity
         }
     }
 
-
     public void ShootFireball()
     {
         if (fireballTimer > 0)
@@ -269,5 +259,5 @@ public class Mario : IEntity
             marioStateMachine.RemoveStar();
         }
     }
-    
+
 }

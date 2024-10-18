@@ -7,11 +7,11 @@ public class MarioStateMachine
     public enum MarioFaceState { Left, Right }
     public enum MarioMoveState { Idle, Moving, Jumping, Crouching, Turning }
 
-    public bool _HasStar;
-
     public MarioGameState CurrentGameState { get; private set; }
     public MarioFaceState CurrentFaceState { get; private set; }
     public MarioMoveState CurrentMoveState { get; private set; }
+
+    public bool _HasStar;
 
     public MarioStateMachine()
     {
