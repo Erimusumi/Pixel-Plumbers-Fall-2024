@@ -23,8 +23,8 @@ public class MarioStarInteraction
         star.idle = false;
         mario.CollectStar();
     }
-    private void removeFromList()
+    private void removeFromList(List<object> entit,int index)
     {
-        //remove fire power from list of entities
+        entit.Remove(index);
     }
 }
