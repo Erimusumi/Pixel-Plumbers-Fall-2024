@@ -50,10 +50,10 @@ public class MovingRightFireMario : IMarioSprite
     {
         switch (currentAnimationIndex)
         {
-            case 0: return new Rectangle((int)position.X, (int)position.Y, 16, 32);
-            case 1: return new Rectangle((int)position.X, (int)position.Y, 14, 31);
+            case 0: return new Rectangle((int)position.X, (int)position.Y, 16 * (int)scale, 32 * (int)scale);
+            case 1: return new Rectangle((int)position.X, (int)position.Y, 14 * (int)scale, 31 * (int)scale);
             case 2:
-            default: return new Rectangle((int)position.X, (int)position.Y, 16, 30);
+            default: return new Rectangle((int)position.X, (int)position.Y, 16 * (int)scale, 30 * (int)scale);
         }
 
     }

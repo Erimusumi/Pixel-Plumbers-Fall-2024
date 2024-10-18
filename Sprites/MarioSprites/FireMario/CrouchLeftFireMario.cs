@@ -21,7 +21,7 @@ public class CrouchLeftFireMario : IMarioSprite
     }
     public Rectangle GetDestination(Vector2 position)
     {
-        return new Rectangle((int)position.X, (int)position.Y, 16, 22);
+        return new Rectangle((int)position.X, (int)position.Y, 16 * (int)scale, 22 * (int)scale);
 
 
     }

@@ -23,7 +23,7 @@ public class IdleRightBigMario : IMarioSprite
     }
     public Rectangle GetDestination(Vector2 position)
     {
-        return new Rectangle((int)_position.X, (int)_position.Y, 16, 32);
+        return new Rectangle((int)_position.X, (int)_position.Y, 16 * (int)scale, 32 * (int)scale);
     }
 
 }

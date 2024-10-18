@@ -10,9 +10,9 @@ public class PlayerCommandControlCenter
     public PlayerCommandControlCenter(Mario mario, PlayerMovementController playerMovementController)
     {
         this.mario = mario;
-        this.playerMovementController = playerMovementController; // Use the passed instance
+        this.playerMovementController = playerMovementController;
 
-        InitializeCommands(); // Correct method name
+        InitializeCommands();
     }
 
     private void InitializeCommands()
@@ -31,7 +31,6 @@ public class PlayerCommandControlCenter
         playerMovementController.addCommand(Keys.Left, marioMoveLeft);
         playerMovementController.addCommand(Keys.Up, marioJumpCommand);
         playerMovementController.addCommand(Keys.Down, marioCrouchCommand);
-        playerMovementController.addCommand(Keys.LeftShift, marioFireballCommand);
 
         playerMovementController.addCommand(Keys.D, marioMoveRight);
         playerMovementController.addCommand(Keys.A, marioMoveLeft);
@@ -40,5 +39,7 @@ public class PlayerCommandControlCenter
 
         playerMovementController.addCommand(Keys.D1, marioPowerUpCommand);
         playerMovementController.addCommand(Keys.D2, marioTakeDamageCommand);
+
+        playerMovementController.addCommand(Keys.LeftShift, marioFireballCommand);
     }
 }

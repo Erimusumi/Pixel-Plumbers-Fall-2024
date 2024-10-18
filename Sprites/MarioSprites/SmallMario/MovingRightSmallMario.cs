@@ -50,10 +50,10 @@ public class MovingRightSmallMario : IMarioSprite
     {
         switch (currentAnimationIndex)
         {
-            case 0: return new Rectangle((int)position.X, (int)position.Y, 14, 15);
-            case 1: return new Rectangle((int)position.X, (int)position.Y, 14, 15);
+            case 0: return new Rectangle((int)position.X, (int)position.Y, 14 * (int)scale, 15 * (int)scale);
+            case 1: return new Rectangle((int)position.X, (int)position.Y, 14 * (int)scale, 15 * (int)scale);
             case 2:
-            default: return new Rectangle((int)position.X, (int)position.Y, 14, 15);
+            default: return new Rectangle((int)position.X, (int)position.Y, 14 * (int)scale, 15 * (int)scale);
         }
 
     }

@@ -19,17 +19,16 @@ public class Mario : IEntity
     private float groundPosition = 200f;
     private float gravity = 980f;
     private float jumpSpeed = -350f;
-    private bool isOnGround = true;
 
+    private bool isOnGround = true;
     private bool canPowerUp = true;
     private bool canTakeDamage = true;
-
-    private int starTimer;
 
     private const float maxSpeed = 3f;
     private const float acceleration = 0.03f;
 
     private int fireballTimer;
+    private int starTimer;
 
     //Need Game1 reference to correctly create fireballs
     private Game1 game;
@@ -53,7 +52,7 @@ public class Mario : IEntity
 
     public void MoveRight()
     {
-        if (marioStateMachine.CurrentFaceState == MarioStateMachine.MarioFaceState.Left)
+        if (!marioStateMachine.IsRight())
         {
             SwapDirection();
         }
@@ -63,15 +62,11 @@ public class Mario : IEntity
             if (marioVelocity.X < maxSpeed)
             {
                 marioVelocity.X += acceleration;
-                if (marioVelocity.X > maxSpeed)
-                {
-                    marioVelocity.X = maxSpeed;
-                }
             }
 
             marioPosition.X += marioVelocity.X;
 
-            if (marioStateMachine.CurrentMoveState != MarioStateMachine.MarioMoveState.Jumping)
+            if (!marioStateMachine.IsJumping())
             {
                 marioStateMachine.SetMarioRight();
                 marioStateMachine.SetMarioMoving();
@@ -81,7 +76,7 @@ public class Mario : IEntity
 
     public void MoveLeft()
     {
-        if (marioStateMachine.CurrentFaceState == MarioStateMachine.MarioFaceState.Right)
+        if (marioStateMachine.IsRight())
         {
             SwapDirection();
         }
@@ -91,15 +86,11 @@ public class Mario : IEntity
             if (marioVelocity.X > -maxSpeed)
             {
                 marioVelocity.X -= acceleration;
-                if (marioVelocity.X < -maxSpeed)
-                {
-                    marioVelocity.X = -maxSpeed;
-                }
             }
 
             marioPosition.X += marioVelocity.X;
 
-            if (marioStateMachine.CurrentMoveState != MarioStateMachine.MarioMoveState.Jumping)
+            if (!marioStateMachine.IsJumping())
             {
                 marioStateMachine.SetMarioLeft();
                 marioStateMachine.SetMarioMoving();
@@ -185,7 +176,7 @@ public class Mario : IEntity
 
     public void SwapDirection()
     {
-        if (marioStateMachine.CurrentMoveState == MarioStateMachine.MarioMoveState.Moving)
+        if (marioStateMachine.IsMoving())
         {
             marioStateMachine.SetMarioTurning();
             marioVelocity.X = 0f;
@@ -201,14 +192,13 @@ public class Mario : IEntity
         }
     }
 
-
     public void ShootFireball()
     {
         if (fireballTimer > 0)
         {
             return;
         }
-        if (marioStateMachine.CurrentGameState == MarioStateMachine.MarioGameState.Fire)
+        if (marioStateMachine.IsFire())
         {
             Fireball f = new Fireball(marioPosition, game.ItemsTexture, gameTime, marioStateMachine.CurrentFaceState, game, _entities);
             game.fireballs.Add(f);
@@ -269,5 +259,5 @@ public class Mario : IEntity
             marioStateMachine.RemoveStar();
         }
     }
-    
+
 }

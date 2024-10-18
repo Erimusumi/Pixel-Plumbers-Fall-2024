@@ -22,7 +22,7 @@ public class TurningRightSmallMario : IMarioSprite
 
     public Rectangle GetDestination(Vector2 position)
     {
-        return new Rectangle((int)position.X, (int)position.Y, 14, 16);
+        return new Rectangle((int)position.X, (int)position.Y, 14 * (int)scale, 16 * (int)scale);
 
 
     }
