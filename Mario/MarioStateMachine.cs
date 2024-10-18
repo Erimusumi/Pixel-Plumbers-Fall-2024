@@ -3,7 +3,7 @@ using System.Configuration.Assemblies;
 
 public class MarioStateMachine
 {
-    public enum MarioGameState { Small, Big, Fire }
+    public enum MarioGameState { Small, Big, Fire, Star }
     public enum MarioFaceState { Left, Right }
     public enum MarioMoveState { Idle, Moving, Jumping, Crouching, Turning }
 
