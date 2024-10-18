@@ -36,18 +36,18 @@ public class Fireball : IProjectile
         if (goingRight)
         {
             //If mario was facing right when shooting, move to the right
-            pos.X += 1;
+            pos.X += 2;
         }
         else
         {
             //Same as above, but for left
-            pos.X += -1;
+            pos.X += -2;
         }
 
         if (isBouncing)
         {
             //Move up some
-            pos.Y += -1;
+            pos.Y += -2;
             bounceTimer += -5;
             if (bounceTimer <= 0)
             {
@@ -57,7 +57,7 @@ public class Fireball : IProjectile
         else
         {
             //Move down some
-            pos.Y += 1;
+            pos.Y += 2;
         }
     }
     public void Bounce()
@@ -84,7 +84,7 @@ public class Fireball : IProjectile
 
     public Rectangle GetDestination()
     {
-        //All fireball sprites are 8*8
-        return new Rectangle((int)pos.X, (int)pos.Y, 8, 8);
+        //All fireball sprites are 16*16
+        return new Rectangle((int)pos.X, (int)pos.Y, 16, 16);
     }
 }

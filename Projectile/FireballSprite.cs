@@ -52,6 +52,6 @@ public class FireballSprite
 
     public void Draw(SpriteBatch sb, Vector2 pos)
     {
-        sb.Draw(texture, pos, FrameRectangles[currentAnimationIndex], Color.White);
+        sb.Draw(texture, new Rectangle((int)pos.X, (int)pos.Y, 16, 16), FrameRectangles[currentAnimationIndex], Color.White);
     }
 }
