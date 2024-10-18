@@ -21,7 +21,8 @@ public class Fireball : IProjectile
     private FireballSprite sprite;
     private GameTime gameTime;
     private Game1 game;
-    public Fireball(Vector2 marioPosition, Texture2D texture, GameTime gameTime, MarioStateMachine.MarioFaceState direction, Game1 game)
+    private List<IEntity> _entities;
+    public Fireball(Vector2 marioPosition, Texture2D texture, GameTime gameTime, MarioStateMachine.MarioFaceState direction, Game1 game, List<IEntity> entities)
     {
         isBouncing = false;
         pos = marioPosition;
@@ -30,6 +31,8 @@ public class Fireball : IProjectile
         bounceTimer = 0;
         goingRight = (direction == MarioStateMachine.MarioFaceState.Right);
         this.game = game;
+        this._entities = entities;
+        _entities.Add(this);
     }
     private void Move()
     {

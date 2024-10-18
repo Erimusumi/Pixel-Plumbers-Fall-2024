@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
@@ -32,8 +33,9 @@ public class Mario : IEntity
 
     //Need Game1 reference to correctly create fireballs
     private Game1 game;
+    private List<IEntity> _entities;
 
-    public Mario(Texture2D marioTexture, GameTime gametime, Game1 game)
+    public Mario(Texture2D marioTexture, GameTime gametime, Game1 game, List<IEntity> entities)
     {
         this.marioTexture = marioTexture;
         marioPosition = new Vector2(400, groundPosition);
@@ -46,6 +48,7 @@ public class Mario : IEntity
 
         currentMarioSprite = new IdleRightSmallMario(marioTexture);
         this.game = game;
+        this._entities = entities;
     }
 
     public void MoveRight()
@@ -207,7 +210,7 @@ public class Mario : IEntity
         }
         if (marioStateMachine.CurrentGameState == MarioStateMachine.MarioGameState.Fire)
         {
-            Fireball f = new Fireball(marioPosition, game.ItemsTexture, gameTime, marioStateMachine.CurrentFaceState, game);
+            Fireball f = new Fireball(marioPosition, game.ItemsTexture, gameTime, marioStateMachine.CurrentFaceState, game, _entities);
             game.fireballs.Add(f);
             fireballTimer = 20;
         }

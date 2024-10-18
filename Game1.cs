@@ -184,7 +184,7 @@ public class Game1 : Game
         block = Content.Load<Texture2D>("blocks");
         obstacle = Content.Load<Texture2D>("obstacle");
 
-        mario = new Mario(marioTexture, gameTime, this);
+        mario = new Mario(marioTexture, gameTime, this, entities);
         marioMovementController = new PlayerMovementController();
         playerCommandControlCenter = new PlayerCommandControlCenter(mario, marioMovementController);
 
@@ -251,6 +251,8 @@ public class Game1 : Game
             {
                 sweep.handleInteraction(entities, 0, 1);
             }
+
+
         }
 
         base.Update(gameTime);

@@ -78,6 +78,8 @@ public class MarioStateMachine
     public void SetStar()
     {
         _HasStar = true;
+        //test, remove later
+        System.Diagnostics.Debug.WriteLine("Star Collected");
     }
 
     public void RemoveStar()

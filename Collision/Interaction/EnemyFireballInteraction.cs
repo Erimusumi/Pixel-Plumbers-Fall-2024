@@ -10,23 +10,25 @@ using System.Threading.Tasks;
 {
     private Fireball fireball;
     private ISpriteEnemy enemy;
+    private List<IEntity> _entities;
 
 
-    public EnemyFireballInteraction(Fireball _fireball, ISpriteEnemy _enemy)
+    public EnemyFireballInteraction(Fireball _fireball, ISpriteEnemy _enemy, List<IEntity> entities)
     {
         this.enemy = _enemy;
         this.fireball = _fireball;
-       
+        this._entities = entities;
     }
     public void update()
     {
         enemy.beFlipped();
         fireball.Remove();
+        removeFromList();
     }
     private void removeFromList()
     {
-        //remove fireball from list of entities
-        //should enemy be removed here too?
+        _entities.Remove(enemy);
+        _entities.Remove(fireball);
     }
 }
 

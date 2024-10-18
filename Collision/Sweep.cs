@@ -30,6 +30,7 @@ public class Sweep
     MarioFirePowerInteraction MarioFirePowerInteraction;
     MarioMushroomInteraction MarioMushroomInteraction;
     MarioStarInteraction MarioStarInteraction;
+    BlockFireballInteraction BlockFireballInteraction;
 
     //Pass some list
     //Sweep should 
@@ -51,16 +52,18 @@ public class Sweep
             EnemyMarioInteraction = new EnemyMarioInteraction((ISpriteEnemy)item2, (Mario)item1, Rectangle.Intersect(item1.GetDestination(), item2.GetDestination()));
             EnemyMarioInteraction.Update();
         }
+
         else if (ContainsEnemy(entities, index1) && item2.GetType() == typeof(Fireball))
         {
-            EnemyFireballInteraction = new EnemyFireballInteraction((Fireball)item2, (ISpriteEnemy)item1);
+            EnemyFireballInteraction = new EnemyFireballInteraction((Fireball)item2, (ISpriteEnemy)item1, entities);
             EnemyFireballInteraction.update();
         }
         else if (ContainsEnemy(entities, index2) && item1.GetType() == typeof(Fireball))
         {
-            EnemyFireballInteraction = new EnemyFireballInteraction((Fireball)item1, (ISpriteEnemy)item2);
+            EnemyFireballInteraction = new EnemyFireballInteraction((Fireball)item1, (ISpriteEnemy)item2, entities);
             EnemyFireballInteraction.update();
         }
+
         if (ContainsEnemy(entities, index1) && item2.GetType() != typeof(Mario))
         {
             OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item1, item2);
