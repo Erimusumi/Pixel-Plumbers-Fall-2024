@@ -3,15 +3,15 @@ using System.Configuration.Assemblies;
 
 public class MarioStateMachine
 {
-    public enum MarioGameState { Small, Big, Fire }
+    public enum MarioGameState { Small, Big, Fire, Star }
     public enum MarioFaceState { Left, Right }
     public enum MarioMoveState { Idle, Moving, Jumping, Crouching, Turning }
-
-    public bool _HasStar;
 
     public MarioGameState CurrentGameState { get; private set; }
     public MarioFaceState CurrentFaceState { get; private set; }
     public MarioMoveState CurrentMoveState { get; private set; }
+
+    public bool _HasStar;
 
     public MarioStateMachine()
     {
@@ -110,6 +110,20 @@ public class MarioStateMachine
         return CurrentMoveState == MarioMoveState.Turning;
     }
 
+    public bool IsRight()
+    {
+        return CurrentFaceState == MarioFaceState.Right;
+    }
+
+    public bool IsMoving()
+    {
+        return CurrentMoveState == MarioMoveState.Moving;
+    }
+
+    public bool IsFire()
+    {
+        return CurrentGameState == MarioGameState.Fire;
+    }
     public void Reset()
     {
         CurrentGameState = MarioGameState.Small;
