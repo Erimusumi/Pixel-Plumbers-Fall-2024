@@ -14,6 +14,7 @@ public class GameStateMachine
     {
         currentGameState = GameStates.Running;
     }
+    
     public void setGameStatePaused()
     {
         currentGameState = GameStates.Paused;
