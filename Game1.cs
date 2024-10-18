@@ -12,12 +12,9 @@ public class Game1 : Game
     private Texture2D marioTexture;
     private GameTime gameTime;
 
-
-
     private KeyboardController keyboardController;
     private KeyboardControllerMovement keyboardControllerMovement;
     private CommandControlCenter controlCenter;
-
 
     private Mario mario;
     private PlayerMovementController marioMovementController;
@@ -71,20 +68,17 @@ public class Game1 : Game
     //Fireballs
     public List<Fireball> fireballs = new List<Fireball>();
 
-    private ISprite StartText;
-    private SpriteFont MyFont;
-
     private List<IEntity> entities = new List<IEntity>();
     private Sort sort = new Sort();
     private Sweep sweep = new Sweep();
 
     // reset instances
     public Vector2 initial_mario_position;
-    private bool gameStarted = false;
-    private bool gamePaused = false;
-    private bool gameReset = true;
 
-    // private IdleMarioCommand idleMarioCommand;
+    // Start Screen
+    private ISprite StartText;
+    private SpriteFont MyFont;
+
     public Game1()
     {
         graphics = new GraphicsDeviceManager(this);
@@ -95,19 +89,18 @@ public class Game1 : Game
     private void ResetGame()
     {
         entities.Clear();
-        spriteEnemy = new Goomba(480, 400); // Create a new Goomba object
+        spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
         spriteEnemy = new Koopa(480, 400);
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
 
-        controlG = new GoombaCommand(spriteEnemy); // Reset Goomba's control command
+        controlG = new GoombaCommand(spriteEnemy);
         controlG2 = new GoombaCommand(spriteEnemy2);
         currentItem = 0;
         index1 = 0;
         index2 = 0;
         fireballs.Clear();
-        gameReset = false;  // Ensure reset only happens once per key press
     }
 
     protected override void Initialize()
@@ -118,7 +111,6 @@ public class Game1 : Game
         keyboardController = new KeyboardController();
         keyboardControllerMovement = new KeyboardControllerMovement();
 
-
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
         entities.Add(spriteEnemy2);
@@ -126,12 +118,10 @@ public class Game1 : Game
 
         controlG = new GoombaCommand(spriteEnemy);
         controlG2 = new GoombaCommand(spriteEnemy2);
+        controlCenter = new CommandControlCenter(this);
 
         Dance = new DancePole();
 
-        controlCenter = new CommandControlCenter(this);
-
-        //Make a first list for block iteration
         sprite1 = new List<ISprite>
             {
                 //lucky brick sprites
@@ -162,22 +152,21 @@ public class Game1 : Game
         s = new Star(spriteBatch, ItemsTexture, new Vector2(440, 190));
 
     }
+
     public ISpriteEnemy SetEnemy(ISpriteEnemy enemy)
     {
         spriteEnemy = enemy;
         return spriteEnemy;
     }
+
     public void SetEnemyCommand(IController Enemy)
     {
         controlG = Enemy;
     }
+
     public void SetKey(KeyboardController keys)
     {
         keyboardController = keys;
-    }
-    public void SetKeyMovement(KeyboardControllerMovement keys)
-    {
-        keyboardControllerMovement = keys;
     }
 
     protected override void LoadContent()
@@ -201,10 +190,9 @@ public class Game1 : Game
         gameStateMachine = new GameStateMachine();
 
         gameStateKeyboardController = new KeyboardController();
-        gameStateControlCenter = new GameStateControlCenter(gameStateMachine, gameStateKeyboardController);
+        gameStateControlCenter = new GameStateControlCenter(gameStateMachine, gameStateKeyboardController, this);
 
         // Reset instances initialization
-
         firePower = new FirePower(ItemsTexture);
         starPower = new StarPower(ItemsTexture);
 
@@ -229,7 +217,6 @@ public class Game1 : Game
         {
             keyboardController.Update();
             keyboardControllerMovement.Update();
-
             marioMovementController.Update();
 
             // Update Mario's state
@@ -246,9 +233,9 @@ public class Game1 : Game
 
             spriteEnemy.Updates();
             spriteEnemy2.Updates();
+
             //Dance.Updates();
             controlG.Update();
-
             manager.updateCurrentItem(ref currentItem, numItems);
 
             //Update block and obstacle sprites
@@ -272,7 +259,14 @@ public class Game1 : Game
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
 
-       if(gameStateMachine.isCurrentStateRunning())
+        if (gameStateMachine.isCurrentStateStart())
+        {
+            spriteBatch.Begin();
+            StartText.Draw(spriteBatch, new Vector2(200, 200));
+
+            spriteBatch.End();
+        }
+        if (gameStateMachine.isCurrentStateRunning() || gameStateMachine.isCurrentStatePaused())
         {
             // mari and enemy
             spriteEnemy.Draw(spriteBatch, EnemyTexture);
@@ -293,18 +287,7 @@ public class Game1 : Game
             // Draw blocks and obstacles
             sprite1[index1].Draw(spriteBatch, new Vector2(200, 200));
             sprite2[index2].Draw(spriteBatch, new Vector2(310, 150));
-
-
-
         }
-        else
-        {
-            spriteBatch.Begin();
-            StartText.Draw(spriteBatch, new Vector2(200, 200));
-
-            spriteBatch.End();
-        }
-
         base.Draw(gameTime);
     }
 }
