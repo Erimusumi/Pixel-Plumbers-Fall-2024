@@ -94,7 +94,7 @@ public class Game1 : Game
         spriteEnemy2 = new Goomba2(240, 400);
         spriteEnemy = new Koopa(480, 400);
         s = new Star(spriteBatch, ItemsTexture, new Vector2(240, 190));
-        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(240, 190));
+        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 190));
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
         entities.Add(mario);
@@ -120,7 +120,7 @@ public class Game1 : Game
         spriteEnemy2 = new Goomba2(240, 400);
         spriteEnemy = new Koopa(480, 400);
         s = new Star(spriteBatch, ItemsTexture, new Vector2(440, 190));
-        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(240, 190));
+        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 190));
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
         entities.Add(mario);

@@ -63,7 +63,7 @@ public class Star : IStarObject
     {
         if (this.collected)
         {
-            Debug.Write("Starry");
+           
         }
         else if (this.idle)
         {

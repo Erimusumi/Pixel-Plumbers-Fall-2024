@@ -103,13 +103,13 @@ public class Sweep
         {
             MarioMushroomInteraction = new MarioMushroomInteraction((Mario)item2, (Mushroom)item1);
             MarioMushroomInteraction.update();
-            entities.RemoveAt(index1);
+            //entities.RemoveAt(index1);
         }
         else if (item1.GetType() == typeof(Mario) && item1.GetType() == typeof(MushroomPower))
         {
             MarioMushroomInteraction = new MarioMushroomInteraction((Mario)item1, (Mushroom)item2);
             MarioMushroomInteraction.update();
-            entities.RemoveAt(index2);
+            //entities.RemoveAt(index2);
         }
         if (item1.GetType() == typeof(BlockObject) && item2.GetType() == typeof(Mario) || item1.GetType() == typeof(Mario) && item1.GetType() == typeof(BlockObject))
         {
