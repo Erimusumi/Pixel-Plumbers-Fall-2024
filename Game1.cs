@@ -80,6 +80,14 @@ public class Game1 : Game
     private ISprite StartText;
     private SpriteFont MyFont;
 
+    // map layers
+    private Layer backdrop;
+    private Layer greenery;
+    private Layer foreground;
+
+    // tile sheets
+    private Texture2D overworldTiles;
+
     public Game1()
     {
         graphics = new GraphicsDeviceManager(this);
@@ -112,6 +120,16 @@ public class Game1 : Game
     {
         base.Initialize();
         this.gameTime = new GameTime();
+
+        // map layers
+        backdrop = new Layer(32, 16, 17, Content.RootDirectory + "\\level1_Backdrop.csv");
+        greenery = new Layer(32, 16, 17, Content.RootDirectory + "\\level1_Greenery.csv");
+        foreground = new Layer(32, 16, 17, Content.RootDirectory + "\\level1_Foreground.csv");
+
+        // load map layers
+        backdrop.LoadLayer();
+        greenery.LoadLayer();
+        foreground.LoadLayer();
 
         keyboardController = new KeyboardController();
         keyboardControllerMovement = new KeyboardControllerMovement();
@@ -190,6 +208,9 @@ public class Game1 : Game
         ItemsTexture = Content.Load<Texture2D>("itemsAndPowerups");
         MyFont = Content.Load<SpriteFont>("MyFont");
         StartText = new StartScreenText(MyFont);
+
+        // tilesheet
+        overworldTiles = Content.Load<Texture2D>("OverworldTiles");
 
         block = Content.Load<Texture2D>("blocks");
         obstacle = Content.Load<Texture2D>("obstacle");
@@ -277,6 +298,11 @@ public class Game1 : Game
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
+
+        // draw map
+        backdrop.Draw(spriteBatch, overworldTiles);
+        greenery.Draw(spriteBatch, overworldTiles);
+        foreground.Draw(spriteBatch, overworldTiles);
 
         if (gameStateMachine.isCurrentStateStart())
         {
