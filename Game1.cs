@@ -79,6 +79,15 @@ public class Game1 : Game
     // Start Screen
     private ISprite StartText;
     private SpriteFont MyFont;
+    private Texture2D title;
+
+    // map layers
+    private Layer backdrop;
+    private Layer greenery;
+    private Layer foreground;
+
+    // tile sheets
+    private Texture2D overworldTiles;
 
     public Game1()
     {
@@ -112,6 +121,16 @@ public class Game1 : Game
     {
         base.Initialize();
         this.gameTime = new GameTime();
+
+        // map layers
+        backdrop = new Layer(32, 16, 17, Content.RootDirectory + "\\level1_Backdrop.csv");
+        greenery = new Layer(32, 16, 17, Content.RootDirectory + "\\level1_Greenery.csv");
+        foreground = new Layer(32, 16, 17, Content.RootDirectory + "\\level1_Foreground.csv");
+
+        // load map layers
+        backdrop.LoadLayer();
+        greenery.LoadLayer();
+        foreground.LoadLayer();
 
         keyboardController = new KeyboardController();
         keyboardControllerMovement = new KeyboardControllerMovement();
@@ -190,6 +209,10 @@ public class Game1 : Game
         ItemsTexture = Content.Load<Texture2D>("itemsAndPowerups");
         MyFont = Content.Load<SpriteFont>("MyFont");
         StartText = new StartScreenText(MyFont);
+        title = Content.Load<Texture2D>("title");
+
+        // tilesheet
+        overworldTiles = Content.Load<Texture2D>("OverworldTiles");
 
         block = Content.Load<Texture2D>("blocks");
         obstacle = Content.Load<Texture2D>("obstacle");
@@ -278,11 +301,16 @@ public class Game1 : Game
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
 
+        // draw map
+        backdrop.Draw(spriteBatch, overworldTiles);
+        greenery.Draw(spriteBatch, overworldTiles);
+        foreground.Draw(spriteBatch, overworldTiles);
+
         if (gameStateMachine.isCurrentStateStart())
         {
             spriteBatch.Begin();
             StartText.Draw(spriteBatch, new Vector2(200, 200));
-
+            spriteBatch.Draw(title, new Rectangle(20, 20, 176, 88), new Rectangle(1, 60, 176, 88), Color.White);
             spriteBatch.End();
         }
         if (gameStateMachine.isCurrentStateRunning() || gameStateMachine.isCurrentStatePaused())
