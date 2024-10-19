@@ -1,1 +1,9 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/dance.png","C:/Users/helen/source/repos/PixelPlumbers2/Content/bin/DesktopGL/Content/dance.xnb","TextureProcessor","Texture2DContent",9654755,42493149,5.1802254
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/itemsAndPowerups.png","C:/Users/helen/source/repos/PixelPlumbers2/Content/bin/DesktopGL/Content/itemsAndPowerups.xnb","TextureProcessor","Texture2DContent",32550,516181,0.0893649
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/level1_Backdrop.csv","C:\Users\helen\source\repos\PixelPlumbers2\Content\bin\DesktopGL\Content\level1_Backdrop.csv","CopyItem","File",16462,16462,0.0054352
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/level1_Collisions.csv","C:\Users\helen\source\repos\PixelPlumbers2\Content\bin\DesktopGL\Content\level1_Collisions.csv","CopyItem","File",18660,18660,0.0043361
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/level1_Foreground.csv","C:\Users\helen\source\repos\PixelPlumbers2\Content\bin\DesktopGL\Content\level1_Foreground.csv","CopyItem","File",19612,19612,0.0296795
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/level1_Greenery.csv","C:\Users\helen\source\repos\PixelPlumbers2\Content\bin\DesktopGL\Content\level1_Greenery.csv","CopyItem","File",19020,19020,0.0047961
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/MyFont.spritefont","C:/Users/helen/source/repos/PixelPlumbers2/Content/bin/DesktopGL/Content/MyFont.xnb","FontDescriptionProcessor","SpriteFontContent",2065,21538,0.3141028
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/OverworldTiles.png","C:/Users/helen/source/repos/PixelPlumbers2/Content/bin/DesktopGL/Content/OverworldTiles.xnb","TextureProcessor","Texture2DContent",8830,149689,0.0275753

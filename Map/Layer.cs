@@ -20,7 +20,7 @@ public class Layer
         this.filepath = filepath;
         this.tile_array = new Dictionary<Vector2, int>();
     }
-    public void LoadMap()
+    public void LoadLayer()
     {
         StreamReader reader = new(filepath);
 
