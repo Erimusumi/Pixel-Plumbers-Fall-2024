@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\map\\layer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:map\\layer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\sprites\\isprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\isprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\map\\layer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:map\\layer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\code reviews\\helencodereview.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -31,16 +35,8 @@
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:goomba\\goomba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\sprites\\block sprites\\staticblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\staticblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\sprites\\block sprites\\luckyblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\luckyblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\sprites\\isprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\isprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,38 +46,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Game1.cs",
-              "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAKoAAAAAAAAAAAAgwEoBAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Game1.cs*",
+              "RelativeToolTip": "Game1.cs*",
+              "ViewState": "AgIAAPIAAAAAAAAAAAAswDgBAABuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-29T23:13:18.456Z",
               "IsPinned": true,
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Layer.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Map\\Layer.cs",
-              "RelativeDocumentMoniker": "Map\\Layer.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Map\\Layer.cs*",
-              "RelativeToolTip": "Map\\Layer.cs*",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-19T13:19:56.139Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
@@ -89,7 +68,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "HelenCodeReview.txt",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Code Reviews\\HelenCodeReview.txt",
               "RelativeDocumentMoniker": "Code Reviews\\HelenCodeReview.txt",
@@ -101,7 +80,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "block4.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\block4.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\block4.cs",
@@ -113,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ArunGhimire\u0027s Review.txt",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Code Reviews\\ArunGhimire\u0027s Review.txt",
               "RelativeDocumentMoniker": "Code Reviews\\ArunGhimire\u0027s Review.txt",
@@ -125,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "GoombaSprites.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Goomba\\GoombaSprites.cs",
               "RelativeDocumentMoniker": "Goomba\\GoombaSprites.cs",
@@ -137,7 +116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Goomba.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Goomba\\Goomba.cs",
               "RelativeDocumentMoniker": "Goomba\\Goomba.cs",
@@ -149,19 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "StaticBlockSprite.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\StaticBlockSprite.cs",
-              "RelativeDocumentMoniker": "Sprites\\Block Sprites\\StaticBlockSprite.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\StaticBlockSprite.cs",
-              "RelativeToolTip": "Sprites\\Block Sprites\\StaticBlockSprite.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T23:03:50.394Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 1,
               "Title": "ISprite.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\ISprite.cs",
               "RelativeDocumentMoniker": "Sprites\\ISprite.cs",
@@ -169,7 +136,20 @@
               "RelativeToolTip": "Sprites\\ISprite.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-30T23:03:08.208Z"
+              "WhenOpened": "2024-09-30T23:03:08.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Layer.cs",
+              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Map\\Layer.cs",
+              "RelativeDocumentMoniker": "Map\\Layer.cs",
+              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Map\\Layer.cs",
+              "RelativeToolTip": "Map\\Layer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-19T13:19:56.139Z"
             },
             {
               "$type": "Document",

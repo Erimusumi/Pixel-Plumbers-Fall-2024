@@ -7,3 +7,4 @@ Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Siz
 "C:/Users/helen/source/repos/PixelPlumbers2/Content/level1_Greenery.csv","C:\Users\helen\source\repos\PixelPlumbers2\Content\bin\DesktopGL\Content\level1_Greenery.csv","CopyItem","File",19020,19020,0.0047961
 "C:/Users/helen/source/repos/PixelPlumbers2/Content/MyFont.spritefont","C:/Users/helen/source/repos/PixelPlumbers2/Content/bin/DesktopGL/Content/MyFont.xnb","FontDescriptionProcessor","SpriteFontContent",2065,21538,0.3141028
 "C:/Users/helen/source/repos/PixelPlumbers2/Content/OverworldTiles.png","C:/Users/helen/source/repos/PixelPlumbers2/Content/bin/DesktopGL/Content/OverworldTiles.xnb","TextureProcessor","Texture2DContent",8830,149689,0.0275753
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/title.png","C:/Users/helen/source/repos/PixelPlumbers2/Content/bin/DesktopGL/Content/title.xnb","TextureProcessor","Texture2DContent",9100,326989,0.3042659

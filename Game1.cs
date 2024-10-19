@@ -79,6 +79,7 @@ public class Game1 : Game
     // Start Screen
     private ISprite StartText;
     private SpriteFont MyFont;
+    private Texture2D title;
 
     // map layers
     private Layer backdrop;
@@ -208,6 +209,7 @@ public class Game1 : Game
         ItemsTexture = Content.Load<Texture2D>("itemsAndPowerups");
         MyFont = Content.Load<SpriteFont>("MyFont");
         StartText = new StartScreenText(MyFont);
+        title = Content.Load<Texture2D>("title");
 
         // tilesheet
         overworldTiles = Content.Load<Texture2D>("OverworldTiles");
@@ -308,7 +310,7 @@ public class Game1 : Game
         {
             spriteBatch.Begin();
             StartText.Draw(spriteBatch, new Vector2(200, 200));
-
+            spriteBatch.Draw(title, new Rectangle(20, 20, 176, 88), new Rectangle(1, 60, 176, 88), Color.White);
             spriteBatch.End();
         }
         if (gameStateMachine.isCurrentStateRunning() || gameStateMachine.isCurrentStatePaused())
