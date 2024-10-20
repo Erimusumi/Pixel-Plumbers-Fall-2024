@@ -14,7 +14,7 @@ public class Mushroom :IItem
     public Boolean roaming;
     private Boolean movingRight;
     private Boolean movingLeft;
-    private Microsoft.Xna.Framework.Vector2 position;
+    private Vector2 position;
     private MushroomPower mp;
     private SpriteBatch sb;
     private Texture2D texture;
@@ -22,13 +22,12 @@ public class Mushroom :IItem
     public bool bump;
     
 
-    public  Mushroom(SpriteBatch sB, Texture2D texture, Vector2 position)
+    public  Mushroom(SpriteBatch sB, Texture2D texture)
     {
         mp = new MushroomPower(texture);
         this.idle = false;
         this.collected = false;
         this.roaming = true;
-        this.position = position;
         this.texture = texture;
         this.sb = sB;
         movingRight = true;
@@ -55,8 +54,9 @@ public class Mushroom :IItem
         movingLeft = false;
        
     }
-    public void draw(Vector2 position)
+    public void draw(Vector2 position2)
     {
+        this.position = position2;
         if (this.idle || this.roaming)
         {
             this.mp = new MushroomPower(texture);

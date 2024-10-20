@@ -19,7 +19,7 @@ public class LuckyBlockSprite: IBlock
     private int currentFrame;
     private Rectangle sourceRectangle;
     private Rectangle destinationRectangle;
-
+    private Vector2 position;
     private Mushroom m;
     private int frames = 3;
     private int wait = 20;
@@ -28,6 +28,9 @@ public class LuckyBlockSprite: IBlock
     private Texture2D itemTexture;
     private bool hasMushroomAppeared;
     SpriteBatch spriteBatch;
+    private Vector2 velocity;
+    private float gravity = 980f;
+    private Vector2 m_position;
     public LuckyBlockSprite(Texture2D texture, SpriteBatch spriteBatch, Texture2D itemTexture, Game1 game)
     {
         Texture = texture;
@@ -40,6 +43,7 @@ public class LuckyBlockSprite: IBlock
         this.game = game;
         this.itemTexture = itemTexture;
         this.spriteBatch = spriteBatch;
+        this.velocity = Vector2.Zero;
     }
     
     public void Update(GameTime gametime)
@@ -57,26 +61,33 @@ public class LuckyBlockSprite: IBlock
 
         if (bump && !hasMushroomAppeared)
         {
-            Vector2 m_position = new Vector2(destinationRectangle.X, destinationRectangle.Y - 31);
-            m = new Mushroom(spriteBatch, itemTexture, m_position);
-            m.draw(m_position);
-            game.items.Add(m);
+            m_position = new Vector2(position.X, position.Y - 31);
+            m = new Mushroom(spriteBatch, itemTexture);
             game.entities.Add(m);
 
             hasMushroomAppeared = true; // Set the flag to prevent drawing again
         }
+
+        if (bump)
+        {
+            m.update(gametime);
+            velocity.Y += gravity * (float)gametime.ElapsedGameTime.TotalSeconds;
+            m_position += velocity * (float)gametime.ElapsedGameTime.TotalSeconds; // Update position
+        }
     }
-    public void Draw(SpriteBatch spriteBatch, Vector2 position)
+    public void Draw(SpriteBatch spriteBatch2, Vector2 position)
     {
+        this.position = position;
         sourceRectangle = new Rectangle((int)Start.X + width * (numOfFrames - currentFrame - 1), (int)Start.Y,
                 width, height);
+        //sourceRectangle = new Rectangle(80, 112, 20, 13);
         destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 31, 31);
 
         spriteBatch.Draw(Texture, destinationRectangle, sourceRectangle, Color.White);
 
         if (hasMushroomAppeared && m != null)
         {
-            m.draw(position); // Draw the mushroom consistently once it appears
+            m.draw(m_position); // Draw the mushroom consistently once it appears
         }
 
 

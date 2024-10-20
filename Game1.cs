@@ -64,7 +64,6 @@ public class Game1 : Game
     private Texture2D DanceTexture;
 
     //Items
-    public List<IItem> items = new List<IItem>();
     public Texture2D ItemsTexture;
     public ISprite firePower;
     public ISprite starPower;
@@ -161,11 +160,9 @@ public class Game1 : Game
         spriteEnemy2 = new Goomba2(240, 400);
 
         s = new Star(spriteBatch, ItemsTexture/*, new Vector2(30, 400)*/);
-        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(30, 400));
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
         entities.Add(mario);
-        entities.Add(m);
         entities.Add(OWLuckyBlockSprite);
         entities.Add(OWBrickBlockSprite);
         entities.Add(OWBrokenBrickSprite);
@@ -233,7 +230,6 @@ public class Game1 : Game
 
 
         s = new Star(spriteBatch, ItemsTexture/*, new Vector2(30, 400)*/);
-        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(30, 400));
         OWLuckyBlockSprite = new LuckyBlockSprite(block, spriteBatch, ItemsTexture, this);
         OWLuckyBlockSprite2 = new LuckyBlockSprite(block, spriteBatch, ItemsTexture, this);
         OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
@@ -245,7 +241,6 @@ public class Game1 : Game
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
         entities.Add(mario);
-        entities.Add(m);
         entities.Add(OWLuckyBlockSprite);
         entities.Add(OWLuckyBlockSprite2);
         entities.Add(OWBrickBlockSprite);
@@ -394,7 +389,6 @@ public class Game1 : Game
             obstacle1.Update(gameTime);
             obstacle2.Update(gameTime);
             obstacle3.Update(gameTime);
-            m.update(gameTime);
 
             foreach (var item in fireballs)
             {

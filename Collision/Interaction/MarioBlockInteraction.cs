@@ -49,7 +49,7 @@ public class MarioBlockInteraction
             if(block is LuckyBlockSprite luckyBlock)
             {
                 luckyBlock.bump = true;
-                System.Diagnostics.Debug.Write("m.bump works");
+                
             }
             
             
