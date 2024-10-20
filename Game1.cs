@@ -45,12 +45,9 @@ public class Game1 : Game
 
     //Block Code instance variables
     private Texture2D block;
-    private Texture2D obstacle;
+    private Texture2D obstacleTexture;
 
-    private IObstacle obstacle1;
-    private IObstacle obstacle2;
-    private IObstacle obstacle3;
-    private IObstacle obstacle4;
+    
 
     //Fireballs
     public List<Fireball> fireballs = new List<Fireball>();
@@ -130,9 +127,6 @@ public class Game1 : Game
     {
         entities.Clear();
         entities.Add(mario);
-        entities.Add(obstacle1);
-        entities.Add(obstacle2);
-        entities.Add(obstacle3);
 
         fireballs.Clear();
         mario.Reset();
@@ -174,17 +168,11 @@ public class Game1 : Game
         controlCenter = new CommandControlCenter(this);
 
 
-        obstacle1 = new obstacle1(obstacle);
-        obstacle2 = new obstacle2(obstacle);
-        obstacle3 = new obstacle3(obstacle);
+
 
         entities.Add(mario);
 
-        entities.Add(obstacle1);
-        entities.Add(obstacle2);
-        entities.Add(obstacle3);
-
-        levelOne = new LevelOne(this, entities, mario, EnemyTexture, block, ItemsTexture, spriteBatch);
+        levelOne = new LevelOne(this, entities, mario, EnemyTexture, block, ItemsTexture, obstacleTexture, spriteBatch);
         levelOne.InitializeLevel();
         List<IEntity> tempEntities = levelOne.GetAllEntities();
         entities.AddRange(tempEntities);
@@ -237,7 +225,7 @@ public class Game1 : Game
         underwaterTiles = Content.Load<Texture2D>("UnderwaterTiles");
 
         block = Content.Load<Texture2D>("blocks");
-        obstacle = Content.Load<Texture2D>("obstacle");
+        obstacleTexture = Content.Load<Texture2D>("obstacle");
 
         //Sound EFX
         ItemSounds.Add(coinSound);
@@ -266,7 +254,6 @@ public class Game1 : Game
         gameStateMouseController = new MouseController();
         gameStateControlCenter = new GameStateControlCenter(gameStateMachine, gameStateKeyboardController, gameStateMouseController, this, startScreenSprite, levelScreenSprite, Content, blackJackStateMachine);
 
-        obstacle4 = new obstacle4(obstacle);
     }
 
     protected override void Update(GameTime gameTime)
@@ -294,9 +281,7 @@ public class Game1 : Game
                 //OWBrokenBrickSprite.Update(gameTime);
             }
 
-            obstacle1.Update(gameTime);
-            obstacle2.Update(gameTime);
-            obstacle3.Update(gameTime);
+
 
             foreach (var item in fireballs)
             {
@@ -359,9 +344,7 @@ public class Game1 : Game
                 item.Draw(spriteBatch);
             }
 
-            obstacle1.Draw(spriteBatch, new Vector2(350, 370));
-            obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
-            obstacle3.Draw(spriteBatch, new Vector2(350 + 350, 335));
+
 
             hudManager.Draw(spriteBatch);
             blackJackStateMachine.Draw(spriteBatch);
