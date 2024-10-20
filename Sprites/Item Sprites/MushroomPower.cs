@@ -14,6 +14,7 @@ public class MushroomPower: ISprite
         Rectangle sourceRectangle = new Rectangle(0, 0, 15, 15);
         spriteBatch.Draw(ItemTexture, position, sourceRectangle, Color.White);
     }
+    
 
     public void Update(GameTime gametime)
     {
