@@ -18,21 +18,16 @@ public class EnemyMarioInteraction
     }
     public void Update()
     {
-        if (Overlap.Width >= Overlap.Height)
+        if (mario.HasStar())
+        {
+            enemy.beFlipped();
+        } else if (Overlap.Width >= Overlap.Height)
         {
             enemy.beStomped();
             mario.marioVelocity.Y = 0;
-        }
-        else
+        } else
         {
-            //Not correct, I need star mario
-            if(mario.HasStar())
-            {
-                enemy.beFlipped();
-            } else
-            {
-                mario.MarioTakeDamage();
-            }
+            mario.MarioTakeDamage();
         }
     }
 }
