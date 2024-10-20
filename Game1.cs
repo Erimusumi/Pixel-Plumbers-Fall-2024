@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -132,20 +133,29 @@ public class Game1 : Game
 
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
+        OWLuckyBlockSprite = new LuckyBlockSprite(block, 3, 20);
         //spriteEnemy = new Koopa(480, 400);
         s = new Star(spriteBatch, ItemsTexture, new Vector2(440, 190));
         m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 190));
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
-        entities.Add(mario);
         entities.Add(m);
+        entities.Add(mario);
+        
         entities.Add(OWLuckyBlockSprite);
+        Debug.Write("LuckyBlock is added to the list of entities");
 
         controlG = new GoombaCommand(spriteEnemy);
         controlG2 = new GoombaCommand(spriteEnemy2);
         controlCenter = new CommandControlCenter(this);
 
         Dance = new DancePole();
+
+
+        //Item initialization
+        f = new Fire(spriteBatch, ItemsTexture, new Vector2(440, 190));
+        s = new Star(spriteBatch, ItemsTexture, new Vector2(440, 190));
+        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 190));
 
     }
 
@@ -210,8 +220,7 @@ public class Game1 : Game
     {
         gameStateKeyboardController.Update();
         List<IEntity> temp = entities;
-        Rectangle screen = new Rectangle(0, 0, 800, 480);
-        sweep.Compare(entities, screen);
+        // sweep.iterateListInteractions(entities);
 
         entities = sort.SortList(entities, entities.Count, temp);
 
@@ -246,6 +255,25 @@ public class Game1 : Game
             foreach (var item in fireballs)
             {
                 item.Update(gameTime);
+            }
+
+            if (entities[0].GetDestination().Intersects(entities[1].GetDestination()))
+            {
+                System.Diagnostics.Debug.Write("but mushroom works1");
+                sweep.handleInteraction(entities, 0, 1);
+                
+            }
+            if (entities[2].GetDestination().Intersects(entities[3].GetDestination()))
+            {
+                System.Diagnostics.Debug.Write("but mushroom works!");
+                sweep.handleInteraction(entities, 2, 3);
+                
+            }
+            if (entities[3].GetDestination().Intersects(entities[4].GetDestination()))
+            {
+                System.Diagnostics.Debug.Write("successfully use sweep method");
+                sweep.handleInteraction(entities, 3, 4);
+                
             }
 
 

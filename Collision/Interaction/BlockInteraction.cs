@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using System;
+using System.Diagnostics;
 
 public class BlockInteraction
 {
@@ -12,12 +13,6 @@ public class BlockInteraction
     bool hitBottom = false;
     bool hitLeft = false;
     bool hitRight = false;
-
-    private bool blockMovingUp = false;
-    private float moveAmount = 16f;  // How much the block moves up
-    private float moveSpeed = 100f;  // Speed of block movement
-    private float blockInitialY;
-    private double blockMoveTimer = 0;
 
     public BlockInteraction(Mario mario, IBlock block)
     {
@@ -62,6 +57,8 @@ public class BlockInteraction
 
         // Reset hit flags for the next update
         ResetHitFlags();
+        Debug.Write("BlockInteraction update method works");
+        mario.marioVelocity.X = 0;
     }
 
     private void collisionSide()
@@ -69,22 +66,20 @@ public class BlockInteraction
         marioRect = mario.GetDestination(); // Update Mario's rectangle every time
         blockRect = block.GetDestination(); // Update block's rectangle every time
 
-        // Check for vertical collisions
         if (marioRect.Bottom > blockRect.Top && marioRect.Top < blockRect.Top && mario.marioVelocity.Y < 0)
         {
             hitBottom = true;    // Mario hit the bottom of the block
         }
-        else if (marioRect.Top < blockRect.Bottom && marioRect.Bottom > blockRect.Bottom && mario.marioVelocity.Y > 0)
+        if (marioRect.Top < blockRect.Bottom && marioRect.Bottom > blockRect.Bottom && mario.marioVelocity.Y > 0)
         {
             hitTop = true; // Mario landed on top of the block
         }
 
-        // Check for horizontal collisions
-        else if (marioRect.Right > blockRect.Left && marioRect.Left < blockRect.Left && mario.marioVelocity.X > 0)
+        if (marioRect.Right > blockRect.Left && marioRect.Left < blockRect.Left && mario.marioVelocity.X > 0)
         {
             hitLeft = true;  // Mario hit the left side of the block
         }
-        else if (marioRect.Left < blockRect.Right && marioRect.Right > blockRect.Right && mario.marioVelocity.X < 0)
+        if (marioRect.Left < blockRect.Right && marioRect.Right > blockRect.Right && mario.marioVelocity.X < 0)
         {
             hitRight = true;   // Mario hit the right side of the block
         }
