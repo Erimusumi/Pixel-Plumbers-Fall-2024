@@ -76,6 +76,7 @@ public class Game1 : Game
     private ISprite StartText;
     private SpriteFont MyFont;
     private Texture2D title;
+    Rectangle screen = new Rectangle(0, 0, 800, 480);
 
     // map layers
     private Layer backdrop;
@@ -210,10 +211,8 @@ public class Game1 : Game
     {
         gameStateKeyboardController.Update();
         List<IEntity> temp = entities;
-        Rectangle screen = new Rectangle(0, 0, 800, 480);
-        sweep.Compare(entities, screen);
-
         entities = sort.SortList(entities, entities.Count, temp);
+        sweep.Compare(entities, screen);
 
         if (gameStateMachine.isCurrentStateRunning())
         {
@@ -247,8 +246,6 @@ public class Game1 : Game
             {
                 item.Update(gameTime);
             }
-
-
         }
 
         base.Update(gameTime);
