@@ -19,18 +19,24 @@ public class Mushroom :IItem
     private SpriteBatch sb;
     private Texture2D texture;
     private bool falling;
-    public bool bump;
+    private Vector2 velocity;
+    private float gravity = 980f;
+    private Rectangle destinationRectangle;
     
 
-    public  Mushroom(SpriteBatch sB, Texture2D texture)
+
+    public  Mushroom(SpriteBatch sB, Texture2D texture, Vector2 m_position)
     {
         mp = new MushroomPower(texture);
         this.idle = false;
         this.collected = false;
         this.roaming = true;
+        this.falling = true;
         this.texture = texture;
         this.sb = sB;
         movingRight = true;
+        this.velocity = Vector2.Zero;
+        this.position = m_position;
     }
     public void idling()
     {
@@ -54,9 +60,37 @@ public class Mushroom :IItem
         movingLeft = false;
        
     }
-    public void draw(Vector2 position2)
+    public void update(GameTime gameTime)
     {
-        this.position = position2;
+        if (this.roaming)
+        {
+            if (movingRight)
+            {
+                position.X++;
+            }
+            else if (movingLeft)
+            {
+                position.X--;
+            }
+        }
+
+        if (this.falling)
+        {
+            velocity.Y += gravity * (float)gameTime.ElapsedGameTime.TotalSeconds;
+        }
+
+        if (!this.falling)
+        {
+            velocity.Y = 0;
+            System.Diagnostics.Debug.Write("VelocityY is setted as zero");
+        }
+
+        position += velocity * (float)gameTime.ElapsedGameTime.TotalSeconds; // Update position
+        destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 31, 31);
+
+    }
+    public void draw()
+    {
         if (this.idle || this.roaming)
         {
             this.mp = new MushroomPower(texture);
@@ -70,19 +104,7 @@ public class Mushroom :IItem
             
         }
     }
-    public void update(GameTime gameTime)
-    {
-        if (this.roaming)
-        {
-            if (movingRight)
-            {
-                position.X++;
-            }else if (movingLeft)
-            {
-                position.X--;
-            }
-        }
-    }
+
     public void swapDirection()
     {
         if (movingLeft){
@@ -103,7 +125,7 @@ public class Mushroom :IItem
 
     public Rectangle GetDestination()
     {
-        return this.mp.GetDestination(position);
+        return destinationRectangle;
     }
     public bool isFalling()
     {

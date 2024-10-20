@@ -82,6 +82,7 @@ public class Sweep
     MarioBlockInteraction MarioBlockInteraction;
     MarioObstacleInteraction MarioObstacleInteraction;
     ItemObstacleInteraction ItemObstacleInteraction;
+    ItemBlockInteraction ItemBlockInteraction;
     EnemyObstacleInteraction EnemyObstacleInteraction;
    
 
@@ -188,6 +189,14 @@ public class Sweep
             ItemObstacleInteraction = new ItemObstacleInteraction((IItem)item1, (IObstacle)item2);
             ItemObstacleInteraction.update();
             
+        }
+        else if(ContainsBlock(entities,index1) && ContainsItem(entities, index2))
+        {
+            ItemBlockInteraction = new ItemBlockInteraction((IItem)item2, (IBlock)item1);
+        }
+        else if(ContainsItem(entities, index1) && ContainsBlock(entities, index2))
+        {
+            ItemBlockInteraction = new ItemBlockInteraction((IItem)item1, (IBlock)item2);
         }
 
         else if (item1.GetType() == typeof(Fireball) && ContainsBlock(entities, index2))
