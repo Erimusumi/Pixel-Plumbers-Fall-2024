@@ -88,7 +88,7 @@
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAYwIkAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAYwJwAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
               "IsPinned": true,
@@ -128,8 +128,7 @@
               "RelativeToolTip": "Collision\\Interaction\\BlockInteraction.cs",
               "ViewState": "AgIAACwAAAAAAAAAAAApwBwAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T15:28:15.683Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T15:28:15.683Z"
             },
             {
               "$type": "Document",
@@ -141,8 +140,7 @@
               "RelativeToolTip": "Collision\\Interaction\\StarInteraction.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwBoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T19:21:51.775Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T19:21:51.775Z"
             },
             {
               "$type": "Document",
@@ -154,8 +152,7 @@
               "RelativeToolTip": "Mario\\MarioStateMachine.cs",
               "ViewState": "AgIAAEIAAAAAAAAAAAAAABEAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T06:01:14.839Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T06:01:14.839Z"
             },
             {
               "$type": "Document",
@@ -167,8 +164,7 @@
               "RelativeToolTip": "Mario\\Mario.cs",
               "ViewState": "AgIAAM0AAAAAAAAAAAAcwMoAAACFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T18:14:24.642Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T18:14:24.642Z"
             },
             {
               "$type": "Document",
@@ -180,8 +176,7 @@
               "RelativeToolTip": "Collision\\Sweep.cs",
               "ViewState": "AgIAAHUAAAAAAAAAAAAiwHMAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T06:25:31.397Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T06:25:31.397Z"
             },
             {
               "$type": "Document",
@@ -193,8 +188,7 @@
               "RelativeToolTip": "Collision\\Sort.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAYwDYAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T06:14:57.675Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T06:14:57.675Z"
             },
             {
               "$type": "Document",
@@ -206,8 +200,7 @@
               "RelativeToolTip": "Collision\\Interaction\\MarioMushroomInteraction.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAAwBIAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T19:32:07.749Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T19:32:07.749Z"
             },
             {
               "$type": "Document",
@@ -219,8 +212,7 @@
               "RelativeToolTip": "Dungeons-Levels\\Room1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T03:45:00.75Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T03:45:00.75Z"
             },
             {
               "$type": "Document",
@@ -232,8 +224,7 @@
               "RelativeToolTip": "Items\\Mushroom.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T03:24:12.429Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T03:24:12.429Z"
             },
             {
               "$type": "Document",
@@ -245,8 +236,7 @@
               "RelativeToolTip": "Collision\\Interaction\\BlockFireballInteraction.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAYwCUAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T03:38:12.473Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T03:38:12.473Z"
             },
             {
               "$type": "Document",
@@ -258,8 +248,7 @@
               "RelativeToolTip": "Collision\\Interaction\\EnemyFireballInteraction.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T03:41:18.262Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-18T03:41:18.262Z"
             },
             {
               "$type": "Document",
@@ -271,8 +260,7 @@
               "RelativeToolTip": "Projectile\\FireballSprite.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAA3wDYAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T23:26:54.143Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T23:26:54.143Z"
             },
             {
               "$type": "Document",
