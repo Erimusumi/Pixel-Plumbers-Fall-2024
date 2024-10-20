@@ -247,6 +247,8 @@ public class Game1 : Game
     {
         gameStateKeyboardController.Update();
         List<IEntity> temp = entities;
+       // sweep.iterateListInteractions(entities);
+        
         entities = sort.SortList(entities, entities.Count, temp);
 
         if (gameStateMachine.isCurrentStateRunning())

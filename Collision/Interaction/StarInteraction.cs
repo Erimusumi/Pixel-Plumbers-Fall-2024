@@ -20,12 +20,11 @@ public class MarioStarInteraction
     }
     public void update()
     {
-        if (count == 0)
-        {
+      
             star.collect();
             mario.CollectStar();
-            count++;
-        }
+         
+        
     }
     private void removeFromList(List<object> entit,int index)
     {

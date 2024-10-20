@@ -3,17 +3,19 @@ using Microsoft.Xna.Framework.Graphics;
 using Pixel_Plumbers_Fall_2024;
 using System;
 using System.Numerics;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 public interface IFireObject : IEntity
 {
-    Boolean idleState();
-    Boolean collectedState();
+    void idle();
+    void collect();
+    void roams();
     void draw();
 
 }
 public class Fire : IFireObject
 {
-    public Boolean idle;
+    public Boolean idling;
     public Boolean collected;
     public Boolean roaming;
     private Microsoft.Xna.Framework.Vector2 position;
@@ -23,24 +25,33 @@ public class Fire : IFireObject
     private SpriteBatch sB;
     private Texture2D texture;
 
-    public Fire(SpriteBatch sB, Texture2D texture, Microsoft.Xna.Framework.Vector2 pos)
+    public Fire(SpriteBatch sb, Texture2D text, Microsoft.Xna.Framework.Vector2 pos)
     {
         fp = new FirePower(texture);
-        idle = true;
+        idling = true;
         collected = false;
         roaming = false;
-        sB = sB;
-        texture = texture;
+        sB = sb;
+        texture = text;
         position = pos;
     }
-    public Boolean idleState()
+    public void idle()
     {
-        return this.idle;
+        idling = true;
+        roaming = false;
+        collected = false;
     }
-    public Boolean collectedState()
+    public void collect()
     {
-
-        return this.collected;
+        collected = true;
+        roaming = false;
+        idling = false;
+    }
+    public void roams()
+    {
+        roaming = true;
+        collected = false;
+        idling = false;
     }
     public void draw()
     {
@@ -48,21 +59,20 @@ public class Fire : IFireObject
         {
 
         }
-        else if(this.idle) {
+        else if(this.idling) {
             fp = new FirePower(texture);
             fp.Draw(this.sB, position);
         }
-         if (this.roaming)
+        else if (this.roaming)
         {
 
         }
     }
     private void destroy()
     {
-        if (this.collected)
-        {
+     
             this.fp = null;
-        }
+    
     }
     
     
