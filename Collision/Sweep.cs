@@ -103,13 +103,13 @@ public class Sweep
         {
             MarioFirePowerInteraction = new MarioFirePowerInteraction((Mario)item2, (Fire)item1);
             MarioFirePowerInteraction.update();
-            entities.RemoveAt(index1);
+            //entities.RemoveAt(index1);
         }
         else if (item2.GetType() == typeof(Fire) && item1.GetType() == typeof(Mario))
         {
             MarioFirePowerInteraction = new MarioFirePowerInteraction((Mario)item1, (Fire)item2);
             MarioFirePowerInteraction.update();
-            entities.RemoveAt(index2);
+           //// entities.RemoveAt(index2);
         }
         if (item1.GetType() == typeof(Mushroom) && item2.GetType() == typeof(Mario))
         {
@@ -117,7 +117,7 @@ public class Sweep
             MarioMushroomInteraction.update();
             //entities.RemoveAt(index1);
         }
-        else if (item1.GetType() == typeof(Mario) && item1.GetType() == typeof(MushroomPower))
+        else if (item1.GetType() == typeof(Mario) && item1.GetType() == typeof(Mushroom))
         {
             MarioMushroomInteraction = new MarioMushroomInteraction((Mario)item1, (Mushroom)item2);
             MarioMushroomInteraction.update();
