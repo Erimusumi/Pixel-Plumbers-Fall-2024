@@ -97,7 +97,7 @@ public class Game1 : Game
         entities.Clear();
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
-        spriteEnemy = new Koopa(480, 400);
+        //spriteEnemy = new Koopa(480, 400);
         s = new Star(spriteBatch, ItemsTexture, new Vector2(240, 190));
         m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 190));
         entities.Add(spriteEnemy2);
@@ -132,7 +132,7 @@ public class Game1 : Game
 
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
-        spriteEnemy = new Koopa(480, 400);
+        //spriteEnemy = new Koopa(480, 400);
         s = new Star(spriteBatch, ItemsTexture, new Vector2(440, 190));
         m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 190));
         entities.Add(spriteEnemy2);
@@ -210,7 +210,6 @@ public class Game1 : Game
     {
         gameStateKeyboardController.Update();
         List<IEntity> temp = entities;
-        System.Diagnostics.Debug.WriteLine("");
         Rectangle screen = new Rectangle(0, 0, 800, 480);
         sweep.Compare(entities, screen);
 
@@ -247,14 +246,6 @@ public class Game1 : Game
             foreach (var item in fireballs)
             {
                 item.Update(gameTime);
-            }
-            if (entities[0].GetDestination().Intersects(entities[1].GetDestination()))
-            {
-                sweep.handleInteraction(entities, 0, 1);
-            }
-            if (entities[2].GetDestination().Intersects(entities[3].GetDestination()))
-            {
-                sweep.handleInteraction(entities, 2, 3);
             }
 
 
