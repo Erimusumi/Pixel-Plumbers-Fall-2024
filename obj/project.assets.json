@@ -238,19 +238,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kamau\\.nuget\\packages\\": {}
+    "C:\\Users\\w6614\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kamau\\Downloads\\CSE3902\\Luigi9\\Pixel-Plumbers-Fall-2024.csproj",
+      "projectUniqueName": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Pixel-Plumbers-Fall-2024.csproj",
       "projectName": "Pixel-Plumbers-Fall-2024",
-      "projectPath": "C:\\Users\\kamau\\Downloads\\CSE3902\\Luigi9\\Pixel-Plumbers-Fall-2024.csproj",
-      "packagesPath": "C:\\Users\\kamau\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kamau\\Downloads\\CSE3902\\Luigi9\\obj\\",
+      "projectPath": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Pixel-Plumbers-Fall-2024.csproj",
+      "packagesPath": "C:\\Users\\w6614\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\kamau\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\w6614\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -258,6 +263,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
