@@ -23,6 +23,18 @@ public class Sweep
         return containsEnemy;
     }
 
+    private Boolean ContainsBlock(List<IEntity> entities, int index)
+    {
+        Boolean containsBlock = false;
+        Type type = entities[index].GetType();
+        if(type == typeof(BrokenBrickSprite) || type == typeof(LuckyBlockSprite) || type == typeof(StaticBlockSprite))
+        {
+            containsBlock = true;
+        }
+        return containsBlock;
+    }
+
+
     EnemyMarioInteraction EnemyMarioInteraction;
     OtherEnemyInteraction OtherEnemyInteraction;
     EnemyFireballInteraction EnemyFireballInteraction;
@@ -30,8 +42,8 @@ public class Sweep
     MarioMushroomInteraction MarioMushroomInteraction;
     MarioStarInteraction MarioStarInteraction;
     BlockFireballInteraction BlockFireballInteraction;
+    BlockInteraction MarioBlockInteraction;
 
-    /*
     public void iterateListInteractions(List<IEntity> entities)
     {
         int item1 = 0;
@@ -46,7 +58,6 @@ public class Sweep
             }
         }
     }
-    */
     public void handleInteraction(List<IEntity> entities, int index1, int index2)
     {
 
@@ -75,14 +86,18 @@ public class Sweep
         {
             EnemyFireballInteraction = new EnemyFireballInteraction((Fireball)item1, (ISpriteEnemy)item2, entities);
             EnemyFireballInteraction.update();
-        } else if (ContainsEnemy(entities, index1) && ContainsEnemy(entities, index2))
+        }
+
+        if (ContainsEnemy(entities, index1) && item2.GetType() != typeof(Mario))
         {
             OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item1, item2);
             OtherEnemyInteraction.Update();
+        }
+        if (ContainsEnemy(entities, index2) && item1.GetType() != typeof(Mario))
+        {
             OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item2, item1);
             OtherEnemyInteraction.Update();
         }
-
         //Item interaction
         if (item1.GetType() == typeof(Star) && item2.GetType() == typeof(Mario))
         {
@@ -120,10 +135,16 @@ public class Sweep
             MarioMushroomInteraction.update();
             //entities.RemoveAt(index2);
         }
-        if (item1.GetType() == typeof(BlockObject) && item2.GetType() == typeof(Mario) || item1.GetType() == typeof(Mario) && item1.GetType() == typeof(BlockObject))
+        if (item1.GetType() == typeof(Mario) && ContainsBlock(entities, index2))
         {
             //handle block interaction
-            //new BlockInteraction(item1, item2);
+            MarioBlockInteraction = new BlockInteraction((Mario)item1, (IBlock)item2);
+            MarioBlockInteraction.update();
+        }
+        else if (ContainsBlock(entities, index1) && item2.GetType() == typeof(Mario))
+        {
+            MarioBlockInteraction = new BlockInteraction((Mario)item1, (IBlock)item2);
+            MarioBlockInteraction.update();
         }
         //[...]
     }
@@ -149,9 +170,6 @@ public class Sweep
                     if (firstEntity.Intersects(secondEntity))
                     {
                         handleInteraction(entities, i, j);
-                    } else
-                    {
-                        j = entities.Count;
                     }
                 }
             }

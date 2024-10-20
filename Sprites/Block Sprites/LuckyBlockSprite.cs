@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
-public class LuckyBlockSprite: ISprite
+public class LuckyBlockSprite: IBlock
 {
     public Texture2D Texture { get; set; }
     public Vector2 Start { get; set; }

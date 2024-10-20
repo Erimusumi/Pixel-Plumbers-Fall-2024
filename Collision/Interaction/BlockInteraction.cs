@@ -1,138 +1,117 @@
 ﻿using Microsoft.Xna.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 
 public class BlockInteraction
 {
     private Mario mario;
-    private BrokenBrickSprite block;
+    private IBlock block;
+    private Rectangle marioRect;
+    private Rectangle blockRect;
+
+    bool hitTop = false;
+    bool hitBottom = false;
+    bool hitLeft = false;
+    bool hitRight = false;
+
     private bool blockMovingUp = false;
     private float moveAmount = 16f;  // How much the block moves up
     private float moveSpeed = 100f;  // Speed of block movement
     private float blockInitialY;
     private double blockMoveTimer = 0;
 
-    public BlockInteraction(Mario mario, BrokenBrickSprite block)
+    public BlockInteraction(Mario mario, IBlock block)
     {
         this.mario = mario;
         this.block = block;
-        blockInitialY = block.GetDestination().Y; // Store the initial Y position of the block
+        marioRect = mario.GetDestination();
+        blockRect = block.GetDestination();
     }
 
     // Method to handle Mario and Block collision
-    public void HandleCollision(GameTime gameTime)
+    public void update()
     {
-        Rectangle marioRect = mario.GetDestination();
-        Rectangle blockRect = block.GetDestination();
+        collisionSide();
 
-        // Check if Mario is intersecting with the block
-        if (marioRect.Intersects(blockRect))
+        // Handle horizontal collision
+        if (hitLeft || hitRight)
         {
-            // Handle bottom collision (Mario hits the bottom of the block while jumping upward)
-            if (marioRect.Bottom >= blockRect.Top && marioRect.Top < blockRect.Top && MarioIsMovingUp())
-            {
-                // Stop Mario's upward velocity (set Y velocity to 0)
-                StopMarioVerticalMovement();
+            StopMarioHorizontalMovement();
 
-                // Trigger block to move upwards
-                blockMovingUp = true;
-                blockMoveTimer = 0;
+            // Adjust Mario's position to prevent overlap
+            if (hitLeft)
+            {
+                SetPosition(new Vector2(blockRect.Left - marioRect.Width, marioRect.Y)); // Align Mario's right side with block's left
             }
-
-            // Handle left-side collision (Mario hits the left side of the block)
-            if (marioRect.Right >= blockRect.Left && marioRect.Left < blockRect.Left && MarioIsMovingRight())
+            else if (hitRight)
             {
-                // Stop Mario from moving right
-                StopMarioHorizontalMovement();
-            }
-
-            // Handle right-side collision (Mario hits the right side of the block)
-            if (marioRect.Left <= blockRect.Right && marioRect.Right > blockRect.Right && MarioIsMovingLeft())
-            {
-                // Stop Mario from moving left
-                StopMarioHorizontalMovement();
+                SetPosition(new Vector2(blockRect.Right, marioRect.Y)); // Align Mario's left side with block's right
             }
         }
 
-        // Handle block movement if it was hit
-        if (blockMovingUp)
+        // Handle vertical collision
+        if (hitBottom)
         {
-            blockMoveTimer += gameTime.ElapsedGameTime.TotalSeconds;
+            StopMarioVerticalMovement();  // Stop Mario's upward movement
+            // Optionally adjust Mario's position to sit on top of the block
+            SetPosition(new Vector2(marioRect.X, blockRect.Top - marioRect.Height));
+        }
+        else if (hitTop)
+        {
+            // You can implement what happens when Mario hits the top if needed
+        }
 
-            // Move block up for 0.1 seconds, then back down
-            if (blockMoveTimer < 0.1f)
-            {
-                MoveBlockUp((float)gameTime.ElapsedGameTime.TotalSeconds);
-            }
-            else if (blockMoveTimer < 0.2f)
-            {
-                MoveBlockDown((float)gameTime.ElapsedGameTime.TotalSeconds);
-            }
-            else
-            {
-                blockMovingUp = false;
-                ResetBlockPosition();  // Reset block to its initial position
-            }
+        // Reset hit flags for the next update
+        ResetHitFlags();
+    }
+
+    private void collisionSide()
+    {
+        marioRect = mario.GetDestination(); // Update Mario's rectangle every time
+        blockRect = block.GetDestination(); // Update block's rectangle every time
+
+        // Check for vertical collisions
+        if (marioRect.Bottom > blockRect.Top && marioRect.Top < blockRect.Top && mario.marioVelocity.Y < 0)
+        {
+            hitBottom = true;    // Mario hit the bottom of the block
+        }
+        else if (marioRect.Top < blockRect.Bottom && marioRect.Bottom > blockRect.Bottom && mario.marioVelocity.Y > 0)
+        {
+            hitTop = true; // Mario landed on top of the block
+        }
+
+        // Check for horizontal collisions
+        else if (marioRect.Right > blockRect.Left && marioRect.Left < blockRect.Left && mario.marioVelocity.X > 0)
+        {
+            hitLeft = true;  // Mario hit the left side of the block
+        }
+        else if (marioRect.Left < blockRect.Right && marioRect.Right > blockRect.Right && mario.marioVelocity.X < 0)
+        {
+            hitRight = true;   // Mario hit the right side of the block
         }
     }
 
-    // Check if Mario is moving upward (negative Y velocity)
-    private bool MarioIsMovingUp()
-    {
-        return mario.marioVelocity.Y < 0;
-    }
-
-    // Check if Mario is moving right (positive X velocity)
-    private bool MarioIsMovingRight()
-    {
-        return mario.marioVelocity.X > 0;
-    }
-
-    // Check if Mario is moving left (negative X velocity)
-    private bool MarioIsMovingLeft()
-    {
-        return mario.marioVelocity.X < 0;
-    }
-
-    // Stop Mario's vertical movement
-    private void StopMarioVerticalMovement()
-    {
-        mario.marioVelocity.Y = 0;  // Set Mario's upward velocity to 0
-    }
-
-    // Stop Mario's horizontal movement (for side collisions)
     private void StopMarioHorizontalMovement()
     {
-        mario.marioVelocity.X = 0;  // Set Mario's horizontal velocity to 0
+        mario.marioVelocity.X = 0;
     }
 
-    // Move block upwards
-    private void MoveBlockUp(float elapsedTime)
+    private void StopMarioVerticalMovement()
     {
-        Rectangle blockRect = block.GetDestination();
-        blockRect.Y -= (int)(moveSpeed * elapsedTime);  // Move block up
-        block.destinationRectangle = blockRect;  // Update block position
+        // Set Mario's vertical velocity to 0
+        mario.marioVelocity.Y = 0;
     }
 
-    // Move block downwards
-    private void MoveBlockDown(float elapsedTime)
+    private void SetPosition(Vector2 newPosition)
     {
-        Rectangle blockRect = block.GetDestination();
-        blockRect.Y += (int)(moveSpeed * elapsedTime);  // Move block down
-        block.destinationRectangle = blockRect;  // Update block position
+        mario.marioPosition = newPosition; // Update Mario's position
     }
 
-    // Reset block to its initial Y position
-    private void ResetBlockPosition()
+    private void ResetHitFlags()
     {
-        Rectangle blockRect = block.GetDestination();
-        blockRect.Y = (int)blockInitialY;
-        block.destinationRectangle = blockRect;  // Update block position
+        // Reset all hit flags for the next update
+        hitTop = false;
+        hitBottom = false;
+        hitLeft = false;
+        hitRight = false;
     }
 }
-
-
