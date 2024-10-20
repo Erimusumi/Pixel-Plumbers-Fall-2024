@@ -203,8 +203,7 @@
               "ViewState": "AgIAAM4AAAAAAAAAAAAQwNcAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -217,8 +216,7 @@
               "ViewState": "AgIAAEEAAAAAAAAAAAAQwE8AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-17T06:25:31.397Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -231,8 +229,7 @@
               "ViewState": "AgIAAFkAAAAAAAAAAAAYwBMAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-18T03:24:12.429Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -260,8 +257,7 @@
               "RelativeToolTip": "Items\\Fire.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAswAcAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T19:41:12.009Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T19:41:12.009Z"
             },
             {
               "$type": "Document",
@@ -273,8 +269,7 @@
               "RelativeToolTip": "Sprites\\Block Sprites\\LuckyBlockSprite.cs",
               "ViewState": "AgIAABkAAAAAAAAAAADwvx4AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T19:36:52.882Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-20T19:36:52.882Z"
             },
             {
               "$type": "Document",
@@ -282,9 +277,9 @@
               "Title": "MarioFirePowerInteraction.cs",
               "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\MarioFirePowerInteraction.cs",
               "RelativeDocumentMoniker": "Collision\\Interaction\\MarioFirePowerInteraction.cs",
-              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\MarioFirePowerInteraction.cs*",
-              "RelativeToolTip": "Collision\\Interaction\\MarioFirePowerInteraction.cs*",
-              "ViewState": "AgIAABIAAAAAAAAAAAAawBsAAAAFAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\MarioFirePowerInteraction.cs",
+              "RelativeToolTip": "Collision\\Interaction\\MarioFirePowerInteraction.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAawBQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-17T19:24:32.04Z",
               "EditorCaption": ""
@@ -299,8 +294,7 @@
               "RelativeToolTip": "Sprites\\Item Sprites\\FirePower.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T19:44:24.172Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T19:44:24.172Z"
             },
             {
               "$type": "Document",
@@ -312,8 +306,7 @@
               "RelativeToolTip": "Items\\ItemManager.cs",
               "ViewState": "AgIAADQAAAAAAAAAAAAjwEIAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T01:58:22.35Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T01:58:22.35Z"
             },
             {
               "$type": "Document",
@@ -325,8 +318,7 @@
               "RelativeToolTip": "Items\\IItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T21:02:47.681Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-27T21:02:47.681Z"
             },
             {
               "$type": "Document",
@@ -338,8 +330,7 @@
               "RelativeToolTip": "Sprites\\Item Sprites\\MushroomPower.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-27T21:38:15.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-27T21:38:15.83Z"
             },
             {
               "$type": "Document",
@@ -351,8 +342,7 @@
               "RelativeToolTip": "Sprites\\Item Sprites\\StarPower.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T02:23:04.272Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-07T02:23:04.272Z"
             },
             {
               "$type": "Document",
@@ -364,8 +354,7 @@
               "RelativeToolTip": "Items\\Star.cs",
               "ViewState": "AgIAADgAAAAAAAAAAIAwwEMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T18:36:17.731Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-25T18:36:17.731Z"
             },
             {
               "$type": "Document",
@@ -377,8 +366,7 @@
               "RelativeToolTip": "Collision\\Interaction\\MarioMushroomInteraction.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T19:32:07.749Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T19:32:07.749Z"
             },
             {
               "$type": "Document",
@@ -390,8 +378,7 @@
               "RelativeToolTip": "Collision\\Interaction\\StarInteraction.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwBoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T19:21:51.775Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T19:21:51.775Z"
             },
             {
               "$type": "Document",
@@ -403,8 +390,7 @@
               "RelativeToolTip": "Collision\\Interaction\\ItemObstacleInteraction.cs",
               "ViewState": "AgIAABkAAAAAZlCBblwmwCYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T22:49:55.269Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-21T22:49:55.269Z"
             },
             {
               "$type": "Document",
@@ -416,8 +402,7 @@
               "RelativeToolTip": "Collision\\Interaction\\MarioBlockInteraction.cs",
               "ViewState": "AgIAACIAAACAvtrL4xkZwDIAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T20:55:33.548Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T20:55:33.548Z"
             },
             {
               "$type": "Document",
@@ -429,8 +414,7 @@
               "RelativeToolTip": "Sprites\\Block Sprites\\StaticBlockSprite.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAgwBsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T19:36:47.461Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-20T19:36:47.461Z"
             },
             {
               "$type": "Document",
@@ -442,8 +426,7 @@
               "RelativeToolTip": "Sprites\\Block Sprites\\UnknownBlockSprite.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAwwEQAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T19:36:58.032Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-20T19:36:58.032Z"
             },
             {
               "$type": "Document",
@@ -453,10 +436,9 @@
               "RelativeDocumentMoniker": "Mario\\Mario.cs",
               "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Mario\\Mario.cs",
               "RelativeToolTip": "Mario\\Mario.cs",
-              "ViewState": "AgIAAGgBAAAAAAAAAAAUwHQBAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAH0BAAAAAAAAAAAUwIkBAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T18:14:24.642Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T18:14:24.642Z"
             },
             {
               "$type": "Document",
@@ -468,8 +450,7 @@
               "RelativeToolTip": "Mario\\MarioSpriteMachine.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-06T20:04:10.449Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-06T20:04:10.449Z"
             },
             {
               "$type": "Document",
@@ -481,8 +462,7 @@
               "RelativeToolTip": "Mario\\MarioStateMachine.cs",
               "ViewState": "AgIAAJoAAAAAAAAAAAAAwKgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T06:01:14.839Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T06:01:14.839Z"
             },
             {
               "$type": "Document",
@@ -506,8 +486,7 @@
               "RelativeToolTip": "Collision\\Sort.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAswCUAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T06:14:57.675Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T06:14:57.675Z"
             },
             {
               "$type": "Document",
@@ -543,8 +522,7 @@
               "RelativeToolTip": "BlackJack\\BlackJackCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-04T19:26:37.25Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-04T19:26:37.25Z"
             },
             {
               "$type": "Document",
