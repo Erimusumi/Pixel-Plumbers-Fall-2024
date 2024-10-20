@@ -11,6 +11,7 @@ public class Game1 : Game
     private SpriteBatch spriteBatch;
     private Texture2D marioTexture;
     private GameTime gameTime;
+    private Texture2D titleTexture;
 
     private KeyboardController keyboardController;
     private KeyboardControllerMovement keyboardControllerMovement;
@@ -200,6 +201,8 @@ public class Game1 : Game
     {
         spriteBatch = new SpriteBatch(GraphicsDevice);
 
+
+        titleTexture = Content.Load<Texture2D>("supermariobros");
         marioTexture = Content.Load<Texture2D>("mario");
         EnemyTexture = Content.Load<Texture2D>("enemies");
         DanceTexture = Content.Load<Texture2D>("dance");
@@ -227,7 +230,7 @@ public class Game1 : Game
         firePower = new FirePower(ItemsTexture);
         starPower = new StarPower(ItemsTexture);
         mushroomPower = new MushroomPower(ItemsTexture);
-        
+
 
         // Initialize block and obstacle sprites
         OWLuckyBlockSprite = new LuckyBlockSprite(block, 3, 20);
@@ -244,8 +247,8 @@ public class Game1 : Game
     {
         gameStateKeyboardController.Update();
         List<IEntity> temp = entities;
-       // sweep.iterateListInteractions(entities);
-        
+        // sweep.iterateListInteractions(entities);
+
         entities = sort.SortList(entities, entities.Count, temp);
 
         if (gameStateMachine.isCurrentStateRunning())
