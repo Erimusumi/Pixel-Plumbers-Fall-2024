@@ -235,8 +235,8 @@ public class Game1 : Game
         Goomba15 = new Goomba(5400, 400);
         Goomba16 = new Goomba(5550, 400);
 
-        OWLuckyBlockSprite = new LuckyBlockSprite(block, spriteBatch, ItemsTexture, this, mario, new Vector2(200, 200));
-        OWLuckyBlockSprite2 = new LuckyBlockSprite(block, spriteBatch, ItemsTexture, this, mario, new Vector2(200, 350));
+        OWLuckyBlockSprite = new LuckyBlockSprite(block, spriteBatch, ItemsTexture, this, mario, new Vector2(200 + 62, 350));
+        OWLuckyBlockSprite2 = new LuckyBlockSprite(block, spriteBatch, ItemsTexture, this, mario, new Vector2(200, 200));
         OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
         OWBrokenBrickSprite = new BrokenBrickSprite(block, 4, 1);
         obstacle1 = new obstacle1(obstacle);
