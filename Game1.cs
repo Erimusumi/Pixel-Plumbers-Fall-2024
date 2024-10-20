@@ -51,7 +51,7 @@ public class Game1 : Game
     //Block Code instance variables
     private Texture2D block;
     private Texture2D obstacle;
-    private List<ISprite> sprite1;
+    private List<IBlock> sprite1;
     public int index1;
     public int n1;
     private List<ISprite> sprite2;
@@ -61,10 +61,10 @@ public class Game1 : Game
     private ISprite obstacle2;
     private ISprite obstacle3;
     private ISprite obstacle4;
-    private ISprite OWLuckyBlockSprite;
-    private ISprite OWUsedBlockSprite;
-    private ISprite OWBrickBlockSprite;
-    private ISprite OWBrokenBrickSprite;
+    private IBlock OWLuckyBlockSprite;
+    private IBlock OWUsedBlockSprite;
+    private IBlock OWBrickBlockSprite;
+    private IBlock OWBrokenBrickSprite;
 
     //Fireballs
     public List<Fireball> fireballs = new List<Fireball>();
@@ -151,7 +151,7 @@ public class Game1 : Game
 
         Dance = new DancePole();
 
-        sprite1 = new List<ISprite>
+        sprite1 = new List<IBlock>
             {
                 //lucky brick sprites
                 OWLuckyBlockSprite,
