@@ -101,14 +101,15 @@ public class Game1 : Game
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
         //spriteEnemy = new Koopa(480, 400);
-        s = new Star(spriteBatch, ItemsTexture, new Vector2(140, 400));
-        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(140, 400));
+        s = new Star(spriteBatch, ItemsTexture, new Vector2(240, 190));
+        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 190));
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
         entities.Add(mario);
         entities.Add(m);
         entities.Add(OWLuckyBlockSprite);
         entities.Add(OWBrickBlockSprite);
+        entities.Add(OWBrokenBrickSprite);
         entities.Add(obstacle1);
         entities.Add(obstacle2);
         entities.Add(obstacle3);
@@ -138,14 +139,13 @@ public class Game1 : Game
         keyboardController = new KeyboardController();
         keyboardControllerMovement = new KeyboardControllerMovement();
 
-        spriteEnemy = new Goomba(530, 400);
+        spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
         //spriteEnemy = new Koopa(480, 400);
-        s = new Star(spriteBatch, ItemsTexture, new Vector2(140, 400));
-        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(140, 400));
+        s = new Star(spriteBatch, ItemsTexture, new Vector2(440, 190));
+        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 190));
         OWLuckyBlockSprite = new LuckyBlockSprite(block, 3, 20);
         OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
-        OWUsedBlockSprite = new StaticBlockSprite(block, new Rectangle(128, 112, 16, 16));
         OWBrokenBrickSprite = new BrokenBrickSprite(block, 4, 1);
         obstacle1 = new obstacle1(obstacle);
         obstacle2 = new obstacle2(obstacle);
@@ -264,7 +264,6 @@ public class Game1 : Game
             obstacle1.Update(gameTime);
             obstacle2.Update(gameTime);
             obstacle3.Update(gameTime);
-            m.update();
 
             foreach (var item in fireballs)
             {
@@ -299,23 +298,24 @@ public class Game1 : Game
             spriteEnemy.Draw(spriteBatch, EnemyTexture);
             spriteEnemy2.Draw(spriteBatch, EnemyTexture);
             mario.Draw(spriteBatch);
-            //manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
+            manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
 
             foreach (var item in fireballs)
             {
                 item.Draw(spriteBatch);
             }
 
-            // Draw blocks and obstacles
-            OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200, 200));
-            OWBrickBlockSprite.Draw(spriteBatch, new Vector2(200, 350));
-            OWBrokenBrickSprite.Draw(spriteBatch, new Vector2(200 + 31, 350));
-            obstacle1.Draw(spriteBatch, new Vector2(350, 370));
-            obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
-            obstacle3.Draw(spriteBatch, new Vector2(350 + 350, 335));
             m.draw(); //draw mush collision test
             spriteBatch.End();
 
+            // Draw blocks and obstacles
+            OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200, 200));
+            OWBrickBlockSprite.Draw(spriteBatch, new Vector2(200, 350));
+            OWBrokenBrickSprite.Draw(spriteBatch, new Vector2(200+31, 350));
+            OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200 + 62, 350));
+            obstacle1.Draw(spriteBatch, new Vector2(350, 370));
+            obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
+            obstacle3.Draw(spriteBatch, new Vector2(350+160, 335));
         }
         base.Draw(gameTime);
     }
