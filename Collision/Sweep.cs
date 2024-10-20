@@ -173,6 +173,11 @@ public class Sweep
                 for (int j = i+1; (j < entities.Count) && (secondEntity.X <= (camera.Width + camera.X)); j++)
                 {
                     secondEntity = entities[j].GetDestination();
+                    //Temp fix
+                    if(secondEntity.X > (camera.Width + camera.X))
+                    {
+                        entities.RemoveAt(j);
+                    }
                     if (firstEntity.Intersects(secondEntity))
                     {
                         handleInteraction(entities, i, j);
