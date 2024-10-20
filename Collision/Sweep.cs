@@ -58,7 +58,7 @@ public class Sweep
             }
         }
     }
-    public void handleInteraction(List<IEntity> entities, int index1, int index2)
+    private void handleInteraction(List<IEntity> entities, int index1, int index2)
     {
 
         /*Should determine the interactionType of two entities and call the appropriate method */
@@ -169,9 +169,6 @@ public class Sweep
                     if (firstEntity.Intersects(secondEntity))
                     {
                         handleInteraction(entities, i, j);
-                    } else
-                    {
-                        j = entities.Count;
                     }
                 }
             }
