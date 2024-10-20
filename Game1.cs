@@ -42,16 +42,6 @@ public class Game1 : Game
 
     //Items
     public Texture2D ItemsTexture;
-    public ISprite firePower;
-    public ISprite starPower;
-    public ISprite mushroomPower;
-    public Fire f;
-    public Star s;
-    public Mushroom m;
-    Vector2 itemsPos = new Vector2(400, 250);
-    public ItemManager manager = new ItemManager();
-    public int numItems = 3;
-    public int currentItem = 0;
 
     //Block Code instance variables
     private Texture2D block;
@@ -144,7 +134,6 @@ public class Game1 : Game
         entities.Add(obstacle2);
         entities.Add(obstacle3);
 
-        currentItem = 0;
         fireballs.Clear();
         mario.Reset();
 
@@ -277,7 +266,6 @@ public class Game1 : Game
         gameStateMouseController = new MouseController();
         gameStateControlCenter = new GameStateControlCenter(gameStateMachine, gameStateKeyboardController, gameStateMouseController, this, startScreenSprite, levelScreenSprite, Content, blackJackStateMachine);
 
-        mushroomPower = new MushroomPower(ItemsTexture);
         obstacle4 = new obstacle4(obstacle);
     }
 
@@ -305,8 +293,6 @@ public class Game1 : Game
             {
                 //OWBrokenBrickSprite.Update(gameTime);
             }
-
-            manager.updateCurrentItem(ref currentItem, numItems);
 
             obstacle1.Update(gameTime);
             obstacle2.Update(gameTime);
