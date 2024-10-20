@@ -125,34 +125,25 @@ public class Sweep
         rectangle = entity.GetDestination();
         return rectangle;
     }
-    public void Compare(List<IEntity> entities)
+    public void Compare(List<IEntity> entities, Rectangle camera)
     {
-
-        /*This 
-        //mario, item, block, enemy
-        /*
-          Rectangle rectangle = new Rectangle();
-          rectangle.IntersectsWith();
-          returns true or false
-          
-          list.ofType<>();
-         */
-        /*if(mario && item || item && mario)
-            send to mario or item command
-        */
-        /*if(mario && block || block && mario)
-            send to mario or block command
-        */
-        /*if(mario && enemy || enemy && mario)
-            send to mario or enemy command
-        */ //DONE ABOVE IN INTERACTION TYPE METHOD
-
-        //if(item && item || item && block || item && enemy || enemy && enemy || enemy && block) 
-        //These should all act the same, so else?
-        //Rectangle rectangle = new Rectangle(0,0,0,0);
-        //Rectangle r2 = rectangle;
-        //r2.Intersect(Some r3)
-        //Get's the area that is intersected and replaces r2. If r2 is rectangle. idk.
+        if (entities.Count > 1)
+        {
+            Rectangle firstEntity = entities[0].GetDestination();
+            Rectangle secondEntity = entities[1].GetDestination();
+            for (int i = 0; (i < entities.Count) && (firstEntity.X <= (camera.Width + camera.X)); i++)
+            {
+                firstEntity = entities[i].GetDestination();
+                for (int j = i+1; (j < entities.Count) && (secondEntity.X <= (camera.Width + camera.X)); j++)
+                {
+                    secondEntity = entities[j].GetDestination();
+                    if (firstEntity.Intersects(secondEntity))
+                    {
+                        handleInteraction(entities, i, j);
+                    }
+                }
+            }
+        }
 
     }
 }
