@@ -2,65 +2,60 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Pixel_Plumbers_Fall_2024;
+using System;
+using System.Collections.Generic;
 using System.Globalization;
+using System.Transactions;
+using System.Xml.Linq;
 
 public class EnemySwitch : ICommand
 {
     Game1 game1;
     //0 is P, 1 is O
     int PorO;
-    public EnemySwitch(Game1 game, int _PorO)
+    List<ISpriteEnemy> enemies;
+    public EnemySwitch(Game1 game, int _PorO, List<ISpriteEnemy> _enemies)
     {
         game1 = game;
         PorO = _PorO;
+        enemies = _enemies;
     }
 
     private enum CommandType {GoombaCommand, CheepRedCommand, KoopaCommand, CheepGreenCommand};
     private CommandType commandType = CommandType.GoombaCommand;
+    private ISpriteEnemy current;
+    private ISpriteEnemy lastSprite;
 
     public void Execute()
     {
+        lastSprite = enemies[0];
+        current = enemies[0];
+        //P
         if (PorO == 0)
         {
-            switch (commandType)
-            {
-                case CommandType.GoombaCommand:
-                    game1.SetEnemyCommand(new CheepsCommand(game1.SetEnemy(new Cheeps(0, 480, 400))));
-                    commandType = CommandType.CheepRedCommand;
-                    break;
-                case CommandType.CheepRedCommand:
-                    game1.SetEnemyCommand(new KoopaCommand(game1.SetEnemy(new Koopa(480, 400))));
-                    commandType = CommandType.KoopaCommand;
-                    break;
-                case CommandType.KoopaCommand:
-                    game1.SetEnemyCommand(new CheepsCommand(game1.SetEnemy(new Cheeps(1, 480, 400))));
-                    commandType = CommandType.CheepGreenCommand;
-                    break;
-                case CommandType.CheepGreenCommand:
-                    game1.SetEnemyCommand(new GoombaCommand(game1.SetEnemy(new Goomba(480, 400))));
-                    commandType = CommandType.GoombaCommand;
-                    break;
-            }
+            enemies.RemoveAt(0);
+            enemies.Add(current);
         } else
         {
-            switch (commandType) {
-                case CommandType.GoombaCommand:
-                    game1.SetEnemyCommand(new CheepsCommand(game1.SetEnemy(new Cheeps(1, 480, 400))));
-                    commandType = CommandType.CheepGreenCommand;
-                    break;
-                case CommandType.CheepRedCommand:
-                    game1.SetEnemyCommand(new GoombaCommand(game1.SetEnemy(new Goomba(480, 400))));
-                    commandType = CommandType.GoombaCommand;
-                    break;
-                case CommandType.KoopaCommand:
-                    game1.SetEnemyCommand(new CheepsCommand(game1.SetEnemy(new Cheeps(0, 480, 400))));
-                    commandType = CommandType.CheepRedCommand;
-                    break;
-                case CommandType.CheepGreenCommand:
-                    game1.SetEnemyCommand(new KoopaCommand(game1.SetEnemy(new Koopa(480, 400))));
-                    commandType = CommandType.KoopaCommand;
-                    break;
-                }
+            for (int i = enemies.Count - 1; i > 0; i--)
+            {
+                ISpriteEnemy hold1 = enemies[i];
+                ISpriteEnemy hold2 = enemies[i-1];
+                enemies[i-1] = hold1;
+                enemies[i] = hold2;
             }
+        }
+        current = enemies[0];
+        if (current.GetType() == typeof(Goomba) || current.GetType() == typeof(Koopa))
+        {
+            game1.SetEnemy((ISpriteEnemy)Activator.CreateInstance(current.GetType(), 480, 400));
+        } else if ((lastSprite.GetType() == typeof(Goomba)) && (PorO == 0) || (lastSprite.GetType() == typeof(Koopa)) && (PorO != 0))
+        {
+            game1.SetEnemy((ISpriteEnemy)Activator.CreateInstance(current.GetType(), 0, 480, 400));
+        } else
+        {
+            game1.SetEnemy((ISpriteEnemy)Activator.CreateInstance(current.GetType(), 1, 480, 400));
+        }
     }
+
 }

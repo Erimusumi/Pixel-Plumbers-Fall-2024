@@ -101,7 +101,7 @@ public class Game1 : Game
         entities.Clear();
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
-        spriteEnemy = new Koopa(480, 400);
+        //spriteEnemy = new Koopa(480, 400);
         s = new Star(spriteBatch, ItemsTexture, new Vector2(240, 190));
         m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 190));
         entities.Add(spriteEnemy2);
@@ -137,7 +137,7 @@ public class Game1 : Game
 
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
-        spriteEnemy = new Koopa(480, 400);
+        //spriteEnemy = new Koopa(480, 400);
         s = new Star(spriteBatch, ItemsTexture, new Vector2(440, 190));
         m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 190));
         entities.Add(spriteEnemy2);
@@ -187,11 +187,6 @@ public class Game1 : Game
     {
         spriteEnemy = enemy;
         return spriteEnemy;
-    }
-
-    public void SetEnemyCommand(IController Enemy)
-    {
-        controlG = Enemy;
     }
 
     public void SetKey(KeyboardController keys)
