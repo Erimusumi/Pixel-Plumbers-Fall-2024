@@ -68,7 +68,7 @@ public class Game1 : Game
 
     private List<IEntity> entities = new List<IEntity>();
     private Sort sort = new Sort();
-    private Sweep sweep = new Sweep();
+    private Sweep sweep;
 
     // reset instances
     public Vector2 initial_mario_position;
@@ -101,8 +101,8 @@ public class Game1 : Game
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
         //spriteEnemy = new Koopa(480, 400);
-        s = new Star(spriteBatch, ItemsTexture, new Vector2(140, 400));
-        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(140, 400));
+        s = new Star(spriteBatch, ItemsTexture, new Vector2(240, 190));
+        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 190));
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
         entities.Add(mario);
@@ -123,6 +123,7 @@ public class Game1 : Game
     {
         base.Initialize();
         this.gameTime = new GameTime();
+        this.sweep = new Sweep(gameTime);
 
         // map layers
         backdrop = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Backdrop.csv");
@@ -140,8 +141,8 @@ public class Game1 : Game
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
         //spriteEnemy = new Koopa(480, 400);
-        s = new Star(spriteBatch, ItemsTexture, new Vector2(140, 400));
-        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(140, 400));
+        s = new Star(spriteBatch, ItemsTexture, new Vector2(440, 190));
+        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 190));
         OWLuckyBlockSprite = new LuckyBlockSprite(block, 3, 20);
         OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
         obstacle1 = new obstacle1(obstacle);
@@ -295,7 +296,7 @@ public class Game1 : Game
             spriteEnemy.Draw(spriteBatch, EnemyTexture);
             spriteEnemy2.Draw(spriteBatch, EnemyTexture);
             mario.Draw(spriteBatch);
-            
+            manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
 
             foreach (var item in fireballs)
             {
