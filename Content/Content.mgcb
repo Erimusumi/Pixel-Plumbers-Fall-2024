@@ -73,6 +73,18 @@
 /processorParam:TextureFormat=Color
 /build:itemsAndPowerups.png
 
+#begin level1_Backdrop.csv
+/copy:level1_Backdrop.csv
+
+#begin level1_Collisions.csv
+/copy:level1_Collisions.csv
+
+#begin level1_Foreground.csv
+/copy:level1_Foreground.csv
+
+#begin level1_Greenery.csv
+/copy:level1_Greenery.csv
+
 #begin mario.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -103,4 +115,28 @@
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
 /build:MyFont.spritefont
+
+#begin OverworldTiles.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:OverworldTiles.png
+
+#begin title.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:title.png
 

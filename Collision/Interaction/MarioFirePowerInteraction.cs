@@ -20,10 +20,7 @@ using System.Threading.Tasks;
     }
     public void update()
     {
-        FirePower.collected = true;
-        FirePower.idle = false;
-        FirePower.roaming = false;
-
+        FirePower.collect();
         mario.MarioPowerUp();  
     }
     private void removeFromList()
