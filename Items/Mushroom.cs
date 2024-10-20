@@ -65,10 +65,18 @@ public class Mushroom : IMushroomObject
         else if (this.collected)
         {
             position = new Microsoft.Xna.Framework.Vector2(900, 900);
+            
         }
         else if (this.roaming)
         {
 
+        }
+    }
+    public void update()
+    {
+        if (this.roaming)
+        {
+            position.X++;
         }
     }
     private void destroy()
