@@ -52,12 +52,7 @@ public class Game1 : Game
     //Block Code instance variables
     private Texture2D block;
     private Texture2D obstacle;
-    private List<IBlock> sprite1;
-    public int index1;
-    public int n1;
-    private List<ISprite> sprite2;
-    public int index2;
-    public int n2;
+    
     private ISprite obstacle1;
     private ISprite obstacle2;
     private ISprite obstacle3;
@@ -114,8 +109,6 @@ public class Game1 : Game
         controlG = new GoombaCommand(spriteEnemy);
         controlG2 = new GoombaCommand(spriteEnemy2);
         currentItem = 0;
-        index1 = 0;
-        index2 = 0;
         fireballs.Clear();
     }
 
@@ -154,30 +147,6 @@ public class Game1 : Game
 
         Dance = new DancePole();
 
-        sprite1 = new List<IBlock>
-            {
-                //lucky brick sprites
-                OWLuckyBlockSprite,
-                //broekn brick sprites
-                OWBrokenBrickSprite,
-                //brick sprites
-                OWBrickBlockSprite,
-                //used block sprites
-                OWUsedBlockSprite
-            };
-
-        sprite2 = new List<ISprite>
-        {
-            obstacle1,
-            obstacle2,
-            obstacle3,
-            obstacle4
-        };
-
-        n1 = sprite1.Count;
-        n2 = sprite2.Count;
-        index1 = 0;
-        index2 = 0;
 
         //Item initialization
         f = new Fire(spriteBatch, ItemsTexture, new Vector2(440, 190));
@@ -277,8 +246,7 @@ public class Game1 : Game
             manager.updateCurrentItem(ref currentItem, numItems);
 
             //Update block and obstacle sprites
-            sprite1[index1].Update(gameTime);
-            sprite2[index2].Update(gameTime);
+            OWLuckyBlockSprite.Update(gameTime);
 
             foreach (var item in fireballs)
             {
@@ -334,8 +302,7 @@ public class Game1 : Game
             spriteBatch.End();
 
             // Draw blocks and obstacles
-            sprite1[index1].Draw(spriteBatch, new Vector2(200, 200));
-            sprite2[index2].Draw(spriteBatch, new Vector2(310, 150));
+            OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200, 200));
         }
         base.Draw(gameTime);
     }

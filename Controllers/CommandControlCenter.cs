@@ -31,10 +31,5 @@ public class CommandControlCenter
         keyboardController.addCommand(Keys.P, EnemySwitchP);
         keyboardController.addCommand(Keys.O, EnemySwitchO);
 
-        // command for switching blocks
-        ICommand blockTCommand = new blockTCommand(game);
-        ICommand blockYCommand = new blockYCommand(game);
-        keyboardController.addCommand(Keys.T, blockTCommand);
-        keyboardController.addCommand(Keys.Y, blockYCommand);
     }
 }
