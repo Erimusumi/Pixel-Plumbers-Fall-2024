@@ -59,6 +59,7 @@ public class Game1 : Game
     private IObstacle obstacle3;
     private IObstacle obstacle4;
     private IBlock OWLuckyBlockSprite;
+    private IBlock OWLuckyBlockSprite2;
     private IBlock OWUsedBlockSprite;
     private IBlock OWBrickBlockSprite;
     private IBlock OWBrokenBrickSprite;
@@ -146,6 +147,7 @@ public class Game1 : Game
         s = new Star(spriteBatch, ItemsTexture, new Vector2(30, 400));
         m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(30, 400));
         OWLuckyBlockSprite = new LuckyBlockSprite(block, 3, 20);
+        OWLuckyBlockSprite2 = new LuckyBlockSprite(block, 3, 20);
         OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
         OWBrokenBrickSprite = new BrokenBrickSprite(block, 4, 1);
         obstacle1 = new obstacle1(obstacle);
@@ -157,6 +159,7 @@ public class Game1 : Game
         entities.Add(mario);
         entities.Add(m);
         entities.Add(OWLuckyBlockSprite);
+        entities.Add(OWLuckyBlockSprite2);
         entities.Add(OWBrickBlockSprite);
         entities.Add(OWBrokenBrickSprite);
         entities.Add(obstacle1);
@@ -260,6 +263,7 @@ public class Game1 : Game
 
             //Update block and obstacle sprites
             OWLuckyBlockSprite.Update(gameTime);
+            OWLuckyBlockSprite2.Update(gameTime);
             OWBrickBlockSprite.Update(gameTime);
             OWBrokenBrickSprite.Update(gameTime);
             obstacle1.Update(gameTime);
@@ -318,7 +322,8 @@ public class Game1 : Game
             spriteBatch.End();
 
             // Draw blocks and obstacles
-            OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200, 200));
+            OWLuckyBlockSprite2.Draw(spriteBatch, new Vector2(200, 200));
+
             OWBrickBlockSprite.Draw(spriteBatch, new Vector2(200, 350));
             OWBrokenBrickSprite.Draw(spriteBatch, new Vector2(200+31, 350));
             OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200 + 62, 350));
