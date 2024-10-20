@@ -7,13 +7,10 @@ using Pixel_Plumbers_Fall_2024;
 
 public class GoombaSprites
 {
-
-    private int posX = 0;
     private int posY = 0;
     private int position = 0;
     public GoombaSprites(int _posX, int _posY)
     {
-        posX = _posX;
         position = _posX;
         posY = _posY;
     }
@@ -52,12 +49,6 @@ public class GoombaSprites
             }
         }
         destinationRectangle = new Rectangle(position, posY, size * scaleUp, size * scaleUp);
-        if (counter >= countEnd)
-        {
-            counter = -1;
-            position = posX;
-        }
-
     }
 	public void RightLogic()
 	{
@@ -79,11 +70,6 @@ public class GoombaSprites
             }
         }
         destinationRectangle = new Rectangle(position, posY, size * scaleUp, size * scaleUp);
-        if (counter >= countEnd)
-        {
-            counter = -1;
-            position = posX;
-        }
     }
 	public void StompedLogic()
 	{
@@ -109,10 +95,6 @@ public class GoombaSprites
             {
                 sourceRectangle = new Rectangle(0, 4, size, size);
             }
-        }
-        if (counter >= countEnd)
-        {
-            counter = -1;
         }
     }
     public Rectangle GetDestination()
