@@ -20,9 +20,6 @@ public class EnemySwitch : ICommand
         PorO = _PorO;
         enemies = _enemies;
     }
-
-    private enum CommandType {GoombaCommand, CheepRedCommand, KoopaCommand, CheepGreenCommand};
-    private CommandType commandType = CommandType.GoombaCommand;
     private ISpriteEnemy current;
     private ISpriteEnemy lastSprite;
 

@@ -101,7 +101,7 @@ public class Game1 : Game
         entities.Clear();
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
-        //spriteEnemy = new Koopa(480, 400);
+        spriteEnemy = new Koopa(480, 400);
         s = new Star(spriteBatch, ItemsTexture, new Vector2(240, 190));
         m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 190));
         entities.Add(spriteEnemy2);
@@ -109,8 +109,6 @@ public class Game1 : Game
         entities.Add(mario);
         entities.Add(m);
 
-        controlG = new GoombaCommand(spriteEnemy);
-        controlG2 = new GoombaCommand(spriteEnemy2);
         currentItem = 0;
         index1 = 0;
         index2 = 0;
@@ -137,7 +135,7 @@ public class Game1 : Game
 
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
-        //spriteEnemy = new Koopa(480, 400);
+        spriteEnemy = new Koopa(480, 400);
         s = new Star(spriteBatch, ItemsTexture, new Vector2(440, 190));
         m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 190));
         entities.Add(spriteEnemy2);
@@ -145,8 +143,6 @@ public class Game1 : Game
         entities.Add(mario);
         entities.Add(m);
 
-        controlG = new GoombaCommand(spriteEnemy);
-        controlG2 = new GoombaCommand(spriteEnemy2);
         controlCenter = new CommandControlCenter(this);
 
         Dance = new DancePole();
@@ -188,7 +184,6 @@ public class Game1 : Game
         spriteEnemy = enemy;
         return spriteEnemy;
     }
-
     public void SetKey(KeyboardController keys)
     {
         keyboardController = keys;
@@ -242,9 +237,10 @@ public class Game1 : Game
     {
         gameStateKeyboardController.Update();
         List<IEntity> temp = entities;
-       // sweep.iterateListInteractions(entities);
-        
         entities = sort.SortList(entities, entities.Count, temp);
+        Rectangle window = new Rectangle(0, 0, 800, 480);
+        sweep.Compare(entities, window);
+
 
         if (gameStateMachine.isCurrentStateRunning())
         {
@@ -268,7 +264,6 @@ public class Game1 : Game
             spriteEnemy2.Updates();
 
             //Dance.Updates();
-            controlG.Update();
             manager.updateCurrentItem(ref currentItem, numItems);
 
             //Update block and obstacle sprites
