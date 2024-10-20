@@ -45,7 +45,6 @@ public class Sweep
     BlockFireballInteraction BlockFireballInteraction;
     BlockInteraction MarioBlockInteraction;
 
-    /*
     public void iterateListInteractions(List<IEntity> entities)
     {
         int item1 = 0;
@@ -60,8 +59,7 @@ public class Sweep
             }
         }
     }
-    */
-    private void handleInteraction(List<IEntity> entities, List<IEntity> entitiesRemoved, int index1, int index2)
+    private void handleInteraction(List<IEntity> entities, int index1, int index2)
     {
 
         /*Should determine the interactionType of two entities and call the appropriate method */
@@ -82,12 +80,12 @@ public class Sweep
 
         else if (ContainsEnemy(entities, index1) && item2.GetType() == typeof(Fireball))
         {
-            EnemyFireballInteraction = new EnemyFireballInteraction((Fireball)item2, (ISpriteEnemy)item1, entities, entitiesRemoved);
+            EnemyFireballInteraction = new EnemyFireballInteraction((Fireball)item2, (ISpriteEnemy)item1, entities);
             EnemyFireballInteraction.update();
         }
         else if (ContainsEnemy(entities, index2) && item1.GetType() == typeof(Fireball))
         {
-            EnemyFireballInteraction = new EnemyFireballInteraction((Fireball)item1, (ISpriteEnemy)item2, entities, entitiesRemoved);
+            EnemyFireballInteraction = new EnemyFireballInteraction((Fireball)item1, (ISpriteEnemy)item2, entities);
             EnemyFireballInteraction.update();
         } else if (ContainsEnemy(entities, index1) && (ContainsEnemy(entities, index2)))
         {
@@ -140,16 +138,16 @@ public class Sweep
 
             //entities.RemoveAt(index2);
         }
-        if (item1.GetType() == typeof(Mario) && item2.GetType() == typeof(IBlock))
+        if (item1.GetType() == typeof(Mario) && item2.GetType() == typeof(StaticBlockSprite))
         {
             //handle block interaction
             System.Diagnostics.Debug.Write("Block Sweep works");
-            MarioBlockInteraction = new BlockInteraction((Mario)item1, (LuckyBlockSprite)item2);
+            MarioBlockInteraction = new BlockInteraction((Mario)item1, (IBlock)item2);
             MarioBlockInteraction.update();
             
         }
 
-        else if (item1.GetType() == typeof(LuckyBlockSprite) && item2.GetType() == typeof(Mario))
+        else if (item1.GetType() == typeof(StaticBlockSprite) && item2.GetType() == typeof(Mario))
         {
             System.Diagnostics.Debug.Write("Block Sweep works");
             MarioBlockInteraction = new BlockInteraction((Mario)item2, (IBlock)item1);
@@ -166,7 +164,7 @@ public class Sweep
         rectangle = entity.GetDestination();
         return rectangle;
     }
-    public void Compare(List<IEntity> entities, List<IEntity> entitiesRemoved, Rectangle camera)
+    public void Compare(List<IEntity> entities, Rectangle camera)
     {
         if (entities.Count > 1)
         {
@@ -180,7 +178,7 @@ public class Sweep
                     secondEntity = entities[j].GetDestination();
                     if (firstEntity.Intersects(secondEntity))
                     {
-                        handleInteraction(entities, entitiesRemoved, i, j);
+                        handleInteraction(entities, i, j);
                     }
                 }
             }

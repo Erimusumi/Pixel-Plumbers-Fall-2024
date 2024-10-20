@@ -5,7 +5,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-public class obstacle2 : ISprite
+public class obstacle2 : IObstacle
 {
     private Rectangle sourceRectangle;
     private Rectangle destinationRectangle;

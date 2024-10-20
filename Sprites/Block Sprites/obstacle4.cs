@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
 
-public class obstacle4 : ISprite
+public class obstacle4 : IObstacle
 {
 
     private Rectangle sourceRectangle;
