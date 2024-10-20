@@ -14,7 +14,7 @@ public class Mario : IEntity
     private GameTime gameTime;
 
     private Vector2 initialPosition;
-    private Vector2 marioPosition;
+    public Vector2 marioPosition;
     public Vector2 marioVelocity;
     private float groundPosition = 200f;
     private float gravity = 980f;

@@ -11,6 +11,7 @@ public class Game1 : Game
     private SpriteBatch spriteBatch;
     private Texture2D marioTexture;
     private GameTime gameTime;
+    private Texture2D titleTexture;
 
     private KeyboardController keyboardController;
     private KeyboardControllerMovement keyboardControllerMovement;
@@ -51,7 +52,7 @@ public class Game1 : Game
     //Block Code instance variables
     private Texture2D block;
     private Texture2D obstacle;
-    private List<ISprite> sprite1;
+    private List<IBlock> sprite1;
     public int index1;
     public int n1;
     private List<ISprite> sprite2;
@@ -61,10 +62,10 @@ public class Game1 : Game
     private ISprite obstacle2;
     private ISprite obstacle3;
     private ISprite obstacle4;
-    private ISprite OWLuckyBlockSprite;
-    private ISprite OWUsedBlockSprite;
-    private ISprite OWBrickBlockSprite;
-    private ISprite OWBrokenBrickSprite;
+    private IBlock OWLuckyBlockSprite;
+    private IBlock OWUsedBlockSprite;
+    private IBlock OWBrickBlockSprite;
+    private IBlock OWBrokenBrickSprite;
 
     //Fireballs
     public List<Fireball> fireballs = new List<Fireball>();
@@ -101,13 +102,14 @@ public class Game1 : Game
         entities.Clear();
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
-        spriteEnemy = new Koopa(480, 400);
+        //spriteEnemy = new Koopa(480, 400);
         s = new Star(spriteBatch, ItemsTexture, new Vector2(240, 190));
         m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 190));
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
         entities.Add(mario);
         entities.Add(m);
+        entities.Add(OWLuckyBlockSprite);
 
         controlG = new GoombaCommand(spriteEnemy);
         controlG2 = new GoombaCommand(spriteEnemy2);
@@ -137,13 +139,14 @@ public class Game1 : Game
 
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
-        spriteEnemy = new Koopa(480, 400);
+        //spriteEnemy = new Koopa(480, 400);
         s = new Star(spriteBatch, ItemsTexture, new Vector2(440, 190));
         m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 190));
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
         entities.Add(mario);
         entities.Add(m);
+        entities.Add(OWLuckyBlockSprite);
 
         controlG = new GoombaCommand(spriteEnemy);
         controlG2 = new GoombaCommand(spriteEnemy2);
@@ -151,7 +154,7 @@ public class Game1 : Game
 
         Dance = new DancePole();
 
-        sprite1 = new List<ISprite>
+        sprite1 = new List<IBlock>
             {
                 //lucky brick sprites
                 OWLuckyBlockSprite,
@@ -189,11 +192,6 @@ public class Game1 : Game
         return spriteEnemy;
     }
 
-    public void SetEnemyCommand(IController Enemy)
-    {
-        controlG = Enemy;
-    }
-
     public void SetKey(KeyboardController keys)
     {
         keyboardController = keys;
@@ -203,6 +201,8 @@ public class Game1 : Game
     {
         spriteBatch = new SpriteBatch(GraphicsDevice);
 
+
+        titleTexture = Content.Load<Texture2D>("supermariobros");
         marioTexture = Content.Load<Texture2D>("mario");
         EnemyTexture = Content.Load<Texture2D>("enemies");
         DanceTexture = Content.Load<Texture2D>("dance");
@@ -230,7 +230,7 @@ public class Game1 : Game
         firePower = new FirePower(ItemsTexture);
         starPower = new StarPower(ItemsTexture);
         mushroomPower = new MushroomPower(ItemsTexture);
-        
+
 
         // Initialize block and obstacle sprites
         OWLuckyBlockSprite = new LuckyBlockSprite(block, 3, 20);
@@ -247,8 +247,8 @@ public class Game1 : Game
     {
         gameStateKeyboardController.Update();
         List<IEntity> temp = entities;
-       // sweep.iterateListInteractions(entities);
-        
+        // sweep.iterateListInteractions(entities);
+
         entities = sort.SortList(entities, entities.Count, temp);
 
         if (gameStateMachine.isCurrentStateRunning())

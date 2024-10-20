@@ -23,6 +23,17 @@ public class Sweep
         return containsEnemy;
     }
 
+    private Boolean ContainsBlock(List<IEntity> entities, int index)
+    {
+        Boolean containsBlock = false;
+        Type type = entities[index].GetType();
+        if(type == typeof(BrokenBrickSprite) || type == typeof(LuckyBlockSprite) || type == typeof(StaticBlockSprite))
+        {
+            containsBlock = true;
+        }
+        return containsBlock;
+    }
+
 
     EnemyMarioInteraction EnemyMarioInteraction;
     OtherEnemyInteraction OtherEnemyInteraction;
@@ -31,6 +42,7 @@ public class Sweep
     MarioMushroomInteraction MarioMushroomInteraction;
     MarioStarInteraction MarioStarInteraction;
     BlockFireballInteraction BlockFireballInteraction;
+    BlockInteraction MarioBlockInteraction;
 
     public void iterateListInteractions(List<IEntity> entities)
     {
@@ -123,10 +135,16 @@ public class Sweep
             MarioMushroomInteraction.update();
             //entities.RemoveAt(index2);
         }
-        if (item1.GetType() == typeof(BlockObject) && item2.GetType() == typeof(Mario) || item1.GetType() == typeof(Mario) && item1.GetType() == typeof(BlockObject))
+        if (item1.GetType() == typeof(Mario) && ContainsBlock(entities, index2))
         {
             //handle block interaction
-            //new BlockInteraction(item1, item2);
+            MarioBlockInteraction = new BlockInteraction((Mario)item1, (IBlock)item2);
+            MarioBlockInteraction.update();
+        }
+        else if (ContainsBlock(entities, index1) && item2.GetType() == typeof(Mario))
+        {
+            MarioBlockInteraction = new BlockInteraction((Mario)item1, (IBlock)item2);
+            MarioBlockInteraction.update();
         }
         //[...]
     }
