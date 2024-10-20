@@ -20,7 +20,7 @@ public class Mario : IEntity
     private float gravity = 980f;
     private float jumpSpeed = -350f;
 
-    private bool isOnGround = true;
+    public bool isOnGround = true;
     private bool canPowerUp = true;
     private bool canTakeDamage = true;
 
