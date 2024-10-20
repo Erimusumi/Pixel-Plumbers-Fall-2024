@@ -147,12 +147,6 @@ public class Game1 : Game
 
         Dance = new DancePole();
 
-
-        //Item initialization
-        f = new Fire(spriteBatch, ItemsTexture, new Vector2(440, 190));
-        s = new Star(spriteBatch, ItemsTexture, new Vector2(440, 190));
-        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 190));
-
     }
 
     public ISpriteEnemy SetEnemy(ISpriteEnemy enemy)

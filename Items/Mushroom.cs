@@ -19,6 +19,8 @@ public class Mushroom : IMushroomObject
     public Boolean idle;
     public Boolean collected;
     public Boolean roaming;
+    private Boolean movingRight;
+    private Boolean movingLeft;
     private Microsoft.Xna.Framework.Vector2 position;
     private MushroomPower mp;
     private SpriteBatch sb;
@@ -61,6 +63,7 @@ public class Mushroom : IMushroomObject
         {
             this.mp = new MushroomPower(texture);
             this.mp.Draw(sb, position);
+            
         }
         else if (this.collected)
         {
@@ -69,14 +72,21 @@ public class Mushroom : IMushroomObject
         }
         else if (this.roaming)
         {
-
+            movingRight = true;
+            movingLeft = false;
         }
     }
     public void update()
     {
         if (this.roaming)
         {
-            position.X++;
+            if (movingRight)
+            {
+                position.X++;
+            }else if (movingLeft)
+            {
+                position.X--;
+            }
         }
     }
     private void destroy()
