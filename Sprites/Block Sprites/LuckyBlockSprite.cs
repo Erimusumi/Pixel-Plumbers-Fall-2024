@@ -73,14 +73,16 @@ public class LuckyBlockSprite: IBlock
             m.update(gametime);
             velocity.Y += gravity * (float)gametime.ElapsedGameTime.TotalSeconds;
             m_position += velocity * (float)gametime.ElapsedGameTime.TotalSeconds; // Update position
+
+
         }
     }
     public void Draw(SpriteBatch spriteBatch2, Vector2 position)
     {
         this.position = position;
-        sourceRectangle = new Rectangle((int)Start.X + width * (numOfFrames - currentFrame - 1), (int)Start.Y,
-                width, height);
-        //sourceRectangle = new Rectangle(80, 112, 20, 13);
+        //sourceRectangle = new Rectangle((int)Start.X + width * (numOfFrames - currentFrame - 1), (int)Start.Y,
+        //        width, height);
+        sourceRectangle = new Rectangle(80, 112, 16, 16);
         destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 31, 31);
 
         spriteBatch.Draw(Texture, destinationRectangle, sourceRectangle, Color.White);
