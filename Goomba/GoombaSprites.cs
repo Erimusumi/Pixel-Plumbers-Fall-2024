@@ -19,7 +19,6 @@ public class GoombaSprites
     private Rectangle destinationRectangle;
     private int counter = -1;
 
-    private const int countEnd = 400;
     private const int countStart = 10;
     private const int countMod = 10;
 
@@ -37,7 +36,7 @@ public class GoombaSprites
         {
             sourceRectangle = new Rectangle(0, 4, size, size);
         }
-        if ((counter >= countStart) && (counter < countEnd))
+        if (counter >= countStart)
         {
             position = position - speed;
             if (counter % countMod < (countMod / 2))
@@ -57,7 +56,7 @@ public class GoombaSprites
         {
             sourceRectangle = new Rectangle(0, 4, size, size);
         }
-        if ((counter >= countStart) && (counter < countEnd))
+        if (counter >= countStart)
         {
             position += speed;
             if (counter % countMod < (countMod / 2))
@@ -85,7 +84,7 @@ public class GoombaSprites
         {
             sourceRectangle = new Rectangle(0, 4, size, size);
         }
-        if ((counter >= countStart) && (counter < countEnd))
+        if (counter >= countStart)
         {
             if (counter % countMod < (countMod / 2))
             {
