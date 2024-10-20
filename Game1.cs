@@ -108,6 +108,7 @@ public class Game1 : Game
         entities.Add(spriteEnemy);
         entities.Add(mario);
         entities.Add(m);
+        entities.Add(OWLuckyBlockSprite);
 
         controlG = new GoombaCommand(spriteEnemy);
         controlG2 = new GoombaCommand(spriteEnemy2);
@@ -144,6 +145,7 @@ public class Game1 : Game
         entities.Add(spriteEnemy);
         entities.Add(mario);
         entities.Add(m);
+        entities.Add(OWLuckyBlockSprite);
 
         controlG = new GoombaCommand(spriteEnemy);
         controlG2 = new GoombaCommand(spriteEnemy2);
