@@ -21,10 +21,10 @@ public class StaticBlockSprite: IBlock
     }
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
-        Rectangle destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 28, 28);
-        //spriteBatch.Begin();
+        Rectangle destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 31, 31);
+        spriteBatch.Begin();
         spriteBatch.Draw(texture, destinationRectangle, rectangle, Color.White);
-        //spriteBatch.End();
+        spriteBatch.End();
     }
     public Rectangle GetDestination()
     {

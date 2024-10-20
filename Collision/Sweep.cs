@@ -116,12 +116,7 @@ public class Sweep
         {
             OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item1, item2);
             OtherEnemyInteraction.Update();
-        } else if (ContainsEnemy(entities, index2))
-        {
-            OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item2, item1);
-            OtherEnemyInteraction.Update();
         }
-
         //Item interaction
         if (item1.GetType() == typeof(Star) && item2.GetType() == typeof(Mario))
         {
@@ -181,7 +176,7 @@ public class Sweep
 
         else if (item1.GetType() == typeof(Mario) && ContainsObstacle(entities, index2)) 
         {
-            System.Diagnostics.Debug.Write("Obstacle sweep works");
+            
             MarioObstacleInteraction = new MarioObstacleInteraction((Mario)item1, (IObstacle)item2, gameTime);
             MarioObstacleInteraction.update();
             
@@ -189,7 +184,7 @@ public class Sweep
 
         else if (ContainsObstacle(entities, index1) && item2.GetType() == typeof(Mario))
         {
-            System.Diagnostics.Debug.Write("Obstacle sweep works");
+            
             MarioObstacleInteraction = new MarioObstacleInteraction((Mario)item2, (IObstacle)item1, gameTime);
             MarioObstacleInteraction.update();
             

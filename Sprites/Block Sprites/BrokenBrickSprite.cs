@@ -64,8 +64,8 @@ public class BrokenBrickSprite : IBlock
         destinationRectangle = new Rectangle(
             (int)location.X,
             (int)location.Y,
-            width,
-            height
+            31,
+            31
         );
 
         spriteBatch.Begin();
