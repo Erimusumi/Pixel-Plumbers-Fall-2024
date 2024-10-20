@@ -16,7 +16,6 @@ public class OtherEnemyInteraction
     }
     public void Update()
     {
-        //System.Diagnostics.Debug.WriteLine("entered?");
 
         if (item2.GetType() == typeof(Koopa))
         {

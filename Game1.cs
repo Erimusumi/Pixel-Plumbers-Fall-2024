@@ -97,7 +97,7 @@ public class Game1 : Game
         entities.Clear();
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
-        //spriteEnemy = new Koopa(480, 400);
+        spriteEnemy = new Koopa(480, 400);
         s = new Star(spriteBatch, ItemsTexture, new Vector2(240, 190));
         m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 190));
         entities.Add(spriteEnemy2);
@@ -132,7 +132,7 @@ public class Game1 : Game
 
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
-        //spriteEnemy = new Koopa(480, 400);
+        spriteEnemy = new Koopa(480, 400);
         s = new Star(spriteBatch, ItemsTexture, new Vector2(440, 190));
         m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 190));
         entities.Add(spriteEnemy2);
@@ -216,7 +216,8 @@ public class Game1 : Game
     {
         gameStateKeyboardController.Update();
         List<IEntity> temp = entities;
-        // sweep.iterateListInteractions(entities);
+        Rectangle screen = new Rectangle(0, 0, 800, 480);
+        sweep.Compare(entities, screen);
 
         entities = sort.SortList(entities, entities.Count, temp);
 
