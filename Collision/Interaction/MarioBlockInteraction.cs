@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using System;
 using System.Diagnostics;
+using System.Security.Cryptography.X509Certificates;
 
 public class MarioBlockInteraction
 {
@@ -8,13 +9,17 @@ public class MarioBlockInteraction
     private IBlock block;
     private Rectangle marioRect;
     private Rectangle blockRect;
+    public Boolean isLuckyBlock;
+    private Mushroom m;
 
-    public MarioBlockInteraction(Mario mario, IBlock block)
+    public MarioBlockInteraction(Mario mario, IBlock block, Boolean isLuckyBlock, Mushroom m)
     {
         this.mario = mario;
         this.block = block;
         marioRect = mario.GetDestination();
         blockRect = block.GetDestination();
+        this.isLuckyBlock = isLuckyBlock;
+        this.m = m;
     }
 
     // Method to handle Mario and Block collision
@@ -42,6 +47,12 @@ public class MarioBlockInteraction
             // Collision from the bottom (Mario jumps into the obstacle)
             mario.marioPosition.Y = blockRect.Bottom;
             mario.marioVelocity.Y = 0; // Prevent Mario from going higher
+
+            if (isLuckyBlock && m != null)
+            {
+                m.bump = true;
+                System.Diagnostics.Debug.Write("m.bump works");
+            }
         }
         else if (minOverlap == overlapLeft)
         {

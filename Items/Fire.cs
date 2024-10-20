@@ -2,7 +2,6 @@
 using Microsoft.Xna.Framework.Graphics;
 using Pixel_Plumbers_Fall_2024;
 using System;
-using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
@@ -51,7 +50,7 @@ public class Fire :IItem
         collected = false;
         idle = false;
     }
-    public void draw()
+    public void draw(Vector2 blockPosition)
     {
          if (this.collected)
         {
@@ -59,14 +58,14 @@ public class Fire :IItem
         }
         else if(this.idle) {
             fp = new FirePower(texture);
-            fp.Draw(this.sB, position);
+            fp.Draw(this.sB, blockPosition);
         }
         else if (this.roaming)
         {
 
         }
     }
-    public void update()
+    public void update(GameTime gameTime)
     {
         if (this.roaming)
         {

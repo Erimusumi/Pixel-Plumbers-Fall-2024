@@ -3,7 +3,6 @@ using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.ComponentModel.Design.Serialization;
 using System.Diagnostics;
-using System.Numerics;
 using System.Runtime.InteropServices;
 
 public class Star:IItem
@@ -20,14 +19,13 @@ public class Star:IItem
     private Boolean falling;
     
 
-    public Star(SpriteBatch sb,Texture2D text, Microsoft.Xna.Framework.Vector2 pos)
+    public Star(SpriteBatch sb,Texture2D text)
     {
         sp = new StarPower(texture);
         idle = true;
         collected = false;
         roaming = false;
         sB = sb;
-        position = pos;
         texture = text;
 
 
@@ -52,7 +50,7 @@ public class Star:IItem
         collected = false;
         idle = false;
     }
-    public void draw()
+    public void draw(Vector2 blockPosition)
     {
         if (this.collected)
         {
@@ -61,7 +59,7 @@ public class Star:IItem
         else if (this.idle)
         {
             sp = new StarPower(texture);
-            this.sp.Draw(sB, position);
+            this.sp.Draw(sB, blockPosition);
         }
         else if (this.roaming)
         {
@@ -85,7 +83,7 @@ public class Star:IItem
     {
         this.sp = null;
     }
-    public void update()
+    public void update(GameTime gameTime)
     {
         if (this.roaming)
         {
