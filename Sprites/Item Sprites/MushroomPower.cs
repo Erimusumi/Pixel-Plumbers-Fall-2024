@@ -12,7 +12,7 @@ public class MushroomPower: ISprite
     }
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
-
+        
         Rectangle sourceRectangle = new Rectangle(0, 0, 15, 15);
         destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 31, 31);
         spriteBatch.Draw(ItemTexture, destinationRectangle, sourceRectangle, Color.White);

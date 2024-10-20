@@ -4,7 +4,6 @@ using System;
 using System.ComponentModel.Design;
 using System.ComponentModel.Design.Serialization;
 using System.Linq.Expressions;
-using System.Numerics;
 using System.Runtime.InteropServices;
 using System.Text;
 
@@ -20,9 +19,10 @@ public class Mushroom :IItem
     private SpriteBatch sb;
     private Texture2D texture;
     private bool falling;
+    public bool bump;
     
 
-    public  Mushroom(SpriteBatch sB, Texture2D texture, Microsoft.Xna.Framework.Vector2 position)
+    public  Mushroom(SpriteBatch sB, Texture2D texture, Vector2 position)
     {
         mp = new MushroomPower(texture);
         this.idle = false;
@@ -55,11 +55,12 @@ public class Mushroom :IItem
         movingLeft = false;
        
     }
-    public void draw()
+    public void draw(Vector2 position)
     {
         if (this.idle || this.roaming)
         {
             this.mp = new MushroomPower(texture);
+            
             this.mp.Draw(sb, position);
             
         }
@@ -69,7 +70,7 @@ public class Mushroom :IItem
             
         }
     }
-    public void update()
+    public void update(GameTime gameTime)
     {
         if (this.roaming)
         {

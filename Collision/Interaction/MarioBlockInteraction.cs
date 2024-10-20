@@ -10,16 +10,14 @@ public class MarioBlockInteraction
     private Rectangle marioRect;
     private Rectangle blockRect;
     public Boolean isLuckyBlock;
-    private Mushroom m;
 
-    public MarioBlockInteraction(Mario mario, IBlock block, Boolean isLuckyBlock, Mushroom m)
+    public MarioBlockInteraction(Mario mario, IBlock block, Boolean isLuckyBlock)
     {
         this.mario = mario;
         this.block = block;
         marioRect = mario.GetDestination();
         blockRect = block.GetDestination();
         this.isLuckyBlock = isLuckyBlock;
-        this.m = m;
     }
 
     // Method to handle Mario and Block collision
@@ -48,11 +46,13 @@ public class MarioBlockInteraction
             mario.marioPosition.Y = blockRect.Bottom;
             mario.marioVelocity.Y = 0; // Prevent Mario from going higher
 
-            if (isLuckyBlock && m != null)
+            if(block is LuckyBlockSprite luckyBlock)
             {
-                m.bump = true;
+                luckyBlock.bump = true;
                 System.Diagnostics.Debug.Write("m.bump works");
             }
+            
+            
         }
         else if (minOverlap == overlapLeft)
         {

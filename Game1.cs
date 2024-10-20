@@ -64,6 +64,7 @@ public class Game1 : Game
     private Texture2D DanceTexture;
 
     //Items
+    public List<IItem> items = new List<IItem>();
     public Texture2D ItemsTexture;
     public ISprite firePower;
     public ISprite starPower;
@@ -93,7 +94,7 @@ public class Game1 : Game
     //Fireballs
     public List<Fireball> fireballs = new List<Fireball>();
 
-    private List<IEntity> entities = new List<IEntity>();
+    public List<IEntity> entities = new List<IEntity>();
     private List<IEntity> entitiesRemoved = new List<IEntity>();
     private Sort sort = new Sort();
     private Sweep sweep;
@@ -159,7 +160,7 @@ public class Game1 : Game
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
 
-        s = new Star(spriteBatch, ItemsTexture, new Vector2(30, 400));
+        s = new Star(spriteBatch, ItemsTexture/*, new Vector2(30, 400)*/);
         m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(30, 400));
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
@@ -231,10 +232,10 @@ public class Game1 : Game
         Goomba16 = new Goomba(5550, 400);
 
 
-        s = new Star(spriteBatch, ItemsTexture, new Vector2(30, 400));
+        s = new Star(spriteBatch, ItemsTexture/*, new Vector2(30, 400)*/);
         m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(30, 400));
-        OWLuckyBlockSprite = new LuckyBlockSprite(block, 3, 20);
-        OWLuckyBlockSprite2 = new LuckyBlockSprite(block, 3, 20);
+        OWLuckyBlockSprite = new LuckyBlockSprite(block, spriteBatch, ItemsTexture, this);
+        OWLuckyBlockSprite2 = new LuckyBlockSprite(block, spriteBatch, ItemsTexture, this);
         OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
         OWBrokenBrickSprite = new BrokenBrickSprite(block, 4, 1);
         obstacle1 = new obstacle1(obstacle);
@@ -393,7 +394,7 @@ public class Game1 : Game
             obstacle1.Update(gameTime);
             obstacle2.Update(gameTime);
             obstacle3.Update(gameTime);
-            m.update();
+            m.update(gameTime);
 
             foreach (var item in fireballs)
             {
@@ -493,8 +494,6 @@ public class Game1 : Game
             {
                 item.Draw(spriteBatch);
             }
-
-            m.draw();
             spriteBatch.End();
 
             spriteBatch.Begin(transformMatrix: camera.GetViewMatrix());
