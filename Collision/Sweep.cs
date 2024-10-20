@@ -170,6 +170,9 @@ public class Sweep
                     if (firstEntity.Intersects(secondEntity))
                     {
                         handleInteraction(entities, i, j);
+                    } else
+                    {
+                        j = entities.Count;
                     }
                 }
             }
