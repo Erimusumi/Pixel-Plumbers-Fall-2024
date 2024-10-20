@@ -127,32 +127,35 @@ public class Sweep
         {
             MarioMushroomInteraction = new MarioMushroomInteraction((Mario)item2, (Mushroom)item1);
             MarioMushroomInteraction.update();
-            Debug.Write("Mushroom sweep method works");
-            entities.RemoveAt(index1);
+            
+            //entities.RemoveAt(index1);
         }
-        else if (item1.GetType() == typeof(Mario) && item2.GetType() == typeof(Mushroom))
+        else if (item1.GetType() == typeof(Mario) && item1.GetType() == typeof(Mushroom))
         {
             MarioMushroomInteraction = new MarioMushroomInteraction((Mario)item1, (Mushroom)item2);
             MarioMushroomInteraction.update();
             
-            entities.RemoveAt(index2);
+
+            //entities.RemoveAt(index2);
         }
         if (item1.GetType() == typeof(Mario) && item2.GetType() == typeof(IBlock))
         {
             //handle block interaction
-            MarioBlockInteraction = new BlockInteraction((Mario)item1, (IBlock)item2);
+            System.Diagnostics.Debug.Write("Block Sweep works");
+            MarioBlockInteraction = new BlockInteraction((Mario)item1, (LuckyBlockSprite)item2);
             MarioBlockInteraction.update();
             
         }
 
-        else if (item1.GetType() == typeof(IBlock) && item2.GetType() == typeof(Mario))
+        else if (item1.GetType() == typeof(LuckyBlockSprite) && item2.GetType() == typeof(Mario))
         {
+            System.Diagnostics.Debug.Write("Block Sweep works");
             MarioBlockInteraction = new BlockInteraction((Mario)item2, (IBlock)item1);
             MarioBlockInteraction.update();
             
         }
         //[...]
-        Debug.Write("Sweep method works");
+        
     }
     public Rectangle getRectangle(List<IEntity> Entities, int index)
     {
@@ -173,11 +176,6 @@ public class Sweep
                 for (int j = i+1; (j < entities.Count) && (secondEntity.X <= (camera.Width + camera.X)); j++)
                 {
                     secondEntity = entities[j].GetDestination();
-                    //Temp fix
-                    if(secondEntity.X > (camera.Width + camera.X))
-                    {
-                        entities.RemoveAt(j);
-                    }
                     if (firstEntity.Intersects(secondEntity))
                     {
                         handleInteraction(entities, i, j);

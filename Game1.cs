@@ -58,7 +58,7 @@ public class Game1 : Game
     private ISprite obstacle2;
     private ISprite obstacle3;
     private ISprite obstacle4;
-    private IBlock OWLuckyBlockSprite;
+    private LuckyBlockSprite OWLuckyBlockSprite;
     private IBlock OWUsedBlockSprite;
     private IBlock OWBrickBlockSprite;
     private IBlock OWBrokenBrickSprite;
@@ -138,6 +138,7 @@ public class Game1 : Game
         //spriteEnemy = new Koopa(480, 400);
         s = new Star(spriteBatch, ItemsTexture, new Vector2(440, 190));
         m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 190));
+        OWLuckyBlockSprite = new LuckyBlockSprite(block, 3, 20);
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
         entities.Add(mario);
