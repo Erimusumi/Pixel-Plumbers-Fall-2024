@@ -86,16 +86,15 @@ public class Sweep
         {
             EnemyFireballInteraction = new EnemyFireballInteraction((Fireball)item1, (ISpriteEnemy)item2, entities);
             EnemyFireballInteraction.update();
-        }
-
-        if (ContainsEnemy(entities, index1) && item2.GetType() != typeof(Mario))
+        } else if (ContainsEnemy(entities, index1) && (ContainsEnemy(entities, index2)))
         {
             OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item1, item2);
             OtherEnemyInteraction.Update();
-        }
-        if (ContainsEnemy(entities, index2) && item1.GetType() != typeof(Mario))
-        {
             OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item2, item1);
+            OtherEnemyInteraction.Update();
+        } else if (ContainsEnemy(entities, index1))
+        {
+            OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item1, item2);
             OtherEnemyInteraction.Update();
         }
         //Item interaction

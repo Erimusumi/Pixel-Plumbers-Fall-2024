@@ -9,10 +9,10 @@ using Pixel_Plumbers_Fall_2024;
 public class KoopaStateMachine
 {
 	private enum KoopaState {Left, Right, StompedLeft, StompedRight, StompedTwiceLeft, StompedTwiceRight, Flipped};
-	private KoopaState _currentState = KoopaState.StompedTwiceLeft;
+	private KoopaState _currentState = KoopaState.Left;
     private int done;
     private KoopaSprites _sprite;
-	private Boolean _isMovingShell = true;
+	private Boolean _isMovingShell = false;
 
 	public KoopaStateMachine(int posX, int posY)
 	{

@@ -1,16 +1,1 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/kamau/Downloads/CSE3902/Luigi1/Content/blocks.gif","C:/Users/kamau/Downloads/CSE3902/Luigi1/Content/bin/DesktopGL/Content/obstacle.xnb","TextureProcessor","Texture2DContent",14122,1560241,0.2401669
-"C:/Users/kamau/Downloads/CSE3902/Luigi1/Content/blocks.png","C:/Users/kamau/Downloads/CSE3902/Luigi1/Content/bin/DesktopGL/Content/blocks.xnb","TextureProcessor","Texture2DContent",13083,458837,0.0316125
-"C:/Users/kamau/Downloads/CSE3902/Luigi1/Content/dance.png","C:/Users/kamau/Downloads/CSE3902/Luigi1/Content/bin/DesktopGL/Content/dance.xnb","TextureProcessor","Texture2DContent",9654755,42493149,2.51203
-"C:/Users/kamau/Downloads/CSE3902/Luigi1/Content/enemies.png","C:/Users/kamau/Downloads/CSE3902/Luigi1/Content/bin/DesktopGL/Content/enemies.xnb","TextureProcessor","Texture2DContent",8295,455269,0.0161476
-"C:/Users/kamau/Downloads/CSE3902/Luigi1/Content/itemsAndPowerups.png","C:/Users/kamau/Downloads/CSE3902/Luigi1/Content/bin/DesktopGL/Content/itemsAndPowerups.xnb","TextureProcessor","Texture2DContent",32550,516181,0.0188456
-"C:/Users/kamau/Downloads/CSE3902/Luigi1/Content/level1_Backdrop.csv","C:\Users\kamau\Downloads\CSE3902\Luigi1\Content\bin\DesktopGL\Content\level1_Backdrop.csv","CopyItem","File",16462,16462,0.0024959
-"C:/Users/kamau/Downloads/CSE3902/Luigi1/Content/level1_Collisions.csv","C:\Users\kamau\Downloads\CSE3902\Luigi1\Content\bin\DesktopGL\Content\level1_Collisions.csv","CopyItem","File",18660,18660,0.0013186
-"C:/Users/kamau/Downloads/CSE3902/Luigi1/Content/level1_Foreground.csv","C:\Users\kamau\Downloads\CSE3902\Luigi1\Content\bin\DesktopGL\Content\level1_Foreground.csv","CopyItem","File",19612,19612,0.0014361
-"C:/Users/kamau/Downloads/CSE3902/Luigi1/Content/level1_Greenery.csv","C:\Users\kamau\Downloads\CSE3902\Luigi1\Content\bin\DesktopGL\Content\level1_Greenery.csv","CopyItem","File",19020,19020,0.0024438
-"C:/Users/kamau/Downloads/CSE3902/Luigi1/Content/mario.png","C:/Users/kamau/Downloads/CSE3902/Luigi1/Content/bin/DesktopGL/Content/mario.xnb","TextureProcessor","Texture2DContent",6584,304645,0.0123109
-"C:/Users/kamau/Downloads/CSE3902/Luigi1/Content/MarioItems.png","C:/Users/kamau/Downloads/CSE3902/Luigi1/Content/bin/DesktopGL/Content/MarioItems.xnb","TextureProcessor","Texture2DContent",38427,2532585,0.0789679
-"C:/Users/kamau/Downloads/CSE3902/Luigi1/Content/MyFont.spritefont","C:/Users/kamau/Downloads/CSE3902/Luigi1/Content/bin/DesktopGL/Content/MyFont.xnb","FontDescriptionProcessor","SpriteFontContent",2065,21538,0.1503478
-"C:/Users/kamau/Downloads/CSE3902/Luigi1/Content/OverworldTiles.png","C:/Users/kamau/Downloads/CSE3902/Luigi1/Content/bin/DesktopGL/Content/OverworldTiles.xnb","TextureProcessor","Texture2DContent",8830,149689,0.0060752
-"C:/Users/kamau/Downloads/CSE3902/Luigi1/Content/supermariobros.png","C:/Users/kamau/Downloads/CSE3902/Luigi1/Content/bin/DesktopGL/Content/supermariobros.xnb","TextureProcessor","Texture2DContent",541,62037,0.0038348
-"C:/Users/kamau/Downloads/CSE3902/Luigi1/Content/title.png","C:/Users/kamau/Downloads/CSE3902/Luigi1/Content/bin/DesktopGL/Content/title.xnb","TextureProcessor","Texture2DContent",9100,326989,0.0121092

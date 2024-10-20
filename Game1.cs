@@ -216,6 +216,7 @@ public class Game1 : Game
     {
         gameStateKeyboardController.Update();
         List<IEntity> temp = entities;
+        System.Diagnostics.Debug.WriteLine("");
         Rectangle screen = new Rectangle(0, 0, 800, 480);
         sweep.Compare(entities, screen);
 
