@@ -19,17 +19,20 @@ public class MarioItemInteraction
     }
     public void update()
     {
-        item.collect();
-        /*if (item.GetType() == typeof(Mushroom) && mario.GetMarioGameState() == MarioStateMachine.MarioGameState.Small)
+        //item.collect();
+        if (mario.GetMarioGameState() == MarioStateMachine.MarioGameState.Small)
         {
             mario.MarioPowerUp();
         }
-        if (item.GetType() == typeof(FirePower) && mario.GetMarioGameState() == MarioStateMachine.MarioGameState.Big)
+        else if (mario.GetMarioGameState() == MarioStateMachine.MarioGameState.Big)
         {
             mario.MarioPowerUp();
         }
-        */
-        mario.MarioPowerUp();
+        else if (mario.GetMarioGameState() == MarioStateMachine.MarioGameState.Fire)
+        {
+            mario.MarioPowerUp();
+        }
+        removeFromList();
     }
     private void removeFromList()
     {

@@ -188,6 +188,12 @@ public class Sweep
         else if (ContainsItem(entities, index1) && item2.GetType() == typeof(Mario))
         {
             MarioItemInteraction = new MarioItemInteraction((IItem)item1, (Mario)item2, entitiesRemoved);
+            System.Diagnostics.Debug.Write("MarioItemInteraction works");
+        }
+        else if (item1.GetType() == typeof(Mario) && ContainsItem(entities, index2))
+        {
+            MarioItemInteraction = new MarioItemInteraction((IItem)item2, (Mario)item1, entitiesRemoved);
+            System.Diagnostics.Debug.Write("MarioItemInteraction works");
         }
         else if(ContainsObstacle(entities,index1) && ContainsItem(entities, index2))
         {
