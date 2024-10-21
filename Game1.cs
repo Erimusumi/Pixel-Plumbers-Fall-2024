@@ -101,8 +101,8 @@ public class Game1 : Game
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
         //spriteEnemy = new Koopa(480, 400);
-        s = new Star(spriteBatch, ItemsTexture, new Vector2(240, 190));
-        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 190));
+        s = new Star(spriteBatch, ItemsTexture, new Vector2(140, 400));
+        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(140, 400));
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
         entities.Add(mario);
@@ -141,8 +141,8 @@ public class Game1 : Game
         spriteEnemy = new Goomba(530, 400);
         spriteEnemy2 = new Goomba2(240, 400);
         //spriteEnemy = new Koopa(480, 400);
-        s = new Star(spriteBatch, ItemsTexture, new Vector2(440, 400));
-        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 400));
+        s = new Star(spriteBatch, ItemsTexture, new Vector2(140, 400));
+        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(140, 400));
         OWLuckyBlockSprite = new LuckyBlockSprite(block, 3, 20);
         OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
         OWUsedBlockSprite = new StaticBlockSprite(block, new Rectangle(128, 112, 16, 16));
