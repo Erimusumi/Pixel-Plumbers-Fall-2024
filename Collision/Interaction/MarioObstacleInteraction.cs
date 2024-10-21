@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
+using Pixel_Plumbers_Fall_2024;
 using System;
-using System.Diagnostics;
 
 public class MarioObstacleInteraction
 {
@@ -8,16 +8,22 @@ public class MarioObstacleInteraction
     private IObstacle obstacle;
     private Rectangle marioRect;
     private Rectangle obstacleRect;
-    public MarioObstacleInteraction(Mario mario, IObstacle obstacle)
-	{
+    private GameTime gameTime; // Store GameTime for gravity application
+
+    private bool wasOnTop = false; // Track if Mario was on top of the obstacle
+
+    public MarioObstacleInteraction(Mario mario, IObstacle obstacle, GameTime gameTime)
+    {
         this.mario = mario;
         this.obstacle = obstacle;
+        this.gameTime = gameTime; // Store the GameTime reference
         marioRect = mario.GetDestination();
         obstacleRect = obstacle.GetDestination();
-	}
+    }
 
-    public void update()
+    public void update() // Changed method name to PascalCase
     {
+
         // Calculate overlap distances
         float overlapLeft = marioRect.Right - obstacleRect.Left;
         float overlapRight = obstacleRect.Right - marioRect.Left;
@@ -33,6 +39,7 @@ public class MarioObstacleInteraction
             mario.marioPosition.Y = obstacleRect.Top - marioRect.Height;
             mario.marioVelocity.Y = 0; // Mario stands on top of the obstacle
             mario.isOnGround = true;
+            wasOnTop = true; // Mario is on the obstacle
         }
         else if (minOverlap == overlapBottom)
         {
@@ -51,6 +58,21 @@ public class MarioObstacleInteraction
             // Collision from the right
             mario.marioPosition.X = obstacleRect.Right;
             mario.marioVelocity.X = 0; // Stop horizontal movement
+        }
+        if(!marioRect.Intersects(obstacleRect))
+        {
+            // Mario is no longer colliding with the obstacle from the top
+            if (wasOnTop)
+            {
+                mario.isOnGround = false; // Mario is no longer on the obstacle
+                wasOnTop = false;
+            }
+        }
+
+        // If Mario is not on the obstacle, apply gravity
+        if (!mario.isOnGround)
+        {
+            mario.ApplyGravity(gameTime); // Use the stored GameTime reference
         }
     }
 }

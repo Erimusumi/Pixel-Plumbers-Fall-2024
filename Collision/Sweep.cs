@@ -11,6 +11,11 @@ using Pixel_Plumbers_Fall_2024;
 
 public class Sweep
 {
+    GameTime gameTime;
+    public Sweep(GameTime gameTime)
+    {
+        this.gameTime = gameTime;
+    }
     public enum CollisionType { Top, Bottom, Left, Right, DontCare };
 
     private Boolean ContainsEnemy(List<IEntity> entities, int index)
@@ -177,15 +182,17 @@ public class Sweep
         else if (item1.GetType() == typeof(Mario) && ContainsObstacle(entities, index2)) 
         {
             System.Diagnostics.Debug.Write("Obstacle sweep works");
-            MarioObstacleInteraction = new MarioObstacleInteraction((Mario)item1, (IObstacle)item2);
+            MarioObstacleInteraction = new MarioObstacleInteraction((Mario)item1, (IObstacle)item2, gameTime);
             MarioObstacleInteraction.update();
+            
         }
 
         else if (ContainsObstacle(entities, index1) && item2.GetType() == typeof(Mario))
         {
             System.Diagnostics.Debug.Write("Obstacle sweep works");
-            MarioObstacleInteraction = new MarioObstacleInteraction((Mario)item2, (IObstacle)item1);
+            MarioObstacleInteraction = new MarioObstacleInteraction((Mario)item2, (IObstacle)item1, gameTime);
             MarioObstacleInteraction.update();
+            
         }
 
     }

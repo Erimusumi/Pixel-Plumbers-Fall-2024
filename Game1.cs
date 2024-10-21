@@ -68,7 +68,7 @@ public class Game1 : Game
 
     private List<IEntity> entities = new List<IEntity>();
     private Sort sort = new Sort();
-    private Sweep sweep = new Sweep();
+    private Sweep sweep;
 
     // reset instances
     public Vector2 initial_mario_position;
@@ -123,6 +123,7 @@ public class Game1 : Game
     {
         base.Initialize();
         this.gameTime = new GameTime();
+        this.sweep = new Sweep(gameTime);
 
         // map layers
         backdrop = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Backdrop.csv");

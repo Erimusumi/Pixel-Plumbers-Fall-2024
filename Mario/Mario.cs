@@ -11,7 +11,7 @@ public class Mario : IEntity
     private Texture2D marioTexture;
     private IMarioSprite currentMarioSprite;
     private MarioStateMachine marioStateMachine;
-    private GameTime gameTime;
+    public GameTime gameTime;
 
     private Vector2 initialPosition;
     public Vector2 marioPosition;
