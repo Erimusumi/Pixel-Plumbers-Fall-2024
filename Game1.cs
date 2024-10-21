@@ -273,12 +273,12 @@ public class Game1 : Game
         greenery.Draw(spriteBatch, overworldTiles);
         foreground.Draw(spriteBatch, overworldTiles);
 
+        spriteBatch.Begin();
+
         if (gameStateMachine.isCurrentStateStart())
         {
-            spriteBatch.Begin();
             StartText.Draw(spriteBatch, new Vector2(200, 200));
             spriteBatch.Draw(title, new Rectangle(20, 20, 176, 88), new Rectangle(1, 60, 176, 88), Color.White);
-            spriteBatch.End();
         }
         if (gameStateMachine.isCurrentStateRunning() || gameStateMachine.isCurrentStatePaused())
         {
@@ -286,7 +286,6 @@ public class Game1 : Game
             spriteEnemy.Draw(spriteBatch, EnemyTexture);
             spriteEnemy2.Draw(spriteBatch, EnemyTexture);
             //Dance.Draw(spriteBatch, DanceTexture);
-            spriteBatch.Begin();
             mario.Draw(spriteBatch);
             manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
 
@@ -296,12 +295,13 @@ public class Game1 : Game
             }
 
             m.draw(); //draw mush collision test
-            spriteBatch.End();
 
             // Draw blocks and obstacles
             OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200, 200));
             OWBrickBlockSprite.Draw(spriteBatch, new Vector2(200, 360));
         }
+
+        spriteBatch.End();
         base.Draw(gameTime);
     }
 }
