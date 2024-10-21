@@ -24,6 +24,7 @@ public class Game1 : Game
     private GameStateMachine gameStateMachine;
     private GameStateControlCenter gameStateControlCenter;
     private KeyboardController gameStateKeyboardController;
+    private MouseController gameStateMouseController;
 
     //Enemy Code
     public ISpriteEnemy spriteEnemy;
@@ -52,7 +53,7 @@ public class Game1 : Game
     //Block Code instance variables
     private Texture2D block;
     private Texture2D obstacle;
-    
+
     private ISprite obstacle1;
     private ISprite obstacle2;
     private ISprite obstacle3;
@@ -83,6 +84,7 @@ public class Game1 : Game
     private Layer greenery;
     private Layer foreground;
 
+    private StartScreenText startScreenText;
     // tile sheets
     private Texture2D overworldTiles;
 
@@ -119,9 +121,9 @@ public class Game1 : Game
         this.gameTime = new GameTime();
 
         // map layers
-        backdrop = new Layer(32, 16, 17, Content.RootDirectory + "\\level1_Backdrop.csv");
-        greenery = new Layer(32, 16, 17, Content.RootDirectory + "\\level1_Greenery.csv");
-        foreground = new Layer(32, 16, 17, Content.RootDirectory + "\\level1_Foreground.csv");
+        backdrop = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Backdrop.csv");
+        greenery = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Greenery.csv");
+        foreground = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Foreground.csv");
 
         // load map layers
         backdrop.LoadLayer();
@@ -187,9 +189,10 @@ public class Game1 : Game
 
         gameStateMachine = new GameStateMachine();
 
+        startScreenText = new StartScreenText(MyFont);
         gameStateKeyboardController = new KeyboardController();
-        gameStateControlCenter = new GameStateControlCenter(gameStateMachine, gameStateKeyboardController, this);
-
+        gameStateMouseController = new MouseController();
+        gameStateControlCenter = new GameStateControlCenter(gameStateMachine, gameStateKeyboardController, gameStateMouseController, this, startScreenText);
         // Reset instances initialization
         firePower = new FirePower(ItemsTexture);
         starPower = new StarPower(ItemsTexture);
@@ -210,6 +213,8 @@ public class Game1 : Game
     protected override void Update(GameTime gameTime)
     {
         gameStateKeyboardController.Update();
+        gameStateMouseController.Update();
+
         List<IEntity> temp = entities;
         entities = sort.SortList(entities, entities.Count, temp);
         sweep.Compare(entities, screen);
