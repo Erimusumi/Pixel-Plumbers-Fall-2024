@@ -138,32 +138,32 @@ public class Sweep
         {
             MarioStarInteraction = new MarioStarInteraction((Mario)item2, (Star)item1);
             MarioStarInteraction.update();
-            //entities.RemoveAt(index1);
+            entities.RemoveAt(index1);
         }
         else if (item1.GetType() == typeof(Mario) && item2.GetType() == typeof(Star))
         {
             MarioStarInteraction = new MarioStarInteraction((Mario)item1, (Star)item2);
             MarioStarInteraction.update();
-            //entities.RemoveAt(index2);
+            entities.RemoveAt(index2);
         }
         if (item1.GetType() == typeof(Fire) && item2.GetType() == typeof(Mario))
         {
             MarioFirePowerInteraction = new MarioFirePowerInteraction((Mario)item2, (Fire)item1);
             MarioFirePowerInteraction.update();
-            //entities.RemoveAt(index1);
+            entities.RemoveAt(index1);
         }
         else if (item2.GetType() == typeof(Fire) && item1.GetType() == typeof(Mario))
         {
             MarioFirePowerInteraction = new MarioFirePowerInteraction((Mario)item1, (Fire)item2);
             MarioFirePowerInteraction.update();
-           //// entities.RemoveAt(index2);
+           entities.RemoveAt(index2);
         }
         if (item1.GetType() == typeof(Mushroom) && item2.GetType() == typeof(Mario))
         {
             MarioMushroomInteraction = new MarioMushroomInteraction((Mario)item2, (Mushroom)item1);
             MarioMushroomInteraction.update();
             
-            //entities.RemoveAt(index1);
+            entities.RemoveAt(index1);
         }
         else if (item1.GetType() == typeof(Mario) && item1.GetType() == typeof(Mushroom))
         {
@@ -171,7 +171,7 @@ public class Sweep
             MarioMushroomInteraction.update();
             
 
-            //entities.RemoveAt(index2);
+            entities.RemoveAt(index2);
         }
         if(ContainsObstacle(entities,index1) && ContainsItem(entities, index2))
         {
@@ -180,6 +180,7 @@ public class Sweep
         }else if(ContainsObstacle(entities,index2) && ContainsItem(entities, index1)){
             ItemObstacleInteraction = new ItemObstacleInteraction((IItem)item1, (IObstacle)item2);
             ItemObstacleInteraction.update();
+            
         }
 
         if (item1.GetType() == typeof(Mario) && ContainsBlock(entities, index2))
