@@ -25,6 +25,8 @@ public class Star : IStarObject
     private StarPower sp;
     private SpriteBatch sB;
     private Texture2D texture;
+    private Boolean movingLeft;
+    private Boolean movingRight;
     
 
     public Star(SpriteBatch sb,Texture2D text, Microsoft.Xna.Framework.Vector2 pos)
@@ -73,6 +75,33 @@ public class Star : IStarObject
         else if (this.roaming)
         {
 
+        }
+    }
+    public void swapDirections()
+    {
+        if (movingLeft)
+        {
+            movingLeft = false;
+            movingRight = true;
+        }
+        else if (movingRight)
+        {
+            movingRight = false;
+            movingLeft = true;
+        }
+    }
+    public void update()
+    {
+        if (this.roaming)
+        {
+            if (movingRight)
+            {
+                position.X++;
+            }
+            else if (movingLeft)
+            {
+                position.X--;
+            }
         }
     }
 
