@@ -159,7 +159,7 @@ public class Sweep
         {
             if (item2.GetType() == typeof(LuckyBlockSprite))
             {
-                BlockFireballInteraction = new BlockFireballInteraction((Fireball)item1, (UnknownBlockSprite)item2, entities, entitiesRemoved);
+                BlockFireballInteraction = new BlockFireballInteraction((Fireball)item1, (UnknownBlockSprite)item2, entities);
             }
             //more types of block
         }
@@ -167,7 +167,7 @@ public class Sweep
         {
             if (item1.GetType() == typeof(LuckyBlockSprite))
             {
-                BlockFireballInteraction = new BlockFireballInteraction((Fireball)item2, (UnknownBlockSprite)item1, entities, entitiesRemoved);
+                BlockFireballInteraction = new BlockFireballInteraction((Fireball)item2, (UnknownBlockSprite)item1, entities);
             }
         }
         //[...]
