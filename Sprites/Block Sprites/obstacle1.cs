@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Input;
 using Pixel_Plumbers_Fall_2024;
 
 
-public class obstacle1 : ISprite
+public class obstacle1 : IObstacle
 {
     private Rectangle sourceRectangle;
     private Rectangle destinationRectangle;

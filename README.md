@@ -28,5 +28,6 @@ ITEM/POWERUP CONTROLS:
     -U and I keys switch through powerup items
 
 KNOWN BUGS:
-    - 
+    - After crouching, Mario stays crouched after down/S is released, until he moves again
+    - Goomba2 and GoombaStateMachine2 are temporary.
     

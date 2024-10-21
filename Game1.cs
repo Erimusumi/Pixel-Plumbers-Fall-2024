@@ -54,20 +54,19 @@ public class Game1 : Game
     private Texture2D block;
     private Texture2D obstacle;
 
-    private ISprite obstacle1;
-    private ISprite obstacle2;
-    private ISprite obstacle3;
-    private ISprite obstacle4;
+    private IObstacle obstacle1;
+    private IObstacle obstacle2;
+    private obstacle3 obstacle3;
+    private IObstacle obstacle4;
     private LuckyBlockSprite OWLuckyBlockSprite;
     private IBlock OWUsedBlockSprite;
-    private IBlock OWBrickBlockSprite;
+    private StaticBlockSprite OWBrickBlockSprite;
     private IBlock OWBrokenBrickSprite;
 
     //Fireballs
     public List<Fireball> fireballs = new List<Fireball>();
 
     private List<IEntity> entities = new List<IEntity>();
-    private List<IEntity> entitiesRemoved = new List<IEntity>();
     private Sort sort = new Sort();
     private Sweep sweep = new Sweep();
 
@@ -99,7 +98,6 @@ public class Game1 : Game
     private void ResetGame()
     {
         entities.Clear();
-        entitiesRemoved.Clear();
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
         //spriteEnemy = new Koopa(480, 400);
@@ -110,6 +108,7 @@ public class Game1 : Game
         entities.Add(mario);
         entities.Add(m);
         entities.Add(OWLuckyBlockSprite);
+        entities.Add(OWBrickBlockSprite);
 
         controlG = new GoombaCommand(spriteEnemy);
         controlG2 = new GoombaCommand(spriteEnemy2);
@@ -141,11 +140,16 @@ public class Game1 : Game
         s = new Star(spriteBatch, ItemsTexture, new Vector2(440, 190));
         m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 190));
         OWLuckyBlockSprite = new LuckyBlockSprite(block, 3, 20);
+        OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
+        obstacle3 = new obstacle3(obstacle);
+
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
         entities.Add(mario);
         entities.Add(m);
         entities.Add(OWLuckyBlockSprite);
+        entities.Add(OWBrickBlockSprite);
+        entities.Add(obstacle3);
 
         controlG = new GoombaCommand(spriteEnemy);
         controlG2 = new GoombaCommand(spriteEnemy2);
@@ -203,13 +207,13 @@ public class Game1 : Game
 
 
         // Initialize block and obstacle sprites
-        OWLuckyBlockSprite = new LuckyBlockSprite(block, 3, 20);
+        //OWLuckyBlockSprite = new LuckyBlockSprite(block, 3, 20);
         OWUsedBlockSprite = new StaticBlockSprite(block, new Rectangle(128, 112, 16, 16));
-        OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
+        //OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
         OWBrokenBrickSprite = new UnknownBlockSprite(block, 4, 1);
         obstacle1 = new obstacle1(obstacle);
         obstacle2 = new obstacle2(obstacle);
-        obstacle3 = new obstacle3(obstacle);
+        //obstacle3 = new obstacle3(obstacle);
         obstacle4 = new obstacle4(obstacle);
     }
 
@@ -220,7 +224,7 @@ public class Game1 : Game
 
         List<IEntity> temp = entities;
         entities = sort.SortList(entities, entities.Count, temp);
-        sweep.Compare(entities, entitiesRemoved, screen);
+        sweep.Compare(entities, screen);
 
         if (gameStateMachine.isCurrentStateRunning())
         {
@@ -249,13 +253,12 @@ public class Game1 : Game
 
             //Update block and obstacle sprites
             OWLuckyBlockSprite.Update(gameTime);
+            OWBrickBlockSprite.Update(gameTime);
 
             foreach (var item in fireballs)
             {
                 item.Update(gameTime);
             }
-
-            RemoveOldEntities();
         }
 
         base.Update(gameTime);
@@ -297,18 +300,8 @@ public class Game1 : Game
 
             // Draw blocks and obstacles
             OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200, 200));
+            OWBrickBlockSprite.Draw(spriteBatch, new Vector2(200, 360));
         }
         base.Draw(gameTime);
-    }
-    private void RemoveOldEntities()
-    {
-        foreach (var item in entitiesRemoved)
-        {
-            if (entities.Contains(item))
-            {
-                entities.Remove(item);
-            }
-        }
-        entitiesRemoved.Clear();
     }
 }
