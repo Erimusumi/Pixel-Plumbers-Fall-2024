@@ -71,6 +71,7 @@ public class Sweep
     BlockFireballInteraction BlockFireballInteraction;
     BlockInteraction MarioBlockInteraction;
     MarioObstacleInteraction MarioObstacleInteraction;
+    ItemObstacleInteraction ItemObstacleInteraction;
 
     public void iterateListInteractions(List<IEntity> entities)
     {
@@ -173,6 +174,7 @@ public class Sweep
         }
         if(ContainsObstacle(entities,index1) && ContainsItem(entities, index2))
         {
+            ItemObstacleInteraction = new ItemObstacleInteraction((IItem)entities[index2], (IObstacle)entities[index2]);
 
         }else if(ContainsObstacle(entities,index2) && ContainsItem(entities, index1)){
 
