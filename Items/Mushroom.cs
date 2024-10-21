@@ -1,20 +1,14 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
+using System.ComponentModel.Design;
 using System.ComponentModel.Design.Serialization;
+using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.InteropServices;
 using System.Text;
-public interface IMushroomObject : IEntity
-{
-  
-    void idling();
-    void collect();
-    void roams();
-    void draw();
 
-}
-public class Mushroom : IMushroomObject
+public class Mushroom :IItem
 {
     public Boolean idle;
     public Boolean collected;
@@ -30,12 +24,13 @@ public class Mushroom : IMushroomObject
     public  Mushroom(SpriteBatch sB, Texture2D texture, Microsoft.Xna.Framework.Vector2 position)
     {
         mp = new MushroomPower(texture);
-        this.idle = true;
+        this.idle = false;
         this.collected = false;
-        this.roaming = false;
+        this.roaming = true;
         this.position = position;
         this.texture = texture;
         this.sb = sB;
+        movingRight = true;
     }
     public void idling()
     {
@@ -55,11 +50,13 @@ public class Mushroom : IMushroomObject
         roaming = true;
         idle = false;
         roaming = false;
+        movingRight = true;
+        movingLeft = false;
        
     }
     public void draw()
     {
-        if (this.idle)
+        if (this.idle || this.roaming)
         {
             this.mp = new MushroomPower(texture);
             this.mp.Draw(sb, position);
@@ -69,11 +66,6 @@ public class Mushroom : IMushroomObject
         {
             position = new Microsoft.Xna.Framework.Vector2(900, 900);
             
-        }
-        else if (this.roaming)
-        {
-            movingRight = true;
-            movingLeft = false;
         }
     }
     public void update()
@@ -89,7 +81,19 @@ public class Mushroom : IMushroomObject
             }
         }
     }
-    private void destroy()
+    public void swapDirection()
+    {
+        if (movingLeft){
+            movingLeft = false;
+            movingRight = true;
+        }
+        else if (movingRight)
+        {
+            movingRight = false;
+            movingLeft = true;
+        }
+    }
+    public void destroy()
     {
             this.mp = null;
       

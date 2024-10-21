@@ -56,11 +56,11 @@ public class Game1 : Game
 
     private IObstacle obstacle1;
     private IObstacle obstacle2;
-    private obstacle3 obstacle3;
+    private IObstacle obstacle3;
     private IObstacle obstacle4;
-    private LuckyBlockSprite OWLuckyBlockSprite;
+    private IBlock OWLuckyBlockSprite;
     private IBlock OWUsedBlockSprite;
-    private StaticBlockSprite OWBrickBlockSprite;
+    private IBlock OWBrickBlockSprite;
     private IBlock OWBrokenBrickSprite;
 
     //Fireballs
@@ -68,7 +68,7 @@ public class Game1 : Game
 
     private List<IEntity> entities = new List<IEntity>();
     private Sort sort = new Sort();
-    private Sweep sweep = new Sweep();
+    private Sweep sweep;
 
     // reset instances
     public Vector2 initial_mario_position;
@@ -101,14 +101,18 @@ public class Game1 : Game
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
         //spriteEnemy = new Koopa(480, 400);
-        s = new Star(spriteBatch, ItemsTexture, new Vector2(240, 190));
-        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 190));
+        s = new Star(spriteBatch, ItemsTexture, new Vector2(30, 400));
+        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(30, 400));
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
         entities.Add(mario);
         entities.Add(m);
         entities.Add(OWLuckyBlockSprite);
         entities.Add(OWBrickBlockSprite);
+        entities.Add(OWBrokenBrickSprite);
+        entities.Add(obstacle1);
+        entities.Add(obstacle2);
+        entities.Add(obstacle3);
 
         controlG = new GoombaCommand(spriteEnemy);
         controlG2 = new GoombaCommand(spriteEnemy2);
@@ -120,6 +124,7 @@ public class Game1 : Game
     {
         base.Initialize();
         this.gameTime = new GameTime();
+        this.sweep = new Sweep(gameTime);
 
         // map layers
         backdrop = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Backdrop.csv");
@@ -137,10 +142,13 @@ public class Game1 : Game
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
         //spriteEnemy = new Koopa(480, 400);
-        s = new Star(spriteBatch, ItemsTexture, new Vector2(440, 190));
-        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 190));
+        s = new Star(spriteBatch, ItemsTexture, new Vector2(30, 400));
+        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(30, 400));
         OWLuckyBlockSprite = new LuckyBlockSprite(block, 3, 20);
         OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
+        OWBrokenBrickSprite = new BrokenBrickSprite(block, 4, 1);
+        obstacle1 = new obstacle1(obstacle);
+        obstacle2 = new obstacle2(obstacle);
         obstacle3 = new obstacle3(obstacle);
 
         entities.Add(spriteEnemy2);
@@ -149,6 +157,9 @@ public class Game1 : Game
         entities.Add(m);
         entities.Add(OWLuckyBlockSprite);
         entities.Add(OWBrickBlockSprite);
+        entities.Add(OWBrokenBrickSprite);
+        entities.Add(obstacle1);
+        entities.Add(obstacle2);
         entities.Add(obstacle3);
 
         controlG = new GoombaCommand(spriteEnemy);
@@ -207,13 +218,8 @@ public class Game1 : Game
 
 
         // Initialize block and obstacle sprites
-        //OWLuckyBlockSprite = new LuckyBlockSprite(block, 3, 20);
-        OWUsedBlockSprite = new StaticBlockSprite(block, new Rectangle(128, 112, 16, 16));
-        //OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
-        OWBrokenBrickSprite = new UnknownBlockSprite(block, 4, 1);
-        obstacle1 = new obstacle1(obstacle);
-        obstacle2 = new obstacle2(obstacle);
-        //obstacle3 = new obstacle3(obstacle);
+        
+        
         obstacle4 = new obstacle4(obstacle);
     }
 
@@ -254,6 +260,11 @@ public class Game1 : Game
             //Update block and obstacle sprites
             OWLuckyBlockSprite.Update(gameTime);
             OWBrickBlockSprite.Update(gameTime);
+            OWBrokenBrickSprite.Update(gameTime);
+            obstacle1.Update(gameTime);
+            obstacle2.Update(gameTime);
+            obstacle3.Update(gameTime);
+            m.update();
 
             foreach (var item in fireballs)
             {
@@ -273,21 +284,22 @@ public class Game1 : Game
         greenery.Draw(spriteBatch, overworldTiles);
         foreground.Draw(spriteBatch, overworldTiles);
 
-        spriteBatch.Begin();
-
         if (gameStateMachine.isCurrentStateStart())
         {
+            spriteBatch.Begin();
             StartText.Draw(spriteBatch, new Vector2(200, 200));
             spriteBatch.Draw(title, new Rectangle(20, 20, 176, 88), new Rectangle(1, 60, 176, 88), Color.White);
+            spriteBatch.End();
         }
         if (gameStateMachine.isCurrentStateRunning() || gameStateMachine.isCurrentStatePaused())
         {
             // mari and enemy
+            //Dance.Draw(spriteBatch, DanceTexture);
+            spriteBatch.Begin();
             spriteEnemy.Draw(spriteBatch, EnemyTexture);
             spriteEnemy2.Draw(spriteBatch, EnemyTexture);
-            //Dance.Draw(spriteBatch, DanceTexture);
             mario.Draw(spriteBatch);
-            manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
+        
 
             foreach (var item in fireballs)
             {
@@ -295,13 +307,17 @@ public class Game1 : Game
             }
 
             m.draw(); //draw mush collision test
+            spriteBatch.End();
 
             // Draw blocks and obstacles
             OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200, 200));
-            OWBrickBlockSprite.Draw(spriteBatch, new Vector2(200, 360));
+            OWBrickBlockSprite.Draw(spriteBatch, new Vector2(200, 350));
+            OWBrokenBrickSprite.Draw(spriteBatch, new Vector2(200+31, 350));
+            OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200 + 62, 350));
+            obstacle1.Draw(spriteBatch, new Vector2(350, 370));
+            obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
+            obstacle3.Draw(spriteBatch, new Vector2(350+160, 335));
         }
-
-        spriteBatch.End();
         base.Draw(gameTime);
     }
 }

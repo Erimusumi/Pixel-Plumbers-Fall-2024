@@ -9,11 +9,6 @@ public class BlockInteraction
     private Rectangle marioRect;
     private Rectangle blockRect;
 
-    bool hitTop = false;
-    bool hitBottom = false;
-    bool hitLeft = false;
-    bool hitRight = false;
-
     public BlockInteraction(Mario mario, IBlock block)
     {
         this.mario = mario;
@@ -25,64 +20,40 @@ public class BlockInteraction
     // Method to handle Mario and Block collision
     public void update()
     {
-        System.Diagnostics.Debug.WriteLine("Block collision");
-        collisionSide();
+        // Calculate overlap distances
+        float overlapLeft = marioRect.Right - blockRect.Left;
+        float overlapRight = blockRect.Right - marioRect.Left;
+        float overlapTop = marioRect.Bottom - blockRect.Top;
+        float overlapBottom = blockRect.Bottom - marioRect.Top;
 
-        // Handle horizontal collision
-        if (hitLeft || hitRight)
+        // Determine the smallest overlap to find the collision side
+        float minOverlap = Math.Min(Math.Min(overlapLeft, overlapRight), Math.Min(overlapTop, overlapBottom));
+
+        if (minOverlap == overlapTop)
         {
-            StopMarioHorizontalMovement();
+            // Collision from the top
+            mario.marioPosition.Y = blockRect.Top - marioRect.Height;
+            mario.marioVelocity.Y = 0; // Mario stands on top of the obstacle
+            mario.isOnGround = true;
 
-            // Adjust Mario's position to prevent overlap
-            if (hitLeft)
-            {
-                SetPosition(new Vector2(blockRect.Left - marioRect.Width, marioRect.Y)); // Align Mario's right side with block's left
-            }
-            else if (hitRight)
-            {
-                SetPosition(new Vector2(blockRect.Right, marioRect.Y)); // Align Mario's left side with block's right
-            }
         }
-
-        // Handle vertical collision
-        if (hitBottom)
+        else if (minOverlap == overlapBottom)
         {
-            StopMarioVerticalMovement();  // Stop Mario's upward movement
-            // Optionally adjust Mario's position to sit on top of the block
-            SetPosition(new Vector2(marioRect.X, blockRect.Top - marioRect.Height));
+            // Collision from the bottom (Mario jumps into the obstacle)
+            mario.marioPosition.Y = blockRect.Bottom;
+            mario.marioVelocity.Y = 0; // Prevent Mario from going higher
         }
-        else if (hitTop)
+        else if (minOverlap == overlapLeft)
         {
-            // You can implement what happens when Mario hits the top if needed
+            // Collision from the left
+            mario.marioPosition.X = blockRect.Left - marioRect.Width;
+            mario.marioVelocity.X = 0; // Stop horizontal movement
         }
-
-        // Reset hit flags for the next update
-        ResetHitFlags();
-        Debug.Write("BlockInteraction update method works");
-        mario.marioVelocity.X = 0;
-    }
-
-    private void collisionSide()
-    {
-        marioRect = mario.GetDestination(); // Update Mario's rectangle every time
-        blockRect = block.GetDestination(); // Update block's rectangle every time
-
-        if (marioRect.Bottom > blockRect.Top && marioRect.Top < blockRect.Top && mario.marioVelocity.Y < 0)
+        else if (minOverlap == overlapRight)
         {
-            hitBottom = true;    // Mario hit the bottom of the block
-        }
-        if (marioRect.Top < blockRect.Bottom && marioRect.Bottom > blockRect.Bottom && mario.marioVelocity.Y > 0)
-        {
-            hitTop = true; // Mario landed on top of the block
-        }
-
-        if (marioRect.Right > blockRect.Left && marioRect.Left < blockRect.Left && mario.marioVelocity.X > 0)
-        {
-            hitLeft = true;  // Mario hit the left side of the block
-        }
-        if (marioRect.Left < blockRect.Right && marioRect.Right > blockRect.Right && mario.marioVelocity.X < 0)
-        {
-            hitRight = true;   // Mario hit the right side of the block
+            // Collision from the right
+            mario.marioPosition.X = blockRect.Right;
+            mario.marioVelocity.X = 0; // Stop horizontal movement
         }
     }
 
@@ -95,19 +66,5 @@ public class BlockInteraction
     {
         // Set Mario's vertical velocity to 0
         mario.marioVelocity.Y = 0;
-    }
-
-    private void SetPosition(Vector2 newPosition)
-    {
-        mario.marioPosition = newPosition; // Update Mario's position
-    }
-
-    private void ResetHitFlags()
-    {
-        // Reset all hit flags for the next update
-        hitTop = false;
-        hitBottom = false;
-        hitLeft = false;
-        hitRight = false;
     }
 }

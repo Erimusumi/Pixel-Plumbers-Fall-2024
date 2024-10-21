@@ -5,17 +5,10 @@ using System;
 using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-public interface IFireObject : IEntity
-{
-    void idle();
-    void collect();
-    void roams();
-    void draw();
 
-}
-public class Fire : IFireObject
+public class Fire :IItem 
 {
-    public Boolean idling;
+    public Boolean idle;
     public Boolean collected;
     public Boolean roaming;
     private Microsoft.Xna.Framework.Vector2 position;
@@ -24,20 +17,24 @@ public class Fire : IFireObject
     private FirePower fp;
     private SpriteBatch sB;
     private Texture2D texture;
+    private Boolean movingLeft;
+    private Boolean movingRight;
 
     public Fire(SpriteBatch sb, Texture2D text, Microsoft.Xna.Framework.Vector2 pos)
     {
         fp = new FirePower(texture);
-        idling = true;
+        idle = true;
         collected = false;
         roaming = false;
         sB = sb;
         texture = text;
         position = pos;
+        movingLeft = false;
+        movingRight = false;
     }
-    public void idle()
+    public void idling()
     {
-        idling = true;
+        idle = true;
         roaming = false;
         collected = false;
     }
@@ -45,13 +42,13 @@ public class Fire : IFireObject
     {
         collected = true;
         roaming = false;
-        idling = false;
+        idle = false;
     }
     public void roams()
     {
         roaming = true;
         collected = false;
-        idling = false;
+        idle = false;
     }
     public void draw()
     {
@@ -59,7 +56,7 @@ public class Fire : IFireObject
         {
 
         }
-        else if(this.idling) {
+        else if(this.idle) {
             fp = new FirePower(texture);
             fp.Draw(this.sB, position);
         }
@@ -68,7 +65,34 @@ public class Fire : IFireObject
 
         }
     }
-    private void destroy()
+    public void update()
+    {
+        if (this.roaming)
+        {
+            if (movingRight)
+            {
+                position.X++;
+            }
+            else if (movingLeft)
+            {
+                position.X--;
+            }
+        }
+    }
+    public void swapDirection()
+    {
+        if (movingLeft)
+        {
+            movingLeft = false;
+            movingRight = true;
+        }
+        else if (movingRight)
+        {
+            movingRight = false;
+            movingLeft = true;
+        }
+    }
+    public void destroy()
     {
      
             this.fp = null;

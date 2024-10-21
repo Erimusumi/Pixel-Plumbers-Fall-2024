@@ -11,7 +11,7 @@ public class Mario : IEntity
     private Texture2D marioTexture;
     private IMarioSprite currentMarioSprite;
     private MarioStateMachine marioStateMachine;
-    private GameTime gameTime;
+    public GameTime gameTime;
 
     private Vector2 initialPosition;
     public Vector2 marioPosition;
@@ -20,7 +20,7 @@ public class Mario : IEntity
     private float gravity = 980f;
     private float jumpSpeed = -350f;
 
-    private bool isOnGround = true;
+    public bool isOnGround = true;
     private bool canPowerUp = true;
     private bool canTakeDamage = true;
 
