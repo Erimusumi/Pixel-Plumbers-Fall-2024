@@ -178,7 +178,8 @@ public class Sweep
             ItemObstacleInteraction = new ItemObstacleInteraction((IItem)item2, (IObstacle)item1);
            ItemObstacleInteraction.update();
         }else if(ContainsObstacle(entities,index2) && ContainsItem(entities, index1)){
-
+            ItemObstacleInteraction = new ItemObstacleInteraction((IItem)item1, (IObstacle)item2);
+            ItemObstacleInteraction.update();
         }
 
         if (item1.GetType() == typeof(Mario) && ContainsBlock(entities, index2))
