@@ -100,7 +100,7 @@ public class Game1 : Game
         entities.Clear();
         entitiesRemoved.Clear();
         spriteEnemy = new Goomba(480, 400);
-        spriteEnemy3 = new Goomba(520, 400);
+        spriteEnemy3 = new Koopa(520, 400);
         spriteEnemy2 = new Goomba2(240, 400);
         //spriteEnemy = new Koopa(480, 400);
         s = new Star(spriteBatch, ItemsTexture, new Vector2(240, 190));
@@ -135,7 +135,7 @@ public class Game1 : Game
         keyboardControllerMovement = new KeyboardControllerMovement();
 
         spriteEnemy = new Goomba(480, 400);
-        spriteEnemy3 = new Goomba(520, 400);
+        spriteEnemy3 = new Koopa(520, 400);
         spriteEnemy2 = new Goomba2(240, 400);
         //spriteEnemy = new Koopa(480, 400);
         s = new Star(spriteBatch, ItemsTexture, new Vector2(440, 190));
@@ -278,11 +278,11 @@ public class Game1 : Game
         if (gameStateMachine.isCurrentStateRunning() || gameStateMachine.isCurrentStatePaused())
         {
             // mari and enemy
+            //Dance.Draw(spriteBatch, DanceTexture);
+            spriteBatch.Begin();
             spriteEnemy.Draw(spriteBatch, EnemyTexture);
             spriteEnemy2.Draw(spriteBatch, EnemyTexture);
             spriteEnemy3.Draw(spriteBatch, EnemyTexture);
-            //Dance.Draw(spriteBatch, DanceTexture);
-            spriteBatch.Begin();
             mario.Draw(spriteBatch);
             manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
 
