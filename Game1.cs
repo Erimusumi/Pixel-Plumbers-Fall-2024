@@ -138,13 +138,15 @@ public class Game1 : Game
         keyboardController = new KeyboardController();
         keyboardControllerMovement = new KeyboardControllerMovement();
 
-        spriteEnemy = new Goomba(530, 400);
+        spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
         //spriteEnemy = new Koopa(480, 400);
         s = new Star(spriteBatch, ItemsTexture, new Vector2(440, 190));
         m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(440, 190));
         OWLuckyBlockSprite = new LuckyBlockSprite(block, 3, 20);
         OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
+        OWUsedBlockSprite = new StaticBlockSprite(block, new Rectangle(128, 112, 16, 16));
+        OWBrokenBrickSprite = new BrokenBrickSprite(block, 4, 1);
         obstacle1 = new obstacle1(obstacle);
         obstacle2 = new obstacle2(obstacle);
         obstacle3 = new obstacle3(obstacle);
@@ -155,6 +157,7 @@ public class Game1 : Game
         entities.Add(m);
         entities.Add(OWLuckyBlockSprite);
         entities.Add(OWBrickBlockSprite);
+        entities.Add(OWBrokenBrickSprite);
         entities.Add(obstacle1);
         entities.Add(obstacle2);
         entities.Add(obstacle3);
@@ -215,10 +218,8 @@ public class Game1 : Game
 
 
         // Initialize block and obstacle sprites
-        //OWLuckyBlockSprite = new LuckyBlockSprite(block, 3, 20);
-        OWUsedBlockSprite = new StaticBlockSprite(block, new Rectangle(128, 112, 16, 16));
-        //OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
-        OWBrokenBrickSprite = new UnknownBlockSprite(block, 4, 1);
+        
+        
         obstacle4 = new obstacle4(obstacle);
     }
 
@@ -240,6 +241,7 @@ public class Game1 : Game
             // Update Mario's state
             mario.Update(gameTime);
 
+
             // lucky block sprites
             OWLuckyBlockSprite.Update(gameTime);
             // broken brick block sprites
@@ -249,7 +251,7 @@ public class Game1 : Game
             }
 
             spriteEnemy.Updates();
-            //spriteEnemy2.Updates();
+            spriteEnemy2.Updates();
 
             //Dance.Updates();
             controlG.Update();
@@ -258,6 +260,7 @@ public class Game1 : Game
             //Update block and obstacle sprites
             OWLuckyBlockSprite.Update(gameTime);
             OWBrickBlockSprite.Update(gameTime);
+            OWBrokenBrickSprite.Update(gameTime);
             obstacle1.Update(gameTime);
             obstacle2.Update(gameTime);
             obstacle3.Update(gameTime);
@@ -293,7 +296,7 @@ public class Game1 : Game
             //Dance.Draw(spriteBatch, DanceTexture);
             spriteBatch.Begin();
             spriteEnemy.Draw(spriteBatch, EnemyTexture);
-            //spriteEnemy2.Draw(spriteBatch, EnemyTexture);
+            spriteEnemy2.Draw(spriteBatch, EnemyTexture);
             mario.Draw(spriteBatch);
             manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
 
@@ -302,17 +305,16 @@ public class Game1 : Game
                 item.Draw(spriteBatch);
             }
 
-            // Draw blocks and obstacles
-            OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200, 200));
-            OWBrickBlockSprite.Draw(spriteBatch, new Vector2(200, 360));
-
-            obstacle1.Draw(spriteBatch, new Vector2(350, 370));
-            obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
-            obstacle3.Draw(spriteBatch, new Vector2(350 + 350, 335));
             m.draw(); //draw mush collision test
             spriteBatch.End();
-            
-            
+
+            // Draw blocks and obstacles
+            OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200, 200));
+            OWBrickBlockSprite.Draw(spriteBatch, new Vector2(200, 350));
+            OWBrokenBrickSprite.Draw(spriteBatch, new Vector2(200+31, 350));
+            obstacle1.Draw(spriteBatch, new Vector2(350, 370));
+            obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
+            obstacle3.Draw(spriteBatch, new Vector2(350+160, 335));
         }
         base.Draw(gameTime);
     }

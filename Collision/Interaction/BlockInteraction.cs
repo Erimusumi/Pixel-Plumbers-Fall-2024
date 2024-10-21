@@ -57,7 +57,7 @@ public class BlockInteraction
 
         // Reset hit flags for the next update
         ResetHitFlags();
-        Debug.Write("BlockInteraction update method works");
+        
         mario.marioVelocity.X = 0;
     }
 
