@@ -24,10 +24,12 @@ public class MarioMushroomInteraction
      
         mushroom.collect();
 
+
         if (mario.GetMarioGameState() == MarioStateMachine.MarioGameState.Small)
         {
             mario.MarioPowerUp();
         }
+
         
         
     }

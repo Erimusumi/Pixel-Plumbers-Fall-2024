@@ -7,6 +7,18 @@
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\ssssigh\\collision\\interaction\\mariomushroominteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\mariomushroominteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\ssssigh\\collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\ssssigh\\items\\mushroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:items\\mushroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\ssssigh\\sprites\\block sprites\\obstacle3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\obstacle3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,10 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\ssssigh\\sprites\\block sprites\\luckyblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\luckyblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\ssssigh\\collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\ssssigh\\sprites\\block sprites\\brokenbricksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -64,10 +72,23 @@
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\SSSSIGH\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAANYAAAAAAAAAAAAkwGgAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAPkAAAAAAAAAAAAowAoBAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MarioMushroomInteraction.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\SSSSIGH\\Collision\\Interaction\\MarioMushroomInteraction.cs",
+              "RelativeDocumentMoniker": "Collision\\Interaction\\MarioMushroomInteraction.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\SSSSIGH\\Collision\\Interaction\\MarioMushroomInteraction.cs*",
+              "RelativeToolTip": "Collision\\Interaction\\MarioMushroomInteraction.cs*",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T22:01:38.222Z",
               "EditorCaption": ""
             },
             {
@@ -100,7 +121,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "Mushroom.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\SSSSIGH\\Items\\Mushroom.cs",
+              "RelativeDocumentMoniker": "Items\\Mushroom.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\SSSSIGH\\Items\\Mushroom.cs",
+              "RelativeToolTip": "Items\\Mushroom.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T22:00:19.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "obstacle3.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\SSSSIGH\\Sprites\\Block Sprites\\obstacle3.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\obstacle3.cs",
@@ -113,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "obstacle2.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\SSSSIGH\\Sprites\\Block Sprites\\obstacle2.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\obstacle2.cs",
@@ -125,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "BrokenBrickSprite.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\SSSSIGH\\Sprites\\Block Sprites\\BrokenBrickSprite.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\BrokenBrickSprite.cs",
@@ -137,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "obstacle1.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\SSSSIGH\\Sprites\\Block Sprites\\obstacle1.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\obstacle1.cs",
@@ -149,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "Mario.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\SSSSIGH\\Mario\\Mario.cs",
               "RelativeDocumentMoniker": "Mario\\Mario.cs",
@@ -161,7 +195,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
+              "Title": "Sweep.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\SSSSIGH\\Collision\\Sweep.cs",
+              "RelativeDocumentMoniker": "Collision\\Sweep.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\SSSSIGH\\Collision\\Sweep.cs",
+              "RelativeToolTip": "Collision\\Sweep.cs",
+              "ViewState": "AgIAAIMAAAAAAAAAAAAQwHgAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T21:15:31.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "StaticBlockSprite.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\SSSSIGH\\Sprites\\Block Sprites\\StaticBlockSprite.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\StaticBlockSprite.cs",
@@ -173,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "LuckyBlockSprite.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\SSSSIGH\\Sprites\\Block Sprites\\LuckyBlockSprite.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\LuckyBlockSprite.cs",
@@ -185,19 +232,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Sweep.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\SSSSIGH\\Collision\\Sweep.cs",
-              "RelativeDocumentMoniker": "Collision\\Sweep.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\SSSSIGH\\Collision\\Sweep.cs",
-              "RelativeToolTip": "Collision\\Sweep.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAQwHgAAABYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T21:15:31.112Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "KoopaStateMachine.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\SSSSIGH\\Koopa\\KoopaStateMachine.cs",
               "RelativeDocumentMoniker": "Koopa\\KoopaStateMachine.cs",
@@ -209,7 +244,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "KoopaSprites.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\SSSSIGH\\Koopa\\KoopaSprites.cs",
               "RelativeDocumentMoniker": "Koopa\\KoopaSprites.cs",

@@ -264,6 +264,7 @@ public class Game1 : Game
             obstacle1.Update(gameTime);
             obstacle2.Update(gameTime);
             obstacle3.Update(gameTime);
+            m.update();
 
             foreach (var item in fireballs)
             {
