@@ -95,7 +95,7 @@ public class Game1 : Game
         IsMouseVisible = true;
     }
 
-    private void ResetGame()
+    public void ResetGame()
     {
         entities.Clear();
         spriteEnemy = new Goomba(480, 400);
