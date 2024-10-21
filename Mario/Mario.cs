@@ -208,7 +208,7 @@ public class Mario : IEntity
 
     public void Update(GameTime gameTime)
     {
-        //ApplyGravity(gameTime);
+        ApplyGravity(gameTime);
         marioPosition.X += marioVelocity.X;
         currentMarioSprite = MarioSpriteMachine.UpdateMarioSprite(marioStateMachine, marioTexture);
         currentMarioSprite.Update(gameTime);
