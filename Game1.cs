@@ -298,7 +298,7 @@ public class Game1 : Game
             spriteEnemy.Draw(spriteBatch, EnemyTexture);
             spriteEnemy2.Draw(spriteBatch, EnemyTexture);
             mario.Draw(spriteBatch);
-            manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
+            //manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
 
             foreach (var item in fireballs)
             {
