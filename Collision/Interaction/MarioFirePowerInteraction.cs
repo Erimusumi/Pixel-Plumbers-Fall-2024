@@ -10,13 +10,14 @@ using System.Threading.Tasks;
 {
     private Mario mario;
     private Fire FirePower;
+    private List<IEntity> entitiesRemoved;
 
 
-    public MarioFirePowerInteraction(Mario mar, Fire fp)
+    public MarioFirePowerInteraction(Mario mar, Fire fp, List<IEntity> entitiesRemoved)
     {
         FirePower = fp;
         mario = mar;
-       
+        this.entitiesRemoved = entitiesRemoved;
     }
     public void update()
     {
@@ -25,7 +26,7 @@ using System.Threading.Tasks;
     }
     private void removeFromList()
     {
-        //remove fire power from list of entities
+        entitiesRemoved.Add(FirePower);
     }
 }
 

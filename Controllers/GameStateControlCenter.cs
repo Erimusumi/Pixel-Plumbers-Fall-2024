@@ -44,8 +44,8 @@ public class GameStateControlCenter
         ICommand player2ClickCommand = new PrintMessageCommand("2 PLAYER");
         ICommand helpClickCommand = new PrintMessageCommand("HELP");
 
-        gameMouseController.AddCommand(startScreenText.GetPlayer1Region(), player1ClickCommand);
-        gameMouseController.AddCommand(startScreenText.GetPlayer2Region(), player2ClickCommand);
+        gameMouseController.AddCommand(startScreenText.GetPlayer1Region(), startGameCommand);
+        gameMouseController.AddCommand(startScreenText.GetPlayer2Region(), startGameCommand);
         gameMouseController.AddCommand(startScreenText.GetHelpRegion(), helpClickCommand);
     }
 }

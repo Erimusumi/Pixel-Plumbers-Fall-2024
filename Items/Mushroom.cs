@@ -24,12 +24,13 @@ public class Mushroom :IItem
     public  Mushroom(SpriteBatch sB, Texture2D texture, Microsoft.Xna.Framework.Vector2 position)
     {
         mp = new MushroomPower(texture);
-        this.idle = true;
+        this.idle = false;
         this.collected = false;
-        this.roaming = false;
+        this.roaming = true;
         this.position = position;
         this.texture = texture;
         this.sb = sB;
+        movingRight = true;
     }
     public void idling()
     {
