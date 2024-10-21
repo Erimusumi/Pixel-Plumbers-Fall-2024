@@ -19,9 +19,9 @@ public class obstacle3 : IObstacle
     }
     public void Update(GameTime gameTime)
     {
-        sourceRectangle = new Rectangle(84, 321, 62, 128);
-        width = 62;
-        height = 128;
+        sourceRectangle = new Rectangle(230, 385, 32, 64);
+        width = 47;
+        height = 84;
     }
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
