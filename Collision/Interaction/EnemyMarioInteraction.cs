@@ -21,7 +21,7 @@ public class EnemyMarioInteraction
         if (mario.HasStar())
         {
             enemy.beFlipped();
-        } else if (Overlap.Width >= Overlap.Height)
+        } else if ((Overlap.Width >= Overlap.Height) && (Overlap.Width >= 10))
         {
             enemy.beStomped();
             mario.marioVelocity.Y = 0;
