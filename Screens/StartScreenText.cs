@@ -1,31 +1,45 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+namespace Pixel_Plumbers_Fall_2024;
 
 public class StartScreenText : ISprite
 {
     private SpriteFont MyFont;
-    public StartScreenText(SpriteFont spriteFont)
+    private Vector2 player1Position;
+    private Vector2 player2Position;
+    private Vector2 helpPosition;
 
+    public StartScreenText(SpriteFont spriteFont)
     {
         this.MyFont = spriteFont;
-    }
-    public void Draw(SpriteBatch spriteBatch, Vector2 position)
-    {
-        spriteBatch.DrawString(MyFont, "SUPER MARIO", new Vector2(100, 200), Color.Black);
-        spriteBatch.DrawString(MyFont, "BY THE PIXEL PLUMBERS", new Vector2(100, 230), Color.Black);
-        spriteBatch.DrawString(MyFont, "PRESS 9 TO START THE GAME", new Vector2(100, 260), Color.Black);
-        spriteBatch.DrawString(MyFont, "PRESS 3 TO PAUSE", new Vector2(100, 290), Color.Black);
-        spriteBatch.DrawString(MyFont, "PRESS R TO RESET", new Vector2(100, 320), Color.Black);
-        spriteBatch.DrawString(MyFont, "PRESS Q TO QUIT", new Vector2(100, 350), Color.Black);
-        spriteBatch.DrawString(MyFont, "PRESS 0 TO COME BACK HERE", new Vector2(100, 380), Color.Black);
+        player1Position = new Vector2(100, 230);
+        player2Position = new Vector2(100, 260);
+        helpPosition = new Vector2(100, 290);
     }
 
-    public void Update(GameTime gametime)
+    public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
-        throw new System.NotImplementedException();
+        spriteBatch.DrawString(MyFont, "1 PLAYER", player1Position, Color.Black);
+        spriteBatch.DrawString(MyFont, "2 PLAYER", player2Position, Color.Black);
+        spriteBatch.DrawString(MyFont, "HELP", helpPosition, Color.Black);
     }
-    public Rectangle GetDestination()
+
+    public void Update(GameTime gameTime)
     {
-        return new Rectangle();
+    }
+
+    public Rectangle GetPlayer1Region()
+    {
+        return new Rectangle((int)player1Position.X, (int)player1Position.Y, (int)MyFont.MeasureString("1 PLAYER").X, (int)MyFont.MeasureString("1 PLAYER").Y);
+    }
+
+    public Rectangle GetPlayer2Region()
+    {
+        return new Rectangle((int)player2Position.X, (int)player2Position.Y, (int)MyFont.MeasureString("2 PLAYER").X, (int)MyFont.MeasureString("2 PLAYER").Y);
+    }
+
+    public Rectangle GetHelpRegion()
+    {
+        return new Rectangle((int)helpPosition.X, (int)helpPosition.Y, (int)MyFont.MeasureString("HELP").X, (int)MyFont.MeasureString("HELP").Y);
     }
 }

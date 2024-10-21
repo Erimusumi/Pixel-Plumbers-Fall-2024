@@ -16,7 +16,7 @@ public class Mario : IEntity
     private Vector2 initialPosition;
     public Vector2 marioPosition;
     public Vector2 marioVelocity;
-    private float groundPosition = 200f;
+    private float groundPosition = 385f;
     private float gravity = 980f;
     private float jumpSpeed = -350f;
 
@@ -37,8 +37,8 @@ public class Mario : IEntity
     public Mario(Texture2D marioTexture, GameTime gametime, Game1 game, List<IEntity> entities)
     {
         this.marioTexture = marioTexture;
-        marioPosition = new Vector2(400, groundPosition);
-        initialPosition = new Vector2(400, groundPosition);
+        marioPosition = new Vector2(200, groundPosition);
+        initialPosition = new Vector2(200, groundPosition);
         marioStateMachine = new MarioStateMachine();
         this.gameTime = gametime;
         marioPosition = initialPosition;
