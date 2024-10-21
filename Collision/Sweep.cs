@@ -50,7 +50,7 @@ public class Sweep
         }
         return containsObstacle;
     }
-    private Boolean containsItem(List<IEntity> entities, int index)
+    private Boolean ContainsItem(List<IEntity> entities, int index)
     {
         Boolean containsItem = false;
         Type type = entities[index].GetType();
@@ -171,8 +171,10 @@ public class Sweep
 
             //entities.RemoveAt(index2);
         }
-        if(ContainsObstacle(entities,index1) && containsItem(entities, index2))
+        if(ContainsObstacle(entities,index1) && ContainsItem(entities, index2))
         {
+
+        }else if(ContainsObstacle(entities,index2) && ContainsItem(entities, index1)){
 
         }
 
