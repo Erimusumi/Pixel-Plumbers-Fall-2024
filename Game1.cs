@@ -67,6 +67,7 @@ public class Game1 : Game
     public List<Fireball> fireballs = new List<Fireball>();
 
     private List<IEntity> entities = new List<IEntity>();
+    private List<IEntity> entitiesRemoved = new List<IEntity>();
     private Sort sort = new Sort();
     private Sweep sweep;
 
@@ -230,7 +231,7 @@ public class Game1 : Game
 
         List<IEntity> temp = entities;
         entities = sort.SortList(entities, entities.Count, temp);
-        sweep.Compare(entities, screen);
+        sweep.Compare(entities, entitiesRemoved, screen);
 
         if (gameStateMachine.isCurrentStateRunning())
         {
@@ -269,6 +270,13 @@ public class Game1 : Game
             foreach (var item in fireballs)
             {
                 item.Update(gameTime);
+            }
+            foreach (var consumedEntity in entitiesRemoved)
+            {
+                if (entities.Contains(consumedEntity))
+                {
+                    entities.Remove(consumedEntity);
+                }
             }
         }
 

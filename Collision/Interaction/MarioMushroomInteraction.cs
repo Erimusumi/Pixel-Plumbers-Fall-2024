@@ -10,13 +10,15 @@ public class MarioMushroomInteraction
 {
     private Mario mario;
     private Mushroom mushroom;
+    private List<IEntity> entitiesRemoved;
     int mushroomIndex;
     int marioIndex;
     
-    public MarioMushroomInteraction(Mario mar, Mushroom mush)
+    public MarioMushroomInteraction(Mario mar, Mushroom mush, List<IEntity> entitiesRemoved)
     {
         mario = mar;
         mushroom = mush;
+        this.entitiesRemoved = entitiesRemoved;
     }
 
     public void update()
@@ -30,12 +32,13 @@ public class MarioMushroomInteraction
             mario.MarioPowerUp();
         }
 
+        removeFromList();
         
         
     }
     private void removeFromList()
     {
-        
+        entitiesRemoved.Add(mushroom);
 
 
     }

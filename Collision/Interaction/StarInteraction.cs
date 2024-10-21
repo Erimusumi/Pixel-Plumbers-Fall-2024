@@ -8,14 +8,15 @@ public class MarioStarInteraction
 {
     private Mario mario;
     private Star star;
+    private List<IEntity> entitiesRemoved;
     int count = 0;
 
 
-    public MarioStarInteraction(Mario mar, Star s)
+    public MarioStarInteraction(Mario mar, Star s, List<IEntity> entitiesRemoved)
     {
         this.star = s;
         this.mario = mar;
-
+        this.entitiesRemoved = entitiesRemoved;
 
     }
     public void update()
@@ -23,11 +24,12 @@ public class MarioStarInteraction
       
             star.collect();
             mario.CollectStar();
+        removeFromList();
          
         
     }
-    private void removeFromList(List<object> entit,int index)
+    private void removeFromList()
     {
-      //  entit.Remove(index);
+        entitiesRemoved.Add(star);
     }
 }
