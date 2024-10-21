@@ -31,6 +31,7 @@ using System.Threading.Tasks;
     {
         _entitiesRemoved.Add(enemy);
         _entitiesRemoved.Add(fireball);
+        fireball.Remove();
     }
 }
 

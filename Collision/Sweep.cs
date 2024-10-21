@@ -156,8 +156,24 @@ public class Sweep
             MarioBlockInteraction.update();
             
         }
+
+        if (item1.GetType() == typeof(Fireball))
+        {
+            if (item2.GetType() == typeof(LuckyBlockSprite))
+            {
+                BlockFireballInteraction = new BlockFireballInteraction((Fireball)item1, (UnknownBlockSprite)item2, entities, entitiesRemoved);
+            }
+            //more types of block
+        }
+        else if (item2.GetType() == typeof(Fireball))
+        {
+            if (item1.GetType() == typeof(LuckyBlockSprite))
+            {
+                BlockFireballInteraction = new BlockFireballInteraction((Fireball)item2, (UnknownBlockSprite)item1, entities, entitiesRemoved);
+            }
+        }
         //[...]
-        
+
     }
     public Rectangle getRectangle(List<IEntity> Entities, int index)
     {
