@@ -25,6 +25,7 @@ public class BlockInteraction
     // Method to handle Mario and Block collision
     public void update()
     {
+        System.Diagnostics.Debug.WriteLine("Block collision");
         collisionSide();
 
         // Handle horizontal collision
