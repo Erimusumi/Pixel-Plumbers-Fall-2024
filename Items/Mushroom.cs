@@ -1,7 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
+using System.ComponentModel.Design;
 using System.ComponentModel.Design.Serialization;
+using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -55,11 +57,13 @@ public class Mushroom : IMushroomObject
         roaming = true;
         idle = false;
         roaming = false;
+        movingRight = true;
+        movingLeft = false;
        
     }
     public void draw()
     {
-        if (this.idle)
+        if (this.idle || this.roaming)
         {
             this.mp = new MushroomPower(texture);
             this.mp.Draw(sb, position);
@@ -69,11 +73,6 @@ public class Mushroom : IMushroomObject
         {
             position = new Microsoft.Xna.Framework.Vector2(900, 900);
             
-        }
-        else if (this.roaming)
-        {
-            movingRight = true;
-            movingLeft = false;
         }
     }
     public void update()
@@ -87,6 +86,18 @@ public class Mushroom : IMushroomObject
             {
                 position.X--;
             }
+        }
+    }
+    public void swapDirections()
+    {
+        if (movingLeft){
+            movingLeft = false;
+            movingRight = true;
+        }
+        else if (movingRight)
+        {
+            movingRight = false;
+            movingLeft = true;
         }
     }
     private void destroy()
