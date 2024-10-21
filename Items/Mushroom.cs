@@ -7,16 +7,8 @@ using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.InteropServices;
 using System.Text;
-public interface IMushroomObject : IEntity
-{
-  
-    void idling();
-    void collect();
-    void roams();
-    void draw();
 
-}
-public class Mushroom :IMushroomObject
+public class Mushroom :IItem
 {
     public Boolean idle;
     public Boolean collected;
@@ -88,7 +80,7 @@ public class Mushroom :IMushroomObject
             }
         }
     }
-    public void swapDirections()
+    public void swapDirection()
     {
         if (movingLeft){
             movingLeft = false;
@@ -100,7 +92,7 @@ public class Mushroom :IMushroomObject
             movingLeft = true;
         }
     }
-    private void destroy()
+    public void destroy()
     {
             this.mp = null;
       

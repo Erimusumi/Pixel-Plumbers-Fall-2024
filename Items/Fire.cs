@@ -13,9 +13,9 @@ public interface IFireObject : IEntity
     void draw();
 
 }
-public class Fire :IFireObject 
+public class Fire :IItem 
 {
-    public Boolean idling;
+    public Boolean idle;
     public Boolean collected;
     public Boolean roaming;
     private Microsoft.Xna.Framework.Vector2 position;
@@ -30,7 +30,7 @@ public class Fire :IFireObject
     public Fire(SpriteBatch sb, Texture2D text, Microsoft.Xna.Framework.Vector2 pos)
     {
         fp = new FirePower(texture);
-        idling = true;
+        idle = true;
         collected = false;
         roaming = false;
         sB = sb;
@@ -39,9 +39,9 @@ public class Fire :IFireObject
         movingLeft = false;
         movingRight = false;
     }
-    public void idle()
+    public void idling()
     {
-        idling = true;
+        idle = true;
         roaming = false;
         collected = false;
     }
@@ -49,13 +49,13 @@ public class Fire :IFireObject
     {
         collected = true;
         roaming = false;
-        idling = false;
+        idle = false;
     }
     public void roams()
     {
         roaming = true;
         collected = false;
-        idling = false;
+        idle = false;
     }
     public void draw()
     {
@@ -63,7 +63,7 @@ public class Fire :IFireObject
         {
 
         }
-        else if(this.idling) {
+        else if(this.idle) {
             fp = new FirePower(texture);
             fp.Draw(this.sB, position);
         }
@@ -86,7 +86,7 @@ public class Fire :IFireObject
             }
         }
     }
-    public void swapDirections()
+    public void swapDirection()
     {
         if (movingLeft)
         {
@@ -99,7 +99,7 @@ public class Fire :IFireObject
             movingLeft = true;
         }
     }
-    private void destroy()
+    public void destroy()
     {
      
             this.fp = null;

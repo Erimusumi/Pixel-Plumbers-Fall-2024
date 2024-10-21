@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public interface IItem 
+public interface IItem: IEntity
 {
     public void swapDirection();
     public void update();
