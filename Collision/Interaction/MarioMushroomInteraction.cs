@@ -33,7 +33,7 @@ public class MarioMushroomInteraction
     }
     private void removeFromList()
     {
-        //remove mushroom from list of entities
+        
 
 
     }
