@@ -68,9 +68,9 @@ public class BrokenBrickSprite : IBlock
             31
         );
 
-        spriteBatch.Begin();
+        //spriteBatch.Begin();
         spriteBatch.Draw(Texture, destinationRectangle, sourceRectangle, Color.White);
-        spriteBatch.End();
+        //spriteBatch.End();
     }
     public Rectangle GetDestination()
     {
