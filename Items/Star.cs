@@ -5,18 +5,8 @@ using System.ComponentModel.Design.Serialization;
 using System.Diagnostics;
 using System.Numerics;
 using System.Runtime.InteropServices;
-public interface IStarObject : IEntity
-{
-    void idling();
-    void collect();
-    void roams();
-    void draw();
 
-
-
-
-}
-public class Star: IStarObject
+public class Star:IItem
 {
     private Boolean idle;
     private Boolean collected;
@@ -77,7 +67,7 @@ public class Star: IStarObject
 
         }
     }
-    public void swapDirections()
+    public void swapDirection()
     {
         if (movingLeft)
         {
@@ -89,6 +79,10 @@ public class Star: IStarObject
             movingRight = false;
             movingLeft = true;
         }
+    }
+    public void destroy()
+    {
+        this.sp = null;
     }
     public void update()
     {

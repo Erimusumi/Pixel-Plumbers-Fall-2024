@@ -5,14 +5,7 @@ using System;
 using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-public interface IFireObject : IEntity
-{
-    void idle();
-    void collect();
-    void roams();
-    void draw();
 
-}
 public class Fire :IItem 
 {
     public Boolean idle;
