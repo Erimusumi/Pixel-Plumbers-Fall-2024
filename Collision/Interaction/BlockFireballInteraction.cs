@@ -12,12 +12,14 @@ using System.Threading.Tasks;
     private Fireball _fireball;
     private UnknownBlockSprite _block;
     private List<IEntity> _entities;
+    private List<IEntity> _entitiesRemoved;
 
     public BlockFireballInteraction(Fireball fireball, UnknownBlockSprite block, List<IEntity> entities)
     {
         this._block = block;
         this._fireball = fireball;
         this._entities = entities;
+        //this._entitiesRemoved = entitiesRemoved;
     }
     public void update()
     {
@@ -40,7 +42,8 @@ using System.Threading.Tasks;
     }
     private void removeFromList()
     {
-        _entities.Remove(_fireball);
+        //_entitiesRemoved.Add(_fireball);
+        _fireball.Remove();
     }
 }
 
