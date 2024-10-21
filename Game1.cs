@@ -239,7 +239,7 @@ public class Game1 : Game
 
             // Update Mario's state
             mario.Update(gameTime);
-
+            mario.ApplyGravity(gameTime);
 
             // lucky block sprites
             OWLuckyBlockSprite.Update(gameTime);
