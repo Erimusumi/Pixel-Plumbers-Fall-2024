@@ -67,6 +67,7 @@ public class Game1 : Game
     public List<Fireball> fireballs = new List<Fireball>();
 
     private List<IEntity> entities = new List<IEntity>();
+    private List<IEntity> entitiesRemoved = new List<IEntity>();
     private Sort sort = new Sort();
     private Sweep sweep = new Sweep();
 
@@ -98,6 +99,7 @@ public class Game1 : Game
     private void ResetGame()
     {
         entities.Clear();
+        entitiesRemoved.Clear();
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
         //spriteEnemy = new Koopa(480, 400);
@@ -217,7 +219,7 @@ public class Game1 : Game
 
         List<IEntity> temp = entities;
         entities = sort.SortList(entities, entities.Count, temp);
-        sweep.Compare(entities, screen);
+        sweep.Compare(entities, entitiesRemoved, screen);
 
         if (gameStateMachine.isCurrentStateRunning())
         {
@@ -251,6 +253,8 @@ public class Game1 : Game
             {
                 item.Update(gameTime);
             }
+
+            RemoveOldEntities();
         }
 
         base.Update(gameTime);
@@ -294,5 +298,16 @@ public class Game1 : Game
             OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200, 200));
         }
         base.Draw(gameTime);
+    }
+    private void RemoveOldEntities()
+    {
+        foreach (var item in entitiesRemoved)
+        {
+            if (entities.Contains(item))
+            {
+                entities.Remove(item);
+            }
+        }
+        entitiesRemoved.Clear();
     }
 }
