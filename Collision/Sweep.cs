@@ -50,6 +50,16 @@ public class Sweep
         }
         return containsObstacle;
     }
+    private Boolean containsItem(List<IEntity> entities, int index)
+    {
+        Boolean containsItem = false;
+        Type type = entities[index].GetType();
+        if (type == typeof(Mushroom) || type == typeof(Star) || type == typeof(Fire))
+        {
+            containsItem  = true;
+        }
+        return containsItem;
+    }
 
 
     EnemyMarioInteraction EnemyMarioInteraction;
@@ -161,6 +171,11 @@ public class Sweep
 
             //entities.RemoveAt(index2);
         }
+        if(ContainsObstacle(entities,index1) && containsItem(entities, index2))
+        {
+
+        }
+
         if (item1.GetType() == typeof(Mario) && ContainsBlock(entities, index2))
         {
             //handle block interaction
