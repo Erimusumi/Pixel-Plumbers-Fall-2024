@@ -1,0 +1,12 @@
+Dylan Moore
+10/21/2024
+Sprite 3
+Mario.cs
+Arun Ghimire
+
+Mario -> Mario.cs
+
+Readability: It seems pretty straight forward. The class has a MoveRight, MoveLeft, and a SwapDirection method, 
+
+
+Maintainability: 
