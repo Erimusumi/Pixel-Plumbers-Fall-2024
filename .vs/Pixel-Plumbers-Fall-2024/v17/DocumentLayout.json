@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\projectile\\fireball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:projectile\\fireball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\collision\\interaction\\blockfireballinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\blockfireballinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,32 +27,12 @@
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\mariomushroominteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\collision\\interaction\\starinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\starinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\sprites\\block sprites\\luckyblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\luckyblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\collision\\interaction\\blockfireballinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\blockfireballinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\sprites\\block sprites\\brokenbricksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\brokenbricksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\controllers\\commandcontrolcenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -53,10 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\sprites\\block sprites\\obstacle1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\obstacle1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\sprites\\block sprites\\unknownblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\unknownblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\mario\\mariostatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -94,11 +86,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
@@ -118,7 +110,7 @@
               "RelativeDocumentMoniker": "Collision\\Sweep.cs",
               "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Collision\\Sweep.cs",
               "RelativeToolTip": "Collision\\Sweep.cs",
-              "ViewState": "AgIAAJkAAAAAAAAAAAApwKIAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAALEAAAAAAAAAAAApwMEAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-17T06:25:31.397Z",
               "IsPinned": true,
@@ -150,46 +142,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "StarInteraction.cs",
-              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\StarInteraction.cs",
-              "RelativeDocumentMoniker": "Collision\\Interaction\\StarInteraction.cs",
-              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\StarInteraction.cs",
-              "RelativeToolTip": "Collision\\Interaction\\StarInteraction.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwCAAAAAiAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Fireball.cs",
+              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Projectile\\Fireball.cs",
+              "RelativeDocumentMoniker": "Projectile\\Fireball.cs",
+              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Projectile\\Fireball.cs",
+              "RelativeToolTip": "Projectile\\Fireball.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAYwE0AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T19:21:51.775Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Mario.cs",
-              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Mario\\Mario.cs",
-              "RelativeDocumentMoniker": "Mario\\Mario.cs",
-              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Mario\\Mario.cs",
-              "RelativeToolTip": "Mario\\Mario.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwGgAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T18:14:24.642Z",
+              "WhenOpened": "2024-10-21T23:46:05.417Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "BlockFireballInteraction.cs",
-              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\BlockFireballInteraction.cs",
-              "RelativeDocumentMoniker": "Collision\\Interaction\\BlockFireballInteraction.cs",
-              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\BlockFireballInteraction.cs",
-              "RelativeToolTip": "Collision\\Interaction\\BlockFireballInteraction.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T03:38:12.473Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "MarioMushroomInteraction.cs",
               "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\MarioMushroomInteraction.cs",
               "RelativeDocumentMoniker": "Collision\\Interaction\\MarioMushroomInteraction.cs",
@@ -202,15 +168,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LuckyBlockSprite.cs",
-              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Sprites\\Block Sprites\\LuckyBlockSprite.cs",
-              "RelativeDocumentMoniker": "Sprites\\Block Sprites\\LuckyBlockSprite.cs",
-              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Sprites\\Block Sprites\\LuckyBlockSprite.cs",
-              "RelativeToolTip": "Sprites\\Block Sprites\\LuckyBlockSprite.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAADwvzYAAAAaAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "BlockFireballInteraction.cs",
+              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\BlockFireballInteraction.cs",
+              "RelativeDocumentMoniker": "Collision\\Interaction\\BlockFireballInteraction.cs",
+              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\BlockFireballInteraction.cs",
+              "RelativeToolTip": "Collision\\Interaction\\BlockFireballInteraction.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAApwBwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T19:36:52.882Z",
+              "WhenOpened": "2024-10-18T03:38:12.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Mario.cs",
+              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Mario\\Mario.cs",
+              "RelativeDocumentMoniker": "Mario\\Mario.cs",
+              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Mario\\Mario.cs",
+              "RelativeToolTip": "Mario\\Mario.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwGgAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T18:14:24.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StarInteraction.cs",
+              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\StarInteraction.cs",
+              "RelativeDocumentMoniker": "Collision\\Interaction\\StarInteraction.cs",
+              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\StarInteraction.cs",
+              "RelativeToolTip": "Collision\\Interaction\\StarInteraction.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T19:21:51.775Z",
               "EditorCaption": ""
             },
             {
@@ -229,18 +221,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "BrokenBrickSprite.cs",
-              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Sprites\\Block Sprites\\BrokenBrickSprite.cs",
-              "RelativeDocumentMoniker": "Sprites\\Block Sprites\\BrokenBrickSprite.cs",
-              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Sprites\\Block Sprites\\BrokenBrickSprite.cs",
-              "RelativeToolTip": "Sprites\\Block Sprites\\BrokenBrickSprite.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAA6wAkAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T19:36:41.756Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
               "Title": "CommandControlCenter.cs",
               "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Controllers\\CommandControlCenter.cs",
               "RelativeDocumentMoniker": "Controllers\\CommandControlCenter.cs",
@@ -248,11 +228,12 @@
               "RelativeToolTip": "Controllers\\CommandControlCenter.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAWwCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T20:13:36.484Z"
+              "WhenOpened": "2024-10-20T20:13:36.484Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "IdleRightBigMario.cs",
               "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Sprites\\MarioSprites\\BigMario\\IdleRightBigMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\BigMario\\IdleRightBigMario.cs",
@@ -260,11 +241,12 @@
               "RelativeToolTip": "Sprites\\MarioSprites\\BigMario\\IdleRightBigMario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T20:13:23.613Z"
+              "WhenOpened": "2024-10-20T20:13:23.613Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "obstacle2.cs",
               "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Sprites\\Block Sprites\\obstacle2.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\obstacle2.cs",
@@ -272,11 +254,12 @@
               "RelativeToolTip": "Sprites\\Block Sprites\\obstacle2.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T19:36:27.412Z"
+              "WhenOpened": "2024-10-20T19:36:27.412Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "obstacle1.cs",
               "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Sprites\\Block Sprites\\obstacle1.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\obstacle1.cs",
@@ -284,35 +267,25 @@
               "RelativeToolTip": "Sprites\\Block Sprites\\obstacle1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T19:36:21.178Z"
+              "WhenOpened": "2024-10-20T19:36:21.178Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UnknownBlockSprite.cs",
-              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Sprites\\Block Sprites\\UnknownBlockSprite.cs",
-              "RelativeDocumentMoniker": "Sprites\\Block Sprites\\UnknownBlockSprite.cs",
-              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Sprites\\Block Sprites\\UnknownBlockSprite.cs",
-              "RelativeToolTip": "Sprites\\Block Sprites\\UnknownBlockSprite.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T19:36:58.032Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 12,
               "Title": "MarioStateMachine.cs",
               "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Mario\\MarioStateMachine.cs",
               "RelativeDocumentMoniker": "Mario\\MarioStateMachine.cs",
               "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Mario\\MarioStateMachine.cs",
               "RelativeToolTip": "Mario\\MarioStateMachine.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAABEAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAIBQwBEAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T06:01:14.839Z"
+              "WhenOpened": "2024-10-17T06:01:14.839Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 13,
               "Title": "Sort.cs",
               "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Collision\\Sort.cs",
               "RelativeDocumentMoniker": "Collision\\Sort.cs",
@@ -320,11 +293,12 @@
               "RelativeToolTip": "Collision\\Sort.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAYwDYAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T06:14:57.675Z"
+              "WhenOpened": "2024-10-17T06:14:57.675Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 14,
               "Title": "Room1.cs",
               "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Dungeons-Levels\\Room1.cs",
               "RelativeDocumentMoniker": "Dungeons-Levels\\Room1.cs",
@@ -332,11 +306,12 @@
               "RelativeToolTip": "Dungeons-Levels\\Room1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T03:45:00.75Z"
+              "WhenOpened": "2024-10-18T03:45:00.75Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 15,
               "Title": "Mushroom.cs",
               "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Items\\Mushroom.cs",
               "RelativeDocumentMoniker": "Items\\Mushroom.cs",
@@ -344,35 +319,38 @@
               "RelativeToolTip": "Items\\Mushroom.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T03:24:12.429Z"
+              "WhenOpened": "2024-10-18T03:24:12.429Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 16,
               "Title": "FireballSprite.cs",
               "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Projectile\\FireballSprite.cs",
               "RelativeDocumentMoniker": "Projectile\\FireballSprite.cs",
               "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Projectile\\FireballSprite.cs",
               "RelativeToolTip": "Projectile\\FireballSprite.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAA3wDYAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAYwDYAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T23:26:54.143Z"
+              "WhenOpened": "2024-10-17T23:26:54.143Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 17,
               "Title": "Fire.cs",
               "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Items\\Fire.cs",
               "RelativeDocumentMoniker": "Items\\Fire.cs",
               "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Items\\Fire.cs",
               "RelativeToolTip": "Items\\Fire.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAwwAoAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAA/wAoAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T19:41:12.009Z"
+              "WhenOpened": "2024-10-17T19:41:12.009Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 18,
               "Title": "FirePower.cs",
               "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Sprites\\Item Sprites\\FirePower.cs",
               "RelativeDocumentMoniker": "Sprites\\Item Sprites\\FirePower.cs",
@@ -380,7 +358,8 @@
               "RelativeToolTip": "Sprites\\Item Sprites\\FirePower.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAwA8AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T19:44:24.172Z"
+              "WhenOpened": "2024-10-17T19:44:24.172Z",
+              "EditorCaption": ""
             }
           ]
         }
