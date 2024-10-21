@@ -16,7 +16,7 @@ public interface IStarObject : IEntity
 
 
 }
-public class Star : IStarObject
+public class Star: IStarObject
 {
     private Boolean idle;
     private Boolean collected;

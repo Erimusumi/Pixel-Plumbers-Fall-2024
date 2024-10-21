@@ -16,7 +16,7 @@ public interface IMushroomObject : IEntity
     void draw();
 
 }
-public class Mushroom : IMushroomObject
+public class Mushroom :IMushroomObject
 {
     public Boolean idle;
     public Boolean collected;

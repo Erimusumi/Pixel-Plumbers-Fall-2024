@@ -13,7 +13,7 @@ public interface IFireObject : IEntity
     void draw();
 
 }
-public class Fire 
+public class Fire :IFireObject 
 {
     public Boolean idling;
     public Boolean collected;
