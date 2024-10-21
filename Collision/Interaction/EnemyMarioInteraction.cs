@@ -24,7 +24,7 @@ public class EnemyMarioInteraction
         } else if (Overlap.Width >= Overlap.Height)
         {
             enemy.beStomped();
-            mario.marioVelocity.Y = 300;
+            mario.marioVelocity.Y = 0;
         } else
         {
             mario.MarioTakeDamage();
