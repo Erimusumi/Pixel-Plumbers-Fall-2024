@@ -111,7 +111,12 @@ public class Sweep
         {
             OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item1, item2);
             OtherEnemyInteraction.Update();
+        } else if (ContainsEnemy(entities, index2))
+        {
+            OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item2, item1);
+            OtherEnemyInteraction.Update();
         }
+
         //Item interaction
         if (item1.GetType() == typeof(Star) && item2.GetType() == typeof(Mario))
         {
