@@ -156,7 +156,7 @@
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\FFFUIEJFJIKJ\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAA4BAAAAAAAAAAAowJAAAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAQwJEAAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
               "IsPinned": true,
@@ -187,7 +187,8 @@
               "ViewState": "AgIAACMAAAAAAAAAAAAewEAAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-18T15:28:15.683Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -227,7 +228,8 @@
               "RelativeToolTip": "Collision\\Interaction\\OtherEnemyInteractions.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAQwCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T22:27:01.433Z"
+              "WhenOpened": "2024-10-21T22:27:01.433Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -239,7 +241,8 @@
               "RelativeToolTip": "Goomba\\GoombaSprites.cs",
               "ViewState": "AgIAAEMAAAAAAAAAAADgv04AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T22:26:20.363Z"
+              "WhenOpened": "2024-10-21T22:26:20.363Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -251,7 +254,8 @@
               "RelativeToolTip": "Goomba\\Goomba2.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAtwBoAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T22:26:14.965Z"
+              "WhenOpened": "2024-10-21T22:26:14.965Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -263,7 +267,8 @@
               "RelativeToolTip": "Goomba\\Goomba.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAtwBsAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T22:25:55.242Z"
+              "WhenOpened": "2024-10-21T22:25:55.242Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -288,7 +293,8 @@
               "RelativeToolTip": "Sprites\\Block Sprites\\StaticBlockSprite.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAowBwAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T19:36:47.461Z"
+              "WhenOpened": "2024-10-20T19:36:47.461Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -300,7 +306,8 @@
               "RelativeToolTip": "Sprites\\Block Sprites\\LuckyBlockSprite.cs",
               "ViewState": "AgIAACkAAAAAAAAAAADgvzEAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T19:36:52.882Z"
+              "WhenOpened": "2024-10-20T19:36:52.882Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -312,7 +319,8 @@
               "RelativeToolTip": "Sprites\\Block Sprites\\BrokenBrickSprite.cs",
               "ViewState": "AgIAADYAAAAAAAAAAAA8wEAAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T19:36:41.756Z"
+              "WhenOpened": "2024-10-20T19:36:41.756Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -324,7 +332,8 @@
               "RelativeToolTip": "Sprites\\Block Sprites\\obstacle3.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAA8wCEAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T18:10:20.442Z"
+              "WhenOpened": "2024-10-21T18:10:20.442Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -336,7 +345,8 @@
               "RelativeToolTip": "Sprites\\Block Sprites\\obstacle1.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAuwCQAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T19:32:50.913Z"
+              "WhenOpened": "2024-10-21T19:32:50.913Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -348,7 +358,8 @@
               "RelativeToolTip": "Mario\\Mario.cs",
               "ViewState": "AgIAAHEAAAAAh8CN5cYGwHYAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T18:14:24.642Z"
+              "WhenOpened": "2024-10-16T18:14:24.642Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -360,7 +371,8 @@
               "RelativeToolTip": "Sprites\\Block Sprites\\obstacle2.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAmwB0AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T19:36:27.412Z"
+              "WhenOpened": "2024-10-20T19:36:27.412Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -372,7 +384,8 @@
               "RelativeToolTip": "Sprites\\Block Sprites\\UnknownBlockSprite.cs",
               "ViewState": "AgIAADQAAAAAAAAAAADgv0QAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T19:36:58.032Z"
+              "WhenOpened": "2024-10-20T19:36:58.032Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -384,7 +397,8 @@
               "RelativeToolTip": "Collision\\Interaction\\EnemyMarioInteraction.cs",
               "ViewState": "AgIAAAgAAABgZmZmZmYqwBUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T18:30:46.839Z"
+              "WhenOpened": "2024-10-21T18:30:46.839Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -396,7 +410,8 @@
               "RelativeToolTip": "Controllers\\GameStateControlCenter.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAowCwAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T18:22:15.208Z"
+              "WhenOpened": "2024-10-21T18:22:15.208Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -408,7 +423,8 @@
               "RelativeToolTip": "Sprites\\IBlock.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T18:08:49.267Z"
+              "WhenOpened": "2024-10-21T18:08:49.267Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -420,7 +436,8 @@
               "RelativeToolTip": "Sprites\\Block Sprites\\obstacle4.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T18:10:28.332Z"
+              "WhenOpened": "2024-10-21T18:10:28.332Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -432,7 +449,8 @@
               "RelativeToolTip": "Collision\\Interaction\\MarioMushroomInteraction.cs",
               "ViewState": "AgIAAAMAAAAA6Gv1CM3ovxYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T19:32:07.749Z"
+              "WhenOpened": "2024-10-17T19:32:07.749Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -444,7 +462,8 @@
               "RelativeToolTip": "Controllers\\CommandControlCenter.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAWwCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T20:13:36.484Z"
+              "WhenOpened": "2024-10-20T20:13:36.484Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -456,7 +475,8 @@
               "RelativeToolTip": "Sprites\\MarioSprites\\BigMario\\IdleRightBigMario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T20:13:23.613Z"
+              "WhenOpened": "2024-10-20T20:13:23.613Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -468,7 +488,8 @@
               "RelativeToolTip": "Collision\\Interaction\\StarInteraction.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwBoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T19:21:51.775Z"
+              "WhenOpened": "2024-10-17T19:21:51.775Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -480,7 +501,8 @@
               "RelativeToolTip": "Mario\\MarioStateMachine.cs",
               "ViewState": "AgIAAEIAAAAAAAAAAAAAABEAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T06:01:14.839Z"
+              "WhenOpened": "2024-10-17T06:01:14.839Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -492,7 +514,8 @@
               "RelativeToolTip": "Collision\\Sort.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAYwDYAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T06:14:57.675Z"
+              "WhenOpened": "2024-10-17T06:14:57.675Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -504,7 +527,8 @@
               "RelativeToolTip": "Dungeons-Levels\\Room1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T03:45:00.75Z"
+              "WhenOpened": "2024-10-18T03:45:00.75Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -516,7 +540,8 @@
               "RelativeToolTip": "Collision\\Interaction\\BlockFireballInteraction.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAYwCUAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T03:38:12.473Z"
+              "WhenOpened": "2024-10-18T03:38:12.473Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -528,7 +553,8 @@
               "RelativeToolTip": "Collision\\Interaction\\EnemyFireballInteraction.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T03:41:18.262Z"
+              "WhenOpened": "2024-10-18T03:41:18.262Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -540,7 +566,8 @@
               "RelativeToolTip": "Projectile\\FireballSprite.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAA3wDYAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T23:26:54.143Z"
+              "WhenOpened": "2024-10-17T23:26:54.143Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -552,7 +579,8 @@
               "RelativeToolTip": "Collision\\Interaction\\MarioFirePowerInteraction.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T19:24:32.04Z"
+              "WhenOpened": "2024-10-17T19:24:32.04Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -564,7 +592,8 @@
               "RelativeToolTip": "Items\\Fire.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAAwwAoAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T19:41:12.009Z"
+              "WhenOpened": "2024-10-17T19:41:12.009Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -576,7 +605,8 @@
               "RelativeToolTip": "Sprites\\Item Sprites\\FirePower.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAwA8AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T19:44:24.172Z"
+              "WhenOpened": "2024-10-17T19:44:24.172Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -588,7 +618,8 @@
               "RelativeToolTip": "Sprites\\IEntity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T05:35:27.716Z"
+              "WhenOpened": "2024-10-17T05:35:27.716Z",
+              "EditorCaption": ""
             }
           ]
         }
