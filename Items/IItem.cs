@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 public interface IItem 
 {
-    void swapDirection();
-    void update();
-    void draw();
-    void destroy();
-    void roams();
-    void collect();
-    void idling();
+    public void swapDirection();
+    public void update();
+    public void draw();
+    public void destroy();
+    public void roams();
+    public void collect();
+    public void idling();
 
 
 }
