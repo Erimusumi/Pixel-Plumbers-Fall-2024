@@ -26,8 +26,5 @@ public class MarioStarInteraction
          
         
     }
-    private void removeFromList(List<object> entit,int index)
-    {
-      //  entit.Remove(index);
-    }
+  
 }
