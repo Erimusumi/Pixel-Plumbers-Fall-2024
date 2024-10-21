@@ -283,10 +283,10 @@ public class Game1 : Game
         if (gameStateMachine.isCurrentStateRunning() || gameStateMachine.isCurrentStatePaused())
         {
             // mari and enemy
-            spriteEnemy.Draw(spriteBatch, EnemyTexture);
-            spriteEnemy2.Draw(spriteBatch, EnemyTexture);
             //Dance.Draw(spriteBatch, DanceTexture);
             spriteBatch.Begin();
+            spriteEnemy.Draw(spriteBatch, EnemyTexture);
+            spriteEnemy2.Draw(spriteBatch, EnemyTexture);
             mario.Draw(spriteBatch);
             manager.draw(currentItem, ItemsTexture, spriteBatch, itemsPos);
 
