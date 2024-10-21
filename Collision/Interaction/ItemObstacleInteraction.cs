@@ -13,8 +13,11 @@ public class ItemObstacleInteraction
     {
         this.item = i;
         this.obstacle = obstacle;
-        itemRectangle = item.GetDestination();
-        obstacleRect = obstacle.GetDestination();
+      
+    }
+    public void update()
+    {
+        item.swapDirection();
     }
 
   
