@@ -174,8 +174,8 @@ public class Sweep
         }
         if(ContainsObstacle(entities,index1) && ContainsItem(entities, index2))
         {
-            //ItemObstacleInteraction = new ItemObstacleInteraction((Mushroom)entities[index2], (IObstacle)entities[index2]);
-           // ItemObstacleInteraction.update();
+            ItemObstacleInteraction = new ItemObstacleInteraction((IItem)item2, (IObstacle)item1);
+           ItemObstacleInteraction.update();
         }else if(ContainsObstacle(entities,index2) && ContainsItem(entities, index1)){
 
         }
