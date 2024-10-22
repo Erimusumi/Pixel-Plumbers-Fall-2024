@@ -1,1 +1,21 @@
+Pixel Plumbers
 Reflection Sprint 3
+Team Overview:
+Overall, throughout the process of working on Sprint3, we've developed and demonstrated a firmer grasp of coding conventions and are better able
+to maneuver through Github which in the past was a major struggle for us. 
+
+Achievements:
+Throughout this sprint, we focused on collisions; so things like enemy-mario interactions, mario-powerup interactions,block-mario interactions etc. We also focused 
+on getting on getting our background up and running as well as working on implementing a camera. We
+
+Challenges:
+
+
+
+Team Dynamics:
+
+
+Process Improvements:
+
+
+Looking Ahead:
