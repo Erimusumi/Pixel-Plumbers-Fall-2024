@@ -183,6 +183,17 @@ public class Sweep
             
         }
 
+        if (item1.GetType() == typeof(Fireball) && ContainsBlock(entities, index2))
+        {
+            BlockFireballInteraction = new BlockFireballInteraction((Fireball)item1, (IBlock)item2, entitiesRemoved);
+            BlockFireballInteraction.update();
+        }
+        else if (item2.GetType() == typeof(Fireball) && ContainsBlock(entities, index1))
+        {
+            BlockFireballInteraction = new BlockFireballInteraction((Fireball)item2, (IBlock)item1, entitiesRemoved);
+            BlockFireballInteraction.update();
+        }
+
         if (item1.GetType() == typeof(Mario) && ContainsBlock(entities, index2))
         {
             //handle block interaction            
