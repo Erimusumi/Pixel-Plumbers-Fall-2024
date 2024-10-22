@@ -217,9 +217,7 @@ public class Game1 : Game
         starPower = new StarPower(ItemsTexture);
         mushroomPower = new MushroomPower(ItemsTexture);
 
-
         // Initialize block and obstacle sprites
-        
         
         obstacle4 = new obstacle4(obstacle);
     }
