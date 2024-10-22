@@ -13,10 +13,8 @@ MARIO CONTROLS:
         - D / Right to go write
         - S / Down to crouch
 
-    - [1, 2, 3] to change mario states
-        - 1 to take damage and revert to previous mario
-        - 2 to change to "big" mario
-        - 3 to change to "fire" mario
+        - 1 to go up in mario state (small -> big -> fire)
+        - 2 to go down in mario state (fire -> big -> small -> "died")
         
 ENEMIES CONTROLS:
     - O and P keys to switch enemies
