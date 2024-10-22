@@ -1,159 +1,181 @@
 using Microsoft.Xna.Framework.Graphics;
 using Pixel_Plumbers_Fall_2024;
 
-namespace Pixel_Plumbers_Fall_2024;
-
-public class MarioSpriteMachine
+namespace Pixel_Plumbers_Fall_2024
 {
-    private static IMarioSprite lastValidSprite;
-
-    public static IMarioSprite UpdateMarioSprite(MarioStateMachine marioStateMachine, Texture2D texture)
+    public class MarioSpriteMachine
     {
-        IMarioSprite newSprite = null;
-        switch (marioStateMachine.CurrentFaceState)
+        private static IMarioSprite lastValidSprite;
+
+        public static IMarioSprite UpdateMarioSprite(MarioStateMachine marioStateMachine, Texture2D texture)
         {
-            case MarioStateMachine.MarioFaceState.Right:
-                switch (marioStateMachine.CurrentGameState)
-                {
-                    case MarioStateMachine.MarioGameState.Small:
-                        switch (marioStateMachine.CurrentMoveState)
-                        {
-                            case MarioStateMachine.MarioMoveState.Idle:
-                                newSprite = new IdleRightSmallMario(texture);
-                                break;
-                            case MarioStateMachine.MarioMoveState.Moving:
-                                newSprite = new MovingRightSmallMario(texture);
-                                break;
-                            case MarioStateMachine.MarioMoveState.Jumping:
-                                newSprite = new JumpingRightSmallMario(texture);
-                                break;
-                            case MarioStateMachine.MarioMoveState.Turning:
-                                newSprite = new TurningRightSmallMario(texture);
-                                break;
-                        }
-                        break;
+            IMarioSprite newSprite = GetSpriteForFaceState(marioStateMachine, texture);
 
-                    case MarioStateMachine.MarioGameState.Big:
-                        switch (marioStateMachine.CurrentMoveState)
-                        {
-                            case MarioStateMachine.MarioMoveState.Idle:
-                                newSprite = new IdleRightBigMario(texture);
-                                break;
-                            case MarioStateMachine.MarioMoveState.Moving:
-                                newSprite = new MovingRightBigMario(texture);
-                                break;
-                            case MarioStateMachine.MarioMoveState.Jumping:
-                                newSprite = new JumpingRightBigMario(texture);
-                                break;
-                            case MarioStateMachine.MarioMoveState.Crouching:
-                                newSprite = new CrouchRightBigMario(texture);
-                                break;
-                            case MarioStateMachine.MarioMoveState.Turning:
-                                newSprite = new TurningRightBigMario(texture);
-                                break;
-                        }
-                        break;
+            if (lastValidSprite != null && newSprite != null && newSprite.GetType() == lastValidSprite.GetType())
+            {
+                return lastValidSprite;
+            }
 
-                    case MarioStateMachine.MarioGameState.Fire:
-                        switch (marioStateMachine.CurrentMoveState)
-                        {
-                            case MarioStateMachine.MarioMoveState.Idle:
-                                newSprite = new IdleRightFireMario(texture);
-                                break;
-                            case MarioStateMachine.MarioMoveState.Moving:
-                                newSprite = new MovingRightFireMario(texture);
-                                break;
-                            case MarioStateMachine.MarioMoveState.Jumping:
-                                newSprite = new JumpingRightFireMario(texture);
-                                break;
-                            case MarioStateMachine.MarioMoveState.Crouching:
-                                newSprite = new CrouchRightFireMario(texture);
-                                break;
+            if (newSprite != null)
+            {
+                lastValidSprite = newSprite;
+                return newSprite;
+            }
 
-                            case MarioStateMachine.MarioMoveState.Turning:
-                                newSprite = new TurningRightFireMario(texture);
-                                break;
-                        }
-                        break;
-                }
-                break;
-
-            case MarioStateMachine.MarioFaceState.Left:
-                switch (marioStateMachine.CurrentGameState)
-                {
-                    case MarioStateMachine.MarioGameState.Small:
-                        switch (marioStateMachine.CurrentMoveState)
-                        {
-                            case MarioStateMachine.MarioMoveState.Idle:
-                                newSprite = new IdleLeftSmallMario(texture);
-                                break;
-                            case MarioStateMachine.MarioMoveState.Moving:
-                                newSprite = new MovingLeftSmallMario(texture);
-                                break;
-                            case MarioStateMachine.MarioMoveState.Jumping:
-                                newSprite = new JumpingLeftSmallMario(texture);
-                                break;
-                            case MarioStateMachine.MarioMoveState.Turning:
-                                newSprite = new TurningLeftSmallMario(texture);
-                                break;
-                        }
-                        break;
-
-                    case MarioStateMachine.MarioGameState.Big:
-                        switch (marioStateMachine.CurrentMoveState)
-                        {
-                            case MarioStateMachine.MarioMoveState.Idle:
-                                newSprite = new IdleLeftBigMario(texture);
-                                break;
-                            case MarioStateMachine.MarioMoveState.Moving:
-                                newSprite = new MovingLeftBigMario(texture);
-                                break;
-                            case MarioStateMachine.MarioMoveState.Jumping:
-                                newSprite = new JumpingLeftBigMario(texture);
-                                break;
-                            case MarioStateMachine.MarioMoveState.Crouching:
-                                newSprite = new CrouchLeftBigMario(texture);
-                                break;
-                            case MarioStateMachine.MarioMoveState.Turning:
-                                newSprite = new TurningLeftBigMario(texture);
-                                break;
-                        }
-                        break;
-
-                    case MarioStateMachine.MarioGameState.Fire:
-                        switch (marioStateMachine.CurrentMoveState)
-                        {
-                            case MarioStateMachine.MarioMoveState.Idle:
-                                newSprite = new IdleLeftFireMario(texture);
-                                break;
-                            case MarioStateMachine.MarioMoveState.Moving:
-                                newSprite = new MovingLeftFireMario(texture);
-                                break;
-                            case MarioStateMachine.MarioMoveState.Jumping:
-                                newSprite = new JumpingLeftFireMario(texture);
-                                break;
-                            case MarioStateMachine.MarioMoveState.Crouching:
-                                newSprite = new CrouchLeftFireMario(texture);
-                                break;
-                            case MarioStateMachine.MarioMoveState.Turning:
-                                newSprite = new TurningRightFireMario(texture);
-                                break;
-                        }
-                        break;
-                }
-                break;
-        }
-        if (lastValidSprite != null && newSprite != null && newSprite.GetType() == lastValidSprite.GetType())
-        {
-            return lastValidSprite;
+            return lastValidSprite ?? new IdleLeftBigMario(texture);
         }
 
-        if (newSprite != null)
+        private static IMarioSprite GetSpriteForFaceState(MarioStateMachine marioStateMachine, Texture2D texture)
         {
-            lastValidSprite = newSprite;
-            return newSprite;
+            switch (marioStateMachine.CurrentFaceState)
+            {
+                case MarioStateMachine.MarioFaceState.Right:
+                    return GetSpriteForGameStateRight(marioStateMachine, texture);
+                case MarioStateMachine.MarioFaceState.Left:
+                    return GetSpriteForGameStateLeft(marioStateMachine, texture);
+                default:
+                    return null;
+            }
         }
 
-        return lastValidSprite ?? new IdleLeftBigMario(texture);
+        private static IMarioSprite GetSpriteForGameStateRight(MarioStateMachine marioStateMachine, Texture2D texture)
+        {
+            switch (marioStateMachine.CurrentGameState)
+            {
+                case MarioStateMachine.MarioGameState.Small:
+                    return GetSmallMarioSpriteRight(marioStateMachine, texture);
+                case MarioStateMachine.MarioGameState.Big:
+                    return GetBigMarioSpriteRight(marioStateMachine, texture);
+                case MarioStateMachine.MarioGameState.Fire:
+                    return GetFireMarioSpriteRight(marioStateMachine, texture);
+                default:
+                    return null;
+            }
+        }
+
+        private static IMarioSprite GetSpriteForGameStateLeft(MarioStateMachine marioStateMachine, Texture2D texture)
+        {
+            switch (marioStateMachine.CurrentGameState)
+            {
+                case MarioStateMachine.MarioGameState.Small:
+                    return GetSmallMarioSpriteLeft(marioStateMachine, texture);
+                case MarioStateMachine.MarioGameState.Big:
+                    return GetBigMarioSpriteLeft(marioStateMachine, texture);
+                case MarioStateMachine.MarioGameState.Fire:
+                    return GetFireMarioSpriteLeft(marioStateMachine, texture);
+                default:
+                    return null;
+            }
+        }
+
+        private static IMarioSprite GetSmallMarioSpriteRight(MarioStateMachine marioStateMachine, Texture2D texture)
+        {
+            switch (marioStateMachine.CurrentMoveState)
+            {
+                case MarioStateMachine.MarioMoveState.Idle:
+                    return new IdleRightSmallMario(texture);
+                case MarioStateMachine.MarioMoveState.Moving:
+                    return new MovingRightSmallMario(texture);
+                case MarioStateMachine.MarioMoveState.Jumping:
+                    return new JumpingRightSmallMario(texture);
+                case MarioStateMachine.MarioMoveState.Turning:
+                    return new TurningRightSmallMario(texture);
+                default:
+                    return null;
+            }
+        }
+
+        private static IMarioSprite GetBigMarioSpriteRight(MarioStateMachine marioStateMachine, Texture2D texture)
+        {
+            switch (marioStateMachine.CurrentMoveState)
+            {
+                case MarioStateMachine.MarioMoveState.Idle:
+                    return new IdleRightBigMario(texture);
+                case MarioStateMachine.MarioMoveState.Moving:
+                    return new MovingRightBigMario(texture);
+                case MarioStateMachine.MarioMoveState.Jumping:
+                    return new JumpingRightBigMario(texture);
+                case MarioStateMachine.MarioMoveState.Crouching:
+                    return new CrouchRightBigMario(texture);
+                case MarioStateMachine.MarioMoveState.Turning:
+                    return new TurningRightBigMario(texture);
+                default:
+                    return null;
+            }
+        }
+
+        private static IMarioSprite GetFireMarioSpriteRight(MarioStateMachine marioStateMachine, Texture2D texture)
+        {
+            switch (marioStateMachine.CurrentMoveState)
+            {
+                case MarioStateMachine.MarioMoveState.Idle:
+                    return new IdleRightFireMario(texture);
+                case MarioStateMachine.MarioMoveState.Moving:
+                    return new MovingRightFireMario(texture);
+                case MarioStateMachine.MarioMoveState.Jumping:
+                    return new JumpingRightFireMario(texture);
+                case MarioStateMachine.MarioMoveState.Crouching:
+                    return new CrouchRightFireMario(texture);
+                case MarioStateMachine.MarioMoveState.Turning:
+                    return new TurningRightFireMario(texture);
+                default:
+                    return null;
+            }
+        }
+
+        private static IMarioSprite GetSmallMarioSpriteLeft(MarioStateMachine marioStateMachine, Texture2D texture)
+        {
+            switch (marioStateMachine.CurrentMoveState)
+            {
+                case MarioStateMachine.MarioMoveState.Idle:
+                    return new IdleLeftSmallMario(texture);
+                case MarioStateMachine.MarioMoveState.Moving:
+                    return new MovingLeftSmallMario(texture);
+                case MarioStateMachine.MarioMoveState.Jumping:
+                    return new JumpingLeftSmallMario(texture);
+                case MarioStateMachine.MarioMoveState.Turning:
+                    return new TurningLeftSmallMario(texture);
+                default:
+                    return null;
+            }
+        }
+
+        private static IMarioSprite GetBigMarioSpriteLeft(MarioStateMachine marioStateMachine, Texture2D texture)
+        {
+            switch (marioStateMachine.CurrentMoveState)
+            {
+                case MarioStateMachine.MarioMoveState.Idle:
+                    return new IdleLeftBigMario(texture);
+                case MarioStateMachine.MarioMoveState.Moving:
+                    return new MovingLeftBigMario(texture);
+                case MarioStateMachine.MarioMoveState.Jumping:
+                    return new JumpingLeftBigMario(texture);
+                case MarioStateMachine.MarioMoveState.Crouching:
+                    return new CrouchLeftBigMario(texture);
+                case MarioStateMachine.MarioMoveState.Turning:
+                    return new TurningLeftBigMario(texture);
+                default:
+                    return null;
+            }
+        }
+
+        private static IMarioSprite GetFireMarioSpriteLeft(MarioStateMachine marioStateMachine, Texture2D texture)
+        {
+            switch (marioStateMachine.CurrentMoveState)
+            {
+                case MarioStateMachine.MarioMoveState.Idle:
+                    return new IdleLeftFireMario(texture);
+                case MarioStateMachine.MarioMoveState.Moving:
+                    return new MovingLeftFireMario(texture);
+                case MarioStateMachine.MarioMoveState.Jumping:
+                    return new JumpingLeftFireMario(texture);
+                case MarioStateMachine.MarioMoveState.Crouching:
+                    return new CrouchLeftFireMario(texture);
+                case MarioStateMachine.MarioMoveState.Turning:
+                    return new TurningLeftFireMario(texture);
+                default:
+                    return null;
+            }
+        }
     }
 }

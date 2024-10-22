@@ -7,13 +7,10 @@ using Pixel_Plumbers_Fall_2024;
 
 public class GoombaSprites
 {
-
-    private int posX = 0;
     private int posY = 0;
     private int position = 0;
     public GoombaSprites(int _posX, int _posY)
     {
-        posX = _posX;
         position = _posX;
         posY = _posY;
     }
@@ -22,7 +19,6 @@ public class GoombaSprites
     private Rectangle destinationRectangle;
     private int counter = -1;
 
-    private const int countEnd = 400;
     private const int countStart = 10;
     private const int countMod = 10;
 
@@ -40,7 +36,7 @@ public class GoombaSprites
         {
             sourceRectangle = new Rectangle(0, 4, size, size);
         }
-        if ((counter >= countStart) && (counter < countEnd))
+        if (counter >= countStart)
         {
             position = position - speed;
             if (counter % countMod < (countMod / 2))
@@ -52,12 +48,6 @@ public class GoombaSprites
             }
         }
         destinationRectangle = new Rectangle(position, posY, size * scaleUp, size * scaleUp);
-        if (counter >= countEnd)
-        {
-            counter = -1;
-            position = posX;
-        }
-
     }
 	public void RightLogic()
 	{
@@ -66,7 +56,7 @@ public class GoombaSprites
         {
             sourceRectangle = new Rectangle(0, 4, size, size);
         }
-        if ((counter >= countStart) && (counter < countEnd))
+        if (counter >= countStart)
         {
             position += speed;
             if (counter % countMod < (countMod / 2))
@@ -79,11 +69,6 @@ public class GoombaSprites
             }
         }
         destinationRectangle = new Rectangle(position, posY, size * scaleUp, size * scaleUp);
-        if (counter >= countEnd)
-        {
-            counter = -1;
-            position = posX;
-        }
     }
 	public void StompedLogic()
 	{
@@ -99,7 +84,7 @@ public class GoombaSprites
         {
             sourceRectangle = new Rectangle(0, 4, size, size);
         }
-        if ((counter >= countStart) && (counter < countEnd))
+        if (counter >= countStart)
         {
             if (counter % countMod < (countMod / 2))
             {
@@ -110,10 +95,6 @@ public class GoombaSprites
                 sourceRectangle = new Rectangle(0, 4, size, size);
             }
         }
-        if (counter >= countEnd)
-        {
-            counter = -1;
-        }
     }
     public Rectangle GetDestination()
     {
@@ -121,9 +102,7 @@ public class GoombaSprites
     }
 	public void Draw(SpriteBatch sb, Texture2D Texture)
 	{
-        sb.Begin();
         sb.Draw(Texture, destinationRectangle, sourceRectangle, Color.White, rotation, new Vector2(size / 2, size / 2), SpriteEffects.None, 0f);
-        sb.End();
     }
 
 }

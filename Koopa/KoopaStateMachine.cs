@@ -9,9 +9,10 @@ using Pixel_Plumbers_Fall_2024;
 public class KoopaStateMachine
 {
 	private enum KoopaState {Left, Right, StompedLeft, StompedRight, StompedTwiceLeft, StompedTwiceRight, Flipped};
-	private KoopaState _currentState = KoopaState.StompedTwiceLeft;
-	private KoopaSprites _sprite;
-	private Boolean _isMovingShell = true;
+	private KoopaState _currentState = KoopaState.Left;
+    private int done;
+    private KoopaSprites _sprite;
+	private Boolean _isMovingShell = false;
 
 	public KoopaStateMachine(int posX, int posY)
 	{
@@ -32,12 +33,6 @@ public class KoopaStateMachine
 			case KoopaState.Right:
 				_currentState = KoopaState.Left;
 				break;
-            case KoopaState.StompedLeft:
-                _currentState = KoopaState.Left;
-                break;
-            case KoopaState.StompedRight:
-                _currentState = KoopaState.Right;
-                break;
 			case KoopaState.StompedTwiceLeft:
 				_currentState = KoopaState.StompedTwiceRight;
 				break;
@@ -53,10 +48,12 @@ public class KoopaStateMachine
 		{
 			case KoopaState.Left:
 				_currentState = KoopaState.StompedLeft;
-				break;
+                _isMovingShell = false;
+                break;
 			case KoopaState.Right:
 				_currentState = KoopaState.StompedRight;
-				break;
+                _isMovingShell = false;
+                break;
 			case KoopaState.StompedRight:
 				_currentState = KoopaState.StompedTwiceRight;
 				_isMovingShell = true;
@@ -95,10 +92,18 @@ public class KoopaStateMachine
 				_sprite.RightLogic();
 				break;
 			case KoopaState.StompedLeft:
-				_sprite.StompedLogic();
+				done = _sprite.StompedLogic();
+				if (done == 1)
+				{
+					_currentState = KoopaState.Left;
+				}
 				break;
             case KoopaState.StompedRight:
-                _sprite.StompedLogic();
+                done = _sprite.StompedLogic();
+                if (done == 1)
+                {
+                    _currentState = KoopaState.Right;
+                }
                 break;
 			case KoopaState.StompedTwiceLeft:
 				_sprite.StompedTwiceLogicLeft();

@@ -140,8 +140,6 @@ public class CheepsSprites
     }
 	public void Draw(SpriteBatch sb, Texture2D Texture)
 	{
-        sb.Begin();
         sb.Draw(Texture, destinationRectangle, sourceRectangle, Color.White, rotation, new Vector2(size / 2, size / 2), SpriteEffects.None, 0f);
-        sb.End();
     }
 }

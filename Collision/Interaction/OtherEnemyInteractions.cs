@@ -9,8 +9,6 @@ public class OtherEnemyInteraction
 {
     ISpriteEnemy enemy;
     IEntity item2;
-    Mario mario;
-    int count = 0;
     public OtherEnemyInteraction(ISpriteEnemy _enemy, IEntity _item2)
     {
         enemy = _enemy;
@@ -18,7 +16,6 @@ public class OtherEnemyInteraction
     }
     public void Update()
     {
-        enemy.changeDirection();
 
         if (item2.GetType() == typeof(Koopa))
         {
@@ -27,7 +24,13 @@ public class OtherEnemyInteraction
             {
                 enemy.beFlipped();
                 koopa.changeDirection();
+            } else
+            {
+                enemy.changeDirection();
             }
+        } else
+        {
+            enemy.changeDirection();
         }
         
     }

@@ -8,6 +8,7 @@ public class CoinInstance : ISprite
     private int[] frameWidths;
     private int currentFrame;
     private int lastFrame;
+    private int ticks;
     //private Vector2 position;
 
     public CoinInstance(Texture2D ItemTexture)
@@ -15,6 +16,7 @@ public class CoinInstance : ISprite
         this.ItemTexture = ItemTexture;
 
         frames = new Rectangle[5];
+        frameWidths = new int[5];
         frames[0] = new Rectangle(2, 81, 10, 15);
         frames[1] = new Rectangle(4, 96, 5, 13);
         frames[2] = new Rectangle(18, 96, 8, 15);
@@ -34,11 +36,24 @@ public class CoinInstance : ISprite
     {
         Rectangle sourceRectangle = frames[currentFrame];
         spriteBatch.Draw(ItemTexture, position, sourceRectangle, Color.White);
+
     }
 
     public void Update(GameTime gametime)
     {
-
+        if (ticks > 8)
+        {
+            ticks = 0;
+            if (currentFrame >= lastFrame)
+            {
+                currentFrame = 0;
+            }
+            else
+            {
+                currentFrame++;
+            }
+        }
+        ticks++;
     }
     public Rectangle GetDestination(Vector2 position)
     {

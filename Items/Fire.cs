@@ -3,15 +3,10 @@ using Microsoft.Xna.Framework.Graphics;
 using Pixel_Plumbers_Fall_2024;
 using System;
 using System.Numerics;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-public interface IFireObject : IEntity
-{
-    Boolean idleState();
-    Boolean collectedState();
-    void draw();
 
-}
-public class Fire : IFireObject
+public class Fire :IItem 
 {
     public Boolean idle;
     public Boolean collected;
@@ -22,25 +17,38 @@ public class Fire : IFireObject
     private FirePower fp;
     private SpriteBatch sB;
     private Texture2D texture;
+    private Boolean movingLeft;
+    private Boolean movingRight;
 
-    public Fire(SpriteBatch sB, Texture2D texture, Microsoft.Xna.Framework.Vector2 pos)
+    public Fire(SpriteBatch sb, Texture2D text, Microsoft.Xna.Framework.Vector2 pos)
     {
         fp = new FirePower(texture);
         idle = true;
         collected = false;
         roaming = false;
-        sB = sB;
-        texture = texture;
+        sB = sb;
+        texture = text;
         position = pos;
+        movingLeft = false;
+        movingRight = false;
     }
-    public Boolean idleState()
+    public void idling()
     {
-        return this.idle;
+        idle = true;
+        roaming = false;
+        collected = false;
     }
-    public Boolean collectedState()
+    public void collect()
     {
-
-        return this.collected;
+        collected = true;
+        roaming = false;
+        idle = false;
+    }
+    public void roams()
+    {
+        roaming = true;
+        collected = false;
+        idle = false;
     }
     public void draw()
     {
@@ -52,17 +60,43 @@ public class Fire : IFireObject
             fp = new FirePower(texture);
             fp.Draw(this.sB, position);
         }
-         if (this.roaming)
+        else if (this.roaming)
         {
 
         }
     }
-    private void destroy()
+    public void update()
     {
-        if (this.collected)
+        if (this.roaming)
         {
-            this.fp = null;
+            if (movingRight)
+            {
+                position.X++;
+            }
+            else if (movingLeft)
+            {
+                position.X--;
+            }
         }
+    }
+    public void swapDirection()
+    {
+        if (movingLeft)
+        {
+            movingLeft = false;
+            movingRight = true;
+        }
+        else if (movingRight)
+        {
+            movingRight = false;
+            movingLeft = true;
+        }
+    }
+    public void destroy()
+    {
+     
+            this.fp = null;
+    
     }
     
     

@@ -29,4 +29,5 @@ ITEM/POWERUP CONTROLS:
 
 KNOWN BUGS:
     - After crouching, Mario stays crouched after down/S is released, until he moves again
+    - Goomba2 and GoombaStateMachine2 are temporary.
     

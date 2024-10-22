@@ -70,6 +70,17 @@ public class Fireball : IProjectile
         bounceTimer = 200;
     }
 
+    /**
+     * TEMP!! Remove when ground has proper collision!
+     */
+    public void BounceAtGround()
+    {
+        if (!isBouncing && pos.Y > 400f)
+        {
+            this.Bounce();
+        }
+    }
+
     public void Remove()
     {
         game.fireballs.Remove(this);
@@ -77,6 +88,7 @@ public class Fireball : IProjectile
     public void Update(GameTime gameTime)
     {
         this.Move();
+        this.BounceAtGround();
         sprite.Update(gameTime);
     }
 

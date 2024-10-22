@@ -4,10 +4,8 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Pixel_Plumbers_Fall_2024;
 
-
-public class obstacle1 : ISprite
+public class obstacle3 : IObstacle
 {
     private Rectangle sourceRectangle;
     private Rectangle destinationRectangle;
@@ -15,20 +13,15 @@ public class obstacle1 : ISprite
     private int height;
     private Texture2D BlockTexture;
 
-    public obstacle1(Texture2D BlockTexture)
+    public obstacle3(Texture2D BlockTexture)
     {
         this.BlockTexture = BlockTexture;
     }
-
-    public void Load(GraphicsDeviceManager graphics)
-    {
-
-    }
     public void Update(GameTime gameTime)
     {
-        sourceRectangle = new Rectangle(86, 5, 80, 35);
-        width = 80;
-        height = 35;        
+        sourceRectangle = new Rectangle(230, 385, 32, 64);
+        width = 47;
+        height = 84;
     }
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
@@ -40,5 +33,9 @@ public class obstacle1 : ISprite
     public Rectangle GetDestination()
     {
         return destinationRectangle;
+    }
+    public void Load(GraphicsDeviceManager graphics)
+    {
+        throw new NotImplementedException();
     }
 }

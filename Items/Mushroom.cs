@@ -1,24 +1,20 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;
+using System.ComponentModel.Design;
 using System.ComponentModel.Design.Serialization;
+using System.Linq.Expressions;
 using System.Numerics;
 using System.Runtime.InteropServices;
 using System.Text;
-public interface IMushroomObject : IEntity
-{
-  
-    void idling();
-    void collect();
-    void roams();
-    void draw();
 
-}
-public class Mushroom : IMushroomObject
+public class Mushroom :IItem
 {
     public Boolean idle;
     public Boolean collected;
     public Boolean roaming;
+    private Boolean movingRight;
+    private Boolean movingLeft;
     private Microsoft.Xna.Framework.Vector2 position;
     private MushroomPower mp;
     private SpriteBatch sb;
@@ -28,12 +24,13 @@ public class Mushroom : IMushroomObject
     public  Mushroom(SpriteBatch sB, Texture2D texture, Microsoft.Xna.Framework.Vector2 position)
     {
         mp = new MushroomPower(texture);
-        this.idle = true;
+        this.idle = false;
         this.collected = false;
-        this.roaming = false;
+        this.roaming = true;
         this.position = position;
         this.texture = texture;
         this.sb = sB;
+        movingRight = true;
     }
     public void idling()
     {
@@ -53,25 +50,50 @@ public class Mushroom : IMushroomObject
         roaming = true;
         idle = false;
         roaming = false;
+        movingRight = true;
+        movingLeft = false;
        
     }
     public void draw()
     {
-        if (this.idle)
+        if (this.idle || this.roaming)
         {
             this.mp = new MushroomPower(texture);
             this.mp.Draw(sb, position);
+            
         }
         else if (this.collected)
         {
-
-        }
-        else if (this.roaming)
-        {
-
+            position = new Microsoft.Xna.Framework.Vector2(900, 900);
+            
         }
     }
-    private void destroy()
+    public void update()
+    {
+        if (this.roaming)
+        {
+            if (movingRight)
+            {
+                position.X++;
+            }else if (movingLeft)
+            {
+                position.X--;
+            }
+        }
+    }
+    public void swapDirection()
+    {
+        if (movingLeft){
+            movingLeft = false;
+            movingRight = true;
+        }
+        else if (movingRight)
+        {
+            movingRight = false;
+            movingLeft = true;
+        }
+    }
+    public void destroy()
     {
             this.mp = null;
       

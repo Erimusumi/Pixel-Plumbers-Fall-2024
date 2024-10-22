@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
-public class StaticBlockSprite: ISprite
+public class StaticBlockSprite: IBlock
 {
     public Texture2D texture { get; set; }
     public Rectangle rectangle { get; set; }
@@ -21,7 +21,7 @@ public class StaticBlockSprite: ISprite
     }
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
-        Rectangle destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 16, 16);
+        destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 31, 31);
         spriteBatch.Begin();
         spriteBatch.Draw(texture, destinationRectangle, rectangle, Color.White);
         spriteBatch.End();

@@ -11,13 +11,15 @@ using System.Threading.Tasks;
     private Fireball fireball;
     private ISpriteEnemy enemy;
     private List<IEntity> _entities;
+    private List<IEntity> _entitiesRemoved;
 
 
-    public EnemyFireballInteraction(Fireball _fireball, ISpriteEnemy _enemy, List<IEntity> entities)
+    public EnemyFireballInteraction(Fireball _fireball, ISpriteEnemy _enemy, List<IEntity> entities, List<IEntity> entitiesRemoved)
     {
         this.enemy = _enemy;
         this.fireball = _fireball;
         this._entities = entities;
+        this._entitiesRemoved = entitiesRemoved;
     }
     public void update()
     {
@@ -27,8 +29,9 @@ using System.Threading.Tasks;
     }
     private void removeFromList()
     {
-        _entities.Remove(enemy);
-        _entities.Remove(fireball);
+        _entitiesRemoved.Add(enemy);
+        _entitiesRemoved.Add(fireball);
+        fireball.Remove();
     }
 }
 
