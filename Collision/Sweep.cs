@@ -69,7 +69,7 @@ public class Sweep
     MarioMushroomInteraction MarioMushroomInteraction;
     MarioStarInteraction MarioStarInteraction;
     BlockFireballInteraction BlockFireballInteraction;
-    BlockInteraction MarioBlockInteraction;
+    MarioBlockInteraction MarioBlockInteraction;
     MarioObstacleInteraction MarioObstacleInteraction;
     ItemObstacleInteraction ItemObstacleInteraction;
     EnemyObstacleInteraction EnemyObstacleInteraction;
@@ -193,12 +193,12 @@ public class Sweep
         else if (item1.GetType() == typeof(Mario) && ContainsBlock(entities, index2))
         {
             //handle block interaction            
-            MarioBlockInteraction = new BlockInteraction((Mario)item1, (IBlock)item2);
+            MarioBlockInteraction = new MarioBlockInteraction((Mario)item1, (IBlock)item2);
             MarioBlockInteraction.update();
             
         } else if (ContainsBlock(entities, index1) && item2.GetType() == typeof(Mario))
         {        
-            MarioBlockInteraction = new BlockInteraction((Mario)item2, (IBlock)item1);
+            MarioBlockInteraction = new MarioBlockInteraction((Mario)item2, (IBlock)item1);
             MarioBlockInteraction.update();
             
         }
