@@ -5,7 +5,8 @@ Overall, throughout the process of working on Sprint3, we've developed and demon
 to maneuver through Github which in the past was a major struggle for us. 
 
 Achievements:
-Throughout this sprint, we focused on collisions; so things like enemy-mario interactions, mario-powerup interactions,block-mario interactions etc. We also focused 
+Throughout this sprint, we focused on a multitude of implemention which included collisions; so things like enemy-mario interactions, mario-powerup interactions,block-mario interactions etc.
+We were able to add additonal UI functionality as well as gamepad and mouse controls. We also focused 
 on getting on getting our background up and running as well as working on implementing a camera. We were able to get Mario shooting fireballs as well. 
 
 Challenges:
