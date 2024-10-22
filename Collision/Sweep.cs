@@ -144,7 +144,7 @@ public class Sweep
             MarioStarInteraction.update();
             entities.RemoveAt(index2);
         }
-        if (item1.GetType() == typeof(Fire) && item2.GetType() == typeof(Mario))
+        else if (item1.GetType() == typeof(Fire) && item2.GetType() == typeof(Mario))
         {
             MarioFirePowerInteraction = new MarioFirePowerInteraction((Mario)item2, (Fire)item1, entitiesRemoved);
             MarioFirePowerInteraction.update();
@@ -155,7 +155,7 @@ public class Sweep
             MarioFirePowerInteraction.update();
            entities.RemoveAt(index2);
         }
-        if (item1.GetType() == typeof(Mushroom) && item2.GetType() == typeof(Mario))
+        else if (item1.GetType() == typeof(Mushroom) && item2.GetType() == typeof(Mario))
         {
             MarioMushroomInteraction = new MarioMushroomInteraction((Mario)item2, (Mushroom)item1, entitiesRemoved);
             MarioMushroomInteraction.update();
@@ -169,7 +169,7 @@ public class Sweep
 
             entities.RemoveAt(index2);
         }
-        if(ContainsObstacle(entities,index1) && ContainsItem(entities, index2))
+        else if(ContainsObstacle(entities,index1) && ContainsItem(entities, index2))
         {
             ItemObstacleInteraction = new ItemObstacleInteraction((IItem)item2, (IObstacle)item1);
            ItemObstacleInteraction.update();
@@ -179,7 +179,7 @@ public class Sweep
             
         }
 
-        if (item1.GetType() == typeof(Fireball) && ContainsBlock(entities, index2))
+        else if (item1.GetType() == typeof(Fireball) && ContainsBlock(entities, index2))
         {
             BlockFireballInteraction = new BlockFireballInteraction((Fireball)item1, (IBlock)item2, entitiesRemoved);
             BlockFireballInteraction.update();
@@ -190,7 +190,7 @@ public class Sweep
             BlockFireballInteraction.update();
         }
 
-        if (item1.GetType() == typeof(Mario) && ContainsBlock(entities, index2))
+        else if (item1.GetType() == typeof(Mario) && ContainsBlock(entities, index2))
         {
             //handle block interaction            
             MarioBlockInteraction = new BlockInteraction((Mario)item1, (IBlock)item2);
