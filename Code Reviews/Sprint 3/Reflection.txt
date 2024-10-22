@@ -23,6 +23,9 @@ keeping teammates posted on what areas they might've needed assistance on as wel
 
 
 Process Improvements:
-The process of merging and Github utilities went a lot smoother than the previous sprint. 
+The process of merging and Github utilities went a lot smoother than the previous sprint. Moving forward, we will work on divying up tasks earlier on and more explicitly so that 
+there's no confusion on who's working on what. 
 
 Looking Ahead:
+Moving forward, we will work on camera scrolling, ground collisions and resolving any collision glitches that may still remain. We will also think about some more end 
+game things such as what kind of levels we will implement and any special functionality we decide to involve.
