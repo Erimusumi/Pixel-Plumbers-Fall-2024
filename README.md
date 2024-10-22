@@ -26,12 +26,6 @@ GAME CONTROLS:
 ENEMIES CONTROLS:
     - O and P keys to switch enemies
 
-BLOCKS/OBSTACLES CONTROLS:
-    - T and Y keys to switch blocks/obstacles
-
-ITEM/POWERUP CONTROLS:
-    -U and I keys switch through powerup items
-
 KNOWN BUGS:
     - Some of the hitboxes are a bit clunky
     - Mario will not fall down unless jumping
