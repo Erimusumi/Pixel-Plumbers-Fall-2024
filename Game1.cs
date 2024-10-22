@@ -59,6 +59,7 @@ public class Game1 : Game
     private IObstacle obstacle3;
     private IObstacle obstacle4;
     private IBlock OWLuckyBlockSprite;
+    private IBlock OWLuckyBlockSprite2;
     private IBlock OWUsedBlockSprite;
     private IBlock OWBrickBlockSprite;
     private IBlock OWBrokenBrickSprite;
@@ -140,12 +141,13 @@ public class Game1 : Game
         keyboardController = new KeyboardController();
         keyboardControllerMovement = new KeyboardControllerMovement();
 
-        spriteEnemy = new Goomba(480, 400);
+        spriteEnemy = new Goomba(535, 400);
         spriteEnemy2 = new Goomba2(240, 400);
         //spriteEnemy = new Koopa(480, 400);
         s = new Star(spriteBatch, ItemsTexture, new Vector2(30, 400));
         m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(30, 400));
         OWLuckyBlockSprite = new LuckyBlockSprite(block, 3, 20);
+        OWLuckyBlockSprite2 = new LuckyBlockSprite(block, 3, 20);
         OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
         OWBrokenBrickSprite = new BrokenBrickSprite(block, 4, 1);
         obstacle1 = new obstacle1(obstacle);
@@ -157,6 +159,7 @@ public class Game1 : Game
         entities.Add(mario);
         entities.Add(m);
         entities.Add(OWLuckyBlockSprite);
+        entities.Add(OWLuckyBlockSprite2);
         entities.Add(OWBrickBlockSprite);
         entities.Add(OWBrokenBrickSprite);
         entities.Add(obstacle1);
@@ -260,6 +263,7 @@ public class Game1 : Game
 
             //Update block and obstacle sprites
             OWLuckyBlockSprite.Update(gameTime);
+            OWLuckyBlockSprite2.Update(gameTime);
             OWBrickBlockSprite.Update(gameTime);
             OWBrokenBrickSprite.Update(gameTime);
             obstacle1.Update(gameTime);
@@ -318,13 +322,14 @@ public class Game1 : Game
             spriteBatch.End();
 
             // Draw blocks and obstacles
-            OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200, 200));
+            OWLuckyBlockSprite2.Draw(spriteBatch, new Vector2(200, 200));
+
             OWBrickBlockSprite.Draw(spriteBatch, new Vector2(200, 350));
             OWBrokenBrickSprite.Draw(spriteBatch, new Vector2(200+31, 350));
             OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200 + 62, 350));
             obstacle1.Draw(spriteBatch, new Vector2(350, 370));
             obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
-            obstacle3.Draw(spriteBatch, new Vector2(350+160, 335));
+            obstacle3.Draw(spriteBatch, new Vector2(350+350, 335));
         }
         base.Draw(gameTime);
     }
