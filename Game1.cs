@@ -140,7 +140,7 @@ public class Game1 : Game
         keyboardController = new KeyboardController();
         keyboardControllerMovement = new KeyboardControllerMovement();
 
-        spriteEnemy = new Goomba(480, 400);
+        spriteEnemy = new Goomba(535, 400);
         spriteEnemy2 = new Goomba2(240, 400);
         //spriteEnemy = new Koopa(480, 400);
         s = new Star(spriteBatch, ItemsTexture, new Vector2(30, 400));
@@ -324,7 +324,7 @@ public class Game1 : Game
             OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200 + 62, 350));
             obstacle1.Draw(spriteBatch, new Vector2(350, 370));
             obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
-            obstacle3.Draw(spriteBatch, new Vector2(350+160, 335));
+            obstacle3.Draw(spriteBatch, new Vector2(350+350, 335));
         }
         base.Draw(gameTime);
     }
