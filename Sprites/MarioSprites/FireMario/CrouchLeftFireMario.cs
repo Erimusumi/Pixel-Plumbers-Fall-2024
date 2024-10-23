@@ -5,6 +5,7 @@ public class CrouchLeftFireMario : IMarioSprite
 {
     private float scale = 2f;
     private Texture2D MarioTexture;
+
     public CrouchLeftFireMario(Texture2D MarioTexture)
     {
         this.MarioTexture = MarioTexture;
@@ -18,11 +19,11 @@ public class CrouchLeftFireMario : IMarioSprite
 
     public void Update(GameTime gametime)
     {
+
     }
+
     public Rectangle GetDestination(Vector2 position)
     {
         return new Rectangle((int)position.X, (int)position.Y, 16 * (int)scale, 22 * (int)scale);
-
-
     }
 }
