@@ -286,7 +286,7 @@ public class Game1 : Game
                 }
             }
         }
-        camera.Follow(mario.GetDestination(), new Vector2(graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
+        camera.Follow(mario.GetDestination(), new Vector2(graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight));
         base.Update(gameTime);
     }
 
@@ -295,9 +295,9 @@ public class Game1 : Game
         GraphicsDevice.Clear(Color.CornflowerBlue);
 
         // draw map
-        backdrop.Draw(spriteBatch, overworldTiles);
-        greenery.Draw(spriteBatch, overworldTiles);
-        foreground.Draw(spriteBatch, overworldTiles);
+        backdrop.Draw(spriteBatch, overworldTiles, camera.position);
+        greenery.Draw(spriteBatch, overworldTiles, camera.position);
+        foreground.Draw(spriteBatch, overworldTiles, camera.position);
 
         if (gameStateMachine.isCurrentStateStart())
         {

@@ -45,14 +45,14 @@ public class Layer
         }
     }
 
-    public void Draw(SpriteBatch spriteBatch, Texture2D textureAtlas)
+    public void Draw(SpriteBatch spriteBatch, Texture2D textureAtlas, Vector2 cameraPosition)
     {
         spriteBatch.Begin();
         foreach (var item in tile_array)
         {
             Rectangle drect = new(
-                (int)item.Key.X * display_tilesize,
-                (int)item.Key.Y * display_tilesize,
+                (int)(item.Key.X * display_tilesize - cameraPosition.X),
+                (int)(item.Key.Y * display_tilesize - cameraPosition.Y),
                 display_tilesize,
                 display_tilesize
             );
