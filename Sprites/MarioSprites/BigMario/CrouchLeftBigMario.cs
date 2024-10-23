@@ -5,6 +5,7 @@ public class CrouchLeftBigMario : IMarioSprite
 {
     private float scale = 2f;
     private Texture2D MarioTexture;
+    
     public CrouchLeftBigMario(Texture2D MarioTexture)
     {
         this.MarioTexture = MarioTexture;

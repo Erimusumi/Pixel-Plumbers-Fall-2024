@@ -5,18 +5,20 @@ public class MovingRightBigMario : IMarioSprite
 {
     private float scale = 2f;
     private Texture2D MarioTexture;
-    private float GameTicks;
+    private float AnimationTicks;
+    private float AnimationTimer;
     private int AnimationSpeed;
-    private int previousAnimationIndex = 0;
-    private int currentAnimationIndex = 0;
+    private int previousAnimationIndex;
+    private int currentAnimationIndex;
 
     private Rectangle[] FrameRectangles;
     public MovingRightBigMario(Texture2D MarioTexture)
     {
         this.MarioTexture = MarioTexture;
 
-        GameTicks = 0;
-        AnimationSpeed = 100;
+        AnimationTimer = 0;
+        AnimationTicks = 100;
+        AnimationSpeed = 200;
 
         FrameRectangles = new Rectangle[3];
         FrameRectangles[0] = new Rectangle(239, 52, 16, 32); // Frame 1
@@ -34,16 +36,17 @@ public class MovingRightBigMario : IMarioSprite
 
     public void Update(GameTime gameTime)
     {
-        GameTicks += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
-
-        if (GameTicks <= AnimationSpeed) return;
-
-        currentAnimationIndex = currentAnimationIndex == 1
-            ? (previousAnimationIndex == 0 ? 2 : 0)
-            : 1;
-
-        previousAnimationIndex = currentAnimationIndex;
-        GameTicks = 0;
+        if (AnimationTimer > AnimationTicks)
+        {
+            currentAnimationIndex = (currentAnimationIndex == 1) ?
+                                    (previousAnimationIndex == 0 ? 2 : 0) : 1;
+            previousAnimationIndex = currentAnimationIndex;
+            AnimationTimer = 0;
+        }
+        else
+        {
+            AnimationTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+        }
     }
 
     public Rectangle GetDestination(Vector2 position)

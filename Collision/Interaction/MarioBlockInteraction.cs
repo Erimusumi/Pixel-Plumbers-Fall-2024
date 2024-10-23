@@ -2,14 +2,14 @@
 using System;
 using System.Diagnostics;
 
-public class BlockInteraction
+public class MarioBlockInteraction
 {
     private Mario mario;
     private IBlock block;
     private Rectangle marioRect;
     private Rectangle blockRect;
 
-    public BlockInteraction(Mario mario, IBlock block)
+    public MarioBlockInteraction(Mario mario, IBlock block)
     {
         this.mario = mario;
         this.block = block;
