@@ -87,14 +87,19 @@ public class Game1 : Game
     private Layer foreground;
 
     private StartScreenText startScreenText;
+    
     // tile sheets
     private Texture2D overworldTiles;
+
+    // camera
+    private FollowCamera camera;
 
     public Game1()
     {
         graphics = new GraphicsDeviceManager(this);
         Content.RootDirectory = "Content";
         IsMouseVisible = true;
+        camera = new(Vector2.Zero);
     }
 
     public void ResetGame()
@@ -281,7 +286,7 @@ public class Game1 : Game
                 }
             }
         }
-
+        camera.Follow(mario.GetDestination(), new Vector2(graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
         base.Update(gameTime);
     }
 
