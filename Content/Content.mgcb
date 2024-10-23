@@ -49,6 +49,12 @@
 /processorParam:TextureFormat=Color
 /build:dance.png
 
+#begin Death.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Death.mp3
+
 #begin enemies.png
 /importer:TextureImporter
 /processor:TextureProcessor
