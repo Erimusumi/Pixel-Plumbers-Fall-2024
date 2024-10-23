@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 namespace Pixel_Plumbers_Fall_2024;
@@ -16,6 +17,9 @@ public class Game1 : Game
     private KeyboardController keyboardController;
     private KeyboardControllerMovement keyboardControllerMovement;
     private CommandControlCenter controlCenter;
+
+    //Music
+    Song song;
 
     private Mario mario;
     private PlayerMovementController marioMovementController;
@@ -193,7 +197,8 @@ public class Game1 : Game
     protected override void LoadContent()
     {
         spriteBatch = new SpriteBatch(GraphicsDevice);
-
+        song = Content.Load<Song>("Death");
+        MediaPlayer.Play(song);
 
         titleTexture = Content.Load<Texture2D>("supermariobros");
         marioTexture = Content.Load<Texture2D>("mario");
