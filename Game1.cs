@@ -291,7 +291,7 @@ public class Game1 : Game
                 }
             }
         }
-        camera.Follow(mario.GetDestination(), new Vector2(graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
+        camera.Follow(mario.GetDestination(), new Vector2(graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight));
         base.Update(gameTime);
     }
 
