@@ -5,7 +5,8 @@ public class MovingLeftSmallMario : IMarioSprite
 {
     private float scale = 2f;
     private Texture2D MarioTexture;
-    private float GameTicks;
+    private float AnimationTicks;
+    private float AnimationTimer;
     private int AnimationSpeed;
     private int previousAnimationIndex = 0;
     private int currentAnimationIndex = 0;
@@ -16,8 +17,9 @@ public class MovingLeftSmallMario : IMarioSprite
     {
         this.MarioTexture = MarioTexture;
 
-        GameTicks = 0;
-        AnimationSpeed = 100;
+        AnimationTimer = 0;
+        AnimationTicks = 100;
+        AnimationSpeed = 200;
 
         FrameRectangles = new Rectangle[3];
         FrameRectangles[0] = new Rectangle(150, 0, 14, 15); // Frame 1
@@ -35,16 +37,29 @@ public class MovingLeftSmallMario : IMarioSprite
 
     public void Update(GameTime gameTime)
     {
-        GameTicks += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
-
-        if (GameTicks > AnimationSpeed)
+        if (AnimationTimer > AnimationSpeed)
         {
-            currentAnimationIndex = (currentAnimationIndex == 1)
-                ? (previousAnimationIndex == 0 ? 2 : 0)
-                : 1;
-
-            previousAnimationIndex = currentAnimationIndex;
-            GameTicks = 0;
+            if (currentAnimationIndex == 1)
+            {
+                if (previousAnimationIndex == 0)
+                {
+                    currentAnimationIndex = 2;
+                }
+                else
+                {
+                    currentAnimationIndex = 0;
+                }
+                previousAnimationIndex = currentAnimationIndex;
+            }
+            else
+            {
+                currentAnimationIndex = 1;
+            }
+            AnimationTimer = 0;
+        }
+        else
+        {
+            AnimationTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
         }
     }
 
