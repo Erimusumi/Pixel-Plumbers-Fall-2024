@@ -36,11 +36,24 @@ public class MovingLeftBigMario : IMarioSprite
 
     public void Update(GameTime gameTime)
     {
-        if (AnimationTimer > AnimationTicks)
+        if (AnimationTimer > AnimationSpeed)
         {
-            currentAnimationIndex = (currentAnimationIndex == 1) ?
-                                    (previousAnimationIndex == 0 ? 2 : 0) : 1;
-            previousAnimationIndex = currentAnimationIndex;
+            if (currentAnimationIndex == 1)
+            {
+                if (previousAnimationIndex == 0)
+                {
+                    currentAnimationIndex = 2;
+                }
+                else
+                {
+                    currentAnimationIndex = 0;
+                }
+                previousAnimationIndex = currentAnimationIndex;
+            }
+            else
+            {
+                currentAnimationIndex = 1;
+            }
             AnimationTimer = 0;
         }
         else
