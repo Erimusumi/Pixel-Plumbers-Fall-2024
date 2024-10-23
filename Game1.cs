@@ -91,7 +91,7 @@ public class Game1 : Game
     private Layer foreground;
 
     private StartScreenText startScreenText;
-    
+
     // tile sheets
     private Texture2D overworldTiles;
 
@@ -231,7 +231,7 @@ public class Game1 : Game
         mushroomPower = new MushroomPower(ItemsTexture);
 
         // Initialize block and obstacle sprites
-        
+
         obstacle4 = new obstacle4(obstacle);
     }
 
@@ -252,6 +252,8 @@ public class Game1 : Game
 
             // Update Mario's state
             mario.Update(gameTime);
+            Rectangle marioBounds = mario.GetDestination();
+            camera.Follow(marioBounds, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height));
 
 
             // lucky block sprites
@@ -291,18 +293,12 @@ public class Game1 : Game
                 }
             }
         }
-        camera.Follow(mario.GetDestination(), new Vector2(graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight));
         base.Update(gameTime);
     }
 
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
-
-        // draw map
-        backdrop.Draw(spriteBatch, overworldTiles);
-        greenery.Draw(spriteBatch, overworldTiles);
-        foreground.Draw(spriteBatch, overworldTiles);
 
         if (gameStateMachine.isCurrentStateStart())
         {
@@ -311,34 +307,48 @@ public class Game1 : Game
             spriteBatch.Draw(title, new Rectangle(20, 20, 176, 88), new Rectangle(1, 60, 176, 88), Color.White);
             spriteBatch.End();
         }
+
         if (gameStateMachine.isCurrentStateRunning() || gameStateMachine.isCurrentStatePaused())
         {
-            // mari and enemy
-            //Dance.Draw(spriteBatch, DanceTexture);
-            spriteBatch.Begin();
+            spriteBatch.Begin(transformMatrix: camera.GetViewMatrix());
+
+            backdrop.Draw(spriteBatch, overworldTiles, Vector2.Zero); 
+            greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero); 
+            foreground.Draw(spriteBatch, overworldTiles, Vector2.Zero); 
+
+            // Draw entities (Mario and enemies) that move with the camera
             spriteEnemy.Draw(spriteBatch, EnemyTexture);
             spriteEnemy2.Draw(spriteBatch, EnemyTexture);
             mario.Draw(spriteBatch);
-        
 
             foreach (var item in fireballs)
             {
                 item.Draw(spriteBatch);
             }
 
-            m.draw(); //draw mush collision test
+            m.draw(); 
+
             spriteBatch.End();
 
-            // Draw blocks and obstacles
-            OWLuckyBlockSprite2.Draw(spriteBatch, new Vector2(200, 200));
 
-            OWBrickBlockSprite.Draw(spriteBatch, new Vector2(200, 350));
-            OWBrokenBrickSprite.Draw(spriteBatch, new Vector2(200+31, 350));
-            OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200 + 62, 350));
-            obstacle1.Draw(spriteBatch, new Vector2(350, 370));
-            obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
-            obstacle3.Draw(spriteBatch, new Vector2(350+350, 335));
+            // Calculate camera offset
+            float cameraOffsetX = camera.position.X;
+
+            // Draw blocks and obstacles with the camera offset
+            OWLuckyBlockSprite2.Draw(spriteBatch, new Vector2(200 - cameraOffsetX, 200));
+            OWBrickBlockSprite.Draw(spriteBatch, new Vector2(200 - cameraOffsetX, 350));
+            OWBrokenBrickSprite.Draw(spriteBatch, new Vector2(200 + 31 - cameraOffsetX, 350));
+            OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200 + 62 - cameraOffsetX, 350));
+
+            obstacle1.Draw(spriteBatch, new Vector2(350 - cameraOffsetX, 370));
+            obstacle2.Draw(spriteBatch, new Vector2(350 + 80 - cameraOffsetX, 350));
+            obstacle3.Draw(spriteBatch, new Vector2(350 + 350 - cameraOffsetX, 335));
+
         }
+
         base.Draw(gameTime);
     }
+
+
+
 }
