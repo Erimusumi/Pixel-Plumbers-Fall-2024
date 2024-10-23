@@ -5,7 +5,8 @@ public class MovingLeftFireMario : IMarioSprite
 {
     private float scale = 2f;
     private Texture2D MarioTexture;
-    private float GameTicks;
+    private float AnimationTicks;
+    private float AnimationTimer;
     private int AnimationSpeed;
     private int previousAnimationIndex = 0;
     private int currentAnimationIndex = 0;
@@ -15,8 +16,10 @@ public class MovingLeftFireMario : IMarioSprite
     {
         this.MarioTexture = MarioTexture;
 
-        GameTicks = 0;
-        AnimationSpeed = 100;
+        AnimationTimer = 0;
+        AnimationTicks = 100;
+        AnimationSpeed = 200;
+
 
         FrameRectangles = new Rectangle[3];
         FrameRectangles[0] = new Rectangle(180, 122, 16, 32); // Frame 1
@@ -34,16 +37,30 @@ public class MovingLeftFireMario : IMarioSprite
 
     public void Update(GameTime gameTime)
     {
-        GameTicks += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
-
-        if (GameTicks <= AnimationSpeed) return;
-
-        currentAnimationIndex = currentAnimationIndex == 1
-            ? (previousAnimationIndex == 0 ? 2 : 0)
-            : 1;
-
-        previousAnimationIndex = currentAnimationIndex;
-        GameTicks = 0;
+        if (AnimationTimer > AnimationSpeed)
+        {
+            if (currentAnimationIndex == 1)
+            {
+                if (previousAnimationIndex == 0)
+                {
+                    currentAnimationIndex = 2;
+                }
+                else
+                {
+                    currentAnimationIndex = 0;
+                }
+                previousAnimationIndex = currentAnimationIndex;
+            }
+            else
+            {
+                currentAnimationIndex = 1;
+            }
+            AnimationTimer = 0;
+        }
+        else
+        {
+            AnimationTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+        }
     }
 
     public Rectangle GetDestination(Vector2 position)
@@ -55,7 +72,5 @@ public class MovingLeftFireMario : IMarioSprite
             case 2:
             default: return new Rectangle((int)position.X, (int)position.Y, 16 * (int)scale, 30 * (int)scale);
         }
-
     }
-
 }

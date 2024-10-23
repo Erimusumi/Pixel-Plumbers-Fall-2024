@@ -5,6 +5,7 @@ public class IdleLeftSmallMario : IMarioSprite
 {
     private float scale = 2f;
     private Texture2D MarioTexture;
+    
     public IdleLeftSmallMario(Texture2D MarioTexture)
     {
         this.MarioTexture = MarioTexture;
@@ -18,6 +19,7 @@ public class IdleLeftSmallMario : IMarioSprite
 
     public void Update(GameTime gametime)
     {
+        
     }
 
     public Rectangle GetDestination(Vector2 position)

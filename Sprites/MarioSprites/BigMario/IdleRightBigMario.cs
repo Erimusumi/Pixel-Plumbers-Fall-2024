@@ -6,6 +6,7 @@ public class IdleRightBigMario : IMarioSprite
     private float scale = 2f;
     private Vector2 _position;
     private Texture2D MarioTexture;
+   
     public IdleRightBigMario(Texture2D MarioTexture)
     {
         this.MarioTexture = MarioTexture;
@@ -21,6 +22,7 @@ public class IdleRightBigMario : IMarioSprite
     {
 
     }
+    
     public Rectangle GetDestination(Vector2 position)
     {
         return new Rectangle((int)_position.X, (int)_position.Y, 16 * (int)scale, 32 * (int)scale);

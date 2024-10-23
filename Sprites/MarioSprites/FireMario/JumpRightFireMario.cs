@@ -5,10 +5,12 @@ public class JumpingRightFireMario : IMarioSprite
 {
     private float scale = 2f;
     private Texture2D MarioTexture;
+    
     public JumpingRightFireMario(Texture2D MarioTexture)
     {
         this.MarioTexture = MarioTexture;
     }
+
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
         Rectangle sourceRectangle = new Rectangle(362, 122, 16, 32);
@@ -17,6 +19,7 @@ public class JumpingRightFireMario : IMarioSprite
 
     public void Update(GameTime gametime)
     {
+        
     }
 
     public Rectangle GetDestination(Vector2 position)
