@@ -19,11 +19,13 @@ public class MusicStateMachine
     public MusicStateMachine(ContentManager content)
     {
         songList = new List<Song>();
-        currentSong = content.Load<Song>("Audio/Doom");
+        currentSong = content.Load<Song>("Audio/LionSin");
         songList.Add(currentSong);
         currentSong = content.Load<Song>("Audio/mario");
         songList.Add(currentSong);
         currentSong = content.Load<Song>("Audio/kirby");
+        songList.Add(currentSong);
+        currentSong = content.Load<Song>("Audio/Doom");
         songList.Add(currentSong);
     }
 

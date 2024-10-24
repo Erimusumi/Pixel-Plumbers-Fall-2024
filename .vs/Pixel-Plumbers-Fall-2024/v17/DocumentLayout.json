@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Projects\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\commands\\gamecommands\\pausegamecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:commands\\gamecommands\\pausegamecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\music\\musicstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:music\\musicstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\commands\\gamecommands\\pausegamecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:commands\\gamecommands\\pausegamecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\music\\musiccommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
@@ -47,8 +47,7 @@
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -76,13 +75,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "PauseGameCommand.cs",
               "DocumentMoniker": "C:\\Projects\\Commands\\GameCommands\\PauseGameCommand.cs",
               "RelativeDocumentMoniker": "Commands\\GameCommands\\PauseGameCommand.cs",
               "ToolTip": "C:\\Projects\\Commands\\GameCommands\\PauseGameCommand.cs",
               "RelativeToolTip": "Commands\\GameCommands\\PauseGameCommand.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAQwA8AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T23:17:26.947Z",
               "EditorCaption": ""
@@ -97,18 +96,17 @@
               "RelativeToolTip": "GameStateMachine.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T22:48:26.443Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T22:48:26.443Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MusicStateMachine.cs",
               "DocumentMoniker": "C:\\Projects\\Music\\MusicStateMachine.cs",
               "RelativeDocumentMoniker": "Music\\MusicStateMachine.cs",
               "ToolTip": "C:\\Projects\\Music\\MusicStateMachine.cs",
               "RelativeToolTip": "Music\\MusicStateMachine.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-23T22:30:37.183Z",
               "EditorCaption": ""
@@ -123,8 +121,7 @@
               "RelativeToolTip": "Music\\MusicCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T22:25:20.151Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T22:25:20.151Z"
             },
             {
               "$type": "Document",
@@ -136,8 +133,7 @@
               "RelativeToolTip": "Controllers\\GameStateControlCenter.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAQwCEAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T22:24:07.215Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T22:24:07.215Z"
             }
           ]
         }
