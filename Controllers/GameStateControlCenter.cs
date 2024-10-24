@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework.Input;
 using Pixel_Plumbers_Fall_2024;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 
 public class GameStateControlCenter
 {
@@ -9,14 +10,16 @@ public class GameStateControlCenter
     private MouseController gameMouseController;
     private Game1 game;
     private StartScreenText startScreenText;
+    private MusicStateMachine MusicStateMachine;
 
-    public GameStateControlCenter(GameStateMachine gameStateMachine, KeyboardController gameKeyboardController, MouseController gameMouseController, Game1 game, StartScreenText startScreenText)
+    public GameStateControlCenter(GameStateMachine gameStateMachine, KeyboardController gameKeyboardController, MouseController gameMouseController, Game1 game, StartScreenText startScreenText, ContentManager content)
     {
         this.gameKeyboardController = gameKeyboardController;
         this.gameMouseController = gameMouseController;
         this.gameStateMachine = gameStateMachine;
         this.game = game;
         this.startScreenText = startScreenText;
+        MusicStateMachine = new MusicStateMachine(content);
 
         InitializeCommands();
     }
@@ -27,13 +30,16 @@ public class GameStateControlCenter
         ICommand startGameCommand = new RunGameCommand(gameStateMachine);
         gameKeyboardController.addCommand(Keys.D9, startGameCommand);
 
+        ICommand musicCommand = new MusicCommand(MusicStateMachine);
+        gameKeyboardController.addCommand(Keys.M, musicCommand);
+
         ICommand quitGameCommand = new QuitGameCommand(game);
         gameKeyboardController.addCommand(Keys.Q, quitGameCommand);
 
         ICommand resetGameCommand = new ResetGameCommand(game);
         gameKeyboardController.addCommand(Keys.R, resetGameCommand);
 
-        ICommand pauseGameCommand = new PauseGameCommand(gameStateMachine);
+        ICommand pauseGameCommand = new PauseGameCommand(gameStateMachine, MusicStateMachine);
         gameKeyboardController.addCommand(Keys.D3, pauseGameCommand);
 
         ICommand startScreenCommand = new StartScreeGameCommand(gameStateMachine);
