@@ -23,6 +23,7 @@ public class Mario : IEntity
     public bool isOnGround = true;
     private bool canPowerUp = true;
     private bool canTakeDamage = true;
+    private bool moveKeyPressed = false;
 
     private const float maxSpeed = 3f;
     private const float acceleration = 0.03f;
@@ -74,6 +75,8 @@ public class Mario : IEntity
             }
         }
         */
+        moveKeyPressed = true;
+
         if (marioVelocity.X < 0f)
         {
             marioStateMachine.SetMarioTurning();
@@ -95,6 +98,8 @@ public class Mario : IEntity
 
     public void MoveLeft()
     {
+        moveKeyPressed = true;
+
         if (marioVelocity.X > 0f)
         {
             marioStateMachine.SetMarioTurning();
@@ -202,7 +207,11 @@ public class Mario : IEntity
     public void Stop()
     {
         //Cut Mario's speed when movement key is released, feels better to control
-        marioVelocity.X *= 0.3f;
+        if (!marioStateMachine.IsJumping())
+        {
+            marioVelocity.X *= 0.3f;
+        }
+        moveKeyPressed = false;
 
         if (isOnGround)
         {
@@ -227,14 +236,17 @@ public class Mario : IEntity
 
     private void SlowStopMario()
     {
-        //naturally slow down mario
-        if (marioVelocity.X > 0f)
+        if (!moveKeyPressed && !marioStateMachine.IsJumping())
         {
-            marioVelocity.X -= acceleration * 0.01f;
-        }
-        else if (marioVelocity.X < 0f)
-        {
-            marioVelocity.X += acceleration * 0.01f;
+            //naturally slow down mario
+            if (marioVelocity.X > 0f)
+            {
+                marioVelocity.X *= 0.5f;
+            }
+            else if (marioVelocity.X < 0f)
+            {
+                marioVelocity.X *= 0.5f;
+            }
         }
     
         if (Math.Abs(marioVelocity.X) < 0.025f)

@@ -79,7 +79,7 @@ namespace Pixel_Plumbers_Fall_2024
                 case MarioStateMachine.MarioMoveState.Jumping:
                     return new JumpingRightSmallMario(texture);
                 case MarioStateMachine.MarioMoveState.Turning:
-                    return new TurningRightSmallMario(texture);
+                    return new TurningLeftSmallMario(texture);
                 default:
                     return null;
             }
@@ -98,7 +98,7 @@ namespace Pixel_Plumbers_Fall_2024
                 case MarioStateMachine.MarioMoveState.Crouching:
                     return new CrouchRightBigMario(texture);
                 case MarioStateMachine.MarioMoveState.Turning:
-                    return new TurningRightBigMario(texture);
+                    return new TurningLeftBigMario(texture);
                 default:
                     return null;
             }
@@ -117,7 +117,7 @@ namespace Pixel_Plumbers_Fall_2024
                 case MarioStateMachine.MarioMoveState.Crouching:
                     return new CrouchRightFireMario(texture);
                 case MarioStateMachine.MarioMoveState.Turning:
-                    return new TurningRightFireMario(texture);
+                    return new TurningLeftFireMario(texture);
                 default:
                     return null;
             }
@@ -134,7 +134,7 @@ namespace Pixel_Plumbers_Fall_2024
                 case MarioStateMachine.MarioMoveState.Jumping:
                     return new JumpingLeftSmallMario(texture);
                 case MarioStateMachine.MarioMoveState.Turning:
-                    return new TurningLeftSmallMario(texture);
+                    return new TurningRightSmallMario(texture);
                 default:
                     return null;
             }
@@ -153,7 +153,7 @@ namespace Pixel_Plumbers_Fall_2024
                 case MarioStateMachine.MarioMoveState.Crouching:
                     return new CrouchLeftBigMario(texture);
                 case MarioStateMachine.MarioMoveState.Turning:
-                    return new TurningLeftBigMario(texture);
+                    return new TurningRightBigMario(texture);
                 default:
                     return null;
             }
@@ -172,7 +172,7 @@ namespace Pixel_Plumbers_Fall_2024
                 case MarioStateMachine.MarioMoveState.Crouching:
                     return new CrouchLeftFireMario(texture);
                 case MarioStateMachine.MarioMoveState.Turning:
-                    return new TurningLeftFireMario(texture);
+                    return new TurningRightFireMario(texture);
                 default:
                     return null;
             }
