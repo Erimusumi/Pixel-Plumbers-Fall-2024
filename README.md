@@ -1,7 +1,7 @@
 # Pixel-Plumbers-Fall-2024
 
 Mario Game 
-Sprint 3
+Sprint 2
 Pixel-Plumbers
 
 This is a replica of Mario written in C# using monogame. 
@@ -20,11 +20,15 @@ MARIO CONTROLS:
 GAME CONTROLS:
      - Click on "1 player" or "2 player" to start the game. or press 9.
      - Press R to reset the game
-     - press 3 to pause the game
+     - press P to pause the game
      - Press Q to quit the game
 
 ENEMIES CONTROLS:
     - O and P keys to switch enemies
+
+
+ITEM/POWERUP CONTROLS:
+    -U and I keys switch through powerup items
 
 KNOWN BUGS:
     - Some of the hitboxes are a bit clunky
@@ -32,4 +36,3 @@ KNOWN BUGS:
     - As of now, mario does not have the turning animation
     - Goomba2 and GoombaStateMaåchine2 are temporary.
     - For the MarioOBlock and MarioObstacle Interaction, the gravity is not applied to the mario when mario is on the top of the obstalce/block without jumping.
-    - A death animation/death state is not implemented yet
