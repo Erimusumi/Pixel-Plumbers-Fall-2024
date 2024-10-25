@@ -9,7 +9,15 @@ namespace Pixel_Plumbers_Fall_2024
 
         public static IMarioSprite UpdateMarioSprite(MarioStateMachine marioStateMachine, Texture2D texture)
         {
-            IMarioSprite newSprite = GetSpriteForFaceState(marioStateMachine, texture);
+            IMarioSprite newSprite = null;
+            //Mario being dead takes priority over all other sprites
+            if (marioStateMachine.IsDead())
+            {
+                newSprite = new DeadMario(texture);
+            }
+            else {
+                newSprite = GetSpriteForFaceState(marioStateMachine, texture);
+            }
 
             if (lastValidSprite != null && newSprite != null && newSprite.GetType() == lastValidSprite.GetType())
             {

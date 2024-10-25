@@ -30,6 +30,7 @@ public class Mario : IEntity
 
     private int fireballTimer;
     private int starTimer;
+    int marioDeathBounceIncrement;
 
     //Need Game1 reference to correctly create fireballs
     private Game1 game;
@@ -45,6 +46,7 @@ public class Mario : IEntity
         marioPosition = initialPosition;
         fireballTimer = 0;
         starTimer = 0;
+        marioDeathBounceIncrement = 20;
 
         currentMarioSprite = new IdleRightSmallMario(marioTexture);
         this.game = game;
@@ -75,6 +77,8 @@ public class Mario : IEntity
             }
         }
         */
+        if (marioStateMachine.IsDead()) return;
+
         moveKeyPressed = true;
 
         if (marioVelocity.X < 0f)
@@ -98,6 +102,8 @@ public class Mario : IEntity
 
     public void MoveLeft()
     {
+        if (marioStateMachine.IsDead()) return;
+
         moveKeyPressed = true;
 
         if (marioVelocity.X > 0f)
@@ -121,6 +127,8 @@ public class Mario : IEntity
 
     public void Jump()
     {
+        if (marioStateMachine.IsDead()) return;
+
         if (isOnGround && !marioStateMachine.IsCrouching())
         {
             marioVelocity.Y = jumpSpeed;
@@ -131,6 +139,8 @@ public class Mario : IEntity
 
     public void Crouch()
     {
+        if (marioStateMachine.IsDead()) return;
+
         if (!marioStateMachine.IsJumping())
         {
             marioStateMachine.SetMarioCrouching();
@@ -139,6 +149,8 @@ public class Mario : IEntity
 
     public void ApplyGravity(GameTime gameTime)
     {
+        if (marioStateMachine.IsDead()) return;
+
         if (!isOnGround)
         {
             marioVelocity.Y += gravity * (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -156,6 +168,8 @@ public class Mario : IEntity
 
     public void MarioPowerUp()
     {
+        if (marioStateMachine.IsDead()) return;
+
         if (!canPowerUp) return; // Prevent power-ups if not allowed
         switch (marioStateMachine.CurrentGameState)
         {
@@ -176,6 +190,8 @@ public class Mario : IEntity
 
     public void MarioTakeDamage()
     {
+        if (marioStateMachine.IsDead()) return;
+
         if (!canTakeDamage) return;
         switch (marioStateMachine.CurrentGameState)
         {
@@ -188,15 +204,26 @@ public class Mario : IEntity
                 break;
 
             case MarioStateMachine.MarioGameState.Small:
-                Console.WriteLine("Died");
+                marioStateMachine.SetMarioDead();
                 break;
         }
         canTakeDamage = false;
         Task.Delay(1000).ContinueWith(t => canTakeDamage = true); // Reset after 1 second
     }
 
+    public void MarioDeath()
+    {
+        if (marioStateMachine.IsDead())
+        {
+            marioVelocity.X = 0; marioVelocity.Y = 0;
+            marioPosition.Y -= (float)marioDeathBounceIncrement;
+            marioDeathBounceIncrement -= 1;
+        }
+    }
     public void SwapDirection()
     {
+        if (marioStateMachine.IsDead()) return;
+
         if (marioStateMachine.IsMoving())
         {
             marioStateMachine.SetMarioTurning();
@@ -206,6 +233,8 @@ public class Mario : IEntity
 
     public void Stop()
     {
+        if (marioStateMachine.IsDead()) return;
+
         //Cut Mario's speed when movement key is released, feels better to control
         if (!marioStateMachine.IsJumping())
         {
@@ -250,6 +279,8 @@ public class Mario : IEntity
 
     public void ShootFireball()
     {
+        if (marioStateMachine.IsDead()) return;
+
         if (fireballTimer > 0)
         {
             return;
@@ -268,6 +299,7 @@ public class Mario : IEntity
         marioPosition.X += marioVelocity.X;
         this.SlowStopMario();
         this.CheckStopTurningUpd();
+        this.MarioDeath();
         currentMarioSprite = MarioSpriteMachine.UpdateMarioSprite(marioStateMachine, marioTexture);
         currentMarioSprite.Update(gameTime);
         fireballTimer += -1;
@@ -287,6 +319,7 @@ public class Mario : IEntity
         marioStateMachine.Reset();                                                          // Reset Mario's state machine to the default state
         isOnGround = true;                                                                  // Set Mario as standing on the ground
         currentMarioSprite = new IdleRightSmallMario(marioTexture);                         // Set mario to small idle right again
+        marioDeathBounceIncrement = 20;
     }
 
     public Rectangle GetDestination()
