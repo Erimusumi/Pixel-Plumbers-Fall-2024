@@ -79,10 +79,9 @@ public class Game1 : Game
     public Vector2 initial_mario_position;
 
     // Start Screen
-    private ISprite StartText;
-    private SpriteFont MyFont;
-    private Texture2D title;
     Rectangle screen = new Rectangle(0, 0, 800, 480);
+    private SpriteFont startScreenFonts;
+    private SpriteFont levelScreenFonts;
 
     // map layers
     private Layer backdrop;
@@ -202,9 +201,10 @@ public class Game1 : Game
         EnemyTexture = Content.Load<Texture2D>("enemies");
         DanceTexture = Content.Load<Texture2D>("dance");
         ItemsTexture = Content.Load<Texture2D>("itemsAndPowerups");
-        MyFont = Content.Load<SpriteFont>("MyFont");
 
-        startScreenSprite = new StartScreenSprite(titleTexture, MyFont);
+        startScreenFonts= Content.Load<SpriteFont>("StartScreenFonts");
+        startScreenSprite = new StartScreenSprite(titleTexture, startScreenFonts);
+        
         // tilesheet
         overworldTiles = Content.Load<Texture2D>("OverworldTiles");
 
