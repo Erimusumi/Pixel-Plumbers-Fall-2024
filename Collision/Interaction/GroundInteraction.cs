@@ -7,5 +7,11 @@ using System.Threading.Tasks;
 
     public class GroundInteraction
 {
+    /*
+     * mario cant move down
+     * powerups can't move down
+     * enemies can't move down
+     * 
+     */
 }
 
