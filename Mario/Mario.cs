@@ -52,9 +52,10 @@ public class Mario : IEntity
 
     public void MoveRight()
     {
-        if (!marioStateMachine.IsRight())
+        /*
+        if (marioVelocity.X < 0f)
         {
-            SwapDirection();
+            marioStateMachine.SetMarioTurning();
         }
 
         if (!marioStateMachine.IsCrouching())
@@ -66,19 +67,42 @@ public class Mario : IEntity
 
             marioPosition.X += marioVelocity.X;
 
-            if (!marioStateMachine.IsJumping())
+            if (!marioStateMachine.IsJumping() && !marioStateMachine.IsTurning())
             {
                 marioStateMachine.SetMarioRight();
                 marioStateMachine.SetMarioMoving();
+            }
+        }
+        */
+        if (marioVelocity.X < 0f)
+        {
+            marioStateMachine.SetMarioTurning();
+        }
+        else if (!marioStateMachine.IsJumping() && !marioStateMachine.IsCrouching())
+        {
+            marioStateMachine.SetMarioRight();
+            marioStateMachine.SetMarioMoving();
+        }
+
+        if (!marioStateMachine.IsCrouching())
+        {
+            if (marioVelocity.X < maxSpeed)
+            {
+                marioVelocity.X += acceleration;
             }
         }
     }
 
     public void MoveLeft()
     {
-        if (marioStateMachine.IsRight())
+        if (marioVelocity.X > 0f)
         {
-            SwapDirection();
+            marioStateMachine.SetMarioTurning();
+        }
+        else if (!marioStateMachine.IsJumping() && !marioStateMachine.IsCrouching())
+        {
+            marioStateMachine.SetMarioLeft();
+            marioStateMachine.SetMarioMoving();
         }
 
         if (!marioStateMachine.IsCrouching())
@@ -86,14 +110,6 @@ public class Mario : IEntity
             if (marioVelocity.X > -maxSpeed)
             {
                 marioVelocity.X -= acceleration;
-            }
-
-            marioPosition.X += marioVelocity.X;
-
-            if (!marioStateMachine.IsJumping())
-            {
-                marioStateMachine.SetMarioLeft();
-                marioStateMachine.SetMarioMoving();
             }
         }
     }
@@ -185,10 +201,45 @@ public class Mario : IEntity
 
     public void Stop()
     {
-        marioVelocity.X = 0f;
+        //Cut Mario's speed when movement key is released, feels better to control
+        marioVelocity.X *= 0.3f;
+
         if (isOnGround)
         {
             marioStateMachine.SetMarioIdle();
+        }
+    }
+
+    private void CheckStopTurningUpd()
+    {
+        if (marioStateMachine.IsTurning())
+        {
+            if ((marioStateMachine.CurrentFaceState == MarioStateMachine.MarioFaceState.Left) && (marioVelocity.X <= 0f))
+            {
+                marioStateMachine.SetMarioLeft();
+            }
+            else if ((marioStateMachine.CurrentFaceState == MarioStateMachine.MarioFaceState.Right) && (marioVelocity.X >= 0f))
+            {
+                marioStateMachine.SetMarioRight();
+            }
+        }
+    }
+
+    private void SlowStopMario()
+    {
+        //naturally slow down mario
+        if (marioVelocity.X > 0f)
+        {
+            marioVelocity.X -= acceleration * 0.01f;
+        }
+        else if (marioVelocity.X < 0f)
+        {
+            marioVelocity.X += acceleration * 0.01f;
+        }
+    
+        if (Math.Abs(marioVelocity.X) < 0.025f)
+        {
+            marioVelocity.X = 0f;
         }
     }
 
@@ -210,6 +261,8 @@ public class Mario : IEntity
     {
         ApplyGravity(gameTime);
         marioPosition.X += marioVelocity.X;
+        this.SlowStopMario();
+        this.CheckStopTurningUpd();
         currentMarioSprite = MarioSpriteMachine.UpdateMarioSprite(marioStateMachine, marioTexture);
         currentMarioSprite.Update(gameTime);
         fireballTimer += -1;
