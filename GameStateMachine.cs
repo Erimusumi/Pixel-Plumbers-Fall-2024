@@ -88,5 +88,10 @@ public class GameStateMachine
     {
         return currentLevelState == LevelStates.LevelThree;
     }
+
+    public bool isLevelScreen()
+    {
+        return currentGameState == GameStates.Levels;
+    }
 }
 

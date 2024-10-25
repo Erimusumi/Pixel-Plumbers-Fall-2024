@@ -42,17 +42,17 @@ public class StartScreenSprite : ISprite
         spriteBatch.DrawString(MyFont, "HELP", new Vector2(360, 350), Color.White);
     }
 
-    public Rectangle GetPlayer1Region()
+    public Rectangle GetOnePlayerRectangle()
     {
         return new Rectangle((int)player1Position.X, (int)player1Position.Y, (int)MyFont.MeasureString("1 PLAYER").X * (int)scale, (int)MyFont.MeasureString("1 PLAYER").Y * (int)scale);
     }
 
-    public Rectangle GetPlayer2Region()
+    public Rectangle GetTwoPlayerRectangle()
     {
         return new Rectangle((int)player2Position.X, (int)player2Position.Y, (int)MyFont.MeasureString("2 PLAYER").X * (int)scale, (int)MyFont.MeasureString("2 PLAYER").Y * (int)scale);
     }
 
-    public Rectangle GetHelpRegion()
+    public Rectangle GetHelpRectangle()
     {
         return new Rectangle((int)helpPosition.X, (int)helpPosition.Y, (int)MyFont.MeasureString("HELP").X * (int)scale, (int)MyFont.MeasureString("HELP").Y * (int)scale);
     }

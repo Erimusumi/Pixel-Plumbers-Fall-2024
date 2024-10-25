@@ -88,7 +88,6 @@ public class Game1 : Game
     private Layer greenery;
     private Layer foreground;
 
-
     // tile sheets
     private Texture2D overworldTiles;
 
@@ -96,6 +95,7 @@ public class Game1 : Game
     private FollowCamera camera;
 
     private StartScreenSprite startScreenSprite;
+    private LevelScreenSprite levelScreenSprite;
     public Game1()
     {
         graphics = new GraphicsDeviceManager(this);
@@ -178,7 +178,6 @@ public class Game1 : Game
         controlCenter = new CommandControlCenter(this);
 
         Dance = new DancePole();
-
     }
 
     public ISpriteEnemy SetEnemy(ISpriteEnemy enemy)
@@ -202,9 +201,13 @@ public class Game1 : Game
         DanceTexture = Content.Load<Texture2D>("dance");
         ItemsTexture = Content.Load<Texture2D>("itemsAndPowerups");
 
-        startScreenFonts= Content.Load<SpriteFont>("StartScreenFonts");
+        startScreenFonts = Content.Load<SpriteFont>("StartScreenFonts");
         startScreenSprite = new StartScreenSprite(titleTexture, startScreenFonts);
-        
+        levelScreenFonts = Content.Load<SpriteFont>("LevelScreenFonts");
+        levelScreenSprite = new LevelScreenSprite(startScreenFonts);
+
+
+
         // tilesheet
         overworldTiles = Content.Load<Texture2D>("OverworldTiles");
 
@@ -219,7 +222,7 @@ public class Game1 : Game
 
         gameStateKeyboardController = new KeyboardController();
         gameStateMouseController = new MouseController();
-        gameStateControlCenter = new GameStateControlCenter(gameStateMachine, gameStateKeyboardController, gameStateMouseController, this, startScreenSprite, Content);
+        gameStateControlCenter = new GameStateControlCenter(gameStateMachine, gameStateKeyboardController, gameStateMouseController, this, startScreenSprite, levelScreenSprite, Content);
         // Reset instances initialization
         firePower = new FirePower(ItemsTexture);
         starPower = new StarPower(ItemsTexture);
@@ -300,6 +303,13 @@ public class Game1 : Game
             spriteBatch.Begin();
             startScreenSprite.Draw(spriteBatch, new Vector2(200, 200));
 
+            spriteBatch.End();
+        }
+
+        if (gameStateMachine.isLevelScreen())
+        {
+            spriteBatch.Begin();
+            levelScreenSprite.Draw(spriteBatch, new Vector2(200, 200));
             spriteBatch.End();
         }
 
