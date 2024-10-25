@@ -239,14 +239,7 @@ public class Mario : IEntity
         if (!moveKeyPressed && !marioStateMachine.IsJumping())
         {
             //naturally slow down mario
-            if (marioVelocity.X > 0f)
-            {
-                marioVelocity.X *= 0.5f;
-            }
-            else if (marioVelocity.X < 0f)
-            {
-                marioVelocity.X *= 0.5f;
-            }
+            marioVelocity.X *= 0.5f;
         }
     
         if (Math.Abs(marioVelocity.X) < 0.025f)
