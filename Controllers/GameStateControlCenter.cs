@@ -9,16 +9,16 @@ public class GameStateControlCenter
     private KeyboardController gameKeyboardController;
     private MouseController gameMouseController;
     private Game1 game;
-    private StartScreenText startScreenText;
+    private StartScreenSprite startScreenSprite;
     private MusicStateMachine MusicStateMachine;
 
-    public GameStateControlCenter(GameStateMachine gameStateMachine, KeyboardController gameKeyboardController, MouseController gameMouseController, Game1 game, StartScreenText startScreenText, ContentManager content)
+    public GameStateControlCenter(GameStateMachine gameStateMachine, KeyboardController gameKeyboardController, MouseController gameMouseController, Game1 game, StartScreenSprite startScreenSprite, ContentManager content)
     {
         this.gameKeyboardController = gameKeyboardController;
         this.gameMouseController = gameMouseController;
         this.gameStateMachine = gameStateMachine;
         this.game = game;
-        this.startScreenText = startScreenText;
+        this.startScreenSprite = startScreenSprite;
         MusicStateMachine = new MusicStateMachine(content);
 
         InitializeCommands();
@@ -50,8 +50,8 @@ public class GameStateControlCenter
         ICommand player2ClickCommand = new PrintMessageCommand("2 PLAYER");
         ICommand helpClickCommand = new PrintMessageCommand("HELP");
 
-        gameMouseController.AddCommand(startScreenText.GetPlayer1Region(), startGameCommand);
-        gameMouseController.AddCommand(startScreenText.GetPlayer2Region(), startGameCommand);
-        gameMouseController.AddCommand(startScreenText.GetHelpRegion(), helpClickCommand);
+        gameMouseController.AddCommand(startScreenSprite.GetPlayer1Region(), startGameCommand);
+        gameMouseController.AddCommand(startScreenSprite.GetPlayer2Region(), startGameCommand);
+        gameMouseController.AddCommand(startScreenSprite.GetHelpRegion(), helpClickCommand);
     }
 }

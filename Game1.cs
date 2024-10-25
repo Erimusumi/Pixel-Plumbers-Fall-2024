@@ -89,7 +89,6 @@ public class Game1 : Game
     private Layer greenery;
     private Layer foreground;
 
-    private StartScreenText startScreenText;
 
     // tile sheets
     private Texture2D overworldTiles;
@@ -97,6 +96,7 @@ public class Game1 : Game
     // camera
     private FollowCamera camera;
 
+    private StartScreenSprite startScreenSprite;
     public Game1()
     {
         graphics = new GraphicsDeviceManager(this);
@@ -203,9 +203,8 @@ public class Game1 : Game
         DanceTexture = Content.Load<Texture2D>("dance");
         ItemsTexture = Content.Load<Texture2D>("itemsAndPowerups");
         MyFont = Content.Load<SpriteFont>("MyFont");
-        StartText = new StartScreenText(MyFont);
-        title = Content.Load<Texture2D>("title");
 
+        startScreenSprite = new StartScreenSprite(titleTexture, MyFont);
         // tilesheet
         overworldTiles = Content.Load<Texture2D>("OverworldTiles");
 
@@ -218,10 +217,9 @@ public class Game1 : Game
 
         gameStateMachine = new GameStateMachine();
 
-        startScreenText = new StartScreenText(MyFont);
         gameStateKeyboardController = new KeyboardController();
         gameStateMouseController = new MouseController();
-        gameStateControlCenter = new GameStateControlCenter(gameStateMachine, gameStateKeyboardController, gameStateMouseController, this, startScreenText, Content);
+        gameStateControlCenter = new GameStateControlCenter(gameStateMachine, gameStateKeyboardController, gameStateMouseController, this, startScreenSprite, Content);
         // Reset instances initialization
         firePower = new FirePower(ItemsTexture);
         starPower = new StarPower(ItemsTexture);
@@ -300,8 +298,8 @@ public class Game1 : Game
         if (gameStateMachine.isCurrentStateStart())
         {
             spriteBatch.Begin();
-            StartText.Draw(spriteBatch, new Vector2(200, 200));
-            spriteBatch.Draw(title, new Rectangle(20, 20, 176, 88), new Rectangle(1, 60, 176, 88), Color.White);
+            startScreenSprite.Draw(spriteBatch, new Vector2(200, 200));
+
             spriteBatch.End();
         }
 
@@ -309,9 +307,9 @@ public class Game1 : Game
         {
             spriteBatch.Begin(transformMatrix: camera.GetViewMatrix());
 
-            backdrop.Draw(spriteBatch, overworldTiles, Vector2.Zero); 
-            greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero); 
-            foreground.Draw(spriteBatch, overworldTiles, Vector2.Zero); 
+            backdrop.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+            greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+            foreground.Draw(spriteBatch, overworldTiles, Vector2.Zero);
 
             // Draw entities (Mario and enemies) that move with the camera
             spriteEnemy.Draw(spriteBatch, EnemyTexture);
@@ -323,7 +321,7 @@ public class Game1 : Game
                 item.Draw(spriteBatch);
             }
 
-            m.draw(); 
+            m.draw();
 
             spriteBatch.End();
 
@@ -345,7 +343,4 @@ public class Game1 : Game
 
         base.Draw(gameTime);
     }
-
-
-
 }

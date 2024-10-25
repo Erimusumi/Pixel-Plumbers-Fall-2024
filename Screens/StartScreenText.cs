@@ -11,10 +11,7 @@ public class StartScreenText : ISprite
 
     public StartScreenText(SpriteFont spriteFont)
     {
-        this.MyFont = spriteFont;
-        player1Position = new Vector2(100, 230);
-        player2Position = new Vector2(100, 260);
-        helpPosition = new Vector2(100, 290);
+ 
     }
 
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
@@ -28,18 +25,5 @@ public class StartScreenText : ISprite
     {
     }
 
-    public Rectangle GetPlayer1Region()
-    {
-        return new Rectangle((int)player1Position.X, (int)player1Position.Y, (int)MyFont.MeasureString("1 PLAYER").X, (int)MyFont.MeasureString("1 PLAYER").Y);
-    }
 
-    public Rectangle GetPlayer2Region()
-    {
-        return new Rectangle((int)player2Position.X, (int)player2Position.Y, (int)MyFont.MeasureString("2 PLAYER").X, (int)MyFont.MeasureString("2 PLAYER").Y);
-    }
-
-    public Rectangle GetHelpRegion()
-    {
-        return new Rectangle((int)helpPosition.X, (int)helpPosition.Y, (int)MyFont.MeasureString("HELP").X, (int)MyFont.MeasureString("HELP").Y);
-    }
 }
