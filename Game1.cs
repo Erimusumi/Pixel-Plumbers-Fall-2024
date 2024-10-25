@@ -127,6 +127,8 @@ public class Game1 : Game
         controlG2 = new GoombaCommand(spriteEnemy2);
         currentItem = 0;
         fireballs.Clear();
+        mario.Reset(); 
+        camera = new(Vector2.Zero);
     }
 
     protected override void Initialize()
