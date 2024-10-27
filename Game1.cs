@@ -127,7 +127,7 @@ public class Game1 : Game
         controlG2 = new GoombaCommand(spriteEnemy2);
         currentItem = 0;
         fireballs.Clear();
-        mario.Reset(); 
+        mario.Reset();
         camera = new(Vector2.Zero);
     }
 
@@ -253,8 +253,7 @@ public class Game1 : Game
             // Update Mario's state
             mario.Update(gameTime);
             Rectangle marioBounds = mario.GetDestination();
-            camera.Follow(marioBounds, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height));
-
+            camera.Follow(mario.marioPosition, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height));
 
             // lucky block sprites
             OWLuckyBlockSprite.Update(gameTime);
@@ -323,7 +322,6 @@ public class Game1 : Game
             greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
             foreground.Draw(spriteBatch, overworldTiles, Vector2.Zero);
 
-            // Draw entities (Mario and enemies) that move with the camera
             spriteEnemy.Draw(spriteBatch, EnemyTexture);
             spriteEnemy2.Draw(spriteBatch, EnemyTexture);
             mario.Draw(spriteBatch);
@@ -334,25 +332,19 @@ public class Game1 : Game
             }
 
             m.draw();
-
             spriteBatch.End();
 
+            spriteBatch.Begin(transformMatrix: camera.GetViewMatrix());
+            OWLuckyBlockSprite2.Draw(spriteBatch, new Vector2(200, 200));
+            OWBrickBlockSprite.Draw(spriteBatch, new Vector2(200, 350));
+            OWBrokenBrickSprite.Draw(spriteBatch, new Vector2(200 + 31, 350));
+            OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200 + 62, 350));
+            obstacle1.Draw(spriteBatch, new Vector2(350, 370));
+            obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
+            obstacle3.Draw(spriteBatch, new Vector2(350 + 350, 335));
 
-            // Calculate camera offset
-            float cameraOffsetX = camera.position.X;
-
-            // Draw blocks and obstacles with the camera offset
-            OWLuckyBlockSprite2.Draw(spriteBatch, new Vector2(200 - cameraOffsetX, 200));
-            OWBrickBlockSprite.Draw(spriteBatch, new Vector2(200 - cameraOffsetX, 350));
-            OWBrokenBrickSprite.Draw(spriteBatch, new Vector2(200 + 31 - cameraOffsetX, 350));
-            OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200 + 62 - cameraOffsetX, 350));
-
-            obstacle1.Draw(spriteBatch, new Vector2(350 - cameraOffsetX, 370));
-            obstacle2.Draw(spriteBatch, new Vector2(350 + 80 - cameraOffsetX, 350));
-            obstacle3.Draw(spriteBatch, new Vector2(350 + 350 - cameraOffsetX, 335));
-
+            spriteBatch.End();
         }
-
         base.Draw(gameTime);
     }
 }

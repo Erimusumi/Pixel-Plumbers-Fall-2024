@@ -26,9 +26,7 @@ public class obstacle3 : IObstacle
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
         destinationRectangle = new Rectangle((int)position.X, (int)position.Y, width, height);
-        spriteBatch.Begin();
         spriteBatch.Draw(BlockTexture, destinationRectangle, sourceRectangle, Color.White);
-        spriteBatch.End();
     }
     public Rectangle GetDestination()
     {

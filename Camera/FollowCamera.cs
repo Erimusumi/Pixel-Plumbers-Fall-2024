@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using System;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 public class FollowCamera
@@ -10,19 +11,18 @@ public class FollowCamera
         this.position = position;
     }
 
-    public void Follow(Rectangle target, Vector2 screenSize)
+    public void Follow(Vector2 marioPosition, Vector2 screenSize)
     {
-        // Update camera position only if the target (Mario) is moving to the right
-        if (target.X > position.X + (screenSize.X / 2))
-        {
-            position.X = target.X - (screenSize.X / 2 - target.Width / 2);
-        }
-
-        // Keep the Y position fixed at 0
+        float targetX = marioPosition.X - (screenSize.X / 2);
+        position.X = Math.Max(targetX, 0);
         position.Y = 0;
-    }
 
-    // Method to get the view matrix
+        if (marioPosition.X > position.X + (screenSize.X / 2))
+        {
+            position.X = marioPosition.X - (screenSize.X / 2);
+        }
+    } 
+
     public Matrix GetViewMatrix()
     {
         return Matrix.CreateTranslation(new Vector3(-position.X, -position.Y, 0));
