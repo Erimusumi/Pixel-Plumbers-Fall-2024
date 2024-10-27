@@ -46,7 +46,7 @@ public class Mario : IEntity
         marioPosition = initialPosition;
         fireballTimer = 0;
         starTimer = 0;
-        marioDeathBounceIncrement = 20;
+        marioDeathBounceIncrement = 15;
 
         currentMarioSprite = new IdleRightSmallMario(marioTexture);
         this.game = game;
@@ -56,6 +56,8 @@ public class Mario : IEntity
     public void MoveRight()
     {
         /*
+         * Old implementation of MoveRight, keeping here in case needs to be reverted
+         * 
         if (marioVelocity.X < 0f)
         {
             marioStateMachine.SetMarioTurning();
@@ -80,15 +82,17 @@ public class Mario : IEntity
         if (marioStateMachine.IsDead()) return;
 
         moveKeyPressed = true;
-
-        if (marioVelocity.X < 0f)
+        if (!marioStateMachine.IsJumping())
         {
-            marioStateMachine.SetMarioTurning();
-        }
-        else if (!marioStateMachine.IsJumping() && !marioStateMachine.IsCrouching())
-        {
-            marioStateMachine.SetMarioRight();
-            marioStateMachine.SetMarioMoving();
+            if (marioVelocity.X < 0f)
+            {
+                marioStateMachine.SetMarioTurning();
+            }
+            else if (!marioStateMachine.IsCrouching())
+            {
+                marioStateMachine.SetMarioRight();
+                marioStateMachine.SetMarioMoving();
+            }
         }
 
         if (!marioStateMachine.IsCrouching())
@@ -106,14 +110,17 @@ public class Mario : IEntity
 
         moveKeyPressed = true;
 
-        if (marioVelocity.X > 0f)
+        if (!marioStateMachine.IsJumping())
         {
-            marioStateMachine.SetMarioTurning();
-        }
-        else if (!marioStateMachine.IsJumping() && !marioStateMachine.IsCrouching())
-        {
-            marioStateMachine.SetMarioLeft();
-            marioStateMachine.SetMarioMoving();
+            if (marioVelocity.X > 0f)
+            {
+                marioStateMachine.SetMarioTurning();
+            }
+            else if (!marioStateMachine.IsCrouching())
+            {
+                marioStateMachine.SetMarioLeft();
+                marioStateMachine.SetMarioMoving();
+            }
         }
 
         if (!marioStateMachine.IsCrouching())
@@ -236,10 +243,8 @@ public class Mario : IEntity
         if (marioStateMachine.IsDead()) return;
 
         //Cut Mario's speed when movement key is released, feels better to control
-        if (!marioStateMachine.IsJumping())
-        {
-            marioVelocity.X *= 0.3f;
-        }
+        marioVelocity.X *= 0.3f;
+        
         moveKeyPressed = false;
 
         if (isOnGround)
@@ -309,7 +314,7 @@ public class Mario : IEntity
 
     public void Draw(SpriteBatch spriteBatch)
     {
-        currentMarioSprite.Draw(spriteBatch, marioPosition);
+        currentMarioSprite.Draw(spriteBatch, marioPosition, this.HasStar());
     }
 
     public void Reset()
@@ -339,7 +344,7 @@ public class Mario : IEntity
 
     public void CollectStar()
     {
-        starTimer = 300;
+        starTimer = 450;
         marioStateMachine.SetStar();
     }
 

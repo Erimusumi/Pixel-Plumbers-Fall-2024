@@ -121,6 +121,21 @@
 #begin level1_Greenery.csv
 /copy:level1_Greenery.csv
 
+#begin level2_OWBackdrop.csv
+/copy:level2_OWBackdrop.csv
+
+#begin level2_OWForeground.csv
+/copy:level2_OWForeground.csv
+
+#begin level2_OWGreenery.csv
+/copy:level2_OWGreenery.csv
+
+#begin level2_UWBackdrop.csv
+/copy:level2_UWBackdrop.csv
+
+#begin level2_UWForeground.csv
+/copy:level2_UWForeground.csv
+
 #begin LevelScreenFonts.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
@@ -201,4 +216,16 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:title.png
+
+#begin UnderwaterTiles.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:UnderwaterTiles.png
 

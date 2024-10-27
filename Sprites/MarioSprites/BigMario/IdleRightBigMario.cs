@@ -6,16 +6,20 @@ public class IdleRightBigMario : IMarioSprite
     private float scale = 2f;
     private Vector2 _position;
     private Texture2D MarioTexture;
+    private Color tint;
    
     public IdleRightBigMario(Texture2D MarioTexture)
     {
         this.MarioTexture = MarioTexture;
     }
 
-    public void Draw(SpriteBatch spriteBatch, Vector2 position)
+    public void Draw(SpriteBatch spriteBatch, Vector2 position, bool HasStar)
     {
+        if (HasStar) { tint = Color.Magenta; }
+        else { tint = Color.White; }
+
         Rectangle sourceRectangle = new Rectangle(209, 52, 16, 32);
-        spriteBatch.Draw(MarioTexture, position, sourceRectangle, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+        spriteBatch.Draw(MarioTexture, position, sourceRectangle, tint, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
     }
 
     public void Update(GameTime gametime)

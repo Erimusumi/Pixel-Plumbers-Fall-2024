@@ -24,6 +24,7 @@ public class PlayerCommandControlCenter
         IPlayerCommand marioFireballCommand = new MarioFireballCommand(mario);
         IPlayerCommand marioPowerUpCommand = new MarioPowerUpCommand(mario);
         IPlayerCommand marioTakeDamageCommand = new MarioTakeDamageCommand(mario);
+        IPlayerCommand marioStarCommand = new MarioStarCommand(mario);
 
         playerMovementController.addCommand(Keys.Right, marioMoveRight);
         playerMovementController.addCommand(Keys.Left, marioMoveLeft);
@@ -39,5 +40,6 @@ public class PlayerCommandControlCenter
         playerMovementController.addCommand(Keys.D2, marioTakeDamageCommand);
 
         playerMovementController.addCommand(Keys.LeftShift, marioFireballCommand);
+        playerMovementController.addCommand(Keys.RightShift, marioStarCommand);
     }
 }
