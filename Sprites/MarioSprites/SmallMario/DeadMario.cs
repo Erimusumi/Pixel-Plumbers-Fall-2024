@@ -11,7 +11,7 @@ public class DeadMario : IMarioSprite
         this.MarioTexture = MarioTexture;
     }
 
-    public void Draw(SpriteBatch spriteBatch, Vector2 position)
+    public void Draw(SpriteBatch spriteBatch, Vector2 position, bool hasStar)
     {
         Rectangle sourceRectangle = new Rectangle(0, 16, 15, 14);
         spriteBatch.Draw(MarioTexture, position, sourceRectangle, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);

@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 public interface IMarioSprite
 {
-    public void Draw(SpriteBatch spriteBatch, Vector2 position);
+    public void Draw(SpriteBatch spriteBatch, Vector2 position, bool hasStar);
     public void Update(GameTime gameTime);
     public Rectangle GetDestination(Vector2 position);
 }

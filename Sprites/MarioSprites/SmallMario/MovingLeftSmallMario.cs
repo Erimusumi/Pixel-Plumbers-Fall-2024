@@ -10,6 +10,7 @@ public class MovingLeftSmallMario : IMarioSprite
     private int AnimationSpeed;
     private int previousAnimationIndex = 0;
     private int currentAnimationIndex = 0;
+    private Color tint;
 
     private Rectangle[] FrameRectangles;
 
@@ -30,9 +31,12 @@ public class MovingLeftSmallMario : IMarioSprite
         currentAnimationIndex = 1;
     }
 
-    public void Draw(SpriteBatch spriteBatch, Vector2 position)
+    public void Draw(SpriteBatch spriteBatch, Vector2 position, bool HasStar)
     {
-        spriteBatch.Draw(MarioTexture, position, FrameRectangles[currentAnimationIndex], Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+        if (HasStar) { tint = Color.Magenta; }
+        else { tint = Color.White; }
+
+        spriteBatch.Draw(MarioTexture, position, FrameRectangles[currentAnimationIndex], tint, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
     }
 
     public void Update(GameTime gameTime)
