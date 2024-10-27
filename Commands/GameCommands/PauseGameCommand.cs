@@ -4,9 +4,9 @@ using Pixel_Plumbers_Fall_2024;
 public class PauseGameCommand : ICommand
 {
     private GameStateMachine gameStateMachine;
-    private MusicStateMachine MusicStateMachine;
+    private MusicMachine MusicStateMachine;
 
-    public PauseGameCommand(GameStateMachine gameStateMachine, MusicStateMachine musicStateMachine)
+    public PauseGameCommand(GameStateMachine gameStateMachine, MusicMachine musicStateMachine)
     {
         this.gameStateMachine = gameStateMachine;
         MusicStateMachine = musicStateMachine;

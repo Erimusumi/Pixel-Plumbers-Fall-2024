@@ -31,9 +31,8 @@ public class Game1 : Game
 
     //Enemy Code
     public ISpriteEnemy spriteEnemy;
-    public IController controlG;
     public ISpriteEnemy spriteEnemy2;
-    public IController controlG2;
+    public ISpriteEnemy spriteEnemyBloop;
     Texture2D EnemyTexture;
 
     //Dance
@@ -84,12 +83,19 @@ public class Game1 : Game
     private SpriteFont levelScreenFonts;
 
     // map layers
-    private Layer backdrop;
-    private Layer greenery;
-    private Layer foreground;
+    private Layer lvl1backdrop;
+    private Layer lvl1greenery;
+    private Layer lvl1foreground;
+
+    private Layer lvl2backdrop1;
+    private Layer lvl2backdrop2;
+    private Layer lvl2greenery;
+    private Layer lvl2foreground1;
+    private Layer lvl2foreground2;
 
     // tile sheets
     private Texture2D overworldTiles;
+    private Texture2D underwaterTiles;
 
     // camera
     private FollowCamera camera;
@@ -123,8 +129,6 @@ public class Game1 : Game
         entities.Add(obstacle2);
         entities.Add(obstacle3);
 
-        controlG = new GoombaCommand(spriteEnemy);
-        controlG2 = new GoombaCommand(spriteEnemy2);
         currentItem = 0;
         fireballs.Clear();
         mario.Reset();
@@ -138,20 +142,34 @@ public class Game1 : Game
         this.sweep = new Sweep(gameTime);
 
         // map layers
-        backdrop = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Backdrop.csv");
-        greenery = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Greenery.csv");
-        foreground = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Foreground.csv");
+        lvl1backdrop = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Backdrop.csv");
+        lvl1greenery = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Greenery.csv");
+        lvl1foreground = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Foreground.csv");
+
+        lvl2backdrop1 = new Layer(32, 16, 17, Content.RootDirectory + "/level2_OWBackdrop.csv");
+        lvl2backdrop2 = new Layer(32, 16, 17, Content.RootDirectory + "/level2_UWBackdrop.csv");
+        lvl2greenery = new Layer(32, 16, 17, Content.RootDirectory + "/level2_OWGreenery.csv");
+        lvl2foreground1 = new Layer(32, 16, 17, Content.RootDirectory + "/level2_OWForeground.csv");
+        lvl2foreground2 = new Layer(32, 16, 17, Content.RootDirectory + "/level2_UWForeground.csv");
 
         // load map layers
-        backdrop.LoadLayer();
-        greenery.LoadLayer();
-        foreground.LoadLayer();
+        lvl1backdrop.LoadLayer();
+        lvl1greenery.LoadLayer();
+        lvl1foreground.LoadLayer();
+
+        lvl2backdrop1.LoadLayer();
+        lvl2backdrop2.LoadLayer();
+        lvl2greenery.LoadLayer();
+        lvl2foreground1.LoadLayer();
+        lvl2foreground2.LoadLayer();
+
 
         keyboardController = new KeyboardController();
         keyboardControllerMovement = new KeyboardControllerMovement();
 
         spriteEnemy = new Goomba(535, 400);
         spriteEnemy2 = new Goomba2(240, 400);
+        spriteEnemyBloop = new Blooper(240, 200, mario);
         //spriteEnemy = new Koopa(480, 400);
         s = new Star(spriteBatch, ItemsTexture, new Vector2(30, 400));
         m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(30, 400));
@@ -175,8 +193,6 @@ public class Game1 : Game
         entities.Add(obstacle2);
         entities.Add(obstacle3);
 
-        controlG = new GoombaCommand(spriteEnemy);
-        controlG2 = new GoombaCommand(spriteEnemy2);
         controlCenter = new CommandControlCenter(this);
 
         Dance = new DancePole();
@@ -203,6 +219,7 @@ public class Game1 : Game
         DanceTexture = Content.Load<Texture2D>("dance");
         ItemsTexture = Content.Load<Texture2D>("itemsAndPowerups");
 
+        mario = new Mario(marioTexture, gameTime, this, entities);
         startScreenFonts = Content.Load<SpriteFont>("StartScreenFonts");
         startScreenSprite = new StartScreenSprite(titleTexture, startScreenFonts);
         levelScreenFonts = Content.Load<SpriteFont>("LevelScreenFonts");
@@ -212,11 +229,11 @@ public class Game1 : Game
 
         // tilesheet
         overworldTiles = Content.Load<Texture2D>("OverworldTiles");
+        underwaterTiles = Content.Load<Texture2D>("UnderwaterTiles");
 
         block = Content.Load<Texture2D>("blocks");
         obstacle = Content.Load<Texture2D>("obstacle");
 
-        mario = new Mario(marioTexture, gameTime, this, entities);
         marioMovementController = new PlayerMovementController();
         playerCommandControlCenter = new PlayerCommandControlCenter(mario, marioMovementController);
 
@@ -265,9 +282,9 @@ public class Game1 : Game
 
             spriteEnemy.Updates();
             spriteEnemy2.Updates();
+            spriteEnemyBloop.Updates();
 
             //Dance.Updates();
-            controlG.Update();
             manager.updateCurrentItem(ref currentItem, numItems);
 
             //Update block and obstacle sprites
@@ -318,13 +335,20 @@ public class Game1 : Game
         {
             spriteBatch.Begin(transformMatrix: camera.GetViewMatrix());
 
-            backdrop.Draw(spriteBatch, overworldTiles, Vector2.Zero);
-            greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
-            foreground.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+            lvl1backdrop.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+            lvl1greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+            lvl1foreground.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+
+            //lvl2backdrop1.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+            //lvl2backdrop2.Draw(spriteBatch, underwaterTiles, Vector2.Zero);
+            //lvl2greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+            //lvl2foreground1.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+            //lvl2foreground2.Draw(spriteBatch, underwaterTiles, Vector2.Zero);
 
             spriteEnemy.Draw(spriteBatch, EnemyTexture);
             spriteEnemy2.Draw(spriteBatch, EnemyTexture);
             mario.Draw(spriteBatch);
+            spriteEnemyBloop.Draw(spriteBatch, EnemyTexture);
 
             foreach (var item in fireballs)
             {

@@ -4,10 +4,10 @@ using Pixel_Plumbers_Fall_2024;
 public class MusicCommand : ICommand
 {
     private Game1 game;
-    private MusicStateMachine MusicStateMachine;
+    private MusicMachine MusicStateMachine;
     private Song song;
 
-    public MusicCommand(MusicStateMachine MusicStateMachine)
+    public MusicCommand(MusicMachine MusicStateMachine)
     {
         this.MusicStateMachine = MusicStateMachine;
         song = MusicStateMachine.current();

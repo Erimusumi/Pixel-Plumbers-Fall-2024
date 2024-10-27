@@ -10,13 +10,13 @@ using Microsoft.Xna.Framework.Media;
 using Pixel_Plumbers_Fall_2024;
 
 
-public class MusicStateMachine
+public class MusicMachine
 {
 
     private List<Song> songList;
     private Song currentSong;
 
-    public MusicStateMachine(ContentManager content)
+    public MusicMachine(ContentManager content)
     {
         songList = new List<Song>();
         currentSong = content.Load<Song>("Audio/LionSin");

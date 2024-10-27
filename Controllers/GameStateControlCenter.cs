@@ -11,7 +11,7 @@ public class GameStateControlCenter
     private Game1 game;
     private StartScreenSprite startScreenSprite;
     private LevelScreenSprite levelScreenSprite;
-    private MusicStateMachine MusicStateMachine;
+    private MusicMachine MusicMachine;
 
     public GameStateControlCenter(GameStateMachine gameStateMachine, KeyboardController gameKeyboardController, MouseController gameMouseController, Game1 game, StartScreenSprite startScreenSprite, LevelScreenSprite levelScreenSprite, ContentManager content)
     {
@@ -21,7 +21,7 @@ public class GameStateControlCenter
         this.game = game;
         this.startScreenSprite = startScreenSprite;
         this.levelScreenSprite = levelScreenSprite;
-        MusicStateMachine = new MusicStateMachine(content);
+        MusicMachine = new MusicMachine(content);
         InitializeCommands();
     }
 
@@ -31,7 +31,7 @@ public class GameStateControlCenter
         ICommand startGameCommand = new RunGameCommand(gameStateMachine);
         gameKeyboardController.addCommand(Keys.D9, startGameCommand);
 
-        ICommand musicCommand = new MusicCommand(MusicStateMachine);
+        ICommand musicCommand = new MusicCommand(MusicMachine);
         gameKeyboardController.addCommand(Keys.M, musicCommand);
 
         ICommand quitGameCommand = new QuitGameCommand(game);
@@ -40,7 +40,7 @@ public class GameStateControlCenter
         ICommand resetGameCommand = new ResetGameCommand(game);
         gameKeyboardController.addCommand(Keys.R, resetGameCommand);
 
-        ICommand pauseGameCommand = new PauseGameCommand(gameStateMachine, MusicStateMachine);
+        ICommand pauseGameCommand = new PauseGameCommand(gameStateMachine, MusicMachine);
         gameKeyboardController.addCommand(Keys.D3, pauseGameCommand);
 
         ICommand startScreenCommand = new StartScreeGameCommand(gameStateMachine);
