@@ -1,1 +1,7 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Projects/Content/level2_OWBackdrop.csv","C:\Projects\Content\bin\DesktopGL\Content\level2_OWBackdrop.csv","CopyItem","File",14458,14458,0.002099
+"C:/Projects/Content/level2_OWForeground.csv","C:\Projects\Content\bin\DesktopGL\Content\level2_OWForeground.csv","CopyItem","File",17436,17436,0.0015234
+"C:/Projects/Content/level2_OWGreenery.csv","C:\Projects\Content\bin\DesktopGL\Content\level2_OWGreenery.csv","CopyItem","File",17310,17310,0.0030077
+"C:/Projects/Content/level2_UWBackdrop.csv","C:\Projects\Content\bin\DesktopGL\Content\level2_UWBackdrop.csv","CopyItem","File",16926,16926,0.001961
+"C:/Projects/Content/level2_UWForeground.csv","C:\Projects\Content\bin\DesktopGL\Content\level2_UWForeground.csv","CopyItem","File",17797,17797,0.0017757
+"C:/Projects/Content/UnderwaterTiles.png","C:/Projects/Content/bin/DesktopGL/Content/UnderwaterTiles.xnb","TextureProcessor","Texture2DContent",8844,149689,0.1126656
