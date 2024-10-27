@@ -50,9 +50,7 @@ public class LuckyBlockSprite: IBlock
                 width, height);
         destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 31, 31);
 
-        spriteBatch.Begin();
         spriteBatch.Draw(Texture, destinationRectangle, sourceRectangle, Color.White);
-        spriteBatch.End();
     }
     public Rectangle GetDestination()
     {
