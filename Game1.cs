@@ -206,7 +206,7 @@ public class Game1 : Game
         startScreenFonts = Content.Load<SpriteFont>("StartScreenFonts");
         startScreenSprite = new StartScreenSprite(titleTexture, startScreenFonts);
         levelScreenFonts = Content.Load<SpriteFont>("LevelScreenFonts");
-        levelScreenSprite = new LevelScreenSprite(startScreenFonts);
+        levelScreenSprite = new LevelScreenSprite(levelScreenFonts);
 
 
 

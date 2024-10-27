@@ -14,14 +14,9 @@ public class LevelScreenSprite : ISprite
     {
         this.levelScreenFonts = levelScreenFonts;
 
-        // Initialize text strings
-        string LevelOneText = "LEVEL 1";
-        string LevelTwoText = "LEVEL 2";
-        string LevelThreeText = "LEVEL 3";
-
-        LevelOneTextPosition = new Vector2(100, 200); // Position for Level 1
-        LevelTwoTextPosition = new Vector2(100, 250); // Position for Level 2
-        LevelThreeTextPosition = new Vector2(100, 300); // Position for Level 3
+        LevelOneTextPosition = new Vector2(50, 100); // Position for Level 1
+        LevelTwoTextPosition = new Vector2(50, 130); // Position for Level 2
+        LevelThreeTextPosition = new Vector2(50, 160); // Position for Level 3
     }
 
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
