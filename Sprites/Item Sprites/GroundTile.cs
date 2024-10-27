@@ -12,7 +12,7 @@ using System.Threading.Tasks;
     private Texture2D ItemTexture;
     private int width;
         private int  height;
-    //private Vector2 position;
+   
 
     public GroundTile(Texture2D ItemTexture)
     {
