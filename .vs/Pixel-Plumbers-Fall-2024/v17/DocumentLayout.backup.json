@@ -43,8 +43,7 @@
               "ViewState": "AgIAAPoAAAAAAAAAAADwv/AAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -80,8 +79,7 @@
               "RelativeToolTip": "Commands\\MarioCommands\\MarioMovementCommands\\MarioMoveRIghtCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-25T18:39:29.232Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-25T18:39:29.232Z"
             },
             {
               "$type": "Document",
@@ -93,8 +91,7 @@
               "RelativeToolTip": "Mario\\MarioSpriteMachine.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAxwA8AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T18:14:29.414Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T18:14:29.414Z"
             },
             {
               "$type": "Document",
@@ -106,8 +103,7 @@
               "RelativeToolTip": "Mario\\MarioStateMachine.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAIAAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T18:13:29.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-23T18:13:29.49Z"
             },
             {
               "$type": "Document",
