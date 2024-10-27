@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework.Input;
 using Pixel_Plumbers_Fall_2024;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 
 public class GameStateControlCenter
 {
@@ -8,16 +9,19 @@ public class GameStateControlCenter
     private KeyboardController gameKeyboardController;
     private MouseController gameMouseController;
     private Game1 game;
-    private StartScreenText startScreenText;
+    private StartScreenSprite startScreenSprite;
+    private LevelScreenSprite levelScreenSprite;
+    private MusicStateMachine MusicStateMachine;
 
-    public GameStateControlCenter(GameStateMachine gameStateMachine, KeyboardController gameKeyboardController, MouseController gameMouseController, Game1 game, StartScreenText startScreenText)
+    public GameStateControlCenter(GameStateMachine gameStateMachine, KeyboardController gameKeyboardController, MouseController gameMouseController, Game1 game, StartScreenSprite startScreenSprite, LevelScreenSprite levelScreenSprite, ContentManager content)
     {
         this.gameKeyboardController = gameKeyboardController;
         this.gameMouseController = gameMouseController;
         this.gameStateMachine = gameStateMachine;
         this.game = game;
-        this.startScreenText = startScreenText;
-
+        this.startScreenSprite = startScreenSprite;
+        this.levelScreenSprite = levelScreenSprite;
+        MusicStateMachine = new MusicStateMachine(content);
         InitializeCommands();
     }
 
@@ -27,25 +31,35 @@ public class GameStateControlCenter
         ICommand startGameCommand = new RunGameCommand(gameStateMachine);
         gameKeyboardController.addCommand(Keys.D9, startGameCommand);
 
+        ICommand musicCommand = new MusicCommand(MusicStateMachine);
+        gameKeyboardController.addCommand(Keys.M, musicCommand);
+
         ICommand quitGameCommand = new QuitGameCommand(game);
         gameKeyboardController.addCommand(Keys.Q, quitGameCommand);
 
         ICommand resetGameCommand = new ResetGameCommand(game);
         gameKeyboardController.addCommand(Keys.R, resetGameCommand);
 
-        ICommand pauseGameCommand = new PauseGameCommand(gameStateMachine);
+        ICommand pauseGameCommand = new PauseGameCommand(gameStateMachine, MusicStateMachine);
         gameKeyboardController.addCommand(Keys.D3, pauseGameCommand);
 
         ICommand startScreenCommand = new StartScreeGameCommand(gameStateMachine);
         gameKeyboardController.addCommand(Keys.D0, startScreenCommand);
 
         // Mouse commands
-        ICommand player1ClickCommand = new PrintMessageCommand("1 PLAYER");
-        ICommand player2ClickCommand = new PrintMessageCommand("2 PLAYER");
         ICommand helpClickCommand = new PrintMessageCommand("HELP");
+        gameMouseController.AddCommand(startScreenSprite.GetHelpRectangle(), helpClickCommand);
 
-        gameMouseController.AddCommand(startScreenText.GetPlayer1Region(), startGameCommand);
-        gameMouseController.AddCommand(startScreenText.GetPlayer2Region(), startGameCommand);
-        gameMouseController.AddCommand(startScreenText.GetHelpRegion(), helpClickCommand);
+        ICommand levelScreenCommand = new LevelScreenCommand(gameStateMachine);  // Shows level selection screen
+        gameMouseController.AddCommand(startScreenSprite.GetOnePlayerRectangle(), levelScreenCommand); // Single Player
+
+        ICommand levelOneCommand = new LevelOneCommand(gameStateMachine);
+        gameMouseController.AddCommand(levelScreenSprite.GetLevelOneRectangle(), levelOneCommand);
+
+        ICommand levelTwoCommand = new LevelTwoCommand(gameStateMachine);
+        gameMouseController.AddCommand(levelScreenSprite.GetLevelTwoRectangle(), levelTwoCommand);
+
+        ICommand levelThreeCommand = new LevelThreeCommand(gameStateMachine);
+        gameMouseController.AddCommand(levelScreenSprite.GetLevelThreeRectangle(), levelThreeCommand);
     }
 }

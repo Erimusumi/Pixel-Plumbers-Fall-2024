@@ -22,9 +22,7 @@ public class StaticBlockSprite: IBlock
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
         destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 31, 31);
-        spriteBatch.Begin();
         spriteBatch.Draw(texture, destinationRectangle, rectangle, Color.White);
-        spriteBatch.End();
     }
     public Rectangle GetDestination()
     {

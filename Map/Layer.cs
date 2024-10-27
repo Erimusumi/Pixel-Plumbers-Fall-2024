@@ -47,7 +47,6 @@ public class Layer
 
     public void Draw(SpriteBatch spriteBatch, Texture2D textureAtlas, Vector2 cameraPosition)
     {
-        spriteBatch.Begin();
         foreach (var item in tile_array)
         {
             Rectangle drect = new(
@@ -69,6 +68,5 @@ public class Layer
 
             spriteBatch.Draw(textureAtlas, drect, src, Color.White);
         }
-        spriteBatch.End();
     }
 }

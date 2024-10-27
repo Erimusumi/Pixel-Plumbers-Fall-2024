@@ -60,6 +60,16 @@ public class Sweep
         }
         return containsItem;
     }
+    private Boolean ContainsGround(List<IEntity> entities, int index)
+    {
+        Boolean containsGround = false;
+        Type type = entities[index].GetType();
+        if (type == typeof(Ground) )
+        {
+            containsGround = true;
+        }
+        return containsGround;
+    }
 
 
     EnemyMarioInteraction EnemyMarioInteraction;
@@ -73,6 +83,7 @@ public class Sweep
     MarioObstacleInteraction MarioObstacleInteraction;
     ItemObstacleInteraction ItemObstacleInteraction;
     EnemyObstacleInteraction EnemyObstacleInteraction;
+    MarioGroundInteraction MarioGroundInteraction;
 
     public void iterateListInteractions(List<IEntity> entities, List<IEntity> entitiesRemoved)
     {
