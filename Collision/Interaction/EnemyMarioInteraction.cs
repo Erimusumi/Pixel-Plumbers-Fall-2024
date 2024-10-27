@@ -26,10 +26,10 @@ public class EnemyMarioInteraction
             enemy.beFlipped();
             entitiesRemoved.Add(enemy);
 
-        } else if ((Overlap.Width >= Overlap.Height) && (Overlap.Width >= 10))
+        } else if (Overlap.Width >= Overlap.Height)
         {
             enemy.beStomped();
-            mario.marioVelocity.Y = 0;
+            mario.marioVelocity.Y = -450;
             entitiesRemoved.Add(enemy);
 
         } else
