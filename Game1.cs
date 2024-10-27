@@ -31,9 +31,8 @@ public class Game1 : Game
 
     //Enemy Code
     public ISpriteEnemy spriteEnemy;
-    public IController controlG;
     public ISpriteEnemy spriteEnemy2;
-    public IController controlG2;
+    public ISpriteEnemy spriteEnemyBloop;
     Texture2D EnemyTexture;
 
     //Dance
@@ -123,8 +122,6 @@ public class Game1 : Game
         entities.Add(obstacle2);
         entities.Add(obstacle3);
 
-        controlG = new GoombaCommand(spriteEnemy);
-        controlG2 = new GoombaCommand(spriteEnemy2);
         currentItem = 0;
         fireballs.Clear();
         mario.Reset();
@@ -150,8 +147,10 @@ public class Game1 : Game
         keyboardController = new KeyboardController();
         keyboardControllerMovement = new KeyboardControllerMovement();
 
+        mario = new Mario(marioTexture, gameTime, this, entities);
         spriteEnemy = new Goomba(535, 400);
         spriteEnemy2 = new Goomba2(240, 400);
+        spriteEnemyBloop = new Blooper(240, 200, mario);
         //spriteEnemy = new Koopa(480, 400);
         s = new Star(spriteBatch, ItemsTexture, new Vector2(30, 400));
         m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(30, 400));
@@ -175,8 +174,6 @@ public class Game1 : Game
         entities.Add(obstacle2);
         entities.Add(obstacle3);
 
-        controlG = new GoombaCommand(spriteEnemy);
-        controlG2 = new GoombaCommand(spriteEnemy2);
         controlCenter = new CommandControlCenter(this);
 
         Dance = new DancePole();
@@ -216,7 +213,6 @@ public class Game1 : Game
         block = Content.Load<Texture2D>("blocks");
         obstacle = Content.Load<Texture2D>("obstacle");
 
-        mario = new Mario(marioTexture, gameTime, this, entities);
         marioMovementController = new PlayerMovementController();
         playerCommandControlCenter = new PlayerCommandControlCenter(mario, marioMovementController);
 
@@ -265,9 +261,9 @@ public class Game1 : Game
 
             spriteEnemy.Updates();
             spriteEnemy2.Updates();
+            spriteEnemyBloop.Updates();
 
             //Dance.Updates();
-            controlG.Update();
             manager.updateCurrentItem(ref currentItem, numItems);
 
             //Update block and obstacle sprites
@@ -325,6 +321,7 @@ public class Game1 : Game
             spriteEnemy.Draw(spriteBatch, EnemyTexture);
             spriteEnemy2.Draw(spriteBatch, EnemyTexture);
             mario.Draw(spriteBatch);
+            spriteEnemyBloop.Draw(spriteBatch, EnemyTexture);
 
             foreach (var item in fireballs)
             {
