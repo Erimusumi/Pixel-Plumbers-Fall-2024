@@ -96,6 +96,7 @@ public class Game1 : Game
 
     // tile sheets
     private Texture2D overworldTiles;
+    private Texture2D underwaterTiles;
 
     // camera
     private FollowCamera camera;
@@ -148,10 +149,23 @@ public class Game1 : Game
         lvl1greenery = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Greenery.csv");
         lvl1foreground = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Foreground.csv");
 
+        lvl2backdrop1 = new Layer(32, 16, 17, Content.RootDirectory + "/level2_OWBackdrop.csv");
+        lvl2backdrop2 = new Layer(32, 16, 17, Content.RootDirectory + "/level2_UWBackdrop.csv");
+        lvl2greenery = new Layer(32, 16, 17, Content.RootDirectory + "/level2_OWGreenery.csv");
+        lvl2foreground1 = new Layer(32, 16, 17, Content.RootDirectory + "/level2_OWForeground.csv");
+        lvl2foreground2 = new Layer(32, 16, 17, Content.RootDirectory + "/level2_UWForeground.csv");
+
         // load map layers
         lvl1backdrop.LoadLayer();
         lvl1greenery.LoadLayer();
         lvl1foreground.LoadLayer();
+
+        lvl2backdrop1.LoadLayer();
+        lvl2backdrop2.LoadLayer();
+        lvl2greenery.LoadLayer();
+        lvl2foreground1.LoadLayer();
+        lvl2foreground2.LoadLayer();
+
 
         keyboardController = new KeyboardController();
         keyboardControllerMovement = new KeyboardControllerMovement();
@@ -218,6 +232,7 @@ public class Game1 : Game
 
         // tilesheet
         overworldTiles = Content.Load<Texture2D>("OverworldTiles");
+        underwaterTiles = Content.Load<Texture2D>("UnderwaterTiles");
 
         block = Content.Load<Texture2D>("blocks");
         obstacle = Content.Load<Texture2D>("obstacle");
@@ -327,6 +342,12 @@ public class Game1 : Game
             lvl1backdrop.Draw(spriteBatch, overworldTiles, Vector2.Zero);
             lvl1greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
             lvl1foreground.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+
+            //lvl2backdrop1.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+            //lvl2backdrop2.Draw(spriteBatch, underwaterTiles, Vector2.Zero);
+            //lvl2greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+            //lvl2foreground1.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+            //lvl2foreground2.Draw(spriteBatch, underwaterTiles, Vector2.Zero);
 
             spriteEnemy.Draw(spriteBatch, EnemyTexture);
             spriteEnemy2.Draw(spriteBatch, EnemyTexture);
