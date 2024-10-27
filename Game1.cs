@@ -84,9 +84,15 @@ public class Game1 : Game
     private SpriteFont levelScreenFonts;
 
     // map layers
-    private Layer backdrop;
-    private Layer greenery;
-    private Layer foreground;
+    private Layer lvl1backdrop;
+    private Layer lvl1greenery;
+    private Layer lvl1foreground;
+
+    private Layer lvl2backdrop1;
+    private Layer lvl2backdrop2;
+    private Layer lvl2greenery;
+    private Layer lvl2foreground1;
+    private Layer lvl2foreground2;
 
     // tile sheets
     private Texture2D overworldTiles;
@@ -138,14 +144,14 @@ public class Game1 : Game
         this.sweep = new Sweep(gameTime);
 
         // map layers
-        backdrop = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Backdrop.csv");
-        greenery = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Greenery.csv");
-        foreground = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Foreground.csv");
+        lvl1backdrop = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Backdrop.csv");
+        lvl1greenery = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Greenery.csv");
+        lvl1foreground = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Foreground.csv");
 
         // load map layers
-        backdrop.LoadLayer();
-        greenery.LoadLayer();
-        foreground.LoadLayer();
+        lvl1backdrop.LoadLayer();
+        lvl1greenery.LoadLayer();
+        lvl1foreground.LoadLayer();
 
         keyboardController = new KeyboardController();
         keyboardControllerMovement = new KeyboardControllerMovement();
@@ -318,9 +324,9 @@ public class Game1 : Game
         {
             spriteBatch.Begin(transformMatrix: camera.GetViewMatrix());
 
-            backdrop.Draw(spriteBatch, overworldTiles, Vector2.Zero);
-            greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
-            foreground.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+            lvl1backdrop.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+            lvl1greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+            lvl1foreground.Draw(spriteBatch, overworldTiles, Vector2.Zero);
 
             spriteEnemy.Draw(spriteBatch, EnemyTexture);
             spriteEnemy2.Draw(spriteBatch, EnemyTexture);
