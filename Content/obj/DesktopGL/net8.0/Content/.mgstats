@@ -1,7 +1,16 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Projects/Content/level2_OWBackdrop.csv","C:\Projects\Content\bin\DesktopGL\Content\level2_OWBackdrop.csv","CopyItem","File",14458,14458,0.002099
-"C:/Projects/Content/level2_OWForeground.csv","C:\Projects\Content\bin\DesktopGL\Content\level2_OWForeground.csv","CopyItem","File",17436,17436,0.0015234
-"C:/Projects/Content/level2_OWGreenery.csv","C:\Projects\Content\bin\DesktopGL\Content\level2_OWGreenery.csv","CopyItem","File",17310,17310,0.0030077
-"C:/Projects/Content/level2_UWBackdrop.csv","C:\Projects\Content\bin\DesktopGL\Content\level2_UWBackdrop.csv","CopyItem","File",16926,16926,0.001961
-"C:/Projects/Content/level2_UWForeground.csv","C:\Projects\Content\bin\DesktopGL\Content\level2_UWForeground.csv","CopyItem","File",17797,17797,0.0017757
-"C:/Projects/Content/UnderwaterTiles.png","C:/Projects/Content/bin/DesktopGL/Content/UnderwaterTiles.xnb","TextureProcessor","Texture2DContent",8844,149689,0.1126656
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/Audio/Doom.mp3","C:/Users/helen/source/repos/PixelPlumbers2/Content/bin/DesktopGL/Content/Audio/Doom.xnb","SongProcessor","SongContent",1617755,122,3.9158323
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/Audio/erwin.mp3","C:/Users/helen/source/repos/PixelPlumbers2/Content/bin/DesktopGL/Content/Audio/erwin.xnb","SongProcessor","SongContent",2801415,123,5.9826593
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/Audio/kirby.mp3","C:/Users/helen/source/repos/PixelPlumbers2/Content/bin/DesktopGL/Content/Audio/kirby.xnb","SongProcessor","SongContent",1327691,123,3.0886667
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/Audio/LionSin.mp3","C:/Users/helen/source/repos/PixelPlumbers2/Content/bin/DesktopGL/Content/Audio/LionSin.xnb","SongProcessor","SongContent",3073506,125,6.455677
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/Audio/mario.mp3","C:/Users/helen/source/repos/PixelPlumbers2/Content/bin/DesktopGL/Content/Audio/mario.xnb","SongProcessor","SongContent",2953134,123,6.1560187
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/Audio/rumbling.mp3","C:/Users/helen/source/repos/PixelPlumbers2/Content/bin/DesktopGL/Content/Audio/rumbling.xnb","SongProcessor","SongContent",3576311,126,8.815812
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/level2_OWBackdrop.csv","C:\Users\helen\source\repos\PixelPlumbers2\Content\bin\DesktopGL\Content\level2_OWBackdrop.csv","CopyItem","File",14458,14458,0.0057244
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/level2_OWForeground.csv","C:\Users\helen\source\repos\PixelPlumbers2\Content\bin\DesktopGL\Content\level2_OWForeground.csv","CopyItem","File",17436,17436,0.0037332
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/level2_OWGreenery.csv","C:\Users\helen\source\repos\PixelPlumbers2\Content\bin\DesktopGL\Content\level2_OWGreenery.csv","CopyItem","File",17310,17310,0.0041528
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/level2_UWBackdrop.csv","C:\Users\helen\source\repos\PixelPlumbers2\Content\bin\DesktopGL\Content\level2_UWBackdrop.csv","CopyItem","File",16926,16926,0.0032999
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/level2_UWForeground.csv","C:\Users\helen\source\repos\PixelPlumbers2\Content\bin\DesktopGL\Content\level2_UWForeground.csv","CopyItem","File",17797,17797,0.0029511
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/LevelScreenFonts.spritefont","C:/Users/helen/source/repos/PixelPlumbers2/Content/bin/DesktopGL/Content/LevelScreenFonts.xnb","FontDescriptionProcessor","SpriteFontContent",2065,21538,0.3125381
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/MyFont.spritefont","C:/Users/helen/source/repos/PixelPlumbers2/Content/bin/DesktopGL/Content/MyFont.xnb","FontDescriptionProcessor","SpriteFontContent",2065,70690,0.0485185
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/StartScreenFonts.spritefont","C:/Users/helen/source/repos/PixelPlumbers2/Content/bin/DesktopGL/Content/StartScreenFonts.xnb","FontDescriptionProcessor","SpriteFontContent",2065,70690,0.0445137
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/UnderwaterTiles.png","C:/Users/helen/source/repos/PixelPlumbers2/Content/bin/DesktopGL/Content/UnderwaterTiles.xnb","TextureProcessor","Texture2DContent",8844,149689,0.0817387
