@@ -7,12 +7,16 @@
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\map\\layer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:map\\layer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\camera\\followcamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:camera\\followcamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -172,7 +176,7 @@
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAABQBAAAAAAAAAAArwCEBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACIBAAAAAAAAAAArwDcBAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
               "IsPinned": true,
@@ -180,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Sweep.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Sweep.cs",
               "RelativeDocumentMoniker": "Collision\\Sweep.cs",
@@ -189,12 +193,11 @@
               "ViewState": "AgIAACYAAAAAAAAAAAAAwIQAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-17T06:25:31.397Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "MarioBlockInteraction.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\MarioBlockInteraction.cs",
               "RelativeDocumentMoniker": "Collision\\Interaction\\MarioBlockInteraction.cs",
@@ -206,25 +209,8 @@
               "IsPinned": true
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FollowCamera.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Camera\\FollowCamera.cs",
-              "RelativeDocumentMoniker": "Camera\\FollowCamera.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Camera\\FollowCamera.cs",
-              "RelativeToolTip": "Camera\\FollowCamera.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T18:01:33.929Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
@@ -237,6 +223,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Layer.cs",
+              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Map\\Layer.cs",
+              "RelativeDocumentMoniker": "Map\\Layer.cs",
+              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Map\\Layer.cs",
+              "RelativeToolTip": "Map\\Layer.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADUAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T18:37:50.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FollowCamera.cs",
+              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Camera\\FollowCamera.cs",
+              "RelativeDocumentMoniker": "Camera\\FollowCamera.cs",
+              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Camera\\FollowCamera.cs",
+              "RelativeToolTip": "Camera\\FollowCamera.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-23T18:01:33.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Mario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Mario\\Mario.cs",
               "RelativeDocumentMoniker": "Mario\\Mario.cs",
@@ -244,12 +255,11 @@
               "RelativeToolTip": "Mario\\Mario.cs",
               "ViewState": "AgIAAOAAAAAAAAAAAAAmwA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T18:14:24.642Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T18:14:24.642Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "EnemyMarioInteraction.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\EnemyMarioInteraction.cs",
               "RelativeDocumentMoniker": "Collision\\Interaction\\EnemyMarioInteraction.cs",
@@ -261,7 +271,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "MarioMushroomInteraction.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\MarioMushroomInteraction.cs",
               "RelativeDocumentMoniker": "Collision\\Interaction\\MarioMushroomInteraction.cs",
@@ -273,7 +283,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "OtherEnemyInteractions.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\OtherEnemyInteractions.cs",
               "RelativeDocumentMoniker": "Collision\\Interaction\\OtherEnemyInteractions.cs",
@@ -285,7 +295,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "MarioFirePowerInteraction.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\MarioFirePowerInteraction.cs",
               "RelativeDocumentMoniker": "Collision\\Interaction\\MarioFirePowerInteraction.cs",
@@ -297,7 +307,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "ItemObstacleInteraction.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\ItemObstacleInteraction.cs",
               "RelativeDocumentMoniker": "Collision\\Interaction\\ItemObstacleInteraction.cs",
@@ -309,7 +319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "EnemyFireballInteraction.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\EnemyFireballInteraction.cs",
               "RelativeDocumentMoniker": "Collision\\Interaction\\EnemyFireballInteraction.cs",
@@ -321,7 +331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "BlockFireballInteraction.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\BlockFireballInteraction.cs",
               "RelativeDocumentMoniker": "Collision\\Interaction\\BlockFireballInteraction.cs",
@@ -333,7 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "obstacle3.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\obstacle3.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\obstacle3.cs",
@@ -345,7 +355,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "obstacle4.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\obstacle4.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\obstacle4.cs",
@@ -357,7 +367,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "obstacle2.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\obstacle2.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\obstacle2.cs",
@@ -369,7 +379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "obstacle1.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\obstacle1.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\obstacle1.cs",
@@ -381,7 +391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "GoombaSprites.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Goomba\\GoombaSprites.cs",
               "RelativeDocumentMoniker": "Goomba\\GoombaSprites.cs",
@@ -393,7 +403,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "GoombaStateMachine2.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Goomba\\GoombaStateMachine2.cs",
               "RelativeDocumentMoniker": "Goomba\\GoombaStateMachine2.cs",
@@ -405,7 +415,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "GoombaStateMachine.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Goomba\\GoombaStateMachine.cs",
               "RelativeDocumentMoniker": "Goomba\\GoombaStateMachine.cs",
@@ -417,7 +427,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "Goomba.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Goomba\\Goomba.cs",
               "RelativeDocumentMoniker": "Goomba\\Goomba.cs",
@@ -429,7 +439,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Goomba2.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Goomba\\Goomba2.cs",
               "RelativeDocumentMoniker": "Goomba\\Goomba2.cs",
@@ -441,7 +451,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "StaticBlockSprite.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\StaticBlockSprite.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\StaticBlockSprite.cs",
@@ -453,7 +463,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "LuckyBlockSprite.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\LuckyBlockSprite.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\LuckyBlockSprite.cs",
@@ -465,7 +475,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "BrokenBrickSprite.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\BrokenBrickSprite.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\BrokenBrickSprite.cs",
@@ -477,7 +487,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "UnknownBlockSprite.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\UnknownBlockSprite.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\UnknownBlockSprite.cs",
@@ -489,7 +499,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "GameStateControlCenter.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Controllers\\GameStateControlCenter.cs",
               "RelativeDocumentMoniker": "Controllers\\GameStateControlCenter.cs",
@@ -501,7 +511,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "IBlock.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\IBlock.cs",
               "RelativeDocumentMoniker": "Sprites\\IBlock.cs",
@@ -513,7 +523,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "CommandControlCenter.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Controllers\\CommandControlCenter.cs",
               "RelativeDocumentMoniker": "Controllers\\CommandControlCenter.cs",
@@ -525,7 +535,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "IdleRightBigMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\BigMario\\IdleRightBigMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\BigMario\\IdleRightBigMario.cs",
@@ -537,7 +547,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "StarInteraction.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\StarInteraction.cs",
               "RelativeDocumentMoniker": "Collision\\Interaction\\StarInteraction.cs",
@@ -549,7 +559,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "MarioStateMachine.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Mario\\MarioStateMachine.cs",
               "RelativeDocumentMoniker": "Mario\\MarioStateMachine.cs",
@@ -561,7 +571,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "Sort.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Sort.cs",
               "RelativeDocumentMoniker": "Collision\\Sort.cs",
@@ -573,7 +583,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "Room1.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Dungeons-Levels\\Room1.cs",
               "RelativeDocumentMoniker": "Dungeons-Levels\\Room1.cs",
@@ -585,7 +595,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "Mushroom.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Items\\Mushroom.cs",
               "RelativeDocumentMoniker": "Items\\Mushroom.cs",
@@ -597,7 +607,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "FireballSprite.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Projectile\\FireballSprite.cs",
               "RelativeDocumentMoniker": "Projectile\\FireballSprite.cs",
@@ -609,7 +619,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "Fire.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Items\\Fire.cs",
               "RelativeDocumentMoniker": "Items\\Fire.cs",
@@ -621,7 +631,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "FirePower.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Item Sprites\\FirePower.cs",
               "RelativeDocumentMoniker": "Sprites\\Item Sprites\\FirePower.cs",
@@ -633,7 +643,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "IEntity.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\IEntity.cs",
               "RelativeDocumentMoniker": "Sprites\\IEntity.cs",
