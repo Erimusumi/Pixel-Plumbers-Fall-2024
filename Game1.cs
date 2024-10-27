@@ -79,16 +79,14 @@ public class Game1 : Game
     public Vector2 initial_mario_position;
 
     // Start Screen
-    private ISprite StartText;
-    private SpriteFont MyFont;
-    private Texture2D title;
     Rectangle screen = new Rectangle(0, 0, 800, 480);
+    private SpriteFont startScreenFonts;
+    private SpriteFont levelScreenFonts;
 
     // map layers
     private Layer backdrop;
     private Layer greenery;
     private Layer foreground;
-
 
     // tile sheets
     private Texture2D overworldTiles;
@@ -97,6 +95,7 @@ public class Game1 : Game
     private FollowCamera camera;
 
     private StartScreenSprite startScreenSprite;
+    private LevelScreenSprite levelScreenSprite;
     public Game1()
     {
         graphics = new GraphicsDeviceManager(this);
@@ -128,6 +127,8 @@ public class Game1 : Game
         controlG2 = new GoombaCommand(spriteEnemy2);
         currentItem = 0;
         fireballs.Clear();
+        mario.Reset();
+        camera = new(Vector2.Zero);
     }
 
     protected override void Initialize()
@@ -179,7 +180,6 @@ public class Game1 : Game
         controlCenter = new CommandControlCenter(this);
 
         Dance = new DancePole();
-
     }
 
     public ISpriteEnemy SetEnemy(ISpriteEnemy enemy)
@@ -202,9 +202,14 @@ public class Game1 : Game
         EnemyTexture = Content.Load<Texture2D>("enemies");
         DanceTexture = Content.Load<Texture2D>("dance");
         ItemsTexture = Content.Load<Texture2D>("itemsAndPowerups");
-        MyFont = Content.Load<SpriteFont>("MyFont");
 
-        startScreenSprite = new StartScreenSprite(titleTexture, MyFont);
+        startScreenFonts = Content.Load<SpriteFont>("StartScreenFonts");
+        startScreenSprite = new StartScreenSprite(titleTexture, startScreenFonts);
+        levelScreenFonts = Content.Load<SpriteFont>("LevelScreenFonts");
+        levelScreenSprite = new LevelScreenSprite(levelScreenFonts);
+
+
+
         // tilesheet
         overworldTiles = Content.Load<Texture2D>("OverworldTiles");
 
@@ -219,7 +224,7 @@ public class Game1 : Game
 
         gameStateKeyboardController = new KeyboardController();
         gameStateMouseController = new MouseController();
-        gameStateControlCenter = new GameStateControlCenter(gameStateMachine, gameStateKeyboardController, gameStateMouseController, this, startScreenSprite, Content);
+        gameStateControlCenter = new GameStateControlCenter(gameStateMachine, gameStateKeyboardController, gameStateMouseController, this, startScreenSprite, levelScreenSprite, Content);
         // Reset instances initialization
         firePower = new FirePower(ItemsTexture);
         starPower = new StarPower(ItemsTexture);
@@ -248,8 +253,7 @@ public class Game1 : Game
             // Update Mario's state
             mario.Update(gameTime);
             Rectangle marioBounds = mario.GetDestination();
-            camera.Follow(marioBounds, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height));
-
+            camera.Follow(mario.marioPosition, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height));
 
             // lucky block sprites
             OWLuckyBlockSprite.Update(gameTime);
@@ -303,6 +307,13 @@ public class Game1 : Game
             spriteBatch.End();
         }
 
+        if (gameStateMachine.isLevelScreen())
+        {
+            spriteBatch.Begin();
+            levelScreenSprite.Draw(spriteBatch, new Vector2(200, 200));
+            spriteBatch.End();
+        }
+
         if (gameStateMachine.isCurrentStateRunning() || gameStateMachine.isCurrentStatePaused())
         {
             spriteBatch.Begin(transformMatrix: camera.GetViewMatrix());
@@ -311,7 +322,6 @@ public class Game1 : Game
             greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
             foreground.Draw(spriteBatch, overworldTiles, Vector2.Zero);
 
-            // Draw entities (Mario and enemies) that move with the camera
             spriteEnemy.Draw(spriteBatch, EnemyTexture);
             spriteEnemy2.Draw(spriteBatch, EnemyTexture);
             mario.Draw(spriteBatch);
@@ -322,25 +332,19 @@ public class Game1 : Game
             }
 
             m.draw();
-
             spriteBatch.End();
 
+            spriteBatch.Begin(transformMatrix: camera.GetViewMatrix());
+            OWLuckyBlockSprite2.Draw(spriteBatch, new Vector2(200, 200));
+            OWBrickBlockSprite.Draw(spriteBatch, new Vector2(200, 350));
+            OWBrokenBrickSprite.Draw(spriteBatch, new Vector2(200 + 31, 350));
+            OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200 + 62, 350));
+            obstacle1.Draw(spriteBatch, new Vector2(350, 370));
+            obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
+            obstacle3.Draw(spriteBatch, new Vector2(350 + 350, 335));
 
-            // Calculate camera offset
-            float cameraOffsetX = camera.position.X;
-
-            // Draw blocks and obstacles with the camera offset
-            OWLuckyBlockSprite2.Draw(spriteBatch, new Vector2(200 - cameraOffsetX, 200));
-            OWBrickBlockSprite.Draw(spriteBatch, new Vector2(200 - cameraOffsetX, 350));
-            OWBrokenBrickSprite.Draw(spriteBatch, new Vector2(200 + 31 - cameraOffsetX, 350));
-            OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200 + 62 - cameraOffsetX, 350));
-
-            obstacle1.Draw(spriteBatch, new Vector2(350 - cameraOffsetX, 370));
-            obstacle2.Draw(spriteBatch, new Vector2(350 + 80 - cameraOffsetX, 350));
-            obstacle3.Draw(spriteBatch, new Vector2(350 + 350 - cameraOffsetX, 335));
-
+            spriteBatch.End();
         }
-
         base.Draw(gameTime);
     }
 }

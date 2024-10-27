@@ -69,9 +69,7 @@ public class UnknownBlockSprite : IBlock
             31
         );
 
-        spriteBatch.Begin();
         spriteBatch.Draw(Texture, destinationRectangle, sourceRectangle, Color.White);
-        spriteBatch.End();
     }
     public Rectangle GetDestination()
     {
