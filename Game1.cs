@@ -153,7 +153,6 @@ public class Game1 : Game
         keyboardController = new KeyboardController();
         keyboardControllerMovement = new KeyboardControllerMovement();
 
-        mario = new Mario(marioTexture, gameTime, this, entities);
         spriteEnemy = new Goomba(535, 400);
         spriteEnemy2 = new Goomba2(240, 400);
         spriteEnemyBloop = new Blooper(240, 200, mario);
@@ -206,6 +205,7 @@ public class Game1 : Game
         DanceTexture = Content.Load<Texture2D>("dance");
         ItemsTexture = Content.Load<Texture2D>("itemsAndPowerups");
 
+        mario = new Mario(marioTexture, gameTime, this, entities);
         startScreenFonts = Content.Load<SpriteFont>("StartScreenFonts");
         startScreenSprite = new StartScreenSprite(titleTexture, startScreenFonts);
         levelScreenFonts = Content.Load<SpriteFont>("LevelScreenFonts");
