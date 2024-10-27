@@ -82,15 +82,17 @@ public class Mario : IEntity
         if (marioStateMachine.IsDead()) return;
 
         moveKeyPressed = true;
-
-        if (marioVelocity.X < 0f)
+        if (!marioStateMachine.IsJumping())
         {
-            marioStateMachine.SetMarioTurning();
-        }
-        else if (!marioStateMachine.IsJumping() && !marioStateMachine.IsCrouching())
-        {
-            marioStateMachine.SetMarioRight();
-            marioStateMachine.SetMarioMoving();
+            if (marioVelocity.X < 0f)
+            {
+                marioStateMachine.SetMarioTurning();
+            }
+            else if (!marioStateMachine.IsCrouching())
+            {
+                marioStateMachine.SetMarioRight();
+                marioStateMachine.SetMarioMoving();
+            }
         }
 
         if (!marioStateMachine.IsCrouching())
@@ -108,14 +110,17 @@ public class Mario : IEntity
 
         moveKeyPressed = true;
 
-        if (marioVelocity.X > 0f)
+        if (!marioStateMachine.IsJumping())
         {
-            marioStateMachine.SetMarioTurning();
-        }
-        else if (!marioStateMachine.IsJumping() && !marioStateMachine.IsCrouching())
-        {
-            marioStateMachine.SetMarioLeft();
-            marioStateMachine.SetMarioMoving();
+            if (marioVelocity.X > 0f)
+            {
+                marioStateMachine.SetMarioTurning();
+            }
+            else if (!marioStateMachine.IsCrouching())
+            {
+                marioStateMachine.SetMarioLeft();
+                marioStateMachine.SetMarioMoving();
+            }
         }
 
         if (!marioStateMachine.IsCrouching())
@@ -238,10 +243,8 @@ public class Mario : IEntity
         if (marioStateMachine.IsDead()) return;
 
         //Cut Mario's speed when movement key is released, feels better to control
-        if (!marioStateMachine.IsJumping())
-        {
-            marioVelocity.X *= 0.3f;
-        }
+        marioVelocity.X *= 0.3f;
+        
         moveKeyPressed = false;
 
         if (isOnGround)
