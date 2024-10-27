@@ -268,6 +268,7 @@ public class Game1 : Game
             marioMovementController.Update();
 
             // Update Mario's state
+            mario.isOnGround = false;
             mario.Update(gameTime);
             Rectangle marioBounds = mario.GetDestination();
             camera.Follow(mario.marioPosition, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height));
