@@ -27,6 +27,10 @@ public class MusicStateMachine
         songList.Add(currentSong);
         currentSong = content.Load<Song>("Audio/Doom");
         songList.Add(currentSong);
+        currentSong = content.Load<Song>("Audio/rumbling");
+        songList.Add(currentSong);
+        currentSong = content.Load<Song>("Audio/erwin");
+        songList.Add(currentSong);
     }
 
     public Song current()
