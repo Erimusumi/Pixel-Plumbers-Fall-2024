@@ -32,7 +32,7 @@ public class MovingRightFireMario : IMarioSprite
 
     public void Draw(SpriteBatch spriteBatch, Vector2 position, bool HasStar)
     {
-        if (HasStar) { tint = Color.Magenta; }
+        if (HasStar) { tint = Color.Pink; }
         else { tint = Color.White; }
 
         spriteBatch.Draw(MarioTexture, position, FrameRectangles[currentAnimationIndex], tint, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);

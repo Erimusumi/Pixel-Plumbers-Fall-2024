@@ -16,6 +16,24 @@ public class HudLevel : IHudElement
         levelNum = startLevel;
     }
 
+    public void ChangeWorld(int newWorldNum)
+    {
+        this.worldNum = newWorldNum;
+    }
+    public void ChangeLevel(int newLevelNum)
+    {
+        this.levelNum = newLevelNum;
+    }
+
+    public int GetLevel()
+    {
+        return this.levelNum;
+    }
+
+    public int GetWorld()
+    {
+        return this.worldNum;
+    }
     public void Update(GameTime gameTime)
     {
 

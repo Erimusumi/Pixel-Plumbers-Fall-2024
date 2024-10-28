@@ -14,6 +14,25 @@ public class HudLives : IHudElement
         numLives = startLives;
     }
 
+    public void AddLife()
+    {
+        numLives += 1;
+    }
+
+    public void LoseLife()
+    {
+        numLives -= 1;
+    }
+
+    public int GetNumLives()
+    {
+        return numLives;
+    }
+
+    public void SetNumLives(int newNumLives)
+    {
+        numLives = newNumLives;
+    }
     public void Update(GameTime gameTime)
     {
 

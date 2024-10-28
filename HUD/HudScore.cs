@@ -14,6 +14,19 @@ public class HudScore : IHudElement
         numScore = startScore;
     }
 
+    public void AddScore(int scoreAmt)
+    {
+        numScore += scoreAmt;
+    }
+
+    public int GetScore()
+    {
+        return numScore;
+    }
+    public void SetScore(int scoreAmt)
+    {
+        numScore = scoreAmt;
+    }
     public void Update(GameTime gameTime)
     {
 
