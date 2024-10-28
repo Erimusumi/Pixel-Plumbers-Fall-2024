@@ -20,58 +20,80 @@ public class BlooperSprites
     private Rectangle sourceRectangle;
     private Rectangle destinationRectangle;
     private Rectangle marioDestination;
-    private int counter = -1;
-    private int counter2 = 0;
     private int counterLR = 0;
-
-    private const int countStart = 10;
-    private const int countMod = 10;
+    private int counter = 0;
 
     private const int height = 16;
     private int width = 16;
     private const int scaleUp = 2;
     private const int speed = 1;
 
-    private int ground = 400;
+    private int minFall = 336;
+    private int maxRise = 100;
 
     private float rotation = 0f;
 
-    private void Rise()
-    {
-        width = 16;
-        sourceRectangle = new Rectangle(390, 4, height, width);
-        posY -= 1;
-        if ((counter2 > 0) && (counter2 <= countStart))
-        {
-            if (counterLR == 1)
-            {
-                position -= speed;
-            }
-            else if (counterLR == 2)
-            {
-                position += speed;
-            }
-        }
-    }
-
-    private void Fall()
+    public void Rise()
     {
         width = 24;
         sourceRectangle = new Rectangle(420, 0, height, width);
-        posY += 1;
+        posY -= 1;
+        if (counterLR == 1)
+        {
+            position -= speed;
+        }
+        else if (counterLR == 2)
+        {
+            position += speed;
+        }
+
+        destinationRectangle = new Rectangle(position, posY, height * scaleUp, width * scaleUp);
     }
 
-    private void Idle()
+    public void Fall()
+    {
+        width = 16;
+        sourceRectangle = new Rectangle(390, 4, height, width);
+        posY += 1;
+        destinationRectangle = new Rectangle(position, posY, height * scaleUp, width * scaleUp);
+    }
+
+    public void Idle()
     {
         counter++;
-        if (counter < 85)
+        int posYBalance = 170-(minFall-posY);
+        if (counter < posYBalance)
         {
             Rise();
-        } else
+        }
+        else
         {
             Fall();
         }
-        if (counter == 170)
+        /*
+        if (posY + 85 > minFall)
+        {
+            if (counter < posYBalance)
+            {
+                Rise();
+            }
+            else
+            {
+                Fall();
+            }
+        }else
+        {
+            if (counter < 85)
+            {
+                Fall();
+            }
+            else
+            {
+                Rise();
+            }
+        }
+        */
+        if (counter >= 170)
         {
             counter = 0;
         }
@@ -80,51 +102,24 @@ public class BlooperSprites
 
     public void LeftLogic()
     {
-        //marioDestination = mario.GetDestination();
-        counter2++;
         counterLR = 1;
-        if (counter2 > countStart)
-        {
-            counter2 = 0;
-        }
         Idle();
+        counterLR = 0;
     }
     public void RightLogic()
     {
-        counter2++;
         counterLR = 2;
-        if (counter2 > countStart)
-        {
-            counter2 = 0;
-        }
         Idle();
+        counterLR = 0;
     }
     public void StompedLogic()
     {
-
     }
     public void FlippedLogic()
     {
         rotation = 3.1415926535f;
-        counter++;
-        if (counter == 0)
-        {
-            width = 16;
-            sourceRectangle = new Rectangle(0, 4, height, width);
-        }
-        if (counter >= countStart)
-        {
-            if (counter % countMod < (countMod / 2))
-            {
-                width = 24;
-                sourceRectangle = new Rectangle(30, 4, height, width);
-            }
-            else
-            {
-                width = 16;
-                sourceRectangle = new Rectangle(0, 4, height, width);
-            }
-        }
+        width = 24;
+        sourceRectangle = new Rectangle(420, 0, height, width);
     }
     public Rectangle GetDestination()
     {
