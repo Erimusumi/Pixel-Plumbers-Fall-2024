@@ -14,7 +14,7 @@ public class TurningRightSmallMario : IMarioSprite
 
     public void Draw(SpriteBatch spriteBatch, Vector2 position, bool HasStar)
     {
-        if (HasStar) { tint = Color.Magenta; }
+        if (HasStar) { tint = Color.Pink; }
         else { tint = Color.White; }
 
         Rectangle sourceRectangle = new Rectangle(331, 0, 14, 16);
