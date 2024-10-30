@@ -5,13 +5,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Formats.Asn1.AsnWriter;
 
 public class HudCoins : IHudElement
 {
+    private const float scale = 0.6f;
+    private Vector2 screenPos;
     private int numCoins;
-    public HudCoins(int startCoins)
+    private SpriteFont _font;
+    public HudCoins(int startCoins, SpriteFont font)
     {
         numCoins = startCoins;
+        _font = font;
     }
 
     public bool CollectCoin()
@@ -40,13 +45,13 @@ public class HudCoins : IHudElement
     {
         numCoins = newNumCoins;
     }
-    public void Update(GameTime gameTime)
+    public void Update(GameTime gameTime, FollowCamera camera)
     {
-
+        screenPos = camera.position;
     }
 
     public void Draw(SpriteBatch sb)
     {
-
+        sb.DrawString(_font, "COINS:", new Vector2(screenPos.X + 170, screenPos.Y + 10), Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
     }
 }

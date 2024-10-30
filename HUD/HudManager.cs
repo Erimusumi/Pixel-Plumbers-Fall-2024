@@ -14,22 +14,25 @@ public class HudManager
     private HudScore HudScore;
     private HudTime HudTime;
 
-    public HudManager()
+    private SpriteFont _font;
+
+    public HudManager(SpriteFont font)
     {
-        this.HudCoins = new HudCoins(0);
-        this.HudLevel = new HudLevel(1, 1);
-        this.HudLives = new HudLives(3);
-        this.HudScore = new HudScore(0);
-        this.HudTime = new HudTime(500);
+        this._font = font;
+        this.HudCoins = new HudCoins(0, _font);
+        this.HudLevel = new HudLevel(1, 1, _font);
+        this.HudLives = new HudLives(3, _font);
+        this.HudScore = new HudScore(0, _font);
+        this.HudTime = new HudTime(500, _font);
     }
 
-    public void Update(GameTime gameTime)
+    public void Update(GameTime gameTime, FollowCamera camera)
     {
-        this.HudCoins.Update(gameTime);
-        this.HudLevel.Update(gameTime);
-        this.HudLives.Update(gameTime);
-        this.HudScore.Update(gameTime);
-        this.HudTime.Update(gameTime);
+        this.HudCoins.Update(gameTime, camera);
+        this.HudLevel.Update(gameTime, camera);
+        this.HudLives.Update(gameTime, camera);
+        this.HudScore.Update(gameTime, camera);
+        this.HudTime.Update(gameTime, camera);
     }
 
     public void Draw(SpriteBatch sb)

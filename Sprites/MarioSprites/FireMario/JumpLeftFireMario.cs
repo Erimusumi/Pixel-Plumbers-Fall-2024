@@ -14,7 +14,7 @@ public class JumpingLeftFireMario : IMarioSprite
 
     public void Draw(SpriteBatch spriteBatch, Vector2 position, bool HasStar)
     {
-        if (HasStar) { tint = Color.Pink; }
+        if (HasStar) { tint = Color.Magenta; }
         else { tint = Color.White; }
 
         Rectangle sourceRectangle = new Rectangle(27, 122, 16, 32);

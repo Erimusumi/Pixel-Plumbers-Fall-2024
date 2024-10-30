@@ -16,6 +16,8 @@ public class Game1 : Game
     private GameTime gameTime;
     private Texture2D titleTexture;
 
+    private HudManager hudManager;
+
     private KeyboardController keyboardController;
     private KeyboardControllerMovement keyboardControllerMovement;
     private CommandControlCenter controlCenter;
@@ -225,7 +227,7 @@ public class Game1 : Game
         levelScreenFonts = Content.Load<SpriteFont>("LevelScreenFonts");
         levelScreenSprite = new LevelScreenSprite(levelScreenFonts);
 
-
+        hudManager = new HudManager(startScreenFonts);
 
         // tilesheet
         overworldTiles = Content.Load<Texture2D>("OverworldTiles");
@@ -310,6 +312,8 @@ public class Game1 : Game
                 }
             }
         }
+        hudManager.Update(gameTime, camera);
+
         base.Update(gameTime);
     }
 
@@ -367,6 +371,8 @@ public class Game1 : Game
             obstacle1.Draw(spriteBatch, new Vector2(350, 370));
             obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
             obstacle3.Draw(spriteBatch, new Vector2(350 + 350, 335));
+
+            hudManager.Draw(spriteBatch);
 
             spriteBatch.End();
         }

@@ -13,7 +13,7 @@ public class JumpingRightBigMario : IMarioSprite
     }
     public void Draw(SpriteBatch spriteBatch, Vector2 position, bool HasStar)
     {
-        if (HasStar) { tint = Color.Pink; }
+        if (HasStar) { tint = Color.Magenta; }
         else { tint = Color.White; }
 
         Rectangle sourceRectangle = new Rectangle(359, 52, 16, 32);

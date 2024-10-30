@@ -13,7 +13,7 @@ public class IdleLeftBigMario : IMarioSprite
     }
     public void Draw(SpriteBatch spriteBatch, Vector2 position, bool HasStar)
     {
-        if (HasStar) { tint = Color.Pink; }
+        if (HasStar) { tint = Color.Magenta; }
         else { tint = Color.White; }
         Rectangle sourceRectangle = new Rectangle(180, 52, 16, 32);
         spriteBatch.Draw(MarioTexture, position, sourceRectangle, tint, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
