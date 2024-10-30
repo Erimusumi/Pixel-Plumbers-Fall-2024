@@ -17,6 +17,7 @@ public class Star:IItem
     private Texture2D texture;
     private Boolean movingLeft;
     private Boolean movingRight;
+    private Boolean falling;
     
 
     public Star(SpriteBatch sb,Texture2D text, Microsoft.Xna.Framework.Vector2 pos)
@@ -102,6 +103,18 @@ public class Star:IItem
     public Rectangle GetDestination()
     {
         return this.sp.GetDestination(position);
+    }
+    public bool isFalling()
+    {
+        return falling;
+    }
+    public void NotFalling()
+    {
+        falling = false;
+    }
+    public void MakeFalling()
+    {
+        falling = true;
     }
 
 

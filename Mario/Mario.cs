@@ -355,5 +355,9 @@ public class Mario : IEntity
             marioStateMachine.RemoveStar();
         }
     }
+    public void updateGroundPosition(float gp)
+    {
+        this.groundPosition = gp;
+    }
 
 }
