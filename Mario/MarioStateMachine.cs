@@ -13,12 +13,15 @@ public class MarioStateMachine
 
     public bool _HasStar;
 
+    public bool isVisible;
+
     public MarioStateMachine()
     {
         CurrentGameState = MarioGameState.Small;
         CurrentFaceState = MarioFaceState.Right;
         CurrentMoveState = MarioMoveState.Idle;
         _HasStar = false;
+        isVisible = true;
     }
 
     public void SetMarioSmall()
@@ -137,5 +140,17 @@ public class MarioStateMachine
         CurrentGameState = MarioGameState.Small;
         CurrentFaceState = MarioFaceState.Right;
         CurrentMoveState = MarioMoveState.Idle;
+    }
+    public bool IsVisible()
+    {
+        return isVisible;
+    }
+    public void MakeVisible()
+    {
+        isVisible = true;
+    }
+    public void MakeInvisible()
+    {
+        isVisible = false;
     }
 }
