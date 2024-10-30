@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Security.Cryptography.X509Certificates;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Pixel_Plumbers_Fall_2024;
@@ -10,10 +11,12 @@ public class BlackJackStateMachine
     private enum BlackJackState {table, top, cardPlayed};
     private BlackJackState _currentState = BlackJackState.table;
     private BlackJackSprites _sprite;
+    private SoundEffect fwip;
 
-    public BlackJackStateMachine(Texture2D TextureTable, Texture2D TextureTop, Texture2D TextureCards)
+    public BlackJackStateMachine(Texture2D TextureTable, Texture2D TextureTop, Texture2D TextureCards, SoundEffect fwip)
     {
         _sprite = new BlackJackSprites(TextureTable, TextureTop, TextureCards);
+        this.fwip = fwip;
     }
 
     public void play()
@@ -24,6 +27,11 @@ public class BlackJackStateMachine
     public void stop()
     {
         _currentState = BlackJackState.table;
+    }
+
+    public SoundEffect effect()
+    {
+        return fwip;
     }
 
     public void playACard()

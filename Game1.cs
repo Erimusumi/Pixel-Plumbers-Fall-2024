@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Content;
 using System.Reflection.Metadata;
+using Microsoft.Xna.Framework.Audio;
 namespace Pixel_Plumbers_Fall_2024;
 
 public class Game1 : Game
@@ -122,6 +123,7 @@ public class Game1 : Game
     private Texture2D tabletop;
     private Texture2D cards;
     private BlackJackStateMachine blackJackStateMachine;
+    private SoundEffect fwip;
 
     // camera
     private FollowCamera camera;
@@ -264,8 +266,9 @@ public class Game1 : Game
         table = Content.Load<Texture2D>("BlackJack/table");
         tabletop = Content.Load<Texture2D>("BlackJack/tabletop");
         cards = Content.Load<Texture2D>("BlackJack/cards");
+        fwip = Content.Load<SoundEffect>("Audio/flip");
 
-        blackJackStateMachine = new BlackJackStateMachine(table, tabletop, cards);
+        blackJackStateMachine = new BlackJackStateMachine(table, tabletop, cards, fwip);
         mario = new Mario(marioTexture, gameTime, this, entities);
         startScreenFonts = Content.Load<SpriteFont>("StartScreenFonts");
         startScreenSprite = new StartScreenSprite(titleTexture, startScreenFonts);

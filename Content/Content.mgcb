@@ -25,6 +25,12 @@
 /processorParam:Quality=Best
 /build:Audio/erwin.mp3
 
+#begin Audio/flip.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/flip.mp3
+
 #begin Audio/kirby.mp3
 /importer:Mp3Importer
 /processor:SongProcessor
