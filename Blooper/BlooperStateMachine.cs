@@ -15,7 +15,7 @@ public class BlooperStateMachine
 
     public BlooperStateMachine(int posX, int posY, Mario mario)
     {
-        _sprite = new BlooperSprites(posX, posY, mario);
+        _sprite = new BlooperSprites(posX, posY);
         this.mario = mario;
     }
 
@@ -56,13 +56,13 @@ public class BlooperStateMachine
         switch (_currentState)
         {
             case BlooperState.Left:
-                _sprite.LeftLogic();
+                _sprite.LeftLogic(mario);
                 break;
             case BlooperState.Right:
-                _sprite.RightLogic();
+                _sprite.RightLogic(mario);
                 break;
             case BlooperState.Idle:
-                _sprite.Idle();
+                _sprite.Idle(mario);
                 break;
             case BlooperState.Flipped:
                 _sprite.FlippedLogic();

@@ -1,1 +1,4 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Projects/Content/BlackJack/cards.png","C:/Projects/Content/bin/DesktopGL/Content/BlackJack/cards.xnb","TextureProcessor","Texture2DContent",1117423,3789045,0.1806144
+"C:/Projects/Content/BlackJack/table.png","C:/Projects/Content/bin/DesktopGL/Content/BlackJack/table.xnb","TextureProcessor","Texture2DContent",28690,229237,0.0136851
+"C:/Projects/Content/BlackJack/tabletop.png","C:/Projects/Content/bin/DesktopGL/Content/BlackJack/tabletop.xnb","TextureProcessor","Texture2DContent",105159,451285,0.1258471

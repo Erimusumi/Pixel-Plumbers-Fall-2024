@@ -136,6 +136,7 @@ public class KoopaSprites
 	{
         rotation = 3.1415926535f;
         sourceRectangle = new Rectangle(360, 5, width, 15);
+        destinationRectangle = new Rectangle(position, posY, width * scaleUp, 15 * scaleUp);
     }
     public Rectangle GetDestination()
     {

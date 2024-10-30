@@ -30,9 +30,29 @@ public class Game1 : Game
     private MouseController gameStateMouseController;
 
     //Enemy Code
+    //Goomba 1 will be spriteEnemy
     public ISpriteEnemy spriteEnemy;
     public ISpriteEnemy spriteEnemy2;
     public ISpriteEnemy spriteEnemyBloop;
+
+    //Enemy list:
+    private ISpriteEnemy _Goomba2;
+    private ISpriteEnemy Goomba3;
+    private ISpriteEnemy Goomba4;
+    private ISpriteEnemy Goomba5;
+    private ISpriteEnemy Goomba6;
+    private ISpriteEnemy Goomba7;
+    private ISpriteEnemy Goomba8;
+    private ISpriteEnemy Koopa1;
+    private ISpriteEnemy Goomba9;
+    private ISpriteEnemy Goomba10;
+    private ISpriteEnemy Goomba11;
+    private ISpriteEnemy Goomba12;
+    private ISpriteEnemy Goomba13;
+    private ISpriteEnemy Goomba14;
+    private ISpriteEnemy Goomba15;
+    private ISpriteEnemy Goomba16;
+
     Texture2D EnemyTexture;
 
     //Dance
@@ -97,6 +117,12 @@ public class Game1 : Game
     private Texture2D overworldTiles;
     private Texture2D underwaterTiles;
 
+    //Black Jack
+    private Texture2D table;
+    private Texture2D tabletop;
+    private Texture2D cards;
+    private BlackJackStateMachine blackJackStateMachine;
+
     // camera
     private FollowCamera camera;
 
@@ -115,7 +141,7 @@ public class Game1 : Game
         entities.Clear();
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
-        //spriteEnemy = new Koopa(480, 400);
+
         s = new Star(spriteBatch, ItemsTexture, new Vector2(30, 400));
         m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(30, 400));
         entities.Add(spriteEnemy2);
@@ -170,7 +196,24 @@ public class Game1 : Game
         spriteEnemy = new Goomba(535, 400);
         spriteEnemy2 = new Goomba2(240, 400);
         spriteEnemyBloop = new Blooper(240, 200, mario);
-        //spriteEnemy = new Koopa(480, 400);
+        _Goomba2 = new Goomba(1400, 400);
+        Goomba3 = new Goomba(1700, 400);
+        Goomba4 = new Goomba(1750, 400);
+        Goomba5 = new Goomba(2500, 250);
+        Goomba6 = new Goomba(2600, 120);
+        Goomba7 = new Goomba(3000, 400);
+        Goomba8 = new Goomba(3150, 400);
+        Koopa1 = new Koopa(3320, 400);
+        Goomba9 = new Goomba(3520, 400);
+        Goomba10 = new Goomba(3720, 400);
+        Goomba11 = new Goomba(4000, 400);
+        Goomba12 = new Goomba(4050, 400);
+        Goomba13 = new Goomba(4110, 400);
+        Goomba14 = new Goomba(4160, 400);
+        Goomba15 = new Goomba(5400, 400);
+        Goomba16 = new Goomba(5550, 400);
+
+
         s = new Star(spriteBatch, ItemsTexture, new Vector2(30, 400));
         m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(30, 400));
         OWLuckyBlockSprite = new LuckyBlockSprite(block, 3, 20);
@@ -218,7 +261,11 @@ public class Game1 : Game
         EnemyTexture = Content.Load<Texture2D>("enemies");
         DanceTexture = Content.Load<Texture2D>("dance");
         ItemsTexture = Content.Load<Texture2D>("itemsAndPowerups");
+        table = Content.Load<Texture2D>("BlackJack/table");
+        tabletop = Content.Load<Texture2D>("BlackJack/tabletop");
+        cards = Content.Load<Texture2D>("BlackJack/cards");
 
+        blackJackStateMachine = new BlackJackStateMachine(table, tabletop, cards);
         mario = new Mario(marioTexture, gameTime, this, entities);
         startScreenFonts = Content.Load<SpriteFont>("StartScreenFonts");
         startScreenSprite = new StartScreenSprite(titleTexture, startScreenFonts);
@@ -241,7 +288,7 @@ public class Game1 : Game
 
         gameStateKeyboardController = new KeyboardController();
         gameStateMouseController = new MouseController();
-        gameStateControlCenter = new GameStateControlCenter(gameStateMachine, gameStateKeyboardController, gameStateMouseController, this, startScreenSprite, levelScreenSprite, Content);
+        gameStateControlCenter = new GameStateControlCenter(gameStateMachine, gameStateKeyboardController, gameStateMouseController, this, startScreenSprite, levelScreenSprite, Content, blackJackStateMachine);
         // Reset instances initialization
         firePower = new FirePower(ItemsTexture);
         starPower = new StarPower(ItemsTexture);
@@ -261,6 +308,8 @@ public class Game1 : Game
         entities = sort.SortList(entities, entities.Count, temp);
         sweep.Compare(entities, entitiesRemoved, screen);
 
+
+        blackJackStateMachine.Update();
         if (gameStateMachine.isCurrentStateRunning())
         {
             keyboardController.Update();
@@ -284,6 +333,22 @@ public class Game1 : Game
             spriteEnemy.Updates();
             spriteEnemy2.Updates();
             spriteEnemyBloop.Updates();
+            _Goomba2.Updates();
+            Goomba3.Updates();
+            Goomba4.Updates();
+            Goomba5.Updates();
+            Goomba6.Updates();
+            Goomba7.Updates();
+            Goomba8.Updates();
+            Koopa1.Updates();
+            Goomba9.Updates();
+            Goomba10.Updates();
+            Goomba11.Updates();
+            Goomba12.Updates();
+            Goomba13.Updates();
+            Goomba14.Updates();
+            Goomba15.Updates();
+            Goomba16.Updates();
 
             //Dance.Updates();
             manager.updateCurrentItem(ref currentItem, numItems);
@@ -350,6 +415,22 @@ public class Game1 : Game
             spriteEnemy2.Draw(spriteBatch, EnemyTexture);
             mario.Draw(spriteBatch);
             spriteEnemyBloop.Draw(spriteBatch, EnemyTexture);
+            _Goomba2.Draw(spriteBatch, EnemyTexture);
+            Goomba3.Draw(spriteBatch, EnemyTexture);
+            Goomba4.Draw(spriteBatch, EnemyTexture);
+            Goomba5.Draw(spriteBatch, EnemyTexture);
+            Goomba6.Draw(spriteBatch, EnemyTexture);
+            Goomba7.Draw(spriteBatch, EnemyTexture);
+            Goomba8.Draw(spriteBatch, EnemyTexture);
+            Koopa1.Draw(spriteBatch, EnemyTexture);
+            Goomba9.Draw(spriteBatch, EnemyTexture);
+            Goomba10.Draw(spriteBatch, EnemyTexture);
+            Goomba11.Draw(spriteBatch, EnemyTexture);
+            Goomba12.Draw(spriteBatch, EnemyTexture);
+            Goomba13.Draw(spriteBatch, EnemyTexture);
+            Goomba14.Draw(spriteBatch, EnemyTexture);
+            Goomba15.Draw(spriteBatch, EnemyTexture);
+            Goomba16.Draw(spriteBatch, EnemyTexture);
 
             foreach (var item in fireballs)
             {
@@ -367,7 +448,7 @@ public class Game1 : Game
             obstacle1.Draw(spriteBatch, new Vector2(350, 370));
             obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
             obstacle3.Draw(spriteBatch, new Vector2(350 + 350, 335));
-
+            blackJackStateMachine.Draw(spriteBatch);
             spriteBatch.End();
         }
         base.Draw(gameTime);
