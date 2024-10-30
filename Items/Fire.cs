@@ -19,6 +19,7 @@ public class Fire :IItem
     private Texture2D texture;
     private Boolean movingLeft;
     private Boolean movingRight;
+    private Boolean falling;
 
     public Fire(SpriteBatch sb, Texture2D text, Microsoft.Xna.Framework.Vector2 pos)
     {
@@ -104,6 +105,18 @@ public class Fire :IItem
     public Rectangle GetDestination()
     {
         return this.fp.GetDestination(position);
+    }
+    public bool isFalling()
+    {
+        return falling;
+    }
+    public void NotFalling()
+    {
+        falling = false;
+    }
+    public void MakeFalling()
+    {
+        falling = true;
     }
 
 

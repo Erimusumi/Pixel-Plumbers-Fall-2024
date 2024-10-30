@@ -19,6 +19,7 @@ public class Mushroom :IItem
     private MushroomPower mp;
     private SpriteBatch sb;
     private Texture2D texture;
+    private bool falling;
     
 
     public  Mushroom(SpriteBatch sB, Texture2D texture, Microsoft.Xna.Framework.Vector2 position)
@@ -102,6 +103,18 @@ public class Mushroom :IItem
     public Rectangle GetDestination()
     {
         return this.mp.GetDestination(position);
+    }
+    public bool isFalling()
+    {
+        return falling;
+    }
+    public void NotFalling()
+    {
+        falling = false;
+    }
+    public void MakeFalling()
+    {
+        falling = true;
     }
 
 
