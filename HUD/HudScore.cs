@@ -41,5 +41,6 @@ public class HudScore : IHudElement
     public void Draw(SpriteBatch sb)
     {
         sb.DrawString(_font, "SCORE:", new Vector2(screenPos.X + 490, screenPos.Y + 10), Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+        sb.DrawString(_font, numScore.ToString("D8"), new Vector2(screenPos.X + 490, screenPos.Y + 40), Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
     }
 }

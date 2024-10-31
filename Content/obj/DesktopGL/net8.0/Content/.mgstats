@@ -1,2 +1,5 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Projects/Content/Audio/flip.mp3","C:/Projects/Content/bin/DesktopGL/Content/Audio/flip.xnb","SoundEffectProcessor","SoundEffectContent",7358,78441,0.3341004
+"C:/Users/creat/Source/Repos/Pixel-Plumbers-Fall-2024/Content/Audio/flip.mp3","C:/Users/creat/Source/Repos/Pixel-Plumbers-Fall-2024/Content/bin/DesktopGL/Content/Audio/flip.xnb","SoundEffectProcessor","SoundEffectContent",7358,78441,1.4272978
+"C:/Users/creat/Source/Repos/Pixel-Plumbers-Fall-2024/Content/BlackJack/cards.png","C:/Users/creat/Source/Repos/Pixel-Plumbers-Fall-2024/Content/bin/DesktopGL/Content/BlackJack/cards.xnb","TextureProcessor","Texture2DContent",1117423,3789045,0.2002366
+"C:/Users/creat/Source/Repos/Pixel-Plumbers-Fall-2024/Content/BlackJack/table.png","C:/Users/creat/Source/Repos/Pixel-Plumbers-Fall-2024/Content/bin/DesktopGL/Content/BlackJack/table.xnb","TextureProcessor","Texture2DContent",28690,229237,0.0096268
+"C:/Users/creat/Source/Repos/Pixel-Plumbers-Fall-2024/Content/BlackJack/tabletop.png","C:/Users/creat/Source/Repos/Pixel-Plumbers-Fall-2024/Content/bin/DesktopGL/Content/BlackJack/tabletop.xnb","TextureProcessor","Texture2DContent",105159,451285,0.0176431

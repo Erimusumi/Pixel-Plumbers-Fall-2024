@@ -47,5 +47,7 @@ public class HudLevel : IHudElement
     public void Draw(SpriteBatch sb)
     {
         sb.DrawString(_font, "WORLD:", new Vector2(screenPos.X + 330, screenPos.Y + 10), Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+        String worldLevelStr = worldNum.ToString() + "-" + levelNum.ToString();
+        sb.DrawString(_font, worldLevelStr, new Vector2(screenPos.X + 330, screenPos.Y + 40), Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
     }
 }
