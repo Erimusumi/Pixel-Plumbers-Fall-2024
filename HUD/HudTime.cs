@@ -45,5 +45,6 @@ public class HudTime : IHudElement
     public void Draw(SpriteBatch sb)
     {
         sb.DrawString(_font, "TIME:", new Vector2(screenPos.X + 650, screenPos.Y + 10), Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+        sb.DrawString(_font, currTime.ToString(), new Vector2(screenPos.X + 650, screenPos.Y + 30), Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
     }
 }
