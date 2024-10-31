@@ -94,17 +94,17 @@ public class CardScore
         }
     }
 
-    public void Draw(SpriteBatch sb)
+    public void Draw(SpriteBatch sb, Color colorP1, Color colorP2)
     {
         if (player == 0)
         {
-            sb.DrawString(_font, "Player 1 SCORE:", new Vector2(10, 400), Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
-            sb.DrawString(_font, displayScore.ToString(), new Vector2(10, 420), Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+            sb.DrawString(_font, "Player 1 SCORE:", new Vector2(10, 400), colorP1, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+            sb.DrawString(_font, displayScore.ToString(), new Vector2(10, 420), colorP1, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
         }
         else
         {
-            sb.DrawString(_font, "Player 2 SCORE:", new Vector2(490, 400), Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
-            sb.DrawString(_font, displayScore.ToString(), new Vector2(490, 420), Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+            sb.DrawString(_font, "Player 2 SCORE:", new Vector2(490, 400), colorP2, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+            sb.DrawString(_font, displayScore.ToString(), new Vector2(490, 420), colorP2, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
         }
     }
 

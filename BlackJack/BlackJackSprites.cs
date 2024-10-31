@@ -315,8 +315,15 @@ public class BlackJackSprites
             sb.Draw(TextureCards, destinationCard10P2, sourceCard10P2, Color.White, rotation10P2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
             sb.Draw(TextureCards, destinationCard11P2, sourceCard11P2, Color.White, rotation11P2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
 
-            player1.Draw(sb);
-            player2.Draw(sb);
+            if (cardCount < 11)
+            {
+                player1.Draw(sb, Color.GreenYellow, Color.PaleVioletRed);
+                player2.Draw(sb, Color.GreenYellow, Color.PaleVioletRed);
+            } else
+            {
+                player1.Draw(sb, Color.PaleVioletRed, Color.GreenYellow);
+                player2.Draw(sb, Color.PaleVioletRed, Color.GreenYellow);
+            }
         }
 
     }
