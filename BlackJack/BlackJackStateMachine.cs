@@ -13,9 +13,9 @@ public class BlackJackStateMachine
     private BlackJackSprites _sprite;
     private SoundEffect fwip;
 
-    public BlackJackStateMachine(Texture2D TextureTable, Texture2D TextureTop, Texture2D TextureCards, SoundEffect fwip)
+    public BlackJackStateMachine(Texture2D TextureTable, Texture2D TextureTop, Texture2D TextureCards, SoundEffect fwip, SpriteFont font)
     {
-        _sprite = new BlackJackSprites(TextureTable, TextureTop, TextureCards);
+        _sprite = new BlackJackSprites(TextureTable, TextureTop, TextureCards, font);
         this.fwip = fwip;
     }
 

@@ -14,7 +14,9 @@ public class BlackJackSprites
     Texture2D TextureCards;
     Rectangle next = new Rectangle(0, 0, 0, 0);
     private List<Rectangle> cardRectangles = new List<Rectangle>();
-    public BlackJackSprites(Texture2D TextureTable, Texture2D TextureTop, Texture2D TextureCards)
+    private CardScore player1;
+    private CardScore player2;
+    public BlackJackSprites(Texture2D TextureTable, Texture2D TextureTop, Texture2D TextureCards, SpriteFont font)
     {
         cardRectangles.Add(next);
         Texture = TextureTable;
@@ -22,6 +24,8 @@ public class BlackJackSprites
         this.TextureTop = TextureTop;
         this.TextureCards = TextureCards;
         destinationRectangle = new Rectangle(25, 375, 50, 46);
+        player1 = new CardScore(0, font);
+        player2 = new CardScore(1, font);
     }
 
     private Rectangle sourceRectangle;
@@ -112,7 +116,6 @@ public class BlackJackSprites
     private int CFinalWidth = 75;
     private int CFinalHeight = 110;
     private int cardCount = 0;
-    private CardScore score = new CardScore();
 
     private Random randomX = new Random();
     private Random randomY = new Random();
@@ -208,10 +211,6 @@ public class BlackJackSprites
                 sourceCard11 = next;
                 rotation11 = rotation;
                 break;
-        }
-
-        switch (cardCount)
-        {
             case 11:
                 destinationCard1P2 = new Rectangle(220 + (20 * cardCount), 150, CFinalWidth, CFinalHeight);
                 sourceCard1P2 = next;
@@ -269,6 +268,14 @@ public class BlackJackSprites
                 break;
         }
         //score.scoreCalc(next.X);
+        if (cardCount < 11)
+        {
+            player1.scoreCalc(next.X);
+        }
+        else if (cardCount >= 11 && cardCount < 22)
+        {
+            player2.scoreCalc(next.X);
+        }
         cardCount++;
     }
 
@@ -281,30 +288,36 @@ public class BlackJackSprites
     {
         sb.Draw(Texture, destinationRectangle, sourceRectangle, Color.White);
 
-        sb.Draw(TextureCards, destinationCard1, sourceCard1, Color.White, rotation1, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
-        sb.Draw(TextureCards, destinationCard2, sourceCard2, Color.White, rotation2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
-        sb.Draw(TextureCards, destinationCard3, sourceCard3, Color.White, rotation3, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
-        sb.Draw(TextureCards, destinationCard4, sourceCard4, Color.White, rotation4, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
-        sb.Draw(TextureCards, destinationCard5, sourceCard5, Color.White, rotation5, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
-        sb.Draw(TextureCards, destinationCard6, sourceCard6, Color.White, rotation6, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
-        sb.Draw(TextureCards, destinationCard7, sourceCard7, Color.White, rotation7, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
-        sb.Draw(TextureCards, destinationCard8, sourceCard8, Color.White, rotation8, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
-        sb.Draw(TextureCards, destinationCard9, sourceCard9, Color.White, rotation9, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
-        sb.Draw(TextureCards, destinationCard10, sourceCard10, Color.White, rotation10, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
-        sb.Draw(TextureCards, destinationCard11, sourceCard11, Color.White, rotation11, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
+        if (destinationRectangle.Width == 800)
+        {
+            sb.Draw(TextureCards, destinationCard1, sourceCard1, Color.White, rotation1, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
+            sb.Draw(TextureCards, destinationCard2, sourceCard2, Color.White, rotation2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
+            sb.Draw(TextureCards, destinationCard3, sourceCard3, Color.White, rotation3, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
+            sb.Draw(TextureCards, destinationCard4, sourceCard4, Color.White, rotation4, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
+            sb.Draw(TextureCards, destinationCard5, sourceCard5, Color.White, rotation5, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
+            sb.Draw(TextureCards, destinationCard6, sourceCard6, Color.White, rotation6, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
+            sb.Draw(TextureCards, destinationCard7, sourceCard7, Color.White, rotation7, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
+            sb.Draw(TextureCards, destinationCard8, sourceCard8, Color.White, rotation8, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
+            sb.Draw(TextureCards, destinationCard9, sourceCard9, Color.White, rotation9, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
+            sb.Draw(TextureCards, destinationCard10, sourceCard10, Color.White, rotation10, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
+            sb.Draw(TextureCards, destinationCard11, sourceCard11, Color.White, rotation11, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
 
-        //Player 2
-        sb.Draw(TextureCards, destinationCard1P2, sourceCard1P2, Color.White, rotation1P2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
-        sb.Draw(TextureCards, destinationCard2P2, sourceCard2P2, Color.White, rotation2P2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
-        sb.Draw(TextureCards, destinationCard3P2, sourceCard3P2, Color.White, rotation3P2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
-        sb.Draw(TextureCards, destinationCard4P2, sourceCard4P2, Color.White, rotation4P2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
-        sb.Draw(TextureCards, destinationCard5P2, sourceCard5P2, Color.White, rotation5P2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
-        sb.Draw(TextureCards, destinationCard6P2, sourceCard6P2, Color.White, rotation6P2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
-        sb.Draw(TextureCards, destinationCard7P2, sourceCard7P2, Color.White, rotation7P2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
-        sb.Draw(TextureCards, destinationCard8P2, sourceCard8P2, Color.White, rotation8P2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
-        sb.Draw(TextureCards, destinationCard9P2, sourceCard9P2, Color.White, rotation9P2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
-        sb.Draw(TextureCards, destinationCard10P2, sourceCard10P2, Color.White, rotation10P2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
-        sb.Draw(TextureCards, destinationCard11P2, sourceCard11P2, Color.White, rotation11P2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
+            //Player 2
+            sb.Draw(TextureCards, destinationCard1P2, sourceCard1P2, Color.White, rotation1P2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
+            sb.Draw(TextureCards, destinationCard2P2, sourceCard2P2, Color.White, rotation2P2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
+            sb.Draw(TextureCards, destinationCard3P2, sourceCard3P2, Color.White, rotation3P2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
+            sb.Draw(TextureCards, destinationCard4P2, sourceCard4P2, Color.White, rotation4P2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
+            sb.Draw(TextureCards, destinationCard5P2, sourceCard5P2, Color.White, rotation5P2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
+            sb.Draw(TextureCards, destinationCard6P2, sourceCard6P2, Color.White, rotation6P2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
+            sb.Draw(TextureCards, destinationCard7P2, sourceCard7P2, Color.White, rotation7P2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
+            sb.Draw(TextureCards, destinationCard8P2, sourceCard8P2, Color.White, rotation8P2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
+            sb.Draw(TextureCards, destinationCard9P2, sourceCard9P2, Color.White, rotation9P2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
+            sb.Draw(TextureCards, destinationCard10P2, sourceCard10P2, Color.White, rotation10P2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
+            sb.Draw(TextureCards, destinationCard11P2, sourceCard11P2, Color.White, rotation11P2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
+
+            player1.Draw(sb);
+            player2.Draw(sb);
+        }
 
     }
 
