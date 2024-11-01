@@ -270,13 +270,14 @@ public class Game1 : Game
         cards = Content.Load<Texture2D>("BlackJack/cards");
         fwip = Content.Load<SoundEffect>("Audio/flip");
 
-        blackJackStateMachine = new BlackJackStateMachine(table, tabletop, cards, fwip);
+
         mario = new Mario(marioTexture, gameTime, this, entities);
         startScreenFonts = Content.Load<SpriteFont>("StartScreenFonts");
         startScreenSprite = new StartScreenSprite(titleTexture, startScreenFonts);
         levelScreenFonts = Content.Load<SpriteFont>("LevelScreenFonts");
         levelScreenSprite = new LevelScreenSprite(levelScreenFonts);
 
+        blackJackStateMachine = new BlackJackStateMachine(table, tabletop, cards, fwip, startScreenFonts);
         hudManager = new HudManager(startScreenFonts);
 
         // tilesheet
@@ -456,9 +457,9 @@ public class Game1 : Game
             obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
             obstacle3.Draw(spriteBatch, new Vector2(350 + 350, 335));
 
+            blackJackStateMachine.Draw(spriteBatch);
             hudManager.Draw(spriteBatch);
 
-            blackJackStateMachine.Draw(spriteBatch);
             spriteBatch.End();
         }
         base.Draw(gameTime);
