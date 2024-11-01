@@ -94,6 +94,11 @@ public class CardScore
         }
     }
 
+    public int finalScore()
+    {
+        return displayScore;
+    }
+
     public void Draw(SpriteBatch sb, Color colorP1, Color colorP2)
     {
         if (player == 0)

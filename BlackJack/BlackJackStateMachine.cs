@@ -12,6 +12,8 @@ public class BlackJackStateMachine
     private BlackJackState _currentState = BlackJackState.table;
     private BlackJackSprites _sprite;
     private SoundEffect fwip;
+    private int stand = 0;
+    private int numberOfStands = 0;
 
     public BlackJackStateMachine(Texture2D TextureTable, Texture2D TextureTop, Texture2D TextureCards, SoundEffect fwip, SpriteFont font)
     {
@@ -27,6 +29,12 @@ public class BlackJackStateMachine
     public void stop()
     {
         _currentState = BlackJackState.table;
+    }
+
+    public void Stand()
+    {
+        stand = 1;
+        numberOfStands++;
     }
 
     public SoundEffect effect()
@@ -50,9 +58,13 @@ public class BlackJackStateMachine
                 _sprite.tabletop();
                 break;
             case BlackJackState.cardPlayed:
-                _sprite.cards();
+                _sprite.cards(stand);
                 _currentState = BlackJackState.top;
                 break;
+        }
+        if (stand == 1)
+        {
+            stand = 0;
         }
     }
     public Rectangle DestinationRectangle()
@@ -61,6 +73,6 @@ public class BlackJackStateMachine
     }
     public void Draw(SpriteBatch sb)
     {
-        _sprite.Draw(sb);
+        _sprite.Draw(sb, numberOfStands);
     }
 }

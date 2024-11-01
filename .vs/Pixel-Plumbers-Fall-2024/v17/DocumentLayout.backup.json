@@ -7,24 +7,24 @@
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:blackjack\\blackjacksprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\blackjack\\blackjackstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:blackjack\\blackjackstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\blackjack\\countscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:blackjack\\countscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\hud\\hudlives.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:hud\\hudlives.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\blackjack\\blackjackstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:blackjack\\blackjackstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\blackjack\\standcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:blackjack\\standcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\controllers\\gamestatecontrolcenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:controllers\\gamestatecontrolcenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\hud\\hudscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:hud\\hudscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,11 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Projects\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
@@ -75,27 +75,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HudLives.cs",
-              "DocumentMoniker": "C:\\Projects\\HUD\\HudLives.cs",
-              "RelativeDocumentMoniker": "HUD\\HudLives.cs",
-              "ToolTip": "C:\\Projects\\HUD\\HudLives.cs",
-              "RelativeToolTip": "HUD\\HudLives.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T21:03:24.374Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "BlackJackStateMachine.cs",
-              "DocumentMoniker": "C:\\Projects\\BlackJack\\BlackJackStateMachine.cs",
-              "RelativeDocumentMoniker": "BlackJack\\BlackJackStateMachine.cs",
-              "ToolTip": "C:\\Projects\\BlackJack\\BlackJackStateMachine.cs",
-              "RelativeToolTip": "BlackJack\\BlackJackStateMachine.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAqwBEAAABOAAAAAAAAAA==",
+              "Title": "CountScore.cs",
+              "DocumentMoniker": "C:\\Projects\\BlackJack\\CountScore.cs",
+              "RelativeDocumentMoniker": "BlackJack\\CountScore.cs",
+              "ToolTip": "C:\\Projects\\BlackJack\\CountScore.cs",
+              "RelativeToolTip": "BlackJack\\CountScore.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAYwG4AAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T20:55:02.044Z",
+              "WhenOpened": "2024-11-01T00:50:42.042Z",
               "EditorCaption": ""
             },
             {
@@ -104,37 +92,51 @@
               "Title": "BlackJackSprites.cs",
               "DocumentMoniker": "C:\\Projects\\BlackJack\\BlackJackSprites.cs",
               "RelativeDocumentMoniker": "BlackJack\\BlackJackSprites.cs",
-              "ToolTip": "C:\\Projects\\BlackJack\\BlackJackSprites.cs*",
-              "RelativeToolTip": "BlackJack\\BlackJackSprites.cs*",
-              "ViewState": "AgIAADMBAAAAAAAAAAAwwEABAABDAAAAAAAAAA==",
+              "ToolTip": "C:\\Projects\\BlackJack\\BlackJackSprites.cs",
+              "RelativeToolTip": "BlackJack\\BlackJackSprites.cs",
+              "ViewState": "AgIAAE4BAAAAAAAAAAAwwG4BAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T20:51:16.486Z",
+              "WhenOpened": "2024-11-01T00:37:44.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StandCommand.cs",
+              "DocumentMoniker": "C:\\Projects\\BlackJack\\StandCommand.cs",
+              "RelativeDocumentMoniker": "BlackJack\\StandCommand.cs",
+              "ToolTip": "C:\\Projects\\BlackJack\\StandCommand.cs",
+              "RelativeToolTip": "BlackJack\\StandCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T00:35:15.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GameStateControlCenter.cs",
+              "DocumentMoniker": "C:\\Projects\\Controllers\\GameStateControlCenter.cs",
+              "RelativeDocumentMoniker": "Controllers\\GameStateControlCenter.cs",
+              "ToolTip": "C:\\Projects\\Controllers\\GameStateControlCenter.cs",
+              "RelativeToolTip": "Controllers\\GameStateControlCenter.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAYwEkAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T00:26:22.47Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CountScore.cs",
-              "DocumentMoniker": "C:\\Projects\\BlackJack\\CountScore.cs",
-              "RelativeDocumentMoniker": "BlackJack\\CountScore.cs",
-              "ToolTip": "C:\\Projects\\BlackJack\\CountScore.cs",
-              "RelativeToolTip": "BlackJack\\CountScore.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAYwGoAAABYAAAAAAAAAA==",
+              "Title": "BlackJackStateMachine.cs",
+              "DocumentMoniker": "C:\\Projects\\BlackJack\\BlackJackStateMachine.cs",
+              "RelativeDocumentMoniker": "BlackJack\\BlackJackStateMachine.cs",
+              "ToolTip": "C:\\Projects\\BlackJack\\BlackJackStateMachine.cs",
+              "RelativeToolTip": "BlackJack\\BlackJackStateMachine.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAwwEsAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T20:43:14.434Z",
+              "WhenOpened": "2024-10-31T20:55:02.044Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "HudScore.cs",
-              "DocumentMoniker": "C:\\Projects\\HUD\\HudScore.cs",
-              "RelativeDocumentMoniker": "HUD\\HudScore.cs",
-              "ToolTip": "C:\\Projects\\HUD\\HudScore.cs",
-              "RelativeToolTip": "HUD\\HudScore.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAowCoAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T20:41:15.19Z"
             }
           ]
         }

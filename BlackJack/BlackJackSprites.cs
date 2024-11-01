@@ -5,6 +5,8 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Pixel_Plumbers_Fall_2024;
+using static System.Formats.Asn1.AsnWriter;
+using static System.Net.Mime.MediaTypeNames;
 
 public class BlackJackSprites
 {
@@ -12,10 +14,14 @@ public class BlackJackSprites
     Texture2D TextureTable;
     Texture2D TextureTop;
     Texture2D TextureCards;
+    private const float scale = 0.6f;
     Rectangle next = new Rectangle(0, 0, 0, 0);
     private List<Rectangle> cardRectangles = new List<Rectangle>();
     private CardScore player1;
     private CardScore player2;
+    private int player1Score;
+    private int player2Score;
+    private SpriteFont font;
     public BlackJackSprites(Texture2D TextureTable, Texture2D TextureTop, Texture2D TextureCards, SpriteFont font)
     {
         cardRectangles.Add(next);
@@ -26,6 +32,7 @@ public class BlackJackSprites
         destinationRectangle = new Rectangle(25, 375, 50, 46);
         player1 = new CardScore(0, font);
         player2 = new CardScore(1, font);
+        this.font = font;
     }
 
     private Rectangle sourceRectangle;
@@ -150,8 +157,18 @@ public class BlackJackSprites
         destinationRectangle = new Rectangle(0, 0, 800, 480);
     }
 
-    public void cards()
+    public void cards(int stand)
     {
+        if (stand == 1)
+        {
+            if (cardCount < 11)
+            {
+                cardCount = 11;
+            } else
+            {
+                cardCount = 22;
+            }
+        }
         nextCard();
 
         switch (cardCount)
@@ -284,12 +301,15 @@ public class BlackJackSprites
         return destinationRectangle;
     }
 
-    public void Draw(SpriteBatch sb)
+    public void Draw(SpriteBatch sb, int numberOfStands)
     {
         sb.Draw(Texture, destinationRectangle, sourceRectangle, Color.White);
 
         if (destinationRectangle.Width == 800)
         {
+            sb.DrawString(font, "HIT", new Vector2(680, 170), Color.Black, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+            sb.DrawString(font, "STAND", new Vector2(660, 270), Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+
             sb.Draw(TextureCards, destinationCard1, sourceCard1, Color.White, rotation1, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
             sb.Draw(TextureCards, destinationCard2, sourceCard2, Color.White, rotation2, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
             sb.Draw(TextureCards, destinationCard3, sourceCard3, Color.White, rotation3, new Vector2(Cwidth / 2, Cheight / 2), SpriteEffects.None, 0f);
@@ -319,6 +339,33 @@ public class BlackJackSprites
             {
                 player1.Draw(sb, Color.GreenYellow, Color.PaleVioletRed);
                 player2.Draw(sb, Color.GreenYellow, Color.PaleVioletRed);
+            } else if (numberOfStands > 1)
+            {
+                player1Score = player1.finalScore();
+                player2Score = player2.finalScore();
+                if (player1Score > player2Score && player1Score <= 21)
+                {
+                    sb.DrawString(font, "Winner:", new Vector2(10, 380), Color.GreenYellow, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+                    player1.Draw(sb, Color.GreenYellow, Color.PaleVioletRed);
+                    player2.Draw(sb, Color.GreenYellow, Color.PaleVioletRed);
+                } else if (player1Score < player2Score && player2Score <= 21)
+                {
+                    sb.DrawString(font, "Winner:", new Vector2(490, 380), Color.GreenYellow, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+                    player1.Draw(sb, Color.PaleVioletRed, Color.GreenYellow);
+                    player2.Draw(sb, Color.PaleVioletRed, Color.GreenYellow);
+                } else if (player1Score == player2Score && player1Score <= 21 && player2Score <= 21)
+                {
+                    sb.DrawString(font, "Winner:", new Vector2(490, 380), Color.GreenYellow, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+                    sb.DrawString(font, "Winner:", new Vector2(10, 380), Color.GreenYellow, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+                    player1.Draw(sb, Color.GreenYellow, Color.GreenYellow);
+                    player2.Draw(sb, Color.GreenYellow, Color.GreenYellow);
+                } else if (player1Score > 21 && player2Score > 21)
+                {
+                    sb.DrawString(font, "Loser:", new Vector2(490, 380), Color.PaleVioletRed, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+                    sb.DrawString(font, "Loser:", new Vector2(10, 380), Color.PaleVioletRed, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+                    player1.Draw(sb, Color.PaleVioletRed, Color.PaleVioletRed);
+                    player2.Draw(sb, Color.PaleVioletRed, Color.PaleVioletRed);
+                }
             } else
             {
                 player1.Draw(sb, Color.PaleVioletRed, Color.GreenYellow);

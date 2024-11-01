@@ -69,5 +69,8 @@ public class GameStateControlCenter
 
         ICommand CardCommand = new CardCommand(blackJackStateMachine);
         gameMouseController.AddCommand(new Rectangle(660, 130, 75, 110), CardCommand);
+
+        ICommand StandCommand = new StandCommand(blackJackStateMachine);
+        gameMouseController.AddCommand(new Rectangle(660, 270, 100, 50), StandCommand);
     }
 }
