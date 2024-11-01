@@ -343,12 +343,13 @@ public class BlackJackSprites
             {
                 player1Score = player1.finalScore();
                 player2Score = player2.finalScore();
+
                 if (player1Score > player2Score && player1Score <= 21)
                 {
                     sb.DrawString(font, "Winner:", new Vector2(10, 380), Color.GreenYellow, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
                     player1.Draw(sb, Color.GreenYellow, Color.PaleVioletRed);
                     player2.Draw(sb, Color.GreenYellow, Color.PaleVioletRed);
-                } else if (player1Score < player2Score && player2Score <= 21)
+                } else if (player2Score > player1Score && player2Score <= 21)
                 {
                     sb.DrawString(font, "Winner:", new Vector2(490, 380), Color.GreenYellow, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
                     player1.Draw(sb, Color.PaleVioletRed, Color.GreenYellow);
@@ -359,7 +360,7 @@ public class BlackJackSprites
                     sb.DrawString(font, "Winner:", new Vector2(10, 380), Color.GreenYellow, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
                     player1.Draw(sb, Color.GreenYellow, Color.GreenYellow);
                     player2.Draw(sb, Color.GreenYellow, Color.GreenYellow);
-                } else if (player1Score > 21 && player2Score > 21)
+                } else
                 {
                     sb.DrawString(font, "Loser:", new Vector2(490, 380), Color.PaleVioletRed, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
                     sb.DrawString(font, "Loser:", new Vector2(10, 380), Color.PaleVioletRed, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);

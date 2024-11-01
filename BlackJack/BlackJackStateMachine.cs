@@ -36,7 +36,10 @@ public class BlackJackStateMachine
         stand = 1;
         numberOfStands++;
     }
-
+    public int StandNumber()
+    {
+        return numberOfStands;
+    }
     public SoundEffect effect()
     {
         return fwip;

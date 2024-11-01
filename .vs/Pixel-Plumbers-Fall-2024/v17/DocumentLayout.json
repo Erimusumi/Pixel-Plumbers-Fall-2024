@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:blackjack\\blackjacksprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\blackjack\\countscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:blackjack\\countscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\blackjack\\standcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:blackjack\\standcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\blackjack\\blackjackstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:blackjack\\blackjackstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\blackjack\\standcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:blackjack\\standcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\blackjack\\countscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:blackjack\\countscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\controllers\\gamestatecontrolcenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -75,13 +75,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "CountScore.cs",
               "DocumentMoniker": "C:\\Projects\\BlackJack\\CountScore.cs",
               "RelativeDocumentMoniker": "BlackJack\\CountScore.cs",
               "ToolTip": "C:\\Projects\\BlackJack\\CountScore.cs",
               "RelativeToolTip": "BlackJack\\CountScore.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAYwG4AAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwG4AAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-01T00:50:42.042Z",
               "EditorCaption": ""
@@ -92,22 +92,22 @@
               "Title": "BlackJackSprites.cs",
               "DocumentMoniker": "C:\\Projects\\BlackJack\\BlackJackSprites.cs",
               "RelativeDocumentMoniker": "BlackJack\\BlackJackSprites.cs",
-              "ToolTip": "C:\\Projects\\BlackJack\\BlackJackSprites.cs",
-              "RelativeToolTip": "BlackJack\\BlackJackSprites.cs",
-              "ViewState": "AgIAAE4BAAAAAAAAAAAwwG4BAAA4AAAAAAAAAA==",
+              "ToolTip": "C:\\Projects\\BlackJack\\BlackJackSprites.cs*",
+              "RelativeToolTip": "BlackJack\\BlackJackSprites.cs*",
+              "ViewState": "AgIAAFwBAAAAAAAAAAAmwGoBAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-01T00:37:44.627Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "StandCommand.cs",
               "DocumentMoniker": "C:\\Projects\\BlackJack\\StandCommand.cs",
               "RelativeDocumentMoniker": "BlackJack\\StandCommand.cs",
               "ToolTip": "C:\\Projects\\BlackJack\\StandCommand.cs",
               "RelativeToolTip": "BlackJack\\StandCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-01T00:35:15.929Z",
               "EditorCaption": ""
@@ -122,8 +122,7 @@
               "RelativeToolTip": "Controllers\\GameStateControlCenter.cs",
               "ViewState": "AgIAADkAAAAAAAAAAAAYwEkAAABXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T00:26:22.47Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-01T00:26:22.47Z"
             },
             {
               "$type": "Document",
@@ -133,7 +132,7 @@
               "RelativeDocumentMoniker": "BlackJack\\BlackJackStateMachine.cs",
               "ToolTip": "C:\\Projects\\BlackJack\\BlackJackStateMachine.cs",
               "RelativeToolTip": "BlackJack\\BlackJackStateMachine.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAwwEsAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwCgAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-31T20:55:02.044Z",
               "EditorCaption": ""
