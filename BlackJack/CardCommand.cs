@@ -26,6 +26,11 @@ public class CardCommand : ICommand
         fwip.Play();
         Thread.Sleep(200);
         blackJackStateMachine.playACard();
-
+        
+        if ((blackJackStateMachine.Player1Score() >= 21 || blackJackStateMachine.Player2Score() >= 21) && blackJackStateMachine.StandNumber() < 2)
+        {
+            blackJackStateMachine.Stand();
+        }
+        
     }
 }
