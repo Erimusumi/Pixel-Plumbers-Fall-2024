@@ -19,8 +19,13 @@ public class CardCommand : ICommand
 
     public void Execute()
     {
+        if (blackJackStateMachine.StandNumber() >= 2)
+        {
+            blackJackStateMachine.Reset();
+        }
         fwip.Play();
         Thread.Sleep(200);
         blackJackStateMachine.playACard();
+
     }
 }

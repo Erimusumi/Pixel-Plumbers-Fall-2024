@@ -343,13 +343,12 @@ public class BlackJackSprites
             {
                 player1Score = player1.finalScore();
                 player2Score = player2.finalScore();
-
-                if (player1Score > player2Score && player1Score <= 21)
+                if ((player1Score > player2Score && player1Score <= 21) || (player1Score <= 21 && player2Score > 21))
                 {
                     sb.DrawString(font, "Winner:", new Vector2(10, 380), Color.GreenYellow, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
                     player1.Draw(sb, Color.GreenYellow, Color.PaleVioletRed);
                     player2.Draw(sb, Color.GreenYellow, Color.PaleVioletRed);
-                } else if (player2Score > player1Score && player2Score <= 21)
+                } else if ((player2Score > player1Score && player2Score <= 21) || (player2Score <= 21 && player1Score > 21))
                 {
                     sb.DrawString(font, "Winner:", new Vector2(490, 380), Color.GreenYellow, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
                     player1.Draw(sb, Color.PaleVioletRed, Color.GreenYellow);

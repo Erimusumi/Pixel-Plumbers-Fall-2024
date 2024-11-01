@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Pixel_Plumbers_Fall_2024;
+using static System.Net.Mime.MediaTypeNames;
 
 public class BlackJackStateMachine
 {
@@ -15,10 +16,18 @@ public class BlackJackStateMachine
     private int stand = 0;
     private int numberOfStands = 0;
 
+    private Texture2D TextureTable;
+    private Texture2D TextureTop;
+    private Texture2D TextureCards;
+    private SpriteFont font;
     public BlackJackStateMachine(Texture2D TextureTable, Texture2D TextureTop, Texture2D TextureCards, SoundEffect fwip, SpriteFont font)
     {
         _sprite = new BlackJackSprites(TextureTable, TextureTop, TextureCards, font);
         this.fwip = fwip;
+        this.TextureTable = TextureTable;
+        this.TextureTop = TextureTop;
+        this.TextureCards = TextureCards;
+        this.font = font;
     }
 
     public void play()
@@ -43,6 +52,12 @@ public class BlackJackStateMachine
     public SoundEffect effect()
     {
         return fwip;
+    }
+
+    public void Reset()
+    {
+        numberOfStands = 0;
+        _sprite = new BlackJackSprites(TextureTable, TextureTop, TextureCards, font);
     }
 
     public void playACard()
