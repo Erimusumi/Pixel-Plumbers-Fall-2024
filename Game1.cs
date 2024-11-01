@@ -383,6 +383,29 @@ public class Game1 : Game
         }
         hudManager.Update(gameTime, camera);
 
+        /*TESTING HUD; REMOVE LATER
+         * 
+         *
+        Random random = new Random();
+        if (random.Next(25) == 0)
+        {
+            hudManager.CollectCoin();
+            hudManager.AddScore(200);
+            if (hudManager.GetLevel() == 1)
+            {
+                hudManager.ChangeLevel(2);
+                hudManager.ChangeWorld(2);
+                hudManager.AddLife();
+            }
+            else
+            {
+                hudManager.ChangeWorld(1);
+                hudManager.ChangeLevel(1);
+                hudManager.LoseLife();
+            }
+        }
+        */
+
         base.Update(gameTime);
     }
 

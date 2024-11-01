@@ -52,7 +52,7 @@ public class HudCoins : IHudElement
 
     public void Draw(SpriteBatch sb)
     {
-        sb.DrawString(_font, "COINS", new Vector2(screenPos.X + 170, screenPos.Y + 10), Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
-        sb.DrawString(_font, numCoins.ToString(), new Vector2(screenPos.X + 170, screenPos.Y + 30), Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+        sb.DrawString(_font, "COINS:", new Vector2(screenPos.X + 170, screenPos.Y + 10), Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+        sb.DrawString(_font, numCoins.ToString("D2"), new Vector2(screenPos.X + 170, screenPos.Y + 40), Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
     }
 }
