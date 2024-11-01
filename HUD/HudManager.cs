@@ -19,6 +19,7 @@ public class HudManager
     public HudManager(SpriteFont font)
     {
         this._font = font;
+        //Initial values for hud elements
         this.HudCoins = new HudCoins(0, _font);
         this.HudLevel = new HudLevel(1, 1, _font);
         this.HudLives = new HudLives(3, _font);
@@ -26,6 +27,70 @@ public class HudManager
         this.HudTime = new HudTime(500, _font);
     }
 
+    public int GetTime()
+    {
+        return this.HudTime.GetTime();
+    }
+
+    public void SetTime(int newTime)
+    {
+        this.HudTime.SetTime(newTime);
+    }
+
+    public void AddScore(int scoreAmt)
+    {
+        this.HudScore.AddScore(scoreAmt);
+    }
+
+    public int GetScore()
+    {
+        return this.HudScore.GetScore();
+    }
+
+    public void SetScore(int scoreAmt)
+    {
+        this.HudScore.SetScore(scoreAmt);
+    }
+
+    public void ChangeWorld(int newWorldNum)
+    {
+        this.HudLevel.ChangeWorld(newWorldNum);
+    }
+    public void ChangeLevel(int newLevelNum)
+    {
+        this.HudLevel.ChangeLevel(newLevelNum);
+    }
+
+    public int GetLevel()
+    {
+        return this.HudLevel.GetLevel();
+    }
+
+    public int GetWorld()
+    {
+        return this.HudLevel.GetWorld();
+    }
+
+    public void CollectCoin()
+    {
+        bool coinRollover = this.HudCoins.CollectCoin();
+
+        if (coinRollover)
+        {
+            this.HudCoins.SetNumCoins(0);
+            this.HudLives.AddLife();
+        }
+    }
+
+    public int GetNumCoins()
+    {
+        return this.HudCoins.GetNumCoins();
+    }
+
+    public void SetNumCoins(int newNumCoins)
+    {
+        this.HudCoins.SetNumCoins(newNumCoins);
+    }
     public void Update(GameTime gameTime, FollowCamera camera)
     {
         this.HudCoins.Update(gameTime, camera);
@@ -33,6 +98,26 @@ public class HudManager
         this.HudLives.Update(gameTime, camera);
         this.HudScore.Update(gameTime, camera);
         this.HudTime.Update(gameTime, camera);
+    }
+
+    public void AddLife()
+    {
+        this.HudLives.AddLife();
+    }
+
+    public void LoseLife()
+    {
+        this.HudLives.LoseLife();
+    }
+
+    public int GetNumLives()
+    {
+        return this.HudLives.GetNumLives();
+    }
+
+    public void SetNumLives(int newNumLives)
+    {
+        this.HudLives.SetNumLives(newNumLives);
     }
 
     public void Draw(SpriteBatch sb)
