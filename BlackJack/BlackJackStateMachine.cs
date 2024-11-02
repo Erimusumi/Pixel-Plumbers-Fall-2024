@@ -36,6 +36,7 @@ public class BlackJackStateMachine
     public void play()
     {
         _currentState = BlackJackState.top;
+        Reset();
     }
 
     public void stop()
