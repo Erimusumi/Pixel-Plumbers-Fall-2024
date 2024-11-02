@@ -387,14 +387,15 @@ public class BlackJackSprites
                 if (player1Score == 21)
                 {
                     sb.DrawString(font, "Winner:", new Vector2(10, 380), Color.GreenYellow, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+                    player1.Draw(sb, Color.GreenYellow, Color.GreenYellow);
+                    player2.Draw(sb, Color.GreenYellow, Color.GreenYellow);
                 }
                 else
                 {
                     sb.DrawString(font, "Loser:", new Vector2(10, 380), Color.PaleVioletRed, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
-
+                    player1.Draw(sb, Color.PaleVioletRed, Color.GreenYellow);
+                    player2.Draw(sb, Color.PaleVioletRed, Color.GreenYellow);
                 }
-                player1.Draw(sb, Color.PaleVioletRed, Color.PaleVioletRed);
-                player2.Draw(sb, Color.PaleVioletRed, Color.GreenYellow);
             }
             else
             {
