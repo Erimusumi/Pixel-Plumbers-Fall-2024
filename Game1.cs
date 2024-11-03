@@ -108,6 +108,7 @@ public class Game1 : Game
     SoundEffect powerUpSound;
     SoundEffect powerDownSound;
     SoundEffect powerUpSpawnsSound;
+    SoundEffect marioJump;
 
     // reset instances
     public Vector2 initial_mario_position;
@@ -405,8 +406,8 @@ public class Game1 : Game
                     entities.Remove(consumedEntity);
                 }
             }
+            hudManager.Update(gameTime, camera);
         }
-        hudManager.Update(gameTime, camera);
 
         /*TESTING HUD; REMOVE LATER
          * 
@@ -505,8 +506,8 @@ public class Game1 : Game
             obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
             obstacle3.Draw(spriteBatch, new Vector2(350 + 350, 335));
 
-            blackJackStateMachine.Draw(spriteBatch);
             hudManager.Draw(spriteBatch);
+            blackJackStateMachine.Draw(spriteBatch);
 
             spriteBatch.End();
         }
