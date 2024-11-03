@@ -97,6 +97,17 @@ public class Game1 : Game
     private Sort sort = new Sort();
     private Sweep sweep;
 
+    //Sound Effects
+    SoundEffect oneUp;
+    SoundEffect breakBlock;
+    SoundEffect coin;
+    SoundEffect fireBall;
+    SoundEffect flagPole;
+    SoundEffect pipe;
+    SoundEffect powerUp;
+    SoundEffect powerDown;
+    SoundEffect powerUpSpawns;
+
     // reset instances
     public Vector2 initial_mario_position;
 
