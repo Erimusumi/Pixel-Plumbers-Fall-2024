@@ -12,6 +12,7 @@ using Pixel_Plumbers_Fall_2024;
 public class Sweep
 {
     GameTime gameTime;
+    Mushroom m;
     public Sweep(GameTime gameTime)
     {
         this.gameTime = gameTime;
@@ -57,6 +58,12 @@ public class Sweep
         if (type == typeof(Mushroom) || type == typeof(Star) || type == typeof(Fire))
         {
             containsItem  = true;
+            if(type == typeof(Mushroom))
+            {
+                m = (Mushroom)entities[index];
+                System.Diagnostics.Debug.Write("m is stored correctly");
+            }
+            
         }
         return containsItem;
     }
@@ -203,13 +210,31 @@ public class Sweep
 
         else if (item1.GetType() == typeof(Mario) && ContainsBlock(entities, index2))
         {
-            //handle block interaction            
-            MarioBlockInteraction = new MarioBlockInteraction((Mario)item1, (IBlock)item2);
+            //handle block interaction
+            Boolean luckyBlock = true;
+            if(item2.GetType() == typeof(LuckyBlockSprite))
+            {
+                MarioBlockInteraction = new MarioBlockInteraction((Mario)item1, (IBlock)item2, luckyBlock, m);
+            }
+            else
+            {
+                luckyBlock = false;
+                MarioBlockInteraction = new MarioBlockInteraction((Mario)item1, (IBlock)item2, luckyBlock, m);
+            }
             MarioBlockInteraction.update();
             
         } else if (ContainsBlock(entities, index1) && item2.GetType() == typeof(Mario))
-        {        
-            MarioBlockInteraction = new MarioBlockInteraction((Mario)item2, (IBlock)item1);
+        {
+            Boolean luckyBlock = true;
+            if (item1.GetType() == typeof(LuckyBlockSprite))
+            {
+                MarioBlockInteraction = new MarioBlockInteraction((Mario)item2, (IBlock)item1, luckyBlock, m);
+            }
+            else
+            {
+                luckyBlock = false;
+                MarioBlockInteraction = new MarioBlockInteraction((Mario)item2, (IBlock)item1, luckyBlock, m);
+            }
             MarioBlockInteraction.update();
             
         }

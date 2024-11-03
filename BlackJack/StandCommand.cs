@@ -20,11 +20,5 @@ public class StandCommand : ICommand
     public void Execute()
     {
         blackJackStateMachine.Stand();
-        if (blackJackStateMachine.StandNumber() == 1)
-        {
-            fwip.Play();
-            Thread.Sleep(200);
-            blackJackStateMachine.playACard();
-        }
     }
 }

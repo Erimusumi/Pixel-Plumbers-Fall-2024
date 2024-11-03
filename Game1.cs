@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Content;
 using System.Reflection.Metadata;
 using Microsoft.Xna.Framework.Audio;
+using System.Net.NetworkInformation;
 namespace Pixel_Plumbers_Fall_2024;
 
 public class Game1 : Game
@@ -96,6 +97,17 @@ public class Game1 : Game
     private List<IEntity> entitiesRemoved = new List<IEntity>();
     private Sort sort = new Sort();
     private Sweep sweep;
+
+    //Sound Effects
+    SoundEffect oneUpSound;
+    SoundEffect breakBlockSound;
+    SoundEffect coinSound;
+    SoundEffect fireBallSound;
+    SoundEffect flagPoleSound;
+    SoundEffect pipeSound;
+    SoundEffect powerUpSound;
+    SoundEffect powerDownSound;
+    SoundEffect powerUpSpawnsSound;
 
     // reset instances
     public Vector2 initial_mario_position;
@@ -303,6 +315,18 @@ public class Game1 : Game
         // Initialize block and obstacle sprites
 
         obstacle4 = new obstacle4(obstacle);
+
+        //SFX audios
+        pipeSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_pipe");
+        oneUpSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_1-up");
+        coinSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_coin");
+        fireBallSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_fireball");
+        flagPoleSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_flagpole");
+        powerUpSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_powerup");
+        powerUpSpawnsSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_powerup_appears");
+
+
+
     }
 
     protected override void Update(GameTime gameTime)
@@ -313,6 +337,7 @@ public class Game1 : Game
         List<IEntity> temp = entities;
         entities = sort.SortList(entities, entities.Count, temp);
         sweep.Compare(entities, entitiesRemoved, screen);
+        
 
 
         blackJackStateMachine.Update();

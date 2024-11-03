@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 public class MushroomPower: ISprite
 {
     private Texture2D ItemTexture;
+    private Rectangle destinationRectangle;
     //private Vector2 position;
     public MushroomPower(Texture2D ItemTexture)
     {
@@ -13,7 +14,9 @@ public class MushroomPower: ISprite
     {
 
         Rectangle sourceRectangle = new Rectangle(0, 0, 15, 15);
-        spriteBatch.Draw(ItemTexture, position, sourceRectangle, Color.White);
+        destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 31, 31);
+        spriteBatch.Draw(ItemTexture, destinationRectangle, sourceRectangle, Color.White);
+        
         
     }
     
@@ -23,6 +26,6 @@ public class MushroomPower: ISprite
     }
     public Rectangle GetDestination(Vector2 position)
     {
-        return new Rectangle((int)position.X, (int)position.Y, 15, 15);
+        return destinationRectangle;
     }
 }

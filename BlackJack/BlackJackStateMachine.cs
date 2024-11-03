@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Security.Cryptography.X509Certificates;
+using System.Threading;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
@@ -9,7 +10,7 @@ using static System.Net.Mime.MediaTypeNames;
 
 public class BlackJackStateMachine
 {
-    private enum BlackJackState {table, top, cardPlayed};
+    private enum BlackJackState {table, top};
     private BlackJackState _currentState = BlackJackState.table;
     private BlackJackSprites _sprite;
     private SoundEffect fwip;
@@ -20,6 +21,8 @@ public class BlackJackStateMachine
     private Texture2D TextureTop;
     private Texture2D TextureCards;
     private SpriteFont font;
+    private int p1Score = 0;
+    private int p2Score = 0;
     public BlackJackStateMachine(Texture2D TextureTable, Texture2D TextureTop, Texture2D TextureCards, SoundEffect fwip, SpriteFont font)
     {
         _sprite = new BlackJackSprites(TextureTable, TextureTop, TextureCards, font);
@@ -33,6 +36,7 @@ public class BlackJackStateMachine
     public void play()
     {
         _currentState = BlackJackState.top;
+        Reset();
     }
 
     public void stop()
@@ -44,6 +48,12 @@ public class BlackJackStateMachine
     {
         stand = 1;
         numberOfStands++;
+        if (numberOfStands == 1)
+        {
+            fwip.Play();
+            Thread.Sleep(200);
+            playACard();
+        }
     }
     public int StandNumber()
     {
@@ -57,12 +67,20 @@ public class BlackJackStateMachine
     public void Reset()
     {
         numberOfStands = 0;
+        stand = 0;
         _sprite = new BlackJackSprites(TextureTable, TextureTop, TextureCards, font);
     }
 
     public void playACard()
     {
-        _currentState = BlackJackState.cardPlayed;
+        if (numberOfStands == 0)
+        {
+            p1Score = _sprite.cards(stand);
+        }
+        else
+        {
+            p2Score = _sprite.cards(stand);
+        }
     }
 
     public void Update()
@@ -74,10 +92,6 @@ public class BlackJackStateMachine
                 break;
             case BlackJackState.top:
                 _sprite.tabletop();
-                break;
-            case BlackJackState.cardPlayed:
-                _sprite.cards(stand);
-                _currentState = BlackJackState.top;
                 break;
         }
         if (stand == 1)
@@ -92,5 +106,14 @@ public class BlackJackStateMachine
     public void Draw(SpriteBatch sb)
     {
         _sprite.Draw(sb, numberOfStands);
+    }
+    public int Player1Score()
+    {
+        return p1Score;
+    }
+
+    public int Player2Score()
+    {
+        return p2Score;
     }
 }
