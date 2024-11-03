@@ -55,6 +55,54 @@
 /processorParam:Quality=Best
 /build:Audio/rumbling.mp3
 
+#begin Audio/Sound Effect(s)/smb_1-up.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/Sound Effect(s)/smb_1-up.wav
+
+#begin Audio/Sound Effect(s)/smb_breakblock.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/Sound Effect(s)/smb_breakblock.wav
+
+#begin Audio/Sound Effect(s)/smb_coin.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/Sound Effect(s)/smb_coin.wav
+
+#begin Audio/Sound Effect(s)/smb_fireball.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/Sound Effect(s)/smb_fireball.wav
+
+#begin Audio/Sound Effect(s)/smb_flagpole.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/Sound Effect(s)/smb_flagpole.wav
+
+#begin Audio/Sound Effect(s)/smb_pipe.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/Sound Effect(s)/smb_pipe.wav
+
+#begin Audio/Sound Effect(s)/smb_powerup_appears.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/Sound Effect(s)/smb_powerup_appears.wav
+
+#begin Audio/Sound Effect(s)/smb_powerup.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/Sound Effect(s)/smb_powerup.wav
+
 #begin BlackJack/cards.png
 /importer:TextureImporter
 /processor:TextureProcessor
