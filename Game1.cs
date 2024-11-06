@@ -93,7 +93,7 @@ public class Game1 : Game
     //Fireballs
     public List<Fireball> fireballs = new List<Fireball>();
 
-    private List<IEntity> entities = new List<IEntity>();
+    public List<IEntity> entities = new List<IEntity>();
     private List<IEntity> entitiesRemoved = new List<IEntity>();
     private Sort sort = new Sort();
     private Sweep sweep;
@@ -136,6 +136,12 @@ public class Game1 : Game
     private Texture2D overworldTiles;
     private Texture2D underwaterTiles;
 
+    //Ground Detection
+    Ground ground;
+    ToggleFalling toggleFalling;
+    List<Rectangle> emptyFloorRectangles;
+    ToggleFalling ToggleFalling;
+
     //Black Jack
     private Texture2D table;
     private Texture2D tabletop;
@@ -162,12 +168,10 @@ public class Game1 : Game
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
 
-        s = new Star(spriteBatch, ItemsTexture, new Vector2(30, 400));
-        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(30, 400));
+        s = new Star(spriteBatch, ItemsTexture/*, new Vector2(30, 400)*/);
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
         entities.Add(mario);
-        entities.Add(m);
         entities.Add(OWLuckyBlockSprite);
         entities.Add(OWBrickBlockSprite);
         entities.Add(OWBrokenBrickSprite);
@@ -234,10 +238,9 @@ public class Game1 : Game
         Goomba16 = new Goomba(5550, 400);
 
 
-        s = new Star(spriteBatch, ItemsTexture, new Vector2(30, 400));
-        m = new Mushroom(spriteBatch, ItemsTexture, new Vector2(30, 400));
-        OWLuckyBlockSprite = new LuckyBlockSprite(block, 3, 20);
-        OWLuckyBlockSprite2 = new LuckyBlockSprite(block, 3, 20);
+        s = new Star(spriteBatch, ItemsTexture/*, new Vector2(30, 400)*/);
+        OWLuckyBlockSprite = new LuckyBlockSprite(block, spriteBatch, ItemsTexture, this);
+        OWLuckyBlockSprite2 = new LuckyBlockSprite(block, spriteBatch, ItemsTexture, this);
         OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
         OWBrokenBrickSprite = new BrokenBrickSprite(block, 4, 1);
         obstacle1 = new obstacle1(obstacle);
@@ -247,7 +250,6 @@ public class Game1 : Game
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
         entities.Add(mario);
-        entities.Add(m);
         entities.Add(OWLuckyBlockSprite);
         entities.Add(OWLuckyBlockSprite2);
         entities.Add(OWBrickBlockSprite);
@@ -259,6 +261,12 @@ public class Game1 : Game
         controlCenter = new CommandControlCenter(this);
 
         Dance = new DancePole();
+
+        //Ground Detection initialization
+        emptyFloorRectangles = new List<Rectangle>(); 
+        emptyFloorRectangles.Add(new Microsoft.Xna.Framework.Rectangle(320, 416, 64, 64));
+        ground = new Ground(emptyFloorRectangles);
+        toggleFalling = new ToggleFalling(ground,entities);
     }
 
     public ISpriteEnemy SetEnemy(ISpriteEnemy enemy)
@@ -401,7 +409,6 @@ public class Game1 : Game
             obstacle1.Update(gameTime);
             obstacle2.Update(gameTime);
             obstacle3.Update(gameTime);
-            m.update();
 
             foreach (var item in fireballs)
             {
@@ -416,6 +423,7 @@ public class Game1 : Game
             }
             hudManager.Update(gameTime, camera);
         }
+        toggleFalling.updateMarioFallingTest(mario);
 
         base.Update(gameTime);
     }
@@ -478,8 +486,6 @@ public class Game1 : Game
             {
                 item.Draw(spriteBatch);
             }
-
-            m.draw();
             spriteBatch.End();
 
             spriteBatch.Begin(transformMatrix: camera.GetViewMatrix());
