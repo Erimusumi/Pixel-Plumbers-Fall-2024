@@ -133,6 +133,12 @@ public class Game1 : Game
     private Texture2D overworldTiles;
     private Texture2D underwaterTiles;
 
+    //Ground Detection
+    Ground ground;
+    ToggleFalling toggleFalling;
+    List<Rectangle> emptyFloorRectangles;
+    ToggleFalling ToggleFalling;
+
     //Black Jack
     private Texture2D table;
     private Texture2D tabletop;
@@ -252,6 +258,12 @@ public class Game1 : Game
         controlCenter = new CommandControlCenter(this);
 
         Dance = new DancePole();
+
+        //Ground Detection initialization
+        emptyFloorRectangles = new List<Rectangle>(); 
+        emptyFloorRectangles.Add(new Microsoft.Xna.Framework.Rectangle(320, 416, 64, 64));
+        ground = new Ground(emptyFloorRectangles);
+        toggleFalling = new ToggleFalling(ground,entities);
     }
 
     public ISpriteEnemy SetEnemy(ISpriteEnemy enemy)
@@ -403,6 +415,7 @@ public class Game1 : Game
             }
             hudManager.Update(gameTime, camera);
         }
+        toggleFalling.updateMarioFallingTest(mario);
 
         /*TESTING HUD; REMOVE LATER
          * 

@@ -38,7 +38,7 @@ using Microsoft.Xna.Framework;
     public void updateMarioFallingTest(Mario mar)
     {
         
- if (mar.GetDestination().Intersects(emptyGround[0]))
+ if (mar.GetDestination().Intersects(ground.emptyGroundList()[0]))
         {
                 mar.updateGroundPosition(480f);
         }        

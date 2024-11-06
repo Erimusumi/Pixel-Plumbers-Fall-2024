@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Design;
-using System.Drawing;
+using Microsoft.Xna.Framework;
+
 
 
 public class Ground
@@ -30,6 +31,10 @@ public class Ground
     public List<Rectangle> emptyGroundList()
     {
         return emptyRectangles;
+    }
+    public void clearEmptyRectangleList()
+    {
+        emptyRectangles.Clear();
     }
 
 }
