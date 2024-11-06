@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Pixel_Plumbers_Fall_2024;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,16 +16,21 @@ public class HudManager
     private HudTime HudTime;
 
     private SpriteFont _font;
+    private Game1 _game;
+    private Mario _mario;
 
-    public HudManager(SpriteFont font)
+    public HudManager(SpriteFont font, Game1 game, Mario mario)
     {
         this._font = font;
+        this._game = game;
+        this._mario = mario;
         //Initial values for hud elements
-        this.HudCoins = new HudCoins(0, _font);
-        this.HudLevel = new HudLevel(1, 1, _font);
-        this.HudLives = new HudLives(3, _font);
-        this.HudScore = new HudScore(0, _font);
-        this.HudTime = new HudTime(500, _font);
+        this.HudCoins = new HudCoins(0, _font, _game, _mario);
+        this.HudLevel = new HudLevel(1, 1, _font, _game, _mario);
+        this.HudLives = new HudLives(3, _font, _game, _mario);
+        this.HudScore = new HudScore(0, _font, _game, _mario);
+        this.HudTime = new HudTime(400, _font, _game, _mario);
+        _mario = mario;
     }
 
     public int GetTime()

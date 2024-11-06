@@ -6,18 +6,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Formats.Asn1.AsnWriter;
+using Pixel_Plumbers_Fall_2024;
 
 public class HudTime : IHudElement
 {
     private const float scale = 0.6f;
     private Vector2 screenPos;
     private int currTime;
+    private int resetTimer = -1;
     private float gameTicks;
     private SpriteFont _font;
-    public HudTime(int startTime, SpriteFont font)
+    private Game1 _game;
+    private Mario _mario;
+    public HudTime(int startTime, SpriteFont font, Game1 game, Mario mario)
     {
+        _game = game;
         currTime = startTime;
         _font = font;
+        _mario = mario;
     }
 
     public void SetTime(int newTime)
@@ -35,11 +41,30 @@ public class HudTime : IHudElement
 
         this.gameTicks += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
 
+        if (currTime <= 0)
+        {
+            currTime = 0;
+            _mario.MarioDeath();
+            if (resetTimer < 0)
+            {
+                resetTimer = 4;
+            }
+            else if (resetTimer == 0)
+            {
+                _game.ResetGame();
+            }
+            if (this.gameTicks > 1000)
+            {
+                resetTimer -= 1;
+            }
+        }
+
         if (this.gameTicks > 1000)
         {
             currTime -= 1;
             this.gameTicks = 0;
         }
+        
     }
 
     public void Draw(SpriteBatch sb)

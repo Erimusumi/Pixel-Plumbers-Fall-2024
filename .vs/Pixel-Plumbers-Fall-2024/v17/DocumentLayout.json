@@ -1,38 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\kamau\\Downloads\\CSE3902\\PrincessPeachy\\",
+  "WorkspaceRootPath": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\princesspeachy\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\princesspeachy\\content\\audio\\sound effect(s)\\smb_1-up.wav||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:content\\audio\\sound effect(s)\\smb_1-up.wav||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\hud\\hudtime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:hud\\hudtime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\princesspeachy\\items\\item audio\\playitemaudio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:items\\item audio\\playitemaudio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\hud\\hudmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:hud\\hudmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\princesspeachy\\blackjack\\blackjackstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:blackjack\\blackjackstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\items\\mushroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:items\\mushroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\princesspeachy\\blackjack\\blackjacksprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:blackjack\\blackjacksprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\hud\\hudlives.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:hud\\hudlives.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\princesspeachy\\blackjack\\cardcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:blackjack\\cardcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\hud\\hudcoins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:hud\\hudcoins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\princesspeachy\\blackjack\\countscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:blackjack\\countscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\hud\\hudlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:hud\\hudlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\princesspeachy\\blackjack\\standcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:blackjack\\standcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\hud\\hudscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:hud\\hudscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\hud\\ihudelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:hud\\ihudelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,25 +50,52 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Game1.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\PrincessPeachy\\Game1.cs",
+              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\PrincessPeachy\\Game1.cs",
+              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAADEBAAAAAAAAAAAswEUBAABkAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAADwvzAAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Mario.cs",
+              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Mario\\Mario.cs",
+              "RelativeDocumentMoniker": "Mario\\Mario.cs",
+              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Mario\\Mario.cs",
+              "RelativeToolTip": "Mario\\Mario.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAYwDoBAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T21:41:43.503Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Mushroom.cs",
+              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Items\\Mushroom.cs",
+              "RelativeDocumentMoniker": "Items\\Mushroom.cs",
+              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Items\\Mushroom.cs",
+              "RelativeToolTip": "Items\\Mushroom.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwDgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T21:04:57.087Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
               "$type": "Bookmark",
@@ -72,6 +107,10 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
@@ -80,96 +119,93 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "smb_1-up.wav",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\PrincessPeachy\\Content\\Audio\\Sound Effect(s)\\smb_1-up.wav",
-              "RelativeDocumentMoniker": "Content\\Audio\\Sound Effect(s)\\smb_1-up.wav",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\PrincessPeachy\\Content\\Audio\\Sound Effect(s)\\smb_1-up.wav",
-              "RelativeToolTip": "Content\\Audio\\Sound Effect(s)\\smb_1-up.wav",
-              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALoSURBVDhPrVRLbxJRFP54DgJtkSIFpY/UlEJp03YhsQmJCxNj3LmQrow/oPEn1K0bY7oy7cbGRZcuTBMf1cSYCEkl2ibQF0RrKQ00lFfoQNuBwTPDSOVlXPglJ3fmzDnffPfccy7\u002BKyqVikx6hNFoNFut1n7ptS1yuVwqkUhESwTJ1Rper3cmEonw\u002B/v7fDQabWk/d3fLS0tLPrfbfUNGkFJbY3p6eiadTvN/Q7FQ4EOhELe8vOwfGxtzS6l1kEtrDVSG9lYNUUxNTblfLC4\u002BJ9JrVdc5mghb4VUwg7kPMZR4IJ/PY29vT36xu3vk0ezsgl6vH5TCRLQkbFSWOAUebxaxkiyjb2AAWq0WqVQKtt5eq0qlclGKuprZQChsqZFMMINWAbtRhWehJOIVLex2O8bHx2EymeQKpVJHaSqRgNCgUKRssizHwcGc4FaXGp8ix\u002BD5svQNMnnDadcTUgwJarIOBjiQn8Jp0KJSktX8rdBAeL7NE47H\u002Bx8sHn5MYy7Iw8XosZ3IQ60Q1AmhrRnbbjkQP4X3TQYLOyy\u002Bxgo4Zku4OdiBey7DH3HNqD8UiqnwgkKqsoKH7sIZcHYCdS6P6x0auGw6mAxMNa41X6NCAUJkBSN0qi9vX8K7u1fw\u002Bn4vvJ7LkFP5aWCIjBqyjUKFtGJ0dNTNcdwd6iv4fD58j4ShLGRg08pw1aTF07knsFot2NjYxNHRERhGhfn5hcK3tbW3BZbdIQpO4KlTaDabEYsd0CREcXh4iHK5LDZxIBDA0NAQgsEgbDabSLi6\u002BgUTExOUVa\u002B0jrC/vw/hcFgk7uzsBMseQ1C8vr4GnU4Hujyg0TBIJpPY2tqGw\u002BGQMs\u002BhlFYRFosFw8N2UmNHsVgUayUQejwe0RePx2mrDCYnJ5HNZsWfKOSKOlG1Lu/p6XE4nc4H1F9yJY0TFV9sOGEQhJ4jH4Q79fdgCD6KKfn9/hWq/WdysYK/8ZLsItOQ1Yb9H1Aky5CRAOAXvPiZo6l2iV0AAAAASUVORK5CYII=",
-              "WhenOpened": "2024-11-03T03:48:01.924Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "PlayItemAudio.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\PrincessPeachy\\Items\\Item Audio\\PlayItemAudio.cs",
-              "RelativeDocumentMoniker": "Items\\Item Audio\\PlayItemAudio.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\PrincessPeachy\\Items\\Item Audio\\PlayItemAudio.cs",
-              "RelativeToolTip": "Items\\Item Audio\\PlayItemAudio.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Title": "HudTime.cs",
+              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\HUD\\HudTime.cs",
+              "RelativeDocumentMoniker": "HUD\\HudTime.cs",
+              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\HUD\\HudTime.cs",
+              "RelativeToolTip": "HUD\\HudTime.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAkwC4AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T03:32:48.194Z",
+              "WhenOpened": "2024-10-30T18:32:36.126Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CountScore.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\PrincessPeachy\\BlackJack\\CountScore.cs",
-              "RelativeDocumentMoniker": "BlackJack\\CountScore.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\PrincessPeachy\\BlackJack\\CountScore.cs",
-              "RelativeToolTip": "BlackJack\\CountScore.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAQwG4AAABDAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "HudScore.cs",
+              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\HUD\\HudScore.cs",
+              "RelativeDocumentMoniker": "HUD\\HudScore.cs",
+              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\HUD\\HudScore.cs",
+              "RelativeToolTip": "HUD\\HudScore.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAnwCsAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T00:50:42.042Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BlackJackSprites.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\PrincessPeachy\\BlackJack\\BlackJackSprites.cs",
-              "RelativeDocumentMoniker": "BlackJack\\BlackJackSprites.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\PrincessPeachy\\BlackJack\\BlackJackSprites.cs",
-              "RelativeToolTip": "BlackJack\\BlackJackSprites.cs",
-              "ViewState": "AgIAABQBAAAAAAAAAAAowCIBAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T00:37:44.627Z"
+              "WhenOpened": "2024-10-30T18:32:28.888Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "StandCommand.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\PrincessPeachy\\BlackJack\\StandCommand.cs",
-              "RelativeDocumentMoniker": "BlackJack\\StandCommand.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\PrincessPeachy\\BlackJack\\StandCommand.cs",
-              "RelativeToolTip": "BlackJack\\StandCommand.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBUAAAAmAAAAAAAAAA==",
+              "Title": "HudLevel.cs",
+              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\HUD\\HudLevel.cs",
+              "RelativeDocumentMoniker": "HUD\\HudLevel.cs",
+              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\HUD\\HudLevel.cs",
+              "RelativeToolTip": "HUD\\HudLevel.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAABcAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T00:35:15.929Z"
+              "WhenOpened": "2024-10-30T18:32:20.958Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BlackJackStateMachine.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\PrincessPeachy\\BlackJack\\BlackJackStateMachine.cs",
-              "RelativeDocumentMoniker": "BlackJack\\BlackJackStateMachine.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\PrincessPeachy\\BlackJack\\BlackJackStateMachine.cs",
-              "RelativeToolTip": "BlackJack\\BlackJackStateMachine.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAA3wDIAAAAgAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "HudCoins.cs",
+              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\HUD\\HudCoins.cs",
+              "RelativeDocumentMoniker": "HUD\\HudCoins.cs",
+              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\HUD\\HudCoins.cs",
+              "RelativeToolTip": "HUD\\HudCoins.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA2wC4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-31T20:55:02.044Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-30T18:31:42.568Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "CardCommand.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\PrincessPeachy\\BlackJack\\CardCommand.cs",
-              "RelativeDocumentMoniker": "BlackJack\\CardCommand.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\PrincessPeachy\\BlackJack\\CardCommand.cs",
-              "RelativeToolTip": "BlackJack\\CardCommand.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAzAAAAAAAAAA==",
+              "Title": "HudLives.cs",
+              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\HUD\\HudLives.cs",
+              "RelativeDocumentMoniker": "HUD\\HudLives.cs",
+              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\HUD\\HudLives.cs",
+              "RelativeToolTip": "HUD\\HudLives.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAABYAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T01:33:56.897Z"
+              "WhenOpened": "2024-10-30T18:30:54.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HudManager.cs",
+              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\HUD\\HudManager.cs",
+              "RelativeDocumentMoniker": "HUD\\HudManager.cs",
+              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\HUD\\HudManager.cs",
+              "RelativeToolTip": "HUD\\HudManager.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAwB0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T18:26:36.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IHudElement.cs",
+              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\HUD\\IHudElement.cs",
+              "RelativeDocumentMoniker": "HUD\\IHudElement.cs",
+              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\HUD\\IHudElement.cs",
+              "RelativeToolTip": "HUD\\IHudElement.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T21:18:05.392Z"
             }
           ]
         }

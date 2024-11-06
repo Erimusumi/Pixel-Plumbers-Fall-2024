@@ -108,7 +108,10 @@ public class Game1 : Game
     SoundEffect powerUpSound;
     SoundEffect powerDownSound;
     SoundEffect powerUpSpawnsSound;
-    SoundEffect marioJump;
+    SoundEffect marioJumpSound;
+    SoundEffect marioDeathSound;
+
+    List<SoundEffect> marioSoundEffects;
 
     // reset instances
     public Vector2 initial_mario_position;
@@ -283,15 +286,13 @@ public class Game1 : Game
         cards = Content.Load<Texture2D>("BlackJack/cards");
         fwip = Content.Load<SoundEffect>("Audio/flip");
 
-
-        mario = new Mario(marioTexture, gameTime, this, entities);
         startScreenFonts = Content.Load<SpriteFont>("StartScreenFonts");
         startScreenSprite = new StartScreenSprite(titleTexture, startScreenFonts);
         levelScreenFonts = Content.Load<SpriteFont>("LevelScreenFonts");
         levelScreenSprite = new LevelScreenSprite(levelScreenFonts);
 
         blackJackStateMachine = new BlackJackStateMachine(table, tabletop, cards, fwip, startScreenFonts);
-        hudManager = new HudManager(startScreenFonts);
+        hudManager = new HudManager(startScreenFonts, this, mario);
 
         // tilesheet
         overworldTiles = Content.Load<Texture2D>("OverworldTiles");
@@ -299,9 +300,6 @@ public class Game1 : Game
 
         block = Content.Load<Texture2D>("blocks");
         obstacle = Content.Load<Texture2D>("obstacle");
-
-        marioMovementController = new PlayerMovementController();
-        playerCommandControlCenter = new PlayerCommandControlCenter(mario, marioMovementController);
 
         gameStateMachine = new GameStateMachine();
 
@@ -325,9 +323,19 @@ public class Game1 : Game
         flagPoleSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_flagpole");
         powerUpSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_powerup");
         powerUpSpawnsSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_powerup_appears");
+        //TODO: Replace these with correct sounds
+        marioJumpSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_coin");
+        marioDeathSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_coin");
 
+        marioSoundEffects =
+        [
+            powerUpSound, powerDownSound, fireBallSound, marioJumpSound, marioDeathSound
+        ];
 
+        mario = new Mario(marioTexture, gameTime, this, entities, marioSoundEffects);
 
+        marioMovementController = new PlayerMovementController();
+        playerCommandControlCenter = new PlayerCommandControlCenter(mario, marioMovementController);
     }
 
     protected override void Update(GameTime gameTime)
@@ -408,29 +416,6 @@ public class Game1 : Game
             }
             hudManager.Update(gameTime, camera);
         }
-
-        /*TESTING HUD; REMOVE LATER
-         * 
-         *
-        Random random = new Random();
-        if (random.Next(25) == 0)
-        {
-            hudManager.CollectCoin();
-            hudManager.AddScore(200);
-            if (hudManager.GetLevel() == 1)
-            {
-                hudManager.ChangeLevel(2);
-                hudManager.ChangeWorld(2);
-                hudManager.AddLife();
-            }
-            else
-            {
-                hudManager.ChangeWorld(1);
-                hudManager.ChangeLevel(1);
-                hudManager.LoseLife();
-            }
-        }
-        */
 
         base.Update(gameTime);
     }

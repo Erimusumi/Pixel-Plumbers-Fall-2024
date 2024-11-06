@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Formats.Asn1.AsnWriter;
+using Pixel_Plumbers_Fall_2024;
 
 public class HudScore : IHudElement
 {
@@ -14,7 +15,7 @@ public class HudScore : IHudElement
     private Vector2 screenPos;
     private int numScore;
     private SpriteFont _font;
-    public HudScore(int startScore, SpriteFont font)
+    public HudScore(int startScore, SpriteFont font, Game1 game, Mario mario)
     {
         numScore = startScore;
         this._font = font;

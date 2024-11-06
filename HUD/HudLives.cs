@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Pixel_Plumbers_Fall_2024;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ public class HudLives : IHudElement
     private Vector2 screenPos;
     private int numLives;
     private SpriteFont _font;
-    public HudLives(int startLives, SpriteFont font)
+    public HudLives(int startLives, SpriteFont font, Game1 game, Mario mario)
     {
         numLives = startLives;
         _font = font;
