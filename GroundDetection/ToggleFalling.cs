@@ -11,7 +11,8 @@ using Microsoft.Xna.Framework;
 {
     private List<Rectangle> emptyGround;
     private List<IEntity> objects;
-    Ground ground;
+    private Ground ground;
+    private float fallingGroundPosition = 480f;
 
     public ToggleFalling(Ground g, List<IEntity> objects)
     {
@@ -34,14 +35,13 @@ using Microsoft.Xna.Framework;
         }
     }
 
-    public void testMario(Mario mar)
+    public void updateMarioFallingTest(Mario mar)
     {
         
  if (mar.GetDestination().Intersects(emptyGround[0]))
         {
                 mar.updateGroundPosition(480f);
-        }
-        
+        }        
        
     }
 
