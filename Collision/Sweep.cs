@@ -83,7 +83,7 @@ public class Sweep
     MarioObstacleInteraction MarioObstacleInteraction;
     ItemObstacleInteraction ItemObstacleInteraction;
     EnemyObstacleInteraction EnemyObstacleInteraction;
-    MarioGroundInteraction MarioGroundInteraction;
+   
 
     public void iterateListInteractions(List<IEntity> entities, List<IEntity> entitiesRemoved)
     {
