@@ -11,10 +11,11 @@ using Microsoft.Xna.Framework;
 {
     private List<Rectangle> emptyGround;
     private List<IEntity> objects;
+    Ground ground;
 
-    public ToggleFalling(List<Rectangle> emptyGround, List<IEntity> objects)
+    public ToggleFalling(Ground g, List<IEntity> objects)
     {
-        this.emptyGround = emptyGround;
+        this.ground = g;
         this.objects = objects;
        
     }
@@ -23,7 +24,7 @@ using Microsoft.Xna.Framework;
     {
  for (int i = 0; i < objects.Count; i++)
         {
-            for (int j = 0; j < emptyGround.Count; j++) {
+            for (int j = 0; j < ground.emptyGroundList().Count; j++) {
                 if (objects[i].GetDestination().Intersects(emptyGround[j]))
                 {
                     //objects[i].isFalling();
@@ -33,12 +34,15 @@ using Microsoft.Xna.Framework;
         }
     }
 
-    public void testMario(IEntity mar)
+    public void testMario(Mario mar)
     {
-        if (mar.GetDestination().Intersects(emptyGround[0]))
+        
+ if (mar.GetDestination().Intersects(emptyGround[0]))
         {
-
+                mar.updateGroundPosition(480f);
         }
+        
+       
     }
 
 }

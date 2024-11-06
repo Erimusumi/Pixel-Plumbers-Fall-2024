@@ -27,5 +27,10 @@ public class Ground
         emptyRectangles.Remove(emptyFloorRectangle);
     }
 
+    public List<Rectangle> emptyGroundList()
+    {
+        return emptyRectangles;
+    }
+
 }
 
