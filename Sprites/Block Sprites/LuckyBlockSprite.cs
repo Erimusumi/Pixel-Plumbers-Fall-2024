@@ -30,7 +30,7 @@ public class LuckyBlockSprite: IBlock
     private bool hasItemAppeared;
     SpriteBatch spriteBatch;
     private Vector2 i_position;
-    public LuckyBlockSprite(Texture2D texture, SpriteBatch spriteBatch, Texture2D itemTexture, Game1 game, Mario mario)
+    public LuckyBlockSprite(Texture2D texture, SpriteBatch spriteBatch, Texture2D itemTexture, Game1 game, Mario mario, Vector2 position)
     {
         Texture = texture;
         Start = new Vector2(80, 112);
@@ -43,6 +43,7 @@ public class LuckyBlockSprite: IBlock
         this.itemTexture = itemTexture;
         this.spriteBatch = spriteBatch;
         this.mario = mario;
+        this.position = position;
     }
     
     public void Update(GameTime gametime)
@@ -69,6 +70,10 @@ public class LuckyBlockSprite: IBlock
             {
                 item = new Fire(spriteBatch, itemTexture, i_position);
             }
+            else if (mario.isFire())
+            {
+                item = new Star(spriteBatch, itemTexture, i_position);
+            }
             game.entities.Add(item);
 
             hasItemAppeared = true; // Set the flag to prevent drawing again
@@ -79,9 +84,8 @@ public class LuckyBlockSprite: IBlock
         }
         
     }
-    public void Draw(SpriteBatch spriteBatch2, Vector2 position)
+    public void Draw(SpriteBatch spriteBatch2, Vector2 pos)
     {
-        this.position = position;
         //sourceRectangle = new Rectangle((int)Start.X + width * (numOfFrames - currentFrame - 1), (int)Start.Y,
         //        width, height);
         sourceRectangle = new Rectangle(80, 112, 16, 16);
@@ -91,7 +95,7 @@ public class LuckyBlockSprite: IBlock
 
         if (hasItemAppeared && item != null)
         {
-            item.draw(position); // Draw the mushroom consistently once it appears
+            item.draw(); // Draw the mushroom consistently once it appears
         }
 
 

@@ -5,12 +5,11 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-public class Fire: IItem
+public class Fire : IItem
 {
     public Boolean idle;
     public Boolean collected;
     public Boolean roaming;
-    Boolean spawning;
     private Microsoft.Xna.Framework.Vector2 position;
     private int x;
     private int y;
@@ -20,14 +19,11 @@ public class Fire: IItem
     private Boolean movingLeft;
     private Boolean movingRight;
     private Boolean falling;
-    private int yPositionCount;
-    private int groundPosition = 400;
 
-    public Fire(SpriteBatch sb, Texture2D text, Microsoft.Xna.Framework.Vector2 pos)
+    public Fire(SpriteBatch sb, Texture2D text, Vector2 pos)
     {
         fp = new FirePower(sb, texture, pos);
         idle = true;
-        this.spawning = true;
         collected = false;
         roaming = false;
         sB = sb;
@@ -54,7 +50,7 @@ public class Fire: IItem
         collected = false;
         idle = false;
     }
-    public void draw(Vector2 blockPosition)
+    public void draw()
     {
          if (this.collected)
         {
@@ -62,7 +58,7 @@ public class Fire: IItem
         }
         else if(this.idle) {
             fp = new FirePower(sB, texture, position);
-            fp.Draw();
+            fp.draw();
         }
         else if (this.roaming)
         {
@@ -71,17 +67,6 @@ public class Fire: IItem
     }
     public void update(GameTime gameTime)
     {
-        if (this.spawning)
-        {
-            this.position.Y++;
-            this.yPositionCount++;
-            if (yPositionCount > 16)
-            {
-                this.spawning = false;
-                this.roaming = true;
-                this.movingRight = true;
-            }
-        }
         if (this.roaming)
         {
             if (movingRight)
@@ -119,14 +104,6 @@ public class Fire: IItem
     public Rectangle GetDestination()
     {
         return this.fp.GetDestination();
-    }
-    public Vector2 currentPosition()
-    {
-        return this.position;
-    }
-    public void setGroundPosition(int newGroundPosition)
-    {
-        this.groundPosition = newGroundPosition;
     }
     public bool isFalling()
     {
