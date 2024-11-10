@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public class FirePower : IItem
+public class FirePower 
 {
     private Texture2D ItemTexture;
     private SpriteBatch sb;
@@ -14,10 +14,10 @@ public class FirePower : IItem
         this.sb = spriteBatch;
         this.position = position;
     }
-    public void update(GameTime gametime)
+    public void Update(GameTime gametime)
     {
     }
-    public void draw()
+    public void Draw()
     {
         Rectangle sourceRectangle = new Rectangle(0, 33, 16, 16);
         destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 31, 31);
@@ -30,32 +30,5 @@ public class FirePower : IItem
     {
         return destinationRectangle;
     }
-    public void destroy()
-    {
-
-    }
-    public void roams()
-    {
-
-    }
-    public void collect()
-    {
-
-    }
-    public void idling()
-    {
-
-    }
-    public void MakeFalling()
-    {
-
-    }
-    public void NotFalling()
-    {
-
-    }
-    public void swapDirection()
-    {
-
-    }
+  
 }

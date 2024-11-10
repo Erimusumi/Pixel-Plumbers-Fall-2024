@@ -86,7 +86,7 @@ public class Star:IItem
         else if (this.idle)
         {
             sp = new StarPower(texture);
-            this.sp.draw(sB, position);
+            this.sp.Draw(sB, position);
         }
         else if (this.roaming)
         {
