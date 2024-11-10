@@ -24,6 +24,7 @@ public class Mushroom :IItem
     private float gravity = 980f;
     private Rectangle destinationRectangle;
     private int yPositionCount;
+    private int groundPosition;
     
 
 
@@ -141,6 +142,10 @@ public class Mushroom :IItem
     public Rectangle GetDestination()
     {
         return destinationRectangle;
+    }
+    public void setGroundPosition(int newGroundPosition)
+    {
+        this.groundPosition = newGroundPosition;
     }
     public bool isFalling()
     {

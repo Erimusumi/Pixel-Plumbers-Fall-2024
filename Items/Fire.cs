@@ -21,6 +21,7 @@ public class Fire
     private Boolean movingRight;
     private Boolean falling;
     private int yPositionCount;
+    private int groundPosition;
 
     public Fire(SpriteBatch sb, Texture2D text, Microsoft.Xna.Framework.Vector2 pos)
     {
@@ -118,6 +119,10 @@ public class Fire
     public Rectangle GetDestination()
     {
         return this.fp.GetDestination();
+    }
+    public void setGroundPosition(int newGroundPosition)
+    {
+        this.groundPosition = newGroundPosition;
     }
     public bool isFalling()
     {

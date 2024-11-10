@@ -22,6 +22,7 @@ public class Star:IItem
     private float gravity = 980f;
     private Rectangle destinationRectangle;
     private int yPositionCount;
+    private int groundPosition;
 
 
     public Star(SpriteBatch sb,Texture2D text, Vector2 position)
@@ -95,6 +96,10 @@ public class Star:IItem
     public Rectangle GetDestination()
     {
         return destinationRectangle;
+    }
+    public void setGroundPosition(int newGroundPosition)
+    {
+        this.groundPosition = newGroundPosition;
     }
     public void swapDirection()
     {
