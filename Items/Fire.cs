@@ -5,11 +5,12 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-public class Fire
+public class Fire : IItem
 {
     public Boolean idle;
     public Boolean collected;
     public Boolean roaming;
+    
     private Microsoft.Xna.Framework.Vector2 position;
     private int x;
     private int y;
@@ -19,8 +20,9 @@ public class Fire
     private Boolean movingLeft;
     private Boolean movingRight;
     private Boolean falling;
+    private int groundPosition;
 
-    public Fire(SpriteBatch sb, Texture2D text, Microsoft.Xna.Framework.Vector2 pos)
+    public Fire(SpriteBatch sb, Texture2D text, Vector2 pos)
     {
         fp = new FirePower(sb, texture, pos);
         idle = true;
@@ -50,7 +52,7 @@ public class Fire
         collected = false;
         idle = false;
     }
-    public void draw(Vector2 blockPosition)
+    public void draw()
     {
          if (this.collected)
         {
@@ -104,6 +106,14 @@ public class Fire
     public Rectangle GetDestination()
     {
         return this.fp.GetDestination();
+    }
+    public Vector2 currentPosition()
+    {
+        return this.position;
+    }
+    public void setGroundPosition(int groundPos)
+    {
+        this.groundPosition = groundPos;
     }
     public bool isFalling()
     {

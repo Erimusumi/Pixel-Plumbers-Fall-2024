@@ -10,6 +10,7 @@ public class Star:IItem
     private Boolean idle;
     private Boolean collected;
     private Boolean roaming;
+    private Boolean spawning;
     private Vector2 position;
     private StarPower sp;
     private SpriteBatch sB;
@@ -20,14 +21,17 @@ public class Star:IItem
     private Vector2 velocity;
     private float gravity = 980f;
     private Rectangle destinationRectangle;
+    private int yPositionCount;
+    private int groundPosition = 400;
 
 
     public Star(SpriteBatch sb,Texture2D text, Vector2 position)
     {
         sp = new StarPower(texture);
+        this.spawning = true;
         idle = true;
         collected = false;
-        roaming = true;
+        roaming = false;
         movingRight = true;
         sB = sb;
         texture = text;
@@ -36,6 +40,17 @@ public class Star:IItem
     }
     public void update(GameTime gameTime)
     {
+        if (this.spawning)
+        {
+            this.position.Y++;
+            this.yPositionCount++;
+            if (yPositionCount > 16)
+            {
+                this.spawning = false;
+                this.roaming = true;
+                this.movingRight = true;
+            }
+        }
         if (this.roaming)
         {
             if (movingRight)
@@ -71,7 +86,7 @@ public class Star:IItem
         else if (this.idle)
         {
             sp = new StarPower(texture);
-            this.sp.draw(sB, position);
+            this.sp.Draw(sB, position);
         }
         else if (this.roaming)
         {
@@ -81,6 +96,14 @@ public class Star:IItem
     public Rectangle GetDestination()
     {
         return destinationRectangle;
+    }
+    public Vector2 currentPosition()
+    {
+        return this.position;
+    }
+    public void setGroundPosition(int newGroundPosition)
+    {
+        this.groundPosition = newGroundPosition;
     }
     public void swapDirection()
     {

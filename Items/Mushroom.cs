@@ -12,6 +12,7 @@ public class Mushroom :IItem
     public Boolean idle;
     public Boolean collected;
     public Boolean roaming;
+    private Boolean spawning;
     private Boolean movingRight;
     private Boolean movingLeft;
     private Vector2 position;
@@ -22,15 +23,18 @@ public class Mushroom :IItem
     private Vector2 velocity;
     private float gravity = 980f;
     private Rectangle destinationRectangle;
+    private int yPositionCount;
+    private int groundPosition = 400;
     
 
 
     public  Mushroom(SpriteBatch sB, Texture2D texture, Vector2 m_position)
     {
         mp = new MushroomPower(texture);
-        this.idle = false;
+        this.spawning = true;
+        this.idle = true;
         this.collected = false;
-        this.roaming = true;
+        this.roaming = false;
         this.falling = true;
         this.texture = texture;
         this.sb = sB;
@@ -62,6 +66,18 @@ public class Mushroom :IItem
     }
     public void update(GameTime gameTime)
     {
+        if (this.spawning)
+        {
+            this.position.Y++;
+            this.yPositionCount++;
+            if (yPositionCount > 16)
+            {
+                this.spawning = false;
+                this.roaming = true;
+                this.movingRight = true;
+            }
+        }
+        
         if (this.roaming)
         {
             if (movingRight)
@@ -126,6 +142,14 @@ public class Mushroom :IItem
     public Rectangle GetDestination()
     {
         return destinationRectangle;
+    }
+    public Vector2 currentPosition()
+    {
+        return this.position;
+    }
+    public void setGroundPosition(int newGroundPosition)
+    {
+        this.groundPosition = newGroundPosition;
     }
     public bool isFalling()
     {

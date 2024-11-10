@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public class FirePower : IItem
+public class FirePower
 {
     private Texture2D ItemTexture;
     private SpriteBatch sb;
@@ -29,33 +29,5 @@ public class FirePower : IItem
     public Rectangle GetDestination()
     {
         return destinationRectangle;
-    }
-    public void destroy()
-    {
-
-    }
-    public void roams()
-    {
-
-    }
-    public void collect()
-    {
-
-    }
-    public void idling()
-    {
-
-    }
-    public void MakeFalling()
-    {
-
-    }
-    public void NotFalling()
-    {
-
-    }
-    public void swapDirection()
-    {
-
     }
 }
