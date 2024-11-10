@@ -290,6 +290,24 @@ public class Game1 : Game
         cards = Content.Load<Texture2D>("BlackJack/cards");
         fwip = Content.Load<SoundEffect>("Audio/flip");
 
+        //SFX audios
+        pipeSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_pipe");
+        oneUpSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_1-up");
+        coinSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_coin");
+        fireBallSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_fireball");
+        flagPoleSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_flagpole");
+        powerUpSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_powerup");
+        powerUpSpawnsSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_powerup_appears");
+        marioJump = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_jump-small");
+        marioDeath = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_mariodie");
+
+        marioSounds.Add(powerUpSound);
+        marioSounds.Add(pipeSound);
+        marioSounds.Add(fireBallSound);
+        marioSounds.Add(marioJump);
+        marioSounds.Add(marioDeath);
+        mario = new Mario(marioTexture, gameTime, this, entities, marioSounds);
+
         startScreenFonts = Content.Load<SpriteFont>("StartScreenFonts");
         startScreenSprite = new StartScreenSprite(titleTexture, startScreenFonts);
         levelScreenFonts = Content.Load<SpriteFont>("LevelScreenFonts");
@@ -322,23 +340,7 @@ public class Game1 : Game
 
         obstacle4 = new obstacle4(obstacle);
 
-        //SFX audios
-        pipeSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_pipe");
-        oneUpSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_1-up");
-        coinSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_coin");
-        fireBallSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_fireball");
-        flagPoleSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_flagpole");
-        powerUpSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_powerup");
-        powerUpSpawnsSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_powerup_appears");
-        marioJump = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_jump-small");
-        marioDeath = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_mariodie");
-
-        marioSounds.Add(powerUpSound);
-        marioSounds.Add(pipeSound);
-        marioSounds.Add(fireBallSound);
-        marioSounds.Add(marioJump);
-        marioSounds.Add(marioDeath);
-        mario = new Mario(marioTexture, gameTime, this, entities, marioSounds);
+        
 
     }
 
