@@ -62,7 +62,7 @@ public class Fire
         }
         else if(this.idle) {
             fp = new FirePower(sB, texture, position);
-            fp.draw();
+            fp.Draw();
         }
         else if (this.roaming)
         {
