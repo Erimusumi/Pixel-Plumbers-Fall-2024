@@ -50,7 +50,7 @@ public class Star:IItem
         collected = false;
         idle = false;
     }
-    public void draw(Vector2 blockPosition)
+    public void draw(Vector2 pos)
     {
         if (this.collected)
         {
@@ -59,7 +59,7 @@ public class Star:IItem
         else if (this.idle)
         {
             sp = new StarPower(texture);
-            this.sp.Draw(sB, blockPosition);
+            this.sp.Draw(sB, pos);
         }
         else if (this.roaming)
         {

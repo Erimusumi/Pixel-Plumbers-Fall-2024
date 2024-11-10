@@ -168,7 +168,7 @@ public class Game1 : Game
 
         star1 = new Star(spriteBatch, ItemsTexture);
         mushroom1 = new Mushroom(spriteBatch, ItemsTexture);
-        //fire1 = new Fire(spriteBatch, ItemsTexture);
+        fire1 = new Fire(spriteBatch, ItemsTexture);
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
         entities.Add(mario);
@@ -241,8 +241,9 @@ public class Game1 : Game
         Goomba16 = new Goomba(5550, 400);
 
 
-        star1 = new Star(spriteBatch, ItemsTexture/*, new Vector2(30, 400)*/);
+        star1 = new Star(spriteBatch, ItemsTexture);
         mushroom1 = new Mushroom(spriteBatch, ItemsTexture);
+        fire1 = new Fire(spriteBatch, ItemsTexture);
         OWLuckyBlockSprite = new LuckyBlockSprite(block, spriteBatch, ItemsTexture, this);
         OWLuckyBlockSprite2 = new LuckyBlockSprite(block, spriteBatch, ItemsTexture, this);
         OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
@@ -261,6 +262,9 @@ public class Game1 : Game
         entities.Add(obstacle1);
         entities.Add(obstacle2);
         entities.Add(obstacle3);
+        entities.Add(star1);
+        entities.Add(mushroom1);
+        entities.Add(fire1);
 
         controlCenter = new CommandControlCenter(this);
 
@@ -484,6 +488,7 @@ public class Game1 : Game
             Goomba14.Draw(spriteBatch, EnemyTexture);
             Goomba15.Draw(spriteBatch, EnemyTexture);
             Goomba16.Draw(spriteBatch, EnemyTexture);
+            star1.draw(new Vector2())
 
             foreach (var item in fireballs)
             {
