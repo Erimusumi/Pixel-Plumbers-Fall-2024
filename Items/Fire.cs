@@ -21,7 +21,7 @@ public class Fire
     private Boolean movingRight;
     private Boolean falling;
     private int yPositionCount;
-    private int groundPosition;
+    private int groundPosition = 400;
 
     public Fire(SpriteBatch sb, Texture2D text, Microsoft.Xna.Framework.Vector2 pos)
     {

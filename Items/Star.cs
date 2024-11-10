@@ -22,7 +22,7 @@ public class Star:IItem
     private float gravity = 980f;
     private Rectangle destinationRectangle;
     private int yPositionCount;
-    private int groundPosition;
+    private int groundPosition = 400;
 
 
     public Star(SpriteBatch sb,Texture2D text, Vector2 position)

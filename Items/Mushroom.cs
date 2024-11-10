@@ -24,7 +24,7 @@ public class Mushroom :IItem
     private float gravity = 980f;
     private Rectangle destinationRectangle;
     private int yPositionCount;
-    private int groundPosition;
+    private int groundPosition = 400;
     
 
 
