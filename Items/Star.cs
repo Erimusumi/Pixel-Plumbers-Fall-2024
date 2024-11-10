@@ -10,6 +10,7 @@ public class Star:IItem
     private Boolean idle;
     private Boolean collected;
     private Boolean roaming;
+    private Boolean spawning;
     private Vector2 position;
     private StarPower sp;
     private SpriteBatch sB;
@@ -20,14 +21,16 @@ public class Star:IItem
     private Vector2 velocity;
     private float gravity = 980f;
     private Rectangle destinationRectangle;
+    private int yPositionCount;
 
 
     public Star(SpriteBatch sb,Texture2D text, Vector2 position)
     {
         sp = new StarPower(texture);
+        this.spawning = true;
         idle = true;
         collected = false;
-        roaming = true;
+        roaming = false;
         movingRight = true;
         sB = sb;
         texture = text;
@@ -36,6 +39,17 @@ public class Star:IItem
     }
     public void update(GameTime gameTime)
     {
+        if (this.spawning)
+        {
+            this.position.Y++;
+            this.yPositionCount++;
+            if (yPositionCount > 16)
+            {
+                this.spawning = false;
+                this.roaming = true;
+                this.movingRight = true;
+            }
+        }
         if (this.roaming)
         {
             if (movingRight)

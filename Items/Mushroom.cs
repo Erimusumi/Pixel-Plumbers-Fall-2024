@@ -33,7 +33,7 @@ public class Mushroom :IItem
         this.spawning = true;
         this.idle = true;
         this.collected = false;
-        this.roaming = true;
+        this.roaming = false;
         this.falling = true;
         this.texture = texture;
         this.sb = sB;

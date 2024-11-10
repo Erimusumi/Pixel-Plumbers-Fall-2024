@@ -10,6 +10,7 @@ public class Fire
     public Boolean idle;
     public Boolean collected;
     public Boolean roaming;
+    Boolean spawning;
     private Microsoft.Xna.Framework.Vector2 position;
     private int x;
     private int y;
@@ -19,11 +20,13 @@ public class Fire
     private Boolean movingLeft;
     private Boolean movingRight;
     private Boolean falling;
+    private int yPositionCount;
 
     public Fire(SpriteBatch sb, Texture2D text, Microsoft.Xna.Framework.Vector2 pos)
     {
         fp = new FirePower(sb, texture, pos);
         idle = true;
+        this.spawning = true;
         collected = false;
         roaming = false;
         sB = sb;
@@ -67,6 +70,17 @@ public class Fire
     }
     public void update(GameTime gameTime)
     {
+        if (this.spawning)
+        {
+            this.position.Y++;
+            this.yPositionCount++;
+            if (yPositionCount > 16)
+            {
+                this.spawning = false;
+                this.roaming = true;
+                this.movingRight = true;
+            }
+        }
         if (this.roaming)
         {
             if (movingRight)
