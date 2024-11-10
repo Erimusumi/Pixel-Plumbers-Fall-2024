@@ -97,6 +97,10 @@ public class Star:IItem
     {
         return destinationRectangle;
     }
+    public Vector2 currentPosition()
+    {
+        return this.position;
+    }
     public void setGroundPosition(int newGroundPosition)
     {
         this.groundPosition = newGroundPosition;

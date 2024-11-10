@@ -11,6 +11,7 @@ public interface IItem: IEntity
     public void update(GameTime gameTime);
     public void setGroundPosition(int groundPosition);
     public void draw(Vector2 position);
+    public Vector2 currentPosition();
     public void destroy();
     public void roams();
     public void collect();
