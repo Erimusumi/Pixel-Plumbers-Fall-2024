@@ -381,4 +381,18 @@ public class Mario : IEntity
         this.groundPosition = gp;
     }
 
+    public bool isSmall()
+    {
+
+        return marioStateMachine.isSmall();
+    }
+
+    public bool isBig()
+    {
+        return marioStateMachine.isBig();
+    }
+    public bool isFire()
+    {
+        return marioStateMachine.isFire();
+    }   
 }

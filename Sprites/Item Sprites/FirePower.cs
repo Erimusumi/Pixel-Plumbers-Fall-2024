@@ -1,28 +1,61 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public class FirePower : ISprite
+public class FirePower : IItem
 {
     private Texture2D ItemTexture;
-    //private Vector2 position;
+    private SpriteBatch sb;
+    private Vector2 position;
+    private Rectangle destinationRectangle;
     
-    public FirePower(Texture2D ItemTexture)
+    public FirePower(SpriteBatch spriteBatch, Texture2D ItemTexture, Vector2 position)
     {
         this.ItemTexture = ItemTexture;
+        this.sb = spriteBatch;
+        this.position = position;
     }
-    public void Draw(SpriteBatch spriteBatch, Vector2 position)
+    public void update(GameTime gametime)
     {
-        Rectangle sourceRectangle = new Rectangle(0, 33, 15, 15);
-       
-        spriteBatch.Draw(ItemTexture, position, sourceRectangle, Color.White);
+    }
+    public void draw()
+    {
+        Rectangle sourceRectangle = new Rectangle(0, 33, 16, 16);
+        destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 31, 31);
+        sb.Draw(ItemTexture, destinationRectangle, sourceRectangle, Color.White);
      
     }
 
-    public void Update(GameTime gametime)
+    
+    public Rectangle GetDestination()
     {
+        return destinationRectangle;
     }
-    public Rectangle GetDestination(Vector2 position)
+    public void destroy()
     {
-        return new Rectangle((int)position.X, (int)position.Y, 15, 15);
+
+    }
+    public void roams()
+    {
+
+    }
+    public void collect()
+    {
+
+    }
+    public void idling()
+    {
+
+    }
+    public void MakeFalling()
+    {
+
+    }
+    public void NotFalling()
+    {
+
+    }
+    public void swapDirection()
+    {
+
     }
 }

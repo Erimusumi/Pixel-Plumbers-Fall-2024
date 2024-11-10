@@ -20,18 +20,17 @@ public class LuckyBlockSprite: IBlock
     private Rectangle sourceRectangle;
     private Rectangle destinationRectangle;
     private Vector2 position;
-    private Mushroom m;
+    private IItem item;
     private int frames = 3;
     private int wait = 20;
     public Boolean bump = false;
     private Game1 game;
+    private Mario mario;
     private Texture2D itemTexture;
-    private bool hasMushroomAppeared;
+    private bool hasItemAppeared;
     SpriteBatch spriteBatch;
-    private Vector2 velocity;
-    private float gravity = 980f;
-    private Vector2 m_position;
-    public LuckyBlockSprite(Texture2D texture, SpriteBatch spriteBatch, Texture2D itemTexture, Game1 game)
+    private Vector2 i_position;
+    public LuckyBlockSprite(Texture2D texture, SpriteBatch spriteBatch, Texture2D itemTexture, Game1 game, Mario mario)
     {
         Texture = texture;
         Start = new Vector2(80, 112);
@@ -43,7 +42,7 @@ public class LuckyBlockSprite: IBlock
         this.game = game;
         this.itemTexture = itemTexture;
         this.spriteBatch = spriteBatch;
-        this.velocity = Vector2.Zero;
+        this.mario = mario;
     }
     
     public void Update(GameTime gametime)
@@ -59,23 +58,26 @@ public class LuckyBlockSprite: IBlock
             }
         }
 
-        if (bump && !hasMushroomAppeared)
+        if (bump && !hasItemAppeared)
         {
-            m_position = new Vector2(position.X, position.Y - 31);
-            m = new Mushroom(spriteBatch, itemTexture);
-            game.entities.Add(m);
+            i_position = new Vector2(position.X, position.Y - 31);
+            if (mario.isSmall())
+            {
+                item = new Mushroom(spriteBatch, itemTexture, i_position);
+            }
+            else if (mario.isBig())
+            {
+                item = new FirePower(spriteBatch, itemTexture, i_position);
+            }
+            game.entities.Add(item);
 
-            hasMushroomAppeared = true; // Set the flag to prevent drawing again
+            hasItemAppeared = true; // Set the flag to prevent drawing again
         }
-
         if (bump)
         {
-            m.update(gametime);
-            velocity.Y += gravity * (float)gametime.ElapsedGameTime.TotalSeconds;
-            m_position += velocity * (float)gametime.ElapsedGameTime.TotalSeconds; // Update position
-
-
+            item.update(gametime);
         }
+        
     }
     public void Draw(SpriteBatch spriteBatch2, Vector2 position)
     {
@@ -87,9 +89,9 @@ public class LuckyBlockSprite: IBlock
 
         spriteBatch.Draw(Texture, destinationRectangle, sourceRectangle, Color.White);
 
-        if (hasMushroomAppeared && m != null)
+        if (hasItemAppeared && item != null)
         {
-            m.draw(m_position); // Draw the mushroom consistently once it appears
+            item.draw(); // Draw the mushroom consistently once it appears
         }
 
 

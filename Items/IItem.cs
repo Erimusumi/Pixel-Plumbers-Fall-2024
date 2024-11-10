@@ -9,11 +9,13 @@ public interface IItem: IEntity
 {
     public void swapDirection();
     public void update(GameTime gameTime);
-    public void draw(Vector2 position);
+    public void draw();
     public void destroy();
     public void roams();
     public void collect();
     public void idling();
+    public void MakeFalling();
+    public void NotFalling();
 
 
 }
