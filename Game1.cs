@@ -68,9 +68,9 @@ public class Game1 : Game
     public ISprite firePower;
     public ISprite starPower;
     public ISprite mushroomPower;
-    public Fire f;
-    public Star s;
-    public Mushroom m;
+    public Fire fire1;
+    public Star star1;
+    public Mushroom mushroom1;
     Vector2 itemsPos = new Vector2(400, 250);
    
 
@@ -166,7 +166,9 @@ public class Game1 : Game
         spriteEnemy = new Goomba(480, 400);
         spriteEnemy2 = new Goomba2(240, 400);
 
-        s = new Star(spriteBatch, ItemsTexture/*, new Vector2(30, 400)*/);
+        star1 = new Star(spriteBatch, ItemsTexture);
+        mushroom1 = new Mushroom(spriteBatch, ItemsTexture);
+        //fire1 = new Fire(spriteBatch, ItemsTexture);
         entities.Add(spriteEnemy2);
         entities.Add(spriteEnemy);
         entities.Add(mario);
@@ -176,6 +178,9 @@ public class Game1 : Game
         entities.Add(obstacle1);
         entities.Add(obstacle2);
         entities.Add(obstacle3);
+        entities.Add(star1);
+        entities.Add(mushroom1);
+        entities.Add(fire1);
 
       
         fireballs.Clear();
@@ -236,7 +241,8 @@ public class Game1 : Game
         Goomba16 = new Goomba(5550, 400);
 
 
-        s = new Star(spriteBatch, ItemsTexture/*, new Vector2(30, 400)*/);
+        star1 = new Star(spriteBatch, ItemsTexture/*, new Vector2(30, 400)*/);
+        mushroom1 = new Mushroom(spriteBatch, ItemsTexture);
         OWLuckyBlockSprite = new LuckyBlockSprite(block, spriteBatch, ItemsTexture, this);
         OWLuckyBlockSprite2 = new LuckyBlockSprite(block, spriteBatch, ItemsTexture, this);
         OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));

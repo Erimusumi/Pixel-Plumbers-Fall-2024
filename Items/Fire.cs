@@ -20,7 +20,7 @@ public class Fire :IItem
     private Boolean movingRight;
     private Boolean falling;
 
-    public Fire(SpriteBatch sb, Texture2D text, Microsoft.Xna.Framework.Vector2 pos)
+    public Fire(SpriteBatch sb, Texture2D text)
     {
         fp = new FirePower(texture);
         idle = true;
@@ -28,7 +28,7 @@ public class Fire :IItem
         roaming = false;
         sB = sb;
         texture = text;
-        position = pos;
+        
         movingLeft = false;
         movingRight = false;
     }
@@ -50,15 +50,16 @@ public class Fire :IItem
         collected = false;
         idle = false;
     }
-    public void draw(Vector2 blockPosition)
+    public void draw(Vector2 pos)
     {
+        this.position = pos;
          if (this.collected)
         {
 
         }
         else if(this.idle) {
             fp = new FirePower(texture);
-            fp.Draw(this.sB, blockPosition);
+            fp.Draw(this.sB, pos);
         }
         else if (this.roaming)
         {
