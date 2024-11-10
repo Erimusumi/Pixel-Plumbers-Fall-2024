@@ -85,6 +85,18 @@
 /processorParam:Quality=Best
 /build:Audio/Sound Effect(s)/smb_flagpole.wav
 
+#begin Audio/Sound Effect(s)/smb_jump-small.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/Sound Effect(s)/smb_jump-small.wav
+
+#begin Audio/Sound Effect(s)/smb_mariodie.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/Sound Effect(s)/smb_mariodie.wav
+
 #begin Audio/Sound Effect(s)/smb_pipe.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor

@@ -330,8 +330,8 @@ public class Game1 : Game
         flagPoleSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_flagpole");
         powerUpSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_powerup");
         powerUpSpawnsSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_powerup_appears");
-        marioJump = Content.Load<SoundEffect>("Audio/SoundEffect(s)/smb_powerup");
-        marioDeath = Content.Load<SoundEffect>("Audio/SoundEffect(s)/smb_powerup");
+        marioJump = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_jump-small");
+        marioDeath = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_mariodie");
 
         marioSounds.Add(powerUpSound);
         marioSounds.Add(pipeSound);

@@ -1,1 +1,3 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/creat/Source/Repos/Pixel-Plumbers-Fall-2024/Content/Audio/Sound Effect(s)/smb_jump-small.wav","C:/Users/creat/Source/Repos/Pixel-Plumbers-Fall-2024/Content/bin/DesktopGL/Content/Audio/Sound Effect(s)/smb_jump-small.xnb","SoundEffectProcessor","SoundEffectContent",26982,26129,2.0018528
+"C:/Users/creat/Source/Repos/Pixel-Plumbers-Fall-2024/Content/Audio/Sound Effect(s)/smb_mariodie.wav","C:/Users/creat/Source/Repos/Pixel-Plumbers-Fall-2024/Content/bin/DesktopGL/Content/Audio/Sound Effect(s)/smb_mariodie.xnb","SoundEffectProcessor","SoundEffectContent",120570,119717,0.4251451
