@@ -5,7 +5,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-public class Fire
+public class Fire: IItem
 {
     public Boolean idle;
     public Boolean collected;

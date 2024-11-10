@@ -10,7 +10,7 @@ public interface IItem: IEntity
     public void swapDirection();
     public void update(GameTime gameTime);
     public void setGroundPosition(int groundPosition);
-    public void draw();
+    public void draw(Vector2 position);
     public void destroy();
     public void roams();
     public void collect();

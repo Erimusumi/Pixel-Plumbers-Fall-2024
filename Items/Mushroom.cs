@@ -105,7 +105,7 @@ public class Mushroom :IItem
         destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 31, 31);
 
     }
-    public void draw()
+    public void draw(Vector2 position)
     {
         if (this.idle || this.roaming)
         {
