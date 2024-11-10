@@ -18,7 +18,7 @@ public class Game1 : Game
     private GameTime gameTime;
     private Texture2D titleTexture;
 
-    private HudManager hudManager;
+    public HudManager hudManager;
 
     private KeyboardController keyboardController;
     private KeyboardControllerMovement keyboardControllerMovement;
@@ -180,6 +180,9 @@ public class Game1 : Game
         currentItem = 0;
         fireballs.Clear();
         mario.Reset();
+
+        hudManager.SetTime(400);
+
         camera = new(Vector2.Zero);
     }
 
@@ -422,29 +425,6 @@ public class Game1 : Game
             hudManager.Update(gameTime, camera);
         }
         toggleFalling.updateMarioFallingTest(mario);
-
-        /*TESTING HUD; REMOVE LATER
-         * 
-         *
-        Random random = new Random();
-        if (random.Next(25) == 0)
-        {
-            hudManager.CollectCoin();
-            hudManager.AddScore(200);
-            if (hudManager.GetLevel() == 1)
-            {
-                hudManager.ChangeLevel(2);
-                hudManager.ChangeWorld(2);
-                hudManager.AddLife();
-            }
-            else
-            {
-                hudManager.ChangeWorld(1);
-                hudManager.ChangeLevel(1);
-                hudManager.LoseLife();
-            }
-        }
-        */
 
         base.Update(gameTime);
     }

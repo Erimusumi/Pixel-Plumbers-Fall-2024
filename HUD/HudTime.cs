@@ -13,7 +13,6 @@ public class HudTime : IHudElement
     private const float scale = 0.6f;
     private Vector2 screenPos;
     private int currTime;
-    private int resetTimer = -1;
     private float gameTicks;
     private SpriteFont _font;
     private Game1 _game;
@@ -45,18 +44,6 @@ public class HudTime : IHudElement
         {
             currTime = 0;
             _mario.MarioDeath();
-            if (resetTimer < 0)
-            {
-                resetTimer = 4;
-            }
-            else if (resetTimer == 0)
-            {
-                _game.ResetGame();
-            }
-            if (this.gameTicks > 1000)
-            {
-                resetTimer -= 1;
-            }
         }
 
         if (this.gameTicks > 1000)

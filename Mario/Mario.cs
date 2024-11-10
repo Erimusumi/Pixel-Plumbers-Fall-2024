@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -37,6 +38,7 @@ public class Mario : IEntity
 
     //Need Game1 reference to correctly create fireballs
     private Game1 game;
+    private int gameResetTimer = -1;
     private List<IEntity> _entities;
 
     public Mario(Texture2D marioTexture, GameTime gametime, Game1 game, List<IEntity> entities, List<SoundEffect> sfx)
@@ -248,6 +250,21 @@ public class Mario : IEntity
             marioVelocity.X = 0; marioVelocity.Y = 0;
             marioPosition.Y -= (float)marioDeathBounceIncrement;
             marioDeathBounceIncrement -= 1;
+
+            //Start timer and reset automatically after mario dies
+            if (gameResetTimer > 0)
+            {
+                gameResetTimer -= 1;
+            }
+            else if (gameResetTimer < 0)
+            {
+                gameResetTimer = 250;
+            }
+            else if (gameResetTimer == 0)
+            {
+                game.hudManager.LoseLife();
+                game.ResetGame();
+            }
         }
     }
     public void SwapDirection()
@@ -346,6 +363,8 @@ public class Mario : IEntity
         isOnGround = true;                                                                  // Set Mario as standing on the ground
         currentMarioSprite = new IdleRightSmallMario(marioTexture);                         // Set mario to small idle right again
         marioDeathBounceIncrement = 20;
+        gameResetTimer = -1;
+        deathSoundPlaying = false;
     }
 
     public Rectangle GetDestination()
