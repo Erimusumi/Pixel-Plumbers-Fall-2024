@@ -77,7 +77,7 @@ public class Star:IItem
         position += velocity * (float)gameTime.ElapsedGameTime.TotalSeconds; // Update position
         destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 31, 31);
     }
-    public void draw(Vector2 position)
+    public void draw()
     {
         if (this.collected)
         {

@@ -10,6 +10,7 @@ public class Fire : IItem
     public Boolean idle;
     public Boolean collected;
     public Boolean roaming;
+    
     private Microsoft.Xna.Framework.Vector2 position;
     private int x;
     private int y;
@@ -19,6 +20,7 @@ public class Fire : IItem
     private Boolean movingLeft;
     private Boolean movingRight;
     private Boolean falling;
+    private int groundPosition;
 
     public Fire(SpriteBatch sb, Texture2D text, Vector2 pos)
     {
@@ -104,6 +106,14 @@ public class Fire : IItem
     public Rectangle GetDestination()
     {
         return this.fp.GetDestination();
+    }
+    public Vector2 currentPosition()
+    {
+        return this.position;
+    }
+    public void setGroundPosition(int groundPos)
+    {
+        this.groundPosition = groundPos;
     }
     public bool isFalling()
     {
