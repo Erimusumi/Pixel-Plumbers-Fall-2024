@@ -72,9 +72,7 @@ public class Game1 : Game
     public Star s;
     public Mushroom m;
     Vector2 itemsPos = new Vector2(400, 250);
-    public ItemManager manager = new ItemManager();
-    public int numItems = 3;
-    public int currentItem = 0;
+   
 
     //Block Code instance variables
     private Texture2D block;
@@ -179,7 +177,7 @@ public class Game1 : Game
         entities.Add(obstacle2);
         entities.Add(obstacle3);
 
-        currentItem = 0;
+      
         fireballs.Clear();
         mario.Reset();
         camera = new(Vector2.Zero);
@@ -399,8 +397,7 @@ public class Game1 : Game
             Goomba16.Updates();
 
             //Dance.Updates();
-            manager.updateCurrentItem(ref currentItem, numItems);
-
+           
             //Update block and obstacle sprites
             OWLuckyBlockSprite.Update(gameTime);
             OWLuckyBlockSprite2.Update(gameTime);
