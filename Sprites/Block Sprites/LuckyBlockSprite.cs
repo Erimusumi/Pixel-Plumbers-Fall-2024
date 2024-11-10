@@ -67,7 +67,7 @@ public class LuckyBlockSprite: IBlock
             }
             else if (mario.isBig())
             {
-                item = new FirePower(spriteBatch, itemTexture, i_position);
+                item = new Fire(spriteBatch, itemTexture, i_position);
             }
             game.entities.Add(item);
 
@@ -91,7 +91,7 @@ public class LuckyBlockSprite: IBlock
 
         if (hasItemAppeared && item != null)
         {
-            item.draw(); // Draw the mushroom consistently once it appears
+            item.draw(position); // Draw the mushroom consistently once it appears
         }
 
 
