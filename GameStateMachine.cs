@@ -46,7 +46,7 @@ public class GameStateMachine
 
     public bool isCurrentStatOver()
     {
-        return currentGameState == GameStates.Start;
+        return currentGameState == GameStates.Over;
     }
 
     public void setGameLevelsScreen()

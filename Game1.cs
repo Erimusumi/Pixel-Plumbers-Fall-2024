@@ -8,6 +8,9 @@ using Microsoft.Xna.Framework.Content;
 using System.Reflection.Metadata;
 using Microsoft.Xna.Framework.Audio;
 using System.Net.NetworkInformation;
+using System.Diagnostics;
+using static System.Formats.Asn1.AsnWriter;
+using static System.Net.Mime.MediaTypeNames;
 namespace Pixel_Plumbers_Fall_2024;
 
 public class Game1 : Game
@@ -17,6 +20,8 @@ public class Game1 : Game
     private Texture2D marioTexture;
     private GameTime gameTime;
     private Texture2D titleTexture;
+    private Texture2D gameOverBackground;
+    private float gameOverTickTimer;
 
     public HudManager hudManager;
 
@@ -110,6 +115,7 @@ public class Game1 : Game
     SoundEffect powerUpSpawnsSound;
     SoundEffect marioJump;
     SoundEffect marioDeath;
+    SoundEffect gameOverSound;
     List<SoundEffect> marioSounds = new List<SoundEffect>();
 
     // reset instances
@@ -186,6 +192,11 @@ public class Game1 : Game
         camera = new(Vector2.Zero);
     }
 
+    public void GameOver()
+    {
+        gameStateMachine.setGameStateOver();
+        gameOverSound.Play();
+    }
     protected override void Initialize()
     {
         base.Initialize();
@@ -288,6 +299,7 @@ public class Game1 : Game
         EnemyTexture = Content.Load<Texture2D>("enemies");
         DanceTexture = Content.Load<Texture2D>("dance");
         ItemsTexture = Content.Load<Texture2D>("itemsAndPowerups");
+        gameOverBackground = Content.Load<Texture2D>("blank screen");
         table = Content.Load<Texture2D>("BlackJack/table");
         tabletop = Content.Load<Texture2D>("BlackJack/tabletop");
         cards = Content.Load<Texture2D>("BlackJack/cards");
@@ -303,6 +315,7 @@ public class Game1 : Game
         powerUpSpawnsSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_powerup_appears");
         marioJump = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_jump-small");
         marioDeath = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_mariodie");
+        gameOverSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_gameover");
 
         marioSounds.Add(powerUpSound);
         marioSounds.Add(pipeSound);
@@ -424,6 +437,15 @@ public class Game1 : Game
             }
             hudManager.Update(gameTime, camera);
         }
+        if (gameStateMachine.isCurrentStatOver())
+        {
+            this.gameOverTickTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+            if (gameOverTickTimer > 5000)
+            {
+                Process.Start("Pixel-Plumbers-Fall-2024");
+                Environment.Exit(0);
+            }
+        }
         toggleFalling.updateMarioFallingTest(mario);
 
         base.Update(gameTime);
@@ -501,6 +523,14 @@ public class Game1 : Game
             hudManager.Draw(spriteBatch);
             blackJackStateMachine.Draw(spriteBatch);
 
+            spriteBatch.End();
+        }
+
+        if (gameStateMachine.isCurrentStatOver())
+        {
+            spriteBatch.Begin();
+            spriteBatch.Draw(gameOverBackground, camera.position, Color.Black);
+            spriteBatch.DrawString(startScreenFonts, "GAME OVER", new Vector2(300, 150), Color.White, 0f, Vector2.Zero, 1, SpriteEffects.None, 0f);
             spriteBatch.End();
         }
         base.Draw(gameTime);
