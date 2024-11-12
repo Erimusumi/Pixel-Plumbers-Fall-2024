@@ -7,6 +7,5 @@ using Pixel_Plumbers_Fall_2024;
 public interface IEntity
 {
     public Rectangle GetDestination();
-
 }
 
