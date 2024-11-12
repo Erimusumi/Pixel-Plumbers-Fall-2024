@@ -24,7 +24,7 @@ public class Mushroom :IItem
     private float gravity = 980f;
     private Rectangle destinationRectangle;
     private int yPositionCount;
-    private int groundPosition = 400;
+    private int groundPosition = 380;
     
 
 
@@ -91,7 +91,10 @@ public class Mushroom :IItem
                 position.X--;
             }
         }
-
+        if(this.GetDestination().Y> this.groundPosition)
+        {
+            falling = false;
+        }
         if (this.falling)
         {
             velocity.Y += gravity * (float)gameTime.ElapsedGameTime.TotalSeconds;
