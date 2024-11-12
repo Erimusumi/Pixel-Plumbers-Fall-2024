@@ -17,7 +17,7 @@ public class obstacle2 : IObstacle
     {
         this.BlockTexture = BlockTexture;
     }
-    public void Update(GameTime gameTime)
+    public void Update()
     {
         sourceRectangle = new Rectangle(271, 401, 32, 48);
         width = 47;

@@ -43,16 +43,16 @@ public class EnemySwitch : ICommand
             }
         }
         current = enemies[0];
-        if (current.GetType() == typeof(Goomba) || current.GetType() == typeof(Koopa))
-        {
-            game1.SetEnemy((ISpriteEnemy)Activator.CreateInstance(current.GetType(), 480, 400));
-        } else if ((lastSprite.GetType() == typeof(Goomba)) && (PorO == 0) || (lastSprite.GetType() == typeof(Koopa)) && (PorO != 0))
-        {
-            game1.SetEnemy((ISpriteEnemy)Activator.CreateInstance(current.GetType(), 0, 480, 400));
-        } else
-        {
-            game1.SetEnemy((ISpriteEnemy)Activator.CreateInstance(current.GetType(), 1, 480, 400));
-        }
+        // if (current.GetType() == typeof(Goomba) || current.GetType() == typeof(Koopa))
+        // {
+        //     game1.SetEnemy((ISpriteEnemy)Activator.CreateInstance(current.GetType(), 480, 400));
+        // } else if ((lastSprite.GetType() == typeof(Goomba)) && (PorO == 0) || (lastSprite.GetType() == typeof(Koopa)) && (PorO != 0))
+        // {
+        //     game1.SetEnemy((ISpriteEnemy)Activator.CreateInstance(current.GetType(), 0, 480, 400));
+        // } else
+        // {
+        //     game1.SetEnemy((ISpriteEnemy)Activator.CreateInstance(current.GetType(), 1, 480, 400));
+        // }
     }
 
 }

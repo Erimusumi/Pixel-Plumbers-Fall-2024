@@ -38,29 +38,6 @@ public class Game1 : Game
     private KeyboardController gameStateKeyboardController;
     private MouseController gameStateMouseController;
 
-    //Enemy Code
-    //Goomba 1 will be spriteEnemy
-    public ISpriteEnemy spriteEnemy;
-    public ISpriteEnemy spriteEnemy2;
-    public ISpriteEnemy spriteEnemyBloop;
-
-    //Enemy list:
-    private ISpriteEnemy _Goomba2;
-    private ISpriteEnemy Goomba3;
-    private ISpriteEnemy Goomba4;
-    private ISpriteEnemy Goomba5;
-    private ISpriteEnemy Goomba6;
-    private ISpriteEnemy Goomba7;
-    private ISpriteEnemy Goomba8;
-    private ISpriteEnemy Koopa1;
-    private ISpriteEnemy Goomba9;
-    private ISpriteEnemy Goomba10;
-    private ISpriteEnemy Goomba11;
-    private ISpriteEnemy Goomba12;
-    private ISpriteEnemy Goomba13;
-    private ISpriteEnemy Goomba14;
-    private ISpriteEnemy Goomba15;
-    private ISpriteEnemy Goomba16;
 
     Texture2D EnemyTexture;
 
@@ -70,30 +47,12 @@ public class Game1 : Game
 
     //Items
     public Texture2D ItemsTexture;
-    public ISprite firePower;
-    public ISprite starPower;
-    public ISprite mushroomPower;
-    public Fire f;
-    public Star s;
-    public Mushroom m;
-    Vector2 itemsPos = new Vector2(400, 250);
-    public ItemManager manager = new ItemManager();
-    public int numItems = 3;
-    public int currentItem = 0;
 
     //Block Code instance variables
     private Texture2D block;
-    private Texture2D obstacle;
+    private Texture2D obstacleTexture;
 
-    private IObstacle obstacle1;
-    private IObstacle obstacle2;
-    private IObstacle obstacle3;
-    private IObstacle obstacle4;
-    private IBlock OWLuckyBlockSprite;
-    private IBlock OWLuckyBlockSprite2;
-    private IBlock OWUsedBlockSprite;
-    private IBlock OWBrickBlockSprite;
-    private IBlock OWBrokenBrickSprite;
+    
 
     //Fireballs
     public List<Fireball> fireballs = new List<Fireball>();
@@ -117,6 +76,7 @@ public class Game1 : Game
     SoundEffect marioDeath;
     SoundEffect gameOverSound;
     List<SoundEffect> marioSounds = new List<SoundEffect>();
+    List<SoundEffect> ItemSounds = new List<SoundEffect>();
 
     // reset instances
     public Vector2 initial_mario_position;
@@ -144,7 +104,7 @@ public class Game1 : Game
     //Ground Detection
     Ground ground;
     ToggleFalling toggleFalling;
-    List<Rectangle> emptyFloorRectangles;
+    List<Rectangle> collidableRectangles;
     ToggleFalling ToggleFalling;
 
     //Black Jack
@@ -159,6 +119,8 @@ public class Game1 : Game
 
     private StartScreenSprite startScreenSprite;
     private LevelScreenSprite levelScreenSprite;
+
+    private LevelOne levelOne;
     public Game1()
     {
         graphics = new GraphicsDeviceManager(this);
@@ -170,20 +132,8 @@ public class Game1 : Game
     public void ResetGame()
     {
         entities.Clear();
-        spriteEnemy = new Goomba(480, 400);
-        spriteEnemy2 = new Goomba2(240, 400);
-
-        entities.Add(spriteEnemy2);
-        entities.Add(spriteEnemy);
         entities.Add(mario);
-        entities.Add(OWLuckyBlockSprite);
-        entities.Add(OWBrickBlockSprite);
-        entities.Add(OWBrokenBrickSprite);
-        entities.Add(obstacle1);
-        entities.Add(obstacle2);
-        entities.Add(obstacle3);
 
-        currentItem = 0;
         fireballs.Clear();
         mario.Reset();
 
@@ -202,8 +152,8 @@ public class Game1 : Game
         base.Initialize();
         this.gameTime = new GameTime();
         this.sweep = new Sweep(gameTime);
-
-        // map layers
+        Dance = new DancePole();
+       
         lvl1backdrop = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Backdrop.csv");
         lvl1greenery = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Greenery.csv");
         lvl1foreground = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Foreground.csv");
@@ -214,7 +164,6 @@ public class Game1 : Game
         lvl2foreground1 = new Layer(32, 16, 17, Content.RootDirectory + "/level2_OWForeground.csv");
         lvl2foreground2 = new Layer(32, 16, 17, Content.RootDirectory + "/level2_UWForeground.csv");
 
-        // load map layers
         lvl1backdrop.LoadLayer();
         lvl1greenery.LoadLayer();
         lvl1foreground.LoadLayer();
@@ -225,65 +174,33 @@ public class Game1 : Game
         lvl2foreground1.LoadLayer();
         lvl2foreground2.LoadLayer();
 
-
         keyboardController = new KeyboardController();
         keyboardControllerMovement = new KeyboardControllerMovement();
-
-        spriteEnemy = new Goomba(535, 400);
-        spriteEnemy2 = new Goomba2(240, 400);
-        spriteEnemyBloop = new Blooper(240, 200, mario);
-        _Goomba2 = new Goomba(1400, 400);
-        Goomba3 = new Goomba(1700, 400);
-        Goomba4 = new Goomba(1750, 400);
-        Goomba5 = new Goomba(2500, 250);
-        Goomba6 = new Goomba(2600, 120);
-        Goomba7 = new Goomba(3000, 400);
-        Goomba8 = new Goomba(3150, 400);
-        Koopa1 = new Koopa(3320, 400);
-        Goomba9 = new Goomba(3520, 400);
-        Goomba10 = new Goomba(3720, 400);
-        Goomba11 = new Goomba(4000, 400);
-        Goomba12 = new Goomba(4050, 400);
-        Goomba13 = new Goomba(4110, 400);
-        Goomba14 = new Goomba(4160, 400);
-        Goomba15 = new Goomba(5400, 400);
-        Goomba16 = new Goomba(5550, 400);
-
-        OWLuckyBlockSprite = new LuckyBlockSprite(block, spriteBatch, ItemsTexture, this, mario, new Vector2(200 + 62, 350));
-        OWLuckyBlockSprite2 = new LuckyBlockSprite(block, spriteBatch, ItemsTexture, this, mario, new Vector2(200, 200));
-        OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
-        OWBrokenBrickSprite = new BrokenBrickSprite(block, 4, 1);
-        obstacle1 = new obstacle1(obstacle);
-        obstacle2 = new obstacle2(obstacle);
-        obstacle3 = new obstacle3(obstacle);
-
-        entities.Add(spriteEnemy2);
-        entities.Add(spriteEnemy);
-        entities.Add(mario);
-        entities.Add(OWLuckyBlockSprite);
-        entities.Add(OWLuckyBlockSprite2);
-        entities.Add(OWBrickBlockSprite);
-        entities.Add(OWBrokenBrickSprite);
-        entities.Add(obstacle1);
-        entities.Add(obstacle2);
-        entities.Add(obstacle3);
-
         controlCenter = new CommandControlCenter(this);
 
-        Dance = new DancePole();
+
+
+
+        entities.Add(mario);
+
+        levelOne = new LevelOne(this, entities, mario, EnemyTexture, block, ItemsTexture, obstacleTexture, spriteBatch);
+        levelOne.InitializeLevel();
+        List<IEntity> tempEntities = levelOne.GetAllEntities();
+        entities.AddRange(tempEntities);
 
         //Ground Detection initialization
-        emptyFloorRectangles = new List<Rectangle>(); 
-        emptyFloorRectangles.Add(new Microsoft.Xna.Framework.Rectangle(320, 416, 64, 64));
-        ground = new Ground(emptyFloorRectangles);
-        toggleFalling = new ToggleFalling(ground,entities);
+        collidableRectangles = new List<Rectangle>();
+        collidableRectangles = lvl1foreground.GetRedRectangles();
+
+        ground = new Ground(collidableRectangles);
+        toggleFalling = new ToggleFalling(ground, entities);
     }
 
-    public ISpriteEnemy SetEnemy(ISpriteEnemy enemy)
-    {
-        spriteEnemy = enemy;
-        return spriteEnemy;
-    }
+    // public ISpriteEnemy SetEnemy(ISpriteEnemy enemy)
+    // {
+    //     spriteEnemy = enemy;
+    //     return spriteEnemy;
+    // }
 
     public void SetKey(KeyboardController keys)
     {
@@ -305,7 +222,6 @@ public class Game1 : Game
         cards = Content.Load<Texture2D>("BlackJack/cards");
         fwip = Content.Load<SoundEffect>("Audio/flip");
 
-        //SFX audios
         pipeSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_pipe");
         oneUpSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_1-up");
         coinSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_coin");
@@ -315,6 +231,18 @@ public class Game1 : Game
         powerUpSpawnsSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_powerup_appears");
         marioJump = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_jump-small");
         marioDeath = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_mariodie");
+        
+
+        overworldTiles = Content.Load<Texture2D>("OverworldTiles");
+        underwaterTiles = Content.Load<Texture2D>("UnderwaterTiles");
+
+        block = Content.Load<Texture2D>("blocks");
+        obstacleTexture = Content.Load<Texture2D>("obstacle");
+
+        //Sound EFX
+        ItemSounds.Add(coinSound);
+        ItemSounds.Add(powerUpSpawnsSound);
+           
         gameOverSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_gameover");
 
         marioSounds.Add(powerUpSound);
@@ -325,38 +253,20 @@ public class Game1 : Game
         mario = new Mario(marioTexture, gameTime, this, entities, marioSounds);
 
         startScreenFonts = Content.Load<SpriteFont>("StartScreenFonts");
-        startScreenSprite = new StartScreenSprite(titleTexture, startScreenFonts);
         levelScreenFonts = Content.Load<SpriteFont>("LevelScreenFonts");
+        startScreenSprite = new StartScreenSprite(titleTexture, startScreenFonts);
         levelScreenSprite = new LevelScreenSprite(levelScreenFonts);
 
         blackJackStateMachine = new BlackJackStateMachine(table, tabletop, cards, fwip, startScreenFonts);
         hudManager = new HudManager(startScreenFonts, this, mario);
 
-        // tilesheet
-        overworldTiles = Content.Load<Texture2D>("OverworldTiles");
-        underwaterTiles = Content.Load<Texture2D>("UnderwaterTiles");
-
-        block = Content.Load<Texture2D>("blocks");
-        obstacle = Content.Load<Texture2D>("obstacle");
-
         marioMovementController = new PlayerMovementController();
         playerCommandControlCenter = new PlayerCommandControlCenter(mario, marioMovementController);
 
         gameStateMachine = new GameStateMachine();
-
         gameStateKeyboardController = new KeyboardController();
         gameStateMouseController = new MouseController();
         gameStateControlCenter = new GameStateControlCenter(gameStateMachine, gameStateKeyboardController, gameStateMouseController, this, startScreenSprite, levelScreenSprite, Content, blackJackStateMachine);
-        // Reset instances initialization
-        //firePower = new FirePower(spriteBatch, ItemsTexture, new Vector2(0,0));
-
-        mushroomPower = new MushroomPower(ItemsTexture);
-
-        // Initialize block and obstacle sprites
-
-        obstacle4 = new obstacle4(obstacle);
-
-        
 
     }
 
@@ -368,8 +278,6 @@ public class Game1 : Game
         List<IEntity> temp = entities;
         entities = sort.SortList(entities, entities.Count, temp);
         sweep.Compare(entities, entitiesRemoved, screen);
-        
-
 
         blackJackStateMachine.Update();
         if (gameStateMachine.isCurrentStateRunning())
@@ -378,56 +286,22 @@ public class Game1 : Game
             keyboardControllerMovement.Update();
             marioMovementController.Update();
 
-            // Update Mario's state
-            mario.isOnGround = false;
-            mario.Update(gameTime);
-            Rectangle marioBounds = mario.GetDestination();
+            levelOne.UpdateLevel(gameTime);
             camera.Follow(mario.marioPosition, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height));
 
-            // lucky block sprites
-            OWLuckyBlockSprite.Update(gameTime);
-            // broken brick block sprites
+
             if (IsActive)
             {
-                OWBrokenBrickSprite.Update(gameTime);
+                //OWBrokenBrickSprite.Update(gameTime);
             }
 
-            spriteEnemy.Updates();
-            spriteEnemy2.Updates();
-            spriteEnemyBloop.Updates();
-            _Goomba2.Updates();
-            Goomba3.Updates();
-            Goomba4.Updates();
-            Goomba5.Updates();
-            Goomba6.Updates();
-            Goomba7.Updates();
-            Goomba8.Updates();
-            Koopa1.Updates();
-            Goomba9.Updates();
-            Goomba10.Updates();
-            Goomba11.Updates();
-            Goomba12.Updates();
-            Goomba13.Updates();
-            Goomba14.Updates();
-            Goomba15.Updates();
-            Goomba16.Updates();
 
-            //Dance.Updates();
-            manager.updateCurrentItem(ref currentItem, numItems);
-
-            //Update block and obstacle sprites
-            OWLuckyBlockSprite.Update(gameTime);
-            OWLuckyBlockSprite2.Update(gameTime);
-            OWBrickBlockSprite.Update(gameTime);
-            OWBrokenBrickSprite.Update(gameTime);
-            obstacle1.Update(gameTime);
-            obstacle2.Update(gameTime);
-            obstacle3.Update(gameTime);
 
             foreach (var item in fireballs)
             {
                 item.Update(gameTime);
             }
+
             foreach (var consumedEntity in entitiesRemoved)
             {
                 if (entities.Contains(consumedEntity))
@@ -435,7 +309,9 @@ public class Game1 : Game
                     entities.Remove(consumedEntity);
                 }
             }
+
             hudManager.Update(gameTime, camera);
+
         }
         if (gameStateMachine.isCurrentStatOver())
         {
@@ -447,6 +323,7 @@ public class Game1 : Game
             }
         }
         toggleFalling.updateMarioFallingTest(mario);
+        toggleFalling.updateMarioFalling(mario);
 
         base.Update(gameTime);
     }
@@ -454,85 +331,49 @@ public class Game1 : Game
     protected override void Draw(GameTime gameTime)
     {
         GraphicsDevice.Clear(Color.CornflowerBlue);
+        spriteBatch.Begin(transformMatrix: camera.GetViewMatrix());
 
         if (gameStateMachine.isCurrentStateStart())
         {
-            spriteBatch.Begin();
             startScreenSprite.Draw(spriteBatch, new Vector2(200, 200));
-
-            spriteBatch.End();
         }
 
         if (gameStateMachine.isLevelScreen())
         {
-            spriteBatch.Begin();
             levelScreenSprite.Draw(spriteBatch, new Vector2(200, 200));
-            spriteBatch.End();
         }
 
         if (gameStateMachine.isCurrentStateRunning() || gameStateMachine.isCurrentStatePaused())
         {
-            spriteBatch.Begin(transformMatrix: camera.GetViewMatrix());
+            if (gameStateMachine.isLevelOne())
+            {
+                lvl1backdrop.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+                lvl1greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+                lvl1foreground.Draw(spriteBatch, overworldTiles, Vector2.Zero);
 
-            lvl1backdrop.Draw(spriteBatch, overworldTiles, Vector2.Zero);
-            lvl1greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
-            lvl1foreground.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+                levelOne.DrawLevel(spriteBatch, camera);
+            }
 
-            //lvl2backdrop1.Draw(spriteBatch, overworldTiles, Vector2.Zero);
-            //lvl2backdrop2.Draw(spriteBatch, underwaterTiles, Vector2.Zero);
-            //lvl2greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
-            //lvl2foreground1.Draw(spriteBatch, overworldTiles, Vector2.Zero);
-            //lvl2foreground2.Draw(spriteBatch, underwaterTiles, Vector2.Zero);
-
-            spriteEnemy.Draw(spriteBatch, EnemyTexture);
-            spriteEnemy2.Draw(spriteBatch, EnemyTexture);
-            mario.Draw(spriteBatch);
-            spriteEnemyBloop.Draw(spriteBatch, EnemyTexture);
-            _Goomba2.Draw(spriteBatch, EnemyTexture);
-            Goomba3.Draw(spriteBatch, EnemyTexture);
-            Goomba4.Draw(spriteBatch, EnemyTexture);
-            Goomba5.Draw(spriteBatch, EnemyTexture);
-            Goomba6.Draw(spriteBatch, EnemyTexture);
-            Goomba7.Draw(spriteBatch, EnemyTexture);
-            Goomba8.Draw(spriteBatch, EnemyTexture);
-            Koopa1.Draw(spriteBatch, EnemyTexture);
-            Goomba9.Draw(spriteBatch, EnemyTexture);
-            Goomba10.Draw(spriteBatch, EnemyTexture);
-            Goomba11.Draw(spriteBatch, EnemyTexture);
-            Goomba12.Draw(spriteBatch, EnemyTexture);
-            Goomba13.Draw(spriteBatch, EnemyTexture);
-            Goomba14.Draw(spriteBatch, EnemyTexture);
-            Goomba15.Draw(spriteBatch, EnemyTexture);
-            Goomba16.Draw(spriteBatch, EnemyTexture);
+            if (gameStateMachine.isLevelTwo())
+            {
+                lvl2backdrop1.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+                lvl2backdrop2.Draw(spriteBatch, underwaterTiles, Vector2.Zero);
+                lvl2greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+                lvl2foreground1.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+                lvl2foreground2.Draw(spriteBatch, underwaterTiles, Vector2.Zero);
+            }
 
             foreach (var item in fireballs)
             {
                 item.Draw(spriteBatch);
             }
-            spriteBatch.End();
 
-            spriteBatch.Begin(transformMatrix: camera.GetViewMatrix());
-            OWLuckyBlockSprite2.Draw(spriteBatch, new Vector2(200, 200));
-            OWBrickBlockSprite.Draw(spriteBatch, new Vector2(200, 350));
-            OWBrokenBrickSprite.Draw(spriteBatch, new Vector2(200 + 31, 350));
-            OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200 + 62, 350));
-            obstacle1.Draw(spriteBatch, new Vector2(350, 370));
-            obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
-            obstacle3.Draw(spriteBatch, new Vector2(350 + 350, 335));
+
 
             hudManager.Draw(spriteBatch);
             blackJackStateMachine.Draw(spriteBatch);
-
-            spriteBatch.End();
         }
-
-        if (gameStateMachine.isCurrentStatOver())
-        {
-            spriteBatch.Begin();
-            spriteBatch.Draw(gameOverBackground, camera.position, Color.Black);
-            spriteBatch.DrawString(startScreenFonts, "GAME OVER", new Vector2(300, 150), Color.White, 0f, Vector2.Zero, 1, SpriteEffects.None, 0f);
-            spriteBatch.End();
-        }
+        spriteBatch.End();
         base.Draw(gameTime);
     }
 }

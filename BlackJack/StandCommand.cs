@@ -9,12 +9,10 @@ using System.Threading;
 public class StandCommand : ICommand
 {
     private BlackJackStateMachine blackJackStateMachine;
-    private SoundEffect fwip;
 
     public StandCommand(BlackJackStateMachine blackJackStateMachine)
     {
         this.blackJackStateMachine = blackJackStateMachine;
-        this.fwip = blackJackStateMachine.effect();
     }
 
     public void Execute()

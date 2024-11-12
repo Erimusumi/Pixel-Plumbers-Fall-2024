@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using Microsoft.Xna.Framework;
@@ -188,6 +189,11 @@ public class Mario : IEntity
             }
         }
     }
+    public void ForceGravity(GameTime gameTime)
+    {
+        marioVelocity.Y += gravity * (float)gameTime.ElapsedGameTime.TotalSeconds;
+        marioPosition.Y += marioVelocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;
+    }
 
     public void MarioPowerUp()
     {
@@ -354,6 +360,7 @@ public class Mario : IEntity
         fireballTimer += -1;
         starTimer += -1;
         this.RemoveStar();
+        this.checkMarioHeightForDeath();
     }
 
     public void Draw(SpriteBatch spriteBatch)
@@ -377,6 +384,18 @@ public class Mario : IEntity
     {
         return currentMarioSprite.GetDestination(marioPosition);
     }
+    public float GroundPosition()
+    {
+        return this.groundPosition;
+    }
+    public void checkMarioHeightForDeath()
+    {
+        if (this.GetDestination().Y>464)
+        {
+            marioStateMachine.SetMarioDead();
+        }
+    }
+    
 
     public MarioStateMachine.MarioGameState GetMarioGameState()
     {
