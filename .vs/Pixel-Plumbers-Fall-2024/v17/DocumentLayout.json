@@ -1,26 +1,82 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Projects\\",
+  "WorkspaceRootPath": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\code reviews\\sprint 4\\dylanmoorescodereview.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:code reviews\\sprint 4\\dylanmoorescodereview.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\dracomalfoy\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\code reviews\\sprint 3\\dylanmoore\u0027scodereview.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:code reviews\\sprint 3\\dylanmoore\u0027scodereview.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\dracomalfoy\\grounddetection\\togglefalling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:grounddetection\\togglefalling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\dracomalfoy\\grounddetection\\ground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:grounddetection\\ground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\dracomalfoy\\sprites\\iblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\iblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\dracomalfoy\\sprites\\block sprites\\luckyblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\luckyblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\dracomalfoy\\levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\screens\\levelscreensprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:screens\\levelscreensprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\dracomalfoy\\mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\dracomalfoy\\collision\\interaction\\itemblockinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\itemblockinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\dracomalfoy\\map\\layer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:map\\layer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\dracomalfoy\\sprites\\ispriteenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\ispriteenemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\dracomalfoy\\hud\\hudmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:hud\\hudmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\dracomalfoy\\hud\\hudcoins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:hud\\hudcoins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\dracomalfoy\\hud\\hudscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:hud\\hudscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\dracomalfoy\\hud\\hudlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:hud\\hudlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\dracomalfoy\\hud\\hudlives.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:hud\\hudlives.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\dracomalfoy\\collision\\interaction\\marioobstacleinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\marioobstacleinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\dracomalfoy\\projectile\\fireball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:projectile\\fireball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\dracomalfoy\\hud\\hudtime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:hud\\hudtime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\dracomalfoy\\hud\\ihudelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:hud\\ihudelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,17 +86,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "Game1.cs",
-              "DocumentMoniker": "C:\\Projects\\Game1.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
-              "ToolTip": "C:\\Projects\\Game1.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAANEAAAAAAAAAAAAgwOIAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAOUAAAAAAAAAAAAgwP4AAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
               "IsPinned": true,
@@ -48,55 +104,21 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DylanMooresCodeReview.txt",
-              "DocumentMoniker": "C:\\Projects\\Code Reviews\\Sprint 4\\DylanMooresCodeReview.txt",
-              "RelativeDocumentMoniker": "Code Reviews\\Sprint 4\\DylanMooresCodeReview.txt",
-              "ToolTip": "C:\\Projects\\Code Reviews\\Sprint 4\\DylanMooresCodeReview.txt",
-              "RelativeToolTip": "Code Reviews\\Sprint 4\\DylanMooresCodeReview.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-11-12T18:27:50.336Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LevelScreenSprite.cs",
-              "DocumentMoniker": "C:\\Projects\\Screens\\LevelScreenSprite.cs",
-              "RelativeDocumentMoniker": "Screens\\LevelScreenSprite.cs",
-              "ToolTip": "C:\\Projects\\Screens\\LevelScreenSprite.cs",
-              "RelativeToolTip": "Screens\\LevelScreenSprite.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAxAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "Mario.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\Mario\\Mario.cs",
+              "RelativeDocumentMoniker": "Mario\\Mario.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\Mario\\Mario.cs",
+              "RelativeToolTip": "Mario\\Mario.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwGQBAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T15:47:33.317Z",
+              "WhenOpened": "2024-10-27T21:41:43.503Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DylanMoore\u0027sCodeReview.txt",
-              "DocumentMoniker": "C:\\Projects\\Code Reviews\\Sprint 3\\DylanMoore\u0027sCodeReview.txt",
-              "RelativeDocumentMoniker": "Code Reviews\\Sprint 3\\DylanMoore\u0027sCodeReview.txt",
-              "ToolTip": "C:\\Projects\\Code Reviews\\Sprint 3\\DylanMoore\u0027sCodeReview.txt",
-              "RelativeToolTip": "Code Reviews\\Sprint 3\\DylanMoore\u0027sCodeReview.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-11-12T15:45:26.134Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LevelOne.cs",
-              "DocumentMoniker": "C:\\Projects\\Levels\\LevelOne.cs",
-              "RelativeDocumentMoniker": "Levels\\LevelOne.cs",
-              "ToolTip": "C:\\Projects\\Levels\\LevelOne.cs",
-              "RelativeToolTip": "Levels\\LevelOne.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T15:44:44.185Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Bookmark",
@@ -120,7 +142,218 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Layer.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\Map\\Layer.cs",
+              "RelativeDocumentMoniker": "Map\\Layer.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\Map\\Layer.cs",
+              "RelativeToolTip": "Map\\Layer.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T06:06:47.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LevelOne.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\Levels\\LevelOne.cs",
+              "RelativeDocumentMoniker": "Levels\\LevelOne.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\Levels\\LevelOne.cs",
+              "RelativeToolTip": "Levels\\LevelOne.cs",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAkwMUAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T05:18:57.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IBlock.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\Sprites\\IBlock.cs",
+              "RelativeDocumentMoniker": "Sprites\\IBlock.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\Sprites\\IBlock.cs",
+              "RelativeToolTip": "Sprites\\IBlock.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T22:20:51.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LuckyBlockSprite.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\Sprites\\Block Sprites\\LuckyBlockSprite.cs",
+              "RelativeDocumentMoniker": "Sprites\\Block Sprites\\LuckyBlockSprite.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\Sprites\\Block Sprites\\LuckyBlockSprite.cs",
+              "RelativeToolTip": "Sprites\\Block Sprites\\LuckyBlockSprite.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAGoAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T22:26:13.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Ground.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\GroundDetection\\Ground.cs",
+              "RelativeDocumentMoniker": "GroundDetection\\Ground.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\GroundDetection\\Ground.cs",
+              "RelativeToolTip": "GroundDetection\\Ground.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAzwBMAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T05:49:57.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ToggleFalling.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\GroundDetection\\ToggleFalling.cs",
+              "RelativeDocumentMoniker": "GroundDetection\\ToggleFalling.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\GroundDetection\\ToggleFalling.cs",
+              "RelativeToolTip": "GroundDetection\\ToggleFalling.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAkwGIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T22:07:23.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ItemBlockInteraction.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\Collision\\Interaction\\ItemBlockInteraction.cs",
+              "RelativeDocumentMoniker": "Collision\\Interaction\\ItemBlockInteraction.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\Collision\\Interaction\\ItemBlockInteraction.cs",
+              "RelativeToolTip": "Collision\\Interaction\\ItemBlockInteraction.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwCAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T16:03:52.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ISpriteEnemy.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\Sprites\\ISpriteEnemy.cs",
+              "RelativeDocumentMoniker": "Sprites\\ISpriteEnemy.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\Sprites\\ISpriteEnemy.cs",
+              "RelativeToolTip": "Sprites\\ISpriteEnemy.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T04:08:57.41Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MarioObstacleInteraction.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\Collision\\Interaction\\MarioObstacleInteraction.cs",
+              "RelativeDocumentMoniker": "Collision\\Interaction\\MarioObstacleInteraction.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\Collision\\Interaction\\MarioObstacleInteraction.cs",
+              "RelativeToolTip": "Collision\\Interaction\\MarioObstacleInteraction.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T22:20:30.287Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Fireball.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\Projectile\\Fireball.cs",
+              "RelativeDocumentMoniker": "Projectile\\Fireball.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\Projectile\\Fireball.cs",
+              "RelativeToolTip": "Projectile\\Fireball.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAEUAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-10T21:59:05.858Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "HudTime.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\HUD\\HudTime.cs",
+              "RelativeDocumentMoniker": "HUD\\HudTime.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\HUD\\HudTime.cs",
+              "RelativeToolTip": "HUD\\HudTime.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAqwA4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T18:32:36.126Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "HudScore.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\HUD\\HudScore.cs",
+              "RelativeDocumentMoniker": "HUD\\HudScore.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\HUD\\HudScore.cs",
+              "RelativeToolTip": "HUD\\HudScore.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T18:32:28.888Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "HudLevel.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\HUD\\HudLevel.cs",
+              "RelativeDocumentMoniker": "HUD\\HudLevel.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\HUD\\HudLevel.cs",
+              "RelativeToolTip": "HUD\\HudLevel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwBEAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T18:32:20.958Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HudCoins.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\HUD\\HudCoins.cs",
+              "RelativeDocumentMoniker": "HUD\\HudCoins.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\HUD\\HudCoins.cs",
+              "RelativeToolTip": "HUD\\HudCoins.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T18:31:42.568Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "HudLives.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\HUD\\HudLives.cs",
+              "RelativeDocumentMoniker": "HUD\\HudLives.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\HUD\\HudLives.cs",
+              "RelativeToolTip": "HUD\\HudLives.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T18:30:54.614Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "HudManager.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\HUD\\HudManager.cs",
+              "RelativeDocumentMoniker": "HUD\\HudManager.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\HUD\\HudManager.cs",
+              "RelativeToolTip": "HUD\\HudManager.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAqwGkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-28T18:26:36.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IHudElement.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\HUD\\IHudElement.cs",
+              "RelativeDocumentMoniker": "HUD\\IHudElement.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\HUD\\IHudElement.cs",
+              "RelativeToolTip": "HUD\\IHudElement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-27T21:18:05.392Z"
             }
           ]
         }

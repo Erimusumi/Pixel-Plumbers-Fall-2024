@@ -354,6 +354,7 @@ public class Mario : IEntity
         fireballTimer += -1;
         starTimer += -1;
         this.RemoveStar();
+        this.checkMarioHeightForDeath();
     }
 
     public void Draw(SpriteBatch spriteBatch)
@@ -380,6 +381,13 @@ public class Mario : IEntity
     public float GroundPosition()
     {
         return this.groundPosition;
+    }
+    public void checkMarioHeightForDeath()
+    {
+        if (this.GetDestination().Y>464)
+        {
+            marioStateMachine.SetMarioDead();
+        }
     }
     
 
