@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Formats.Asn1.AsnWriter;
+using Pixel_Plumbers_Fall_2024;
 
 public class HudCoins : IHudElement
 {
@@ -13,7 +14,7 @@ public class HudCoins : IHudElement
     private Vector2 screenPos;
     private int numCoins;
     private SpriteFont _font;
-    public HudCoins(int startCoins, SpriteFont font)
+    public HudCoins(int startCoins, SpriteFont font, Game1 game, Mario mario)
     {
         numCoins = startCoins;
         _font = font;

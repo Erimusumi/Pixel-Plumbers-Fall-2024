@@ -153,4 +153,17 @@ public class MarioStateMachine
     {
         isVisible = false;
     }
+
+    public bool isSmall()
+    {
+        return CurrentGameState == MarioGameState.Small;
+    }
+    public bool isBig()
+    {
+        return CurrentGameState == MarioGameState.Big;
+    }
+    public bool isFire()
+    {
+        return CurrentGameState == MarioGameState.Fire;
+    }
 }

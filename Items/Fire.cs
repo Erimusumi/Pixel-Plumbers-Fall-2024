@@ -2,15 +2,15 @@
 using Microsoft.Xna.Framework.Graphics;
 using Pixel_Plumbers_Fall_2024;
 using System;
-using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-public class Fire :IItem 
+public class Fire : IItem
 {
     public Boolean idle;
     public Boolean collected;
     public Boolean roaming;
+    
     private Microsoft.Xna.Framework.Vector2 position;
     private int x;
     private int y;
@@ -20,10 +20,11 @@ public class Fire :IItem
     private Boolean movingLeft;
     private Boolean movingRight;
     private Boolean falling;
+    private int groundPosition;
 
-    public Fire(SpriteBatch sb, Texture2D text, Microsoft.Xna.Framework.Vector2 pos)
+    public Fire(SpriteBatch sb, Texture2D text, Vector2 pos)
     {
-        fp = new FirePower(texture);
+        fp = new FirePower(sb, texture, pos);
         idle = true;
         collected = false;
         roaming = false;
@@ -58,15 +59,15 @@ public class Fire :IItem
 
         }
         else if(this.idle) {
-            fp = new FirePower(texture);
-            fp.Draw(this.sB, position);
+            fp = new FirePower(sB, texture, position);
+            fp.draw();
         }
         else if (this.roaming)
         {
 
         }
     }
-    public void update()
+    public void update(GameTime gameTime)
     {
         if (this.roaming)
         {
@@ -104,7 +105,15 @@ public class Fire :IItem
 
     public Rectangle GetDestination()
     {
-        return this.fp.GetDestination(position);
+        return this.fp.GetDestination();
+    }
+    public Vector2 currentPosition()
+    {
+        return this.position;
+    }
+    public void setGroundPosition(int groundPos)
+    {
+        this.groundPosition = groundPos;
     }
     public bool isFalling()
     {

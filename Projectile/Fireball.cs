@@ -51,7 +51,7 @@ public class Fireball : IProjectile
         {
             //Move up some
             pos.Y += -2;
-            bounceTimer += -5;
+            bounceTimer += -1;
             if (bounceTimer <= 0)
             {
                 isBouncing = false;
@@ -67,18 +67,7 @@ public class Fireball : IProjectile
     {
         //Call when top/bottom collision with a block
         isBouncing = true;
-        bounceTimer = 200;
-    }
-
-    /**
-     * TEMP!! Remove when ground has proper collision!
-     */
-    public void BounceAtGround()
-    {
-        if (!isBouncing && pos.Y > 400f)
-        {
-            this.Bounce();
-        }
+        bounceTimer = 40;
     }
 
     public void Remove()
@@ -88,7 +77,6 @@ public class Fireball : IProjectile
     public void Update(GameTime gameTime)
     {
         this.Move();
-        this.BounceAtGround();
         sprite.Update(gameTime);
     }
 

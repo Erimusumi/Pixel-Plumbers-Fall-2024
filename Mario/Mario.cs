@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Pixel_Plumbers_Fall_2024;
@@ -24,6 +26,7 @@ public class Mario : IEntity
     private bool canPowerUp = true;
     private bool canTakeDamage = true;
     private bool moveKeyPressed = false;
+    private bool deathSoundPlaying = false;
 
     private const float maxSpeed = 3f;
     private const float acceleration = 0.03f;
@@ -31,12 +34,14 @@ public class Mario : IEntity
     private int fireballTimer;
     private int starTimer;
     int marioDeathBounceIncrement;
+    private List<SoundEffect> _sfx;
 
     //Need Game1 reference to correctly create fireballs
     private Game1 game;
+    private int gameResetTimer = -1;
     private List<IEntity> _entities;
 
-    public Mario(Texture2D marioTexture, GameTime gametime, Game1 game, List<IEntity> entities)
+    public Mario(Texture2D marioTexture, GameTime gametime, Game1 game, List<IEntity> entities, List<SoundEffect> sfx)
     {
         this.marioTexture = marioTexture;
         marioPosition = new Vector2(200, groundPosition);
@@ -51,6 +56,16 @@ public class Mario : IEntity
         currentMarioSprite = new IdleRightSmallMario(marioTexture);
         this.game = game;
         this._entities = entities;
+        
+        /*
+         * SFX loaded in specific order:
+         * 0: Power up
+         * 1: Power down
+         * 2: Fireball
+         * 3: Jump
+         * 4: Death
+         */
+        this._sfx = sfx;
     }
 
     public void MoveRight()
@@ -141,6 +156,7 @@ public class Mario : IEntity
             marioVelocity.Y = jumpSpeed;
             marioStateMachine.SetMarioJumping();
             isOnGround = false;
+            _sfx[3].Play();
         }
     }
 
@@ -182,10 +198,12 @@ public class Mario : IEntity
         {
             case MarioStateMachine.MarioGameState.Small:
                 marioStateMachine.SetMarioBig();
+                _sfx[0].Play();
                 break;
 
             case MarioStateMachine.MarioGameState.Big:
                 marioStateMachine.SetMarioFire();
+                _sfx[0].Play();
                 break;
 
             case MarioStateMachine.MarioGameState.Fire:
@@ -203,10 +221,12 @@ public class Mario : IEntity
         switch (marioStateMachine.CurrentGameState)
         {
             case MarioStateMachine.MarioGameState.Fire:
+                _sfx[1].Play();
                 marioStateMachine.SetMarioBig();
                 break;
 
             case MarioStateMachine.MarioGameState.Big:
+                _sfx[1].Play();
                 marioStateMachine.SetMarioSmall();
                 break;
 
@@ -222,9 +242,29 @@ public class Mario : IEntity
     {
         if (marioStateMachine.IsDead())
         {
+            if (!deathSoundPlaying)
+            {
+                _sfx[4].Play();
+                deathSoundPlaying = true;
+            }
             marioVelocity.X = 0; marioVelocity.Y = 0;
             marioPosition.Y -= (float)marioDeathBounceIncrement;
             marioDeathBounceIncrement -= 1;
+
+            //Start timer and reset automatically after mario dies
+            if (gameResetTimer > 0)
+            {
+                gameResetTimer -= 1;
+            }
+            else if (gameResetTimer < 0)
+            {
+                gameResetTimer = 250;
+            }
+            else if (gameResetTimer == 0)
+            {
+                game.hudManager.LoseLife();
+                game.ResetGame();
+            }
         }
     }
     public void SwapDirection()
@@ -285,13 +325,11 @@ public class Mario : IEntity
     public void ShootFireball()
     {
         if (marioStateMachine.IsDead()) return;
+        if (fireballTimer > 0) return;
 
-        if (fireballTimer > 0)
-        {
-            return;
-        }
         if (marioStateMachine.IsFire())
         {
+            _sfx[2].Play();
             Fireball f = new Fireball(marioPosition, game.ItemsTexture, gameTime, marioStateMachine.CurrentFaceState, game, _entities);
             game.fireballs.Add(f);
             fireballTimer = 20;
@@ -325,6 +363,8 @@ public class Mario : IEntity
         isOnGround = true;                                                                  // Set Mario as standing on the ground
         currentMarioSprite = new IdleRightSmallMario(marioTexture);                         // Set mario to small idle right again
         marioDeathBounceIncrement = 20;
+        gameResetTimer = -1;
+        deathSoundPlaying = false;
     }
 
     public Rectangle GetDestination()
@@ -360,4 +400,18 @@ public class Mario : IEntity
         this.groundPosition = gp;
     }
 
+    public bool isSmall()
+    {
+
+        return marioStateMachine.isSmall();
+    }
+
+    public bool isBig()
+    {
+        return marioStateMachine.isBig();
+    }
+    public bool isFire()
+    {
+        return marioStateMachine.isFire();
+    }   
 }

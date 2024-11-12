@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Formats.Asn1.AsnWriter;
+using Pixel_Plumbers_Fall_2024;
 
 public class HudLevel : IHudElement
 {
@@ -14,7 +15,7 @@ public class HudLevel : IHudElement
     private int worldNum;
     private int levelNum;
     private SpriteFont _font;
-    public HudLevel(int startWorld, int startLevel, SpriteFont font)
+    public HudLevel(int startWorld, int startLevel, SpriteFont font, Game1 game, Mario mario)
     {
         worldNum = startWorld;
         levelNum = startLevel;
