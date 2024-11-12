@@ -17,11 +17,12 @@ using Microsoft.Xna.Framework;
     public ToggleFalling(Ground g, List<IEntity> objects)
     {
         this.ground = g;
+        this.emptyGround = g.emptyGroundList();
         this.objects = objects;
        
     }
 
-    public void updateEntities()
+    public void updateEntitiesFalling()
     {
  for (int i = 0; i < objects.Count; i++)
         {
@@ -34,12 +35,14 @@ using Microsoft.Xna.Framework;
 
         }
     }
+    
 
     public void updateMarioFalling(Mario mar)
     {
-        for(int i = 0; i < ground.emptyGroundList().Count; i++)
+        if(ground.emptyGroundList().Count > 0)
+        for(int i = 0; i < emptyGround.Count; i++)
         {
-            if(mar.GetDestination().Intersects(emptyGround[i]))
+                if (mar.GetDestination().Intersects(emptyGround[i]))
             {
                 mar.updateGroundPosition(480f);
             }

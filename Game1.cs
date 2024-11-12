@@ -339,7 +339,7 @@ public class Game1 : Game
             hudManager.Update(gameTime, camera);
 
         }
-        toggleFalling.updateMarioFallingTest(mario);
+        toggleFalling.updateMarioFalling(mario);
 
         base.Update(gameTime);
     }
