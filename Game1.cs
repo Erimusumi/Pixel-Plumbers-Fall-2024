@@ -322,7 +322,7 @@ public class Game1 : Game
                 Environment.Exit(0);
             }
         }
-        toggleFalling.updateMarioFallingTest(mario);
+        //toggleFalling.updateMarioFallingTest(mario);
         toggleFalling.updateMarioFalling(mario);
 
         base.Update(gameTime);
@@ -372,6 +372,11 @@ public class Game1 : Game
 
             hudManager.Draw(spriteBatch);
             blackJackStateMachine.Draw(spriteBatch);
+        }
+        if (gameStateMachine.isCurrentStatOver())
+        {
+            spriteBatch.Draw(gameOverBackground, camera.position, Color.Black);
+            spriteBatch.DrawString(startScreenFonts, "GAME OVER", new Vector2(300, 150), Color.White, 0f, Vector2.Zero, 1, SpriteEffects.None, 0f);
         }
         spriteBatch.End();
         base.Draw(gameTime);
