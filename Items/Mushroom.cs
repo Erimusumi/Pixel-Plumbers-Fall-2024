@@ -68,18 +68,20 @@ public class Mushroom :IItem
     {
         if (this.spawning)
         {
-            this.position.Y++;
-            this.yPositionCount++;
+            position.Y++;
+            yPositionCount++;
+            falling = false;
             if (yPositionCount > 16)
             {
-                this.spawning = false;
-                this.roaming = true;
-                this.movingRight = true;
+                spawning = false;
+                roaming = true;
+                movingRight = true;
             }
         }
         
         if (this.roaming)
         {
+            falling = true;
             if (movingRight)
             {
                 position.X++;
