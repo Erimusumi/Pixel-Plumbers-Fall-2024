@@ -35,13 +35,15 @@ using Microsoft.Xna.Framework;
         }
     }
 
-    public void updateMarioFallingTest(Mario mar)
+    public void updateMarioFalling(Mario mar)
     {
-        
- if (mar.GetDestination().Intersects(ground.emptyGroundList()[0]))
+        for(int i = 0; i < ground.emptyGroundList().Count; i++)
         {
+            if(mar.GetDestination().Intersects(emptyGround[i]))
+            {
                 mar.updateGroundPosition(480f);
-        }        
+            }
+        }      
        
     }
 
