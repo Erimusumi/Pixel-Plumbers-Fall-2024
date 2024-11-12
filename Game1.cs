@@ -322,7 +322,7 @@ public class Game1 : Game
                 Environment.Exit(0);
             }
         }
-        toggleFalling.updateMarioFallingTest(mario);
+       
         toggleFalling.updateMarioFalling(mario);
 
         base.Update(gameTime);
