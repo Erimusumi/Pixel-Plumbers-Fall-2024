@@ -63,11 +63,13 @@ using Microsoft.Xna.Framework;
     {
        for(int i = 0; i < collisionRects.Count; i++)
         {
+
             
             if (mar.GetDestination().Intersects(collisionRects[i]))
             {
                 mar.updateGroundPosition(385f);
                 marioIsColliding = true;
+                break;
                 
             }if (!mar.GetDestination().Intersects(collisionRects[i]) && mar.GetDestination().Intersects(new Rectangle(mar.GetDestination().X, (int)mar.GroundPosition(),16,16) ))
             {
