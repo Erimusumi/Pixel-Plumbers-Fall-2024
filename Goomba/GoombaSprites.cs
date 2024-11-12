@@ -95,6 +95,7 @@ public class GoombaSprites
                 sourceRectangle = new Rectangle(0, 4, size, size);
             }
         }
+        destinationRectangle = new Rectangle(position, posY, size * scaleUp, size * scaleUp);
     }
     public Rectangle GetDestination()
     {

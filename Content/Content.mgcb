@@ -25,6 +25,12 @@
 /processorParam:Quality=Best
 /build:Audio/erwin.mp3
 
+#begin Audio/flip.mp3
+/importer:Mp3Importer
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/flip.mp3
+
 #begin Audio/kirby.mp3
 /importer:Mp3Importer
 /processor:SongProcessor
@@ -48,6 +54,102 @@
 /processor:SongProcessor
 /processorParam:Quality=Best
 /build:Audio/rumbling.mp3
+
+#begin Audio/Sound Effect(s)/smb_1-up.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/Sound Effect(s)/smb_1-up.wav
+
+#begin Audio/Sound Effect(s)/smb_breakblock.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/Sound Effect(s)/smb_breakblock.wav
+
+#begin Audio/Sound Effect(s)/smb_coin.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/Sound Effect(s)/smb_coin.wav
+
+#begin Audio/Sound Effect(s)/smb_fireball.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/Sound Effect(s)/smb_fireball.wav
+
+#begin Audio/Sound Effect(s)/smb_flagpole.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/Sound Effect(s)/smb_flagpole.wav
+
+#begin Audio/Sound Effect(s)/smb_jump-small.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/Sound Effect(s)/smb_jump-small.wav
+
+#begin Audio/Sound Effect(s)/smb_mariodie.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/Sound Effect(s)/smb_mariodie.wav
+
+#begin Audio/Sound Effect(s)/smb_pipe.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/Sound Effect(s)/smb_pipe.wav
+
+#begin Audio/Sound Effect(s)/smb_powerup_appears.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/Sound Effect(s)/smb_powerup_appears.wav
+
+#begin Audio/Sound Effect(s)/smb_powerup.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/Sound Effect(s)/smb_powerup.wav
+
+#begin BlackJack/cards.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:BlackJack/cards.png
+
+#begin BlackJack/table.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:BlackJack/table.png
+
+#begin BlackJack/tabletop.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:BlackJack/tabletop.png
 
 #begin blocks.gif
 /importer:TextureImporter

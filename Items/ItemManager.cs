@@ -58,13 +58,13 @@ public class ItemManager : IitemManager
     {
         if (currentItem == 0)
         {
-            StarPower sp = new StarPower(itemsText);
-            sp.Draw(sB, position);
+            //StarPower sp = new StarPower(itemsText);
+            //sp.Draw(sB, position);
         }
         else if (currentItem == 1)
         {
-            FirePower fp = new FirePower(itemsText);
-            fp.Draw(sB, position);
+            FirePower fp = new FirePower(sB, itemsText, position);
+            //fp.draw(position);
 
         }
         else if (currentItem == 2)

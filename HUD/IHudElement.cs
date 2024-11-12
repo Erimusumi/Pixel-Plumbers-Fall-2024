@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 public interface IHudElement
 {
-    public void Update(GameTime gameTime);
+    public void Update(GameTime gameTime, FollowCamera camera);
 
     public void Draw(SpriteBatch sb);
 }

@@ -12,8 +12,9 @@ public class GameStateControlCenter
     private StartScreenSprite startScreenSprite;
     private LevelScreenSprite levelScreenSprite;
     private MusicMachine MusicMachine;
+    private BlackJackStateMachine blackJackStateMachine;
 
-    public GameStateControlCenter(GameStateMachine gameStateMachine, KeyboardController gameKeyboardController, MouseController gameMouseController, Game1 game, StartScreenSprite startScreenSprite, LevelScreenSprite levelScreenSprite, ContentManager content)
+    public GameStateControlCenter(GameStateMachine gameStateMachine, KeyboardController gameKeyboardController, MouseController gameMouseController, Game1 game, StartScreenSprite startScreenSprite, LevelScreenSprite levelScreenSprite, ContentManager content, BlackJackStateMachine blackJackStateMachine)
     {
         this.gameKeyboardController = gameKeyboardController;
         this.gameMouseController = gameMouseController;
@@ -21,6 +22,7 @@ public class GameStateControlCenter
         this.game = game;
         this.startScreenSprite = startScreenSprite;
         this.levelScreenSprite = levelScreenSprite;
+        this.blackJackStateMachine = blackJackStateMachine;
         MusicMachine = new MusicMachine(content);
         InitializeCommands();
     }
@@ -61,5 +63,14 @@ public class GameStateControlCenter
 
         ICommand levelThreeCommand = new LevelThreeCommand(gameStateMachine);
         gameMouseController.AddCommand(levelScreenSprite.GetLevelThreeRectangle(), levelThreeCommand);
+
+        ICommand BlackJackCommand = new BlackJackCommand(blackJackStateMachine, gameStateMachine);
+        gameMouseController.AddCommand(blackJackStateMachine.DestinationRectangle(), BlackJackCommand);
+
+        ICommand CardCommand = new CardCommand(blackJackStateMachine);
+        gameMouseController.AddCommand(new Rectangle(660, 130, 75, 110), CardCommand);
+
+        ICommand StandCommand = new StandCommand(blackJackStateMachine);
+        gameMouseController.AddCommand(new Rectangle(660, 270, 100, 50), StandCommand);
     }
 }

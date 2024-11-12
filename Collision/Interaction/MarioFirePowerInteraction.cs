@@ -26,7 +26,7 @@ using System.Threading.Tasks;
     }
     private void removeFromList()
     {
-        entitiesRemoved.Add(FirePower);
+        //entitiesRemoved.Add(FirePower);
     }
 }
 

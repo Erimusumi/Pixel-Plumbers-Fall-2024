@@ -22,8 +22,8 @@ public class MarioStarInteraction
     public void update()
     {
       
-            star.collect();
-            mario.CollectStar();
+        star.collect();
+        mario.CollectStar();
         removeFromList();
          
         

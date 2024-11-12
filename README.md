@@ -20,8 +20,9 @@ MARIO CONTROLS:
 GAME CONTROLS:
      - Click on "1 player" or "2 player" to start the game. or press 9.
      - Press R to reset the game
-     - press P to pause the game
+     - press P to pause the game. (Also pauses music)
      - Press Q to quit the game
+     - Press M to play music. Press again to play another song.
 
 ENEMIES CONTROLS:
     - O and P keys to switch enemies

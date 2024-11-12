@@ -82,8 +82,10 @@ public class Sweep
     MarioBlockInteraction MarioBlockInteraction;
     MarioObstacleInteraction MarioObstacleInteraction;
     ItemObstacleInteraction ItemObstacleInteraction;
+    ItemBlockInteraction ItemBlockInteraction;
     EnemyObstacleInteraction EnemyObstacleInteraction;
-    MarioGroundInteraction MarioGroundInteraction;
+    MarioItemInteraction MarioItemInteraction;
+   
 
     public void iterateListInteractions(List<IEntity> entities, List<IEntity> entitiesRemoved)
     {
@@ -143,7 +145,7 @@ public class Sweep
         {
             OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item2, item1);
             OtherEnemyInteraction.Update();
-        } else if (item1.GetType() == typeof(Star) && item2.GetType() == typeof(Mario))         //Item interaction
+        } /*else if (item1.GetType() == typeof(Star) && item2.GetType() == typeof(Mario))         //Item interaction
         {
             MarioStarInteraction = new MarioStarInteraction((Mario)item2, (Star)item1, entitiesRemoved);
             MarioStarInteraction.update();
@@ -155,6 +157,7 @@ public class Sweep
             MarioStarInteraction.update();
             entities.RemoveAt(index2);
         }
+        */
         else if (item1.GetType() == typeof(Fire) && item2.GetType() == typeof(Mario))
         {
             MarioFirePowerInteraction = new MarioFirePowerInteraction((Mario)item2, (Fire)item1, entitiesRemoved);
@@ -166,7 +169,7 @@ public class Sweep
             MarioFirePowerInteraction.update();
            entities.RemoveAt(index2);
         }
-        else if (item1.GetType() == typeof(Mushroom) && item2.GetType() == typeof(Mario))
+        /*else if (item1.GetType() == typeof(Mushroom) && item2.GetType() == typeof(Mario))
         {
             MarioMushroomInteraction = new MarioMushroomInteraction((Mario)item2, (Mushroom)item1, entitiesRemoved);
             MarioMushroomInteraction.update();
@@ -180,6 +183,18 @@ public class Sweep
 
             entities.RemoveAt(index2);
         }
+        */
+
+        else if (ContainsItem(entities, index1) && item2.GetType() == typeof(Mario))
+        {
+            MarioItemInteraction = new MarioItemInteraction((IItem)item1, (Mario)item2, entitiesRemoved);
+            System.Diagnostics.Debug.Write("MarioItemInteraction works");
+        }
+        else if (item1.GetType() == typeof(Mario) && ContainsItem(entities, index2))
+        {
+            MarioItemInteraction = new MarioItemInteraction((IItem)item2, (Mario)item1, entitiesRemoved);
+            System.Diagnostics.Debug.Write("MarioItemInteraction works");
+        }
         else if(ContainsObstacle(entities,index1) && ContainsItem(entities, index2))
         {
             ItemObstacleInteraction = new ItemObstacleInteraction((IItem)item2, (IObstacle)item1);
@@ -188,6 +203,14 @@ public class Sweep
             ItemObstacleInteraction = new ItemObstacleInteraction((IItem)item1, (IObstacle)item2);
             ItemObstacleInteraction.update();
             
+        }
+        else if(ContainsBlock(entities,index1) && ContainsItem(entities, index2))
+        {
+            ItemBlockInteraction = new ItemBlockInteraction((IItem)item2, (IBlock)item1);
+        }
+        else if(ContainsItem(entities, index1) && ContainsBlock(entities, index2))
+        {
+            ItemBlockInteraction = new ItemBlockInteraction((IItem)item1, (IBlock)item2);
         }
 
         else if (item1.GetType() == typeof(Fireball) && ContainsBlock(entities, index2))
@@ -203,13 +226,31 @@ public class Sweep
 
         else if (item1.GetType() == typeof(Mario) && ContainsBlock(entities, index2))
         {
-            //handle block interaction            
-            MarioBlockInteraction = new MarioBlockInteraction((Mario)item1, (IBlock)item2);
+            //handle block interaction
+            Boolean luckyBlock = true;
+            if(item2.GetType() == typeof(LuckyBlockSprite))
+            {
+                MarioBlockInteraction = new MarioBlockInteraction((Mario)item1, (IBlock)item2, luckyBlock);
+            }
+            else
+            {
+                luckyBlock = false;
+                MarioBlockInteraction = new MarioBlockInteraction((Mario)item1, (IBlock)item2, luckyBlock);
+            }
             MarioBlockInteraction.update();
             
         } else if (ContainsBlock(entities, index1) && item2.GetType() == typeof(Mario))
-        {        
-            MarioBlockInteraction = new MarioBlockInteraction((Mario)item2, (IBlock)item1);
+        {
+            Boolean luckyBlock = true;
+            if (item1.GetType() == typeof(LuckyBlockSprite))
+            {
+                MarioBlockInteraction = new MarioBlockInteraction((Mario)item2, (IBlock)item1, luckyBlock);
+            }
+            else
+            {
+                luckyBlock = false;
+                MarioBlockInteraction = new MarioBlockInteraction((Mario)item2, (IBlock)item1, luckyBlock);
+            }
             MarioBlockInteraction.update();
             
         }

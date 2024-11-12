@@ -9,6 +9,7 @@ using Pixel_Plumbers_Fall_2024;
 public class Koopa : ISpriteEnemy
 {
     private KoopaStateMachine stateMachine;
+	private float groundPosition = 385f;
 	public Koopa(int posX, int posY)
 	{
 		stateMachine = new KoopaStateMachine(posX, posY);
@@ -47,5 +48,9 @@ public class Koopa : ISpriteEnemy
 	{
         stateMachine.Draw(sb, Texture);
     }
+	public void setGroundPosition(float x)
+	{
+		this.groundPosition = x;		
+	}
 
 }

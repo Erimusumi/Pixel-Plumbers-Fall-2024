@@ -4,7 +4,6 @@ using System;
 using System.ComponentModel.Design;
 using System.ComponentModel.Design.Serialization;
 using System.Linq.Expressions;
-using System.Numerics;
 using System.Runtime.InteropServices;
 using System.Text;
 
@@ -13,24 +12,35 @@ public class Mushroom :IItem
     public Boolean idle;
     public Boolean collected;
     public Boolean roaming;
+    private Boolean spawning;
     private Boolean movingRight;
     private Boolean movingLeft;
-    private Microsoft.Xna.Framework.Vector2 position;
+    private Vector2 position;
     private MushroomPower mp;
     private SpriteBatch sb;
     private Texture2D texture;
+    private bool falling;
+    private Vector2 velocity;
+    private float gravity = 980f;
+    private Rectangle destinationRectangle;
+    private int yPositionCount;
+    private int groundPosition = 380;
     
 
-    public  Mushroom(SpriteBatch sB, Texture2D texture, Microsoft.Xna.Framework.Vector2 position)
+
+    public  Mushroom(SpriteBatch sB, Texture2D texture, Vector2 m_position)
     {
         mp = new MushroomPower(texture);
-        this.idle = false;
+        this.spawning = true;
+        this.idle = true;
         this.collected = false;
-        this.roaming = true;
-        this.position = position;
+        this.roaming = false;
+        this.falling = true;
         this.texture = texture;
         this.sb = sB;
         movingRight = true;
+        this.velocity = Vector2.Zero;
+        this.position = m_position;
     }
     public void idling()
     {
@@ -54,11 +64,58 @@ public class Mushroom :IItem
         movingLeft = false;
        
     }
+    public void update(GameTime gameTime)
+    {
+        if (this.spawning)
+        {
+            position.Y++;
+            yPositionCount++;
+            falling = false;
+            if (yPositionCount > 16)
+            {
+                spawning = false;
+                roaming = true;
+                movingRight = true;
+            }
+        }
+        
+        if (this.roaming)
+        {
+            falling = true;
+            if (movingRight)
+            {
+                position.X++;
+            }
+            else if (movingLeft)
+            {
+                position.X--;
+            }
+        }
+        if(this.GetDestination().Y> this.groundPosition)
+        {
+            falling = false;
+        }
+        if (this.falling)
+        {
+            velocity.Y += gravity * (float)gameTime.ElapsedGameTime.TotalSeconds;
+        }
+
+        if (!this.falling)
+        {
+            velocity.Y = 0;
+            System.Diagnostics.Debug.Write("VelocityY is setted as zero");
+        }
+
+        position += velocity * (float)gameTime.ElapsedGameTime.TotalSeconds; // Update position
+        destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 31, 31);
+
+    }
     public void draw()
     {
         if (this.idle || this.roaming)
         {
             this.mp = new MushroomPower(texture);
+            
             this.mp.Draw(sb, position);
             
         }
@@ -68,19 +125,7 @@ public class Mushroom :IItem
             
         }
     }
-    public void update()
-    {
-        if (this.roaming)
-        {
-            if (movingRight)
-            {
-                position.X++;
-            }else if (movingLeft)
-            {
-                position.X--;
-            }
-        }
-    }
+
     public void swapDirection()
     {
         if (movingLeft){
@@ -101,7 +146,27 @@ public class Mushroom :IItem
 
     public Rectangle GetDestination()
     {
-        return this.mp.GetDestination(position);
+        return destinationRectangle;
+    }
+    public Vector2 currentPosition()
+    {
+        return this.position;
+    }
+    public void setGroundPosition(int newGroundPosition)
+    {
+        this.groundPosition = newGroundPosition;
+    }
+    public bool isFalling()
+    {
+        return falling;
+    }
+    public void NotFalling()
+    {
+        falling = false;
+    }
+    public void MakeFalling()
+    {
+        falling = true;
     }
 
 
