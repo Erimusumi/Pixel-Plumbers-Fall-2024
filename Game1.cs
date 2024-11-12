@@ -166,7 +166,7 @@ public class Game1 : Game
         this.gameTime = new GameTime();
         this.sweep = new Sweep(gameTime);
         Dance = new DancePole();
-
+       
         lvl1backdrop = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Backdrop.csv");
         lvl1greenery = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Greenery.csv");
         lvl1foreground = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Foreground.csv");
@@ -261,7 +261,7 @@ public class Game1 : Game
 
         block = Content.Load<Texture2D>("blocks");
         obstacle = Content.Load<Texture2D>("obstacle");
-
+           
         marioSounds.Add(powerUpSound);
         marioSounds.Add(pipeSound);
         marioSounds.Add(fireBallSound);
