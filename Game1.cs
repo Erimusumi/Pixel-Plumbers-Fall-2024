@@ -83,6 +83,7 @@ public class Game1 : Game
     SoundEffect marioJump;
     SoundEffect marioDeath;
     List<SoundEffect> marioSounds = new List<SoundEffect>();
+    List<SoundEffect> ItemSounds = new List<SoundEffect>();
 
     // reset instances
     public Vector2 initial_mario_position;
@@ -241,12 +242,17 @@ public class Game1 : Game
         powerUpSpawnsSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_powerup_appears");
         marioJump = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_jump-small");
         marioDeath = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_mariodie");
+        
 
         overworldTiles = Content.Load<Texture2D>("OverworldTiles");
         underwaterTiles = Content.Load<Texture2D>("UnderwaterTiles");
 
         block = Content.Load<Texture2D>("blocks");
         obstacle = Content.Load<Texture2D>("obstacle");
+
+        //Sound EFX
+        ItemSounds.Add(coinSound);
+        ItemSounds.Add(powerUpSpawnsSound);
            
         marioSounds.Add(powerUpSound);
         marioSounds.Add(pipeSound);
