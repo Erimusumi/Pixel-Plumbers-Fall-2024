@@ -22,22 +22,38 @@ using Microsoft.Xna.Framework;
        
     }
 
-    public void updateEnemyFalling(IEnem)
+    public void updateEnemyFalling(List<ISpriteEnemy> enemies)
     {
- for (int i = 0; i < objects.Count; i++)
-        {
-            for (int j = 0; j < ground.emptyGroundList().Count; j++) {
-                if (objects[i].GetDestination().Intersects(emptyGround[j]))
-                {
-                    //objects[i].isFalling();
-                }
-            }
 
+        for (int i = 0; i < enemies.Count; i++)
+        {
+            {
+                for (int j = 0; j < emptyGround.Count; j++)
+                {
+                    if (enemies[i].GetDestination().Intersects(emptyGround[j]))
+                    {
+                        enemies[i].setGroundPosition(480f);
+                    }
+                }
+
+            }
         }
     }
-    public void updateItemFalling()
+    public void updateItemFalling(List<IItem> items)
     {
+        for (int i = 0; i < items.Count; i++)
+        {
+            {
+                for (int j = 0; j < emptyGround.Count; j++)
+                {
+                    if (items[i].GetDestination().Intersects(emptyGround[j]))
+                    {
+                        items[i].setGroundPosition(480);
+                    }
+                }
 
+            }
+        }
 
     }
     
