@@ -14,6 +14,7 @@ using Microsoft.Xna.Framework;
     private Ground ground;
     private float fallingGroundPosition = 480f;
     Boolean marioIsColliding = true;
+   
 
     public ToggleFalling(Ground g, List<IEntity> objects)
     {
@@ -66,12 +67,17 @@ using Microsoft.Xna.Framework;
             if (mar.GetDestination().Intersects(collisionRects[i]))
             {
                 mar.updateGroundPosition(385f);
+                marioIsColliding = true;
                 
             }if (!mar.GetDestination().Intersects(collisionRects[i]) && mar.GetDestination().Intersects(new Rectangle(mar.GetDestination().X, (int)mar.GroundPosition(),16,16) ))
             {
 
-                mar.updateGroundPosition(480f);
+                if (!marioIsColliding)
+                {
+                    mar.updateGroundPosition(480f);
+                }
                 
+                marioIsColliding = false;
                 
             }
         }   
