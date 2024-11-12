@@ -380,8 +380,8 @@ public class Game1 : Game
                     entities.Remove(consumedEntity);
                 }
             }
+            hudManager.Update(gameTime, camera);
         }
-        hudManager.Update(gameTime, camera);
 
         /*TESTING HUD; REMOVE LATER
          * 
