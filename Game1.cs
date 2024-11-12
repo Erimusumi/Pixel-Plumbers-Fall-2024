@@ -61,11 +61,11 @@ public class Game1 : Game
     private IObstacle obstacle2;
     private IObstacle obstacle3;
     private IObstacle obstacle4;
-    private IBlock OWLuckyBlockSprite;
-    private IBlock OWLuckyBlockSprite2;
-    private IBlock OWUsedBlockSprite;
-    private IBlock OWBrickBlockSprite;
-    private IBlock OWBrokenBrickSprite;
+    //private IBlock OWLuckyBlockSprite;
+    //private IBlock OWLuckyBlockSprite2;
+    //private IBlock OWUsedBlockSprite;
+    //private IBlock OWBrickBlockSprite;
+    //private IBlock OWBrokenBrickSprite;
 
     //Fireballs
     public List<Fireball> fireballs = new List<Fireball>();
@@ -144,9 +144,9 @@ public class Game1 : Game
     {
         entities.Clear();
         entities.Add(mario);
-        entities.Add(OWLuckyBlockSprite);
-        entities.Add(OWBrickBlockSprite);
-        entities.Add(OWBrokenBrickSprite);
+        //entities.Add(OWLuckyBlockSprite);
+        //entities.Add(OWBrickBlockSprite);
+        //entities.Add(OWBrokenBrickSprite);
         entities.Add(obstacle1);
         entities.Add(obstacle2);
         entities.Add(obstacle3);
@@ -191,24 +191,24 @@ public class Game1 : Game
         keyboardControllerMovement = new KeyboardControllerMovement();
         controlCenter = new CommandControlCenter(this);
 
-        OWLuckyBlockSprite = new LuckyBlockSprite(block, spriteBatch, ItemsTexture, this, mario, new Vector2(200 + 62, 350));
-        OWLuckyBlockSprite2 = new LuckyBlockSprite(block, spriteBatch, ItemsTexture, this, mario, new Vector2(200, 200));
-        OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
-        OWBrokenBrickSprite = new BrokenBrickSprite(block, 4, 1);
+       //OWLuckyBlockSprite = new LuckyBlockSprite(block, spriteBatch, ItemsTexture, this, mario, new Vector2(200 + 62, 350));
+       // OWLuckyBlockSprite2 = new LuckyBlockSprite(block, spriteBatch, ItemsTexture, this, mario, new Vector2(200, 200));
+       // OWBrickBlockSprite = new StaticBlockSprite(block, new Rectangle(272, 112, 16, 16));
+       // OWBrokenBrickSprite = new BrokenBrickSprite(block, 4, 1);
         obstacle1 = new obstacle1(obstacle);
         obstacle2 = new obstacle2(obstacle);
         obstacle3 = new obstacle3(obstacle);
 
         entities.Add(mario);
-        entities.Add(OWLuckyBlockSprite);
-        entities.Add(OWLuckyBlockSprite2);
-        entities.Add(OWBrickBlockSprite);
-        entities.Add(OWBrokenBrickSprite);
+        //entities.Add(OWLuckyBlockSprite);
+        //entities.Add(OWLuckyBlockSprite2);
+        //entities.Add(OWBrickBlockSprite);
+        //entities.Add(OWBrokenBrickSprite);
         entities.Add(obstacle1);
         entities.Add(obstacle2);
         entities.Add(obstacle3);
 
-        levelOne = new LevelOne(entities, mario, EnemyTexture);
+        levelOne = new LevelOne(this, entities, mario, EnemyTexture, block, ItemsTexture, spriteBatch);
         levelOne.InitializeLevel();
         List<IEntity> tempEntities = levelOne.GetAllEntities();
         entities.AddRange(tempEntities);
@@ -308,18 +308,18 @@ public class Game1 : Game
             levelOne.UpdateLevel(gameTime);
             camera.Follow(mario.marioPosition, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height));
 
-            OWLuckyBlockSprite.Update(gameTime);
+            //OWLuckyBlockSprite.Update(gameTime);
             if (IsActive)
             {
-                OWBrokenBrickSprite.Update(gameTime);
+                //OWBrokenBrickSprite.Update(gameTime);
             }
 
             manager.updateCurrentItem(ref currentItem, numItems);
 
-            OWLuckyBlockSprite.Update(gameTime);
-            OWLuckyBlockSprite2.Update(gameTime);
-            OWBrickBlockSprite.Update(gameTime);
-            OWBrokenBrickSprite.Update(gameTime);
+            //OWLuckyBlockSprite.Update(gameTime);
+            //OWLuckyBlockSprite2.Update(gameTime);
+            //OWBrickBlockSprite.Update(gameTime);
+            //OWBrokenBrickSprite.Update(gameTime);
             obstacle1.Update(gameTime);
             obstacle2.Update(gameTime);
             obstacle3.Update(gameTime);
@@ -385,10 +385,10 @@ public class Game1 : Game
                 item.Draw(spriteBatch);
             }
 
-            OWLuckyBlockSprite2.Draw(spriteBatch, new Vector2(200, 200));
-            OWBrickBlockSprite.Draw(spriteBatch, new Vector2(200, 350));
-            OWBrokenBrickSprite.Draw(spriteBatch, new Vector2(200 + 31, 350));
-            OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200 + 62, 350));
+            //OWLuckyBlockSprite2.Draw(spriteBatch, new Vector2(200, 200));
+            //OWBrickBlockSprite.Draw(spriteBatch, new Vector2(200, 350));
+            //OWBrokenBrickSprite.Draw(spriteBatch, new Vector2(200 + 31, 350));
+            //OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200 + 62, 350));
             obstacle1.Draw(spriteBatch, new Vector2(350, 370));
             obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
             obstacle3.Draw(spriteBatch, new Vector2(350 + 350, 335));

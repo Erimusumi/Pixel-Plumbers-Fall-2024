@@ -2,16 +2,22 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Pixel_Plumbers_Fall_2024;
 
 public class LevelOne : ILevel
 {
+    private Game1 game;
     private Rectangle screen = new Rectangle(0, 0, 800, 480);
     private List<IEntity> entities = new List<IEntity>();
     private List<IBlock> blocks;
     private Mario mario;
 
+    private SpriteBatch spriteBatch;
 
     private Texture2D EnemyTexture;
+    private Texture2D blockTexture;
+    private Texture2D obstacleTexture;
+    private Texture2D ItemsTexture;
 
     //Enemy list:
     private ISpriteEnemy Goomba1;
@@ -33,11 +39,25 @@ public class LevelOne : ILevel
     private ISpriteEnemy Koopa1;
     private ISpriteEnemy Bloop1;
 
-    public LevelOne(List<IEntity> entities, Mario mario, Texture2D EnemyTexture)
+    //Block List:
+    private IBlock OWLuckyBlockSprite;
+    private IBlock OWLuckyBlockSprite2;
+    private IBlock OWUsedBlockSprite;
+    private IBlock OWBrickBlockSprite;
+    private IBlock OWBrokenBrickSprite;
+
+    //Obstacle List:
+
+    public LevelOne(Game1 game, List<IEntity> entities, Mario mario, Texture2D EnemyTexture, Texture2D blockTexture, Texture2D ItemsTexture, SpriteBatch spriteBatch)
     {
         this.entities = entities;
         this.mario = mario;
         this.EnemyTexture = EnemyTexture;
+        this.blockTexture = blockTexture;
+        this.ItemsTexture = ItemsTexture;
+        this.spriteBatch = spriteBatch;
+        this.game = game;
+
     }
 
     public void InitializeLevel()
@@ -63,6 +83,13 @@ public class LevelOne : ILevel
         Koopa1 = new Koopa(240, 400);
         Bloop1 = new Blooper(240, 200, mario);
 
+        OWLuckyBlockSprite = new LuckyBlockSprite(blockTexture, spriteBatch, ItemsTexture, game, mario, new Vector2(200 + 62, 350));
+        OWLuckyBlockSprite2 = new LuckyBlockSprite(blockTexture, spriteBatch, ItemsTexture, game, mario, new Vector2(200, 200));
+        OWBrickBlockSprite = new StaticBlockSprite(blockTexture, new Rectangle(272, 112, 16, 16));
+        OWBrokenBrickSprite = new BrokenBrickSprite(blockTexture, 4, 1);
+
+
+
         // Add entities to the list
         entities.Add(mario);
         entities.Add(Goomba1);
@@ -84,6 +111,15 @@ public class LevelOne : ILevel
 
         entities.Add(Koopa1);
         entities.Add(Bloop1);
+
+        entities.Add(OWLuckyBlockSprite);
+        entities.Add(OWLuckyBlockSprite2);
+        entities.Add(OWBrickBlockSprite);
+        entities.Add(OWBrokenBrickSprite);
+
+
+
+
     }
 
     public void LoadLevel(ContentManager content)
@@ -114,6 +150,13 @@ public class LevelOne : ILevel
         Koopa1.Updates();
         Bloop1.Updates();
 
+        OWLuckyBlockSprite.Update(gameTime);
+        OWLuckyBlockSprite2.Update(gameTime);
+        OWBrickBlockSprite.Update(gameTime);
+        OWBrokenBrickSprite.Update(gameTime);
+
+
+
         mario.isOnGround = false;
         mario.Update(gameTime);
     }
@@ -142,6 +185,12 @@ public class LevelOne : ILevel
         Bloop1.Draw(spriteBatch, EnemyTexture);
 
         mario.Draw(spriteBatch);
+
+        OWLuckyBlockSprite2.Draw(spriteBatch, new Vector2(200, 200));
+        OWBrickBlockSprite.Draw(spriteBatch, new Vector2(200, 350));
+        OWBrokenBrickSprite.Draw(spriteBatch, new Vector2(200 + 31, 350));
+        OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200 + 62, 350));
+
     }
 
     public List<IEntity> GetAllEntities()
