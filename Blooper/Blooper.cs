@@ -44,5 +44,9 @@ public class Blooper : ISpriteEnemy
     {
         stateMachine.Draw(sb, Texture);
     }
+    public void setGroundPosition(float x)
+    {
+
+    }
 
 }

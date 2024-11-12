@@ -11,30 +11,32 @@ using Microsoft.Xna.Framework;
 
 public class Ground
 {
-    private List<Rectangle> emptyRectangles;
+   // private List<Rectangle> emptyRectangles;
+    private List<Rectangle> collisionRectangles;
 
-    public Ground(List<Rectangle> emptyRects)
+    public Ground(List<Rectangle> collisionRects)
     {
-        this.emptyRectangles = emptyRects;
+        //this.emptyRectangles = emptyRects;
+        this.collisionRectangles = collisionRects;
     }
 
-    public void addEmptyGround(Rectangle emptyFloorRectangle)
+    public void addCollisionRect(Rectangle emptyFloorRectangle)
     {
-        emptyRectangles.Add(emptyFloorRectangle);
+        collisionRectangles.Add(emptyFloorRectangle);
 
     }
-    public void removeEmptyGround(Rectangle emptyFloorRectangle)
+    public void removeCollisionRect(Rectangle emptyFloorRectangle)
     {
-        emptyRectangles.Remove(emptyFloorRectangle);
+        collisionRectangles.Remove(emptyFloorRectangle);
     }
 
-    public List<Rectangle> emptyGroundList()
+    public List<Rectangle> allCollisionRectangles()
     {
-        return emptyRectangles;
+        return this.collisionRectangles;
     }
-    public void clearEmptyRectangleList()
+    public void clearCollisionRectangleList()
     {
-        emptyRectangles.Clear();
+        collisionRectangles.Clear();
     }
 
 }

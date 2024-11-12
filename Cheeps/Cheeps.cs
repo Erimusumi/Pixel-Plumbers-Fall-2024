@@ -41,5 +41,9 @@ public class Cheeps : ISpriteEnemy
 	{
         stateMachine.Draw(sb, Texture);
     }
+	public void setGroundPosition(float x)
+	{
+
+	}
 
 }
