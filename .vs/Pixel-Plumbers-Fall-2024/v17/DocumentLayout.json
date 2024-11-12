@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\dracomalfoy\\mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\dracomalfoy\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,10 +17,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\dracomalfoy\\grounddetection\\togglefalling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:grounddetection\\togglefalling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\dracomalfoy\\mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\dracomalfoy\\grounddetection\\ground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -82,17 +82,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAIAAAAAAAAAAAAAEwKcAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAHQBAAAAAAAAAAAAAIkBAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
               "IsPinned": true,
@@ -100,13 +100,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Mario.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\Mario\\Mario.cs",
               "RelativeDocumentMoniker": "Mario\\Mario.cs",
               "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\Mario\\Mario.cs",
               "RelativeToolTip": "Mario\\Mario.cs",
-              "ViewState": "AgIAAMcAAAAAAAAAAADwvx0AAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAE4BAAAAAAAAAAAswGQBAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-27T21:41:43.503Z",
               "IsPinned": true,
@@ -135,6 +135,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -198,7 +202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ToggleFalling.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\GroundDetection\\ToggleFalling.cs",
               "RelativeDocumentMoniker": "GroundDetection\\ToggleFalling.cs",
@@ -211,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "LuckyBlockSprite.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\DracoMalfoy\\Sprites\\Block Sprites\\LuckyBlockSprite.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\LuckyBlockSprite.cs",
