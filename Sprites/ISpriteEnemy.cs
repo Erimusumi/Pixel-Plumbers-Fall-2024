@@ -13,4 +13,6 @@ public interface ISpriteEnemy : IEntity
 	void Updates();
     void Draw(SpriteBatch sb, Texture2D Texture);
 
+	void setGroundPosition(float x);
+
 }

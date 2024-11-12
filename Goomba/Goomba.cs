@@ -8,6 +8,7 @@ using Pixel_Plumbers_Fall_2024;
 public class Goomba : ISpriteEnemy
 {
     private GoombaStateMachine stateMachine;
+	private float groundPosition = 385f;
 	public Goomba(int posX, int posY)
 	{
 		stateMachine = new GoombaStateMachine(posX, posY);
@@ -44,5 +45,9 @@ public class Goomba : ISpriteEnemy
 	{
         stateMachine.Draw(sb, Texture);
     }
+	public void setGroundPosition(float x)
+	{
+		this.groundPosition = x;
+	}
 
 }

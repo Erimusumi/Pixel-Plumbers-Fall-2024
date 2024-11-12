@@ -22,7 +22,7 @@ using Microsoft.Xna.Framework;
        
     }
 
-    public void updateEntitiesFalling()
+    public void updateEnemyFalling(IEnem)
     {
  for (int i = 0; i < objects.Count; i++)
         {
@@ -35,8 +35,12 @@ using Microsoft.Xna.Framework;
 
         }
     }
-    
+    public void updateItemFalling()
+    {
 
+
+    }
+    
     public void updateMarioFalling(Mario mar)
     {
         if(ground.emptyGroundList().Count > 0)
