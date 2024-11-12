@@ -9,15 +9,16 @@ using Microsoft.Xna.Framework;
 
     public class ToggleFalling
 {
-    private List<Rectangle> emptyGround;
+    private List<Rectangle> collisionRects;
     private List<IEntity> objects;
     private Ground ground;
     private float fallingGroundPosition = 480f;
+    Boolean marioIsColliding = true;
 
     public ToggleFalling(Ground g, List<IEntity> objects)
     {
         this.ground = g;
-        this.emptyGround = g.emptyGroundList();
+        this.collisionRects = g.allCollisionRectangles();
         this.objects = objects;
        
     }
@@ -28,9 +29,9 @@ using Microsoft.Xna.Framework;
         for (int i = 0; i < enemies.Count; i++)
         {
             {
-                for (int j = 0; j < emptyGround.Count; j++)
+                for (int j = 0; j < collisionRects.Count; j++)
                 {
-                    if (enemies[i].GetDestination().Intersects(emptyGround[j]))
+                    if (enemies[i].GetDestination().Intersects(collisionRects[j]))
                     {
                         enemies[i].setGroundPosition(480f);
                     }
@@ -44,9 +45,9 @@ using Microsoft.Xna.Framework;
         for (int i = 0; i < items.Count; i++)
         {
             {
-                for (int j = 0; j < emptyGround.Count; j++)
+                for (int j = 0; j < collisionRects.Count; j++)
                 {
-                    if (items[i].GetDestination().Intersects(emptyGround[j]))
+                    if (items[i].GetDestination().Intersects(collisionRects[j]))
                     {
                         items[i].setGroundPosition(480);
                     }
@@ -59,14 +60,22 @@ using Microsoft.Xna.Framework;
     
     public void updateMarioFalling(Mario mar)
     {
-        if(ground.emptyGroundList().Count > 0)
-        for(int i = 0; i < emptyGround.Count; i++)
+       for(int i = 0; i < collisionRects.Count; i++)
         {
-                if (mar.GetDestination().Intersects(emptyGround[i]))
+            
+            if (mar.GetDestination().Intersects(collisionRects[i]))
             {
+                mar.updateGroundPosition(385f);
+                
+            }if (!mar.GetDestination().Intersects(collisionRects[i]) && mar.GetDestination().Intersects(new Rectangle(mar.GetDestination().X, (int)mar.GroundPosition(),16,16) ))
+            {
+
                 mar.updateGroundPosition(480f);
+                
+                
             }
-        }      
+        }   
+       
        
     }
 

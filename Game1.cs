@@ -115,7 +115,7 @@ public class Game1 : Game
     //Ground Detection
     Ground ground;
     ToggleFalling toggleFalling;
-    List<Rectangle> emptyFloorRectangles;
+    List<Rectangle> collidableRectangles;
     ToggleFalling ToggleFalling;
 
     //Black Jack
@@ -214,9 +214,10 @@ public class Game1 : Game
         entities.AddRange(tempEntities);
 
         //Ground Detection initialization
-        emptyFloorRectangles = new List<Rectangle>();
-        emptyFloorRectangles.Add(new Microsoft.Xna.Framework.Rectangle(320, 416, 64, 64));
-        ground = new Ground(emptyFloorRectangles);
+        collidableRectangles = new List<Rectangle>();
+        collidableRectangles = lvl1foreground.GetRedRectangles();
+
+        ground = new Ground(collidableRectangles);
         toggleFalling = new ToggleFalling(ground, entities);
     }
 

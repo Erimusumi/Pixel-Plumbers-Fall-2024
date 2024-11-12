@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using Microsoft.Xna.Framework;
@@ -188,6 +189,11 @@ public class Mario : IEntity
             }
         }
     }
+    public void ForceGravity(GameTime gameTime)
+    {
+        marioVelocity.Y += gravity * (float)gameTime.ElapsedGameTime.TotalSeconds;
+        marioPosition.Y += marioVelocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;
+    }
 
     public void MarioPowerUp()
     {
@@ -371,6 +377,11 @@ public class Mario : IEntity
     {
         return currentMarioSprite.GetDestination(marioPosition);
     }
+    public float GroundPosition()
+    {
+        return this.groundPosition;
+    }
+    
 
     public MarioStateMachine.MarioGameState GetMarioGameState()
     {
