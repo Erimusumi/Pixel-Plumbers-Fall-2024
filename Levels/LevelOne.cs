@@ -1,6 +1,7 @@
 using Pixel_Plumbers_Fall_2024;
 using Microsoft.Xna.Framework;
 using System.Collections.Generic;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
 public class LevelOne : ILevel
@@ -43,7 +44,6 @@ public class LevelOne : ILevel
     private IBlock OWLuckyBlockSprite2;
     private IBlock OWUsedBlockSprite;
     private IBlock OWBrickBlockSprite;
-    private IBlock OWBrickBlockSprite2;
     private IBlock OWBrokenBrickSprite;
 
     //Obstacle List:
@@ -90,7 +90,6 @@ public class LevelOne : ILevel
         OWLuckyBlockSprite = new LuckyBlockSprite(blockTexture, spriteBatch, ItemsTexture, game, mario, new Vector2(200 + 62, 350));
         OWLuckyBlockSprite2 = new LuckyBlockSprite(blockTexture, spriteBatch, ItemsTexture, game, mario, new Vector2(200, 200));
         OWBrickBlockSprite = new StaticBlockSprite(blockTexture, new Rectangle(272, 112, 16, 16));
-        OWBrickBlockSprite2 = new StaticBlockSprite(blockTexture, new Rectangle(400,200, 16, 16));
         OWBrokenBrickSprite = new BrokenBrickSprite(blockTexture, 4, 1);
 
         obstacle1 = new obstacle1(obstacleTexture);
@@ -122,7 +121,6 @@ public class LevelOne : ILevel
         entities.Add(OWLuckyBlockSprite);
         entities.Add(OWLuckyBlockSprite2);
         entities.Add(OWBrickBlockSprite);
-        entities.Add(OWBrickBlockSprite2);
         entities.Add(OWBrokenBrickSprite);
 
         entities.Add(obstacle1);
@@ -163,7 +161,6 @@ public class LevelOne : ILevel
         OWLuckyBlockSprite.Update(gameTime);
         OWLuckyBlockSprite2.Update(gameTime);
         OWBrickBlockSprite.Update(gameTime);
-        OWBrickBlockSprite2.Update(gameTime);
         OWBrokenBrickSprite.Update(gameTime);
 
         obstacle1.Update();
@@ -201,7 +198,6 @@ public class LevelOne : ILevel
 
         OWLuckyBlockSprite2.Draw(spriteBatch, new Vector2(200, 200));
         OWBrickBlockSprite.Draw(spriteBatch, new Vector2(200, 350));
-        OWBrickBlockSprite.Draw(spriteBatch, new Vector2(600, 240));
         OWBrokenBrickSprite.Draw(spriteBatch, new Vector2(200 + 31, 350));
         OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200 + 62, 350));
 
