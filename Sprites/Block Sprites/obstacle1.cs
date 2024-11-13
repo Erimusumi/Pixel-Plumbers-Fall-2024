@@ -24,7 +24,7 @@ public class obstacle1 : IObstacle
     {
 
     }
-    public void Update(GameTime gameTime)
+    public void Update()
     {
         sourceRectangle = new Rectangle(309, 417, 32, 32);
         width = 47;

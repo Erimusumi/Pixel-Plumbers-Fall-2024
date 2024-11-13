@@ -8,6 +8,9 @@ using Microsoft.Xna.Framework.Content;
 using System.Reflection.Metadata;
 using Microsoft.Xna.Framework.Audio;
 using System.Net.NetworkInformation;
+using System.Diagnostics;
+using static System.Formats.Asn1.AsnWriter;
+using static System.Net.Mime.MediaTypeNames;
 namespace Pixel_Plumbers_Fall_2024;
 
 public class Game1 : Game
@@ -17,6 +20,8 @@ public class Game1 : Game
     private Texture2D marioTexture;
     private GameTime gameTime;
     private Texture2D titleTexture;
+    private Texture2D gameOverBackground;
+    private float gameOverTickTimer;
 
     public HudManager hudManager;
 
@@ -45,12 +50,9 @@ public class Game1 : Game
 
     //Block Code instance variables
     private Texture2D block;
-    private Texture2D obstacle;
+    private Texture2D obstacleTexture;
 
-    private IObstacle obstacle1;
-    private IObstacle obstacle2;
-    private IObstacle obstacle3;
-    private IObstacle obstacle4;
+    
 
     //Fireballs
     public List<Fireball> fireballs = new List<Fireball>();
@@ -72,6 +74,7 @@ public class Game1 : Game
     SoundEffect powerUpSpawnsSound;
     SoundEffect marioJump;
     SoundEffect marioDeath;
+    SoundEffect gameOverSound;
     List<SoundEffect> marioSounds = new List<SoundEffect>();
     List<SoundEffect> ItemSounds = new List<SoundEffect>();
 
@@ -130,9 +133,6 @@ public class Game1 : Game
     {
         entities.Clear();
         entities.Add(mario);
-        entities.Add(obstacle1);
-        entities.Add(obstacle2);
-        entities.Add(obstacle3);
 
         fireballs.Clear();
         mario.Reset();
@@ -142,6 +142,11 @@ public class Game1 : Game
         camera = new(Vector2.Zero);
     }
 
+    public void GameOver()
+    {
+        gameStateMachine.setGameStateOver();
+        gameOverSound.Play();
+    }
     protected override void Initialize()
     {
         base.Initialize();
@@ -149,15 +154,15 @@ public class Game1 : Game
         this.sweep = new Sweep(gameTime);
         Dance = new DancePole();
        
-        lvl1backdrop = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Backdrop.csv");
-        lvl1greenery = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Greenery.csv");
-        lvl1foreground = new Layer(32, 16, 17, Content.RootDirectory + "/level1_Foreground.csv");
+        lvl1backdrop = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Backdrop.csv");
+        lvl1greenery = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Greenery.csv");
+        lvl1foreground = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Foreground.csv");
 
-        lvl2backdrop1 = new Layer(32, 16, 17, Content.RootDirectory + "/level2_OWBackdrop.csv");
-        lvl2backdrop2 = new Layer(32, 16, 17, Content.RootDirectory + "/level2_UWBackdrop.csv");
-        lvl2greenery = new Layer(32, 16, 17, Content.RootDirectory + "/level2_OWGreenery.csv");
-        lvl2foreground1 = new Layer(32, 16, 17, Content.RootDirectory + "/level2_OWForeground.csv");
-        lvl2foreground2 = new Layer(32, 16, 17, Content.RootDirectory + "/level2_UWForeground.csv");
+        lvl2backdrop1 = new Layer(32, 16, 16, Content.RootDirectory + "/level2_OWBackdrop.csv");
+        lvl2backdrop2 = new Layer(32, 16, 16, Content.RootDirectory + "/level2_UWBackdrop.csv");
+        lvl2greenery = new Layer(32, 16, 16, Content.RootDirectory + "/level2_OWGreenery.csv");
+        lvl2foreground1 = new Layer(32, 16, 16, Content.RootDirectory + "/level2_OWForeground.csv");
+        lvl2foreground2 = new Layer(32, 16, 16, Content.RootDirectory + "/level2_UWForeground.csv");
 
         lvl1backdrop.LoadLayer();
         lvl1greenery.LoadLayer();
@@ -174,17 +179,11 @@ public class Game1 : Game
         controlCenter = new CommandControlCenter(this);
 
 
-        obstacle1 = new obstacle1(obstacle);
-        obstacle2 = new obstacle2(obstacle);
-        obstacle3 = new obstacle3(obstacle);
+
 
         entities.Add(mario);
 
-        entities.Add(obstacle1);
-        entities.Add(obstacle2);
-        entities.Add(obstacle3);
-
-        levelOne = new LevelOne(this, entities, mario, EnemyTexture, block, ItemsTexture, spriteBatch);
+        levelOne = new LevelOne(this, entities, mario, EnemyTexture, block, ItemsTexture, obstacleTexture, spriteBatch);
         levelOne.InitializeLevel();
         List<IEntity> tempEntities = levelOne.GetAllEntities();
         entities.AddRange(tempEntities);
@@ -217,6 +216,7 @@ public class Game1 : Game
         EnemyTexture = Content.Load<Texture2D>("enemies");
         DanceTexture = Content.Load<Texture2D>("dance");
         ItemsTexture = Content.Load<Texture2D>("itemsAndPowerups");
+        gameOverBackground = Content.Load<Texture2D>("blank screen");
         table = Content.Load<Texture2D>("BlackJack/table");
         tabletop = Content.Load<Texture2D>("BlackJack/tabletop");
         cards = Content.Load<Texture2D>("BlackJack/cards");
@@ -233,16 +233,18 @@ public class Game1 : Game
         marioDeath = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_mariodie");
         
 
-        overworldTiles = Content.Load<Texture2D>("OverworldTiles");
+        overworldTiles = Content.Load<Texture2D>("OverworldTilesv200");
         underwaterTiles = Content.Load<Texture2D>("UnderwaterTiles");
 
         block = Content.Load<Texture2D>("blocks");
-        obstacle = Content.Load<Texture2D>("obstacle");
+        obstacleTexture = Content.Load<Texture2D>("obstacle");
 
         //Sound EFX
         ItemSounds.Add(coinSound);
         ItemSounds.Add(powerUpSpawnsSound);
            
+        gameOverSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_gameover");
+
         marioSounds.Add(powerUpSound);
         marioSounds.Add(pipeSound);
         marioSounds.Add(fireBallSound);
@@ -266,7 +268,6 @@ public class Game1 : Game
         gameStateMouseController = new MouseController();
         gameStateControlCenter = new GameStateControlCenter(gameStateMachine, gameStateKeyboardController, gameStateMouseController, this, startScreenSprite, levelScreenSprite, Content, blackJackStateMachine);
 
-        obstacle4 = new obstacle4(obstacle);
     }
 
     protected override void Update(GameTime gameTime)
@@ -294,9 +295,7 @@ public class Game1 : Game
                 //OWBrokenBrickSprite.Update(gameTime);
             }
 
-            obstacle1.Update(gameTime);
-            obstacle2.Update(gameTime);
-            obstacle3.Update(gameTime);
+
 
             foreach (var item in fireballs)
             {
@@ -314,6 +313,16 @@ public class Game1 : Game
             hudManager.Update(gameTime, camera);
 
         }
+        if (gameStateMachine.isCurrentStatOver())
+        {
+            this.gameOverTickTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+            if (gameOverTickTimer > 5000)
+            {
+                Process.Start("Pixel-Plumbers-Fall-2024");
+                Environment.Exit(0);
+            }
+        }
+       
         toggleFalling.updateMarioFalling(mario);
 
         base.Update(gameTime);
@@ -359,12 +368,15 @@ public class Game1 : Game
                 item.Draw(spriteBatch);
             }
 
-            obstacle1.Draw(spriteBatch, new Vector2(350, 370));
-            obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
-            obstacle3.Draw(spriteBatch, new Vector2(350 + 350, 335));
+
 
             hudManager.Draw(spriteBatch);
             blackJackStateMachine.Draw(spriteBatch);
+        }
+        if (gameStateMachine.isCurrentStatOver())
+        {
+            spriteBatch.Draw(gameOverBackground, camera.position, Color.Black);
+            spriteBatch.DrawString(startScreenFonts, "GAME OVER", new Vector2(300, 150), Color.White, 0f, Vector2.Zero, 1, SpriteEffects.None, 0f);
         }
         spriteBatch.End();
         base.Draw(gameTime);

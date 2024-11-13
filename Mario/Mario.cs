@@ -269,7 +269,13 @@ public class Mario : IEntity
             else if (gameResetTimer == 0)
             {
                 game.hudManager.LoseLife();
-                game.ResetGame();
+                if (game.hudManager.GetNumLives() <= 0)
+                {
+                    game.GameOver();
+                }
+                else {
+                    game.ResetGame();
+                }
             }
         }
     }

@@ -47,6 +47,11 @@ using Microsoft.Xna.Framework;
     {
         for (int i = 0; i < items.Count; i++)
         {
+
+
+        }
+        for (int i = 0; i < items.Count; i++)
+        {
             {
                 for (int j = 0; j < collisionRects.Count; j++)
                 {
@@ -63,8 +68,8 @@ using Microsoft.Xna.Framework;
 
     public void updateMarioFalling(Mario mar)
     {
-
-        marioIsColliding = true;
+        
+       //marioIsColliding = true;
         for (int i = 0; i < collisionRects.Count; i++)
         {
             if(mar.GetDestination().Intersects(collisionRects[i]))
