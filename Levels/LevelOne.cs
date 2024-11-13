@@ -40,10 +40,36 @@ public class LevelOne : ILevel
     private ISpriteEnemy Bloop1;
 
     //Block List:
-    private IBlock OWLuckyBlockSprite;
+    private IBlock OWLuckyBlockSprite1;
     private IBlock OWLuckyBlockSprite2;
+    private IBlock OWLuckyBlockSprite3;
+    private IBlock OWLuckyBlockSprite4;
+
+    private IBlock OWBrickBlockSprite1;
+    private IBlock OWBrickBlockSprite2;
+    private IBlock OWBrickBlockSprite3;
+    private IBlock OWBrickBlockSprite4;
+    private IBlock OWBrickBlockSprite5;
+    private IBlock OWBrickBlockSprite6;
+    private IBlock OWBrickBlockSprite7;
+    private IBlock OWBrickBlockSprite8;
+    private IBlock OWBrickBlockSprite9;
+    private IBlock OWBrickBlockSprite10;
+    private IBlock OWBrickBlockSprite11;
+    private IBlock OWBrickBlockSprite12;
+    private IBlock OWBrickBlockSprite13;
+    private IBlock OWBrickBlockSprite14;
+    private IBlock OWBrickBlockSprite15;
+    private IBlock OWBrickBlockSprite17;
+    private IBlock OWBrickBlockSprite18;
+    private IBlock OWBrickBlockSprite19;
+    private IBlock OWBrickBlockSprite20;
+    private IBlock OWBrickBlockSprite21;
+    private IBlock OWBrickBlockSprite22;
+    private IBlock OWBrickBlockSprite23;
+    private IBlock OWBrickBlockSprite24;
+
     private IBlock OWUsedBlockSprite;
-    private IBlock OWBrickBlockSprite;
     private IBlock OWBrokenBrickSprite;
 
     //Obstacle List:
@@ -51,7 +77,16 @@ public class LevelOne : ILevel
     private IObstacle obstacle2;
     private IObstacle obstacle3;
 
-    public LevelOne(Game1 game, List<IEntity> entities, Mario mario, Texture2D EnemyTexture, Texture2D blockTexture, Texture2D obstacleTexture, Texture2D ItemsTexture, SpriteBatch spriteBatch)
+    public LevelOne(
+        Game1 game,
+        List<IEntity> entities,
+        Mario mario,
+        Texture2D EnemyTexture,
+        Texture2D blockTexture,
+        Texture2D obstacleTexture,
+        Texture2D ItemsTexture,
+        SpriteBatch spriteBatch
+    )
     {
         this.entities = entities;
         this.mario = mario;
@@ -61,7 +96,6 @@ public class LevelOne : ILevel
         this.obstacleTexture = obstacleTexture;
         this.spriteBatch = spriteBatch;
         this.game = game;
-
     }
 
     public void InitializeLevel()
@@ -87,9 +121,48 @@ public class LevelOne : ILevel
         Koopa1 = new Koopa(240, 400);
         Bloop1 = new Blooper(240, 200, mario);
 
-        OWLuckyBlockSprite = new LuckyBlockSprite(blockTexture, spriteBatch, ItemsTexture, game, mario, new Vector2(200 + 62, 350));
-        OWLuckyBlockSprite2 = new LuckyBlockSprite(blockTexture, spriteBatch, ItemsTexture, game, mario, new Vector2(200, 200));
-        OWBrickBlockSprite = new StaticBlockSprite(blockTexture, new Rectangle(272, 112, 16, 16));
+        OWLuckyBlockSprite1 = new LuckyBlockSprite(
+            blockTexture,
+            spriteBatch,
+            ItemsTexture,
+            game,
+            mario,
+            new Vector2(736, 288)
+        );
+        OWLuckyBlockSprite2 = new LuckyBlockSprite(
+            blockTexture,
+            spriteBatch,
+            ItemsTexture,
+            game,
+            mario,
+            new Vector2(672, 288)
+        );
+        OWLuckyBlockSprite3 = new LuckyBlockSprite(
+            blockTexture,
+            spriteBatch,
+            ItemsTexture,
+            game,
+            mario,
+            new Vector2(704, 192)
+        );
+        OWLuckyBlockSprite4 = new LuckyBlockSprite(
+            blockTexture,
+            spriteBatch,
+            ItemsTexture,
+            game,
+            mario,
+            new Vector2(544, 288)
+        );
+
+        OWBrickBlockSprite1 = new StaticBlockSprite(blockTexture, new Rectangle(272, 112, 16, 16));
+        OWBrickBlockSprite2 = new StaticBlockSprite(blockTexture, new Rectangle(272, 112, 16, 16));
+        OWBrickBlockSprite3 = new StaticBlockSprite(blockTexture, new Rectangle(272, 112, 16, 16));
+        OWBrickBlockSprite4 = new StaticBlockSprite(blockTexture, new Rectangle(272, 112, 16, 16));
+        OWBrickBlockSprite5 = new StaticBlockSprite(blockTexture, new Rectangle(272, 112, 16, 16));
+        OWBrickBlockSprite6 = new StaticBlockSprite(blockTexture, new Rectangle(272, 112, 16, 16));
+        OWBrickBlockSprite7 = new StaticBlockSprite(blockTexture, new Rectangle(272, 112, 16, 16));
+
+
         OWBrokenBrickSprite = new BrokenBrickSprite(blockTexture, 4, 1);
 
         obstacle1 = new obstacle1(obstacleTexture);
@@ -118,16 +191,21 @@ public class LevelOne : ILevel
         entities.Add(Koopa1);
         entities.Add(Bloop1);
 
-        entities.Add(OWLuckyBlockSprite);
+        entities.Add(OWLuckyBlockSprite1);
         entities.Add(OWLuckyBlockSprite2);
-        entities.Add(OWBrickBlockSprite);
+        entities.Add(OWLuckyBlockSprite3);
+        entities.Add(OWLuckyBlockSprite4);
+
+        entities.Add(OWBrickBlockSprite1);
+        entities.Add(OWBrickBlockSprite2);
+        entities.Add(OWBrickBlockSprite3);
+
+
         entities.Add(OWBrokenBrickSprite);
 
         entities.Add(obstacle1);
         entities.Add(obstacle2);
         entities.Add(obstacle3);
-
-
     }
 
     public void LoadLevel(ContentManager content)
@@ -158,9 +236,16 @@ public class LevelOne : ILevel
         Koopa1.Updates();
         Bloop1.Updates();
 
-        OWLuckyBlockSprite.Update(gameTime);
+        OWLuckyBlockSprite1.Update(gameTime);
         OWLuckyBlockSprite2.Update(gameTime);
-        OWBrickBlockSprite.Update(gameTime);
+        OWLuckyBlockSprite3.Update(gameTime);
+        OWLuckyBlockSprite4.Update(gameTime);
+
+        OWBrickBlockSprite1.Update(gameTime);
+        OWBrickBlockSprite2.Update(gameTime);
+        OWBrickBlockSprite3.Update(gameTime);
+
+
         OWBrokenBrickSprite.Update(gameTime);
 
         obstacle1.Update();
@@ -195,11 +280,16 @@ public class LevelOne : ILevel
         Bloop1.Draw(spriteBatch, EnemyTexture);
 
         mario.Draw(spriteBatch);
+        OWLuckyBlockSprite1.Draw(spriteBatch, new Vector2(69, 69));
+        OWLuckyBlockSprite2.Draw(spriteBatch, new Vector2(69, 69));
+        OWLuckyBlockSprite3.Draw(spriteBatch, new Vector2(69, 69));
+        OWLuckyBlockSprite4.Draw(spriteBatch, new Vector2(69, 69));
 
-        OWLuckyBlockSprite2.Draw(spriteBatch, new Vector2(200, 200));
-        OWBrickBlockSprite.Draw(spriteBatch, new Vector2(200, 350));
+        OWBrickBlockSprite1.Draw(spriteBatch, new Vector2(768, 288));
+        OWBrickBlockSprite2.Draw(spriteBatch, new Vector2(704, 288));
+        OWBrickBlockSprite3.Draw(spriteBatch, new Vector2(640, 288));
+
         OWBrokenBrickSprite.Draw(spriteBatch, new Vector2(200 + 31, 350));
-        OWLuckyBlockSprite.Draw(spriteBatch, new Vector2(200 + 62, 350));
 
         obstacle1.Draw(spriteBatch, new Vector2(350, 370));
         obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
