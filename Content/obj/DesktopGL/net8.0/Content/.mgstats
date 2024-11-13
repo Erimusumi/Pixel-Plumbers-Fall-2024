@@ -1,3 +1,1 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
-"C:/Users/kamau/Downloads/CSE3902/DracoMalfoy/Content/Audio/Sound Effect(s)/smb_gameover.wav","C:/Users/kamau/Downloads/CSE3902/DracoMalfoy/Content/bin/DesktopGL/Content/Audio/Sound Effect(s)/smb_gameover.xnb","SoundEffectProcessor","SoundEffectContent",167408,166555,0.4147444
-"C:/Users/kamau/Downloads/CSE3902/DracoMalfoy/Content/blank screen.png","C:/Users/kamau/Downloads/CSE3902/DracoMalfoy/Content/bin/DesktopGL/Content/blank screen.xnb","TextureProcessor","Texture2DContent",2597,1536085,0.0952838
