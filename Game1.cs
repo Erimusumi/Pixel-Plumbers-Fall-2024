@@ -184,7 +184,8 @@ public class Game1 : Game
 
         entities.Add(mario);
 
-        levelOne = new LevelOne(this, entities, mario, EnemyTexture, block, ItemsTexture, obstacleTexture, spriteBatch);
+       // levelOne = new LevelOne(this, entities, mario, EnemyTexture, block, ItemsTexture, obstacleTexture, spriteBatch,)
+            levelOne = new LevelOne(this, entities, mario, EnemyTexture, block, obstacleTexture, ItemsTexture, spriteBatch, gameTime, entitiesRemoved, sort, sweep);
         levelOne.InitializeLevel();
         List<IEntity> tempEntities = levelOne.GetAllEntities();
         entities.AddRange(tempEntities);

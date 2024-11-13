@@ -11,6 +11,10 @@ public class LevelOne : ILevel
     private List<IEntity> entities = new List<IEntity>();
     private List<IBlock> blocks;
     private Mario mario;
+    Sort sort;
+    Sweep sweep;
+    GameTime gameTime;
+    List<IEntity> entitiesRemoved;
 
     private SpriteBatch spriteBatch;
 
@@ -107,7 +111,12 @@ public class LevelOne : ILevel
         Texture2D blockTexture,
         Texture2D obstacleTexture,
         Texture2D ItemsTexture,
-        SpriteBatch spriteBatch
+        SpriteBatch spriteBatch,
+        GameTime gameTime,
+List<IEntity> entitiesRemoved,
+        Sort sort,
+        Sweep sweep
+
     )
     {
         this.entities = entities;
@@ -118,10 +127,18 @@ public class LevelOne : ILevel
         this.obstacleTexture = obstacleTexture;
         this.spriteBatch = spriteBatch;
         this.game = game;
-    }
+        this.sort = sort;
+        this.sweep = sweep;
+        this.gameTime = gameTime;
+        this.entitiesRemoved = entitiesRemoved;
+     }
 
     public void InitializeLevel()
     {
+
+        //Sorting
+        sort = new Sort();
+        sweep = new Sweep(gameTime);
         // Initialize all entities:
         Goomba1 = new Goomba(535, 400);
         Goomba2 = new Goomba(1400, 400);
@@ -370,6 +387,9 @@ public class LevelOne : ILevel
 
     public void UpdateLevel(GameTime gameTime)
     {
+        List<IEntity> temp = entities;
+        entities = sort.SortList(entities, entities.Count, temp);
+        sweep.Compare(entities, entitiesRemoved, screen);
         // Update all entities
         Goomba1.Updates();
         Goomba2.Updates();
