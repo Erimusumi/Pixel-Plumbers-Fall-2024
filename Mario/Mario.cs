@@ -21,7 +21,7 @@ public class Mario : IEntity
     public Vector2 marioVelocity;
     private float groundPosition = 385f;
     private float gravity = 980f;
-    private float jumpSpeed = -500f;
+    private float jumpSpeed = -570f;
 
     public bool isOnGround = true;
     private bool canPowerUp = true;
