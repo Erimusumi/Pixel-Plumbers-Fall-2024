@@ -21,7 +21,7 @@ public class Mario : IEntity
     public Vector2 marioVelocity;
     private float groundPosition = 385f;
     private float gravity = 980f;
-    private float jumpSpeed = -500f;
+    private float jumpSpeed = -570f;
 
     public bool isOnGround = true;
     private bool canPowerUp = true;
@@ -41,6 +41,8 @@ public class Mario : IEntity
     private Game1 game;
     private int gameResetTimer = -1;
     private List<IEntity> _entities;
+
+  
 
     public Mario(Texture2D marioTexture, GameTime gametime, Game1 game, List<IEntity> entities, List<SoundEffect> sfx)
     {
@@ -65,6 +67,7 @@ public class Mario : IEntity
          * 2: Fireball
          * 3: Jump
          * 4: Death
+         * 5:FlagPole for winning
          */
         this._sfx = sfx;
     }
@@ -243,6 +246,15 @@ public class Mario : IEntity
         canTakeDamage = false;
         Task.Delay(1000).ContinueWith(t => canTakeDamage = true); // Reset after 1 second
     }
+    public void MarioWins()
+    {
+        if (marioStateMachine.wins())
+        {
+            _sfx[5].Play();
+            marioStateMachine.MakeInvisible();
+
+        }
+    }
 
     public void MarioDeath()
     {
@@ -269,7 +281,13 @@ public class Mario : IEntity
             else if (gameResetTimer == 0)
             {
                 game.hudManager.LoseLife();
-                game.ResetGame();
+                if (game.hudManager.GetNumLives() <= 0)
+                {
+                    game.GameOver();
+                }
+                else {
+                    game.ResetGame();
+                }
             }
         }
     }
@@ -355,6 +373,7 @@ public class Mario : IEntity
         starTimer += -1;
         this.RemoveStar();
         this.checkMarioHeightForDeath();
+        this.MarioWins();
     }
 
     public void Draw(SpriteBatch spriteBatch)
@@ -372,6 +391,7 @@ public class Mario : IEntity
         marioDeathBounceIncrement = 20;
         gameResetTimer = -1;
         deathSoundPlaying = false;
+        
     }
 
     public Rectangle GetDestination()

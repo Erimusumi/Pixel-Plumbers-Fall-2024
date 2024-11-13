@@ -24,7 +24,7 @@ public class Mushroom :IItem
     private float gravity = 980f;
     private Rectangle destinationRectangle;
     private int yPositionCount;
-    private int groundPosition = 400;
+    private int groundPosition = 380;
     
 
 
@@ -68,18 +68,20 @@ public class Mushroom :IItem
     {
         if (this.spawning)
         {
-            this.position.Y++;
-            this.yPositionCount++;
+            position.Y++;
+            yPositionCount++;
+            falling = false;
             if (yPositionCount > 16)
             {
-                this.spawning = false;
-                this.roaming = true;
-                this.movingRight = true;
+                spawning = false;
+                roaming = true;
+                movingRight = true;
             }
         }
         
         if (this.roaming)
         {
+            falling = true;
             if (movingRight)
             {
                 position.X++;
@@ -89,7 +91,10 @@ public class Mushroom :IItem
                 position.X--;
             }
         }
-
+        if(this.GetDestination().Y> this.groundPosition)
+        {
+            falling = false;
+        }
         if (this.falling)
         {
             velocity.Y += gravity * (float)gameTime.ElapsedGameTime.TotalSeconds;

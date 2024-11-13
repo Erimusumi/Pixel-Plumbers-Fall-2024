@@ -85,6 +85,12 @@
 /processorParam:Quality=Best
 /build:Audio/Sound Effect(s)/smb_flagpole.wav
 
+#begin Audio/Sound Effect(s)/smb_gameover.wav
+/importer:WavImporter
+/processor:SoundEffectProcessor
+/processorParam:Quality=Best
+/build:Audio/Sound Effect(s)/smb_gameover.wav
+
 #begin Audio/Sound Effect(s)/smb_jump-small.wav
 /importer:WavImporter
 /processor:SoundEffectProcessor
@@ -150,6 +156,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:BlackJack/tabletop.png
+
+#begin blank screen.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:blank screen.png
 
 #begin blocks.gif
 /importer:TextureImporter
@@ -287,6 +305,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:OverworldTiles.png
+
+#begin OverworldTilesv200.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:OverworldTilesv200.png
 
 #begin StartScreenFonts.spritefont
 /importer:FontDescriptionImporter

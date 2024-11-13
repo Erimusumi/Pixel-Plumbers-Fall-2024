@@ -18,6 +18,7 @@ public class DancePole : ISpriteAnimation
     private const int coordsY = 57;
     const int height = 244;
     const int width = 116;
+    
 
     int Hchange = 372;
     int Wchange = 211;
@@ -81,8 +82,8 @@ public class DancePole : ISpriteAnimation
     public void Draw(SpriteBatch sb, Texture2D Texture)
     {
         Vector2 destination = new Vector2(320, 90);
-        sb.Begin();
+        //sb.Begin();
         sb.Draw(Texture, destination, sourceRectangle, Color.White, 0f, Vector2.Zero, 1.3f, SpriteEffects.None, 0f);
-        sb.End();
+        //sb.End();
     }
 }
