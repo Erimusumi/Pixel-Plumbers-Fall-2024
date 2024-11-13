@@ -153,6 +153,7 @@ public class Game1 : Game
         this.gameTime = new GameTime();
         this.sweep = new Sweep(gameTime);
         Dance = new DancePole();
+        
        
         lvl1backdrop = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Backdrop.csv");
         lvl1greenery = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Greenery.csv");
@@ -326,6 +327,7 @@ public class Game1 : Game
         }
        
         toggleFalling.updateMarioFalling(mario);
+       // Dance.Updates();
 
         base.Update(gameTime);
     }
@@ -380,6 +382,7 @@ public class Game1 : Game
             spriteBatch.Draw(gameOverBackground, camera.position, Color.Black);
             spriteBatch.DrawString(startScreenFonts, "GAME OVER", new Vector2(300, 150), Color.White, 0f, Vector2.Zero, 1, SpriteEffects.None, 0f);
         }
+        Dance.Draw(spriteBatch, DanceTexture);
         spriteBatch.End();
         base.Draw(gameTime);
     }

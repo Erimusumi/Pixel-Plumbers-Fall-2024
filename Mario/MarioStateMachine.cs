@@ -146,6 +146,7 @@ public class MarioStateMachine
         CurrentGameState = MarioGameState.Small;
         CurrentFaceState = MarioFaceState.Right;
         CurrentMoveState = MarioMoveState.Idle;
+        marioWins = false;
     }
     public bool wins()
     {

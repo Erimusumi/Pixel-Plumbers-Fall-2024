@@ -391,6 +391,7 @@ public class Mario : IEntity
         marioDeathBounceIncrement = 20;
         gameResetTimer = -1;
         deathSoundPlaying = false;
+        
     }
 
     public Rectangle GetDestination()
