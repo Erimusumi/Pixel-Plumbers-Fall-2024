@@ -382,7 +382,7 @@ public class Game1 : Game
             spriteBatch.Draw(gameOverBackground, camera.position, Color.Black);
             spriteBatch.DrawString(startScreenFonts, "GAME OVER", new Vector2(300, 150), Color.White, 0f, Vector2.Zero, 1, SpriteEffects.None, 0f);
         }
-        Dance.Draw(spriteBatch, DanceTexture);
+        //Dance.Draw(spriteBatch, DanceTexture);
         spriteBatch.End();
         base.Draw(gameTime);
     }
