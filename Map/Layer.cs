@@ -92,18 +92,6 @@ public class Layer
 
                 // Add the red rectangle to the list
                 redRectangles.Add(redRect);
-
-                // Drawing the red rectangle for visuals
-                spriteBatch.Draw(
-                    textureAtlas,
-                    redRect,
-                    null,
-                    Color.Red,
-                    0f,
-                    Vector2.Zero,
-                    SpriteEffects.None,
-                    0f
-                );
             }
         }
     }
