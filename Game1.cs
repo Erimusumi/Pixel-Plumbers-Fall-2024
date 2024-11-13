@@ -250,6 +250,7 @@ public class Game1 : Game
         marioSounds.Add(fireBallSound);
         marioSounds.Add(marioJump);
         marioSounds.Add(marioDeath);
+        marioSounds.Add(flagPoleSound);
         mario = new Mario(marioTexture, gameTime, this, entities, marioSounds);
 
         startScreenFonts = Content.Load<SpriteFont>("StartScreenFonts");
@@ -278,6 +279,7 @@ public class Game1 : Game
         List<IEntity> temp = entities;
         entities = sort.SortList(entities, entities.Count, temp);
         sweep.Compare(entities, entitiesRemoved, screen);
+        
 
         blackJackStateMachine.Update();
         if (gameStateMachine.isCurrentStateRunning())

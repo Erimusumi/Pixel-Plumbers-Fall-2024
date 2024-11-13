@@ -42,6 +42,8 @@ public class Mario : IEntity
     private int gameResetTimer = -1;
     private List<IEntity> _entities;
 
+  
+
     public Mario(Texture2D marioTexture, GameTime gametime, Game1 game, List<IEntity> entities, List<SoundEffect> sfx)
     {
         this.marioTexture = marioTexture;
@@ -65,6 +67,7 @@ public class Mario : IEntity
          * 2: Fireball
          * 3: Jump
          * 4: Death
+         * 5:FlagPole for winning
          */
         this._sfx = sfx;
     }
@@ -243,6 +246,15 @@ public class Mario : IEntity
         canTakeDamage = false;
         Task.Delay(1000).ContinueWith(t => canTakeDamage = true); // Reset after 1 second
     }
+    public void MarioWins()
+    {
+        if (marioStateMachine.wins())
+        {
+            _sfx[5].Play();
+            marioStateMachine.MakeInvisible();
+
+        }
+    }
 
     public void MarioDeath()
     {
@@ -361,6 +373,7 @@ public class Mario : IEntity
         starTimer += -1;
         this.RemoveStar();
         this.checkMarioHeightForDeath();
+        this.MarioWins();
     }
 
     public void Draw(SpriteBatch spriteBatch)
