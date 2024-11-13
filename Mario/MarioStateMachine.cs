@@ -12,7 +12,7 @@ public class MarioStateMachine
     public MarioMoveState CurrentMoveState { get; private set; }
 
     public bool _HasStar;
-
+    public bool marioWins;
     public bool isVisible;
 
     public MarioStateMachine()
@@ -22,6 +22,7 @@ public class MarioStateMachine
         CurrentMoveState = MarioMoveState.Idle;
         _HasStar = false;
         isVisible = true;
+        marioWins = false;
     }
 
     public void SetMarioSmall()
@@ -67,6 +68,10 @@ public class MarioStateMachine
     public void SetMarioDead()
     {
         CurrentMoveState = MarioMoveState.Dead;
+    }
+    public void SetMarioWins()
+    {
+        marioWins = true;
     }
     public void SetMarioLeft()
     {
@@ -131,6 +136,7 @@ public class MarioStateMachine
     {
         return CurrentMoveState == MarioMoveState.Dead;
     }
+
     public bool IsFire()
     {
         return CurrentGameState == MarioGameState.Fire;
@@ -140,6 +146,11 @@ public class MarioStateMachine
         CurrentGameState = MarioGameState.Small;
         CurrentFaceState = MarioFaceState.Right;
         CurrentMoveState = MarioMoveState.Idle;
+        marioWins = false;
+    }
+    public bool wins()
+    {
+        return marioWins;
     }
     public bool IsVisible()
     {
