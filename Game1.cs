@@ -314,6 +314,11 @@ public class Game1 : Game
                 }
             }
 
+            foreach (var number in entities)
+            {
+                Console.WriteLine(number);
+            }
+
             hudManager.Update(gameTime, camera);
 
         }
