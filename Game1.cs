@@ -377,8 +377,8 @@ public class Game1 : Game
         }
         if (gameStateMachine.isCurrentStatOver())
         {
-            spriteBatch.Draw(gameOverBackground, camera.position, Color.Black);
-            spriteBatch.DrawString(startScreenFonts, "GAME OVER", new Vector2(300, 150), Color.White, 0f, Vector2.Zero, 1, SpriteEffects.None, 0f);
+            spriteBatch.Draw(gameOverBackground, new Vector2(camera.position.X, camera.position.Y), Color.Black);
+            spriteBatch.DrawString(startScreenFonts, "GAME OVER", new Vector2(camera.position.X + 300, camera.position.Y + 150), Color.White, 0f, Vector2.Zero, 1, SpriteEffects.None, 0f);
         }
         //Dance.Draw(spriteBatch, DanceTexture);
         spriteBatch.End();
