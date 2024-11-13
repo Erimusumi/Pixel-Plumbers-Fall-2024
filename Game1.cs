@@ -368,8 +368,6 @@ public class Game1 : Game
                 item.Draw(spriteBatch);
             }
 
-
-
             hudManager.Draw(spriteBatch);
             blackJackStateMachine.Draw(spriteBatch);
         }
