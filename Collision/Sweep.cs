@@ -284,16 +284,16 @@ public class Sweep
         rectangle = entity.GetDestination();
         return rectangle;
     }
-    public void Compare(List<IEntity> entities, List<IEntity> entitiesRemoved, Rectangle camera)
+    public void Compare(List<IEntity> entities, List<IEntity> entitiesRemoved, Vector2 camera)
     {
         if (entities.Count > 1)
         {
             Rectangle firstEntity = entities[0].GetDestination();
             Rectangle secondEntity = entities[1].GetDestination();
-            for (int i = 0; (i < entities.Count) && (firstEntity.X <= (camera.Width + camera.X)); i++)
+            for (int i = 0; (i < entities.Count) && (firstEntity.X <= (800 + camera.X)); i++)
             {
                 firstEntity = entities[i].GetDestination();
-                for (int j = i+1; (j < entities.Count) && (secondEntity.X <= (camera.Width + camera.X)); j++)
+                for (int j = i+1; (j < entities.Count) && (secondEntity.X <= (800 + camera.X)); j++)
                 {
                     secondEntity = entities[j].GetDestination();
                     if (firstEntity.Intersects(secondEntity))

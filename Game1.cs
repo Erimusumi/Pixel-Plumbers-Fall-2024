@@ -280,7 +280,7 @@ public class Game1 : Game
 
         List<IEntity> temp = entities;
         entities = sort.SortList(entities, entities.Count, temp);
-        sweep.Compare(entities, entitiesRemoved, screen);
+        sweep.Compare(entities, entitiesRemoved, camera.position);
         
 
         blackJackStateMachine.Update();
