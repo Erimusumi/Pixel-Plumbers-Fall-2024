@@ -387,9 +387,9 @@ List<IEntity> entitiesRemoved,
 
     public void UpdateLevel(GameTime gameTime)
     {
-        List<IEntity> temp = entities;
-        entities = sort.SortList(entities, entities.Count, temp);
-        sweep.Compare(entities, entitiesRemoved, screen);
+        //List<IEntity> temp = entities;
+        //entities = sort.SortList(entities, entities.Count, temp);
+        //sweep.Compare(entities, entitiesRemoved, screen);
         // Update all entities
         Goomba1.Updates();
         Goomba2.Updates();
