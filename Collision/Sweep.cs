@@ -25,6 +25,7 @@ public class Sweep
         if (type == typeof(Goomba) || type == typeof(Goomba2) || type == typeof(Koopa) || type == typeof(Cheeps))
         {
             containsEnemy = true;
+            Debug.WriteLine("ContainsEnemy is true");
         }
         return containsEnemy;
     }
@@ -36,6 +37,7 @@ public class Sweep
         if(type == typeof(BrokenBrickSprite) || type == typeof(LuckyBlockSprite) || type == typeof(StaticBlockSprite))
         {
             containsBlock = true;
+            Debug.WriteLine("Contains Block is true");
         }
         return containsBlock;
     }
@@ -313,8 +315,10 @@ public class Sweep
                 for (int j = i+1; (j < entities.Count) && (secondEntity.X <= (800 + camera.X)); j++)
                 {
                     secondEntity = entities[j].GetDestination();
+                   
                     if (firstEntity.Intersects(secondEntity))
                     {
+                        Debug.WriteLine("First Entity is: " + entities[i].ToString() + " Second Entity is " + entities[j].ToString()); 
                         handleInteraction(entities, entitiesRemoved, i, j);
                     }
                 }
