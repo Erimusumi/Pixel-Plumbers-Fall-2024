@@ -321,6 +321,7 @@ public class Sweep
                         Debug.WriteLine("First Entity is: " + entities[i].ToString() + " Second Entity is " + entities[j].ToString()); 
                         handleInteraction(entities, entitiesRemoved, i, j);
                     }
+                    
                 }
             }
         }
