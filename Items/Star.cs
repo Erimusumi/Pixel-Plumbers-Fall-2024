@@ -43,8 +43,8 @@ public class Star:IItem
         if (this.spawning)
         {
             this.position.Y++;
-            this.yPositionCount++;
-            if (yPositionCount > 16)
+            this.yPositionCount--;
+            if (yPositionCount > 32)
             {
                 this.spawning = false;
                 this.roaming = true;

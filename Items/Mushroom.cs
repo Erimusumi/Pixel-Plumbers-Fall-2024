@@ -68,8 +68,8 @@ public class Mushroom :IItem
     {
         if (this.spawning)
         {
-            position.Y++;
-            yPositionCount++;
+            position.Y--;
+           yPositionCount++;
             falling = false;
             if (yPositionCount > 16)
             {
