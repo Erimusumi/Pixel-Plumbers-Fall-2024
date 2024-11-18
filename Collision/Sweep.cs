@@ -151,7 +151,9 @@ public class Sweep
         {
             OtherEnemyInteraction = new OtherEnemyInteraction((ISpriteEnemy)item2, item1);
             OtherEnemyInteraction.Update();
-        } /*else if (item1.GetType() == typeof(Star) && item2.GetType() == typeof(Mario))         //Item interaction
+        } 
+        //Item Mario Interactions
+        else if (item1.GetType() == typeof(Star) && item2.GetType() == typeof(Mario))        
         {
             MarioStarInteraction = new MarioStarInteraction((Mario)item2, (Star)item1, entitiesRemoved);
             MarioStarInteraction.update();
@@ -163,7 +165,7 @@ public class Sweep
             MarioStarInteraction.update();
             entities.RemoveAt(index2);
         }
-        */
+        
         else if (item1.GetType() == typeof(Fire) && item2.GetType() == typeof(Mario))
         {
             MarioFirePowerInteraction = new MarioFirePowerInteraction((Mario)item2, (Fire)item1, entitiesRemoved);
