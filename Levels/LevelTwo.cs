@@ -34,6 +34,32 @@ public class LevelTwo : ILevel
 
     //Obstacle List:
 
+    public LevelTwo(
+       Game1 game,
+       List<IEntity> entities,
+       Mario mario,
+       Texture2D EnemyTexture,
+       Texture2D blockTexture,
+       Texture2D obstacleTexture,
+       Texture2D ItemsTexture,
+       SpriteBatch spriteBatch,
+       GameTime gameTime,
+List<IEntity> entitiesRemoved
+
+   )
+    {
+        this.entities = entities;
+        this.mario = mario;
+        this.EnemyTexture = EnemyTexture;
+        this.blockTexture = blockTexture;
+        this.ItemsTexture = ItemsTexture;
+        this.obstacleTexture = obstacleTexture;
+        this.spriteBatch = spriteBatch;
+        this.game = game;
+        this.gameTime = gameTime;
+        this.entitiesRemoved = entitiesRemoved;
+    }
+
 
 
     public void LoadLevel(ContentManager content)

@@ -140,7 +140,7 @@ public class Game1 : Game
         }
         else if (gameStateMachine.isLevelTwo())
         {
-
+            
 
         }else if (gameStateMachine.isLevelThree())
         {
