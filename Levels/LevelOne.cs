@@ -157,7 +157,7 @@ List<IEntity> entitiesRemoved,
         Goomba15 = new Goomba(5400, 400);
         Goomba16 = new Goomba(5550, 400);
 
-        Koopa1 = new Koopa(240, 400);
+        //Koopa1 = new Koopa(240, 400);
         Bloop1 = new Blooper(240, 200, mario);
 
         OWLuckyBlockSprite1 = new LuckyBlockSprite(
@@ -324,7 +324,7 @@ List<IEntity> entitiesRemoved,
         entities.Add(Goomba15);
         entities.Add(Goomba16);
 
-        entities.Add(Koopa1);
+        //entities.Add(Koopa1);
         entities.Add(Bloop1);
 
         entities.Add(OWLuckyBlockSprite1);
@@ -387,9 +387,9 @@ List<IEntity> entitiesRemoved,
 
     public void UpdateLevel(GameTime gameTime)
     {
-        List<IEntity> temp = entities;
-        entities = sort.SortList(entities, entities.Count, temp);
-        sweep.Compare(entities, entitiesRemoved, screen);
+        //List<IEntity> temp = entities;
+        //entities = sort.SortList(entities, entities.Count, temp);
+        //sweep.Compare(entities, entitiesRemoved, screen);
         // Update all entities
         Goomba1.Updates();
         Goomba2.Updates();
@@ -408,7 +408,7 @@ List<IEntity> entitiesRemoved,
         Goomba15.Updates();
         Goomba16.Updates();
 
-        Koopa1.Updates();
+        //Koopa1.Updates();
         Bloop1.Updates();
 
         OWLuckyBlockSprite1.Update(gameTime);
@@ -487,7 +487,7 @@ List<IEntity> entitiesRemoved,
         Goomba15.Draw(spriteBatch, EnemyTexture);
         Goomba16.Draw(spriteBatch, EnemyTexture);
 
-        Koopa1.Draw(spriteBatch, EnemyTexture);
+        //Koopa1.Draw(spriteBatch, EnemyTexture);
         Bloop1.Draw(spriteBatch, EnemyTexture);
 
         mario.Draw(spriteBatch);

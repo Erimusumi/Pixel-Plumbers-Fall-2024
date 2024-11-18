@@ -182,13 +182,13 @@ public class Game1 : Game
 
 
 
-        entities.Add(mario);
+        //entities.Add(mario);
 
        // levelOne = new LevelOne(this, entities, mario, EnemyTexture, block, ItemsTexture, obstacleTexture, spriteBatch,)
             levelOne = new LevelOne(this, entities, mario, EnemyTexture, block, obstacleTexture, ItemsTexture, spriteBatch, gameTime, entitiesRemoved, sort, sweep);
         levelOne.InitializeLevel();
-        List<IEntity> tempEntities = levelOne.GetAllEntities();
-        entities.AddRange(tempEntities);
+       // List<IEntity> tempEntities = levelOne.GetAllEntities();
+        //entities.AddRange(tempEntities);
 
         //Ground Detection initialization
         collidableRectangles = new List<Rectangle>();
@@ -280,7 +280,7 @@ public class Game1 : Game
 
         List<IEntity> temp = entities;
         entities = sort.SortList(entities, entities.Count, temp);
-        sweep.Compare(entities, entitiesRemoved, screen);
+        sweep.Compare(entities, entitiesRemoved, camera.position);
         
 
         blackJackStateMachine.Update();
@@ -312,6 +312,11 @@ public class Game1 : Game
                 {
                     entities.Remove(consumedEntity);
                 }
+            }
+
+            foreach (var number in entities)
+            {
+                Console.WriteLine(number);
             }
 
             hudManager.Update(gameTime, camera);
