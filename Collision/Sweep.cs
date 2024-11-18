@@ -25,7 +25,8 @@ public class Sweep
         if (type == typeof(Goomba) || type == typeof(Goomba2) || type == typeof(Koopa) || type == typeof(Cheeps))
         {
             containsEnemy = true;
-            Debug.WriteLine("ContainsEnemy is true");
+            
+            //Debug.WriteLine("ContainsEnemy is true");
         }
         return containsEnemy;
     }
@@ -37,7 +38,7 @@ public class Sweep
         if(type == typeof(BrokenBrickSprite) || type == typeof(LuckyBlockSprite) || type == typeof(StaticBlockSprite))
         {
             containsBlock = true;
-            Debug.WriteLine("Contains Block is true");
+            //Debug.WriteLine("Contains Block is true");
         }
         return containsBlock;
     }
@@ -309,16 +310,16 @@ public class Sweep
         {
             Rectangle firstEntity = entities[0].GetDestination();
             Rectangle secondEntity = entities[1].GetDestination();
-            for (int i = 0; (i < entities.Count) && (firstEntity.X <= (800 + camera.X)); i++)
+            for (int i = 0; (i < entities.Count) && (firstEntity.X <= (8000)); i++)
             {
                 firstEntity = entities[i].GetDestination();
-                for (int j = i+1; (j < entities.Count) && (secondEntity.X <= (800 + camera.X)); j++)
+                for (int j = i+1; (j < entities.Count) && (secondEntity.X <= (8000)); j++)
                 {
                     secondEntity = entities[j].GetDestination();
                    
                     if (firstEntity.Intersects(secondEntity))
                     {
-                        Debug.WriteLine("First Entity is: " + entities[i].ToString() + " Second Entity is " + entities[j].ToString()); 
+                        //Debug.WriteLine("First Entity is: " + entities[i].ToString() + " Second Entity is " + entities[j].ToString()); 
                         handleInteraction(entities, entitiesRemoved, i, j);
                     }
                     
