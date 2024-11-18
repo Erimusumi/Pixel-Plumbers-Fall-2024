@@ -27,6 +27,15 @@ public class LevelTwo : ILevel
     private Texture2D blockTexture;
     private Texture2D obstacleTexture;
     private Texture2D ItemsTexture;
+
+    //Enemy List:
+
+    //Block List:
+
+    //Obstacle List:
+
+
+
     public void LoadLevel(ContentManager content)
     {
 
