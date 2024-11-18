@@ -11,8 +11,6 @@ public class LevelOne : ILevel
     private List<IEntity> entities = new List<IEntity>();
     private List<IBlock> blocks;
     private Mario mario;
-    Sort sort;
-    Sweep sweep;
     GameTime gameTime;
     List<IEntity> entitiesRemoved;
 
@@ -119,9 +117,7 @@ public class LevelOne : ILevel
         Texture2D ItemsTexture,
         SpriteBatch spriteBatch,
         GameTime gameTime,
-List<IEntity> entitiesRemoved,
-        Sort sort,
-        Sweep sweep
+List<IEntity> entitiesRemoved
 
     )
     {
@@ -133,8 +129,6 @@ List<IEntity> entitiesRemoved,
         this.obstacleTexture = obstacleTexture;
         this.spriteBatch = spriteBatch;
         this.game = game;
-        this.sort = sort;
-        this.sweep = sweep;
         this.gameTime = gameTime;
         this.entitiesRemoved = entitiesRemoved;
      }
@@ -142,9 +136,7 @@ List<IEntity> entitiesRemoved,
     public void InitializeLevel()
     {
 
-        //Sorting
-        sort = new Sort();
-        sweep = new Sweep(gameTime);
+
         // Initialize all entities:
         Goomba1 = new Goomba(535, 400);
         Goomba2 = new Goomba(1400, 400);
