@@ -103,6 +103,12 @@ public class LevelOne : ILevel
     private IObstacle obstacle2;
     private IObstacle obstacle3;
 
+    private IObstacle obstacle4;
+    private IObstacle obstacle5;
+    private IObstacle obstacle6;
+ 
+
+
     public LevelOne(
         Game1 game,
         List<IEntity> entities,
