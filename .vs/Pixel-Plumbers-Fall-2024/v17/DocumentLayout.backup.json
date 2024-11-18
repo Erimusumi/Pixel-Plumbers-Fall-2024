@@ -13,10 +13,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\code reviews\\sprint 4\\dylanmoorescodereview.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:code reviews\\sprint 4\\dylanmoorescodereview.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,7 +32,7 @@
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\Projects\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAK0AAAAAAAAAAAD4v7oAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAABUBAAAAAAAAAAAwwDkBAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
               "IsPinned": true,
@@ -81,25 +77,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DylanMooresCodeReview.txt",
-              "DocumentMoniker": "C:\\Projects\\Code Reviews\\Sprint 4\\DylanMooresCodeReview.txt",
-              "RelativeDocumentMoniker": "Code Reviews\\Sprint 4\\DylanMooresCodeReview.txt",
-              "ToolTip": "C:\\Projects\\Code Reviews\\Sprint 4\\DylanMooresCodeReview.txt",
-              "RelativeToolTip": "Code Reviews\\Sprint 4\\DylanMooresCodeReview.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-11-13T04:12:56.787Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "LevelOne.cs",
               "DocumentMoniker": "C:\\Projects\\Levels\\LevelOne.cs",
               "RelativeDocumentMoniker": "Levels\\LevelOne.cs",
               "ToolTip": "C:\\Projects\\Levels\\LevelOne.cs",
               "RelativeToolTip": "Levels\\LevelOne.cs",
-              "ViewState": "AgIAAHkBAAAAAAAAAAAkwIcBAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAADQBAAAAAAAAAAAkwEkBAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T04:11:26.481Z",
               "EditorCaption": ""
