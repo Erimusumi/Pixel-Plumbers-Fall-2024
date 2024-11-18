@@ -237,7 +237,7 @@ public class Sweep
             BlockFireballInteraction.update();
         }
 
-         if (item1.GetType() == typeof(Mario) && ContainsBlock(entities, index2))
+         else if (item1.GetType() == typeof(Mario) && ContainsBlock(entities, index2))
         {
             Debug.WriteLine("Mario Block Collision Detected");
             //handle block interaction

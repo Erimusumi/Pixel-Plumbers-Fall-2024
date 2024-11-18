@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\isha\\collision\\interaction\\mariofirepowerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\mariofirepowerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\isha\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -85,10 +89,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\isha\\collision\\interaction\\marioblockinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\marioblockinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\isha\\collision\\interaction\\mariofirepowerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\mariofirepowerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\isha\\items\\itemmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -202,13 +202,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAABIBAAAAAAAAAAAswBkBAABBAAAAAAAAAA==",
+              "ViewState": "AgIAABIBAAAAAAAAAAAswDEBAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
               "IsPinned": true,
@@ -222,7 +222,7 @@
               "RelativeDocumentMoniker": "Collision\\Sweep.cs",
               "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Collision\\Sweep.cs*",
               "RelativeToolTip": "Collision\\Sweep.cs*",
-              "ViewState": "AgIAAKcAAAAAYB+203sBwLIAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAkwO4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-17T06:25:31.397Z",
               "IsPinned": true,
@@ -230,7 +230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "MarioMushroomInteraction.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Collision\\Interaction\\MarioMushroomInteraction.cs",
               "RelativeDocumentMoniker": "Collision\\Interaction\\MarioMushroomInteraction.cs",
@@ -243,7 +243,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "LevelOne.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Levels\\LevelOne.cs",
               "RelativeDocumentMoniker": "Levels\\LevelOne.cs",
@@ -284,43 +284,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Ground.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\GroundDetection\\Ground.cs",
-              "RelativeDocumentMoniker": "GroundDetection\\Ground.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\GroundDetection\\Ground.cs",
-              "RelativeToolTip": "GroundDetection\\Ground.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAiwBgAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T02:35:05.529Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "obstacle1.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Sprites\\Block Sprites\\obstacle1.cs",
-              "RelativeDocumentMoniker": "Sprites\\Block Sprites\\obstacle1.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Sprites\\Block Sprites\\obstacle1.cs",
-              "RelativeToolTip": "Sprites\\Block Sprites\\obstacle1.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAYwBIAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T22:39:07.417Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "StaticBlockSprite.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Sprites\\Block Sprites\\StaticBlockSprite.cs",
-              "RelativeDocumentMoniker": "Sprites\\Block Sprites\\StaticBlockSprite.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Sprites\\Block Sprites\\StaticBlockSprite.cs",
-              "RelativeToolTip": "Sprites\\Block Sprites\\StaticBlockSprite.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T19:36:47.461Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Sort.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Collision\\Sort.cs",
               "RelativeDocumentMoniker": "Collision\\Sort.cs",
@@ -333,7 +297,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "MarioFirePowerInteraction.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Collision\\Interaction\\MarioFirePowerInteraction.cs",
+              "RelativeDocumentMoniker": "Collision\\Interaction\\MarioFirePowerInteraction.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Collision\\Interaction\\MarioFirePowerInteraction.cs",
+              "RelativeToolTip": "Collision\\Interaction\\MarioFirePowerInteraction.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAEwBkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T19:24:32.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "StaticBlockSprite.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Sprites\\Block Sprites\\StaticBlockSprite.cs",
+              "RelativeDocumentMoniker": "Sprites\\Block Sprites\\StaticBlockSprite.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Sprites\\Block Sprites\\StaticBlockSprite.cs",
+              "RelativeToolTip": "Sprites\\Block Sprites\\StaticBlockSprite.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T19:36:47.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "obstacle1.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Sprites\\Block Sprites\\obstacle1.cs",
+              "RelativeDocumentMoniker": "Sprites\\Block Sprites\\obstacle1.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Sprites\\Block Sprites\\obstacle1.cs",
+              "RelativeToolTip": "Sprites\\Block Sprites\\obstacle1.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAYwBIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T22:39:07.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Ground.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\GroundDetection\\Ground.cs",
+              "RelativeDocumentMoniker": "GroundDetection\\Ground.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\GroundDetection\\Ground.cs",
+              "RelativeToolTip": "GroundDetection\\Ground.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAiwBgAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T02:35:05.529Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "ToggleFalling.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\GroundDetection\\ToggleFalling.cs",
               "RelativeDocumentMoniker": "GroundDetection\\ToggleFalling.cs",
@@ -345,7 +358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "QuitGameCommand.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Commands\\GameCommands\\QuitGameCommand.cs",
               "RelativeDocumentMoniker": "Commands\\GameCommands\\QuitGameCommand.cs",
@@ -357,7 +370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "LevelsScreenGameCommand.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Commands\\GameCommands\\LevelsScreenGameCommand.cs",
               "RelativeDocumentMoniker": "Commands\\GameCommands\\LevelsScreenGameCommand.cs",
@@ -369,7 +382,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "GameStateMachine.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\GameStateMachine.cs",
               "RelativeDocumentMoniker": "GameStateMachine.cs",
@@ -381,7 +394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "LevelOneCommand.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Commands\\GameCommands\\LevelOneCommand.cs",
               "RelativeDocumentMoniker": "Commands\\GameCommands\\LevelOneCommand.cs",
@@ -393,7 +406,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Fire.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Items\\Fire.cs",
               "RelativeDocumentMoniker": "Items\\Fire.cs",
@@ -405,7 +418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "Star.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Items\\Star.cs",
               "RelativeDocumentMoniker": "Items\\Star.cs",
@@ -417,7 +430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "StarPower.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Sprites\\Item Sprites\\StarPower.cs",
               "RelativeDocumentMoniker": "Sprites\\Item Sprites\\StarPower.cs",
@@ -429,7 +442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Mario.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Mario\\Mario.cs",
               "RelativeDocumentMoniker": "Mario\\Mario.cs",
@@ -441,7 +454,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "LuckyBlockSprite.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Sprites\\Block Sprites\\LuckyBlockSprite.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\LuckyBlockSprite.cs",
@@ -453,7 +466,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "ItemBlockInteraction.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Collision\\Interaction\\ItemBlockInteraction.cs",
               "RelativeDocumentMoniker": "Collision\\Interaction\\ItemBlockInteraction.cs",
@@ -465,7 +478,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "FirePower.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Sprites\\Item Sprites\\FirePower.cs",
               "RelativeDocumentMoniker": "Sprites\\Item Sprites\\FirePower.cs",
@@ -477,7 +490,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "MarioBlockInteraction.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Collision\\Interaction\\MarioBlockInteraction.cs",
               "RelativeDocumentMoniker": "Collision\\Interaction\\MarioBlockInteraction.cs",
@@ -486,18 +499,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-06T20:55:33.548Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "MarioFirePowerInteraction.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Collision\\Interaction\\MarioFirePowerInteraction.cs",
-              "RelativeDocumentMoniker": "Collision\\Interaction\\MarioFirePowerInteraction.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Isha\\Collision\\Interaction\\MarioFirePowerInteraction.cs",
-              "RelativeToolTip": "Collision\\Interaction\\MarioFirePowerInteraction.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAawBQAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T19:24:32.04Z"
             },
             {
               "$type": "Document",
