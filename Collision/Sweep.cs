@@ -176,7 +176,7 @@ public class Sweep
             MarioFirePowerInteraction.update();
             entities.RemoveAt(index2);
         }
-        /*else if (item1.GetType() == typeof(Mushroom) && item2.GetType() == typeof(Mario))
+        else if (item1.GetType() == typeof(Mushroom) && item2.GetType() == typeof(Mario))
         {
             MarioMushroomInteraction = new MarioMushroomInteraction((Mario)item2, (Mushroom)item1, entitiesRemoved);
             MarioMushroomInteraction.update();
@@ -190,7 +190,7 @@ public class Sweep
 
             entities.RemoveAt(index2);
         }
-        */
+        
 
         else if (ContainsItem(entities, index1) && item2.GetType() == typeof(Mario))
         {
