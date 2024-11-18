@@ -1,201 +1,193 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\",
+  "WorkspaceRootPath": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\code reviews\\sprint 4\\helenwangcodereview.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:code reviews\\sprint 4\\helenwangcodereview.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\code reviews\\sprint 4\\sanaakamaucodereview.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:code reviews\\sprint 4\\sanaakamaucodereview.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\code reviews\\sprint 4\\reflection.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:code reviews\\sprint 4\\reflection.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\code reviews\\sprint 3\\reflection.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:code reviews\\sprint 3\\reflection.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\blackjack\\blackjacksprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:blackjack\\blackjacksprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\blackjack\\blackjackcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:blackjack\\blackjackcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\collision\\interaction\\marioblockinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\marioblockinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\grounddetection\\togglefalling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:grounddetection\\togglefalling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\code reviews\\sprint 3\\helen\u0027scodereview.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:code reviews\\sprint 3\\helen\u0027scodereview.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\hud\\hudmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:hud\\hudmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\code reviews\\sprint 4\\dylanmoorescodereview.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:code reviews\\sprint 4\\dylanmoorescodereview.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\map\\layer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:map\\layer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\camera\\followcamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:camera\\followcamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\collision\\interaction\\enemymariointeraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\enemymariointeraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\collision\\interaction\\otherenemyinteractions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\otherenemyinteractions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\collision\\interaction\\mariomushroominteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\mariomushroominteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\collision\\interaction\\mariofirepowerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\mariofirepowerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\collision\\interaction\\itemobstacleinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\itemobstacleinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\collision\\interaction\\enemyfireballinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\enemyfireballinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\collision\\interaction\\blockfireballinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\blockfireballinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\sprites\\block sprites\\obstacle3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\obstacle3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\sprites\\block sprites\\obstacle4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\obstacle4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\sprites\\block sprites\\obstacle2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\obstacle2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\sprites\\block sprites\\obstacle1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\obstacle1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\goomba\\goombasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:goomba\\goombasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\goomba\\goombastatemachine2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:goomba\\goombastatemachine2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\goomba\\goomba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:goomba\\goomba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\goomba\\goombastatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:goomba\\goombastatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\goomba\\goomba2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:goomba\\goomba2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\sprites\\block sprites\\brokenbricksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\brokenbricksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\sprites\\block sprites\\luckyblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\luckyblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\sprites\\block sprites\\staticblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\staticblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\sprites\\block sprites\\unknownblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\unknownblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\controllers\\gamestatecontrolcenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:controllers\\gamestatecontrolcenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\sprites\\iblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\iblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\controllers\\commandcontrolcenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:controllers\\commandcontrolcenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\sprites\\mariosprites\\bigmario\\idlerightbigmario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\mariosprites\\bigmario\\idlerightbigmario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\collision\\interaction\\starinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\starinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\mario\\mariostatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:mario\\mariostatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\collision\\sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\collision\\sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\items\\mushroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:items\\mushroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\projectile\\fireballsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:projectile\\fireballsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\items\\fire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\grounddetection\\togglefalling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:grounddetection\\togglefalling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\grounddetection\\ground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:grounddetection\\ground.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\sprites\\block sprites\\obstacle1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\obstacle1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\sprites\\block sprites\\staticblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\staticblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\collision\\interaction\\mariomushroominteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\mariomushroominteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\commands\\gamecommands\\quitgamecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:commands\\gamecommands\\quitgamecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\commands\\gamecommands\\levelsscreengamecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:commands\\gamecommands\\levelsscreengamecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\commands\\gamecommands\\levelonecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:commands\\gamecommands\\levelonecommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\gamestatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:gamestatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\items\\star.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:items\\star.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\sprites\\item sprites\\starpower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\item sprites\\starpower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\sprites\\block sprites\\luckyblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\luckyblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\items\\fire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:items\\fire.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\sprites\\item sprites\\firepower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\collision\\interaction\\itemblockinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\itemblockinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\sprites\\item sprites\\firepower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\item sprites\\firepower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\sprites\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\collision\\interaction\\marioblockinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\marioblockinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\collision\\interaction\\mariofirepowerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\mariofirepowerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\items\\itemmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:items\\itemmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\sprites\\item sprites\\mushroompower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\item sprites\\mushroompower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\collision\\interaction\\starinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\starinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\collision\\interaction\\itemobstacleinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\itemobstacleinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\sprites\\block sprites\\unknownblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\unknownblocksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\mario\\mariospritemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:mario\\mariospritemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\mario\\mariostatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:mario\\mariostatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\blackjack\\blackjackcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:blackjack\\blackjackcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\sprites\\block sprites\\brokenbricksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\brokenbricksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\collision\\interaction\\blockfireballinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\blockfireballinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\goomba\\goomba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:goomba\\goomba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\goomba\\goomba2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:goomba\\goomba2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\music\\musiccommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:music\\musiccommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\collision\\interaction\\enemymariointeraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\enemymariointeraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\collision\\interaction\\otherenemyinteractions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\otherenemyinteractions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\collision\\interaction\\enemyfireballinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\enemyfireballinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\goomba\\goombasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:goomba\\goombasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\goomba\\goombastatemachine2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:goomba\\goombastatemachine2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\goomba\\goombastatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:goomba\\goombastatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\controllers\\gamestatecontrolcenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:controllers\\gamestatecontrolcenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\sprites\\iblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\iblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\controllers\\commandcontrolcenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:controllers\\commandcontrolcenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\sprites\\mariosprites\\bigmario\\idlerightbigmario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\mariosprites\\bigmario\\idlerightbigmario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\projectile\\fireballsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:projectile\\fireballsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\w6614\\desktop\\osu\\2024 autumn semester\\cse 3902\\project code\\sprint3\\erimusumi\\pixel-plumbers-fall-2024\\sprites\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -206,17 +198,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "Game1.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Game1.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Game1.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHQBAAANAAAAAAAAAA==",
+              "ViewState": "AgIAABIBAAAAAAAAAAAswBkBAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
               "IsPinned": true,
@@ -224,56 +216,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "Sweep.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Sweep.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Sweep.cs",
               "RelativeDocumentMoniker": "Collision\\Sweep.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Sweep.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Sweep.cs",
               "RelativeToolTip": "Collision\\Sweep.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAAwIQAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABwBAAAAYB+203sBwEMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-17T06:25:31.397Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MarioBlockInteraction.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\MarioBlockInteraction.cs",
-              "RelativeDocumentMoniker": "Collision\\Interaction\\MarioBlockInteraction.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\MarioBlockInteraction.cs",
-              "RelativeToolTip": "Collision\\Interaction\\MarioBlockInteraction.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAlwC4AAABJAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "MarioMushroomInteraction.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\MarioMushroomInteraction.cs",
+              "RelativeDocumentMoniker": "Collision\\Interaction\\MarioMushroomInteraction.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\MarioMushroomInteraction.cs",
+              "RelativeToolTip": "Collision\\Interaction\\MarioMushroomInteraction.cs",
+              "ViewState": "AgIAAA4AAABgZmZmZmYqwAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T15:28:15.683Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T19:32:07.749Z",
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Reflection.txt",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Code Reviews\\Sprint 4\\Reflection.txt",
-              "RelativeDocumentMoniker": "Code Reviews\\Sprint 4\\Reflection.txt",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Code Reviews\\Sprint 4\\Reflection.txt",
-              "RelativeToolTip": "Code Reviews\\Sprint 4\\Reflection.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-11-13T02:08:58.752Z",
+              "DocumentIndex": 1,
+              "Title": "LevelOne.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Levels\\LevelOne.cs",
+              "RelativeDocumentMoniker": "Levels\\LevelOne.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Levels\\LevelOne.cs*",
+              "RelativeToolTip": "Levels\\LevelOne.cs*",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAAAJ8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T22:16:06.126Z",
+              "IsPinned": true,
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Bookmark",
@@ -285,469 +272,252 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SanaaKamauCodeReview.txt",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Code Reviews\\Sprint 4\\SanaaKamauCodeReview.txt",
-              "RelativeDocumentMoniker": "Code Reviews\\Sprint 4\\SanaaKamauCodeReview.txt",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Code Reviews\\Sprint 4\\SanaaKamauCodeReview.txt",
-              "RelativeToolTip": "Code Reviews\\Sprint 4\\SanaaKamauCodeReview.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-11-12T22:55:55.17Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HelenWangCodeReview.txt",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Code Reviews\\Sprint 4\\HelenWangCodeReview.txt",
-              "RelativeDocumentMoniker": "Code Reviews\\Sprint 4\\HelenWangCodeReview.txt",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Code Reviews\\Sprint 4\\HelenWangCodeReview.txt",
-              "RelativeToolTip": "Code Reviews\\Sprint 4\\HelenWangCodeReview.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-11-13T01:26:09.806Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Reflection.txt",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Code Reviews\\Sprint 3\\Reflection.txt",
-              "RelativeDocumentMoniker": "Code Reviews\\Sprint 3\\Reflection.txt",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Code Reviews\\Sprint 3\\Reflection.txt",
-              "RelativeToolTip": "Code Reviews\\Sprint 3\\Reflection.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-11-13T01:51:44.89Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ToggleFalling.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\GroundDetection\\ToggleFalling.cs",
-              "RelativeDocumentMoniker": "GroundDetection\\ToggleFalling.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\GroundDetection\\ToggleFalling.cs",
-              "RelativeToolTip": "GroundDetection\\ToggleFalling.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAqwFYAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T00:53:42.386Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "BlackJackCommand.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\BlackJack\\BlackJackCommand.cs",
-              "RelativeDocumentMoniker": "BlackJack\\BlackJackCommand.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\BlackJack\\BlackJackCommand.cs",
-              "RelativeToolTip": "BlackJack\\BlackJackCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Ground.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\GroundDetection\\Ground.cs",
+              "RelativeDocumentMoniker": "GroundDetection\\Ground.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\GroundDetection\\Ground.cs",
+              "RelativeToolTip": "GroundDetection\\Ground.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAiwBgAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T22:42:17.254Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T02:35:05.529Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BlackJackSprites.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\BlackJack\\BlackJackSprites.cs",
-              "RelativeDocumentMoniker": "BlackJack\\BlackJackSprites.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\BlackJack\\BlackJackSprites.cs",
-              "RelativeToolTip": "BlackJack\\BlackJackSprites.cs",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T22:42:21.495Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Helen\u0027sCodeReview.txt",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Code Reviews\\Sprint 3\\Helen\u0027sCodeReview.txt",
-              "RelativeDocumentMoniker": "Code Reviews\\Sprint 3\\Helen\u0027sCodeReview.txt",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Code Reviews\\Sprint 3\\Helen\u0027sCodeReview.txt",
-              "RelativeToolTip": "Code Reviews\\Sprint 3\\Helen\u0027sCodeReview.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-11-13T01:26:30.042Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "HudManager.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\HUD\\HudManager.cs",
-              "RelativeDocumentMoniker": "HUD\\HudManager.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\HUD\\HudManager.cs",
-              "RelativeToolTip": "HUD\\HudManager.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAQwIgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T22:56:07.779Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "DylanMooresCodeReview.txt",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Code Reviews\\Sprint 4\\DylanMooresCodeReview.txt",
-              "RelativeDocumentMoniker": "Code Reviews\\Sprint 4\\DylanMooresCodeReview.txt",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Code Reviews\\Sprint 4\\DylanMooresCodeReview.txt",
-              "RelativeToolTip": "Code Reviews\\Sprint 4\\DylanMooresCodeReview.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-11-12T22:55:58.419Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LevelOne.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Levels\\LevelOne.cs",
-              "RelativeDocumentMoniker": "Levels\\LevelOne.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Levels\\LevelOne.cs",
-              "RelativeToolTip": "Levels\\LevelOne.cs",
-              "ViewState": "AgIAAAYBAAAAAAAAAAAowBMBAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T22:47:11.511Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Layer.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Map\\Layer.cs",
-              "RelativeDocumentMoniker": "Map\\Layer.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Map\\Layer.cs",
-              "RelativeToolTip": "Map\\Layer.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAADQAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T18:37:50.146Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "FollowCamera.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Camera\\FollowCamera.cs",
-              "RelativeDocumentMoniker": "Camera\\FollowCamera.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Camera\\FollowCamera.cs",
-              "RelativeToolTip": "Camera\\FollowCamera.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-23T18:01:33.929Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Mario.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Mario\\Mario.cs",
-              "RelativeDocumentMoniker": "Mario\\Mario.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Mario\\Mario.cs",
-              "RelativeToolTip": "Mario\\Mario.cs",
-              "ViewState": "AgIAAOAAAAAAAAAAAAAmwA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T18:14:24.642Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "EnemyMarioInteraction.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\EnemyMarioInteraction.cs",
-              "RelativeDocumentMoniker": "Collision\\Interaction\\EnemyMarioInteraction.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\EnemyMarioInteraction.cs",
-              "RelativeToolTip": "Collision\\Interaction\\EnemyMarioInteraction.cs",
-              "ViewState": "AgIAAA8AAACAZmZmZmYqwBsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T18:30:46.839Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "MarioMushroomInteraction.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\MarioMushroomInteraction.cs",
-              "RelativeDocumentMoniker": "Collision\\Interaction\\MarioMushroomInteraction.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\MarioMushroomInteraction.cs",
-              "RelativeToolTip": "Collision\\Interaction\\MarioMushroomInteraction.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T19:32:07.749Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "OtherEnemyInteractions.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\OtherEnemyInteractions.cs",
-              "RelativeDocumentMoniker": "Collision\\Interaction\\OtherEnemyInteractions.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\OtherEnemyInteractions.cs",
-              "RelativeToolTip": "Collision\\Interaction\\OtherEnemyInteractions.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAYwBcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T22:27:01.433Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "MarioFirePowerInteraction.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\MarioFirePowerInteraction.cs",
-              "RelativeDocumentMoniker": "Collision\\Interaction\\MarioFirePowerInteraction.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\MarioFirePowerInteraction.cs",
-              "RelativeToolTip": "Collision\\Interaction\\MarioFirePowerInteraction.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T19:24:32.04Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ItemObstacleInteraction.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\ItemObstacleInteraction.cs",
-              "RelativeDocumentMoniker": "Collision\\Interaction\\ItemObstacleInteraction.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\ItemObstacleInteraction.cs",
-              "RelativeToolTip": "Collision\\Interaction\\ItemObstacleInteraction.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T22:49:55.269Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "EnemyFireballInteraction.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\EnemyFireballInteraction.cs",
-              "RelativeDocumentMoniker": "Collision\\Interaction\\EnemyFireballInteraction.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\EnemyFireballInteraction.cs",
-              "RelativeToolTip": "Collision\\Interaction\\EnemyFireballInteraction.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAwwBcAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T03:41:18.262Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "BlockFireballInteraction.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\BlockFireballInteraction.cs",
-              "RelativeDocumentMoniker": "Collision\\Interaction\\BlockFireballInteraction.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\BlockFireballInteraction.cs",
-              "RelativeToolTip": "Collision\\Interaction\\BlockFireballInteraction.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAswCUAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T03:38:12.473Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "obstacle3.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\obstacle3.cs",
-              "RelativeDocumentMoniker": "Sprites\\Block Sprites\\obstacle3.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\obstacle3.cs",
-              "RelativeToolTip": "Sprites\\Block Sprites\\obstacle3.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAA8wCEAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T18:10:20.442Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "obstacle4.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\obstacle4.cs",
-              "RelativeDocumentMoniker": "Sprites\\Block Sprites\\obstacle4.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\obstacle4.cs",
-              "RelativeToolTip": "Sprites\\Block Sprites\\obstacle4.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T18:10:28.332Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "obstacle2.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\obstacle2.cs",
-              "RelativeDocumentMoniker": "Sprites\\Block Sprites\\obstacle2.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\obstacle2.cs",
-              "RelativeToolTip": "Sprites\\Block Sprites\\obstacle2.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAmwB0AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T19:36:27.412Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 6,
               "Title": "obstacle1.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\obstacle1.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Sprites\\Block Sprites\\obstacle1.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\obstacle1.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\obstacle1.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Sprites\\Block Sprites\\obstacle1.cs",
               "RelativeToolTip": "Sprites\\Block Sprites\\obstacle1.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAuwCQAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAYwBIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T19:32:50.913Z"
+              "WhenOpened": "2024-11-12T22:39:07.417Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "GoombaSprites.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Goomba\\GoombaSprites.cs",
-              "RelativeDocumentMoniker": "Goomba\\GoombaSprites.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Goomba\\GoombaSprites.cs",
-              "RelativeToolTip": "Goomba\\GoombaSprites.cs",
-              "ViewState": "AgIAADcAAABAqTBR0yguwEkAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T22:26:20.363Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "GoombaStateMachine2.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Goomba\\GoombaStateMachine2.cs",
-              "RelativeDocumentMoniker": "Goomba\\GoombaStateMachine2.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Goomba\\GoombaStateMachine2.cs",
-              "RelativeToolTip": "Goomba\\GoombaStateMachine2.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAMwEEAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T22:47:31.769Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "GoombaStateMachine.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Goomba\\GoombaStateMachine.cs",
-              "RelativeDocumentMoniker": "Goomba\\GoombaStateMachine.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Goomba\\GoombaStateMachine.cs",
-              "RelativeToolTip": "Goomba\\GoombaStateMachine.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAADgv0kAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T22:47:08.801Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "Goomba.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Goomba\\Goomba.cs",
-              "RelativeDocumentMoniker": "Goomba\\Goomba.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Goomba\\Goomba.cs",
-              "RelativeToolTip": "Goomba\\Goomba.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAtwCUAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T22:25:55.242Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "Goomba2.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Goomba\\Goomba2.cs",
-              "RelativeDocumentMoniker": "Goomba\\Goomba2.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Goomba\\Goomba2.cs",
-              "RelativeToolTip": "Goomba\\Goomba2.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAtwBoAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T22:26:14.965Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 7,
               "Title": "StaticBlockSprite.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\StaticBlockSprite.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Sprites\\Block Sprites\\StaticBlockSprite.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\StaticBlockSprite.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\StaticBlockSprite.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Sprites\\Block Sprites\\StaticBlockSprite.cs",
               "RelativeToolTip": "Sprites\\Block Sprites\\StaticBlockSprite.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAowBwAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-20T19:36:47.461Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 0,
+              "Title": "Sort.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Sort.cs",
+              "RelativeDocumentMoniker": "Collision\\Sort.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Sort.cs",
+              "RelativeToolTip": "Collision\\Sort.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T06:14:57.675Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ToggleFalling.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\GroundDetection\\ToggleFalling.cs",
+              "RelativeDocumentMoniker": "GroundDetection\\ToggleFalling.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\GroundDetection\\ToggleFalling.cs",
+              "RelativeToolTip": "GroundDetection\\ToggleFalling.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T02:35:42.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "QuitGameCommand.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Commands\\GameCommands\\QuitGameCommand.cs",
+              "RelativeDocumentMoniker": "Commands\\GameCommands\\QuitGameCommand.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Commands\\GameCommands\\QuitGameCommand.cs",
+              "RelativeToolTip": "Commands\\GameCommands\\QuitGameCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T22:15:04.508Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LevelsScreenGameCommand.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Commands\\GameCommands\\LevelsScreenGameCommand.cs",
+              "RelativeDocumentMoniker": "Commands\\GameCommands\\LevelsScreenGameCommand.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Commands\\GameCommands\\LevelsScreenGameCommand.cs",
+              "RelativeToolTip": "Commands\\GameCommands\\LevelsScreenGameCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T22:14:54.384Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GameStateMachine.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\GameStateMachine.cs",
+              "RelativeDocumentMoniker": "GameStateMachine.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\GameStateMachine.cs",
+              "RelativeToolTip": "GameStateMachine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T22:07:47.711Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LevelOneCommand.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Commands\\GameCommands\\LevelOneCommand.cs",
+              "RelativeDocumentMoniker": "Commands\\GameCommands\\LevelOneCommand.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Commands\\GameCommands\\LevelOneCommand.cs",
+              "RelativeToolTip": "Commands\\GameCommands\\LevelOneCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T22:07:30.082Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Fire.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Items\\Fire.cs",
+              "RelativeDocumentMoniker": "Items\\Fire.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Items\\Fire.cs",
+              "RelativeToolTip": "Items\\Fire.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T19:41:12.009Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Star.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Items\\Star.cs",
+              "RelativeDocumentMoniker": "Items\\Star.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Items\\Star.cs",
+              "RelativeToolTip": "Items\\Star.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAmwFYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T18:36:17.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "StarPower.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Sprites\\Item Sprites\\StarPower.cs",
+              "RelativeDocumentMoniker": "Sprites\\Item Sprites\\StarPower.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Sprites\\Item Sprites\\StarPower.cs",
+              "RelativeToolTip": "Sprites\\Item Sprites\\StarPower.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAA2wA0AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T02:23:04.272Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Mario.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Mario\\Mario.cs",
+              "RelativeDocumentMoniker": "Mario\\Mario.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Mario\\Mario.cs",
+              "RelativeToolTip": "Mario\\Mario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T18:14:24.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "LuckyBlockSprite.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\LuckyBlockSprite.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Sprites\\Block Sprites\\LuckyBlockSprite.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\LuckyBlockSprite.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\LuckyBlockSprite.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Sprites\\Block Sprites\\LuckyBlockSprite.cs",
               "RelativeToolTip": "Sprites\\Block Sprites\\LuckyBlockSprite.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAADgvzEAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwFwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-20T19:36:52.882Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "BrokenBrickSprite.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\BrokenBrickSprite.cs",
-              "RelativeDocumentMoniker": "Sprites\\Block Sprites\\BrokenBrickSprite.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\BrokenBrickSprite.cs",
-              "RelativeToolTip": "Sprites\\Block Sprites\\BrokenBrickSprite.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAA8wEAAAAAcAAAAAAAAAA==",
+              "DocumentIndex": 18,
+              "Title": "ItemBlockInteraction.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\ItemBlockInteraction.cs",
+              "RelativeDocumentMoniker": "Collision\\Interaction\\ItemBlockInteraction.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\ItemBlockInteraction.cs",
+              "RelativeToolTip": "Collision\\Interaction\\ItemBlockInteraction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T19:36:41.756Z"
+              "WhenOpened": "2024-11-10T21:11:25.729Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "UnknownBlockSprite.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\UnknownBlockSprite.cs",
-              "RelativeDocumentMoniker": "Sprites\\Block Sprites\\UnknownBlockSprite.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Block Sprites\\UnknownBlockSprite.cs",
-              "RelativeToolTip": "Sprites\\Block Sprites\\UnknownBlockSprite.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAADgv0QAAAAOAAAAAAAAAA==",
+              "DocumentIndex": 19,
+              "Title": "FirePower.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Sprites\\Item Sprites\\FirePower.cs",
+              "RelativeDocumentMoniker": "Sprites\\Item Sprites\\FirePower.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Sprites\\Item Sprites\\FirePower.cs",
+              "RelativeToolTip": "Sprites\\Item Sprites\\FirePower.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T19:36:58.032Z"
+              "WhenOpened": "2024-10-17T19:44:24.172Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "GameStateControlCenter.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Controllers\\GameStateControlCenter.cs",
-              "RelativeDocumentMoniker": "Controllers\\GameStateControlCenter.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Controllers\\GameStateControlCenter.cs",
-              "RelativeToolTip": "Controllers\\GameStateControlCenter.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAowCwAAAA4AAAAAAAAAA==",
+              "DocumentIndex": 20,
+              "Title": "MarioBlockInteraction.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\MarioBlockInteraction.cs",
+              "RelativeDocumentMoniker": "Collision\\Interaction\\MarioBlockInteraction.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\MarioBlockInteraction.cs",
+              "RelativeToolTip": "Collision\\Interaction\\MarioBlockInteraction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T18:22:15.208Z"
+              "WhenOpened": "2024-11-06T20:55:33.548Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "IBlock.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\IBlock.cs",
-              "RelativeDocumentMoniker": "Sprites\\IBlock.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\IBlock.cs",
-              "RelativeToolTip": "Sprites\\IBlock.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "DocumentIndex": 21,
+              "Title": "MarioFirePowerInteraction.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\MarioFirePowerInteraction.cs",
+              "RelativeDocumentMoniker": "Collision\\Interaction\\MarioFirePowerInteraction.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\MarioFirePowerInteraction.cs",
+              "RelativeToolTip": "Collision\\Interaction\\MarioFirePowerInteraction.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAawBQAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-21T18:08:49.267Z"
+              "WhenOpened": "2024-10-17T19:24:32.04Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "CommandControlCenter.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Controllers\\CommandControlCenter.cs",
-              "RelativeDocumentMoniker": "Controllers\\CommandControlCenter.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Controllers\\CommandControlCenter.cs",
-              "RelativeToolTip": "Controllers\\CommandControlCenter.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAWwCAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 22,
+              "Title": "ItemManager.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Items\\ItemManager.cs",
+              "RelativeDocumentMoniker": "Items\\ItemManager.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Items\\ItemManager.cs",
+              "RelativeToolTip": "Items\\ItemManager.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAjwEIAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T20:13:36.484Z"
+              "WhenOpened": "2024-11-07T01:58:22.35Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "IdleRightBigMario.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\BigMario\\IdleRightBigMario.cs",
-              "RelativeDocumentMoniker": "Sprites\\MarioSprites\\BigMario\\IdleRightBigMario.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\BigMario\\IdleRightBigMario.cs",
-              "RelativeToolTip": "Sprites\\MarioSprites\\BigMario\\IdleRightBigMario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
+              "DocumentIndex": 23,
+              "Title": "MushroomPower.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Sprites\\Item Sprites\\MushroomPower.cs",
+              "RelativeDocumentMoniker": "Sprites\\Item Sprites\\MushroomPower.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Sprites\\Item Sprites\\MushroomPower.cs",
+              "RelativeToolTip": "Sprites\\Item Sprites\\MushroomPower.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T20:13:23.613Z"
+              "WhenOpened": "2024-10-27T21:38:15.83Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 24,
               "Title": "StarInteraction.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\StarInteraction.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\StarInteraction.cs",
               "RelativeDocumentMoniker": "Collision\\Interaction\\StarInteraction.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Interaction\\StarInteraction.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\StarInteraction.cs",
               "RelativeToolTip": "Collision\\Interaction\\StarInteraction.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwBoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -755,47 +525,251 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 25,
+              "Title": "ItemObstacleInteraction.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\ItemObstacleInteraction.cs",
+              "RelativeDocumentMoniker": "Collision\\Interaction\\ItemObstacleInteraction.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\ItemObstacleInteraction.cs",
+              "RelativeToolTip": "Collision\\Interaction\\ItemObstacleInteraction.cs",
+              "ViewState": "AgIAABkAAAAAZlCBblwmwCYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T22:49:55.269Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "UnknownBlockSprite.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Sprites\\Block Sprites\\UnknownBlockSprite.cs",
+              "RelativeDocumentMoniker": "Sprites\\Block Sprites\\UnknownBlockSprite.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Sprites\\Block Sprites\\UnknownBlockSprite.cs",
+              "RelativeToolTip": "Sprites\\Block Sprites\\UnknownBlockSprite.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAwwEQAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T19:36:58.032Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "MarioSpriteMachine.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Mario\\MarioSpriteMachine.cs",
+              "RelativeDocumentMoniker": "Mario\\MarioSpriteMachine.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Mario\\MarioSpriteMachine.cs",
+              "RelativeToolTip": "Mario\\MarioSpriteMachine.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T20:04:10.449Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
               "Title": "MarioStateMachine.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Mario\\MarioStateMachine.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Mario\\MarioStateMachine.cs",
               "RelativeDocumentMoniker": "Mario\\MarioStateMachine.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Mario\\MarioStateMachine.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Mario\\MarioStateMachine.cs",
               "RelativeToolTip": "Mario\\MarioStateMachine.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAAABEAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAAwKgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-17T06:01:14.839Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "Sort.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Sort.cs",
-              "RelativeDocumentMoniker": "Collision\\Sort.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Sort.cs",
-              "RelativeToolTip": "Collision\\Sort.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwDYAAAA7AAAAAAAAAA==",
+              "DocumentIndex": 30,
+              "Title": "BrokenBrickSprite.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Sprites\\Block Sprites\\BrokenBrickSprite.cs",
+              "RelativeDocumentMoniker": "Sprites\\Block Sprites\\BrokenBrickSprite.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Sprites\\Block Sprites\\BrokenBrickSprite.cs",
+              "RelativeToolTip": "Sprites\\Block Sprites\\BrokenBrickSprite.cs",
+              "ViewState": "AgIAAD8AAAAANDMzMzPzvzcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T06:14:57.675Z"
+              "WhenOpened": "2024-10-20T19:36:41.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "BlackJackCommand.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\BlackJack\\BlackJackCommand.cs",
+              "RelativeDocumentMoniker": "BlackJack\\BlackJackCommand.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\BlackJack\\BlackJackCommand.cs",
+              "RelativeToolTip": "BlackJack\\BlackJackCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T19:26:37.25Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "BlockFireballInteraction.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\BlockFireballInteraction.cs",
+              "RelativeDocumentMoniker": "Collision\\Interaction\\BlockFireballInteraction.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\BlockFireballInteraction.cs",
+              "RelativeToolTip": "Collision\\Interaction\\BlockFireballInteraction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T03:38:12.473Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Goomba2.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Goomba\\Goomba2.cs",
+              "RelativeDocumentMoniker": "Goomba\\Goomba2.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Goomba\\Goomba2.cs",
+              "RelativeToolTip": "Goomba\\Goomba2.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAtwBoAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T22:26:14.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Goomba.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Goomba\\Goomba.cs",
+              "RelativeDocumentMoniker": "Goomba\\Goomba.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Goomba\\Goomba.cs",
+              "RelativeToolTip": "Goomba\\Goomba.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAtwCUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T22:25:55.242Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "MusicCommand.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Music\\MusicCommand.cs",
+              "RelativeDocumentMoniker": "Music\\MusicCommand.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Music\\MusicCommand.cs",
+              "RelativeToolTip": "Music\\MusicCommand.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-25T18:19:00.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "EnemyMarioInteraction.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\EnemyMarioInteraction.cs",
+              "RelativeDocumentMoniker": "Collision\\Interaction\\EnemyMarioInteraction.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\EnemyMarioInteraction.cs",
+              "RelativeToolTip": "Collision\\Interaction\\EnemyMarioInteraction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T18:30:46.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "OtherEnemyInteractions.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\OtherEnemyInteractions.cs",
+              "RelativeDocumentMoniker": "Collision\\Interaction\\OtherEnemyInteractions.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\OtherEnemyInteractions.cs",
+              "RelativeToolTip": "Collision\\Interaction\\OtherEnemyInteractions.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAYwBcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T22:27:01.433Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "EnemyFireballInteraction.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\EnemyFireballInteraction.cs",
+              "RelativeDocumentMoniker": "Collision\\Interaction\\EnemyFireballInteraction.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Collision\\Interaction\\EnemyFireballInteraction.cs",
+              "RelativeToolTip": "Collision\\Interaction\\EnemyFireballInteraction.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAwwBcAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-18T03:41:18.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "GoombaSprites.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Goomba\\GoombaSprites.cs",
+              "RelativeDocumentMoniker": "Goomba\\GoombaSprites.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Goomba\\GoombaSprites.cs",
+              "RelativeToolTip": "Goomba\\GoombaSprites.cs",
+              "ViewState": "AgIAADcAAABAqTBR0yguwEkAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T22:26:20.363Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "GoombaStateMachine2.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Goomba\\GoombaStateMachine2.cs",
+              "RelativeDocumentMoniker": "Goomba\\GoombaStateMachine2.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Goomba\\GoombaStateMachine2.cs",
+              "RelativeToolTip": "Goomba\\GoombaStateMachine2.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAMwEEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T22:47:31.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "GoombaStateMachine.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Goomba\\GoombaStateMachine.cs",
+              "RelativeDocumentMoniker": "Goomba\\GoombaStateMachine.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Goomba\\GoombaStateMachine.cs",
+              "RelativeToolTip": "Goomba\\GoombaStateMachine.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAADgv0kAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T22:47:08.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "GameStateControlCenter.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Controllers\\GameStateControlCenter.cs",
+              "RelativeDocumentMoniker": "Controllers\\GameStateControlCenter.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Controllers\\GameStateControlCenter.cs",
+              "RelativeToolTip": "Controllers\\GameStateControlCenter.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAowCwAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T18:22:15.208Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "IBlock.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Sprites\\IBlock.cs",
+              "RelativeDocumentMoniker": "Sprites\\IBlock.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Sprites\\IBlock.cs",
+              "RelativeToolTip": "Sprites\\IBlock.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T18:08:49.267Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "CommandControlCenter.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Controllers\\CommandControlCenter.cs",
+              "RelativeDocumentMoniker": "Controllers\\CommandControlCenter.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Controllers\\CommandControlCenter.cs",
+              "RelativeToolTip": "Controllers\\CommandControlCenter.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAWwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-20T20:13:36.484Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 44,
-              "Title": "Mushroom.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Items\\Mushroom.cs",
-              "RelativeDocumentMoniker": "Items\\Mushroom.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Items\\Mushroom.cs",
-              "RelativeToolTip": "Items\\Mushroom.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "IdleRightBigMario.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Sprites\\MarioSprites\\BigMario\\IdleRightBigMario.cs",
+              "RelativeDocumentMoniker": "Sprites\\MarioSprites\\BigMario\\IdleRightBigMario.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Sprites\\MarioSprites\\BigMario\\IdleRightBigMario.cs",
+              "RelativeToolTip": "Sprites\\MarioSprites\\BigMario\\IdleRightBigMario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-18T03:24:12.429Z"
+              "WhenOpened": "2024-10-20T20:13:23.613Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 45,
               "Title": "FireballSprite.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Projectile\\FireballSprite.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Projectile\\FireballSprite.cs",
               "RelativeDocumentMoniker": "Projectile\\FireballSprite.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Projectile\\FireballSprite.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Projectile\\FireballSprite.cs",
               "RelativeToolTip": "Projectile\\FireballSprite.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAA3wDYAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -804,34 +778,10 @@
             {
               "$type": "Document",
               "DocumentIndex": 46,
-              "Title": "Fire.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Items\\Fire.cs",
-              "RelativeDocumentMoniker": "Items\\Fire.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Items\\Fire.cs",
-              "RelativeToolTip": "Items\\Fire.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAwwAoAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T19:41:12.009Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "FirePower.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Item Sprites\\FirePower.cs",
-              "RelativeDocumentMoniker": "Sprites\\Item Sprites\\FirePower.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\Item Sprites\\FirePower.cs",
-              "RelativeToolTip": "Sprites\\Item Sprites\\FirePower.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwA8AAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T19:44:24.172Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
               "Title": "IEntity.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\IEntity.cs",
+              "DocumentMoniker": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Sprites\\IEntity.cs",
               "RelativeDocumentMoniker": "Sprites\\IEntity.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\IEntity.cs",
+              "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Sprites\\IEntity.cs",
               "RelativeToolTip": "Sprites\\IEntity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
