@@ -310,6 +310,9 @@ List<IEntity> entitiesRemoved,
         obstacle1 = new obstacle1(obstacleTexture);
         obstacle2 = new obstacle2(obstacleTexture);
         obstacle3 = new obstacle3(obstacleTexture);
+        obstacle4 = new obstacle4(obstacleTexture);
+        //obstacle5 = new (obstacleTexture);
+        obstacle6 = new obstacle1(obstacleTexture);
 
         // Add entities to the list
         entities.Add(mario);
@@ -384,6 +387,8 @@ List<IEntity> entitiesRemoved,
         entities.Add(obstacle1);
         entities.Add(obstacle2);
         entities.Add(obstacle3);
+
+        entities.Add(obstacle6);
     }
 
     public void LoadLevel(ContentManager content)
@@ -468,6 +473,7 @@ List<IEntity> entitiesRemoved,
         obstacle1.Update();
         obstacle2.Update();
         obstacle3.Update();
+        obstacle6.Update();
 
         mario.isOnGround = false;
         mario.Update(gameTime);
@@ -548,6 +554,7 @@ List<IEntity> entitiesRemoved,
         obstacle1.Draw(spriteBatch, new Vector2(350, 370));
         obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
         obstacle3.Draw(spriteBatch, new Vector2(350 + 350, 335));
+        obstacle6.Draw(spriteBatch, new Vector2(5740, 370));
     }
 
     public List<IEntity> GetAllEntities()
