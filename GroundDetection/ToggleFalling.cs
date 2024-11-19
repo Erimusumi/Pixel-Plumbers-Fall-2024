@@ -74,7 +74,15 @@ using Microsoft.Xna.Framework;
         {
             if(mar.GetDestination().Intersects(collisionRects[i]))
                {
-                mar.updateGroundPosition(385f);
+                if (mar.isSmall())
+                {
+                    mar.updateGroundPosition(385f);
+                }
+                else
+                {
+                    mar.updateGroundPosition(385f -32);
+                }
+                
                 marioIsColliding = true;
                 hitCount++;
 
@@ -88,6 +96,7 @@ using Microsoft.Xna.Framework;
         }
         if (!marioIsColliding && mar.GetDestination().Intersects(new Rectangle(mar.GetDestination().X, (int)mar.GroundPosition(), 16, 16)))
         {
+
             mar.updateGroundPosition(480f);
         }
         hitCount = 0;       

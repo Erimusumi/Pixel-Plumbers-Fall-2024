@@ -11,8 +11,6 @@ public class LevelOne : ILevel
     private List<IEntity> entities = new List<IEntity>();
     private List<IBlock> blocks;
     private Mario mario;
-    Sort sort;
-    Sweep sweep;
     GameTime gameTime;
     List<IEntity> entitiesRemoved;
 
@@ -103,6 +101,12 @@ public class LevelOne : ILevel
     private IObstacle obstacle2;
     private IObstacle obstacle3;
 
+    private IObstacle obstacle4;
+    private IObstacle obstacle5;
+    private IObstacle obstacle6;
+ 
+
+
     public LevelOne(
         Game1 game,
         List<IEntity> entities,
@@ -113,9 +117,7 @@ public class LevelOne : ILevel
         Texture2D ItemsTexture,
         SpriteBatch spriteBatch,
         GameTime gameTime,
-List<IEntity> entitiesRemoved,
-        Sort sort,
-        Sweep sweep
+List<IEntity> entitiesRemoved
 
     )
     {
@@ -127,8 +129,6 @@ List<IEntity> entitiesRemoved,
         this.obstacleTexture = obstacleTexture;
         this.spriteBatch = spriteBatch;
         this.game = game;
-        this.sort = sort;
-        this.sweep = sweep;
         this.gameTime = gameTime;
         this.entitiesRemoved = entitiesRemoved;
      }
@@ -136,9 +136,7 @@ List<IEntity> entitiesRemoved,
     public void InitializeLevel()
     {
 
-        //Sorting
-        sort = new Sort();
-        sweep = new Sweep(gameTime);
+
         // Initialize all entities:
         Goomba1 = new Goomba(535, 400);
         Goomba2 = new Goomba(1400, 400);
@@ -304,6 +302,9 @@ List<IEntity> entitiesRemoved,
         obstacle1 = new obstacle1(obstacleTexture);
         obstacle2 = new obstacle2(obstacleTexture);
         obstacle3 = new obstacle3(obstacleTexture);
+        obstacle4 = new obstacle4(obstacleTexture);
+        //obstacle5 = new (obstacleTexture);
+        obstacle6 = new obstacle1(obstacleTexture);
 
         // Add entities to the list
         entities.Add(mario);
@@ -378,6 +379,8 @@ List<IEntity> entitiesRemoved,
         entities.Add(obstacle1);
         entities.Add(obstacle2);
         entities.Add(obstacle3);
+
+        entities.Add(obstacle6);
     }
 
     public void LoadLevel(ContentManager content)
@@ -462,6 +465,7 @@ List<IEntity> entitiesRemoved,
         obstacle1.Update();
         obstacle2.Update();
         obstacle3.Update();
+        obstacle6.Update();
 
         mario.isOnGround = false;
         mario.Update(gameTime);
@@ -542,6 +546,7 @@ List<IEntity> entitiesRemoved,
         obstacle1.Draw(spriteBatch, new Vector2(350, 370));
         obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
         obstacle3.Draw(spriteBatch, new Vector2(350 + 350, 335));
+        obstacle6.Draw(spriteBatch, new Vector2(5740, 370));
     }
 
     public List<IEntity> GetAllEntities()
