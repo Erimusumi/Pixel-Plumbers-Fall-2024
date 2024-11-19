@@ -49,7 +49,7 @@ public class PlayerBlockInteraction
 
             if (block is LuckyBlockSprite luckyBlock)
             {
-                luckyBlock.bump = true;
+                luckyBlock.bumping = true;
 
             }
 
