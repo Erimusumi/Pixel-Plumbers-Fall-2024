@@ -14,7 +14,7 @@ public class GameStateControlCenter
     private MusicMachine MusicMachine;
     private BlackJackStateMachine blackJackStateMachine;
 
-    public GameStateControlCenter(GameStateMachine gameStateMachine, KeyboardController gameKeyboardController, MouseController gameMouseController, Game1 game, StartScreenSprite startScreenSprite, LevelScreenSprite levelScreenSprite, ContentManager content, BlackJackStateMachine blackJackStateMachine)
+    public GameStateControlCenter(GameStateMachine gameStateMachine, KeyboardController gameKeyboardController, MouseController gameMouseController, Game1 game, StartScreenSprite startScreenSprite, LevelScreenSprite levelScreenSprite, SoundManager musics, BlackJackStateMachine blackJackStateMachine)
     {
         this.gameKeyboardController = gameKeyboardController;
         this.gameMouseController = gameMouseController;
@@ -23,7 +23,7 @@ public class GameStateControlCenter
         this.startScreenSprite = startScreenSprite;
         this.levelScreenSprite = levelScreenSprite;
         this.blackJackStateMachine = blackJackStateMachine;
-        MusicMachine = new MusicMachine(content);
+        MusicMachine = new MusicMachine(musics);
         InitializeCommands();
     }
 
