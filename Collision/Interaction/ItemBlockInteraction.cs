@@ -30,6 +30,7 @@ public class ItemBlockInteraction
         if (minOverlap == overlapTop)
         {
             // Collision from the top of the block
+
             item.NotFalling();
             System.Diagnostics.Debug.Write("NotFalling is executed");
         }

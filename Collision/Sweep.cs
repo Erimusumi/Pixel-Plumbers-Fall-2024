@@ -215,17 +215,20 @@ public class Sweep
             ItemObstacleInteraction.update();
 
         }
-        else if (ContainsBlock(entities, index1) && ContainsItem(entities, index2))
-        {
-            ItemBlockInteraction = new ItemBlockInteraction((IItem)item2, (IBlock)item1);
-        }
+        //else if (ContainsBlock(entities, index1) && ContainsItem(entities, index2))
+        //{
+        //    ItemBlockInteraction = new ItemBlockInteraction((IItem)item2, (IBlock)item1);
+        //    ItemBlockInteraction.update();
+        //}
         else if (ContainsBlock(entities, index2) && ContainsItem(entities, index1))
         {
             ItemBlockInteraction = new ItemBlockInteraction((IItem)item1, (IBlock)item2);
+            ItemBlockInteraction.update();
         }
         else if (ContainsItem(entities, index1) && ContainsBlock(entities, index2))
         {
             ItemBlockInteraction = new ItemBlockInteraction((IItem)item1, (IBlock)item2);
+            ItemBlockInteraction.update();
         }
 
         else if (item1.GetType() == typeof(Fireball) && ContainsBlock(entities, index2))
