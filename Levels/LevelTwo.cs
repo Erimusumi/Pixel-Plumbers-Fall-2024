@@ -75,7 +75,11 @@ List<IEntity> entitiesRemoved
     }
     public void DrawLevel(SpriteBatch sB, FollowCamera camera)
     {
-
+                // lvl2backdrop1.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+                // lvl2backdrop2.Draw(spriteBatch, underwaterTiles, Vector2.Zero);
+                // lvl2greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+                // lvl2foreground1.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+                // lvl2foreground2.Draw(spriteBatch, underwaterTiles, Vector2.Zero);
     }
 
 }
