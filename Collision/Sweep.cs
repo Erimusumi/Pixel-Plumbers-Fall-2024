@@ -228,12 +228,12 @@ public class Sweep
         }
         else if (ContainsBlock(entities, index1) && ContainsItem(entities, index2))
         {
-            ItemBlockInteraction = new ItemBlockInteraction((IItem)item2, (IBlock)item1);
+            ItemBlockInteraction = new ItemBlockInteraction((IItem)item2, (IBlock)item1, gameTime);
             ItemBlockInteraction.update();
         }
         else if (ContainsBlock(entities, index2) && ContainsItem(entities, index1))
         {
-            ItemBlockInteraction = new ItemBlockInteraction((IItem)item1, (IBlock)item2);
+            ItemBlockInteraction = new ItemBlockInteraction((IItem)item1, (IBlock)item2, gameTime);
             ItemBlockInteraction.update();
         }
 
