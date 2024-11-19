@@ -142,9 +142,6 @@ public class Game1 : Game
         {
             
 
-        }else if (gameStateMachine.isLevelThree())
-        {
-
         }
 
         fireballs.Clear();
