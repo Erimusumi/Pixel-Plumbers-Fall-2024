@@ -7,48 +7,53 @@ public class ItemBlockInteraction
 {
     private IItem item;
     private IBlock block;
-    private Rectangle itemRectangle;
+    private Rectangle itemRect;
     private Rectangle blockRect;
     public ItemBlockInteraction(IItem i, IBlock block)
     {
         this.item = i;
         this.block = block;
+        itemRect = item.GetDestination();
+        blockRect = block.GetDestination();
     }
     public void update()
     {
-        Rectangle itemRect = item.GetDestination();
-        Rectangle blockRect = block.GetDestination();
-        // Calculate overlaps for each side
-        int overlapTop = itemRect.Bottom - blockRect.Top;
-        int overlapBottom = blockRect.Bottom - itemRect.Top;
-        int overlapLeft = itemRect.Right - blockRect.Left;
-        int overlapRight = blockRect.Right - itemRect.Left;
+        bool collision = itemRect.Intersects(blockRect);
 
-        // Find the smallest overlap to determine the side of collision
-        int minOverlap = Math.Min(Math.Min(overlapTop, overlapBottom), Math.Min(overlapLeft, overlapRight));
-
-        if (minOverlap == overlapTop)
+        if (collision)
         {
-            // Collision from the top of the block
+            // Calculate overlaps for each side
+            int overlapTop = itemRect.Bottom - blockRect.Top;
+            int overlapBottom = blockRect.Bottom - itemRect.Top;
+            int overlapLeft = itemRect.Right - blockRect.Left;
+            int overlapRight = blockRect.Right - itemRect.Left;
 
-            item.NotFalling();
-            System.Diagnostics.Debug.Write("NotFalling is executed");
+            // Find the smallest overlap to determine the side of collision
+            float minOverlap = Math.Min(Math.Min(overlapLeft, overlapRight), Math.Min(overlapTop, overlapBottom));
+
+            if (minOverlap == overlapTop)
+            {
+                // Collision from the top of the block
+
+                item.setGroundPosition(blockRect.Y - 31);
+
+                System.Diagnostics.Debug.Write("NotFalling is executed");
+            }
+            else if (minOverlap == overlapLeft)
+            {
+                // Collision from the left side of the block
+                item.swapDirection();
+            }
+            else if (minOverlap == overlapRight)
+            {
+                // Collision from the right side of the block
+                item.swapDirection();
+
+            }
         }
-        else if (minOverlap == overlapBottom)
+        else
         {
-            // Collision from the bottom of the block
             item.MakeFalling();
-        }
-        else if (minOverlap == overlapLeft)
-        {
-            // Collision from the left side of the block
-            item.swapDirection();
-        }
-        else if (minOverlap == overlapRight)
-        {
-            // Collision from the right side of the block
-            item.swapDirection();
-            
         }
     }
 }
