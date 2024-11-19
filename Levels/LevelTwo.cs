@@ -61,7 +61,10 @@ List<IEntity> entitiesRemoved
     }
 
 
+    public void InitializeLevel()
+    {
 
+    }
     public void LoadLevel(ContentManager content)
     {
 

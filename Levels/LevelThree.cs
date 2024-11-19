@@ -56,6 +56,10 @@ List<IEntity> entitiesRemoved
         this.gameTime = gameTime;
         this.entitiesRemoved = entitiesRemoved;
     }
+    public void InitializeLevel()
+    {
+
+    }
     public void LoadLevel(ContentManager content)
     {
 
