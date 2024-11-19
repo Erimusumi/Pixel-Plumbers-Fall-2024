@@ -310,10 +310,10 @@ public class Sweep
         {
             Rectangle firstEntity = entities[0].GetDestination();
             Rectangle secondEntity = entities[1].GetDestination();
-            for (int i = 0; (i < entities.Count) && (firstEntity.X <= (8000)); i++)
+            for (int i = 0; (i < entities.Count); i++)
             {
                 firstEntity = entities[i].GetDestination();
-                for (int j = i+1; (j < entities.Count) && (secondEntity.X <= (8000)); j++)
+                for (int j = i+1; (j < entities.Count); j++)
                 {
                     secondEntity = entities[j].GetDestination();
                    
