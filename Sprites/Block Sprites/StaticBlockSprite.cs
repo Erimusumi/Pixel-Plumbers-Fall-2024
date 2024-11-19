@@ -33,5 +33,13 @@ public class StaticBlockSprite: IBlock
     {
 
     }
+    public void bump()
+    {
+
+    }
+    public void broke()
+    {
+
+    }
 }
 
