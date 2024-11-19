@@ -7,17 +7,14 @@ using Pixel_Plumbers_Fall_2024;
 public class LevelOne : ILevel
 {
     private Game1 game;
-    private Rectangle screen = new Rectangle(0, 0, 800, 480);
-    private TextureManager textureManager;
-    private List<IEntity> entities = new List<IEntity>();
-    private List<IBlock> blocks;
     private Mario mario;
-    GameTime gameTime;
-    List<IEntity> entitiesRemoved;
+    private TextureManager textureManager;
     private ContentManager Content;
 
-    private SpriteBatch spriteBatch;
+    private List<IEntity> entities = new List<IEntity>();
+    private List<IEntity> entitiesRemoved;
 
+    private SpriteBatch spriteBatch;
     private Texture2D EnemyTexture;
     private Texture2D blockTexture;
     private Texture2D obstacleTexture;
@@ -28,7 +25,6 @@ public class LevelOne : ILevel
     private Layer lvl1greenery;
     private Layer lvl1foreground;
 
-    //Enemy list:
     private ISpriteEnemy Goomba1;
     private ISpriteEnemy Goomba2;
     private ISpriteEnemy Goomba3;
@@ -48,7 +44,6 @@ public class LevelOne : ILevel
     private ISpriteEnemy Koopa1;
     private ISpriteEnemy Bloop1;
 
-    // LuckyBlock List:
     private IBlock OWLuckyBlockSprite1;
     private IBlock OWLuckyBlockSprite2;
     private IBlock OWLuckyBlockSprite3;
@@ -63,7 +58,6 @@ public class LevelOne : ILevel
     private IBlock OWLuckyBlockSprite12;
     private IBlock OWLuckyBlockSprite13;
 
-    // BrickBlock 
     private IBlock OWBrickBlockSprite1;
     private IBlock OWBrickBlockSprite2;
     private IBlock OWBrickBlockSprite3;
@@ -101,7 +95,6 @@ public class LevelOne : ILevel
     private IBlock OWUsedBlockSprite;
     private IBlock OWBrokenBrickSprite;
 
-    //Obstacle List:
     private IObstacle obstacle1;
     private IObstacle obstacle2;
     private IObstacle obstacle3;
@@ -109,8 +102,6 @@ public class LevelOne : ILevel
     private IObstacle obstacle4;
     private IObstacle obstacle5;
     private IObstacle obstacle6;
-
-
 
     public LevelOne(
         Game1 game,
@@ -135,14 +126,14 @@ public class LevelOne : ILevel
         this.mario = mario;
         this.spriteBatch = spriteBatch;
         this.game = game;
-        this.gameTime = gameTime;
         this.entitiesRemoved = entitiesRemoved;
         this.Content = Content;
     }
 
     public void InitializeLevel()
     {
-        // Initialize all entities:
+        Bloop1 = new Blooper(240, 200, mario);
+
         Goomba1 = new Goomba(535, 400);
         Goomba2 = new Goomba(1400, 400);
         Goomba3 = new Goomba(1700, 400);
@@ -159,9 +150,6 @@ public class LevelOne : ILevel
         Goomba14 = new Goomba(4160, 400);
         Goomba15 = new Goomba(5400, 400);
         Goomba16 = new Goomba(5550, 400);
-
-        //Koopa1 = new Koopa(240, 400);
-        Bloop1 = new Blooper(240, 200, mario);
 
         OWLuckyBlockSprite1 = new LuckyBlockSprite(
             blockTexture,
@@ -201,7 +189,7 @@ public class LevelOne : ILevel
             ItemsTexture,
             game,
             mario,
-            new Vector2(2468, 288) // asdasd
+            new Vector2(2468, 288)
         );
         OWLuckyBlockSprite6 = new LuckyBlockSprite(
             blockTexture,
@@ -308,10 +296,8 @@ public class LevelOne : ILevel
         obstacle2 = new obstacle2(obstacleTexture);
         obstacle3 = new obstacle3(obstacleTexture);
         obstacle4 = new obstacle4(obstacleTexture);
-        //obstacle5 = new (obstacleTexture);
         obstacle6 = new obstacle1(obstacleTexture);
 
-        // Add entities to the list
         entities.Add(mario);
         entities.Add(Goomba1);
         entities.Add(Goomba2);
@@ -329,8 +315,6 @@ public class LevelOne : ILevel
         entities.Add(Goomba14);
         entities.Add(Goomba15);
         entities.Add(Goomba16);
-
-        //entities.Add(Koopa1);
         entities.Add(Bloop1);
 
         entities.Add(OWLuckyBlockSprite1);
@@ -395,17 +379,8 @@ public class LevelOne : ILevel
         lvl1foreground.LoadLayer();
     }
 
-    public void LoadLevel(ContentManager content)
-    {
-        // Load level assets here
-    }
-
     public void UpdateLevel(GameTime gameTime)
     {
-        //List<IEntity> temp = entities;
-        //entities = sort.SortList(entities, entities.Count, temp);
-        //sweep.Compare(entities, entitiesRemoved, screen);
-        // Update all entities
         Goomba1.Updates();
         Goomba2.Updates();
         Goomba3.Updates();
@@ -422,8 +397,6 @@ public class LevelOne : ILevel
         Goomba14.Updates();
         Goomba15.Updates();
         Goomba16.Updates();
-
-        //Koopa1.Updates();
         Bloop1.Updates();
 
         OWLuckyBlockSprite1.Update(gameTime);
@@ -488,8 +461,8 @@ public class LevelOne : ILevel
         lvl1backdrop.Draw(spriteBatch, overworldTiles, Vector2.Zero);
         lvl1greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
         lvl1foreground.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+        mario.Draw(spriteBatch);
 
-        // Draw all entities
         Goomba1.Draw(spriteBatch, EnemyTexture);
         Goomba2.Draw(spriteBatch, EnemyTexture);
         Goomba3.Draw(spriteBatch, EnemyTexture);
@@ -506,11 +479,8 @@ public class LevelOne : ILevel
         Goomba14.Draw(spriteBatch, EnemyTexture);
         Goomba15.Draw(spriteBatch, EnemyTexture);
         Goomba16.Draw(spriteBatch, EnemyTexture);
-
-        //Koopa1.Draw(spriteBatch, EnemyTexture);
         Bloop1.Draw(spriteBatch, EnemyTexture);
 
-        mario.Draw(spriteBatch);
         OWLuckyBlockSprite1.Draw(spriteBatch, new Vector2(69, 69));
         OWLuckyBlockSprite2.Draw(spriteBatch, new Vector2(69, 69));
         OWLuckyBlockSprite3.Draw(spriteBatch, new Vector2(69, 69));
