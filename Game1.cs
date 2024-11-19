@@ -21,6 +21,7 @@ public class Game1 : Game
     private float gameOverTickTimer;
 
     private TextureManager textureManager;
+    private SoundManager soundManager;
     public HudManager hudManager;
 
     private Mario mario;
@@ -50,16 +51,7 @@ public class Game1 : Game
 
     private SoundEffect oneUpSound;
     private SoundEffect breakBlockSound;
-    private SoundEffect coinSound;
-    private SoundEffect fireBallSound;
-    private SoundEffect flagPoleSound;
-    private SoundEffect pipeSound;
-    private SoundEffect powerUpSound;
     private SoundEffect powerDownSound;
-    private SoundEffect powerUpSpawnsSound;
-    private SoundEffect marioJump;
-    private SoundEffect marioDeath;
-    private SoundEffect gameOverSound;
 
     private Rectangle screen = new Rectangle(0, 0, 800, 480);
     private FollowCamera camera;
@@ -69,7 +61,6 @@ public class Game1 : Game
     private ToggleFalling ToggleFalling;
 
     private BlackJackStateMachine blackJackStateMachine;
-    private SoundEffect fwip;
 
     private StartScreenSprite startScreenSprite;
     private LevelScreenSprite levelScreenSprite;
@@ -108,7 +99,7 @@ public class Game1 : Game
     public void GameOver()
     {
         gameStateMachine.setGameStateOver();
-        gameOverSound.Play();
+        soundManager.GetSound("over").Play();
     }
     protected override void Initialize()
     {
@@ -141,28 +132,19 @@ public class Game1 : Game
     {
         spriteBatch = new SpriteBatch(GraphicsDevice);
         textureManager = new TextureManager(Content);
+        soundManager = new SoundManager(Content);
 
-        pipeSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_pipe");
-        oneUpSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_1-up");
-        coinSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_coin");
-        fireBallSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_fireball");
-        flagPoleSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_flagpole");
-        powerUpSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_powerup");
-        powerUpSpawnsSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_powerup_appears");
-        marioJump = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_jump-small");
-        marioDeath = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_mariodie");
-        fwip = Content.Load<SoundEffect>("Audio/flip");
-        gameOverSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_gameover");
+        //oneUpSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_1-up");
 
-        ItemSounds.Add(coinSound);
-        ItemSounds.Add(powerUpSpawnsSound);
+        ItemSounds.Add(soundManager.GetSound("coin"));
+        ItemSounds.Add(soundManager.GetSound("spawn"));
 
-        marioSounds.Add(powerUpSound);
-        marioSounds.Add(pipeSound);
-        marioSounds.Add(fireBallSound);
-        marioSounds.Add(marioJump);
-        marioSounds.Add(marioDeath);
-        marioSounds.Add(flagPoleSound);
+        marioSounds.Add(soundManager.GetSound("powerup"));
+        marioSounds.Add(soundManager.GetSound("pipe"));
+        marioSounds.Add(soundManager.GetSound("fireball"));
+        marioSounds.Add(soundManager.GetSound("jump"));
+        marioSounds.Add(soundManager.GetSound("death"));
+        marioSounds.Add(soundManager.GetSound("flagpole"));
 
         mario = new Mario(this, entities, marioSounds, textureManager, gameTime);
 
@@ -171,7 +153,7 @@ public class Game1 : Game
         startScreenSprite = new StartScreenSprite(textureManager, startScreenFonts);
         levelScreenSprite = new LevelScreenSprite(levelScreenFonts);
 
-        blackJackStateMachine = new BlackJackStateMachine(textureManager, fwip, startScreenFonts);
+        blackJackStateMachine = new BlackJackStateMachine(textureManager, soundManager.GetSound("fwip"), startScreenFonts);
         hudManager = new HudManager(startScreenFonts, this, mario);
 
         marioMovementController = new PlayerMovementController();
@@ -180,7 +162,7 @@ public class Game1 : Game
         gameStateMachine = new GameStateMachine();
         gameStateKeyboardController = new KeyboardController();
         gameStateMouseController = new MouseController();
-        gameStateControlCenter = new GameStateControlCenter(gameStateMachine, gameStateKeyboardController, gameStateMouseController, this, startScreenSprite, levelScreenSprite, Content, blackJackStateMachine);
+        gameStateControlCenter = new GameStateControlCenter(gameStateMachine, gameStateKeyboardController, gameStateMouseController, this, startScreenSprite, levelScreenSprite, soundManager, blackJackStateMachine);
 
     }
 

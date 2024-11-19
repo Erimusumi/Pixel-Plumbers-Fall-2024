@@ -16,20 +16,20 @@ public class MusicMachine
     private List<Song> songList;
     private Song currentSong;
 
-    public MusicMachine(ContentManager content)
+    public MusicMachine(SoundManager musics)
     {
         songList = new List<Song>();
-        currentSong = content.Load<Song>("Audio/LionSin");
+        currentSong = musics.GetSongs("LionSin");
         songList.Add(currentSong);
-        currentSong = content.Load<Song>("Audio/mario");
+        currentSong = musics.GetSongs("mario");
         songList.Add(currentSong);
-        currentSong = content.Load<Song>("Audio/kirby");
+        currentSong = musics.GetSongs("kirby");
         songList.Add(currentSong);
-        currentSong = content.Load<Song>("Audio/Doom");
+        currentSong = musics.GetSongs("Doom");
         songList.Add(currentSong);
-        currentSong = content.Load<Song>("Audio/rumbling");
+        currentSong = musics.GetSongs("rumbling");
         songList.Add(currentSong);
-        currentSong = content.Load<Song>("Audio/erwin");
+        currentSong = musics.GetSongs("erwin");
         songList.Add(currentSong);
     }
 

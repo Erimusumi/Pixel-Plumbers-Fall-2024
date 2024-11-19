@@ -7,8 +7,12 @@ using System.Threading.Tasks;
 
     public class FilterEntities
 {
+    public FilterEntities()
+    {
+
+    }
         
-    private List<IEntity> FilterItems(List<IEntity> entities)
+    public List<IEntity> FilterItems(List<IEntity> entities)
     {
         List<IEntity> itemList = new List<IEntity>();
         for(int i = 0; i < entities.Count(); i++)
@@ -23,7 +27,7 @@ using System.Threading.Tasks;
 
     }
 
-    private List<IEntity> FilterEnemies(List<IEntity> entities)
+    public List<IEntity> FilterEnemies(List<IEntity> entities)
     {
         List<IEntity> enemyList = new List<IEntity>();
         for (int i = 0; i < entities.Count; i++)
