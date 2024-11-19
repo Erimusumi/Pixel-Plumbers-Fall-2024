@@ -8,11 +8,13 @@ public class LevelOne : ILevel
 {
     private Game1 game;
     private Rectangle screen = new Rectangle(0, 0, 800, 480);
+    private TextureManager textureManager;
     private List<IEntity> entities = new List<IEntity>();
     private List<IBlock> blocks;
     private Mario mario;
     GameTime gameTime;
     List<IEntity> entitiesRemoved;
+    private ContentManager Content;
 
     private SpriteBatch spriteBatch;
 
@@ -20,6 +22,11 @@ public class LevelOne : ILevel
     private Texture2D blockTexture;
     private Texture2D obstacleTexture;
     private Texture2D ItemsTexture;
+    private Texture2D overworldTiles;
+
+    private Layer lvl1backdrop;
+    private Layer lvl1greenery;
+    private Layer lvl1foreground;
 
     //Enemy list:
     private ISpriteEnemy Goomba1;
@@ -41,7 +48,7 @@ public class LevelOne : ILevel
     private ISpriteEnemy Koopa1;
     private ISpriteEnemy Bloop1;
 
-    //Block List:
+    // LuckyBlock List:
     private IBlock OWLuckyBlockSprite1;
     private IBlock OWLuckyBlockSprite2;
     private IBlock OWLuckyBlockSprite3;
@@ -55,10 +62,8 @@ public class LevelOne : ILevel
     private IBlock OWLuckyBlockSprite11;
     private IBlock OWLuckyBlockSprite12;
     private IBlock OWLuckyBlockSprite13;
-    private IBlock OWLuckyBlockSprite14;
-    private IBlock OWLuckyBlockSprite15;
-    private IBlock OWLuckyBlockSprite16;
 
+    // BrickBlock 
     private IBlock OWBrickBlockSprite1;
     private IBlock OWBrickBlockSprite2;
     private IBlock OWBrickBlockSprite3;
@@ -104,39 +109,39 @@ public class LevelOne : ILevel
     private IObstacle obstacle4;
     private IObstacle obstacle5;
     private IObstacle obstacle6;
- 
+
 
 
     public LevelOne(
         Game1 game,
-        List<IEntity> entities,
         Mario mario,
-        Texture2D EnemyTexture,
-        Texture2D blockTexture,
-        Texture2D obstacleTexture,
-        Texture2D ItemsTexture,
+        List<IEntity> entities,
+        List<IEntity> entitiesRemoved,
         SpriteBatch spriteBatch,
         GameTime gameTime,
-List<IEntity> entitiesRemoved
-
+        ContentManager Content,
+        TextureManager textureManager
     )
+
     {
+        this.textureManager = textureManager;
+        this.EnemyTexture = textureManager.GetTexture("Enemy");
+        this.blockTexture = textureManager.GetTexture("Block");
+        this.ItemsTexture = textureManager.GetTexture("Items");
+        this.obstacleTexture = textureManager.GetTexture("Obstacle");
+        this.overworldTiles = textureManager.GetTexture("OverworldTiles");
+
         this.entities = entities;
         this.mario = mario;
-        this.EnemyTexture = EnemyTexture;
-        this.blockTexture = blockTexture;
-        this.ItemsTexture = ItemsTexture;
-        this.obstacleTexture = obstacleTexture;
         this.spriteBatch = spriteBatch;
         this.game = game;
         this.gameTime = gameTime;
         this.entitiesRemoved = entitiesRemoved;
-     }
+        this.Content = Content;
+    }
 
     public void InitializeLevel()
     {
-
-
         // Initialize all entities:
         Goomba1 = new Goomba(535, 400);
         Goomba2 = new Goomba(1400, 400);
@@ -379,8 +384,15 @@ List<IEntity> entitiesRemoved
         entities.Add(obstacle1);
         entities.Add(obstacle2);
         entities.Add(obstacle3);
-
         entities.Add(obstacle6);
+
+        lvl1backdrop = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Backdrop.csv");
+        lvl1greenery = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Greenery.csv");
+        lvl1foreground = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Foreground.csv");
+
+        lvl1backdrop.LoadLayer();
+        lvl1greenery.LoadLayer();
+        lvl1foreground.LoadLayer();
     }
 
     public void LoadLevel(ContentManager content)
@@ -473,6 +485,10 @@ List<IEntity> entitiesRemoved
 
     public void DrawLevel(SpriteBatch spriteBatch, FollowCamera camera)
     {
+        lvl1backdrop.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+        lvl1greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+        lvl1foreground.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+
         // Draw all entities
         Goomba1.Draw(spriteBatch, EnemyTexture);
         Goomba2.Draw(spriteBatch, EnemyTexture);
@@ -552,5 +568,10 @@ List<IEntity> entitiesRemoved
     public List<IEntity> GetAllEntities()
     {
         return new List<IEntity>(entities);
+    }
+
+    public List<Rectangle> GetLevelOneRectangles()
+    {
+        return lvl1foreground.GetRedRectangles();
     }
 }

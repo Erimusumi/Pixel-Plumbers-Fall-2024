@@ -1,10 +1,12 @@
 using System.Collections.Generic;
+using System.ComponentModel;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
 public class TextureManager
 {
     private Dictionary<string, Texture2D> textures;
+    private ContentManager content;
 
     private Texture2D marioTexture;
     private Texture2D titleTexture;
@@ -21,6 +23,8 @@ public class TextureManager
 
     public TextureManager(ContentManager content)
     {
+        this.content = content;
+
         textures = new Dictionary<string, Texture2D>();
 
         marioTexture = content.Load<Texture2D>("mario");

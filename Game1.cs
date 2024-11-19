@@ -17,11 +17,11 @@ public class Game1 : Game
 {
     private GraphicsDeviceManager graphics;
     private SpriteBatch spriteBatch;
-    private Texture2D marioTexture;
     private GameTime gameTime;
-    private Texture2D titleTexture;
-    private Texture2D gameOverBackground;
     private float gameOverTickTimer;
+
+
+    private TextureManager textureManager;
 
     public HudManager hudManager;
 
@@ -39,20 +39,12 @@ public class Game1 : Game
     private MouseController gameStateMouseController;
 
 
-    Texture2D EnemyTexture;
+
 
     //Dance
     private ISpriteAnimation Dance;
-    private Texture2D DanceTexture;
 
-    //Items
-    public Texture2D ItemsTexture;
 
-    //Block Code instance variables
-    private Texture2D block;
-    private Texture2D obstacleTexture;
-
-    
 
     //Fireballs
     public List<Fireball> fireballs = new List<Fireball>();
@@ -87,20 +79,6 @@ public class Game1 : Game
     private SpriteFont levelScreenFonts;
 
     // map layers
-    private Layer lvl1backdrop;
-    private Layer lvl1greenery;
-    private Layer lvl1foreground;
-
-    private Layer lvl2backdrop1;
-    private Layer lvl2backdrop2;
-    private Layer lvl2greenery;
-    private Layer lvl2foreground1;
-    private Layer lvl2foreground2;
-
-    // tile sheets
-    private Texture2D overworldTiles;
-    private Texture2D underwaterTiles;
-
     //Ground Detection
     Ground ground;
     ToggleFalling toggleFalling;
@@ -108,9 +86,7 @@ public class Game1 : Game
     ToggleFalling ToggleFalling;
 
     //Black Jack
-    private Texture2D table;
-    private Texture2D tabletop;
-    private Texture2D cards;
+
     private BlackJackStateMachine blackJackStateMachine;
     private SoundEffect fwip;
 
@@ -136,11 +112,11 @@ public class Game1 : Game
         if (gameStateMachine.isLevelOne())
         {
             levelOne.InitializeLevel();
-            
+
         }
         else if (gameStateMachine.isLevelTwo())
         {
-            
+
 
         }
 
@@ -162,50 +138,27 @@ public class Game1 : Game
         base.Initialize();
         this.gameTime = new GameTime();
         this.sweep = new Sweep(gameTime);
+
+        textureManager = new TextureManager(Content);
+
         Dance = new DancePole();
-        
-       
-        lvl1backdrop = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Backdrop.csv");
-        lvl1greenery = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Greenery.csv");
-        lvl1foreground = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Foreground.csv");
 
-        lvl2backdrop1 = new Layer(32, 16, 16, Content.RootDirectory + "/level2_OWBackdrop.csv");
-        lvl2backdrop2 = new Layer(32, 16, 16, Content.RootDirectory + "/level2_UWBackdrop.csv");
-        lvl2greenery = new Layer(32, 16, 16, Content.RootDirectory + "/level2_OWGreenery.csv");
-        lvl2foreground1 = new Layer(32, 16, 16, Content.RootDirectory + "/level2_OWForeground.csv");
-        lvl2foreground2 = new Layer(32, 16, 16, Content.RootDirectory + "/level2_UWForeground.csv");
-
-        lvl1backdrop.LoadLayer();
-        lvl1greenery.LoadLayer();
-        lvl1foreground.LoadLayer();
-
-        lvl2backdrop1.LoadLayer();
-        lvl2backdrop2.LoadLayer();
-        lvl2greenery.LoadLayer();
-        lvl2foreground1.LoadLayer();
-        lvl2foreground2.LoadLayer();
 
         keyboardController = new KeyboardController();
         keyboardControllerMovement = new KeyboardControllerMovement();
         controlCenter = new CommandControlCenter(this);
 
 
-            levelOne = new LevelOne(this, entities, mario, EnemyTexture, block, obstacleTexture, ItemsTexture, spriteBatch, gameTime, entitiesRemoved);
+        levelOne = new LevelOne(this, mario, entities, entitiesRemoved, spriteBatch, gameTime, Content, textureManager);
         levelOne.InitializeLevel();
 
         //Ground Detection initialization
         collidableRectangles = new List<Rectangle>();
-        collidableRectangles = lvl1foreground.GetRedRectangles();
+        collidableRectangles = levelOne.GetLevelOneRectangles();
 
         ground = new Ground(collidableRectangles);
         toggleFalling = new ToggleFalling(ground, entities);
     }
-
-    // public ISpriteEnemy SetEnemy(ISpriteEnemy enemy)
-    // {
-    //     spriteEnemy = enemy;
-    //     return spriteEnemy;
-    // }
 
     public void SetKey(KeyboardController keys)
     {
@@ -215,16 +168,6 @@ public class Game1 : Game
     protected override void LoadContent()
     {
         spriteBatch = new SpriteBatch(GraphicsDevice);
-
-        titleTexture = Content.Load<Texture2D>("supermariobros");
-        marioTexture = Content.Load<Texture2D>("mario");
-        EnemyTexture = Content.Load<Texture2D>("enemies");
-        DanceTexture = Content.Load<Texture2D>("dance");
-        ItemsTexture = Content.Load<Texture2D>("itemsAndPowerups");
-        gameOverBackground = Content.Load<Texture2D>("blank screen");
-        table = Content.Load<Texture2D>("BlackJack/table");
-        tabletop = Content.Load<Texture2D>("BlackJack/tabletop");
-        cards = Content.Load<Texture2D>("BlackJack/cards");
         fwip = Content.Load<SoundEffect>("Audio/flip");
 
         pipeSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_pipe");
@@ -236,18 +179,13 @@ public class Game1 : Game
         powerUpSpawnsSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_powerup_appears");
         marioJump = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_jump-small");
         marioDeath = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_mariodie");
-        
 
-        overworldTiles = Content.Load<Texture2D>("OverworldTilesv200");
-        underwaterTiles = Content.Load<Texture2D>("UnderwaterTiles");
-
-        block = Content.Load<Texture2D>("blocks");
-        obstacleTexture = Content.Load<Texture2D>("obstacle");
+        textureManager = new TextureManager(Content);
 
         //Sound EFX
         ItemSounds.Add(coinSound);
         ItemSounds.Add(powerUpSpawnsSound);
-           
+
         gameOverSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_gameover");
 
         marioSounds.Add(powerUpSound);
@@ -256,14 +194,15 @@ public class Game1 : Game
         marioSounds.Add(marioJump);
         marioSounds.Add(marioDeath);
         marioSounds.Add(flagPoleSound);
-        mario = new Mario(marioTexture, gameTime, this, entities, marioSounds);
+
+        mario = new Mario(this, entities, marioSounds, textureManager, gameTime);
 
         startScreenFonts = Content.Load<SpriteFont>("StartScreenFonts");
         levelScreenFonts = Content.Load<SpriteFont>("LevelScreenFonts");
-        startScreenSprite = new StartScreenSprite(titleTexture, startScreenFonts);
+        startScreenSprite = new StartScreenSprite(textureManager, startScreenFonts);
         levelScreenSprite = new LevelScreenSprite(levelScreenFonts);
 
-        blackJackStateMachine = new BlackJackStateMachine(table, tabletop, cards, fwip, startScreenFonts);
+        blackJackStateMachine = new BlackJackStateMachine(textureManager, fwip, startScreenFonts);
         hudManager = new HudManager(startScreenFonts, this, mario);
 
         marioMovementController = new PlayerMovementController();
@@ -284,7 +223,7 @@ public class Game1 : Game
         List<IEntity> temp = entities;
         entities = sort.SortList(entities, entities.Count, temp);
         sweep.Compare(entities, entitiesRemoved, camera.position);
-        
+
 
         blackJackStateMachine.Update();
         if (gameStateMachine.isCurrentStateRunning())
@@ -299,7 +238,7 @@ public class Game1 : Game
 
             if (IsActive)
             {
-               
+
             }
 
 
@@ -334,9 +273,9 @@ public class Game1 : Game
                 Environment.Exit(0);
             }
         }
-       
+
         toggleFalling.updateMarioFalling(mario);
-       // Dance.Updates();
+        // Dance.Updates();
 
         base.Update(gameTime);
     }
@@ -360,20 +299,18 @@ public class Game1 : Game
         {
             if (gameStateMachine.isLevelOne())
             {
-                lvl1backdrop.Draw(spriteBatch, overworldTiles, Vector2.Zero);
-                lvl1greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
-                lvl1foreground.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+
 
                 levelOne.DrawLevel(spriteBatch, camera);
             }
 
             if (gameStateMachine.isLevelTwo())
             {
-                lvl2backdrop1.Draw(spriteBatch, overworldTiles, Vector2.Zero);
-                lvl2backdrop2.Draw(spriteBatch, underwaterTiles, Vector2.Zero);
-                lvl2greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
-                lvl2foreground1.Draw(spriteBatch, overworldTiles, Vector2.Zero);
-                lvl2foreground2.Draw(spriteBatch, underwaterTiles, Vector2.Zero);
+                // lvl2backdrop1.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+                // lvl2backdrop2.Draw(spriteBatch, underwaterTiles, Vector2.Zero);
+                // lvl2greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+                // lvl2foreground1.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+                // lvl2foreground2.Draw(spriteBatch, underwaterTiles, Vector2.Zero);
             }
 
             foreach (var item in fireballs)
@@ -386,7 +323,7 @@ public class Game1 : Game
         }
         if (gameStateMachine.isCurrentStatOver())
         {
-            spriteBatch.Draw(gameOverBackground, new Vector2(camera.position.X, camera.position.Y), Color.Black);
+            // spriteBatch.Draw(gameOverBackground, new Vector2(camera.position.X, camera.position.Y), Color.Black);
             spriteBatch.DrawString(startScreenFonts, "GAME OVER", new Vector2(camera.position.X + 300, camera.position.Y + 150), Color.White, 0f, Vector2.Zero, 1, SpriteEffects.None, 0f);
         }
         //Dance.Draw(spriteBatch, DanceTexture);
