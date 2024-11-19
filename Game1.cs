@@ -129,7 +129,7 @@ public class Game1 : Game
         collidableRectangles = new List<Rectangle>();
         collidableRectangles = levelOne.GetLevelOneRectangles();
         ground = new Ground(collidableRectangles);
-        toggleFalling = new ToggleFalling(ground, entities);
+        toggleFalling = new ToggleFalling(ground, entities, this.mario);
     }
 
     public void SetKey(KeyboardController keys)

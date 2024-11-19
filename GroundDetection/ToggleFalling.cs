@@ -10,7 +10,7 @@ using Microsoft.Xna.Framework;
     public class ToggleFalling
 {
     private List<Rectangle> collisionRects;
-    private List<IEntity> objects;
+    private List<IEntity> entities;
     private Ground ground;
     private float fallingGroundPosition = 480f;
     Boolean marioIsColliding = true;
@@ -18,12 +18,17 @@ using Microsoft.Xna.Framework;
     int hitCount= 0;
    
 
-    public ToggleFalling(Ground g, List<IEntity> objects)
+    public ToggleFalling(Ground g, List<IEntity> entities, Mario mario)
     {
         this.ground = g;
         this.collisionRects = g.allCollisionRectangles();
-        this.objects = objects;
+        this.entities = entities;
        
+    }
+
+    public void updates()
+    {
+
     }
 
     public void updateEnemyFalling(List<ISpriteEnemy> enemies)
@@ -69,7 +74,6 @@ using Microsoft.Xna.Framework;
     public void updateMarioFalling(Mario mar)
     {
         
-       //marioIsColliding = true;
         for (int i = 0; i < collisionRects.Count; i++)
         {
             if(mar.GetDestination().Intersects(collisionRects[i]))
