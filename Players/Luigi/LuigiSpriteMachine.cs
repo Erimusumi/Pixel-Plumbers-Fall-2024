@@ -6,7 +6,7 @@ namespace Pixel_Plumbers_Fall_2024
     public class LuigiSpriteMachine
     {
         private static IMarioSprite lastValidSprite;
-        public static IMarioSprite UpdateMarioSprite(LuigiStateMachine luigiStateMachine, Texture2D texture)
+        public static IMarioSprite UpdateLuigiSprite(LuigiStateMachine luigiStateMachine, Texture2D texture)
         {
             IMarioSprite newSprite = null;
             if (luigiStateMachine.IsDead())

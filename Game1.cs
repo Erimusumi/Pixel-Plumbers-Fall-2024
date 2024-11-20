@@ -25,6 +25,8 @@ public class Game1 : Game
     public HudManager hudManager;
 
     private Mario mario;
+    private Luigi luigi;
+
     public Vector2 initial_mario_position;
     private ISpriteAnimation Dance;
 
@@ -114,7 +116,7 @@ public class Game1 : Game
         keyboardControllerMovement = new KeyboardControllerMovement();
         controlCenter = new CommandControlCenter(this);
 
-        levelOne = new LevelOne(this, mario, entities, entitiesRemoved, spriteBatch, gameTime, Content, textureManager);
+        levelOne = new LevelOne(this, mario, luigi, entities, entitiesRemoved, spriteBatch, gameTime, Content, textureManager);
         levelOne.InitializeLevel();
 
         collidableRectangles = new List<Rectangle>();
@@ -147,6 +149,7 @@ public class Game1 : Game
         marioSounds.Add(soundManager.GetSound("flagpole"));
 
         mario = new Mario(this, entities, marioSounds, textureManager, gameTime);
+        luigi = new Luigi(this, entities, marioSounds, textureManager, gameTime);
 
         startScreenFonts = Content.Load<SpriteFont>("StartScreenFonts");
         levelScreenFonts = Content.Load<SpriteFont>("LevelScreenFonts");
