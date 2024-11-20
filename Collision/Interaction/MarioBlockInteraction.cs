@@ -38,7 +38,7 @@ public class MarioBlockInteraction
             mario.marioPosition.Y = blockRect.Top - marioRect.Height;
             mario.marioVelocity.Y = 0; // Mario stands on top of the obstacle
             mario.isOnGround = true;
-
+            mario.jumpStop();
         }
         else if (minOverlap == overlapBottom)
         {

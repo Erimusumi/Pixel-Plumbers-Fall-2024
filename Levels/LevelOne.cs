@@ -385,6 +385,12 @@ public class LevelOne : ILevel
 
     public void UpdateLevel(GameTime gameTime)
     {
+
+        mario.isOnGround = false;
+        mario.Update(gameTime);
+        luigi.isOnGround = false;
+        luigi.Update(gameTime);
+
         Goomba1.Updates();
         Goomba2.Updates();
         Goomba3.Updates();
@@ -455,11 +461,6 @@ public class LevelOne : ILevel
         obstacle2.Update();
         obstacle3.Update();
         obstacle6.Update();
-
-        mario.isOnGround = false;
-        mario.Update(gameTime);
-        luigi.isOnGround = false;
-        luigi.Update(gameTime);
     }
 
     public void DrawLevel(SpriteBatch spriteBatch, FollowCamera camera)
