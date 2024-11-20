@@ -302,6 +302,7 @@ public class LevelOne : ILevel
         obstacle6 = new obstacle1(obstacleTexture);
 
         entities.Add(mario);
+        entities.Add(luigi);
         entities.Add(Goomba1);
         entities.Add(Goomba2);
         entities.Add(Goomba3);
