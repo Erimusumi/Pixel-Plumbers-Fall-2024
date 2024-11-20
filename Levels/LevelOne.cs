@@ -8,6 +8,7 @@ public class LevelOne : ILevel
 {
     private Game1 game;
     private Mario mario;
+    private Luigi luigi;
     private TextureManager textureManager;
     private ContentManager Content;
 
@@ -106,6 +107,7 @@ public class LevelOne : ILevel
     public LevelOne(
         Game1 game,
         Mario mario,
+        Luigi luigi,
         List<IEntity> entities,
         List<IEntity> entitiesRemoved,
         SpriteBatch spriteBatch,
@@ -124,6 +126,7 @@ public class LevelOne : ILevel
 
         this.entities = entities;
         this.mario = mario;
+        this.luigi = luigi;
         this.spriteBatch = spriteBatch;
         this.game = game;
         this.entitiesRemoved = entitiesRemoved;
@@ -299,6 +302,7 @@ public class LevelOne : ILevel
         obstacle6 = new obstacle1(obstacleTexture);
 
         entities.Add(mario);
+        entities.Add(luigi);
         entities.Add(Goomba1);
         entities.Add(Goomba2);
         entities.Add(Goomba3);
@@ -454,6 +458,8 @@ public class LevelOne : ILevel
 
         mario.isOnGround = false;
         mario.Update(gameTime);
+        luigi.isOnGround = false;
+        luigi.Update(gameTime);
     }
 
     public void DrawLevel(SpriteBatch spriteBatch, FollowCamera camera)
@@ -462,6 +468,7 @@ public class LevelOne : ILevel
         lvl1greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
         lvl1foreground.Draw(spriteBatch, overworldTiles, Vector2.Zero);
         mario.Draw(spriteBatch);
+        luigi.Draw(spriteBatch);
 
         Goomba1.Draw(spriteBatch, EnemyTexture);
         Goomba2.Draw(spriteBatch, EnemyTexture);

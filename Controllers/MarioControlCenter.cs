@@ -2,12 +2,12 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using Pixel_Plumbers_Fall_2024;
 
-public class PlayerCommandControlCenter
+public class MarioControlCenter
 {
     private Mario mario;
     private PlayerMovementController playerMovementController;
 
-    public PlayerCommandControlCenter(Mario mario, PlayerMovementController playerMovementController)
+    public MarioControlCenter(Mario mario, PlayerMovementController playerMovementController)
     {
         this.mario = mario;
         this.playerMovementController = playerMovementController;
@@ -25,11 +25,6 @@ public class PlayerCommandControlCenter
         IPlayerCommand marioPowerUpCommand = new MarioPowerUpCommand(mario);
         IPlayerCommand marioTakeDamageCommand = new MarioTakeDamageCommand(mario);
         IPlayerCommand marioStarCommand = new MarioStarCommand(mario);
-
-        playerMovementController.addCommand(Keys.Right, marioMoveRight);
-        playerMovementController.addCommand(Keys.Left, marioMoveLeft);
-        playerMovementController.addCommand(Keys.Up, marioJumpCommand);
-        playerMovementController.addCommand(Keys.Down, marioCrouchCommand);
 
         playerMovementController.addCommand(Keys.D, marioMoveRight);
         playerMovementController.addCommand(Keys.A, marioMoveLeft);
