@@ -15,9 +15,9 @@ public class StartScreenSprite : ISprite
     private Vector2 player2Position;
     private Vector2 helpPosition;
 
-    public StartScreenSprite(Texture2D startScreenTexture, SpriteFont spriteFont)
+    public StartScreenSprite(TextureManager textureManager, SpriteFont spriteFont)
     {
-        this.startScreenTexture = startScreenTexture;
+        this.startScreenTexture = textureManager.GetTexture("Title");
         this.MyFont = spriteFont;
 
         string player1Text = "1 PLAYER";

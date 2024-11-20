@@ -22,7 +22,11 @@ using System.Threading.Tasks;
     public void update()
     {
         FirePower.collect();
-        mario.MarioPowerUp();  
+        mario.MarioPowerUp();
+        if (mario.isFire())
+        {
+            mario.MarioPowerUp();
+        }
     }
     private void removeFromList()
     {

@@ -22,7 +22,7 @@ public class Star:IItem
     private float gravity = 980f;
     private Rectangle destinationRectangle;
     private int yPositionCount;
-    private int groundPosition = 400;
+    private int groundPosition = 380;
 
 
     public Star(SpriteBatch sb,Texture2D text, Vector2 position)
@@ -42,7 +42,8 @@ public class Star:IItem
     {
         if (this.spawning)
         {
-            this.position.Y++;
+            falling = false;
+            this.position.Y--;
             this.yPositionCount++;
             if (yPositionCount > 16)
             {
@@ -51,8 +52,10 @@ public class Star:IItem
                 this.movingRight = true;
             }
         }
+        
         if (this.roaming)
         {
+            falling = true;
             if (movingRight)
             {
                 position.X++;
@@ -62,7 +65,10 @@ public class Star:IItem
                 position.X--;
             }
         }
-
+if (this.GetDestination().Y > this.groundPosition)
+        {
+            falling = false;
+        }
         if (this.falling)
         {
             velocity.Y += gravity * (float)gameTime.ElapsedGameTime.TotalSeconds;
