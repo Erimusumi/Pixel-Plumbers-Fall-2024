@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\Projects\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\blackjack\\blackjacksprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:blackjack\\blackjacksprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\blackjack\\blackjacksprites - copy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:blackjack\\blackjacksprites - copy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\collision\\sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -28,6 +36,33 @@
           "DockedWidth": 200,
           "SelectedChildIndex": 8,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Game1.cs",
+              "DocumentMoniker": "C:\\Projects\\Game1.cs",
+              "RelativeDocumentMoniker": "Game1.cs",
+              "ToolTip": "C:\\Projects\\Game1.cs",
+              "RelativeToolTip": "Game1.cs",
+              "ViewState": "AgIAAI8AAAAAAAAAAAAswB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T18:15:02.512Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BlackJackSprites - Copy.cs",
+              "DocumentMoniker": "C:\\Projects\\BlackJack\\BlackJackSprites - Copy.cs",
+              "RelativeDocumentMoniker": "BlackJack\\BlackJackSprites - Copy.cs",
+              "ToolTip": "C:\\Projects\\BlackJack\\BlackJackSprites - Copy.cs",
+              "RelativeToolTip": "BlackJack\\BlackJackSprites - Copy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAOQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T19:55:53.053Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -54,20 +89,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Game1.cs",
-              "DocumentMoniker": "C:\\Projects\\Game1.cs",
-              "RelativeDocumentMoniker": "Game1.cs",
-              "ToolTip": "C:\\Projects\\Game1.cs",
-              "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwHsAAAAyAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "BlackJackSprites.cs",
+              "DocumentMoniker": "C:\\Projects\\BlackJack\\BlackJackSprites.cs",
+              "RelativeDocumentMoniker": "BlackJack\\BlackJackSprites.cs",
+              "ToolTip": "C:\\Projects\\BlackJack\\BlackJackSprites.cs",
+              "RelativeToolTip": "BlackJack\\BlackJackSprites.cs",
+              "ViewState": "AgIAAJcBAAAAAAAAAAAIwK0BAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T18:15:02.512Z",
-              "IsPinned": true
+              "WhenOpened": "2024-11-20T19:42:53.997Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "LevelOne.cs",
               "DocumentMoniker": "C:\\Projects\\Levels\\LevelOne.cs",
               "RelativeDocumentMoniker": "Levels\\LevelOne.cs",
@@ -79,20 +114,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Sweep.cs",
               "DocumentMoniker": "C:\\Projects\\Collision\\Sweep.cs",
               "RelativeDocumentMoniker": "Collision\\Sweep.cs",
               "ToolTip": "C:\\Projects\\Collision\\Sweep.cs",
               "RelativeToolTip": "Collision\\Sweep.cs",
-              "ViewState": "AgIAABcBAAAAAAAAAAAawCUBAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAgwH8AAABiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-20T01:50:37.096Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Sort.cs",
               "DocumentMoniker": "C:\\Projects\\Collision\\Sort.cs",
               "RelativeDocumentMoniker": "Collision\\Sort.cs",
