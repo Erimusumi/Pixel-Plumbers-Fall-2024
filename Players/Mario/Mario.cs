@@ -49,8 +49,8 @@ public class Mario : IEntity
 
     public Mario(Game1 game, List<IEntity> entities, List<SoundEffect> sfx, TextureManager textureManager, GameTime gametime)
     {
-        this. textureManager= textureManager;
-        
+        this.textureManager = textureManager;
+
         this.marioTexture = textureManager.GetTexture("Mario");
         this.itemTexture = textureManager.GetTexture("Items");
 
@@ -320,6 +320,16 @@ public class Mario : IEntity
         moveKeyPressed = false;
 
         if (!marioStateMachine.IsJumping())
+        {
+            marioStateMachine.SetMarioIdle();
+        }
+    }
+
+    public void jumpStop()
+    {
+        if (marioStateMachine.IsDead()) return;
+        moveKeyPressed = false;
+        if (!marioStateMachine.IsMoving())
         {
             marioStateMachine.SetMarioIdle();
         }
