@@ -40,6 +40,7 @@ public class MarioObstacleInteraction
             mario.marioVelocity.Y = 0; // Mario stands on top of the obstacle
             mario.isOnGround = true;
             wasOnTop = true; // Mario is on the obstacle
+            mario.jumpStop();
         }
         else if (minOverlap == overlapBottom)
         {
@@ -59,7 +60,7 @@ public class MarioObstacleInteraction
             mario.marioPosition.X = obstacleRect.Right;
             mario.marioVelocity.X = 0; // Stop horizontal movement
         }
-        if(!marioRect.Intersects(obstacleRect))
+        if (!marioRect.Intersects(obstacleRect))
         {
             // Mario is no longer colliding with the obstacle from the top
             if (wasOnTop)
