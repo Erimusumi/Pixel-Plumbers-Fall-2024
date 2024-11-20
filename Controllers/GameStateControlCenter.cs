@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework.Input;
 using Pixel_Plumbers_Fall_2024;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
+using System;
 
 public class GameStateControlCenter
 {
@@ -52,8 +53,10 @@ public class GameStateControlCenter
         ICommand helpClickCommand = new PrintMessageCommand("HELP");
         gameMouseController.AddCommand(startScreenSprite.GetHelpRectangle(), helpClickCommand);
 
-        ICommand levelScreenCommand = new LevelScreenCommand(gameStateMachine);  // Shows level selection screen
-        gameMouseController.AddCommand(startScreenSprite.GetOnePlayerRectangle(), levelScreenCommand); // Single Player
+        ICommand singlePlayerCommand = new SingleplayerCommand(gameStateMachine);
+        gameMouseController.AddCommand(startScreenSprite.GetOnePlayerRectangle(), singlePlayerCommand); // Single Player
+        ICommand multiplayerCommand = new MultiplayerCommand(gameStateMachine);
+        gameMouseController.AddCommand(startScreenSprite.GetTwoPlayerRectangle(), multiplayerCommand); // Multiplayer
 
         ICommand levelOneCommand = new LevelOneCommand(gameStateMachine);
         gameMouseController.AddCommand(levelScreenSprite.GetLevelOneRectangle(), levelOneCommand);
