@@ -30,8 +30,13 @@ public class Game1 : Game
     public Vector2 initial_mario_position;
     private ISpriteAnimation Dance;
 
-    private PlayerCommandControlCenter playerCommandControlCenter;
+
+    private MarioControlCenter marioControlCenter;
+    private LuigiControlCenter luigiControlCenter;
+
     private PlayerMovementController marioMovementController;
+    private PlayerMovementController luigiMovementController;
+
     private KeyboardControllerMovement keyboardControllerMovement;
     private KeyboardController keyboardController;
     private CommandControlCenter controlCenter;
@@ -160,7 +165,10 @@ public class Game1 : Game
         hudManager = new HudManager(startScreenFonts, this, mario);
 
         marioMovementController = new PlayerMovementController();
-        playerCommandControlCenter = new PlayerCommandControlCenter(mario, marioMovementController);
+        luigiMovementController = new PlayerMovementController();
+
+        marioControlCenter = new MarioControlCenter(mario, marioMovementController);
+        luigiControlCenter = new LuigiControlCenter(luigi, luigiMovementController);
 
         gameStateMachine = new GameStateMachine();
         gameStateKeyboardController = new KeyboardController();
@@ -184,6 +192,7 @@ public class Game1 : Game
             keyboardController.Update();
             keyboardControllerMovement.Update();
             marioMovementController.Update();
+            luigiMovementController.Update();
 
             levelOne.UpdateLevel(gameTime);
             camera.Follow(mario.marioPosition, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height));
