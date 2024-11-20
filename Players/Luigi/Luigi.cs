@@ -171,7 +171,7 @@ public class Luigi : IEntity
         luigiVelocity.Y += luigiVelocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;
     }
 
-    public void MarioPowerUp()
+    public void LuigiPowerUp()
     {
         if (luigiStateMachine.IsDead()) return;
 
@@ -196,7 +196,7 @@ public class Luigi : IEntity
         Task.Delay(1000).ContinueWith(t => canPowerUp = true);
     }
 
-    public void MarioTakeDamage()
+    public void LuigiTakeDamage()
     {
         if (luigiStateMachine.IsDead()) return;
 
@@ -230,7 +230,7 @@ public class Luigi : IEntity
         }
     }
 
-    public void MarioDeath()
+    public void LuigiDeath()
     {
         if (luigiStateMachine.IsDead())
         {
@@ -338,7 +338,7 @@ public class Luigi : IEntity
         luigiPosition.X += luigiVelocity.X;
         this.SlowStopMario();
         this.CheckStopTurningUpd();
-        this.MarioDeath();
+        this.LuigiDeath();
         currentMarioSprite = LuigiSpriteMachine.UpdateLuigiSprite(luigiStateMachine, marioTexture);
         currentMarioSprite.Update(gameTime);
         fireballTimer += -1;
