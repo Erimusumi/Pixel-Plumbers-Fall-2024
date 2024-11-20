@@ -319,7 +319,7 @@ public class Mario : IEntity
 
         moveKeyPressed = false;
 
-        if (isOnGround)
+        if (!marioStateMachine.IsJumping())
         {
             marioStateMachine.SetMarioIdle();
         }
