@@ -223,7 +223,8 @@ public class Game1 : Game
             }
         }
 
-        toggleFalling.updateMarioFalling(mario);
+        //toggleFalling.updateMarioFalling(mario);
+        toggleFalling.updates();
         base.Update(gameTime);
     }
 

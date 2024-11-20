@@ -7,6 +7,26 @@
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:grounddetection\\togglefalling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\silco\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\silco\\pixel-plumbers-fall-2024.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:pixel-plumbers-fall-2024.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\silco\\levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\silco\\collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\silco\\blooper\\blooperstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:blooper\\blooperstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\silco\\sprites\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\ientity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,20 +35,8 @@
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:filter entities\\filterentities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\silco\\pixel-plumbers-fall-2024.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:pixel-plumbers-fall-2024.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\silco\\blooper\\bloopersprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:blooper\\bloopersprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\silco\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\silco\\blooper\\blooperstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:blooper\\blooperstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\silco\\koopa\\koopastatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,14 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\silco\\goomba\\goombastatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:goomba\\goombastatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\silco\\collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\silco\\levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,33 +54,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAKwAAAAAAAAAAAAuwH0AAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAM4AAAAAAAAAAAAYwOIAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IEntity.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\Sprites\\IEntity.cs",
-              "RelativeDocumentMoniker": "Sprites\\IEntity.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\Sprites\\IEntity.cs*",
-              "RelativeToolTip": "Sprites\\IEntity.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T22:57:20.034Z",
               "EditorCaption": ""
             },
             {
@@ -108,8 +95,16 @@
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IEntity.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\Sprites\\IEntity.cs",
+              "RelativeDocumentMoniker": "Sprites\\IEntity.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\Sprites\\IEntity.cs",
+              "RelativeToolTip": "Sprites\\IEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T22:57:20.034Z"
             },
             {
               "$type": "Document",
@@ -117,16 +112,16 @@
               "Title": "ToggleFalling.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\GroundDetection\\ToggleFalling.cs",
               "RelativeDocumentMoniker": "GroundDetection\\ToggleFalling.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\GroundDetection\\ToggleFalling.cs",
-              "RelativeToolTip": "GroundDetection\\ToggleFalling.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACcAAAAhAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\GroundDetection\\ToggleFalling.cs*",
+              "RelativeToolTip": "GroundDetection\\ToggleFalling.cs*",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAgwEoAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-19T22:13:41.424Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "FilterEntities.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\Filter Entities\\FilterEntities.cs",
               "RelativeDocumentMoniker": "Filter Entities\\FilterEntities.cs",
@@ -134,13 +129,12 @@
               "RelativeToolTip": "Filter Entities\\FilterEntities.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T21:56:21.639Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-19T21:56:21.639Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Pixel-Plumbers-Fall-2024",
+              "DocumentIndex": 2,
+              "Title": "Pixel-Plumbers-Fall-2024.csproj",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\Pixel-Plumbers-Fall-2024.csproj",
               "RelativeDocumentMoniker": "Pixel-Plumbers-Fall-2024.csproj",
               "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\Pixel-Plumbers-Fall-2024.csproj",
@@ -152,7 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "BlooperSprites.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\Blooper\\BlooperSprites.cs",
               "RelativeDocumentMoniker": "Blooper\\BlooperSprites.cs",
@@ -160,12 +154,11 @@
               "RelativeToolTip": "Blooper\\BlooperSprites.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAD0AAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T19:02:04.292Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-19T19:02:04.292Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "BlooperStateMachine.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\Blooper\\BlooperStateMachine.cs",
               "RelativeDocumentMoniker": "Blooper\\BlooperStateMachine.cs",
@@ -173,11 +166,38 @@
               "RelativeToolTip": "Blooper\\BlooperStateMachine.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-19T19:02:00.992Z"
+              "WhenOpened": "2024-11-19T19:02:00.992Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
+              "Title": "Sweep.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\Collision\\Sweep.cs",
+              "RelativeDocumentMoniker": "Collision\\Sweep.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\Collision\\Sweep.cs",
+              "RelativeToolTip": "Collision\\Sweep.cs",
+              "ViewState": "AgIAAM4AAAAAAAAAAAAAwDcAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T04:18:02.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LevelOne.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\Levels\\LevelOne.cs",
+              "RelativeDocumentMoniker": "Levels\\LevelOne.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\Levels\\LevelOne.cs",
+              "RelativeToolTip": "Levels\\LevelOne.cs",
+              "ViewState": "AgIAALwBAAAAAAAAAAAmwHwBAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T04:11:26.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "KoopaStateMachine.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\Koopa\\KoopaStateMachine.cs",
               "RelativeDocumentMoniker": "Koopa\\KoopaStateMachine.cs",
@@ -189,7 +209,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "GoombaStateMachine.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\Goomba\\GoombaStateMachine.cs",
               "RelativeDocumentMoniker": "Goomba\\GoombaStateMachine.cs",
@@ -198,30 +218,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-19T18:55:03.618Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Sweep.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\Collision\\Sweep.cs",
-              "RelativeDocumentMoniker": "Collision\\Sweep.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\Collision\\Sweep.cs",
-              "RelativeToolTip": "Collision\\Sweep.cs",
-              "ViewState": "AgIAADEBAAAAAAAAAAArwEABAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T04:18:02.242Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "LevelOne.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\Levels\\LevelOne.cs",
-              "RelativeDocumentMoniker": "Levels\\LevelOne.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\Levels\\LevelOne.cs",
-              "RelativeToolTip": "Levels\\LevelOne.cs",
-              "ViewState": "AgIAAM4BAAAAAAAAAAAswMABAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T04:11:26.481Z"
             }
           ]
         }

@@ -12,7 +12,7 @@ using Microsoft.Xna.Framework;
     private List<Rectangle> collisionRects;
     private List<IEntity> entities;
     private List<IEntity> enemies;
-    private List<IItem> items;
+    private List<IEntity> items;
     private Mario mario;
     private Ground ground;
     private float fallingGroundPosition = 480f;
@@ -30,6 +30,8 @@ using Microsoft.Xna.Framework;
         this.entities = entities;
         filterEntities = new FilterEntities();
        enemies = filterEntities.FilterEnemies(entities);
+       items = filterEntities.FilterItems(entities);
+        this.mario = mario;
        
     }
   
@@ -59,18 +61,20 @@ using Microsoft.Xna.Framework;
             }
         }
     }
-    public void updateItemFalling(List<IItem> items)
+    public void updateItemFalling(List<IEntity> item)
     {
-       // Boolean intersects = true;
+        // Boolean intersects = true;
+       
       
         for (int i = 0; i < items.Count; i++)
         {
+           IItem x = (IItem)item[i];
             {
                 for (int j = 0; j < collisionRects.Count; j++)
                 {
-                    if (items[i].GetDestination().Intersects(collisionRects[j]))
+                    if (!x.GetDestination().Intersects(collisionRects[j]) && x.GetDestination().Intersects(new Rectangle(x.GetDestination().X, 380, 16, 16)))
                     {
-                        items[i].setGroundPosition(480);
+                        x.setGroundPosition(480);
                     }
                 }
 
