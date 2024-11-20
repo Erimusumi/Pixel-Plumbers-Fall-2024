@@ -61,7 +61,7 @@ using Microsoft.Xna.Framework;
     }
     public void updateItemFalling(List<IItem> items)
     {
-        Boolean intersects = true;
+       // Boolean intersects = true;
       
         for (int i = 0; i < items.Count; i++)
         {
