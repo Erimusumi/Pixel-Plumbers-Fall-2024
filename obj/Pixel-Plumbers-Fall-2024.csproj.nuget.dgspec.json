@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\Pixel-Plumbers-Fall-2024.csproj": {}
+    "/Users/arunghimire/Development/Workspace/Pixel-Plumbers-Fall-2024/Pixel-Plumbers-Fall-2024.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\Pixel-Plumbers-Fall-2024.csproj": {
+    "/Users/arunghimire/Development/Workspace/Pixel-Plumbers-Fall-2024/Pixel-Plumbers-Fall-2024.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\Pixel-Plumbers-Fall-2024.csproj",
+        "projectUniqueName": "/Users/arunghimire/Development/Workspace/Pixel-Plumbers-Fall-2024/Pixel-Plumbers-Fall-2024.csproj",
         "projectName": "Pixel-Plumbers-Fall-2024",
-        "projectPath": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\Pixel-Plumbers-Fall-2024.csproj",
-        "packagesPath": "C:\\Users\\kamau\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kamau\\Downloads\\CSE3902\\Silco\\obj\\",
+        "projectPath": "/Users/arunghimire/Development/Workspace/Pixel-Plumbers-Fall-2024/Pixel-Plumbers-Fall-2024.csproj",
+        "packagesPath": "/Users/arunghimire/.nuget/packages/",
+        "outputPath": "/Users/arunghimire/Development/Workspace/Pixel-Plumbers-Fall-2024/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\kamau\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/arunghimire/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -70,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
