@@ -7,6 +7,11 @@ using System.Threading.Tasks;
 
     public class FilterEntities
 {
+    public FilterEntities()
+    {
+
+    }
+        
     public List<IEntity> FilterItems(List<IEntity> entities)
     {
         List<IEntity> itemList = new List<IEntity>();
