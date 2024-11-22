@@ -21,11 +21,10 @@ public class MovingLeftFireMario : IMarioSprite
         AnimationTicks = 100;
         AnimationSpeed = 200;
 
-
         FrameRectangles = new Rectangle[3];
-        FrameRectangles[0] = new Rectangle(180, 122, 16, 32); // Frame 1
-        FrameRectangles[1] = new Rectangle(152, 122, 14, 31); // Frame 2
-        FrameRectangles[2] = new Rectangle(128, 122, 16, 30);  // Frame 3
+        FrameRectangles[0] = new Rectangle(152, 122, 16, 32); // Frame 1
+        FrameRectangles[1] = new Rectangle(128, 122, 13, 31);  // Frame 2
+        FrameRectangles[2] = new Rectangle(102, 122, 16, 30); // Frame 3
 
         previousAnimationIndex = 2;
         currentAnimationIndex = 1;
