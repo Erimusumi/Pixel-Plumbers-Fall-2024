@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-    public class FlagSprite
+    public class FlagSprite: IEntity
 {
 
     private Texture2D FlagTexture;
@@ -24,11 +24,30 @@ using System.Threading.Tasks;
     public void update(GameTime gametime)
     {
     }
+     private int  drawPole(int x, int y)
+    {
+        Rectangle poleSourceRectangle = new Rectangle(80,33,15,15);
+        int currY = y;
+        for(int i = 0; i < 8; i++)
+        {
+            
+            Rectangle destinationRect = new Rectangle(x, (currY), 30, 30);
+            sb.Draw(FlagTexture, destinationRect, poleSourceRectangle, Color.White);
+            destinationRectangle = Rectangle.Union(destinationRect, destinationRectangle);
+            currY = currY - 30;
+        }
+        int y1 = y - (30 * 7);
+        return y1;
+    }
     public void draw()
     {
-        Rectangle sourceRectangle = new Rectangle(3157, 38, 32, 152);
-        destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 31, 31);
-        sb.Draw(FlagTexture, destinationRectangle, sourceRectangle, Color.White);
+        Rectangle flagSourceRectangle = new Rectangle(128, 32, 15, 15);
+       
+        int y = drawPole((int)position.X, (int)position.Y);
+         Rectangle flagDestinationRectangle = new Rectangle((int)position.X-16, y, 30, 30);
+        destinationRectangle = Rectangle.Union(destinationRectangle,flagDestinationRectangle);
+       
+        sb.Draw(FlagTexture, flagDestinationRectangle, flagSourceRectangle, Color.White);
 
     }
 

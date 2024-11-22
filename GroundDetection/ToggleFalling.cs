@@ -20,7 +20,8 @@ using Microsoft.Xna.Framework;
     FilterEntities filterEntities;
     Boolean marioIsColliding = true;
     Boolean emptyCollision = false;
-    int hitCount= 0;
+    int marHitCount= 0;
+    int itemHitCount = 0;
    
 
     public ToggleFalling(Ground g, List<IEntity> entities, Mario mario)
@@ -63,16 +64,16 @@ using Microsoft.Xna.Framework;
     }
     public void updateItemFalling(List<IEntity> item)
     {
-        // Boolean intersects = true;
-       
-      
+       // Boolean itemColliding = true;
+
+
         for (int i = 0; i < items.Count; i++)
         {
-           IItem x = (IItem)item[i];
+            IItem x = (IItem)item[i];
             {
                 for (int j = 0; j < collisionRects.Count; j++)
                 {
-                    if (!x.GetDestination().Intersects(collisionRects[j]) && x.GetDestination().Intersects(new Rectangle(x.GetDestination().X, 380, 16, 16)))
+                    if (!x.GetDestination().Intersects(collisionRects[j]) && x.GetDestination().Intersects(new Rectangle(x.GetDestination().X, 385, 16, 16)))
                     {
                         x.setGroundPosition(480);
                     }
@@ -80,6 +81,7 @@ using Microsoft.Xna.Framework;
 
             }
         }
+
 
     }
 
@@ -100,13 +102,13 @@ using Microsoft.Xna.Framework;
                 }
                 
                 marioIsColliding = true;
-                hitCount++;
+                marHitCount++;
 
                 break;
             }
            
         }
-        if(hitCount == 0)
+        if(marHitCount == 0)
         {
             marioIsColliding = false;
         }
@@ -115,7 +117,7 @@ using Microsoft.Xna.Framework;
 
             mar.updateGroundPosition(480f);
         }
-        hitCount = 0;       
+        marHitCount = 0;       
     }
 
 }

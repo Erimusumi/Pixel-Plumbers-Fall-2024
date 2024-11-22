@@ -105,6 +105,8 @@ public class LevelOne : ILevel
     private IObstacle obstacle5;
     private IObstacle obstacle6;
 
+    private FlagSprite flagSprite;
+
     public LevelOne(
         Game1 game,
         Mario mario,
@@ -138,6 +140,7 @@ public class LevelOne : ILevel
 
     public void InitializeLevel()
     {
+        flagSprite = new FlagSprite(spriteBatch, overworldTiles, new Vector2(6330, 361));
         Bloop1 = new Blooper(240, 200, mario);
 
         Goomba1 = new Goomba(535, 400, (IPlayer)mario);
@@ -568,6 +571,8 @@ public class LevelOne : ILevel
         obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
         obstacle3.Draw(spriteBatch, new Vector2(350 + 350, 335));
         obstacle6.Draw(spriteBatch, new Vector2(5740, 370));
+
+        flagSprite.draw();
     }
 
     public List<IEntity> GetAllEntities()
