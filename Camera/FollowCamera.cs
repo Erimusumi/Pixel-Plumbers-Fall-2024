@@ -15,13 +15,17 @@ public class FollowCamera
     {
         float targetX = marioPosition.X - (screenSize.X / 2);
         position.X = Math.Max(targetX, 0);
-        position.Y = 0;
 
         if (marioPosition.X > position.X + (screenSize.X / 2))
         {
             position.X = marioPosition.X - (screenSize.X / 2);
         }
-    } 
+    }
+
+    public void SetCameraY(float y)
+    {
+        position.Y = y;
+    }
 
     public Matrix GetViewMatrix()
     {

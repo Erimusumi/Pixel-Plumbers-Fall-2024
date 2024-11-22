@@ -14,72 +14,138 @@ public class LevelTwo : ILevel
 
 {
     private Game1 game;
-    private Rectangle screen = new Rectangle(0, 0, 800, 480);
-    private List<IEntity> entities = new List<IEntity>();
-    private List<IBlock> blocks;
     private Mario mario;
-    GameTime gameTime;
-    List<IEntity> entitiesRemoved;
+    private Luigi luigi;
+    private TextureManager textureManager;
+    private GameStateMachine gameStateMachine;
+    private ContentManager Content;
+
+    private List<IEntity> entities = new List<IEntity>();
+    private List<IEntity> entitiesRemoved;
+    private List<IEntity> floorRectangles;
+
 
     private SpriteBatch spriteBatch;
-
     private Texture2D EnemyTexture;
     private Texture2D blockTexture;
     private Texture2D obstacleTexture;
     private Texture2D ItemsTexture;
+    private Texture2D overworldTiles;
+    private Texture2D underwaterTiles;
 
-    //Enemy List:
+    private Layer lvl2backdrop1;
+    private Layer lvl2backdrop2;
+    private Layer lvl2greenery;
+    private Layer lvl2foreground1;
+    private Layer lvl2foreground2;
+    private FlagSprite flagSprite;
 
-    //Block List:
-
-    //Obstacle List:
+    Boolean moved = false;
 
     public LevelTwo(
-       Game1 game,
-       List<IEntity> entities,
-       Mario mario,
-       Texture2D EnemyTexture,
-       Texture2D blockTexture,
-       Texture2D obstacleTexture,
-       Texture2D ItemsTexture,
-       SpriteBatch spriteBatch,
-       GameTime gameTime,
-List<IEntity> entitiesRemoved
+        Game1 game,
+        Mario mario,
+        Luigi luigi,
+        List<IEntity> entities,
+        List<IEntity> entitiesRemoved,
+        SpriteBatch spriteBatch,
+        GameTime gameTime,
+        ContentManager Content,
+        TextureManager textureManager,
+        GameStateMachine gameStateMachine
+    )
 
-   )
     {
+        this.textureManager = textureManager;
+        this.EnemyTexture = textureManager.GetTexture("Enemy");
+        this.blockTexture = textureManager.GetTexture("Block");
+        this.ItemsTexture = textureManager.GetTexture("Items");
+        this.obstacleTexture = textureManager.GetTexture("Obstacle");
+        this.overworldTiles = textureManager.GetTexture("OverworldTiles");
+        this.underwaterTiles = textureManager.GetTexture("UnderwaterTiles");
+
+        this.gameStateMachine = gameStateMachine;
         this.entities = entities;
         this.mario = mario;
-        this.EnemyTexture = EnemyTexture;
-        this.blockTexture = blockTexture;
-        this.ItemsTexture = ItemsTexture;
-        this.obstacleTexture = obstacleTexture;
+        this.luigi = luigi;
         this.spriteBatch = spriteBatch;
         this.game = game;
-        this.gameTime = gameTime;
         this.entitiesRemoved = entitiesRemoved;
+        this.Content = Content;
     }
 
 
     public void InitializeLevel()
     {
+        if (gameStateMachine.isMultiplayer())
+        {
+            entities.Add(mario);
+            entities.Add(luigi);
+        }
+        else if (gameStateMachine.isSingleplayer())
+        {
+            entities.Add(mario);
+        }
 
-    }
-    public void LoadLevel(ContentManager content)
-    {
+        lvl2backdrop1 = new Layer(32, 16, 16, Content.RootDirectory + "/level2_OWBackdrop.csv");
+        lvl2backdrop2 = new Layer(32, 16, 16, Content.RootDirectory + "/level2_UWBackdrop.csv");
+        lvl2greenery = new Layer(32, 16, 16, Content.RootDirectory + "/level2_OWGreenery.csv");
+        lvl2foreground1 = new Layer(32, 16, 16, Content.RootDirectory + "/level2_OWForeground.csv");
+        lvl2foreground2 = new Layer(32, 16, 16, Content.RootDirectory + "//level2_UWForeground.csv");
 
+        lvl2backdrop1.LoadLayer();
+        lvl2backdrop2.LoadLayer();
+        lvl2greenery.LoadLayer();
+        lvl2foreground1.LoadLayer();
+        lvl2foreground2.LoadLayer();
     }
     public void UpdateLevel(GameTime gameTime)
     {
+        if (gameStateMachine.isMultiplayer())
+        {
+            mario.SetIsOnGround(false);
+            mario.Update(gameTime);
+            luigi.SetIsOnGround(false);
+            luigi.Update(gameTime);
+        }
+        else if (gameStateMachine.isSingleplayer())
+        {
+            mario.SetIsOnGround(false);
+            mario.Update(gameTime); ;
+        }
+
+        // if (moved == false)
+        // {
+        //     if (mario.marioPosition.X > 10)
+        //     {
+        //         mario.SetPositionY(862);
+        //         mario.SetPositionX(20);
+        //         moved = true;
+        //     }
+        // }
 
     }
     public void DrawLevel(SpriteBatch sB, FollowCamera camera)
     {
-                // lvl2backdrop1.Draw(spriteBatch, overworldTiles, Vector2.Zero);
-                // lvl2backdrop2.Draw(spriteBatch, underwaterTiles, Vector2.Zero);
-                // lvl2greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
-                // lvl2foreground1.Draw(spriteBatch, overworldTiles, Vector2.Zero);
-                // lvl2foreground2.Draw(spriteBatch, underwaterTiles, Vector2.Zero);
+        lvl2backdrop1.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+        lvl2backdrop2.Draw(spriteBatch, underwaterTiles, Vector2.Zero);
+        lvl2greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+        lvl2foreground1.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+        lvl2foreground2.Draw(spriteBatch, underwaterTiles, Vector2.Zero);
+
+        if (gameStateMachine.isMultiplayer())
+        {
+            mario.Draw(spriteBatch);
+            luigi.Draw(spriteBatch);
+        }
+        else if (gameStateMachine.isSingleplayer())
+        {
+            mario.Draw(spriteBatch);
+        }
     }
 
+    public List<Rectangle> GetLevelFloorRectangles()
+    {
+        return lvl2foreground1.GetRedRectangles();
+    }
 }
