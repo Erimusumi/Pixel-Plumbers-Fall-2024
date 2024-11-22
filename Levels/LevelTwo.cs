@@ -111,6 +111,10 @@ public class LevelTwo : ILevel
             mario.SetIsOnGround(false);
             mario.Update(gameTime); ;
         }
+
+        if(mario.marioPosition.X > 1){
+            mario.SetPositionY(10);
+        }
     }
     public void DrawLevel(SpriteBatch sB, FollowCamera camera)
     {
@@ -135,5 +139,4 @@ public class LevelTwo : ILevel
     {
         return lvl2foreground1.GetRedRectangles();
     }
-
 }

@@ -200,7 +200,15 @@ public class Game1 : Game
             marioMovementController.Update();
             luigiMovementController.Update();
 
-            levelOne.UpdateLevel(gameTime);
+            if (gameStateMachine.isLevelOne())
+            {
+                levelOne.UpdateLevel(gameTime);
+            }
+            else if (gameStateMachine.isLevelTwo())
+            {
+                levelTwo.UpdateLevel(gameTime);
+            }
+
             camera.Follow(mario.marioPosition, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height));
 
             foreach (var item in fireballs)
