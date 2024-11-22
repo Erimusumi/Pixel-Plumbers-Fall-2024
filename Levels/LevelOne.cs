@@ -140,22 +140,22 @@ public class LevelOne : ILevel
     {
         Bloop1 = new Blooper(240, 200, mario);
 
-        Goomba1 = new Goomba(535, 400);
-        Goomba2 = new Goomba(1400, 400);
-        Goomba3 = new Goomba(1700, 400);
-        Goomba4 = new Goomba(1750, 400);
-        Goomba5 = new Goomba(2500, 250);
-        Goomba6 = new Goomba(2600, 120);
-        Goomba7 = new Goomba(3000, 400);
-        Goomba8 = new Goomba(3150, 400);
-        Goomba9 = new Goomba(3520, 400);
-        Goomba10 = new Goomba(3720, 400);
-        Goomba11 = new Goomba(4000, 400);
-        Goomba12 = new Goomba(4050, 400);
-        Goomba13 = new Goomba(4110, 400);
-        Goomba14 = new Goomba(4160, 400);
-        Goomba15 = new Goomba(5400, 400);
-        Goomba16 = new Goomba(5550, 400);
+        Goomba1 = new Goomba(535, 400, (IPlayer)mario);
+        Goomba2 = new Goomba(1400, 400, (IPlayer)mario);
+        Goomba3 = new Goomba(1700, 400, (IPlayer)mario);
+        Goomba4 = new Goomba(1750, 400, (IPlayer)mario);
+        Goomba5 = new Goomba(2500, 250, (IPlayer)mario);
+        Goomba6 = new Goomba(2600, 120, (IPlayer)mario);
+        Goomba7 = new Goomba(3000, 400, (IPlayer)mario);
+        Goomba8 = new Goomba(3150, 400, (IPlayer)mario);
+        Goomba9 = new Goomba(3520, 400, (IPlayer)mario);
+        Goomba10 = new Goomba(3720, 400, (IPlayer)mario);
+        Goomba11 = new Goomba(4000, 400, (IPlayer)mario);
+        Goomba12 = new Goomba(4050, 400, (IPlayer)mario);
+        Goomba13 = new Goomba(4110, 400, (IPlayer)mario);
+        Goomba14 = new Goomba(4160, 400, (IPlayer)mario);
+        Goomba15 = new Goomba(5400, 400, (IPlayer)mario);
+        Goomba16 = new Goomba(5550, 400, (IPlayer)mario);
 
         OWLuckyBlockSprite1 = new LuckyBlockSprite(
             blockTexture,

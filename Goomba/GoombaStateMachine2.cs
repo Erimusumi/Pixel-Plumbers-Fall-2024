@@ -58,7 +58,7 @@ public class GoombaStateMachine2
 				_sprite.StompedLogic();
 				break;
 			case GoombaState.Flipped:
-				_sprite.FlippedLogic();
+				_sprite.FlippedLogic(0);
 				break;
         }
 

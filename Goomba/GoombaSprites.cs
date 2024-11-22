@@ -76,9 +76,17 @@ public class GoombaSprites
         sourceRectangle = new Rectangle(60, 8, size, size/2);
         destinationRectangle = new Rectangle(position, posY+10, size * scaleUp, (size/2) * scaleUp);
     }
-	public void FlippedLogic()
+    private void Fall()
+    {
+        posY++;
+    }
+
+	public void FlippedLogic(int flipOrStart)
 	{
-        rotation = 3.1415926535f;
+        if (flipOrStart == 0)
+        {
+            rotation = 3.1415926535f;
+        }
         counter++;
         if (counter == 0)
         {
@@ -94,6 +102,10 @@ public class GoombaSprites
             {
                 sourceRectangle = new Rectangle(0, 4, size, size);
             }
+        }
+        if (flipOrStart == 0)
+        {
+            Fall();
         }
         destinationRectangle = new Rectangle(position, posY, size * scaleUp, size * scaleUp);
     }

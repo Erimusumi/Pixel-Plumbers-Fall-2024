@@ -7,14 +7,16 @@ using Pixel_Plumbers_Fall_2024;
 
 public class GoombaStateMachine
 {
-	private enum GoombaState {Left, Right, Stomped, Flipped};
-	private GoombaState _currentState = GoombaState.Flipped;
+	private enum GoombaState {Left, Right, Stomped, Flipped, Start};
+	private GoombaState _currentState = GoombaState.Start;
 	private GoombaSprites _sprite;
 	private Boolean _isFlipped = true;
+	private IPlayer player;
 
-	public GoombaStateMachine(int posX, int posY)
+	public GoombaStateMachine(int posX, int posY, IPlayer player)
 	{
 		_sprite = new GoombaSprites(posX, posY);
+		this.player = player;
 	}
 
     public Boolean IsFlipped()
@@ -52,6 +54,13 @@ public class GoombaStateMachine
 	}
     public void Update()
 	{
+		Rectangle pHold = player.GetDestination();
+		Rectangle goombaRec = _sprite.GetDestination();
+        //System.Diagnostics.Debug.WriteLine(goombaRec.X - pHold.X);
+        if (((goombaRec.X - pHold.X) > 0) && ((goombaRec.X - pHold.X) < 400) && (_currentState == GoombaState.Start)){
+            _currentState = GoombaState.Left;
+        }
+
         switch (_currentState)
 		{
             case GoombaState.Left:
@@ -64,7 +73,10 @@ public class GoombaStateMachine
 				_sprite.StompedLogic();
 				break;
 			case GoombaState.Flipped:
-				_sprite.FlippedLogic();
+				_sprite.FlippedLogic(0);
+				break;
+			case GoombaState.Start:
+				_sprite.FlippedLogic(1);
 				break;
         }
 
