@@ -80,7 +80,6 @@ public class GoombaSprites
     {
         posY++;
     }
-
 	public void FlippedLogic(int flipOrStart)
 	{
         if (flipOrStart == 0)
