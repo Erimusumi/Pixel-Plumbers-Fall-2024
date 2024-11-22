@@ -10,6 +10,7 @@ public class LevelOne : ILevel
     private Mario mario;
     private Luigi luigi;
     private TextureManager textureManager;
+    private GameStateMachine gameStateMachine;
     private ContentManager Content;
 
     private List<IEntity> entities = new List<IEntity>();
@@ -104,6 +105,8 @@ public class LevelOne : ILevel
     private IObstacle obstacle5;
     private IObstacle obstacle6;
 
+    private FlagSprite flagSprite;
+
     public LevelOne(
         Game1 game,
         Mario mario,
@@ -113,7 +116,8 @@ public class LevelOne : ILevel
         SpriteBatch spriteBatch,
         GameTime gameTime,
         ContentManager Content,
-        TextureManager textureManager
+        TextureManager textureManager,
+        GameStateMachine gameStateMachine
     )
 
     {
@@ -124,6 +128,7 @@ public class LevelOne : ILevel
         this.obstacleTexture = textureManager.GetTexture("Obstacle");
         this.overworldTiles = textureManager.GetTexture("OverworldTiles");
 
+        this.gameStateMachine = gameStateMachine;
         this.entities = entities;
         this.mario = mario;
         this.luigi = luigi;
@@ -135,24 +140,25 @@ public class LevelOne : ILevel
 
     public void InitializeLevel()
     {
+        flagSprite = new FlagSprite(spriteBatch, overworldTiles, new Vector2(6330, 354));
         Bloop1 = new Blooper(240, 200, mario);
 
-        Goomba1 = new Goomba(535, 400);
-        Goomba2 = new Goomba(1400, 400);
-        Goomba3 = new Goomba(1700, 400);
-        Goomba4 = new Goomba(1750, 400);
-        Goomba5 = new Goomba(2500, 250);
-        Goomba6 = new Goomba(2600, 120);
-        Goomba7 = new Goomba(3000, 400);
-        Goomba8 = new Goomba(3150, 400);
-        Goomba9 = new Goomba(3520, 400);
-        Goomba10 = new Goomba(3720, 400);
-        Goomba11 = new Goomba(4000, 400);
-        Goomba12 = new Goomba(4050, 400);
-        Goomba13 = new Goomba(4110, 400);
-        Goomba14 = new Goomba(4160, 400);
-        Goomba15 = new Goomba(5400, 400);
-        Goomba16 = new Goomba(5550, 400);
+        Goomba1 = new Goomba(535, 400, (IPlayer)mario);
+        Goomba2 = new Goomba(1400, 400, (IPlayer)mario);
+        Goomba3 = new Goomba(1700, 400, (IPlayer)mario);
+        Goomba4 = new Goomba(1750, 400, (IPlayer)mario);
+        Goomba5 = new Goomba(2500, 250, (IPlayer)mario);
+        Goomba6 = new Goomba(2600, 120, (IPlayer)mario);
+        Goomba7 = new Goomba(3000, 400, (IPlayer)mario);
+        Goomba8 = new Goomba(3150, 400, (IPlayer)mario);
+        Goomba9 = new Goomba(3520, 400, (IPlayer)mario);
+        Goomba10 = new Goomba(3720, 400, (IPlayer)mario);
+        Goomba11 = new Goomba(4000, 400, (IPlayer)mario);
+        Goomba12 = new Goomba(4050, 400, (IPlayer)mario);
+        Goomba13 = new Goomba(4110, 400, (IPlayer)mario);
+        Goomba14 = new Goomba(4160, 400, (IPlayer)mario);
+        Goomba15 = new Goomba(5400, 400, (IPlayer)mario);
+        Goomba16 = new Goomba(5550, 400, (IPlayer)mario);
 
         OWLuckyBlockSprite1 = new LuckyBlockSprite(
             blockTexture,
@@ -301,8 +307,6 @@ public class LevelOne : ILevel
         obstacle4 = new obstacle4(obstacleTexture);
         obstacle6 = new obstacle1(obstacleTexture);
 
-        entities.Add(mario);
-        entities.Add(luigi);
         entities.Add(Goomba1);
         entities.Add(Goomba2);
         entities.Add(Goomba3);
@@ -374,6 +378,17 @@ public class LevelOne : ILevel
         entities.Add(obstacle3);
         entities.Add(obstacle6);
 
+
+        if (gameStateMachine.isMultiplayer())
+        {
+            entities.Add(mario);
+            entities.Add(luigi);
+        }
+        else if (gameStateMachine.isSingleplayer())
+        {
+            entities.Add(mario);
+        }
+
         lvl1backdrop = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Backdrop.csv");
         lvl1greenery = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Greenery.csv");
         lvl1foreground = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Foreground.csv");
@@ -385,11 +400,19 @@ public class LevelOne : ILevel
 
     public void UpdateLevel(GameTime gameTime)
     {
+        if (gameStateMachine.isMultiplayer())
+        {
+            mario.SetIsOnGround(false);
+            mario.Update(gameTime);
+            luigi.SetIsOnGround(false);
+            luigi.Update(gameTime);
+        }
+        else if (gameStateMachine.isSingleplayer())
+        {
+            mario.SetIsOnGround(false);
+            mario.Update(gameTime); ;
+        }
 
-        mario.isOnGround = false;
-        mario.Update(gameTime);
-        luigi.isOnGround = false;
-        luigi.Update(gameTime);
 
         Goomba1.Updates();
         Goomba2.Updates();
@@ -468,8 +491,16 @@ public class LevelOne : ILevel
         lvl1backdrop.Draw(spriteBatch, overworldTiles, Vector2.Zero);
         lvl1greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
         lvl1foreground.Draw(spriteBatch, overworldTiles, Vector2.Zero);
-        mario.Draw(spriteBatch);
-        luigi.Draw(spriteBatch);
+
+        if (gameStateMachine.isMultiplayer())
+        {
+            mario.Draw(spriteBatch);
+            luigi.Draw(spriteBatch);
+        }
+        else if (gameStateMachine.isSingleplayer())
+        {
+            mario.Draw(spriteBatch);
+        }
 
         Goomba1.Draw(spriteBatch, EnemyTexture);
         Goomba2.Draw(spriteBatch, EnemyTexture);
@@ -541,6 +572,8 @@ public class LevelOne : ILevel
         obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
         obstacle3.Draw(spriteBatch, new Vector2(350 + 350, 335));
         obstacle6.Draw(spriteBatch, new Vector2(5740, 370));
+
+        flagSprite.draw();
     }
 
     public List<IEntity> GetAllEntities()
@@ -548,7 +581,7 @@ public class LevelOne : ILevel
         return new List<IEntity>(entities);
     }
 
-    public List<Rectangle> GetLevelOneRectangles()
+    public List<Rectangle> GetLevelFloorRectangles()
     {
         return lvl1foreground.GetRedRectangles();
     }

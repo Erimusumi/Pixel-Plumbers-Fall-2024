@@ -8,7 +8,7 @@ public class MarioPowerUpCommand : IPlayerCommand
     }
     public void Execute()
     {
-        mario.MarioPowerUp();
+        mario.PowerUp();
     }
 
     public void Unexecute()

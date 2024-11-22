@@ -34,7 +34,7 @@ public class Mushroom :IItem
         this.spawning = true;
         this.idle = true;
         this.collected = false;
-        this.roaming = false;
+        this.roaming = true;
         this.falling = true;
         this.texture = texture;
         this.sb = sB;
@@ -66,6 +66,7 @@ public class Mushroom :IItem
     }
     public void update(GameTime gameTime)
     {
+        /*
         if (this.spawning)
         {
             position.Y--;
@@ -78,6 +79,8 @@ public class Mushroom :IItem
                 movingRight = true;
             }
         }
+        */
+    
         
         if (this.roaming)
         {
@@ -85,10 +88,12 @@ public class Mushroom :IItem
             if (movingRight)
             {
                 position.X++;
+                
             }
             else if (movingLeft)
             {
                 position.X--;
+             
             }
         }
         if(this.GetDestination().Y> this.groundPosition)

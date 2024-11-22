@@ -9,24 +9,24 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Pixel_Plumbers_Fall_2024;
 
-public class Mario : IEntity
+public class Mario : IPlayer
 {
     private Texture2D marioTexture;
     private Texture2D itemTexture;
     private TextureManager textureManager;
 
     private IMarioSprite currentMarioSprite;
-    private MarioStateMachine marioStateMachine;
+    private PlayerStateMachine playerStateMachine;
     public GameTime gameTime;
 
     private Vector2 initialPosition;
     public Vector2 marioPosition;
-    public Vector2 marioVelocity;
+    private Vector2 marioVelocity;
     private float groundPosition = 385f;
     private float gravity = 980f;
     private float jumpSpeed = -570f;
 
-    public bool isOnGround = true;
+    private bool isOnGround = true;
     private bool canPowerUp = true;
     private bool canTakeDamage = true;
     private bool moveKeyPressed = false;
@@ -56,7 +56,7 @@ public class Mario : IEntity
 
         this.marioPosition = new Vector2(200, groundPosition);
         this.initialPosition = new Vector2(200, groundPosition);
-        this.marioStateMachine = new MarioStateMachine();
+        this.playerStateMachine = new PlayerStateMachine();
         this.gameTime = gametime;
         this.marioPosition = initialPosition;
         this.fireballTimer = 0;
@@ -105,23 +105,23 @@ public class Mario : IEntity
             }
         }
         */
-        if (marioStateMachine.IsDead()) return;
+        if (playerStateMachine.IsDead()) return;
 
         moveKeyPressed = true;
-        if (!marioStateMachine.IsJumping())
+        if (!playerStateMachine.IsJumping())
         {
             if (marioVelocity.X < 0f)
             {
-                marioStateMachine.SetMarioTurning();
+                playerStateMachine.SetPlayerTurning();
             }
-            else if (!marioStateMachine.IsCrouching())
+            else if (!playerStateMachine.IsCrouching())
             {
-                marioStateMachine.SetMarioRight();
-                marioStateMachine.SetMarioMoving();
+                playerStateMachine.SetPlayerRight();
+                playerStateMachine.SetPlayerMoving();
             }
         }
 
-        if (!marioStateMachine.IsCrouching())
+        if (!playerStateMachine.IsCrouching())
         {
             if (marioVelocity.X < maxSpeed)
             {
@@ -132,24 +132,24 @@ public class Mario : IEntity
 
     public void MoveLeft()
     {
-        if (marioStateMachine.IsDead()) return;
+        if (playerStateMachine.IsDead()) return;
 
         moveKeyPressed = true;
 
-        if (!marioStateMachine.IsJumping())
+        if (!playerStateMachine.IsJumping())
         {
             if (marioVelocity.X > 0f)
             {
-                marioStateMachine.SetMarioTurning();
+                playerStateMachine.SetPlayerTurning();
             }
-            else if (!marioStateMachine.IsCrouching())
+            else if (!playerStateMachine.IsCrouching())
             {
-                marioStateMachine.SetMarioLeft();
-                marioStateMachine.SetMarioMoving();
+                playerStateMachine.SetPlayerLeft();
+                playerStateMachine.SetPlayerMoving();
             }
         }
 
-        if (!marioStateMachine.IsCrouching())
+        if (!playerStateMachine.IsCrouching())
         {
             if (marioVelocity.X > -maxSpeed)
             {
@@ -160,12 +160,12 @@ public class Mario : IEntity
 
     public void Jump()
     {
-        if (marioStateMachine.IsDead()) return;
+        if (playerStateMachine.IsDead()) return;
 
-        if (isOnGround && !marioStateMachine.IsCrouching())
+        if (isOnGround && !playerStateMachine.IsCrouching())
         {
             marioVelocity.Y = jumpSpeed;
-            marioStateMachine.SetMarioJumping();
+            playerStateMachine.SetPlayerJumping();
             isOnGround = false;
             _sfx[3].Play();
         }
@@ -173,17 +173,17 @@ public class Mario : IEntity
 
     public void Crouch()
     {
-        if (marioStateMachine.IsDead()) return;
+        if (playerStateMachine.IsDead()) return;
 
-        if (!marioStateMachine.IsJumping())
+        if (!playerStateMachine.IsJumping())
         {
-            marioStateMachine.SetMarioCrouching();
+            playerStateMachine.SetPlayerCrouching();
         }
     }
 
     public void ApplyGravity(GameTime gameTime)
     {
-        if (marioStateMachine.IsDead()) return;
+        if (playerStateMachine.IsDead()) return;
 
         if (!isOnGround)
         {
@@ -195,7 +195,7 @@ public class Mario : IEntity
                 marioPosition.Y = groundPosition;
                 marioVelocity.Y = 0;
                 isOnGround = true;
-                marioStateMachine.UpdateMoveStateForJumping();
+                playerStateMachine.UpdateMoveStateForJumping();
             }
         }
     }
@@ -205,49 +205,49 @@ public class Mario : IEntity
         marioPosition.Y += marioVelocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;
     }
 
-    public void MarioPowerUp()
+    public void PowerUp()
     {
-        if (marioStateMachine.IsDead()) return;
+        if (playerStateMachine.IsDead()) return;
 
         if (!canPowerUp) return; // Prevent power-ups if not allowed
-        switch (marioStateMachine.CurrentGameState)
+        switch (playerStateMachine.CurrentGameState)
         {
-            case MarioStateMachine.MarioGameState.Small:
-                marioStateMachine.SetMarioBig();
+            case PlayerStateMachine.PlayerGameState.Small:
+                playerStateMachine.SetPlayerBig();
                 _sfx[0].Play();
                 break;
 
-            case MarioStateMachine.MarioGameState.Big:
-                marioStateMachine.SetMarioFire();
+            case PlayerStateMachine.PlayerGameState.Big:
+                playerStateMachine.SetPlayerFire();
                 _sfx[0].Play();
                 break;
 
-            case MarioStateMachine.MarioGameState.Fire:
+            case PlayerStateMachine.PlayerGameState.Fire:
                 break;
         }
         canPowerUp = false;
         Task.Delay(1000).ContinueWith(t => canPowerUp = true); // Reset after 1 second
     }
 
-    public void MarioTakeDamage()
+    public void TakeDamage()
     {
-        if (marioStateMachine.IsDead()) return;
+        if (playerStateMachine.IsDead()) return;
 
         if (!canTakeDamage) return;
-        switch (marioStateMachine.CurrentGameState)
+        switch (playerStateMachine.CurrentGameState)
         {
-            case MarioStateMachine.MarioGameState.Fire:
+            case PlayerStateMachine.PlayerGameState.Fire:
                 _sfx[1].Play();
-                marioStateMachine.SetMarioBig();
+                playerStateMachine.SetPlayerBig();
                 break;
 
-            case MarioStateMachine.MarioGameState.Big:
+            case PlayerStateMachine.PlayerGameState.Big:
                 _sfx[1].Play();
-                marioStateMachine.SetMarioSmall();
+                playerStateMachine.SetPlayerSmall();
                 break;
 
-            case MarioStateMachine.MarioGameState.Small:
-                marioStateMachine.SetMarioDead();
+            case PlayerStateMachine.PlayerGameState.Small:
+                playerStateMachine.SetPlayerDead();
                 break;
         }
         canTakeDamage = false;
@@ -255,17 +255,17 @@ public class Mario : IEntity
     }
     public void MarioWins()
     {
-        if (marioStateMachine.wins())
+        if (playerStateMachine.Wins())
         {
             _sfx[5].Play();
-            marioStateMachine.MakeInvisible();
+            playerStateMachine.MakeInvisible();
 
         }
     }
 
     public void MarioDeath()
     {
-        if (marioStateMachine.IsDead())
+        if (playerStateMachine.IsDead())
         {
             if (!deathSoundPlaying)
             {
@@ -301,58 +301,58 @@ public class Mario : IEntity
     }
     public void SwapDirection()
     {
-        if (marioStateMachine.IsDead()) return;
+        if (playerStateMachine.IsDead()) return;
 
-        if (marioStateMachine.IsMoving())
+        if (playerStateMachine.IsMoving())
         {
-            marioStateMachine.SetMarioTurning();
+            playerStateMachine.SetPlayerTurning();
             marioVelocity.X = 0f;
         }
     }
 
     public void Stop()
     {
-        if (marioStateMachine.IsDead()) return;
+        if (playerStateMachine.IsDead()) return;
 
         //Cut Mario's speed when movement key is released, feels better to control
         marioVelocity.X *= 0.3f;
 
         moveKeyPressed = false;
 
-        if (!marioStateMachine.IsJumping())
+        if (!playerStateMachine.IsJumping())
         {
-            marioStateMachine.SetMarioIdle();
+            playerStateMachine.SetPlayerIdle();
         }
     }
 
-    public void jumpStop()
+    public void JumpStop()
     {
-        if (marioStateMachine.IsDead()) return;
+        if (playerStateMachine.IsDead()) return;
         moveKeyPressed = false;
-        if (!marioStateMachine.IsMoving())
+        if (!playerStateMachine.IsMoving())
         {
-            marioStateMachine.SetMarioIdle();
+            playerStateMachine.SetPlayerIdle();
         }
     }
 
     private void CheckStopTurningUpd()
     {
-        if (marioStateMachine.IsTurning())
+        if (playerStateMachine.IsTurning())
         {
-            if ((marioStateMachine.CurrentFaceState == MarioStateMachine.MarioFaceState.Left) && (marioVelocity.X <= 0f))
+            if ((playerStateMachine.CurrentFaceState == PlayerStateMachine.PlayerFaceState.Left) && (marioVelocity.X <= 0f))
             {
-                marioStateMachine.SetMarioLeft();
+                playerStateMachine.SetPlayerLeft();
             }
-            else if ((marioStateMachine.CurrentFaceState == MarioStateMachine.MarioFaceState.Right) && (marioVelocity.X >= 0f))
+            else if ((playerStateMachine.CurrentFaceState == PlayerStateMachine.PlayerFaceState.Right) && (marioVelocity.X >= 0f))
             {
-                marioStateMachine.SetMarioRight();
+                playerStateMachine.SetPlayerRight();
             }
         }
     }
 
     private void SlowStopMario()
     {
-        if (!moveKeyPressed && !marioStateMachine.IsJumping())
+        if (!moveKeyPressed && !playerStateMachine.IsJumping())
         {
             //naturally slow down mario
             marioVelocity.X *= 0.5f;
@@ -366,13 +366,13 @@ public class Mario : IEntity
 
     public void ShootFireball()
     {
-        if (marioStateMachine.IsDead()) return;
+        if (playerStateMachine.IsDead()) return;
         if (fireballTimer > 0) return;
 
-        if (marioStateMachine.IsFire())
+        if (playerStateMachine.IsFire())
         {
             _sfx[2].Play();
-            Fireball f = new Fireball(marioPosition, itemTexture, gameTime, marioStateMachine.CurrentFaceState, game, _entities);
+            Fireball f = new Fireball(marioPosition, itemTexture, gameTime, playerStateMachine.CurrentFaceState, game, _entities);
             game.fireballs.Add(f);
             fireballTimer = 20;
         }
@@ -385,7 +385,7 @@ public class Mario : IEntity
         this.SlowStopMario();
         this.CheckStopTurningUpd();
         this.MarioDeath();
-        currentMarioSprite = MarioSpriteMachine.UpdateMarioSprite(marioStateMachine, marioTexture);
+        currentMarioSprite = MarioSpriteMachine.UpdateMarioSprite(playerStateMachine, marioTexture);
         currentMarioSprite.Update(gameTime);
         fireballTimer += -1;
         starTimer += -1;
@@ -403,7 +403,7 @@ public class Mario : IEntity
     {
         marioPosition = initialPosition;                                                    // Reset Mario's position
         marioVelocity = Vector2.Zero;                                                       // Reset velocity
-        marioStateMachine.Reset();                                                          // Reset Mario's state machine to the default state
+        playerStateMachine.Reset();                                                          // Reset Mario's state machine to the default state
         isOnGround = true;                                                                  // Set Mario as standing on the ground
         currentMarioSprite = new IdleRightSmallMario(marioTexture);                         // Set mario to small idle right again
         marioDeathBounceIncrement = 20;
@@ -424,32 +424,57 @@ public class Mario : IEntity
     {
         if (this.GetDestination().Y > 464)
         {
-            marioStateMachine.SetMarioDead();
+            playerStateMachine.SetPlayerDead();
         }
     }
 
 
-    public MarioStateMachine.MarioGameState GetMarioGameState()
+    public PlayerStateMachine.PlayerGameState GetGameState()
     {
-        return marioStateMachine.CurrentGameState;
+        return playerStateMachine.CurrentGameState;
     }
 
     public bool HasStar()
     {
-        return marioStateMachine.HasStar();
+        return playerStateMachine.HasStar();
     }
 
+    public void SetVelocityY(float velocityY)
+    {
+        marioVelocity.Y = velocityY;
+    }
+
+    public void SetVelocityX(float velocityX)
+    {
+        marioVelocity.X = velocityX;
+    }
+    public void SetPositionY(float positionY)
+    {
+        marioPosition.Y = positionY;
+    }
+    public void SetPositionX(float positionX)
+    {
+        marioPosition.X = positionX;
+    }
+    public void SetIsOnGround(bool isGround)
+    {
+        isOnGround = isGround;
+    }
+    public bool GetIsOnGround()
+    {
+        return isOnGround;
+    }
     public void CollectStar()
     {
         starTimer = 450;
-        marioStateMachine.SetStar();
+        playerStateMachine.SetStar();
     }
 
     public void RemoveStar()
     {
         if (this.HasStar() && starTimer <= 0)
         {
-            marioStateMachine.RemoveStar();
+            playerStateMachine.RemoveStar();
         }
     }
     public void updateGroundPosition(float gp)
@@ -460,15 +485,15 @@ public class Mario : IEntity
     public bool isSmall()
     {
 
-        return marioStateMachine.isSmall();
+        return playerStateMachine.IsSmall();
     }
 
     public bool isBig()
     {
-        return marioStateMachine.isBig();
+        return playerStateMachine.IsBig();
     }
     public bool isFire()
     {
-        return marioStateMachine.isFire();
+        return playerStateMachine.IsFire();
     }
 }

@@ -30,7 +30,6 @@ public class Game1 : Game
     public Vector2 initial_mario_position;
     private ISpriteAnimation Dance;
 
-
     private MarioControlCenter marioControlCenter;
     private LuigiControlCenter luigiControlCenter;
 
@@ -51,7 +50,8 @@ public class Game1 : Game
     private List<IEntity> entitiesRemoved = new List<IEntity>();
     private List<SoundEffect> marioSounds = new List<SoundEffect>();
     private List<SoundEffect> ItemSounds = new List<SoundEffect>();
-    private List<Rectangle> collidableRectangles;
+    private List<Rectangle> lvl1CollidableRectangles;
+    private List<Rectangle> lvl2CollidableRectangles;
 
     private Sort sort = new Sort();
     private Sweep sweep;
@@ -94,7 +94,7 @@ public class Game1 : Game
         }
         else if (gameStateMachine.isLevelTwo())
         {
-
+            levelTwo.InitializeLevel();
         }
 
         fireballs.Clear();
@@ -121,13 +121,18 @@ public class Game1 : Game
         keyboardControllerMovement = new KeyboardControllerMovement();
         controlCenter = new CommandControlCenter(this);
 
-        levelOne = new LevelOne(this, mario, luigi, entities, entitiesRemoved, spriteBatch, gameTime, Content, textureManager);
+        levelOne = new LevelOne(this, mario, luigi, entities, entitiesRemoved, spriteBatch, gameTime, Content, textureManager, gameStateMachine);
         levelOne.InitializeLevel();
 
-        collidableRectangles = new List<Rectangle>();
-        collidableRectangles = levelOne.GetLevelOneRectangles();
-        ground = new Ground(collidableRectangles);
-        toggleFalling = new ToggleFalling(ground, entities, this.mario);
+        levelTwo = new LevelTwo(this, mario, luigi, entities, entitiesRemoved, spriteBatch, gameTime, Content, textureManager, gameStateMachine);
+        levelTwo.InitializeLevel();
+
+        lvl1CollidableRectangles = new List<Rectangle>();
+        lvl1CollidableRectangles = levelOne.GetLevelFloorRectangles();
+        lvl2CollidableRectangles = new List<Rectangle>();
+        lvl2CollidableRectangles = levelTwo.GetLevelFloorRectangles();
+
+
     }
 
     public void SetKey(KeyboardController keys)
@@ -179,6 +184,19 @@ public class Game1 : Game
 
     protected override void Update(GameTime gameTime)
     {
+        ground = new Ground(lvl1CollidableRectangles);
+        toggleFalling = new ToggleFalling(ground, entities, this.mario);
+        if (gameStateMachine.isLevelOne())
+        {
+            ground = new Ground(lvl1CollidableRectangles);
+            toggleFalling = new ToggleFalling(ground, entities, this.mario);
+        }
+        else if (gameStateMachine.isLevelTwo())
+        {
+            ground = new Ground(lvl2CollidableRectangles);
+            toggleFalling = new ToggleFalling(ground, entities, this.mario);
+        }
+
         gameStateKeyboardController.Update();
         gameStateMouseController.Update();
 
@@ -194,7 +212,15 @@ public class Game1 : Game
             marioMovementController.Update();
             luigiMovementController.Update();
 
-            levelOne.UpdateLevel(gameTime);
+            if (gameStateMachine.isLevelOne())
+            {
+                levelOne.UpdateLevel(gameTime);
+            }
+            else if (gameStateMachine.isLevelTwo())
+            {
+                levelTwo.UpdateLevel(gameTime);
+            }
+
             camera.Follow(mario.marioPosition, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height));
 
             foreach (var item in fireballs)
@@ -223,7 +249,8 @@ public class Game1 : Game
             }
         }
 
-        toggleFalling.updateMarioFalling(mario);
+        //toggleFalling.updateMarioFalling(mario);
+        toggleFalling.updates();
         base.Update(gameTime);
     }
 
@@ -246,14 +273,12 @@ public class Game1 : Game
         {
             if (gameStateMachine.isLevelOne())
             {
-
-
                 levelOne.DrawLevel(spriteBatch, camera);
             }
 
             if (gameStateMachine.isLevelTwo())
             {
-
+                levelTwo.DrawLevel(spriteBatch, camera);
             }
 
             foreach (var item in fireballs)

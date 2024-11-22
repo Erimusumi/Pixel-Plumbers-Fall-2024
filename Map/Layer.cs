@@ -35,7 +35,6 @@ public class Layer
         while ((line = reader.ReadLine()) != null)
         {
             string[] items = line.Split(',');
-
             for (int x = 0; x < items.Length; x++)
             {
                 if (int.TryParse(items[x], out int value))
@@ -46,7 +45,6 @@ public class Layer
                     }
                 }
             }
-
             y++;
         }
     }
