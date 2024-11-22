@@ -5,15 +5,18 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Pixel_Plumbers_Fall_2024;
 
-public class Goomba2 : ISpriteEnemy
+public class Goomba : ISpriteEnemy
 {
-    private GoombaStateMachine2 stateMachine;
+    private GoombaStateMachine stateMachine;
 	private float groundPosition = 385f;
-	public Goomba2(int posX, int posY)
+	public Goomba(int posX, int posY, IPlayer player, GameTime gameTime)
 	{
-		stateMachine = new GoombaStateMachine2(posX, posY);
+		stateMachine = new GoombaStateMachine(posX, posY, player, gameTime);
 	}
-
+	public Boolean IsFlipped()
+	{
+		return stateMachine.IsFlipped();
+	}
 	public void changeDirection()
 	{
 		stateMachine.changeDirection();
