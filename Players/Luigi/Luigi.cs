@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Pixel_Plumbers_Fall_2024;
 
-public class Luigi : IEntity
+public class Luigi : IPlayer
 {
     private Texture2D marioTexture;
     private Texture2D itemTexture;
@@ -21,7 +21,7 @@ public class Luigi : IEntity
 
     private Vector2 initialPosition;
     public Vector2 luigiPosition;
-    public Vector2 luigiVelocity;
+    private Vector2 luigiVelocity;
     private float groundPosition = 385f;
     private float gravity = 980f;
     private float jumpSpeed = -570f;
@@ -196,7 +196,7 @@ public class Luigi : IEntity
         Task.Delay(1000).ContinueWith(t => canPowerUp = true);
     }
 
-    public void LuigiTakeDamage()
+    public void TakeDamage()
     {
         if (luigiStateMachine.IsDead()) return;
 
@@ -391,7 +391,14 @@ public class Luigi : IEntity
     {
         return luigiStateMachine.HasStar();
     }
-
+    public void SetVelocityY(float velocityY)
+    {
+        luigiVelocity.Y = velocityY;
+    }
+    public void SetVelocityX(float velocityX)
+    {
+        luigiVelocity.X = velocityX;
+    }
     public void CollectStar()
     {
         starTimer = 450;

@@ -3,15 +3,15 @@ using System;
 using System.Diagnostics;
 using System.Security.Cryptography.X509Certificates;
 
-public class MarioBlockInteraction
+public class PlayerBlockInteraction
 {
-    private Mario mario;
+    private IPlayer player;
     private IBlock block;
     private Rectangle marioRect;
     private Rectangle blockRect;
     public Boolean isLuckyBlock;
 
-    public MarioBlockInteraction(Mario mario, IBlock block, Boolean isLuckyBlock)
+    public PlayerBlockInteraction(IPlayer player, IBlock block, Boolean isLuckyBlock)
     {
         this.mario = mario;
         this.block = block;
@@ -36,7 +36,7 @@ public class MarioBlockInteraction
         {
             // Collision from the top
             mario.marioPosition.Y = blockRect.Top - marioRect.Height;
-            mario.marioVelocity.Y = 0; // Mario stands on top of the obstacle
+            mario.SetVelocityY(0); // Mario stands on top of the obstacle
             mario.isOnGround = true;
             mario.jumpStop();
         }
@@ -44,9 +44,9 @@ public class MarioBlockInteraction
         {
             // Collision from the bottom (Mario jumps into the obstacle)
             mario.marioPosition.Y = blockRect.Bottom;
-            mario.marioVelocity.Y = 0; // Prevent Mario from going higher
+            mario.SetVelocityY(0); // Prevent Mario from going higher
 
-            if(block is LuckyBlockSprite luckyBlock)
+            if (block is LuckyBlockSprite luckyBlock)
             {
                 luckyBlock.bump = true;
                 
@@ -58,24 +58,24 @@ public class MarioBlockInteraction
         {
             // Collision from the left
             mario.marioPosition.X = blockRect.Left - marioRect.Width;
-            mario.marioVelocity.X = 0; // Stop horizontal movement
+            mario.SetVelocityX(0); // Stop horizontal movement
         }
         else if (minOverlap == overlapRight)
         {
             // Collision from the right
             mario.marioPosition.X = blockRect.Right;
-            mario.marioVelocity.X = 0; // Stop horizontal movement
+            mario.SetVelocityX(0); // Stop horizontal movement
         }
     }
 
     private void StopMarioHorizontalMovement()
     {
-        mario.marioVelocity.X = 0;
+        mario.SetVelocityX(0);
     }
 
     private void StopMarioVerticalMovement()
     {
         // Set Mario's vertical velocity to 0
-        mario.marioVelocity.Y = 0;
+        mario.SetVelocityY(0);
     }
 }

@@ -8,7 +8,7 @@ public class MarioTakeDamageCommand : IPlayerCommand
     }
     public void Execute()
     {
-        mario.MarioTakeDamage();
+        mario.TakeDamage();
     }
 
     public void Unexecute()

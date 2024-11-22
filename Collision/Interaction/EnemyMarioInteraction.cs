@@ -9,19 +9,19 @@ using Pixel_Plumbers_Fall_2024;
 public class EnemyMarioInteraction
 {
     ISpriteEnemy enemy;
-    Mario mario;
+    IPlayer player;
     Rectangle Overlap;
     List<IEntity> entitiesRemoved;
-    public EnemyMarioInteraction(ISpriteEnemy _enemy, Mario _mario, Rectangle _Overlap, List<IEntity> _entitiesRemoved)
+    public EnemyMarioInteraction(ISpriteEnemy _enemy, IPlayer _player, Rectangle _Overlap, List<IEntity> _entitiesRemoved)
     {
         enemy = _enemy;
-        mario = _mario;
+        player = _player;
         Overlap = _Overlap;
         entitiesRemoved = _entitiesRemoved;
     }
     public void Update()
     {
-        if (mario.HasStar())
+        if (player.HasStar())
         {
             enemy.beFlipped();
             entitiesRemoved.Add(enemy);
@@ -29,12 +29,12 @@ public class EnemyMarioInteraction
         } else if (Overlap.Width >= Overlap.Height)
         {
             enemy.beStomped();
-            mario.marioVelocity.Y = -450;
+            player.SetVelocityY(-450);
             entitiesRemoved.Add(enemy);
 
         } else
         {
-            mario.MarioTakeDamage();
+            player.TakeDamage();
         }
     }
 }

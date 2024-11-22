@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Pixel_Plumbers_Fall_2024;
 
-public class Mario : IEntity
+public class Mario : IPlayer
 {
     private Texture2D marioTexture;
     private Texture2D itemTexture;
@@ -21,7 +21,7 @@ public class Mario : IEntity
 
     private Vector2 initialPosition;
     public Vector2 marioPosition;
-    public Vector2 marioVelocity;
+    private Vector2 marioVelocity;
     private float groundPosition = 385f;
     private float gravity = 980f;
     private float jumpSpeed = -570f;
@@ -229,7 +229,7 @@ public class Mario : IEntity
         Task.Delay(1000).ContinueWith(t => canPowerUp = true); // Reset after 1 second
     }
 
-    public void MarioTakeDamage()
+    public void TakeDamage()
     {
         if (marioStateMachine.IsDead()) return;
 
@@ -437,6 +437,16 @@ public class Mario : IEntity
     public bool HasStar()
     {
         return marioStateMachine.HasStar();
+    }
+
+    public void SetVelocityY(float velocityY)
+    {
+        marioVelocity.Y = velocityY;
+    }
+
+    public void SetVelocityX(float velocityX)
+    {
+        marioVelocity.X = velocityX;
     }
 
     public void CollectStar()

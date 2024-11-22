@@ -37,7 +37,7 @@ public class MarioObstacleInteraction
         {
             // Collision from the top
             mario.marioPosition.Y = obstacleRect.Top - marioRect.Height;
-            mario.marioVelocity.Y = 0; // Mario stands on top of the obstacle
+            mario.SetVelocityY(0); // Mario stands on top of the obstacle
             mario.isOnGround = true;
             wasOnTop = true; // Mario is on the obstacle
             mario.jumpStop();
@@ -46,19 +46,19 @@ public class MarioObstacleInteraction
         {
             // Collision from the bottom (Mario jumps into the obstacle)
             mario.marioPosition.Y = obstacleRect.Bottom;
-            mario.marioVelocity.Y = 0; // Prevent Mario from going higher
+            mario.SetVelocityX(0); // Prevent Mario from going higher
         }
         else if (minOverlap == overlapLeft)
         {
             // Collision from the left
             mario.marioPosition.X = obstacleRect.Left - marioRect.Width;
-            mario.marioVelocity.X = 0; // Stop horizontal movement
+            mario.SetVelocityX(0); // Stop horizontal movement
         }
         else if (minOverlap == overlapRight)
         {
             // Collision from the right
             mario.marioPosition.X = obstacleRect.Right;
-            mario.marioVelocity.X = 0; // Stop horizontal movement
+            mario.SetVelocityX(0); // Stop horizontal movement
         }
         if (!marioRect.Intersects(obstacleRect))
         {
