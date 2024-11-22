@@ -247,10 +247,7 @@ public class Game1 : Game
         {
             if (gameStateMachine.isLevelOne())
             {
-
-
                 levelOne.DrawLevel(spriteBatch, camera);
-                
             }
 
             if (gameStateMachine.isLevelTwo())
