@@ -140,7 +140,7 @@ public class LevelOne : ILevel
 
     public void InitializeLevel()
     {
-        flagSprite = new FlagSprite(spriteBatch, overworldTiles, new Vector2(6330, 361));
+        flagSprite = new FlagSprite(spriteBatch, overworldTiles, new Vector2(6330, 354));
         Bloop1 = new Blooper(240, 200, mario);
 
         Goomba1 = new Goomba(535, 400, (IPlayer)mario);
