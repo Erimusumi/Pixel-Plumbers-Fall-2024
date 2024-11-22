@@ -388,7 +388,7 @@ public class LevelOne : ILevel
         {
             entities.Add(mario);
         }
-        
+
         lvl1backdrop = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Backdrop.csv");
         lvl1greenery = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Greenery.csv");
         lvl1foreground = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Foreground.csv");
@@ -581,7 +581,7 @@ public class LevelOne : ILevel
         return new List<IEntity>(entities);
     }
 
-    public List<Rectangle> GetLevelOneRectangles()
+    public List<Rectangle> GetLevelFloorRectangles()
     {
         return lvl1foreground.GetRedRectangles();
     }

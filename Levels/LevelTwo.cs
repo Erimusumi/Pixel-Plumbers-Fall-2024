@@ -22,6 +22,8 @@ public class LevelTwo : ILevel
 
     private List<IEntity> entities = new List<IEntity>();
     private List<IEntity> entitiesRemoved;
+    private List<IEntity> floorRectangles;
+
 
     private SpriteBatch spriteBatch;
     private Texture2D EnemyTexture;
@@ -127,6 +129,11 @@ public class LevelTwo : ILevel
         {
             mario.Draw(spriteBatch);
         }
-
     }
+
+    public List<Rectangle> GetLevelFloorRectangles()
+    {
+        return lvl2foreground1.GetRedRectangles();
+    }
+
 }

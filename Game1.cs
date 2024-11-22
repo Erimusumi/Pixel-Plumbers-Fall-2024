@@ -50,7 +50,8 @@ public class Game1 : Game
     private List<IEntity> entitiesRemoved = new List<IEntity>();
     private List<SoundEffect> marioSounds = new List<SoundEffect>();
     private List<SoundEffect> ItemSounds = new List<SoundEffect>();
-    private List<Rectangle> collidableRectangles;
+    private List<Rectangle> lvl1CollidableRectangles;
+    private List<Rectangle> lvl2CollidableRectangles;
 
     private Sort sort = new Sort();
     private Sweep sweep;
@@ -126,10 +127,12 @@ public class Game1 : Game
         levelTwo = new LevelTwo(this, mario, luigi, entities, entitiesRemoved, spriteBatch, gameTime, Content, textureManager, gameStateMachine);
         levelTwo.InitializeLevel();
 
-        collidableRectangles = new List<Rectangle>();
-        collidableRectangles = levelOne.GetLevelOneRectangles();
+        lvl1CollidableRectangles = new List<Rectangle>();
+        lvl1CollidableRectangles = levelOne.GetLevelFloorRectangles();
+        lvl2CollidableRectangles = new List<Rectangle>();
+        lvl2CollidableRectangles = levelTwo.GetLevelFloorRectangles();
 
-        ground = new Ground(collidableRectangles);
+        ground = new Ground(lvl2CollidableRectangles);
         toggleFalling = new ToggleFalling(ground, entities, this.mario);
     }
 
