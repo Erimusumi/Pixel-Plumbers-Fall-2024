@@ -40,6 +40,8 @@ public class LevelTwo : ILevel
     private Layer lvl2foreground2;
     private FlagSprite flagSprite;
 
+    Boolean moved = false;
+
     public LevelTwo(
         Game1 game,
         Mario mario,
@@ -112,9 +114,16 @@ public class LevelTwo : ILevel
             mario.Update(gameTime); ;
         }
 
-        if(mario.marioPosition.X > 1){
-            mario.SetPositionY(10);
+        if (moved == false)
+        {
+            if (mario.marioPosition.X > 10)
+            {
+                mario.SetPositionY(862);
+                mario.SetPositionX(20);
+                moved = true;
+            }
         }
+
     }
     public void DrawLevel(SpriteBatch sB, FollowCamera camera)
     {

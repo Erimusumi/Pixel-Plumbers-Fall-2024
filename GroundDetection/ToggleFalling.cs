@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 
 
-    public class ToggleFalling
+public class ToggleFalling
 {
     private List<Rectangle> collisionRects;
     private List<IEntity> entities;
@@ -16,13 +16,13 @@ using Microsoft.Xna.Framework;
     private Mario mario;
     private Ground ground;
     private float fallingGroundPosition = 480f;
-    
+
     FilterEntities filterEntities;
     Boolean marioIsColliding = true;
     Boolean emptyCollision = false;
-    int marHitCount= 0;
+    int marHitCount = 0;
     int itemHitCount = 0;
-   
+
 
     public ToggleFalling(Ground g, List<IEntity> entities, Mario mario)
     {
@@ -30,12 +30,12 @@ using Microsoft.Xna.Framework;
         this.collisionRects = g.allCollisionRectangles();
         this.entities = entities;
         filterEntities = new FilterEntities();
-       enemies = filterEntities.FilterEnemies(entities);
-       items = filterEntities.FilterItems(entities);
+        enemies = filterEntities.FilterEnemies(entities);
+        items = filterEntities.FilterItems(entities);
         this.mario = mario;
-       
+
     }
-  
+
 
     public void updates()
     {
@@ -46,7 +46,7 @@ using Microsoft.Xna.Framework;
 
     public void updateEnemyFalling()
     {
-        
+
 
         for (int i = 0; i < enemies.Count; i++)
         {
@@ -55,7 +55,7 @@ using Microsoft.Xna.Framework;
                 {
                     if (enemies[i].GetDestination().Intersects(collisionRects[j]))
                     {
-                       
+
                     }
                 }
 
@@ -64,7 +64,7 @@ using Microsoft.Xna.Framework;
     }
     public void updateItemFalling(List<IEntity> item)
     {
-       // Boolean itemColliding = true;
+        // Boolean itemColliding = true;
 
 
         for (int i = 0; i < items.Count; i++)
@@ -81,34 +81,32 @@ using Microsoft.Xna.Framework;
 
             }
         }
-
-
     }
 
     public void updateMarioFalling(Mario mar)
     {
-        
+
         for (int i = 0; i < collisionRects.Count; i++)
         {
-            if(mar.GetDestination().Intersects(collisionRects[i]))
-               {
+            if (mar.GetDestination().Intersects(collisionRects[i]))
+            {
                 if (mar.isSmall())
                 {
                     mar.updateGroundPosition(385f);
                 }
                 else
                 {
-                    mar.updateGroundPosition(385f -32);
+                    mar.updateGroundPosition(385f - 32);
                 }
-                
+
                 marioIsColliding = true;
                 marHitCount++;
 
                 break;
             }
-           
+
         }
-        if(marHitCount == 0)
+        if (marHitCount == 0)
         {
             marioIsColliding = false;
         }
@@ -117,7 +115,7 @@ using Microsoft.Xna.Framework;
 
             mar.updateGroundPosition(480f);
         }
-        marHitCount = 0;       
+        marHitCount = 0;
     }
 
 }
