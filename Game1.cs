@@ -121,7 +121,7 @@ public class Game1 : Game
         keyboardControllerMovement = new KeyboardControllerMovement();
         controlCenter = new CommandControlCenter(this);
 
-        levelOne = new LevelOne(this, mario, luigi, entities, entitiesRemoved, spriteBatch, gameTime, Content, textureManager);
+        levelOne = new LevelOne(this, mario, luigi, entities, entitiesRemoved, spriteBatch, gameTime, Content, textureManager, gameStateMachine);
         levelOne.InitializeLevel();
 
         collidableRectangles = new List<Rectangle>();

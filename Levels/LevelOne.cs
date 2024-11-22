@@ -10,6 +10,7 @@ public class LevelOne : ILevel
     private Mario mario;
     private Luigi luigi;
     private TextureManager textureManager;
+    private GameStateMachine gameStateMachine;
     private ContentManager Content;
 
     private List<IEntity> entities = new List<IEntity>();
@@ -113,7 +114,8 @@ public class LevelOne : ILevel
         SpriteBatch spriteBatch,
         GameTime gameTime,
         ContentManager Content,
-        TextureManager textureManager
+        TextureManager textureManager,
+        GameStateMachine gameStateMachine
     )
 
     {
@@ -124,6 +126,7 @@ public class LevelOne : ILevel
         this.obstacleTexture = textureManager.GetTexture("Obstacle");
         this.overworldTiles = textureManager.GetTexture("OverworldTiles");
 
+        this.gameStateMachine = gameStateMachine;
         this.entities = entities;
         this.mario = mario;
         this.luigi = luigi;
@@ -301,8 +304,6 @@ public class LevelOne : ILevel
         obstacle4 = new obstacle4(obstacleTexture);
         obstacle6 = new obstacle1(obstacleTexture);
 
-        entities.Add(mario);
-        entities.Add(luigi);
         entities.Add(Goomba1);
         entities.Add(Goomba2);
         entities.Add(Goomba3);
@@ -374,6 +375,16 @@ public class LevelOne : ILevel
         entities.Add(obstacle3);
         entities.Add(obstacle6);
 
+
+        if (gameStateMachine.isMultiplayer())
+        {
+            entities.Add(mario);
+            entities.Add(luigi);
+        }
+        else if (gameStateMachine.isSingleplayer())
+        {
+            entities.Add(mario);
+        }
         lvl1backdrop = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Backdrop.csv");
         lvl1greenery = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Greenery.csv");
         lvl1foreground = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Foreground.csv");
@@ -385,11 +396,19 @@ public class LevelOne : ILevel
 
     public void UpdateLevel(GameTime gameTime)
     {
+        if (gameStateMachine.isMultiplayer())
+        {
+            mario.isOnGround = false;
+            mario.Update(gameTime);
+            luigi.isOnGround = false;
+            luigi.Update(gameTime);
+        }
+        else if (gameStateMachine.isSingleplayer())
+        {
+            mario.isOnGround = false;
+            mario.Update(gameTime); ;
+        }
 
-        mario.isOnGround = false;
-        mario.Update(gameTime);
-        luigi.isOnGround = false;
-        luigi.Update(gameTime);
 
         Goomba1.Updates();
         Goomba2.Updates();
@@ -468,8 +487,16 @@ public class LevelOne : ILevel
         lvl1backdrop.Draw(spriteBatch, overworldTiles, Vector2.Zero);
         lvl1greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
         lvl1foreground.Draw(spriteBatch, overworldTiles, Vector2.Zero);
-        mario.Draw(spriteBatch);
-        luigi.Draw(spriteBatch);
+
+        if (gameStateMachine.isMultiplayer())
+        {
+            mario.Draw(spriteBatch);
+            luigi.Draw(spriteBatch);
+        }
+        else if (gameStateMachine.isSingleplayer())
+        {
+            mario.Draw(spriteBatch);
+        }
 
         Goomba1.Draw(spriteBatch, EnemyTexture);
         Goomba2.Draw(spriteBatch, EnemyTexture);
