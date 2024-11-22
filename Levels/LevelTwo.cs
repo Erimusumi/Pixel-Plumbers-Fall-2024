@@ -114,15 +114,15 @@ public class LevelTwo : ILevel
             mario.Update(gameTime); ;
         }
 
-        if (moved == false)
-        {
-            if (mario.marioPosition.X > 10)
-            {
-                mario.SetPositionY(862);
-                mario.SetPositionX(20);
-                moved = true;
-            }
-        }
+        // if (moved == false)
+        // {
+        //     if (mario.marioPosition.X > 10)
+        //     {
+        //         mario.SetPositionY(862);
+        //         mario.SetPositionX(20);
+        //         moved = true;
+        //     }
+        // }
 
     }
     public void DrawLevel(SpriteBatch sB, FollowCamera camera)

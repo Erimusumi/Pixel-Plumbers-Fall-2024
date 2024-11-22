@@ -132,8 +132,7 @@ public class Game1 : Game
         lvl2CollidableRectangles = new List<Rectangle>();
         lvl2CollidableRectangles = levelTwo.GetLevelFloorRectangles();
 
-        ground = new Ground(lvl2CollidableRectangles);
-        toggleFalling = new ToggleFalling(ground, entities, this.mario);
+
     }
 
     public void SetKey(KeyboardController keys)
@@ -185,6 +184,19 @@ public class Game1 : Game
 
     protected override void Update(GameTime gameTime)
     {
+        ground = new Ground(lvl1CollidableRectangles);
+        toggleFalling = new ToggleFalling(ground, entities, this.mario);
+        if (gameStateMachine.isLevelOne())
+        {
+            ground = new Ground(lvl1CollidableRectangles);
+            toggleFalling = new ToggleFalling(ground, entities, this.mario);
+        }
+        else if (gameStateMachine.isLevelTwo())
+        {
+            ground = new Ground(lvl2CollidableRectangles);
+            toggleFalling = new ToggleFalling(ground, entities, this.mario);
+        }
+
         gameStateKeyboardController.Update();
         gameStateMouseController.Update();
 
