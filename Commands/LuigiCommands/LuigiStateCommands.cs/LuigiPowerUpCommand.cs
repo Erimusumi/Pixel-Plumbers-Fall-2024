@@ -9,7 +9,7 @@ public class LuigiPowerUpCommand : IPlayerCommand
 
     public void Execute()
     {
-        luigi.LuigiPowerUp();
+        luigi.PowerUp();
     }
 
     public void Unexecute()

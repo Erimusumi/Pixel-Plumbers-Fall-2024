@@ -7,27 +7,27 @@ public class PlayerBlockInteraction
 {
     private IPlayer player;
     private IBlock block;
-    private Rectangle marioRect;
+    private Rectangle playerRect;
     private Rectangle blockRect;
     public Boolean isLuckyBlock;
 
     public PlayerBlockInteraction(IPlayer player, IBlock block, Boolean isLuckyBlock)
     {
-        this.mario = mario;
+        this.player = player;
         this.block = block;
-        marioRect = mario.GetDestination();
+        playerRect = player.GetDestination();
         blockRect = block.GetDestination();
         this.isLuckyBlock = isLuckyBlock;
     }
 
-    // Method to handle Mario and Block collision
+    // Method to handle player and Block collision
     public void update()
     {
         // Calculate overlap distances
-        float overlapLeft = marioRect.Right - blockRect.Left;
-        float overlapRight = blockRect.Right - marioRect.Left;
-        float overlapTop = marioRect.Bottom - blockRect.Top;
-        float overlapBottom = blockRect.Bottom - marioRect.Top;
+        float overlapLeft = playerRect.Right - blockRect.Left;
+        float overlapRight = blockRect.Right - playerRect.Left;
+        float overlapTop = playerRect.Bottom - blockRect.Top;
+        float overlapBottom = blockRect.Bottom - playerRect.Top;
 
         // Determine the smallest overlap to find the collision side
         float minOverlap = Math.Min(Math.Min(overlapLeft, overlapRight), Math.Min(overlapTop, overlapBottom));
@@ -35,47 +35,47 @@ public class PlayerBlockInteraction
         if (minOverlap == overlapTop)
         {
             // Collision from the top
-            mario.marioPosition.Y = blockRect.Top - marioRect.Height;
-            mario.SetVelocityY(0); // Mario stands on top of the obstacle
-            mario.isOnGround = true;
-            mario.jumpStop();
+            player.SetPositionY(blockRect.Top - playerRect.Height);
+            player.SetVelocityY(0); // player stands on top of the obstacle
+            player.SetIsOnGround(true);
+            player.JumpStop();
         }
         else if (minOverlap == overlapBottom)
         {
-            // Collision from the bottom (Mario jumps into the obstacle)
-            mario.marioPosition.Y = blockRect.Bottom;
-            mario.SetVelocityY(0); // Prevent Mario from going higher
+            // Collision from the bottom (player jumps into the obstacle)
+            player.SetPositionY(blockRect.Bottom);
+            player.SetVelocityY(0); // Prevent player from going higher
 
             if (block is LuckyBlockSprite luckyBlock)
             {
                 luckyBlock.bump = true;
-                
+
             }
-            
-            
+
+
         }
         else if (minOverlap == overlapLeft)
         {
             // Collision from the left
-            mario.marioPosition.X = blockRect.Left - marioRect.Width;
-            mario.SetVelocityX(0); // Stop horizontal movement
+            player.SetPositionX(blockRect.Left - playerRect.Width);
+            player.SetVelocityX(0); // Stop horizontal movement
         }
         else if (minOverlap == overlapRight)
         {
             // Collision from the right
-            mario.marioPosition.X = blockRect.Right;
-            mario.SetVelocityX(0); // Stop horizontal movement
+            player.SetPositionX(blockRect.Right);
+            player.SetVelocityX(0); // Stop horizontal movement
         }
     }
 
-    private void StopMarioHorizontalMovement()
+    private void StopPlayerHorizontalMovement()
     {
-        mario.SetVelocityX(0);
+        player.SetVelocityX(0);
     }
 
-    private void StopMarioVerticalMovement()
+    private void StopPlayerVerticalMovement()
     {
-        // Set Mario's vertical velocity to 0
-        mario.SetVelocityY(0);
+        // Set player's vertical velocity to 0
+        player.SetVelocityY(0);
     }
 }

@@ -2,9 +2,9 @@
 using Pixel_Plumbers_Fall_2024;
 using System;
 
-public class MarioObstacleInteraction
+public class PlayerObstacleInteraction
 {
-    private Mario mario;
+    private IPlayer player;
     private IObstacle obstacle;
     private Rectangle marioRect;
     private Rectangle obstacleRect;
@@ -12,12 +12,12 @@ public class MarioObstacleInteraction
 
     private bool wasOnTop = false; // Track if Mario was on top of the obstacle
 
-    public MarioObstacleInteraction(Mario mario, IObstacle obstacle, GameTime gameTime)
+    public PlayerObstacleInteraction(IPlayer player, IObstacle obstacle, GameTime gameTime)
     {
-        this.mario = mario;
+        this.player = player;
         this.obstacle = obstacle;
         this.gameTime = gameTime; // Store the GameTime reference
-        marioRect = mario.GetDestination();
+        marioRect = player.GetDestination();
         obstacleRect = obstacle.GetDestination();
     }
 
@@ -36,44 +36,44 @@ public class MarioObstacleInteraction
         if (minOverlap == overlapTop)
         {
             // Collision from the top
-            mario.marioPosition.Y = obstacleRect.Top - marioRect.Height;
-            mario.SetVelocityY(0); // Mario stands on top of the obstacle
-            mario.isOnGround = true;
+            player.SetPositionY(obstacleRect.Top - marioRect.Height);
+            player.SetVelocityY(0); // Mario stands on top of the obstacle
+            player.SetIsOnGround(true);
             wasOnTop = true; // Mario is on the obstacle
-            mario.jumpStop();
+            player.JumpStop();
         }
         else if (minOverlap == overlapBottom)
         {
             // Collision from the bottom (Mario jumps into the obstacle)
-            mario.marioPosition.Y = obstacleRect.Bottom;
-            mario.SetVelocityX(0); // Prevent Mario from going higher
+            player.SetPositionY(obstacleRect.Bottom);
+            player.SetVelocityX(0); // Prevent Mario from going higher
         }
         else if (minOverlap == overlapLeft)
         {
             // Collision from the left
-            mario.marioPosition.X = obstacleRect.Left - marioRect.Width;
-            mario.SetVelocityX(0); // Stop horizontal movement
+            player.SetPositionX(obstacleRect.Left - marioRect.Width);
+            player.SetVelocityX(0); // Stop horizontal movement
         }
         else if (minOverlap == overlapRight)
         {
             // Collision from the right
-            mario.marioPosition.X = obstacleRect.Right;
-            mario.SetVelocityX(0); // Stop horizontal movement
+            player.SetPositionX(obstacleRect.Right);
+            player.SetVelocityX(0); // Stop horizontal movement
         }
         if (!marioRect.Intersects(obstacleRect))
         {
             // Mario is no longer colliding with the obstacle from the top
             if (wasOnTop)
             {
-                mario.isOnGround = false; // Mario is no longer on the obstacle
+                player.SetIsOnGround(false); // Mario is no longer on the obstacle
                 wasOnTop = false;
             }
         }
 
         // If Mario is not on the obstacle, apply gravity
-        if (!mario.isOnGround)
+        if (!player.GetIsOnGround())
         {
-            mario.ApplyGravity(gameTime); // Use the stored GameTime reference
+            player.ApplyGravity(gameTime); // Use the stored GameTime reference
         }
     }
 }

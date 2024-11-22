@@ -6,17 +6,17 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-public class MarioMushroomInteraction
+public class PlayerMushroomInteraction
 {
-    private Mario mario;
+    private IPlayer player;
     private Mushroom mushroom;
     private List<IEntity> entitiesRemoved;
     int mushroomIndex;
     int marioIndex;
     
-    public MarioMushroomInteraction(Mario mar, Mushroom mush, List<IEntity> entitiesRemoved)
+    public PlayerMushroomInteraction(IPlayer play, Mushroom mush, List<IEntity> entitiesRemoved)
     {
-        mario = mar;
+        player = play;
         mushroom = mush;
         this.entitiesRemoved = entitiesRemoved;
     }
@@ -27,9 +27,9 @@ public class MarioMushroomInteraction
         mushroom.collect();
 
 
-        if (mario.GetMarioGameState() == MarioStateMachine.MarioGameState.Small)
+        if (player.GetGameState() == PlayerStateMachine.PlayerGameState.Small)
         {
-            mario.MarioPowerUp();
+            player.PowerUp();
         }
 
         removeFromList();

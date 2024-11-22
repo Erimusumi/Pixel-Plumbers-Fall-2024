@@ -9,7 +9,7 @@ public class LuigiTakeDamageCommand : IPlayerCommand
 
     public void Execute()
     {
-        luigi.LuigiTakeDamage();
+        luigi.TakeDamage();
     }
 
     public void Unexecute()

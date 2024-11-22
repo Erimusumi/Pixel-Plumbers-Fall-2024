@@ -6,26 +6,26 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-    public class MarioFirePowerInteraction
+    public class PlayerFirePowerInteraction
 {
-    private Mario mario;
+    private IPlayer player;
     private Fire FirePower;
     private List<IEntity> entitiesRemoved;
 
 
-    public MarioFirePowerInteraction(Mario mar, Fire fp, List<IEntity> entitiesRemoved)
+    public PlayerFirePowerInteraction(IPlayer play, Fire fp, List<IEntity> entitiesRemoved)
     {
         FirePower = fp;
-        mario = mar;
+        player = play;
         this.entitiesRemoved = entitiesRemoved;
     }
     public void update()
     {
         FirePower.collect();
-        mario.MarioPowerUp();
-        if (mario.isFire())
+        player.PowerUp();
+        if (player.isFire())
         {
-            mario.MarioPowerUp();
+            player.PowerUp();
         }
     }
     private void removeFromList()

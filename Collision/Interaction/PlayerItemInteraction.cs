@@ -6,31 +6,31 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-public class MarioItemInteraction
+public class PlayerItemInteraction
 {
-    private Mario mario;
+    private IPlayer player;
     private IItem item;
     private List<IEntity> entitiesRemoved;
-    public MarioItemInteraction(IItem item, Mario mario, List<IEntity> entitiesRemoved)
+    public PlayerItemInteraction(IItem item, IPlayer player, List<IEntity> entitiesRemoved)
 	{
         this.item = item;
-        this.mario = mario;
+        this.player = player;
         this.entitiesRemoved = entitiesRemoved;
     }
     public void update()
     {
         //item.collect();
-        if (mario.GetMarioGameState() == MarioStateMachine.MarioGameState.Small)
+        if (player.GetGameState() == PlayerStateMachine.PlayerGameState.Small)
         {
-            mario.MarioPowerUp();
+            player.PowerUp();
         }
-        else if (mario.GetMarioGameState() == MarioStateMachine.MarioGameState.Big)
+        else if (player.GetGameState() == PlayerStateMachine.PlayerGameState.Big)
         {
-            mario.MarioPowerUp();
+            player.PowerUp();
         }
-        else if (mario.GetMarioGameState() == MarioStateMachine.MarioGameState.Fire)
+        else if (player.GetGameState() == PlayerStateMachine.PlayerGameState.Fire)
         {
-            mario.MarioPowerUp();
+            player.PowerUp();
         }
         removeFromList();
     }

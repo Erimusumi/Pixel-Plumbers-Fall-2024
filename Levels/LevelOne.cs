@@ -398,14 +398,14 @@ public class LevelOne : ILevel
     {
         if (gameStateMachine.isMultiplayer())
         {
-            mario.isOnGround = false;
+            mario.SetIsOnGround(false);
             mario.Update(gameTime);
-            luigi.isOnGround = false;
+            luigi.SetIsOnGround(false);
             luigi.Update(gameTime);
         }
         else if (gameStateMachine.isSingleplayer())
         {
-            mario.isOnGround = false;
+            mario.SetIsOnGround(false);
             mario.Update(gameTime); ;
         }
 
