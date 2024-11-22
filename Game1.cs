@@ -30,7 +30,6 @@ public class Game1 : Game
     public Vector2 initial_mario_position;
     private ISpriteAnimation Dance;
 
-
     private MarioControlCenter marioControlCenter;
     private LuigiControlCenter luigiControlCenter;
 
@@ -94,7 +93,7 @@ public class Game1 : Game
         }
         else if (gameStateMachine.isLevelTwo())
         {
-
+            levelTwo.InitializeLevel();
         }
 
         fireballs.Clear();
@@ -124,8 +123,12 @@ public class Game1 : Game
         levelOne = new LevelOne(this, mario, luigi, entities, entitiesRemoved, spriteBatch, gameTime, Content, textureManager, gameStateMachine);
         levelOne.InitializeLevel();
 
+        levelTwo = new LevelTwo(this, mario, luigi, entities, entitiesRemoved, spriteBatch, gameTime, Content, textureManager, gameStateMachine);
+        levelTwo.InitializeLevel();
+
         collidableRectangles = new List<Rectangle>();
         collidableRectangles = levelOne.GetLevelOneRectangles();
+
         ground = new Ground(collidableRectangles);
         toggleFalling = new ToggleFalling(ground, entities, this.mario);
     }
@@ -252,7 +255,7 @@ public class Game1 : Game
 
             if (gameStateMachine.isLevelTwo())
             {
-
+                levelTwo.DrawLevel(spriteBatch, camera);
             }
 
             foreach (var item in fireballs)

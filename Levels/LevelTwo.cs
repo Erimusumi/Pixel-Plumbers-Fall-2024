@@ -83,11 +83,11 @@ public class LevelTwo : ILevel
             entities.Add(mario);
         }
 
-        lvl2backdrop1 = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Backdrop.csv");
-        lvl2backdrop2 = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Backdrop.csv");
-        lvl2greenery = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Greenery.csv");
-        lvl2foreground1 = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Foreground.csv");
-        lvl2foreground2 = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Foreground.csv");
+        lvl2backdrop1 = new Layer(32, 16, 16, Content.RootDirectory + "/level2_OWBackdrop.csv");
+        lvl2backdrop2 = new Layer(32, 16, 16, Content.RootDirectory + "/level2_UWBackdrop.csv");
+        lvl2greenery = new Layer(32, 16, 16, Content.RootDirectory + "/level2_OWGreenery.csv");
+        lvl2foreground1 = new Layer(32, 16, 16, Content.RootDirectory + "/level2_OWForeground.csv");
+        lvl2foreground2 = new Layer(32, 16, 16, Content.RootDirectory + "//level2_UWForeground.csv");
 
         lvl2backdrop1.LoadLayer();
         lvl2backdrop2.LoadLayer();
