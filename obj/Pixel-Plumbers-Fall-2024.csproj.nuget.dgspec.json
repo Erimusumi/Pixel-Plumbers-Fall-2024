@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Pixel-Plumbers-Fall-2024.csproj": {}
+    "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Pixel-Plumbers-Fall-2024.csproj": {}
   },
   "projects": {
-    "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Pixel-Plumbers-Fall-2024.csproj": {
+    "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Pixel-Plumbers-Fall-2024.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Pixel-Plumbers-Fall-2024.csproj",
+        "projectUniqueName": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Pixel-Plumbers-Fall-2024.csproj",
         "projectName": "Pixel-Plumbers-Fall-2024",
-        "projectPath": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Pixel-Plumbers-Fall-2024.csproj",
-        "packagesPath": "C:\\Users\\w6614\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\obj\\",
+        "projectPath": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Pixel-Plumbers-Fall-2024.csproj",
+        "packagesPath": "C:\\Users\\helen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\w6614\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\helen\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
