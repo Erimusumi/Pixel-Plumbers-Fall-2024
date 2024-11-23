@@ -178,10 +178,10 @@ public class Mario : IPlayer
         if (!playerStateMachine.IsJumping())
         {
             playerStateMachine.SetPlayerCrouching();
+            }
         }
-    }
 
-    public void ApplyGravity(GameTime gameTime)
+        public void ApplyGravity(GameTime gameTime)
     {
         if (playerStateMachine.IsDead()) return;
 

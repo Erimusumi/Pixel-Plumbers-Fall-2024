@@ -60,6 +60,7 @@ public class PlayerObstacleInteraction
             player.SetPositionX(obstacleRect.Right);
             player.SetVelocityX(0); // Stop horizontal movement
         }
+        
         if (!marioRect.Intersects(obstacleRect))
         {
             // Mario is no longer colliding with the obstacle from the top

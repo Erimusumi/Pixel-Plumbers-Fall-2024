@@ -128,5 +128,33 @@ public class Fire : IItem
         falling = true;
     }
 
+    public void SetVelocityY(float velocityY)
+    {
+        //velocity.Y = velocityY;
+    }
 
+    public void SetVelocityX(float velocityX)
+    {
+        //velocity.X = velocityX;
+    }
+    public void SetPositionY(float positionY)
+    {
+        position.Y = positionY;
+    }
+    public void SetPositionX(float positionX)
+    {
+        position.X = positionX;
+    }
+    public void SetIsOnGround(bool isGround)
+    {
+        //isOnGround = isGround;
+    }
+    public void ApplyGravity(GameTime gameTime)
+    {
+
+    }
+    public bool GetIsOnGround()
+    {
+        return true;
+    }
 }

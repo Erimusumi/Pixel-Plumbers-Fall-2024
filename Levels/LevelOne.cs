@@ -106,6 +106,7 @@ public class LevelOne : ILevel
     private IObstacle obstacle6;
 
     private FlagSprite flagSprite;
+    private GameTime gameTime;
 
     public LevelOne(
         Game1 game,
@@ -134,6 +135,7 @@ public class LevelOne : ILevel
         this.luigi = luigi;
         this.spriteBatch = spriteBatch;
         this.game = game;
+        this.gameTime = gameTime;
         this.entitiesRemoved = entitiesRemoved;
         this.Content = Content;
     }
@@ -143,22 +145,22 @@ public class LevelOne : ILevel
         flagSprite = new FlagSprite(spriteBatch, overworldTiles, new Vector2(6330, 354));
         Bloop1 = new Blooper(240, 200, mario);
 
-        Goomba1 = new Goomba(535, 400, (IPlayer)mario);
-        Goomba2 = new Goomba(1400, 400, (IPlayer)mario);
-        Goomba3 = new Goomba(1700, 400, (IPlayer)mario);
-        Goomba4 = new Goomba(1750, 400, (IPlayer)mario);
-        Goomba5 = new Goomba(2500, 250, (IPlayer)mario);
-        Goomba6 = new Goomba(2600, 120, (IPlayer)mario);
-        Goomba7 = new Goomba(3000, 400, (IPlayer)mario);
-        Goomba8 = new Goomba(3150, 400, (IPlayer)mario);
-        Goomba9 = new Goomba(3520, 400, (IPlayer)mario);
-        Goomba10 = new Goomba(3720, 400, (IPlayer)mario);
-        Goomba11 = new Goomba(4000, 400, (IPlayer)mario);
-        Goomba12 = new Goomba(4050, 400, (IPlayer)mario);
-        Goomba13 = new Goomba(4110, 400, (IPlayer)mario);
-        Goomba14 = new Goomba(4160, 400, (IPlayer)mario);
-        Goomba15 = new Goomba(5400, 400, (IPlayer)mario);
-        Goomba16 = new Goomba(5550, 400, (IPlayer)mario);
+        Goomba1 = new Goomba(535, 400, (IPlayer)mario, gameTime);
+        Goomba2 = new Goomba(1400, 400, (IPlayer)mario, gameTime);
+        Goomba3 = new Goomba(1700, 400, (IPlayer)mario, gameTime);
+        Goomba4 = new Goomba(1750, 400, (IPlayer)mario, gameTime);
+        Goomba5 = new Goomba(2500, 250, (IPlayer)mario, gameTime);
+        Goomba6 = new Goomba(2600, 120, (IPlayer)mario, gameTime);
+        Goomba7 = new Goomba(3000, 400, (IPlayer)mario, gameTime);
+        Goomba8 = new Goomba(3150, 400, (IPlayer)mario, gameTime);
+        Goomba9 = new Goomba(3520, 400, (IPlayer)mario, gameTime);
+        Goomba10 = new Goomba(3720, 400, (IPlayer)mario, gameTime);
+        Goomba11 = new Goomba(4000, 400, (IPlayer)mario, gameTime);
+        Goomba12 = new Goomba(4050, 400, (IPlayer)mario, gameTime);
+        Goomba13 = new Goomba(4110, 400, (IPlayer)mario, gameTime);
+        Goomba14 = new Goomba(4160, 400, (IPlayer)mario, gameTime);
+        Goomba15 = new Goomba(5400, 400, (IPlayer)mario, gameTime);
+        Goomba16 = new Goomba(5550, 400, (IPlayer)mario, gameTime);
 
         OWLuckyBlockSprite1 = new LuckyBlockSprite(
             blockTexture,
