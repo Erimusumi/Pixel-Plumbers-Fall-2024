@@ -17,7 +17,7 @@ using System.Threading.Tasks;
         List<IEntity> itemList = new List<IEntity>();
         for(int i = 0; i < entities.Count(); i++)
         {
-            if(entities[i].GetType() == typeof(IItem))
+            if(entities[i].GetType() == typeof(Star) || entities[i].GetType() == typeof(Mushroom))
             {
                 itemList.Add(entities[i]);
             }
