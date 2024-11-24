@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Pixel-Plumbers-Fall-2024")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7fcedf5650c78e07ff0b54f83710c7d5b4e64454")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a27da85f95fa68000b0c8bdf5d8786f230578e7f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Pixel-Plumbers-Fall-2024")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Pixel-Plumbers-Fall-2024")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
