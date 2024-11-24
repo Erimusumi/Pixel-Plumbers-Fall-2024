@@ -126,7 +126,7 @@ public class Mario : IPlayer
 
         if (isSwimmingLevel && (marioVelocity.X > 0f))
         {
-            marioStateMachine.SetMarioRight();
+            playerStateMachine.SetPlayerRight();
         }
 
         if (!playerStateMachine.IsCrouching())
@@ -159,7 +159,7 @@ public class Mario : IPlayer
 
         if (isSwimmingLevel && (marioVelocity.X < 0f))
         {
-            marioStateMachine.SetMarioLeft();
+            playerStateMachine.SetPlayerLeft();
         }
 
         if (!playerStateMachine.IsCrouching())
@@ -191,10 +191,10 @@ public class Mario : IPlayer
         if (!playerStateMachine.IsJumping())
         {
             playerStateMachine.SetPlayerCrouching();
-            }
         }
+    }
 
-        public void ApplyGravity(GameTime gameTime)
+    public void ApplyGravity(GameTime gameTime)
     {
         if (playerStateMachine.IsDead()) return;
 
@@ -399,7 +399,7 @@ public class Mario : IPlayer
         this.CheckStopTurningUpd();
         this.CheckSwimmingMaxHeight();
         this.MarioDeath();
-        currentMarioSprite = marioSpriteMachine.UpdateMarioSprite(playerStateMachine, marioTexture);
+        currentMarioSprite = marioSpriteMachine.UpdatePlayerSprite(playerStateMachine, marioTexture);
         currentMarioSprite.Update(gameTime);
         fireballTimer += -1;
         starTimer += -1;
@@ -449,7 +449,7 @@ public class Mario : IPlayer
             marioPosition.Y = swimmingMaxHeight;
         }
     }
-    public PlayerStateMachine.PlayerGameState GetMarioGameState()
+    public PlayerStateMachine.PlayerGameState GetGameState()
     {
         return playerStateMachine.CurrentGameState;
     }
@@ -501,7 +501,7 @@ public class Mario : IPlayer
     public void SetSwimmingLevel(bool isLevelSwimming)
     {
         isSwimmingLevel = isLevelSwimming;
-        marioStateMachine.setSwimmingLevel(isLevelSwimming);
+        playerStateMachine.setSwimmingLevel(isLevelSwimming);
 
         if (isSwimmingLevel)
         {

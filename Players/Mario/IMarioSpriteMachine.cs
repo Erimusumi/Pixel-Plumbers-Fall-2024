@@ -7,5 +7,5 @@ using System.Threading.Tasks;
 
 public interface IMarioSpriteMachine
 {
-    public IMarioSprite UpdateMarioSprite(MarioStateMachine marioStateMachine, Texture2D texture);
+    public IMarioSprite UpdatePlayerSprite(PlayerStateMachine playerStateMachine, Texture2D texture);
 }

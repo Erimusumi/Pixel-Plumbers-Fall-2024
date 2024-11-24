@@ -3,18 +3,22 @@ using Pixel_Plumbers_Fall_2024;
 
 namespace Pixel_Plumbers_Fall_2024
 {
-    public class LuigiSpriteMachine : IMarioSpriteMachine
+    public class LuigiSpriteMachineSwimming : IMarioSpriteMachine
     {
+        /*
+         * Exact same as normal mario sprite machine, except the jumping sprites return a swimming sprite
+         */
         private static IMarioSprite lastValidSprite;
+
         public IMarioSprite UpdatePlayerSprite(PlayerStateMachine playerStateMachine, Texture2D texture)
         {
             IMarioSprite newSprite = null;
+            //Mario being dead takes priority over all other sprites
             if (playerStateMachine.IsDead())
             {
                 newSprite = new DeadMario(texture);
             }
-            else
-            {
+            else {
                 newSprite = GetSpriteForFaceState(playerStateMachine, texture);
             }
 
@@ -32,59 +36,59 @@ namespace Pixel_Plumbers_Fall_2024
             return lastValidSprite ?? new IdleLeftBigMario(texture);
         }
 
-        private static IMarioSprite GetSpriteForFaceState(PlayerStateMachine luigiStateMachine, Texture2D texture)
+        private static IMarioSprite GetSpriteForFaceState(PlayerStateMachine marioStateMachine, Texture2D texture)
         {
-            switch (luigiStateMachine.CurrentFaceState)
+            switch (marioStateMachine.CurrentFaceState)
             {
                 case PlayerStateMachine.PlayerFaceState.Right:
-                    return GetSpriteForGameStateRight(luigiStateMachine, texture);
+                    return GetSpriteForGameStateRight(marioStateMachine, texture);
                 case PlayerStateMachine.PlayerFaceState.Left:
-                    return GetSpriteForGameStateLeft(luigiStateMachine, texture);
+                    return GetSpriteForGameStateLeft(marioStateMachine, texture);
                 default:
                     return null;
             }
         }
 
-        private static IMarioSprite GetSpriteForGameStateRight(PlayerStateMachine luigiStateMachine, Texture2D texture)
+        private static IMarioSprite GetSpriteForGameStateRight(PlayerStateMachine marioStateMachine, Texture2D texture)
         {
-            switch (luigiStateMachine.CurrentGameState)
+            switch (marioStateMachine.CurrentGameState)
             {
                 case PlayerStateMachine.PlayerGameState.Small:
-                    return GetSmallLuigiSpriteRight(luigiStateMachine, texture);
+                    return GetSmallMarioSpriteRight(marioStateMachine, texture);
                 case PlayerStateMachine.PlayerGameState.Big:
-                    return GetBigLuigiSpriteRight(luigiStateMachine, texture);
+                    return GetBigMarioSpriteRight(marioStateMachine, texture);
                 case PlayerStateMachine.PlayerGameState.Fire:
-                    return GetFireLuigiSpriteRight(luigiStateMachine, texture);
+                    return GetFireMarioSpriteRight(marioStateMachine, texture);
                 default:
                     return null;
             }
         }
 
-        private static IMarioSprite GetSpriteForGameStateLeft(PlayerStateMachine luigiStateMachine, Texture2D texture)
+        private static IMarioSprite GetSpriteForGameStateLeft(PlayerStateMachine marioStateMachine, Texture2D texture)
         {
-            switch (luigiStateMachine.CurrentGameState)
+            switch (marioStateMachine.CurrentGameState)
             {
                 case PlayerStateMachine.PlayerGameState.Small:
-                    return GetSmallLuigiSpriteLeft(luigiStateMachine, texture);
+                    return GetSmallMarioSpriteLeft(marioStateMachine, texture);
                 case PlayerStateMachine.PlayerGameState.Big:
-                    return GetBigLuigiSpriteLeft(luigiStateMachine, texture);
+                    return GetBigMarioSpriteLeft(marioStateMachine, texture);
                 case PlayerStateMachine.PlayerGameState.Fire:
-                    return GetFireLuigiSpriteLeft(luigiStateMachine, texture);
+                    return GetFireMarioSpriteLeft(marioStateMachine, texture);
                 default:
                     return null;
             }
         }
 
-        private static IMarioSprite GetSmallLuigiSpriteRight(PlayerStateMachine luigiStateMachine, Texture2D texture)
+        private static IMarioSprite GetSmallMarioSpriteRight(PlayerStateMachine marioStateMachine, Texture2D texture)
         {
-            switch (luigiStateMachine.CurrentMoveState)
+            switch (marioStateMachine.CurrentMoveState)
             {
                 case PlayerStateMachine.PlayerMoveState.Idle:
                     return new IdleRightSmallMario(texture);
                 case PlayerStateMachine.PlayerMoveState.Moving:
                     return new MovingRightSmallMario(texture);
                 case PlayerStateMachine.PlayerMoveState.Jumping:
-                    return new JumpingRightSmallMario(texture);
+                    return new SwimmingRightSmallMario(texture);
                 case PlayerStateMachine.PlayerMoveState.Turning:
                     return new TurningLeftSmallMario(texture);
                 default:
@@ -92,16 +96,16 @@ namespace Pixel_Plumbers_Fall_2024
             }
         }
 
-        private static IMarioSprite GetBigLuigiSpriteRight(PlayerStateMachine luigiStateMachine, Texture2D texture)
+        private static IMarioSprite GetBigMarioSpriteRight(PlayerStateMachine marioStateMachine, Texture2D texture)
         {
-            switch (luigiStateMachine.CurrentMoveState)
+            switch (marioStateMachine.CurrentMoveState)
             {
                 case PlayerStateMachine.PlayerMoveState.Idle:
                     return new IdleRightBigMario(texture);
                 case PlayerStateMachine.PlayerMoveState.Moving:
                     return new MovingRightBigMario(texture);
                 case PlayerStateMachine.PlayerMoveState.Jumping:
-                    return new JumpingRightBigMario(texture);
+                    return new SwimmingRightBigMario(texture);
                 case PlayerStateMachine.PlayerMoveState.Crouching:
                     return new CrouchRightBigMario(texture);
                 case PlayerStateMachine.PlayerMoveState.Turning:
@@ -111,16 +115,16 @@ namespace Pixel_Plumbers_Fall_2024
             }
         }
 
-        private static IMarioSprite GetFireLuigiSpriteRight(PlayerStateMachine luigiStateMachine, Texture2D texture)
+        private static IMarioSprite GetFireMarioSpriteRight(PlayerStateMachine marioStateMachine, Texture2D texture)
         {
-            switch (luigiStateMachine.CurrentMoveState)
+            switch (marioStateMachine.CurrentMoveState)
             {
                 case PlayerStateMachine.PlayerMoveState.Idle:
                     return new IdleRightFireMario(texture);
                 case PlayerStateMachine.PlayerMoveState.Moving:
                     return new MovingRightFireMario(texture);
                 case PlayerStateMachine.PlayerMoveState.Jumping:
-                    return new JumpingRightFireMario(texture);
+                    return new SwimmingRightFireMario(texture);
                 case PlayerStateMachine.PlayerMoveState.Crouching:
                     return new CrouchRightFireMario(texture);
                 case PlayerStateMachine.PlayerMoveState.Turning:
@@ -130,16 +134,16 @@ namespace Pixel_Plumbers_Fall_2024
             }
         }
 
-        private static IMarioSprite GetSmallLuigiSpriteLeft(PlayerStateMachine luigiStateMachine, Texture2D texture)
+        private static IMarioSprite GetSmallMarioSpriteLeft(PlayerStateMachine marioStateMachine, Texture2D texture)
         {
-            switch (luigiStateMachine.CurrentMoveState)
+            switch (marioStateMachine.CurrentMoveState)
             {
                 case PlayerStateMachine.PlayerMoveState.Idle:
                     return new IdleLeftSmallMario(texture);
                 case PlayerStateMachine.PlayerMoveState.Moving:
                     return new MovingLeftSmallMario(texture);
                 case PlayerStateMachine.PlayerMoveState.Jumping:
-                    return new JumpingLeftSmallMario(texture);
+                    return new SwimmingLeftSmallMario(texture);
                 case PlayerStateMachine.PlayerMoveState.Turning:
                     return new TurningRightSmallMario(texture);
                 default:
@@ -147,16 +151,16 @@ namespace Pixel_Plumbers_Fall_2024
             }
         }
 
-        private static IMarioSprite GetBigLuigiSpriteLeft(PlayerStateMachine luigiStateMachine, Texture2D texture)
+        private static IMarioSprite GetBigMarioSpriteLeft(PlayerStateMachine marioStateMachine, Texture2D texture)
         {
-            switch (luigiStateMachine.CurrentMoveState)
+            switch (marioStateMachine.CurrentMoveState)
             {
                 case PlayerStateMachine.PlayerMoveState.Idle:
                     return new IdleLeftBigMario(texture);
                 case PlayerStateMachine.PlayerMoveState.Moving:
                     return new MovingLeftBigMario(texture);
                 case PlayerStateMachine.PlayerMoveState.Jumping:
-                    return new JumpingLeftBigMario(texture);
+                    return new SwimmingLeftBigMario(texture);
                 case PlayerStateMachine.PlayerMoveState.Crouching:
                     return new CrouchLeftBigMario(texture);
                 case PlayerStateMachine.PlayerMoveState.Turning:
@@ -166,16 +170,16 @@ namespace Pixel_Plumbers_Fall_2024
             }
         }
 
-        private static IMarioSprite GetFireLuigiSpriteLeft(PlayerStateMachine luigiStateMachine, Texture2D texture)
+        private static IMarioSprite GetFireMarioSpriteLeft(PlayerStateMachine marioStateMachine, Texture2D texture)
         {
-            switch (luigiStateMachine.CurrentMoveState)
+            switch (marioStateMachine.CurrentMoveState)
             {
                 case PlayerStateMachine.PlayerMoveState.Idle:
                     return new IdleLeftFireMario(texture);
                 case PlayerStateMachine.PlayerMoveState.Moving:
                     return new MovingLeftFireMario(texture);
                 case PlayerStateMachine.PlayerMoveState.Jumping:
-                    return new JumpingLeftFireMario(texture);
+                    return new SwimmingLeftFireMario(texture);
                 case PlayerStateMachine.PlayerMoveState.Crouching:
                     return new CrouchLeftFireMario(texture);
                 case PlayerStateMachine.PlayerMoveState.Turning:
