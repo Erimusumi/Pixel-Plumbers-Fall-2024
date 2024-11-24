@@ -19,6 +19,12 @@ public interface IItem: IEntity
     public void MakeFalling();
     public void NotFalling();
 
-
+    public void SetVelocityY(float velocityY);
+    public void SetVelocityX(float velocityX);
+    public void SetPositionY(float positionY);
+    public void SetPositionX(float positionX);
+    public void SetIsOnGround(bool isOnGround);
+    public void ApplyGravity(GameTime gameTime);
+    public bool GetIsOnGround();
 }
 

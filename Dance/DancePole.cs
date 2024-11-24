@@ -26,6 +26,13 @@ public class DancePole : ISpriteAnimation
     int cX = coordsX;
     int cY = coordsY;
 
+    private Vector2 destination;
+
+    public DancePole(Vector2 position)
+    {
+        this.destination = position;
+    }
+
     public void Updates()
     {
         if (counter == 0)
@@ -81,7 +88,6 @@ public class DancePole : ISpriteAnimation
 
     public void Draw(SpriteBatch sb, Texture2D Texture)
     {
-        Vector2 destination = new Vector2(320, 90);
         //sb.Begin();
         sb.Draw(Texture, destination, sourceRectangle, Color.White, 0f, Vector2.Zero, 1.3f, SpriteEffects.None, 0f);
         //sb.End();

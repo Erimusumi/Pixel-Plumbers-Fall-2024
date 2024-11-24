@@ -5,24 +5,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net.Http.Headers;
 
 
-    public class FlagSprite: IEntity
+public class FlagSprite
 {
-
+    
     private Texture2D FlagTexture;
+    private Texture2D DanceTexture;
     private SpriteBatch sb;
     private Vector2 position;
     private Rectangle destinationRectangle;
 
-    public FlagSprite(SpriteBatch spriteBatch, Texture2D flagTexture, Vector2 position)
+    DancePole dance;
+
+    public FlagSprite(SpriteBatch spriteBatch, Texture2D flagTexture,Texture2D danceTexture, Vector2 position)
     {
+        this.DanceTexture = danceTexture;
         this.FlagTexture = flagTexture;
         this.sb = spriteBatch;
         this.position = position;
-    }
-    public void update(GameTime gametime)
-    {
+        dance = new DancePole(new Vector2(position.X-30, position.Y-250));
     }
      private int  drawPole(int x, int y)
     {
@@ -39,7 +42,7 @@ using System.Threading.Tasks;
         int y1 = y - (30 * 7);
         return y1;
     }
-    public void draw()
+    public void drawIdleFlag()
     {
         Rectangle flagSourceRectangle = new Rectangle(128, 32, 15, 15);
        
@@ -50,11 +53,22 @@ using System.Threading.Tasks;
         sb.Draw(FlagTexture, flagDestinationRectangle, flagSourceRectangle, Color.White);
 
     }
+   
+    public void update()
+    {   
+        dance.Updates();
+    }
+    public void drawDanceFlag()
+    {
+
+        dance.Draw(sb, DanceTexture);
+    }
 
 
     public Rectangle GetDestination()
     {
-        return destinationRectangle;
+        //return destinationRectangle;
+        return new Rectangle((int)position.X, (int)position.Y, 30, 240);
     }
 }
 

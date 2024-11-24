@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using Pixel_Plumbers_Fall_2024;
-public class LuckyBlockSprite: IBlock
+using System;
+
+public class LuckyBlockSprite : IBlock
 {
     public Texture2D Texture { get; set; }
     public Vector2 Start { get; set; }
@@ -30,13 +31,17 @@ public class LuckyBlockSprite: IBlock
     private bool hasItemAppeared;
     SpriteBatch spriteBatch;
     private Vector2 i_position;
+
     public LuckyBlockSprite(Texture2D texture, SpriteBatch spriteBatch, Texture2D itemTexture, Game1 game, Mario mario, Vector2 position)
     {
         Texture = texture;
         Start = new Vector2(80, 112);
         End = new Vector2(128, 128);
-        buffer = 0;                 // counts up until timeGap to indicate when to change frames
+        buffer = 0;
         currentFrame = 0;
+        // Set the animation properties
+        numOfFrames = frames;  // Use the frames field
+        waitTime = wait;       // Use the wait field
         width = (int)(End.X - Start.X) / frames;
         height = (int)(End.Y - Start.Y);
         this.game = game;
@@ -46,17 +51,17 @@ public class LuckyBlockSprite: IBlock
         this.position = position;
         destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 31, 31);
     }
-    
+
     public void Update(GameTime gametime)
     {
         buffer++;
-        if (buffer == waitTime)
+        if (buffer >= waitTime)  // Changed from == to >= to ensure it triggers
         {
-            buffer = 0;                     // restarts buffer to start waiting again
+            buffer = 0;
             currentFrame++;
-            if (currentFrame == numOfFrames)
+            if (currentFrame >= numOfFrames)
             {
-                currentFrame = 0;           // restarts the animation from the first frame
+                currentFrame = 0;
             }
         }
 
@@ -76,37 +81,38 @@ public class LuckyBlockSprite: IBlock
                 item = new Star(spriteBatch, itemTexture, i_position);
             }
             game.entities.Add(item);
-
-            hasItemAppeared = true; // Set the flag to prevent drawing again
+            hasItemAppeared = true;
         }
-        if (bump)
+
+        if (bump && item != null)  // Added null check
         {
             item.update(gametime);
         }
-        
     }
+
     public void Draw(SpriteBatch spriteBatch2, Vector2 pos)
     {
-        //sourceRectangle = new Rectangle((int)Start.X + width * (numOfFrames - currentFrame - 1), (int)Start.Y,
-        //        width, height);
-        sourceRectangle = new Rectangle(80, 112, 16, 16);
-        destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 31, 31);
+        sourceRectangle = new Rectangle(
+            (int)Start.X + width * currentFrame,  // Removed the reverse frame calculation
+            (int)Start.Y,
+            width,
+            height
+        );
 
         spriteBatch.Draw(Texture, destinationRectangle, sourceRectangle, Color.White);
 
         if (hasItemAppeared && item != null)
         {
-            item.draw(); // Draw the mushroom consistently once it appears
+            item.draw();
         }
-
-
     }
+
     public Rectangle GetDestination()
     {
         return destinationRectangle;
     }
+
     public void Load(GraphicsDeviceManager graphics)
     {
-
     }
 }

@@ -22,6 +22,7 @@ public class LevelOne : ILevel
     private Texture2D obstacleTexture;
     private Texture2D ItemsTexture;
     private Texture2D overworldTiles;
+    private Texture2D danceTexture;
 
     private Layer lvl1backdrop;
     private Layer lvl1greenery;
@@ -105,7 +106,7 @@ public class LevelOne : ILevel
     private IObstacle obstacle5;
     private IObstacle obstacle6;
 
-    private FlagSprite flagSprite;
+    private Flag flag;
     private GameTime gameTime;
 
     public LevelOne(
@@ -128,6 +129,7 @@ public class LevelOne : ILevel
         this.ItemsTexture = textureManager.GetTexture("Items");
         this.obstacleTexture = textureManager.GetTexture("Obstacle");
         this.overworldTiles = textureManager.GetTexture("OverworldTiles");
+        this.danceTexture = textureManager.GetTexture("dance");
 
         this.gameStateMachine = gameStateMachine;
         this.entities = entities;
@@ -142,7 +144,8 @@ public class LevelOne : ILevel
 
     public void InitializeLevel()
     {
-        flagSprite = new FlagSprite(spriteBatch, overworldTiles, new Vector2(6330, 354));
+        flag = new Flag(new Vector2(6335, 354),overworldTiles,danceTexture, spriteBatch);
+        
         Bloop1 = new Blooper(240, 200, mario);
 
         Goomba1 = new Goomba(535, 400, (IPlayer)mario, gameTime);
@@ -379,6 +382,7 @@ public class LevelOne : ILevel
         entities.Add(obstacle2);
         entities.Add(obstacle3);
         entities.Add(obstacle6);
+        entities.Add(flag);
 
 
         if (gameStateMachine.isMultiplayer())
@@ -486,6 +490,8 @@ public class LevelOne : ILevel
         obstacle2.Update();
         obstacle3.Update();
         obstacle6.Update();
+        flag.Update();
+        
     }
 
     public void DrawLevel(SpriteBatch spriteBatch, FollowCamera camera)
@@ -493,6 +499,7 @@ public class LevelOne : ILevel
         lvl1backdrop.Draw(spriteBatch, overworldTiles, Vector2.Zero);
         lvl1greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
         lvl1foreground.Draw(spriteBatch, overworldTiles, Vector2.Zero);
+        flag.Draw();
 
         if (gameStateMachine.isMultiplayer())
         {
@@ -574,8 +581,6 @@ public class LevelOne : ILevel
         obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
         obstacle3.Draw(spriteBatch, new Vector2(350 + 350, 335));
         obstacle6.Draw(spriteBatch, new Vector2(5740, 370));
-
-        flagSprite.draw();
     }
 
     public List<IEntity> GetAllEntities()

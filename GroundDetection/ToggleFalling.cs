@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using System.Diagnostics;
 
 
 public class ToggleFalling
@@ -32,6 +33,7 @@ public class ToggleFalling
         filterEntities = new FilterEntities();
         enemies = filterEntities.FilterEnemies(entities);
         items = filterEntities.FilterItems(entities);
+        Debug.WriteLine("There are " + items.Count + " items");
         this.mario = mario;
 
     }
@@ -40,22 +42,25 @@ public class ToggleFalling
     public void updates()
     {
         updateMarioFalling(this.mario);
-        updateItemFalling(items);
+        updateItemFalling(this.items);
 
     }
 
     public void updateEnemyFalling()
     {
-
-
+        
+        ISpriteEnemy currentEnemy;
         for (int i = 0; i < enemies.Count; i++)
         {
+            //Boolean enemyColliding = true;
+            currentEnemy = (ISpriteEnemy)enemies[i];        
+           
             {
                 for (int j = 0; j < collisionRects.Count; j++)
                 {
-                    if (enemies[i].GetDestination().Intersects(collisionRects[j]))
+                    if (!currentEnemy.GetDestination().Intersects(collisionRects[j]) && currentEnemy.GetDestination().Intersects(new Rectangle(currentEnemy.GetDestination().X, 385, 16, 16)))
                     {
-
+                        currentEnemy.setGroundPosition(480);
                     }
                 }
 
@@ -64,23 +69,42 @@ public class ToggleFalling
     }
     public void updateItemFalling(List<IEntity> item)
     {
-        // Boolean itemColliding = true;
+         Boolean itemColliding = true;
+        int hitCount = 0;
 
-
-        for (int i = 0; i < items.Count; i++)
+        for (int j = 0; j < items.Count; j++)
         {
-            IItem x = (IItem)item[i];
+            IItem x = (IItem)item[j];
+
+            for (int i = 0; i < collisionRects.Count; i++)
             {
-                for (int j = 0; j < collisionRects.Count; j++)
+               
+                if (x.GetDestination().Intersects(collisionRects[i]))
                 {
-                    if (!x.GetDestination().Intersects(collisionRects[j]) && x.GetDestination().Intersects(new Rectangle(x.GetDestination().X, 385, 16, 16)))
-                    {
-                        x.setGroundPosition(480);
-                    }
+
+                    x.setGroundPosition(385);
+
+
+                    itemColliding = true;
+                    hitCount++;
+
+                    break;
                 }
 
             }
+            if (hitCount == 0)
+            {
+                itemColliding = false;
+            }
+            if (!itemColliding && x.GetDestination().Intersects(new Rectangle(x.GetDestination().X, 385, 16, 16)))
+            {
+
+                x.setGroundPosition(480);
+            }
         }
+            hitCount = 0;
+        
+
     }
 
     public void updateMarioFalling(Mario mar)

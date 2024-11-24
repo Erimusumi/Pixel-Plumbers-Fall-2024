@@ -24,7 +24,7 @@ public class Mushroom :IItem
     private float gravity = 980f;
     private Rectangle destinationRectangle;
     private int yPositionCount;
-    private int groundPosition = 380;
+    private int groundPosition = 380;   
     
 
 
@@ -39,7 +39,8 @@ public class Mushroom :IItem
         this.texture = texture;
         this.sb = sB;
         movingRight = true;
-        this.velocity = Vector2.Zero;
+        this.velocity.X = 0.5f;
+        this.velocity.Y = 0;
         this.position = m_position;
     }
     public void idling()
@@ -80,38 +81,22 @@ public class Mushroom :IItem
             }
         }
         */
-    
-        
+        ApplyGravity(gameTime);
+
         if (this.roaming)
         {
-            falling = true;
-            if (movingRight)
-            {
-                position.X++;
-                
-            }
-            else if (movingLeft)
-            {
-                position.X--;
-             
-            }
+            position.X += movingRight ? velocity.X : -velocity.X;
         }
         if(this.GetDestination().Y> this.groundPosition)
         {
             falling = false;
         }
-        if (this.falling)
+        else
         {
-            velocity.Y += gravity * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            falling = true;
         }
 
-        if (!this.falling)
-        {
-            velocity.Y = 0;
-            System.Diagnostics.Debug.Write("VelocityY is setted as zero");
-        }
-
-        position += velocity * (float)gameTime.ElapsedGameTime.TotalSeconds; // Update position
+        
         destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 31, 31);
 
     }
@@ -174,5 +159,50 @@ public class Mushroom :IItem
         falling = true;
     }
 
+    public void ApplyGravity(GameTime gameTime)
+    {
 
+        if (falling)
+        {
+            velocity.Y += gravity * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            position.Y += velocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+            if (position.Y >= groundPosition)
+            {
+                position.Y = groundPosition;
+                velocity.Y = 0;
+                falling = false;
+            }
+        }
+    }
+    public void SetVelocityY(float velocityY)
+    {
+        velocity.Y = velocityY;
+    }
+
+    public void SetVelocityX(float velocityX)
+    {
+        velocity.X = velocityX;
+    }
+    public void SetPositionY(float positionY)
+    {
+        position.Y = positionY;
+    }
+    public void SetPositionX(float positionX)
+    {
+        position.X = positionX;
+    }
+    public void SetIsOnGround(bool isGround)
+    {
+        
+    }
+    public void ForceGravity(GameTime gameTime)
+    {
+        velocity.Y += gravity * (float)gameTime.ElapsedGameTime.TotalSeconds;
+        position.Y += velocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;
+    }
+    public bool GetIsOnGround()
+    {
+        return true;
+    }
 }
