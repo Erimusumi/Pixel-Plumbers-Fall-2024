@@ -62,7 +62,7 @@ public class GoombaStateMachine
             _currentState = GoombaState.Left;
         }
         _sprite.ApplyGravity(gameTime);
-
+		
         switch (_currentState)
 		{
             case GoombaState.Left:
@@ -75,10 +75,10 @@ public class GoombaStateMachine
 				_sprite.StompedLogic();
 				break;
 			case GoombaState.Flipped:
-				_sprite.FlippedLogic(0);
+				_sprite.FlippedLogic(0, gameTime);
 				break;
 			case GoombaState.Start:
-				_sprite.FlippedLogic(1);
+				_sprite.FlippedLogic(1, gameTime);
 				break;
         }
 

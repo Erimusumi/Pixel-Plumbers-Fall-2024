@@ -43,10 +43,11 @@ public class ToggleFalling
     {
         updateMarioFalling(this.mario);
         updateItemFalling(this.items);
+        updateEnemyFalling(this.enemies);
 
     }
 
-    public void updateEnemyFalling()
+    public void updateEnemyFalling(List<IEntity> enemies)
     {
         
         ISpriteEnemy currentEnemy;
