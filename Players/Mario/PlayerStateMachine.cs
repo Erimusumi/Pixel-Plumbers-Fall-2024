@@ -14,6 +14,7 @@ public class PlayerStateMachine
     public bool _HasStar;
     public bool PlayerWins;
     public bool isVisible;
+    public bool isSwimmingLevel;
 
     public PlayerStateMachine()
     {
@@ -172,5 +173,9 @@ public class PlayerStateMachine
     public bool IsBig()
     {
         return CurrentGameState == PlayerGameState.Big;
+    }
+    public void setSwimmingLevel(bool isLevelSwimming)
+    {
+        this.isSwimmingLevel = isLevelSwimming;
     }
 }
