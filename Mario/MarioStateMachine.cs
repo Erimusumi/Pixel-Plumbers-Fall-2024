@@ -14,6 +14,7 @@ public class MarioStateMachine
     public bool _HasStar;
     public bool marioWins;
     public bool isVisible;
+    public bool isSwimmingLevel;
 
     public MarioStateMachine()
     {
@@ -23,6 +24,7 @@ public class MarioStateMachine
         _HasStar = false;
         isVisible = true;
         marioWins = false;
+        isSwimmingLevel = false;
     }
 
     public void SetMarioSmall()
@@ -176,5 +178,10 @@ public class MarioStateMachine
     public bool isFire()
     {
         return CurrentGameState == MarioGameState.Fire;
+    }
+
+    public void setSwimmingLevel(bool isLevelSwimming)
+    {
+        isSwimmingLevel = isLevelSwimming;
     }
 }

@@ -3,8 +3,11 @@ using Pixel_Plumbers_Fall_2024;
 
 namespace Pixel_Plumbers_Fall_2024
 {
-    public class MarioSpriteMachine : IMarioSpriteMachine
+    public class MarioSpriteMachineSwimming : IMarioSpriteMachine
     {
+        /*
+         * Exact same as normal mario sprite machine, except the jumping sprites return a swimming sprite
+         */
         private static IMarioSprite lastValidSprite;
 
         public IMarioSprite UpdateMarioSprite(MarioStateMachine marioStateMachine, Texture2D texture)
@@ -85,7 +88,7 @@ namespace Pixel_Plumbers_Fall_2024
                 case MarioStateMachine.MarioMoveState.Moving:
                     return new MovingRightSmallMario(texture);
                 case MarioStateMachine.MarioMoveState.Jumping:
-                    return new JumpingRightSmallMario(texture);
+                    return new SwimmingRightSmallMario(texture);
                 case MarioStateMachine.MarioMoveState.Turning:
                     return new TurningLeftSmallMario(texture);
                 default:
@@ -102,7 +105,7 @@ namespace Pixel_Plumbers_Fall_2024
                 case MarioStateMachine.MarioMoveState.Moving:
                     return new MovingRightBigMario(texture);
                 case MarioStateMachine.MarioMoveState.Jumping:
-                    return new JumpingRightBigMario(texture);
+                    return new SwimmingRightBigMario(texture);
                 case MarioStateMachine.MarioMoveState.Crouching:
                     return new CrouchRightBigMario(texture);
                 case MarioStateMachine.MarioMoveState.Turning:
@@ -121,7 +124,7 @@ namespace Pixel_Plumbers_Fall_2024
                 case MarioStateMachine.MarioMoveState.Moving:
                     return new MovingRightFireMario(texture);
                 case MarioStateMachine.MarioMoveState.Jumping:
-                    return new JumpingRightFireMario(texture);
+                    return new SwimmingRightFireMario(texture);
                 case MarioStateMachine.MarioMoveState.Crouching:
                     return new CrouchRightFireMario(texture);
                 case MarioStateMachine.MarioMoveState.Turning:
@@ -140,7 +143,7 @@ namespace Pixel_Plumbers_Fall_2024
                 case MarioStateMachine.MarioMoveState.Moving:
                     return new MovingLeftSmallMario(texture);
                 case MarioStateMachine.MarioMoveState.Jumping:
-                    return new JumpingLeftSmallMario(texture);
+                    return new SwimmingLeftSmallMario(texture);
                 case MarioStateMachine.MarioMoveState.Turning:
                     return new TurningRightSmallMario(texture);
                 default:
@@ -157,7 +160,7 @@ namespace Pixel_Plumbers_Fall_2024
                 case MarioStateMachine.MarioMoveState.Moving:
                     return new MovingLeftBigMario(texture);
                 case MarioStateMachine.MarioMoveState.Jumping:
-                    return new JumpingLeftBigMario(texture);
+                    return new SwimmingLeftBigMario(texture);
                 case MarioStateMachine.MarioMoveState.Crouching:
                     return new CrouchLeftBigMario(texture);
                 case MarioStateMachine.MarioMoveState.Turning:
@@ -176,7 +179,7 @@ namespace Pixel_Plumbers_Fall_2024
                 case MarioStateMachine.MarioMoveState.Moving:
                     return new MovingLeftFireMario(texture);
                 case MarioStateMachine.MarioMoveState.Jumping:
-                    return new JumpingLeftFireMario(texture);
+                    return new SwimmingLeftFireMario(texture);
                 case MarioStateMachine.MarioMoveState.Crouching:
                     return new CrouchLeftFireMario(texture);
                 case MarioStateMachine.MarioMoveState.Turning:

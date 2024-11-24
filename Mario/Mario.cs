@@ -13,6 +13,7 @@ public class Mario : IEntity
 {
     private Texture2D marioTexture;
     private IMarioSprite currentMarioSprite;
+    private IMarioSpriteMachine marioSpriteMachine;
     private MarioStateMachine marioStateMachine;
     public GameTime gameTime;
 
@@ -20,8 +21,10 @@ public class Mario : IEntity
     public Vector2 marioPosition;
     public Vector2 marioVelocity;
     private float groundPosition = 385f;
+    private float swimmingMaxHeight = 10f;
     private float gravity = 980f;
     private float jumpSpeed = -570f;
+    private bool isSwimmingLevel = false;
 
     public bool isOnGround = true;
     private bool canPowerUp = true;
@@ -114,6 +117,11 @@ public class Mario : IEntity
             }
         }
 
+        if (isSwimmingLevel && (marioVelocity.X > 0f))
+        {
+            marioStateMachine.SetMarioRight();
+        }
+
         if (!marioStateMachine.IsCrouching())
         {
             if (marioVelocity.X < maxSpeed)
@@ -142,6 +150,11 @@ public class Mario : IEntity
             }
         }
 
+        if (isSwimmingLevel && (marioVelocity.X < 0f))
+        {
+            marioStateMachine.SetMarioLeft();
+        }
+
         if (!marioStateMachine.IsCrouching())
         {
             if (marioVelocity.X > -maxSpeed)
@@ -155,7 +168,7 @@ public class Mario : IEntity
     {
         if (marioStateMachine.IsDead()) return;
 
-        if (isOnGround && !marioStateMachine.IsCrouching())
+        if ((isOnGround || isSwimmingLevel) && !marioStateMachine.IsCrouching())
         {
             marioVelocity.Y = jumpSpeed;
             marioStateMachine.SetMarioJumping();
@@ -366,8 +379,9 @@ public class Mario : IEntity
         marioPosition.X += marioVelocity.X;
         this.SlowStopMario();
         this.CheckStopTurningUpd();
+        this.CheckSwimmingMaxHeight();
         this.MarioDeath();
-        currentMarioSprite = MarioSpriteMachine.UpdateMarioSprite(marioStateMachine, marioTexture);
+        currentMarioSprite = marioSpriteMachine.UpdateMarioSprite(marioStateMachine, marioTexture);
         currentMarioSprite.Update(gameTime);
         fireballTimer += -1;
         starTimer += -1;
@@ -410,7 +424,13 @@ public class Mario : IEntity
         }
     }
     
-
+    private void CheckSwimmingMaxHeight()
+    {
+        if (isSwimmingLevel && (marioPosition.Y < swimmingMaxHeight))
+        {
+            marioPosition.Y = swimmingMaxHeight;
+        }
+    }
     public MarioStateMachine.MarioGameState GetMarioGameState()
     {
         return marioStateMachine.CurrentGameState;
@@ -433,6 +453,27 @@ public class Mario : IEntity
         {
             marioStateMachine.RemoveStar();
         }
+    }
+
+    public void SetSwimmingLevel(bool isLevelSwimming)
+    {
+        isSwimmingLevel = isLevelSwimming;
+        marioStateMachine.setSwimmingLevel(isLevelSwimming);
+
+        if (isSwimmingLevel)
+        {
+            //Reduce gravity and jump height, "floaty" physics
+            marioSpriteMachine = new MarioSpriteMachineSwimming();
+            gravity = 980f / 4f;
+            jumpSpeed = -570f / 4f;
+        }
+        else
+        {
+            //Set parameters to normal
+            marioSpriteMachine = new MarioSpriteMachine();
+            gravity = 980f;
+            jumpSpeed = -570f;
+}
     }
     public void updateGroundPosition(float gp)
     {

@@ -378,6 +378,8 @@ List<IEntity> entitiesRemoved,
         entities.Add(obstacle1);
         entities.Add(obstacle2);
         entities.Add(obstacle3);
+
+        mario.SetSwimmingLevel(true);
     }
 
     public void LoadLevel(ContentManager content)
