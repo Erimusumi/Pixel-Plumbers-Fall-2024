@@ -3,6 +3,7 @@ using System.ComponentModel;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
+
 public class TextureManager
 {
     private Dictionary<string, Texture2D> textures;
@@ -22,7 +23,7 @@ public class TextureManager
     private Texture2D cardsTexture;
     private Texture2D danceTexture;
 
-    public TextureManager(ContentManager content)
+    public TextureManager(ContentManager content, Texture2D squareTexture)
     {
         this.content = content;
 
@@ -55,6 +56,7 @@ public class TextureManager
         textures["TableTop"] = tabletopTexture;
         textures["Cards"] = cardsTexture;
         textures["dance"] = danceTexture;
+        textures["box"] = squareTexture;
     }
 
     public Texture2D GetTexture(string textureName)

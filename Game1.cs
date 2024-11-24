@@ -23,6 +23,7 @@ public class Game1 : Game
     private TextureManager textureManager;
     private SoundManager soundManager;
     public HudManager hudManager;
+    private Texture2D squareTexture;
 
     private Mario mario;
     private Luigi luigi;
@@ -114,7 +115,7 @@ public class Game1 : Game
         this.gameTime = new GameTime();
         this.sweep = new Sweep(gameTime);
 
-        textureManager = new TextureManager(Content);
+        textureManager = new TextureManager(Content, squareTexture);
      
 
         keyboardController = new KeyboardController();
@@ -143,8 +144,11 @@ public class Game1 : Game
     protected override void LoadContent()
     {
         spriteBatch = new SpriteBatch(GraphicsDevice);
-        textureManager = new TextureManager(Content);
+        squareTexture = new Texture2D(GraphicsDevice, 1, 1);
+        squareTexture.SetData(new Color[] { Color.Red });
+        textureManager = new TextureManager(Content, squareTexture);
         soundManager = new SoundManager(Content);
+
 
         //oneUpSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_1-up");
 

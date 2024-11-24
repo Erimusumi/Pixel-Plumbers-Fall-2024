@@ -144,6 +144,6 @@ public class KoopaSprites
     }
     public void Draw(SpriteBatch sb, Texture2D Texture)
 	{
-        sb.Draw(Texture, destinationRectangle, sourceRectangle, Color.White, rotation, new Vector2(width / 2, height / 2), SpriteEffects.None, 0f);
+        sb.Draw(Texture, destinationRectangle, sourceRectangle, Color.White, rotation, new Vector2(0, 0), SpriteEffects.None, 0f);
     }
 }

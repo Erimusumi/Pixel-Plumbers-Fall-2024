@@ -28,7 +28,7 @@ public class GoombaSprites
     private bool isOnGround = true;
     private float gravity = 980f;
     private Vector2 Velocity;
-    private float groundPosition = 400f;
+    private float groundPosition = 385f;
 
     private float rotation = 0f;
 
@@ -135,7 +135,7 @@ public class GoombaSprites
     }
 	public void Draw(SpriteBatch sb, Texture2D Texture)
 	{
-        sb.Draw(Texture, destinationRectangle, sourceRectangle, Color.White, rotation, new Vector2(size / 2, size / 2), SpriteEffects.None, 0f);
+        sb.Draw(Texture, destinationRectangle, sourceRectangle, Color.White, rotation, new Vector2(0, 0), SpriteEffects.None, 0f);
     }
 
 }
