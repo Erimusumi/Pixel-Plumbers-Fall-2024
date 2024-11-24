@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public class IdleRightBigMario : IMarioSprite
+public class IdleRightBigMario : ICharacter
 {
     private float scale = 2f;
     private Vector2 _position;

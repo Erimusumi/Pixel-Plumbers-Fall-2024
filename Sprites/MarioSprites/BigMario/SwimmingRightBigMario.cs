@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public class SwimmingRightBigMario : IMarioSprite
+public class SwimmingRightBigMario : ICharacter
 {
     private float scale = 2f;
     private Texture2D MarioTexture;

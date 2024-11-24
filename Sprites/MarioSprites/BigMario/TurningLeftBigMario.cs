@@ -2,7 +2,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System.Transactions;
 
-public class TurningLeftBigMario : IMarioSprite
+public class TurningLeftBigMario : ICharacter
 {
     private float scale = 2f;
     private Texture2D MarioTexture;
