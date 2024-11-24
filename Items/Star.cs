@@ -69,6 +69,10 @@ if (this.GetDestination().Y > this.groundPosition)
         {
             falling = false;
         }
+        else
+        {
+            falling = true;
+        }
         if (this.falling)
         {
             velocity.Y += gravity * (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -82,6 +86,7 @@ if (this.GetDestination().Y > this.groundPosition)
 
         position += velocity * (float)gameTime.ElapsedGameTime.TotalSeconds; // Update position
         destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 31, 31);
+
     }
     public void draw()
     {

@@ -91,6 +91,10 @@ public class Mushroom :IItem
         {
             falling = false;
         }
+        else
+        {
+            falling = true;
+        }
 
         
         destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 31, 31);

@@ -46,16 +46,19 @@ public class ToggleFalling
 
     public void updateEnemyFalling()
     {
-
-
+        
+        ISpriteEnemy currentEnemy;
         for (int i = 0; i < enemies.Count; i++)
         {
+            //Boolean enemyColliding = true;
+            currentEnemy = (ISpriteEnemy)enemies[i];        
+           
             {
                 for (int j = 0; j < collisionRects.Count; j++)
                 {
-                    if (enemies[i].GetDestination().Intersects(collisionRects[j]))
+                    if (!currentEnemy.GetDestination().Intersects(collisionRects[j]) && currentEnemy.GetDestination().Intersects(new Rectangle(currentEnemy.GetDestination().X, 385, 16, 16)))
                     {
-
+                        currentEnemy.setGroundPosition(480);
                     }
                 }
 
@@ -73,7 +76,7 @@ public class ToggleFalling
             {
                 for (int j = 0; j < collisionRects.Count; j++)
                 {
-                    if (!x.GetDestination().Intersects(collisionRects[j]) && x.GetDestination().Intersects(new Rectangle(x.GetDestination().X, 385, 16, 16)))
+                    if (!x.GetDestination().Intersects(collisionRects[j]) && x.GetDestination().Intersects(new Rectangle(x.GetDestination().X, 380, 16, 16)))
                     {
                         x.setGroundPosition(480);
                     }

@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\starfire\\collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\starfire\\grounddetection\\togglefalling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:grounddetection\\togglefalling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\starfire\\sprites\\item sprites\\flagsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\item sprites\\flagsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\starfire\\collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\starfire\\collision\\interaction\\playerflaginteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -93,10 +97,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\starfire\\blackjack\\blackjackcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:blackjack\\blackjackcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\starfire\\grounddetection\\togglefalling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:grounddetection\\togglefalling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\starfire\\code reviews\\sprint 3\\helen\u0027scodereview.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -190,11 +190,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
@@ -208,7 +208,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Sweep.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\Collision\\Sweep.cs",
               "RelativeDocumentMoniker": "Collision\\Sweep.cs",
@@ -249,20 +249,12 @@
               "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "dance.png - PNG [1054x10079, 32 bit, PNG]",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\Content\\dance.png",
-              "RelativeDocumentMoniker": "Content\\dance.png",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\Content\\dance.png - PNG [1054x10079, 32 bit, PNG]",
-              "RelativeToolTip": "Content\\dance.png - PNG [1054x10079, 32 bit, PNG]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
-              "WhenOpened": "2024-11-24T18:11:49.866Z",
-              "EditorCaption": " - PNG [1054x10079, 32 bit, PNG]"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "TextureManager.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\TextureManager.cs",
               "RelativeDocumentMoniker": "TextureManager.cs",
@@ -275,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "DancePole.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\Dance\\DancePole.cs",
               "RelativeDocumentMoniker": "Dance\\DancePole.cs",
@@ -292,16 +284,16 @@
               "Title": "FlagSprite.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\Sprites\\Item Sprites\\FlagSprite.cs",
               "RelativeDocumentMoniker": "Sprites\\Item Sprites\\FlagSprite.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\Sprites\\Item Sprites\\FlagSprite.cs*",
-              "RelativeToolTip": "Sprites\\Item Sprites\\FlagSprite.cs*",
-              "ViewState": "AgIAACIAAAAAAAAAAAAYwBsAAAA3AAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\Sprites\\Item Sprites\\FlagSprite.cs",
+              "RelativeToolTip": "Sprites\\Item Sprites\\FlagSprite.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAYwC4AAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-24T17:05:49.787Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PlayerFlagInteraction.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\Collision\\Interaction\\PlayerFlagInteraction.cs",
               "RelativeDocumentMoniker": "Collision\\Interaction\\PlayerFlagInteraction.cs",
@@ -314,7 +306,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "ToggleFalling.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\GroundDetection\\ToggleFalling.cs",
+              "RelativeDocumentMoniker": "GroundDetection\\ToggleFalling.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\GroundDetection\\ToggleFalling.cs",
+              "RelativeToolTip": "GroundDetection\\ToggleFalling.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAcwCIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T00:53:42.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "dance.png - PNG [1054x10079, 32 bit, PNG]",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\Content\\dance.png",
+              "RelativeDocumentMoniker": "Content\\dance.png",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\Content\\dance.png - PNG [1054x10079, 32 bit, PNG]",
+              "RelativeToolTip": "Content\\dance.png - PNG [1054x10079, 32 bit, PNG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2024-11-24T18:11:49.866Z",
+              "EditorCaption": " - PNG [1054x10079, 32 bit, PNG]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Flag.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\Items\\Flag.cs",
               "RelativeDocumentMoniker": "Items\\Flag.cs",
@@ -326,12 +343,8 @@
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "LevelOne.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\Levels\\LevelOne.cs",
               "RelativeDocumentMoniker": "Levels\\LevelOne.cs",
@@ -344,7 +357,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "OtherEnemyInteractions.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\Collision\\Interaction\\OtherEnemyInteractions.cs",
               "RelativeDocumentMoniker": "Collision\\Interaction\\OtherEnemyInteractions.cs",
@@ -357,7 +370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Mushroom.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\Items\\Mushroom.cs",
               "RelativeDocumentMoniker": "Items\\Mushroom.cs",
@@ -370,7 +383,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "StarInteraction.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\Collision\\Interaction\\StarInteraction.cs",
               "RelativeDocumentMoniker": "Collision\\Interaction\\StarInteraction.cs",
@@ -383,7 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "Sort.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\Collision\\Sort.cs",
               "RelativeDocumentMoniker": "Collision\\Sort.cs",
@@ -396,7 +409,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "LuckyBlockSprite.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\Sprites\\Block Sprites\\LuckyBlockSprite.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\LuckyBlockSprite.cs",
@@ -409,7 +422,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Fire.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\Items\\Fire.cs",
               "RelativeDocumentMoniker": "Items\\Fire.cs",
@@ -422,7 +435,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "FirePower.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\Sprites\\Item Sprites\\FirePower.cs",
               "RelativeDocumentMoniker": "Sprites\\Item Sprites\\FirePower.cs",
@@ -435,7 +448,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Reflection.txt",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\Code Reviews\\Sprint 4\\Reflection.txt",
               "RelativeDocumentMoniker": "Code Reviews\\Sprint 4\\Reflection.txt",
@@ -447,7 +460,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Reflection.txt",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\Code Reviews\\Sprint 3\\Reflection.txt",
               "RelativeDocumentMoniker": "Code Reviews\\Sprint 3\\Reflection.txt",
@@ -459,7 +472,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "HelenWangCodeReview.txt",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\Code Reviews\\Sprint 4\\HelenWangCodeReview.txt",
               "RelativeDocumentMoniker": "Code Reviews\\Sprint 4\\HelenWangCodeReview.txt",
@@ -471,7 +484,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "SoundEffects.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\Sound Effects\\SoundEffects.cs",
               "RelativeDocumentMoniker": "Sound Effects\\SoundEffects.cs",
@@ -483,7 +496,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "SanaaKamauCodeReview.txt",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\Code Reviews\\Sprint 4\\SanaaKamauCodeReview.txt",
               "RelativeDocumentMoniker": "Code Reviews\\Sprint 4\\SanaaKamauCodeReview.txt",
@@ -496,18 +509,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 23,
-              "Title": "ToggleFalling.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\GroundDetection\\ToggleFalling.cs",
-              "RelativeDocumentMoniker": "GroundDetection\\ToggleFalling.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\GroundDetection\\ToggleFalling.cs",
-              "RelativeToolTip": "GroundDetection\\ToggleFalling.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAqwFYAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T00:53:42.386Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
               "Title": "BlackJackCommand.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\BlackJack\\BlackJackCommand.cs",
               "RelativeDocumentMoniker": "BlackJack\\BlackJackCommand.cs",
@@ -519,7 +520,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "BlackJackSprites.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\StarFire\\BlackJack\\BlackJackSprites.cs",
               "RelativeDocumentMoniker": "BlackJack\\BlackJackSprites.cs",
