@@ -22,14 +22,14 @@ public class Fireball : IProjectile
     private GameTime gameTime;
     private Game1 game;
     private List<IEntity> _entities;
-    public Fireball(Vector2 marioPosition, Texture2D texture, GameTime gameTime, MarioStateMachine.MarioFaceState direction, Game1 game, List<IEntity> entities)
+    public Fireball(Vector2 marioPosition, Texture2D texture, GameTime gameTime, PlayerStateMachine.PlayerFaceState direction, Game1 game, List<IEntity> entities)
     {
         isBouncing = false;
         pos = marioPosition;
         sprite = new FireballSprite(texture);
         this.gameTime = gameTime;
         bounceTimer = 0;
-        goingRight = (direction == MarioStateMachine.MarioFaceState.Right);
+        goingRight = (direction == PlayerStateMachine.PlayerFaceState.Right);
         this.game = game;
         this._entities = entities;
         _entities.Add(this);

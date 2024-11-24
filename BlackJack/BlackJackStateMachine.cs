@@ -10,8 +10,9 @@ using static System.Net.Mime.MediaTypeNames;
 
 public class BlackJackStateMachine
 {
-    private enum BlackJackState {table, top};
+    private enum BlackJackState { table, top };
     private BlackJackState _currentState = BlackJackState.table;
+    private TextureManager textureManager;
     private BlackJackSprites _sprite;
     private SoundEffect fwip;
     private int stand = 0;
@@ -23,13 +24,18 @@ public class BlackJackStateMachine
     private SpriteFont font;
     private int p1Score = 0;
     private int p2Score = 0;
-    public BlackJackStateMachine(Texture2D TextureTable, Texture2D TextureTop, Texture2D TextureCards, SoundEffect fwip, SpriteFont font)
+    public BlackJackStateMachine(TextureManager textureManager, SoundEffect fwip, SpriteFont font)
     {
+
+        this.textureManager = textureManager;
+
+        this.TextureTable = textureManager.GetTexture("Table");
+        this.TextureTop = textureManager.GetTexture("TableTop");
+        this.TextureCards = textureManager.GetTexture("Cards");
+
         _sprite = new BlackJackSprites(TextureTable, TextureTop, TextureCards, font);
         this.fwip = fwip;
-        this.TextureTable = TextureTable;
-        this.TextureTop = TextureTop;
-        this.TextureCards = TextureCards;
+
         this.font = font;
     }
 

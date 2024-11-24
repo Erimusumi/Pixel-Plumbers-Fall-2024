@@ -5,9 +5,11 @@ public class GameStateMachine
 {
     public enum GameStates { Start, Levels, Running, Paused, Over }
     public enum LevelStates { LevelZero, LevelOne, LevelTwo, LevelThree }
+    public enum GameModes { Singleplayer, Multiplayer }
 
     public GameStates currentGameState = GameStates.Start;
     public LevelStates currentLevelState = LevelStates.LevelZero;
+    public GameModes currentGameMode = GameModes.Singleplayer;
 
     public void setGameStateStart()
     {
@@ -92,6 +94,25 @@ public class GameStateMachine
     public bool isLevelScreen()
     {
         return currentGameState == GameStates.Levels;
+    }
+
+    public void setGameSinglePlayer()
+    {
+        currentGameMode = GameModes.Singleplayer;
+    }
+    public void setGameMultiplayer()
+    {
+        currentGameMode = GameModes.Multiplayer;
+    }
+
+    public bool isSingleplayer()
+    {
+        return currentGameMode == GameModes.Singleplayer;
+    }
+
+    public bool isMultiplayer()
+    {
+        return currentGameMode == GameModes.Multiplayer;
     }
 }
 

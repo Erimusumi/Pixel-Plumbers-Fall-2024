@@ -21,7 +21,7 @@ public class CommandControlCenter
     {
         // commands for switching enemy
         List<ISpriteEnemy> enemies = new List<ISpriteEnemy>();
-        enemies.Add(new Goomba(480, 400));
+        //enemies.Add(new Goomba(480, 400));
         enemies.Add(new Cheeps(0, 480, 400));
         enemies.Add(new Koopa(480, 400));
         enemies.Add(new Cheeps(1, 480, 400));

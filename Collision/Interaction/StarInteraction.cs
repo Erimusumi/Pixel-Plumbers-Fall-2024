@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 public class MarioStarInteraction
 {
-    private Mario mario;
+    private IPlayer player;
     private Star star;
     private List<IEntity> entitiesRemoved;
     int count = 0;
 
 
-    public MarioStarInteraction(Mario mar, Star s, List<IEntity> entitiesRemoved)
+    public MarioStarInteraction(IPlayer play, Star s, List<IEntity> entitiesRemoved)
     {
         this.star = s;
-        this.mario = mar;
+        this.player = play;
         this.entitiesRemoved = entitiesRemoved;
 
     }
@@ -23,7 +23,7 @@ public class MarioStarInteraction
     {
       
         star.collect();
-        mario.CollectStar();
+        player.CollectStar();
         removeFromList();
          
         

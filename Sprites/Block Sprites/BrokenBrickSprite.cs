@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+
 public class BrokenBrickSprite : IBlock
 {
     public Texture2D Texture { get; set; }
@@ -16,8 +13,10 @@ public class BrokenBrickSprite : IBlock
     private int width;
     private int height;
     private int currentFrame;
-    private Boolean isAnimating;
+    private bool broken;
+    private bool bumping;
     public Rectangle destinationRectangle;
+
     public BrokenBrickSprite(Texture2D texture, int frames, double wait)
     {
         Texture = texture;
@@ -29,11 +28,45 @@ public class BrokenBrickSprite : IBlock
         buffer = 0; // total elapsed time
         width = (int)(End.X - Start.X) / frames;
         height = (int)(End.Y - Start.Y);
-        this.isAnimating = true;
+        this.broken = false;  // Initial state is not animating
+        this.bumping = false;
     }
+
+    public void StartAnimation()
+    {
+        // Method to trigger animation
+        broken = true;
+    }
+
     public void Update(GameTime gameTime)
     {
-        if (isAnimating)
+        if (bumping)
+        {
+            // Adjust the block's vertical position for the bump animation
+            const float bumpHeight = 10f; // Height of the bump
+            const float bumpSpeed = 100f; // Speed of the bump animation
+
+            // Move block up and then back down
+            buffer += gameTime.ElapsedGameTime.TotalSeconds;
+
+            if (buffer <= bumpHeight / bumpSpeed) // Moving up
+            {
+                destinationRectangle.Y -= (int)(bumpSpeed * gameTime.ElapsedGameTime.TotalSeconds);
+            }
+            else if (buffer <= 2 * (bumpHeight / bumpSpeed)) // Moving down
+            {
+                destinationRectangle.Y += (int)(bumpSpeed * gameTime.ElapsedGameTime.TotalSeconds);
+            }
+            else
+            {
+                // End the bump animation and reset
+                buffer = 0;
+                bumping = false; // Reset bumping to false after the animation
+            }
+        }
+
+        // Handle other animation frames if needed
+        if (broken)
         {
             buffer += gameTime.ElapsedGameTime.TotalSeconds;
 
@@ -46,7 +79,7 @@ public class BrokenBrickSprite : IBlock
                 if (currentFrame >= numOfFrames)
                 {
                     currentFrame = numOfFrames - 1; // Set to the last frame
-                    isAnimating = false; // Stop animation
+                    broken = false; // Stop animation
                 }
             }
         }
@@ -70,12 +103,22 @@ public class BrokenBrickSprite : IBlock
 
         spriteBatch.Draw(Texture, destinationRectangle, sourceRectangle, Color.White);
     }
+
     public Rectangle GetDestination()
     {
         return destinationRectangle;
     }
+
     public void Load(GraphicsDeviceManager graphics)
     {
-
+        // Loading logic if needed
+    }
+    public void bump()
+    {
+        bumping = true;
+    }
+    public void broke()
+    {
+        broken = true;
     }
 }

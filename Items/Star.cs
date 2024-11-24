@@ -22,7 +22,7 @@ public class Star:IItem
     private float gravity = 980f;
     private Rectangle destinationRectangle;
     private int yPositionCount;
-    private int groundPosition = 400;
+    private int groundPosition = 380;
 
 
     public Star(SpriteBatch sb,Texture2D text, Vector2 position)
@@ -42,7 +42,8 @@ public class Star:IItem
     {
         if (this.spawning)
         {
-            this.position.Y++;
+            falling = false;
+            this.position.Y--;
             this.yPositionCount++;
             if (yPositionCount > 16)
             {
@@ -51,8 +52,10 @@ public class Star:IItem
                 this.movingRight = true;
             }
         }
+        
         if (this.roaming)
         {
+            falling = true;
             if (movingRight)
             {
                 position.X++;
@@ -62,7 +65,14 @@ public class Star:IItem
                 position.X--;
             }
         }
-
+if (this.GetDestination().Y > this.groundPosition)
+        {
+            falling = false;
+        }
+        else
+        {
+            falling = true;
+        }
         if (this.falling)
         {
             velocity.Y += gravity * (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -76,6 +86,7 @@ public class Star:IItem
 
         position += velocity * (float)gameTime.ElapsedGameTime.TotalSeconds; // Update position
         destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 31, 31);
+
     }
     public void draw()
     {
@@ -156,8 +167,36 @@ public class Star:IItem
     {
         this.sp = null;
     }
-    
+
+    public void SetVelocityY(float velocityY)
+    {
+        velocity.Y = velocityY;
+    }
+
+    public void SetVelocityX(float velocityX)
+    {
+        velocity.X = velocityX;
+    }
+    public void SetPositionY(float positionY)
+    {
+        position.Y = positionY;
+    }
+    public void SetPositionX(float positionX)
+    {
+        position.X = positionX;
+    }
+    public void SetIsOnGround(bool isGround)
+    {
+        //isOnGround = isGround;
+    }
+    public void ApplyGravity(GameTime gameTime)
+    {
 
 
+    }
+    public bool GetIsOnGround()
+    {
+        return true;
+    }
 
 }
