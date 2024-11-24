@@ -79,29 +79,24 @@ public class GoombaSprites
         sourceRectangle = new Rectangle(60, 8, size, size/2);
         destinationRectangle = new Rectangle(position, posY+10, size * scaleUp, (size/2) * scaleUp);
     }
-    private void Fall()
-    {
-        posY++;
-    }
-
     public void ApplyGravity(GameTime gameTime)
     {
         //if (playerStateMachine.IsDead()) return;
-
-        if (!isOnGround)
+        if (/*!isOnGround*/ true)
         {
             Velocity.Y += gravity * (float)gameTime.ElapsedGameTime.TotalSeconds;
             posY += (int)(Velocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds);
-
+            /*
             if (posY >= groundPosition)
             {
                 posY = (int)groundPosition;
                 Velocity.Y = 0;
                 isOnGround = true;
             }
+            */
         }
     }
-    public void FlippedLogic(int flipOrStart)
+    public void FlippedLogic(int flipOrStart, GameTime gameTime)
 	{
         if (flipOrStart == 0)
         {
@@ -125,7 +120,7 @@ public class GoombaSprites
         }
         if (flipOrStart == 0)
         {
-            Fall();
+            ApplyGravity(gameTime);
         }
         destinationRectangle = new Rectangle(position, posY, size * scaleUp, size * scaleUp);
     }
