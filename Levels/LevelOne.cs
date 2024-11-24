@@ -145,8 +145,8 @@ public class LevelOne : ILevel
 
     public void InitializeLevel()
     {
-        flag = new Flag(new Vector2(6335, 354),overworldTiles,danceTexture, spriteBatch);
-        
+        flag = new Flag(new Vector2(6335, 354), overworldTiles, danceTexture, spriteBatch);
+
         Bloop1 = new Blooper(240, 200, mario);
 
         Goomba1 = new Goomba(535, 385, (IPlayer)mario, gameTime);
@@ -398,7 +398,7 @@ public class LevelOne : ILevel
 
         mario.SetSwimmingLevel(false);
         luigi.SetSwimmingLevel(false);
-    }
+    
 
         lvl1backdrop = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Backdrop.csv");
         lvl1greenery = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Greenery.csv");
