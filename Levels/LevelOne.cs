@@ -29,11 +29,11 @@ public class LevelOne : ILevel
     private Layer lvl1greenery;
     private Layer lvl1foreground;
 
-    private List<ISpriteEnemy> Enemy = new List<ISpriteEnemy>(new ISpriteEnemy[18]);
+    private List<ISpriteEnemy> Enemy = new List<ISpriteEnemy>();
 
-    private List<IBlock> LuckyBlocks = new List<IBlock>(new IBlock[13]);
+    private List<IBlock> LuckyBlocks = new List<IBlock>();
 
-    private List<IBlock> BrickBlocks = new List<IBlock>(new IBlock[33]);
+    private List<IBlock> BrickBlocks = new List<IBlock>();
 
     private IBlock OWUsedBlockSprite;
     private IBlock OWBrokenBrickSprite;
@@ -86,133 +86,133 @@ public class LevelOne : ILevel
     public void InitializeLevel()
     {
         flag = new Flag(new Vector2(6335, 354),overworldTiles,danceTexture, spriteBatch);
-        Enemy[0] = new Blooper(240, 200, mario);
+        Enemy.Add(new Blooper(240, 200, mario));
 
-        Enemy[1] = new Goomba(535, 370, (IPlayer)mario, gameTime);
-        Enemy[2] = new Goomba(1400, 385, (IPlayer)mario, gameTime);
-        Enemy[3] = new Goomba(1700, 385, (IPlayer)mario, gameTime);
-        Enemy[4] = new Goomba(1750, 385, (IPlayer)mario, gameTime);
-        Enemy[5] = new Goomba(2500, 235, (IPlayer)mario, gameTime);
-        Enemy[6] = new Goomba(2600, 105, (IPlayer)mario, gameTime);
-        Enemy[7] = new Goomba(3000, 385, (IPlayer)mario, gameTime);
-        Enemy[8] = new Goomba(3150, 385, (IPlayer)mario, gameTime);
-        Enemy[9] = new Goomba(3520, 385, (IPlayer)mario, gameTime);
-        Enemy[10] = new Goomba(3720, 385, (IPlayer)mario, gameTime);
-        Enemy[11] = new Goomba(4000, 385, (IPlayer)mario, gameTime);
-        Enemy[12] = new Goomba(4050, 385, (IPlayer)mario, gameTime);
-        Enemy[13] = new Goomba(4110, 385, (IPlayer)mario, gameTime);
-        Enemy[14] = new Goomba(4160, 385, (IPlayer)mario, gameTime);
-        Enemy[15] = new Goomba(5400, 385, (IPlayer)mario, gameTime);
-        Enemy[16] = new Goomba(5550, 385, (IPlayer)mario, gameTime);
+        Enemy.Add(new Goomba(535, 370, (IPlayer)mario, gameTime));
+        Enemy.Add(new Goomba(1400, 385, (IPlayer)mario, gameTime));
+        Enemy.Add(new Goomba(1700, 385, (IPlayer)mario, gameTime));
+        Enemy.Add(new Goomba(1750, 385, (IPlayer)mario, gameTime));
+        Enemy.Add(new Goomba(2500, 235, (IPlayer)mario, gameTime));
+        Enemy.Add(new Goomba(2600, 105, (IPlayer)mario, gameTime));
+        Enemy.Add(new Goomba(3000, 385, (IPlayer)mario, gameTime));
+        Enemy.Add(new Goomba(3150, 385, (IPlayer)mario, gameTime));
+        Enemy.Add(new Goomba(3520, 385, (IPlayer)mario, gameTime));
+        Enemy.Add(new Goomba(3720, 385, (IPlayer)mario, gameTime));
+        Enemy.Add(new Goomba(4000, 385, (IPlayer)mario, gameTime));
+        Enemy.Add(new Goomba(4050, 385, (IPlayer)mario, gameTime));
+        Enemy.Add(new Goomba(4110, 385, (IPlayer)mario, gameTime));
+        Enemy.Add(new Goomba(4160, 385, (IPlayer)mario, gameTime));
+        Enemy.Add(new Goomba(5400, 385, (IPlayer)mario, gameTime));
+        Enemy.Add(new Goomba(5550, 385, (IPlayer)mario, gameTime));
 
-        LuckyBlocks[0] = new LuckyBlockSprite(
+        LuckyBlocks.Add(new LuckyBlockSprite(
             blockTexture,
             spriteBatch,
             ItemsTexture,
             game,
             mario,
             new Vector2(736, 288)
-        );
-        LuckyBlocks[1] = new LuckyBlockSprite(
+        ));
+        LuckyBlocks.Add(new LuckyBlockSprite(
             blockTexture,
             spriteBatch,
             ItemsTexture,
             game,
             mario,
             new Vector2(672, 288)
-        );
-        LuckyBlocks[2] = new LuckyBlockSprite(
+        ));
+        LuckyBlocks.Add(new LuckyBlockSprite(
             blockTexture,
             spriteBatch,
             ItemsTexture,
             game,
             mario,
             new Vector2(704, 160)
-        );
-        LuckyBlocks[3] = new LuckyBlockSprite(
+        ));
+        LuckyBlocks.Add(new LuckyBlockSprite(
             blockTexture,
             spriteBatch,
             ItemsTexture,
             game,
             mario,
             new Vector2(512, 288)
-        );
-        LuckyBlocks[4] = new LuckyBlockSprite(
+        ));
+        LuckyBlocks.Add(new LuckyBlockSprite(
             blockTexture,
             spriteBatch,
             ItemsTexture,
             game,
             mario,
             new Vector2(2468, 288)
-        );
-        LuckyBlocks[5] = new LuckyBlockSprite(
+        ));
+        LuckyBlocks.Add(new LuckyBlockSprite(
             blockTexture,
             spriteBatch,
             ItemsTexture,
             game,
             mario,
             new Vector2(3396, 288)
-        );
-        LuckyBlocks[6] = new LuckyBlockSprite(
+        ));
+        LuckyBlocks.Add(new LuckyBlockSprite(
             blockTexture,
             spriteBatch,
             ItemsTexture,
             game,
             mario,
             new Vector2(3492, 288)
-        );
-        LuckyBlocks[7] = new LuckyBlockSprite(
+        ));
+        LuckyBlocks.Add(new LuckyBlockSprite(
             blockTexture,
             spriteBatch,
             ItemsTexture,
             game,
             mario,
             new Vector2(3492, 160)
-        );
-        LuckyBlocks[8] = new LuckyBlockSprite(
+        ));
+        LuckyBlocks.Add(new LuckyBlockSprite(
             blockTexture,
             spriteBatch,
             ItemsTexture,
             game,
             mario,
             new Vector2(3588, 288)
-        );
-        LuckyBlocks[9] = new LuckyBlockSprite(
+        ));
+        LuckyBlocks.Add(new LuckyBlockSprite(
             blockTexture,
             spriteBatch,
             ItemsTexture,
             game,
             mario,
             new Vector2(4132, 160)
-        );
-        LuckyBlocks[10] = new LuckyBlockSprite(
+        ));
+        LuckyBlocks.Add(new LuckyBlockSprite(
             blockTexture,
             spriteBatch,
             ItemsTexture,
             game,
             mario,
             new Vector2(4164, 160)
-        );
-        LuckyBlocks[11] = new LuckyBlockSprite(
+        ));
+        LuckyBlocks.Add(new LuckyBlockSprite(
             blockTexture,
             spriteBatch,
             ItemsTexture,
             game,
             mario,
             new Vector2(3012, 160)
-        );
-        LuckyBlocks[12] = new LuckyBlockSprite(
+        ));
+        LuckyBlocks.Add(new LuckyBlockSprite(
             blockTexture,
             spriteBatch,
             ItemsTexture,
             game,
             mario,
             new Vector2(5444, 288)
-        );
+        ));
 
-        for (int i = 0; i < BrickBlocks.Count; i++)
+        for (int i = 0; i < 33; i++)
         {
-            BrickBlocks[i] = new StaticBlockSprite(blockTexture, new Rectangle(272, 112, 16, 16));
+            BrickBlocks.Add(new StaticBlockSprite(blockTexture, new Rectangle(272, 112, 16, 16)));
         }
 
         OWBrokenBrickSprite = new BrokenBrickSprite(blockTexture, 4, 1);
@@ -281,15 +281,15 @@ public class LevelOne : ILevel
             mario.Update(gameTime); ;
         }
 
-        for (int i = 0; i < Enemy.Count; i++)
+        for (int i = 0; i < 17; i++)
         {
             Enemy[i].Updates();
         }
-        for(int i = 0; i < LuckyBlocks.Count; i++)
+        for(int i = 0; i < 13; i++)
         {
             LuckyBlocks[i].Update(gameTime);
         }
-        for(int i = 0;i < BrickBlocks.Count; i++)
+        for(int i = 0;i < 33; i++)
         {
             BrickBlocks[i].Update(gameTime);
         }
@@ -319,11 +319,11 @@ public class LevelOne : ILevel
             mario.Draw(spriteBatch);
         }
 
-        for (int i = 0; i < Enemy.Count; i++)
+        for (int i = 0; i < 17; i++)
         {
             Enemy[i].Draw(spriteBatch, EnemyTexture);
         }
-        for (int i = 0; i < LuckyBlocks.Count; i++)
+        for (int i = 0; i < 13; i++)
         {
             LuckyBlocks[i].Draw(spriteBatch, new Vector2(69, 69));
         }
