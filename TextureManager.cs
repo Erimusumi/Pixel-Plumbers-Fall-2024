@@ -20,6 +20,7 @@ public class TextureManager
     private Texture2D tableTexture;
     private Texture2D tabletopTexture;
     private Texture2D cardsTexture;
+    private Texture2D danceTexture;
 
     public TextureManager(ContentManager content)
     {
@@ -39,6 +40,7 @@ public class TextureManager
         tableTexture = content.Load<Texture2D>("BlackJack/table");
         tabletopTexture = content.Load<Texture2D>("BlackJack/tabletop");
         cardsTexture = content.Load<Texture2D>("BlackJack/cards");
+        danceTexture = content.Load<Texture2D>("dance");
 
         textures["Mario"] = marioTexture;
         textures["Title"] = titleTexture;
@@ -52,6 +54,7 @@ public class TextureManager
         textures["Table"] = tableTexture;
         textures["TableTop"] = tabletopTexture;
         textures["Cards"] = cardsTexture;
+        textures["dance"] = danceTexture;
     }
 
     public Texture2D GetTexture(string textureName)

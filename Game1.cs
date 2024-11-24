@@ -115,7 +115,7 @@ public class Game1 : Game
         this.sweep = new Sweep(gameTime);
 
         textureManager = new TextureManager(Content);
-        Dance = new DancePole();
+     
 
         keyboardController = new KeyboardController();
         keyboardControllerMovement = new KeyboardControllerMovement();
