@@ -3,19 +3,19 @@ using Pixel_Plumbers_Fall_2024;
 
 namespace Pixel_Plumbers_Fall_2024
 {
-    public class LuigiSpriteMachine : IMarioSpriteMachine
+    public class LuigiSpriteMachine
     {
-        private static IMarioSprite lastValidSprite;
-        public IMarioSprite UpdatePlayerSprite(PlayerStateMachine playerStateMachine, Texture2D texture)
+        private static ICharacter lastValidSprite;
+        public static ICharacter UpdateLuigiSprite(PlayerStateMachine luigiStateMachine, Texture2D texture)
         {
-            IMarioSprite newSprite = null;
-            if (playerStateMachine.IsDead())
+            ICharacter newSprite = null;
+            if (luigiStateMachine.IsDead())
             {
                 newSprite = new DeadMario(texture);
             }
             else
             {
-                newSprite = GetSpriteForFaceState(playerStateMachine, texture);
+                newSprite = GetSpriteForFaceState(luigiStateMachine, texture);
             }
 
             if (lastValidSprite != null && newSprite != null && newSprite.GetType() == lastValidSprite.GetType())
@@ -32,7 +32,7 @@ namespace Pixel_Plumbers_Fall_2024
             return lastValidSprite ?? new IdleLeftBigMario(texture);
         }
 
-        private static IMarioSprite GetSpriteForFaceState(PlayerStateMachine luigiStateMachine, Texture2D texture)
+        private static ICharacter GetSpriteForFaceState(PlayerStateMachine luigiStateMachine, Texture2D texture)
         {
             switch (luigiStateMachine.CurrentFaceState)
             {
@@ -45,7 +45,7 @@ namespace Pixel_Plumbers_Fall_2024
             }
         }
 
-        private static IMarioSprite GetSpriteForGameStateRight(PlayerStateMachine luigiStateMachine, Texture2D texture)
+        private static ICharacter GetSpriteForGameStateRight(PlayerStateMachine luigiStateMachine, Texture2D texture)
         {
             switch (luigiStateMachine.CurrentGameState)
             {
@@ -60,7 +60,7 @@ namespace Pixel_Plumbers_Fall_2024
             }
         }
 
-        private static IMarioSprite GetSpriteForGameStateLeft(PlayerStateMachine luigiStateMachine, Texture2D texture)
+        private static ICharacter GetSpriteForGameStateLeft(PlayerStateMachine luigiStateMachine, Texture2D texture)
         {
             switch (luigiStateMachine.CurrentGameState)
             {
@@ -75,7 +75,7 @@ namespace Pixel_Plumbers_Fall_2024
             }
         }
 
-        private static IMarioSprite GetSmallLuigiSpriteRight(PlayerStateMachine luigiStateMachine, Texture2D texture)
+        private static ICharacter GetSmallLuigiSpriteRight(PlayerStateMachine luigiStateMachine, Texture2D texture)
         {
             switch (luigiStateMachine.CurrentMoveState)
             {
@@ -92,7 +92,7 @@ namespace Pixel_Plumbers_Fall_2024
             }
         }
 
-        private static IMarioSprite GetBigLuigiSpriteRight(PlayerStateMachine luigiStateMachine, Texture2D texture)
+        private static ICharacter GetBigLuigiSpriteRight(PlayerStateMachine luigiStateMachine, Texture2D texture)
         {
             switch (luigiStateMachine.CurrentMoveState)
             {
@@ -111,7 +111,7 @@ namespace Pixel_Plumbers_Fall_2024
             }
         }
 
-        private static IMarioSprite GetFireLuigiSpriteRight(PlayerStateMachine luigiStateMachine, Texture2D texture)
+        private static ICharacter GetFireLuigiSpriteRight(PlayerStateMachine luigiStateMachine, Texture2D texture)
         {
             switch (luigiStateMachine.CurrentMoveState)
             {
@@ -130,7 +130,7 @@ namespace Pixel_Plumbers_Fall_2024
             }
         }
 
-        private static IMarioSprite GetSmallLuigiSpriteLeft(PlayerStateMachine luigiStateMachine, Texture2D texture)
+        private static ICharacter GetSmallLuigiSpriteLeft(PlayerStateMachine luigiStateMachine, Texture2D texture)
         {
             switch (luigiStateMachine.CurrentMoveState)
             {
@@ -147,7 +147,7 @@ namespace Pixel_Plumbers_Fall_2024
             }
         }
 
-        private static IMarioSprite GetBigLuigiSpriteLeft(PlayerStateMachine luigiStateMachine, Texture2D texture)
+        private static ICharacter GetBigLuigiSpriteLeft(PlayerStateMachine luigiStateMachine, Texture2D texture)
         {
             switch (luigiStateMachine.CurrentMoveState)
             {
@@ -166,7 +166,7 @@ namespace Pixel_Plumbers_Fall_2024
             }
         }
 
-        private static IMarioSprite GetFireLuigiSpriteLeft(PlayerStateMachine luigiStateMachine, Texture2D texture)
+        private static ICharacter GetFireLuigiSpriteLeft(PlayerStateMachine luigiStateMachine, Texture2D texture)
         {
             switch (luigiStateMachine.CurrentMoveState)
             {

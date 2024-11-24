@@ -1,15 +1,15 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public class IdleLeftSmallMario : IMarioSprite
+public class IdleLeftSmallMario : ICharacter
 {
     private float scale = 2f;
-    private Texture2D MarioTexture;
+    private Texture2D LuigiTexture;
     private Color tint;
     
-    public IdleLeftSmallMario(Texture2D MarioTexture)
+    public IdleLeftSmallMario(Texture2D LuigiTexture)
     {
-        this.MarioTexture = MarioTexture;
+        this.LuigiTexture = LuigiTexture;
     }
 
     public void Draw(SpriteBatch spriteBatch, Vector2 position, bool HasStar)

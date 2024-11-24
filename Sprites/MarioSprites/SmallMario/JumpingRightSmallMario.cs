@@ -1,7 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public class JumpingRightSmallMario : IMarioSprite
+public class JumpingRightSmallMario : ICharacter
 {
     private float scale = 2f;
     private Texture2D MarioTexture;
