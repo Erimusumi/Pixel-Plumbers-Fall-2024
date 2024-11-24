@@ -3,20 +3,20 @@ using Pixel_Plumbers_Fall_2024;
 
 namespace Pixel_Plumbers_Fall_2024
 {
-    public class MarioSpriteMachine : IMarioSpriteMachine
+    public class MarioSpriteMachine
     {
-        private static IMarioSprite lastValidSprite;
+        private static ICharacter lastValidSprite;
 
-        public IMarioSprite UpdatePlayerSprite(PlayerStateMachine playerStateMachine, Texture2D texture)
+        public static ICharacter UpdateMarioSprite(PlayerStateMachine marioStateMachine, Texture2D texture)
         {
-            IMarioSprite newSprite = null;
+            ICharacter newSprite = null;
             //Mario being dead takes priority over all other sprites
-            if (playerStateMachine.IsDead())
+            if (marioStateMachine.IsDead())
             {
                 newSprite = new DeadMario(texture);
             }
             else {
-                newSprite = GetSpriteForFaceState(playerStateMachine, texture);
+                newSprite = GetSpriteForFaceState(marioStateMachine, texture);
             }
 
             if (lastValidSprite != null && newSprite != null && newSprite.GetType() == lastValidSprite.GetType())
@@ -33,7 +33,7 @@ namespace Pixel_Plumbers_Fall_2024
             return lastValidSprite ?? new IdleLeftBigMario(texture);
         }
 
-        private static IMarioSprite GetSpriteForFaceState(PlayerStateMachine marioStateMachine, Texture2D texture)
+        private static ICharacter GetSpriteForFaceState(PlayerStateMachine marioStateMachine, Texture2D texture)
         {
             switch (marioStateMachine.CurrentFaceState)
             {
@@ -46,7 +46,7 @@ namespace Pixel_Plumbers_Fall_2024
             }
         }
 
-        private static IMarioSprite GetSpriteForGameStateRight(PlayerStateMachine marioStateMachine, Texture2D texture)
+        private static ICharacter GetSpriteForGameStateRight(PlayerStateMachine marioStateMachine, Texture2D texture)
         {
             switch (marioStateMachine.CurrentGameState)
             {
@@ -61,7 +61,7 @@ namespace Pixel_Plumbers_Fall_2024
             }
         }
 
-        private static IMarioSprite GetSpriteForGameStateLeft(PlayerStateMachine marioStateMachine, Texture2D texture)
+        private static ICharacter GetSpriteForGameStateLeft(PlayerStateMachine marioStateMachine, Texture2D texture)
         {
             switch (marioStateMachine.CurrentGameState)
             {
@@ -76,7 +76,7 @@ namespace Pixel_Plumbers_Fall_2024
             }
         }
 
-        private static IMarioSprite GetSmallMarioSpriteRight(PlayerStateMachine marioStateMachine, Texture2D texture)
+        private static ICharacter GetSmallMarioSpriteRight(PlayerStateMachine marioStateMachine, Texture2D texture)
         {
             switch (marioStateMachine.CurrentMoveState)
             {
@@ -93,7 +93,7 @@ namespace Pixel_Plumbers_Fall_2024
             }
         }
 
-        private static IMarioSprite GetBigMarioSpriteRight(PlayerStateMachine marioStateMachine, Texture2D texture)
+        private static ICharacter GetBigMarioSpriteRight(PlayerStateMachine marioStateMachine, Texture2D texture)
         {
             switch (marioStateMachine.CurrentMoveState)
             {
@@ -112,7 +112,7 @@ namespace Pixel_Plumbers_Fall_2024
             }
         }
 
-        private static IMarioSprite GetFireMarioSpriteRight(PlayerStateMachine marioStateMachine, Texture2D texture)
+        private static ICharacter GetFireMarioSpriteRight(PlayerStateMachine marioStateMachine, Texture2D texture)
         {
             switch (marioStateMachine.CurrentMoveState)
             {
@@ -131,7 +131,7 @@ namespace Pixel_Plumbers_Fall_2024
             }
         }
 
-        private static IMarioSprite GetSmallMarioSpriteLeft(PlayerStateMachine marioStateMachine, Texture2D texture)
+        private static ICharacter GetSmallMarioSpriteLeft(PlayerStateMachine marioStateMachine, Texture2D texture)
         {
             switch (marioStateMachine.CurrentMoveState)
             {
@@ -148,7 +148,7 @@ namespace Pixel_Plumbers_Fall_2024
             }
         }
 
-        private static IMarioSprite GetBigMarioSpriteLeft(PlayerStateMachine marioStateMachine, Texture2D texture)
+        private static ICharacter GetBigMarioSpriteLeft(PlayerStateMachine marioStateMachine, Texture2D texture)
         {
             switch (marioStateMachine.CurrentMoveState)
             {
@@ -167,7 +167,7 @@ namespace Pixel_Plumbers_Fall_2024
             }
         }
 
-        private static IMarioSprite GetFireMarioSpriteLeft(PlayerStateMachine marioStateMachine, Texture2D texture)
+        private static ICharacter GetFireMarioSpriteLeft(PlayerStateMachine marioStateMachine, Texture2D texture)
         {
             switch (marioStateMachine.CurrentMoveState)
             {

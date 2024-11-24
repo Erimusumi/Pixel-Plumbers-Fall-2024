@@ -15,7 +15,7 @@ public class Mario : IPlayer
     private Texture2D itemTexture;
     private TextureManager textureManager;
 
-    private IMarioSprite currentMarioSprite;
+    private ICharacter currentMarioSprite;
     private IMarioSpriteMachine marioSpriteMachine;
     private PlayerStateMachine playerStateMachine;
     public GameTime gameTime;
