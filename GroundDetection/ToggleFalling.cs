@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 
 public class ToggleFalling
@@ -49,13 +50,13 @@ public class ToggleFalling
 
     public void updateEnemyFalling(List<IEntity> enemies)
     {
-        
+
         ISpriteEnemy currentEnemy;
         for (int i = 0; i < enemies.Count; i++)
         {
             //Boolean enemyColliding = true;
-            currentEnemy = (ISpriteEnemy)enemies[i];        
-           
+            currentEnemy = (ISpriteEnemy)enemies[i];
+
             {
                 for (int j = 0; j < collisionRects.Count; j++)
                 {
@@ -70,7 +71,7 @@ public class ToggleFalling
     }
     public void updateItemFalling(List<IEntity> item)
     {
-         Boolean itemColliding = true;
+        Boolean itemColliding = true;
         int hitCount = 0;
 
         for (int j = 0; j < items.Count; j++)
@@ -79,7 +80,7 @@ public class ToggleFalling
 
             for (int i = 0; i < collisionRects.Count; i++)
             {
-               
+
                 if (x.GetDestination().Intersects(collisionRects[i]))
                 {
 
@@ -103,33 +104,62 @@ public class ToggleFalling
                 x.setGroundPosition(480);
             }
         }
-            hitCount = 0;
-        
+        hitCount = 0;
+
 
     }
 
     public void updateMarioFalling(Mario mar)
     {
 
+        Rectangle marioBounds = mar.GetDestination();
         for (int i = 0; i < collisionRects.Count; i++)
         {
-            if (mar.GetDestination().Intersects(collisionRects[i]))
-            {
-                if (mar.isSmall())
-                {
-                    mar.updateGroundPosition(385f);
-                }
-                else
-                {
-                    mar.updateGroundPosition(385f - 32);
-                }
+            Rectangle blockBounds = collisionRects[i];
 
+            if (marioBounds.Intersects(blockBounds))
+            {
                 marioIsColliding = true;
                 marHitCount++;
 
-                break;
-            }
+                if (marioBounds.Bottom > blockBounds.Top &&
+                    marioBounds.Top < blockBounds.Top &&
+                    marioBounds.Right > blockBounds.Left &&
+                    marioBounds.Left < blockBounds.Right)
+                {
+                    float groundPosition = blockBounds.Top;
 
+                    if (mar.isSmall())
+                    {
+                        mar.updateGroundPosition(groundPosition - 32);
+                    }
+                    else
+                    {
+                        mar.updateGroundPosition(groundPosition - 64);
+                    }
+
+                    break;
+                }
+
+                if (marioBounds.Right > blockBounds.Left &&
+                    marioBounds.Left < blockBounds.Left &&
+                    marioBounds.Bottom > blockBounds.Top &&
+                    marioBounds.Top < blockBounds.Bottom)
+                {
+                    mar.Stop();
+                    break;
+                }
+
+                if (marioBounds.Left < blockBounds.Right &&
+                    marioBounds.Right > blockBounds.Right &&
+                    marioBounds.Bottom > blockBounds.Top &&
+                    marioBounds.Top < blockBounds.Bottom)
+                {
+                    mar.Stop();
+                    break;
+                }
+
+            }
         }
         if (marHitCount == 0)
         {
