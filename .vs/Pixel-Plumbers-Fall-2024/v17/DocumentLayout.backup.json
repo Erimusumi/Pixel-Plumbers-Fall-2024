@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Projects\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\players\\mario\\mariospritemachineswimming.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:players\\mario\\mariospritemachineswimming.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -22,11 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Projects\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
@@ -36,6 +40,19 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MarioSpriteMachineSwimming.cs",
+              "DocumentMoniker": "C:\\Projects\\Players\\Mario\\MarioSpriteMachineSwimming.cs",
+              "RelativeDocumentMoniker": "Players\\Mario\\MarioSpriteMachineSwimming.cs",
+              "ToolTip": "C:\\Projects\\Players\\Mario\\MarioSpriteMachineSwimming.cs",
+              "RelativeToolTip": "Players\\Mario\\MarioSpriteMachineSwimming.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T22:46:33.116Z",
               "EditorCaption": ""
             },
             {
@@ -64,7 +81,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "LevelOne.cs",
               "DocumentMoniker": "C:\\Projects\\Levels\\LevelOne.cs",
               "RelativeDocumentMoniker": "Levels\\LevelOne.cs",
@@ -76,7 +93,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FilterEntities.cs",
               "DocumentMoniker": "C:\\Projects\\Filter Entities\\FilterEntities.cs",
               "RelativeDocumentMoniker": "Filter Entities\\FilterEntities.cs",
