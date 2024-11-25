@@ -516,7 +516,7 @@ public class Mario : IPlayer
             marioSpriteMachine = new MarioSpriteMachine();
             gravity = 980f;
             jumpSpeed = -570f;
-}
+        }
     }
     public void updateGroundPosition(float gp)
     {

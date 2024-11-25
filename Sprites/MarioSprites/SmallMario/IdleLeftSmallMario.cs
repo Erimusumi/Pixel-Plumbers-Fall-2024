@@ -18,7 +18,7 @@ public class IdleLeftSmallMario : ICharacter
         else { tint = Color.White; }
 
         Rectangle sourceRectangle = new Rectangle(181, 0, 13, 16);
-        spriteBatch.Draw(MarioTexture, position, sourceRectangle, tint, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+        spriteBatch.Draw(LuigiTexture, position, sourceRectangle, tint, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
     }
 
     public void Update(GameTime gametime)

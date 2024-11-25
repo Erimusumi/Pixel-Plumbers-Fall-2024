@@ -253,8 +253,8 @@ public class LevelOne : ILevel
             entities.Add(mario);
         }
 
-        mario.SetSwimmingLevel(true);
-        //luigi.SetSwimmingLevel(true);
+        mario.SetSwimmingLevel(false);
+        luigi.SetSwimmingLevel(false);
     
 
         lvl1backdrop = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Backdrop.csv");
