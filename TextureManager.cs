@@ -10,6 +10,7 @@ public class TextureManager
     private ContentManager content;
 
     private Texture2D marioTexture;
+    private Texture2D luigiTexture;
     private Texture2D titleTexture;
     private Texture2D gameOverBackground;
     private Texture2D enemyTexture;
@@ -30,6 +31,7 @@ public class TextureManager
         textures = new Dictionary<string, Texture2D>();
 
         marioTexture = content.Load<Texture2D>("mario");
+        luigiTexture = content.Load<Texture2D>("luigi");
         titleTexture = content.Load<Texture2D>("supermariobros");
         gameOverBackground = content.Load<Texture2D>("blank screen");
         enemyTexture = content.Load<Texture2D>("enemies");
@@ -44,6 +46,7 @@ public class TextureManager
         danceTexture = content.Load<Texture2D>("dance");
 
         textures["Mario"] = marioTexture;
+        textures["Luigi"] = luigiTexture;
         textures["Title"] = titleTexture;
         textures["GameOverBackground"] = gameOverBackground;
         textures["Enemy"] = enemyTexture;
