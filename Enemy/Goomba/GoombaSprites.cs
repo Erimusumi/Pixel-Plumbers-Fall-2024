@@ -18,6 +18,7 @@ public class GoombaSprites
     private Rectangle sourceRectangle;
     private Rectangle destinationRectangle;
     private int counter = -1;
+    private int counter2 = 0;
 
     private const int countStart = 10;
     private const int countMod = 10;
@@ -25,9 +26,7 @@ public class GoombaSprites
     private const int size = 16;
     private const int scaleUp = 2;
     private const int speed = 1;
-    private bool isOnGround = true;
-    private float gravity = 980f;
-    private Vector2 Velocity;
+    private bool isOnGround = false;
     private float groundPosition = 385f;
 
     private float rotation = 0f;
@@ -79,24 +78,28 @@ public class GoombaSprites
         sourceRectangle = new Rectangle(60, 8, size, size/2);
         destinationRectangle = new Rectangle(position, posY+10, size * scaleUp, (size/2) * scaleUp);
     }
-    public void ApplyGravity(GameTime gameTime)
+    public void ApplyGravity()
     {
         //if (playerStateMachine.IsDead()) return;
-        if (/*!isOnGround*/ true)
+        if (!isOnGround)
         {
-            Velocity.Y += gravity * (float)gameTime.ElapsedGameTime.TotalSeconds;
-            posY += (int)(Velocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds);
-            /*
+            if (counter % 10 == 0)
+            {
+                counter2++;
+            }
+            posY += counter2;
+            
             if (posY >= groundPosition)
             {
                 posY = (int)groundPosition;
-                Velocity.Y = 0;
+                counter2 = 0;
                 isOnGround = true;
             }
-            */
+            
+            destinationRectangle = new Rectangle(position, posY, size * scaleUp, size * scaleUp);
         }
     }
-    public void FlippedLogic(int flipOrStart, GameTime gameTime)
+    public void FlippedLogic(int flipOrStart)
 	{
         if (flipOrStart == 0)
         {
@@ -120,7 +123,7 @@ public class GoombaSprites
         }
         if (flipOrStart == 0)
         {
-            ApplyGravity(gameTime);
+            ApplyGravity();
         }
         destinationRectangle = new Rectangle(position, posY, size * scaleUp, size * scaleUp);
     }
