@@ -146,6 +146,6 @@ public class LevelTwo : ILevel
 
     public List<Rectangle> GetLevelFloorRectangles()
     {
-        return lvl2foreground1.GetRedRectangles();
+        return lvl2foreground2.GetRedRectangles();
     }
 }
