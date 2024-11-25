@@ -17,6 +17,7 @@ public class Luigi : IPlayer
 
     private ICharacter currentMarioSprite;
     private PlayerStateMachine playerStateMachine;
+    private IMarioSpriteMachine luigiSpriteMachine;
     public GameTime gameTime;
 
     private Vector2 initialPosition;
@@ -31,6 +32,7 @@ public class Luigi : IPlayer
     private bool canTakeDamage = true;
     private bool moveKeyPressed = false;
     private bool deathSoundPlaying = false;
+    private bool isSwimmingLevel = false;
 
     private const float maxSpeed = 3f;
     private const float acceleration = 0.03f;
@@ -347,7 +349,7 @@ public class Luigi : IPlayer
         this.SlowStopMario();
         this.CheckStopTurningUpd();
         this.LuigiDeath();
-        currentMarioSprite = LuigiSpriteMachine.UpdateLuigiSprite(playerStateMachine, marioTexture);
+        currentMarioSprite = luigiSpriteMachine.UpdatePlayerSprite(playerStateMachine, marioTexture);
         currentMarioSprite.Update(gameTime);
         fireballTimer += -1;
         starTimer += -1;
@@ -434,6 +436,27 @@ public class Luigi : IPlayer
         if (this.HasStar() && starTimer <= 0)
         {
             playerStateMachine.RemoveStar();
+        }
+    }
+
+    public void SetSwimmingLevel(bool isLevelSwimming)
+    {
+        isSwimmingLevel = isLevelSwimming;
+        playerStateMachine.setSwimmingLevel(isLevelSwimming);
+
+        if (isSwimmingLevel)
+        {
+            //Reduce gravity and jump height, "floaty" physics
+            luigiSpriteMachine = new LuigiSpriteMachineSwimming();
+            gravity = 980f / 4f;
+            jumpSpeed = -570f / 4f;
+        }
+        else
+        {
+            //Set parameters to normal
+            luigiSpriteMachine = new LuigiSpriteMachine();
+            gravity = 980f;
+            jumpSpeed = -570f;
         }
     }
     public void updateGroundPosition(float gp)
