@@ -168,7 +168,7 @@ public class ToggleFalling
         if (!marioIsColliding && mar.GetDestination().Intersects(new Rectangle(mar.GetDestination().X, (int)mar.GroundPosition(), 16, 16)))
         {
 
-            mar.updateGroundPosition(480f);
+            mar.updateGroundPosition(mar.GroundPosition() + 5f); // Mario falls by 5 units per frame
         }
         marHitCount = 0;
     }

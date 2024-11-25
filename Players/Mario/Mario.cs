@@ -436,7 +436,7 @@ public class Mario : IPlayer
     }
     public void checkMarioHeightForDeath()
     {
-        if (this.GetDestination().Y > 464)
+        if (this.GetDestination().Y > 1500)
         {
             playerStateMachine.SetPlayerDead();
         }
