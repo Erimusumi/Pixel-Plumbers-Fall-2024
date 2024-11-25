@@ -52,7 +52,7 @@ public class Luigi : IPlayer
     {
         this.textureManager = textureManager;
 
-        this.luigiTexture = textureManager.GetTexture("luigi");
+        this.luigiTexture = textureManager.GetTexture("Luigi");
         this.itemTexture = textureManager.GetTexture("Items");
 
         this.luigiPosition = new Vector2(200, groundPosition);

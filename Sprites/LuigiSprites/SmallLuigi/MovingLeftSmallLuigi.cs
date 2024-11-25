@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 public class MovingLeftSmallLuigi : ICharacter
 {
     private float scale = 2f;
-    private Texture2D MarioTexture;
+    private Texture2D LuigiTexture;
     private float AnimationTicks;
     private float AnimationTimer;
     private int AnimationSpeed;
@@ -14,9 +14,9 @@ public class MovingLeftSmallLuigi : ICharacter
 
     private Rectangle[] FrameRectangles;
 
-    public MovingLeftSmallLuigi(Texture2D MarioTexture)
+    public MovingLeftSmallLuigi(Texture2D LuigiTexture)
     {
-        this.MarioTexture = MarioTexture;
+        this.LuigiTexture = LuigiTexture;
 
         AnimationTimer = 0;
         AnimationTicks = 100;
@@ -36,7 +36,7 @@ public class MovingLeftSmallLuigi : ICharacter
         if (HasStar) { tint = Color.Magenta; }
         else { tint = Color.White; }
 
-        spriteBatch.Draw(MarioTexture, position, FrameRectangles[currentAnimationIndex], tint, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+        spriteBatch.Draw(LuigiTexture, position, FrameRectangles[currentAnimationIndex], tint, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
     }
 
     public void Update(GameTime gameTime)
