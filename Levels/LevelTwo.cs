@@ -24,7 +24,6 @@ public class LevelTwo : ILevel
     private List<IEntity> entitiesRemoved;
     private List<IEntity> floorRectangles;
 
-
     private SpriteBatch spriteBatch;
     private Texture2D EnemyTexture;
     private Texture2D blockTexture;
@@ -40,7 +39,7 @@ public class LevelTwo : ILevel
     private Layer lvl2foreground2;
     private FlagSprite flagSprite;
 
-    Boolean moved = false;
+    Boolean startAnimation = false;
 
     public LevelTwo(
         Game1 game,
@@ -101,6 +100,8 @@ public class LevelTwo : ILevel
     }
     public void UpdateLevel(GameTime gameTime)
     {
+        mario.SetSwimmingLevel(true);
+
         if (gameStateMachine.isMultiplayer())
         {
             mario.SetIsOnGround(false);
@@ -114,17 +115,8 @@ public class LevelTwo : ILevel
             mario.Update(gameTime); ;
         }
 
-        // if (moved == false)
-        // {
-        //     if (mario.marioPosition.X > 10)
-        //     {
-        //         mario.SetPositionY(862);
-        //         mario.SetPositionX(20);
-        //         moved = true;
-        //     }
-        // }
-
     }
+
     public void DrawLevel(SpriteBatch sB, FollowCamera camera)
     {
         lvl2backdrop1.Draw(spriteBatch, overworldTiles, Vector2.Zero);
