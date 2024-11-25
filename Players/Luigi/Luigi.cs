@@ -11,7 +11,7 @@ using Pixel_Plumbers_Fall_2024;
 
 public class Luigi : IPlayer
 {
-    private Texture2D marioTexture;
+    private Texture2D luigiTexture;
     private Texture2D itemTexture;
     private TextureManager textureManager;
 
@@ -52,7 +52,7 @@ public class Luigi : IPlayer
     {
         this.textureManager = textureManager;
 
-        this.marioTexture = textureManager.GetTexture("Mario");
+        this.luigiTexture = textureManager.GetTexture("luigi");
         this.itemTexture = textureManager.GetTexture("Items");
 
         this.luigiPosition = new Vector2(200, groundPosition);
@@ -64,7 +64,7 @@ public class Luigi : IPlayer
         this.starTimer = 0;
         this.luigiDeathBounceIncrement = 15;
 
-        this.currentMarioSprite = new IdleRightSmallMario(marioTexture);
+        this.currentMarioSprite = new IdleRightSmallMario(luigiTexture);
         this.game = game;
         this._entities = entities;
 
@@ -349,7 +349,7 @@ public class Luigi : IPlayer
         this.SlowStopMario();
         this.CheckStopTurningUpd();
         this.LuigiDeath();
-        currentMarioSprite = luigiSpriteMachine.UpdatePlayerSprite(playerStateMachine, marioTexture);
+        currentMarioSprite = luigiSpriteMachine.UpdatePlayerSprite(playerStateMachine, luigiTexture);
         currentMarioSprite.Update(gameTime);
         fireballTimer += -1;
         starTimer += -1;
@@ -369,7 +369,7 @@ public class Luigi : IPlayer
         luigiVelocity = Vector2.Zero;
         playerStateMachine.Reset();
         isOnGround = true;
-        currentMarioSprite = new IdleRightSmallMario(marioTexture);
+        currentMarioSprite = new IdleRightSmallMario(luigiTexture);
         luigiDeathBounceIncrement = 20;
         gameResetTimer = -1;
         deathSoundPlaying = false;
