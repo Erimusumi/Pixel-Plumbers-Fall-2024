@@ -9,9 +9,9 @@ public class Goomba2 : ISpriteEnemy
 {
     private GoombaStateMachine2 stateMachine;
 	private float groundPosition = 385f;
-	public Goomba2(int posX, int posY, GameTime gameTime)
+	public Goomba2(int posX, int posY)
 	{
-		stateMachine = new GoombaStateMachine2(posX, posY, gameTime);
+		stateMachine = new GoombaStateMachine2(posX, posY);
 	}
 
 	public void changeDirection()

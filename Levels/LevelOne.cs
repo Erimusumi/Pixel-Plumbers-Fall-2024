@@ -88,22 +88,22 @@ public class LevelOne : ILevel
         flag = new Flag(new Vector2(6335, 354),overworldTiles,danceTexture, spriteBatch);
         Enemy.Add(new Blooper(240, 200, mario));
 
-        Enemy.Add(new Goomba(535, 370, (IPlayer)mario, gameTime));
-        Enemy.Add(new Goomba(1400, 385, (IPlayer)mario, gameTime));
-        Enemy.Add(new Goomba(1700, 385, (IPlayer)mario, gameTime));
-        Enemy.Add(new Goomba(1750, 385, (IPlayer)mario, gameTime));
-        Enemy.Add(new Goomba(2500, 235, (IPlayer)mario, gameTime));
-        Enemy.Add(new Goomba(2600, 105, (IPlayer)mario, gameTime));
-        Enemy.Add(new Goomba(3000, 385, (IPlayer)mario, gameTime));
-        Enemy.Add(new Goomba(3150, 385, (IPlayer)mario, gameTime));
-        Enemy.Add(new Goomba(3520, 385, (IPlayer)mario, gameTime));
-        Enemy.Add(new Goomba(3720, 385, (IPlayer)mario, gameTime));
-        Enemy.Add(new Goomba(4000, 385, (IPlayer)mario, gameTime));
-        Enemy.Add(new Goomba(4050, 385, (IPlayer)mario, gameTime));
-        Enemy.Add(new Goomba(4110, 385, (IPlayer)mario, gameTime));
-        Enemy.Add(new Goomba(4160, 385, (IPlayer)mario, gameTime));
-        Enemy.Add(new Goomba(5400, 385, (IPlayer)mario, gameTime));
-        Enemy.Add(new Goomba(5550, 385, (IPlayer)mario, gameTime));
+        Enemy.Add(new Goomba(535, 370, (IPlayer)mario));
+        Enemy.Add(new Goomba(1400, 385, (IPlayer)mario));
+        Enemy.Add(new Goomba(1700, 385, (IPlayer)mario));
+        Enemy.Add(new Goomba(1750, 385, (IPlayer)mario));
+        Enemy.Add(new Goomba(2500, 235, (IPlayer)mario));
+        Enemy.Add(new Goomba(2600, 105, (IPlayer)mario));
+        Enemy.Add(new Goomba(3000, 385, (IPlayer)mario));
+        Enemy.Add(new Goomba(3150, 385, (IPlayer)mario));
+        Enemy.Add(new Goomba(3520, 385, (IPlayer)mario));
+        Enemy.Add(new Goomba(3720, 385, (IPlayer)mario));
+        Enemy.Add(new Goomba(4000, 385, (IPlayer)mario));
+        Enemy.Add(new Goomba(4050, 385, (IPlayer)mario));
+        Enemy.Add(new Goomba(4110, 385, (IPlayer)mario));
+        Enemy.Add(new Goomba(4160, 385, (IPlayer)mario));
+        Enemy.Add(new Goomba(5400, 385, (IPlayer)mario));
+        Enemy.Add(new Goomba(5550, 385, (IPlayer)mario));
 
         LuckyBlocks.Add(new LuckyBlockSprite(
             blockTexture,

@@ -10,12 +10,10 @@ public class GoombaStateMachine2
 	private enum GoombaState {Left, Right, Stomped, Flipped};
 	private GoombaState _currentState = GoombaState.Right;
 	private GoombaSprites _sprite;
-	GameTime gameTime;
 
-    public GoombaStateMachine2(int posX, int posY, GameTime gameTime)
+    public GoombaStateMachine2(int posX, int posY)
 	{
 		_sprite = new GoombaSprites(posX, posY);
-		this.gameTime = gameTime;
 	}
     public void changeDirection()
 	{
@@ -60,7 +58,7 @@ public class GoombaStateMachine2
 				_sprite.StompedLogic();
 				break;
 			case GoombaState.Flipped:
-				_sprite.FlippedLogic(0, gameTime);
+				_sprite.FlippedLogic(0);
 				break;
         }
 

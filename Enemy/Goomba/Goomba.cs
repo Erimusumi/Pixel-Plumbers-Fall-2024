@@ -9,9 +9,9 @@ public class Goomba : ISpriteEnemy
 {
     private GoombaStateMachine stateMachine;
 	private float groundPosition = 385f;
-	public Goomba(int posX, int posY, IPlayer player, GameTime gameTime)
+	public Goomba(int posX, int posY, IPlayer player)
 	{
-		stateMachine = new GoombaStateMachine(posX, posY, player, gameTime);
+		stateMachine = new GoombaStateMachine(posX, posY, player);
 	}
 	public Boolean IsFlipped()
 	{
