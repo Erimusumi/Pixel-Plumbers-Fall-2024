@@ -3,10 +3,10 @@ using Pixel_Plumbers_Fall_2024;
 
 namespace Pixel_Plumbers_Fall_2024
 {
-    public class LuigiSpriteMachine
+    public class LuigiSpriteMachine : IMarioSpriteMachine
     {
         private static ICharacter lastValidSprite;
-        public static ICharacter UpdateLuigiSprite(PlayerStateMachine luigiStateMachine, Texture2D texture)
+        public ICharacter UpdatePlayerSprite(PlayerStateMachine luigiStateMachine, Texture2D texture)
         {
             ICharacter newSprite = null;
             if (luigiStateMachine.IsDead())

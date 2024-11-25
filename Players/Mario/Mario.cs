@@ -436,7 +436,7 @@ public class Mario : IPlayer
     }
     public void checkMarioHeightForDeath()
     {
-        if (this.GetDestination().Y > 464)
+        if (this.GetDestination().Y > 1500)
         {
             playerStateMachine.SetPlayerDead();
         }
@@ -516,7 +516,7 @@ public class Mario : IPlayer
             marioSpriteMachine = new MarioSpriteMachine();
             gravity = 980f;
             jumpSpeed = -570f;
-}
+        }
     }
     public void updateGroundPosition(float gp)
     {

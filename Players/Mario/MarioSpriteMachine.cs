@@ -3,11 +3,11 @@ using Pixel_Plumbers_Fall_2024;
 
 namespace Pixel_Plumbers_Fall_2024
 {
-    public class MarioSpriteMachine
+    public class MarioSpriteMachine : IMarioSpriteMachine
     {
         private static ICharacter lastValidSprite;
 
-        public static ICharacter UpdateMarioSprite(PlayerStateMachine marioStateMachine, Texture2D texture)
+        public ICharacter UpdatePlayerSprite(PlayerStateMachine marioStateMachine, Texture2D texture)
         {
             ICharacter newSprite = null;
             //Mario being dead takes priority over all other sprites
