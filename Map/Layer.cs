@@ -78,7 +78,8 @@ public class Layer
             spriteBatch.Draw(textureAtlas, drect, src, Color.White);
 
             // Add a 16x16 red rectangle if the value is 112 or between 38 and 55
-            if (item.Value == 112 || (item.Value >= 38 && item.Value <= 55))
+            if ((item.Value == 112 || item.Value == 98 || item.Value == 114 || (item.Value >= 38 && item.Value <= 55))
+        && item.Value != 6 && item.Value != 26 && item.Value != 42)
             {
                 // Create a fixed 16x16 red rectangle
                 Rectangle redRect = new Rectangle(
@@ -90,6 +91,17 @@ public class Layer
 
                 // Add the red rectangle to the list
                 redRectangles.Add(redRect);
+
+                spriteBatch.Draw(
+                     textureAtlas,    
+                     redRect,        
+                     null,            
+                     Color.Red,       
+                     0f,              
+                     Vector2.Zero,    
+                     SpriteEffects.None,
+                     0f             
+                 );
             }
         }
     }
