@@ -17,6 +17,7 @@ public class Luigi : IPlayer
 
     private ICharacter currentMarioSprite;
     private PlayerStateMachine playerStateMachine;
+    private IMarioSpriteMachine luigiSpriteMachine;
     public GameTime gameTime;
 
     private Vector2 initialPosition;
@@ -347,7 +348,7 @@ public class Luigi : IPlayer
         this.SlowStopMario();
         this.CheckStopTurningUpd();
         this.LuigiDeath();
-        currentMarioSprite = LuigiSpriteMachine.UpdateLuigiSprite(playerStateMachine, marioTexture);
+        currentMarioSprite = luigiSpriteMachine.UpdatePlayerSprite(playerStateMachine, marioTexture);
         currentMarioSprite.Update(gameTime);
         fireballTimer += -1;
         starTimer += -1;
