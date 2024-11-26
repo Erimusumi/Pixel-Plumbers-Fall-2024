@@ -18,6 +18,16 @@ public class PlayerMovementController : IController
         KeyBinds.Add(key, command);
     }
 
+    public Dictionary<Keys, IPlayerCommand> GetCommands()
+    {
+        return KeyBinds;
+    }
+
+    public void SetCommands(Dictionary<Keys, IPlayerCommand> commands)
+    {
+        KeyBinds = commands;
+    }
+
     public void Update()
     {
         KeyboardState currentKeyState = Keyboard.GetState();
