@@ -34,7 +34,7 @@ public class ToggleFalling
         filterEntities = new FilterEntities();
         enemies = filterEntities.FilterEnemies(entities);
         items = filterEntities.FilterItems(entities);
-        Debug.WriteLine("There are " + items.Count + " items");
+        //Debug.WriteLine("There are " + items.Count + " items");
         this.mario = mario;
 
     }

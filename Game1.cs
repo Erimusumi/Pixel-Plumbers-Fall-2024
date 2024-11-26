@@ -179,10 +179,11 @@ public class Game1 : Game
         marioControlCenter = new MarioControlCenter(mario, marioMovementController);
         luigiControlCenter = new LuigiControlCenter(luigi, luigiMovementController);
 
+
         gameStateMachine = new GameStateMachine();
         gameStateKeyboardController = new KeyboardController();
         gameStateMouseController = new MouseController();
-        gameStateControlCenter = new GameStateControlCenter(gameStateMachine, gameStateKeyboardController, gameStateMouseController, this, startScreenSprite, levelScreenSprite, soundManager, blackJackStateMachine);
+        gameStateControlCenter = new GameStateControlCenter(gameStateMachine, gameStateKeyboardController, gameStateMouseController, this, startScreenSprite, levelScreenSprite, soundManager, blackJackStateMachine, marioControlCenter.GetController());
 
     }
 
