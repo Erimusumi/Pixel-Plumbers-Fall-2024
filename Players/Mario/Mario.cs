@@ -27,6 +27,7 @@ public class Mario : IPlayer
     private float swimmingMaxHeight = 10f;
     private float gravity = 980f;
     private float jumpSpeed = -570f;
+
     private bool isSwimmingLevel = false;
 
     private bool isOnGround = true;
@@ -441,7 +442,7 @@ public class Mario : IPlayer
             playerStateMachine.SetPlayerDead();
         }
     }
-    
+
     private void CheckSwimmingMaxHeight()
     {
         if (isSwimmingLevel && (marioPosition.Y < swimmingMaxHeight))
@@ -536,5 +537,10 @@ public class Mario : IPlayer
     public bool isFire()
     {
         return playerStateMachine.IsFire();
+    }
+
+    public bool IsCrouching()
+    {
+        return playerStateMachine.IsCrouching();
     }
 }

@@ -135,7 +135,14 @@ public class ToggleFalling
                     }
                     else
                     {
-                        mar.updateGroundPosition(groundPosition - 64);
+                        if (mar.IsCrouching())
+                        {
+                            mar.updateGroundPosition(groundPosition - 42);
+                        }
+                        else
+                        {
+                            mar.updateGroundPosition(groundPosition - 64);
+                        }
                     }
 
                     break;
