@@ -4,12 +4,12 @@ using Microsoft.Xna.Framework.Graphics;
 public class JumpingRightSmallLuigi : ICharacter
 {
     private float scale = 2f;
-    private Texture2D MarioTexture;
+    private Texture2D LuigiTexture;
     private Color tint;
     
-    public JumpingRightSmallLuigi(Texture2D MarioTexture)
+    public JumpingRightSmallLuigi(Texture2D LuigiTexture)
     {
-        this.MarioTexture = MarioTexture;
+        this.LuigiTexture = LuigiTexture;
     }
 
     public void Draw(SpriteBatch spriteBatch, Vector2 position, bool HasStar)
@@ -18,7 +18,7 @@ public class JumpingRightSmallLuigi : ICharacter
         else { tint = Color.White; }
 
         Rectangle sourceRectangle = new Rectangle(359, 0, 17, 16);
-        spriteBatch.Draw(MarioTexture, position, sourceRectangle, tint, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+        spriteBatch.Draw(LuigiTexture, position, sourceRectangle, tint, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
     }
 
     public void Update(GameTime gametime)

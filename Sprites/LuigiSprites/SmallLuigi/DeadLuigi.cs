@@ -4,17 +4,17 @@ using Microsoft.Xna.Framework.Graphics;
 public class DeadLuigi : ICharacter
 {
     private float scale = 2f;
-    private Texture2D MarioTexture;
+    private Texture2D LuigiTexture;
     
-    public DeadLuigi(Texture2D MarioTexture)
+    public DeadLuigi(Texture2D LuigiTexture)
     {
-        this.MarioTexture = MarioTexture;
+        this.LuigiTexture = LuigiTexture;
     }
 
     public void Draw(SpriteBatch spriteBatch, Vector2 position, bool hasStar)
     {
         Rectangle sourceRectangle = new Rectangle(0, 16, 15, 14);
-        spriteBatch.Draw(MarioTexture, position, sourceRectangle, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+        spriteBatch.Draw(LuigiTexture, position, sourceRectangle, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
     }
 
     public void Update(GameTime gametime)

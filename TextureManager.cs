@@ -39,7 +39,7 @@ public class TextureManager
         blockTexture = content.Load<Texture2D>("blocks");
         obstacleTexture = content.Load<Texture2D>("obstacle");
         overworldTiles = content.Load<Texture2D>("OverworldTilesv200");
-        underwaterTiles = content.Load<Texture2D>("UnderwaterTiles");
+        underwaterTiles = content.Load<Texture2D>("UnderwaterTilesv200");
         tableTexture = content.Load<Texture2D>("BlackJack/table");
         tabletopTexture = content.Load<Texture2D>("BlackJack/tabletop");
         cardsTexture = content.Load<Texture2D>("BlackJack/cards");
