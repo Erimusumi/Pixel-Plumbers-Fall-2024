@@ -367,7 +367,7 @@ public class LevelOne : ILevel
         obstacle3.Draw(spriteBatch, new Vector2(350 + 350, 335));
         obstacle6.Draw(spriteBatch, new Vector2(5740, 370));
 
-        //spriteBatch.Draw(box, Goomba1.GetDestination(), Color.White);
+        spriteBatch.Draw(box, flag.GetDestination(), Color.White);
     }
 
     public List<IEntity> GetAllEntities()
