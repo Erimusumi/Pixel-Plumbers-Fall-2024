@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,7 +22,8 @@ using System.Threading.Tasks;
     }
     public void update()
     {
-        flag.makeWinFlag();
+        Rectangle destination = player.GetDestination();
+        flag.makeWinFlag(destination.Y);
     }
     private void removeFromList()
     {

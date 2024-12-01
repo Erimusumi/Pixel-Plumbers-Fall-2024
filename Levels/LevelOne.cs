@@ -253,7 +253,7 @@ public class LevelOne : ILevel
             entities.Add(mario);
         }
 
-        mario.SetSwimmingLevel(false);
+        mario.SetSwimmingLevel(true);
         luigi.SetSwimmingLevel(false);
     
 
