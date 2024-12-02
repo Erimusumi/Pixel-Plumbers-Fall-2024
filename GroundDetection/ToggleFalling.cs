@@ -59,6 +59,7 @@ public class ToggleFalling
     {
         Fireball fireBall;
         
+        
         for (int i = 0; i < fireBalls.Count; i++)
         {
             fireBall = (Fireball)fireBalls[i];

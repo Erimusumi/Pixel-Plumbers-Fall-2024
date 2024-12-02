@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework.Input;
 using Pixel_Plumbers_Fall_2024;
 using static System.Formats.Asn1.AsnWriter;
 
-public class DancePole : ISpriteAnimation
+public class NormalWin
 {
     Rectangle sourceRectangle;
     Rectangle destinationRectangle;
@@ -18,7 +18,7 @@ public class DancePole : ISpriteAnimation
     private const int coordsY = 57;
     const int height = 244;
     const int width = 116;
-    
+
 
     int Hchange = 372;
     int Wchange = 211;
@@ -28,7 +28,7 @@ public class DancePole : ISpriteAnimation
 
     private Vector2 destination;
 
-    public DancePole(Vector2 position)
+    public NormalWin(Vector2 position)
     {
         this.destination = position;
     }
