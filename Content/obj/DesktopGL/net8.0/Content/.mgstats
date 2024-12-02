@@ -1,1 +1,3 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/luigi.png","C:/Users/helen/source/repos/PixelPlumbers2/Content/bin/DesktopGL/Content/luigi.xnb","TextureProcessor","Texture2DContent",12251,304645,0.2163981
+"C:/Users/helen/source/repos/PixelPlumbers2/Content/UnderwaterTilesv200.png","C:/Users/helen/source/repos/PixelPlumbers2/Content/bin/DesktopGL/Content/UnderwaterTilesv200.xnb","TextureProcessor","Texture2DContent",6687,131157,0.0103349
