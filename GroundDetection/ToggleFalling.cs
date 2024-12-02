@@ -58,6 +58,7 @@ public class ToggleFalling
     public void updateFireBallFalling(List<IEntity> fireBalls)
     {
         Fireball fireBall;
+        
         for (int i = 0; i < fireBalls.Count; i++)
         {
             fireBall = (Fireball)fireBalls[i];
@@ -67,8 +68,16 @@ public class ToggleFalling
                 {
                     fireBall.Bounce();
                 }
+                //if (fireBall.GetDestination().Intersects(new Rectangle(collisionRects.X,collisionRects.Y)collisionRects[j].Left))
+                //{
+
+                //}else if (fireBall.GetDestination().Intersects())
+                //{
+
+                //}
             }
         }
+
     }
 
 
