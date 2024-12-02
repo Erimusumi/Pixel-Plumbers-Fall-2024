@@ -253,9 +253,8 @@ public class LevelOne : ILevel
             entities.Add(mario);
         }
 
-        mario.SetSwimmingLevel(true);
+        mario.SetSwimmingLevel(false);
         luigi.SetSwimmingLevel(false);
-
 
         lvl1backdrop = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Backdrop.csv");
         lvl1greenery = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Greenery.csv");
@@ -300,7 +299,6 @@ public class LevelOne : ILevel
         obstacle3.Update();
         obstacle6.Update();
         flag.Update();
-
     }
 
     public void DrawLevel(SpriteBatch spriteBatch, FollowCamera camera)
@@ -312,8 +310,8 @@ public class LevelOne : ILevel
 
         if (gameStateMachine.isMultiplayer())
         {
-            mario.Draw(spriteBatch);
             luigi.Draw(spriteBatch);
+            mario.Draw(spriteBatch);
         }
         else if (gameStateMachine.isSingleplayer())
         {
@@ -369,6 +367,8 @@ public class LevelOne : ILevel
         obstacle6.Draw(spriteBatch, new Vector2(5740, 370));
 
         spriteBatch.Draw(box, flag.GetDestination(), Color.White);
+        //spriteBatch.Draw(box, luigi.GetDestination(), Color.White);
+
     }
 
     public List<IEntity> GetAllEntities()

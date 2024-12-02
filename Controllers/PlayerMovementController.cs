@@ -34,7 +34,6 @@ public class PlayerMovementController : IController
         Keys[] keysPressed = currentKeyState.GetPressedKeys();
         Keys[] previouslyPressedKeys = previousKeyState.GetPressedKeys();
 
-        // Execute commands for keys that are currently pressed
         foreach (var key in keysPressed)
         {
             if (KeyBinds.ContainsKey(key))
@@ -42,12 +41,11 @@ public class PlayerMovementController : IController
                 KeyBinds[key].Execute();
             }
         }
-        // Unexecute commands for keys that were pressed in the previous state, but are not pressed anymore
         foreach (var key in previouslyPressedKeys)
         {
             if (!keysPressed.Contains(key) && KeyBinds.ContainsKey(key))
             {
-                KeyBinds[key].Unexecute();  // Call Unexecute on key release
+                KeyBinds[key].Unexecute();
             }
         }
         previousKeyState = currentKeyState;
