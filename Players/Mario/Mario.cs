@@ -29,7 +29,6 @@ public class Mario : IPlayer
     private float jumpSpeed = -570f;
 
     private bool isSwimmingLevel = false;
-
     private bool isOnGround = true;
     private bool canPowerUp = true;
     private bool canTakeDamage = true;
@@ -44,17 +43,13 @@ public class Mario : IPlayer
     int marioDeathBounceIncrement;
     private List<SoundEffect> _sfx;
 
-    //Need Game1 reference to correctly create fireballs
     private Game1 game;
     private int gameResetTimer = -1;
     private List<IEntity> _entities;
 
-
-
     public Mario(Game1 game, List<IEntity> entities, List<SoundEffect> sfx, TextureManager textureManager, GameTime gametime)
     {
         this.textureManager = textureManager;
-
         this.marioTexture = textureManager.GetTexture("Mario");
         this.itemTexture = textureManager.GetTexture("Items");
 
@@ -85,32 +80,7 @@ public class Mario : IPlayer
 
     public void MoveRight()
     {
-        /*
-         * Old implementation of MoveRight, keeping here in case needs to be reverted
-         * 
-        if (marioVelocity.X < 0f)
-        {
-            marioStateMachine.SetMarioTurning();
-        }
-
-        if (!marioStateMachine.IsCrouching())
-        {
-            if (marioVelocity.X < maxSpeed)
-            {
-                marioVelocity.X += acceleration;
-            }
-
-            marioPosition.X += marioVelocity.X;
-
-            if (!marioStateMachine.IsJumping() && !marioStateMachine.IsTurning())
-            {
-                marioStateMachine.SetMarioRight();
-                marioStateMachine.SetMarioMoving();
-            }
-        }
-        */
         if (playerStateMachine.IsDead()) return;
-
         moveKeyPressed = true;
         if (!playerStateMachine.IsJumping())
         {
@@ -124,12 +94,10 @@ public class Mario : IPlayer
                 playerStateMachine.SetPlayerMoving();
             }
         }
-
         if (isSwimmingLevel && (marioVelocity.X > 0f))
         {
             playerStateMachine.SetPlayerRight();
         }
-
         if (!playerStateMachine.IsCrouching())
         {
             if (marioVelocity.X < maxSpeed)
@@ -142,9 +110,7 @@ public class Mario : IPlayer
     public void MoveLeft()
     {
         if (playerStateMachine.IsDead()) return;
-
         moveKeyPressed = true;
-
         if (!playerStateMachine.IsJumping())
         {
             if (marioVelocity.X > 0f)
@@ -157,12 +123,10 @@ public class Mario : IPlayer
                 playerStateMachine.SetPlayerMoving();
             }
         }
-
         if (isSwimmingLevel && (marioVelocity.X < 0f))
         {
             playerStateMachine.SetPlayerLeft();
         }
-
         if (!playerStateMachine.IsCrouching())
         {
             if (marioVelocity.X > -maxSpeed)
@@ -175,7 +139,6 @@ public class Mario : IPlayer
     public void Jump()
     {
         if (playerStateMachine.IsDead()) return;
-
         if ((isOnGround || isSwimmingLevel) && !playerStateMachine.IsCrouching())
         {
             marioVelocity.Y = jumpSpeed;
@@ -188,22 +151,20 @@ public class Mario : IPlayer
     public void Crouch()
     {
         if (playerStateMachine.IsDead()) return;
-
         if (!playerStateMachine.IsJumping())
         {
             playerStateMachine.SetPlayerCrouching();
+            marioVelocity.X = 0;
         }
     }
 
     public void ApplyGravity(GameTime gameTime)
     {
         if (playerStateMachine.IsDead()) return;
-
         if (!isOnGround)
         {
             marioVelocity.Y += gravity * (float)gameTime.ElapsedGameTime.TotalSeconds;
             marioPosition.Y += marioVelocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;
-
             if (marioPosition.Y >= groundPosition)
             {
                 marioPosition.Y = groundPosition;
@@ -213,6 +174,7 @@ public class Mario : IPlayer
             }
         }
     }
+
     public void ForceGravity(GameTime gameTime)
     {
         marioVelocity.Y += gravity * (float)gameTime.ElapsedGameTime.TotalSeconds;
@@ -221,9 +183,7 @@ public class Mario : IPlayer
 
     public void PowerUp()
     {
-        if (playerStateMachine.IsDead()) return;
-
-        if (!canPowerUp) return; // Prevent power-ups if not allowed
+        if (playerStateMachine.IsDead() || !canPowerUp) return;
         switch (playerStateMachine.CurrentGameState)
         {
             case PlayerStateMachine.PlayerGameState.Small:
@@ -240,14 +200,12 @@ public class Mario : IPlayer
                 break;
         }
         canPowerUp = false;
-        Task.Delay(1000).ContinueWith(t => canPowerUp = true); // Reset after 1 second
+        Task.Delay(1000).ContinueWith(t => canPowerUp = true);
     }
 
     public void TakeDamage()
     {
-        if (playerStateMachine.IsDead()) return;
-
-        if (!canTakeDamage) return;
+        if (playerStateMachine.IsDead() || !canTakeDamage) return;
         switch (playerStateMachine.CurrentGameState)
         {
             case PlayerStateMachine.PlayerGameState.Fire:
@@ -265,15 +223,15 @@ public class Mario : IPlayer
                 break;
         }
         canTakeDamage = false;
-        Task.Delay(1000).ContinueWith(t => canTakeDamage = true); // Reset after 1 second
+        Task.Delay(1000).ContinueWith(t => canTakeDamage = true);
     }
+
     public void MarioWins()
     {
         if (playerStateMachine.Wins())
         {
             _sfx[5].Play();
             playerStateMachine.MakeInvisible();
-
         }
     }
 
@@ -289,8 +247,6 @@ public class Mario : IPlayer
             marioVelocity.X = 0; marioVelocity.Y = 0;
             marioPosition.Y -= (float)marioDeathBounceIncrement;
             marioDeathBounceIncrement -= 1;
-
-            //Start timer and reset automatically after mario dies
             if (gameResetTimer > 0)
             {
                 gameResetTimer -= 1;
@@ -316,7 +272,6 @@ public class Mario : IPlayer
     public void SwapDirection()
     {
         if (playerStateMachine.IsDead()) return;
-
         if (playerStateMachine.IsMoving())
         {
             playerStateMachine.SetPlayerTurning();
@@ -327,12 +282,8 @@ public class Mario : IPlayer
     public void Stop()
     {
         if (playerStateMachine.IsDead()) return;
-
-        //Cut Mario's speed when movement key is released, feels better to control
         marioVelocity.X *= 0.3f;
-
         moveKeyPressed = false;
-
         if (!playerStateMachine.IsJumping())
         {
             playerStateMachine.SetPlayerIdle();
@@ -368,10 +319,8 @@ public class Mario : IPlayer
     {
         if (!moveKeyPressed && !playerStateMachine.IsJumping())
         {
-            //naturally slow down mario
             marioVelocity.X *= 0.5f;
         }
-
         if (Math.Abs(marioVelocity.X) < 0.025f)
         {
             marioVelocity.X = 0f;
@@ -380,9 +329,7 @@ public class Mario : IPlayer
 
     public void ShootFireball()
     {
-        if (playerStateMachine.IsDead()) return;
-        if (fireballTimer > 0) return;
-
+        if (playerStateMachine.IsDead() || fireballTimer > 0) return;
         if (playerStateMachine.IsFire())
         {
             _sfx[2].Play();
@@ -416,25 +363,26 @@ public class Mario : IPlayer
 
     public void Reset()
     {
-        marioPosition = initialPosition;                                                    // Reset Mario's position
-        marioVelocity = Vector2.Zero;                                                       // Reset velocity
-        playerStateMachine.Reset();                                                          // Reset Mario's state machine to the default state
-        isOnGround = true;                                                                  // Set Mario as standing on the ground
-        currentMarioSprite = new IdleRightSmallMario(marioTexture);                         // Set mario to small idle right again
+        marioPosition = initialPosition;
+        marioVelocity = Vector2.Zero;
+        playerStateMachine.Reset();
+        isOnGround = true;
+        currentMarioSprite = new IdleRightSmallMario(marioTexture);
         marioDeathBounceIncrement = 20;
         gameResetTimer = -1;
         deathSoundPlaying = false;
-
     }
 
     public Rectangle GetDestination()
     {
         return currentMarioSprite.GetDestination(marioPosition);
     }
+
     public float GroundPosition()
     {
         return this.groundPosition;
     }
+
     public void checkMarioHeightForDeath()
     {
         if (this.GetDestination().Y > 1500)
@@ -450,6 +398,7 @@ public class Mario : IPlayer
             marioPosition.Y = swimmingMaxHeight;
         }
     }
+
     public PlayerStateMachine.PlayerGameState GetGameState()
     {
         return playerStateMachine.CurrentGameState;
@@ -469,22 +418,27 @@ public class Mario : IPlayer
     {
         marioVelocity.X = velocityX;
     }
+
     public void SetPositionY(float positionY)
     {
         marioPosition.Y = positionY;
     }
+
     public void SetPositionX(float positionX)
     {
         marioPosition.X = positionX;
     }
+
     public void SetIsOnGround(bool isGround)
     {
         isOnGround = isGround;
     }
+
     public bool GetIsOnGround()
     {
         return isOnGround;
     }
+
     public void CollectStar()
     {
         starTimer = 450;
@@ -506,19 +460,18 @@ public class Mario : IPlayer
 
         if (isSwimmingLevel)
         {
-            //Reduce gravity and jump height, "floaty" physics
             marioSpriteMachine = new MarioSpriteMachineSwimming();
             gravity = 980f / 4f;
             jumpSpeed = -570f / 4f;
         }
         else
         {
-            //Set parameters to normal
             marioSpriteMachine = new MarioSpriteMachine();
             gravity = 980f;
             jumpSpeed = -570f;
         }
     }
+
     public void updateGroundPosition(float gp)
     {
         this.groundPosition = gp;
@@ -534,7 +487,8 @@ public class Mario : IPlayer
     {
         return playerStateMachine.IsBig();
     }
-    public bool isFire()
+    public
+    bool isFire()
     {
         return playerStateMachine.IsFire();
     }

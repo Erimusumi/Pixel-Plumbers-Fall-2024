@@ -11,242 +11,256 @@ using System.Net.NetworkInformation;
 using System.Diagnostics;
 using static System.Formats.Asn1.AsnWriter;
 using static System.Net.Mime.MediaTypeNames;
-namespace Pixel_Plumbers_Fall_2024;
 
-public class Game1 : Game
+namespace Pixel_Plumbers_Fall_2024
 {
-    private GraphicsDeviceManager graphics;
-    private SpriteBatch spriteBatch;
-    private GameTime gameTime;
-    private float gameOverTickTimer;
-
-    private TextureManager textureManager;
-    private SoundManager soundManager;
-    public HudManager hudManager;
-    private Texture2D squareTexture;
-
-    private Mario mario;
-    private Luigi luigi;
-
-    public Vector2 initial_mario_position;
-    private ISpriteAnimation Dance;
-
-    private MarioControlCenter marioControlCenter;
-    private LuigiControlCenter luigiControlCenter;
-
-    private PlayerMovementController marioMovementController;
-    private PlayerMovementController luigiMovementController;
-
-    private KeyboardControllerMovement keyboardControllerMovement;
-    private KeyboardController keyboardController;
-    private CommandControlCenter controlCenter;
-
-    private GameStateMachine gameStateMachine;
-    private MouseController gameStateMouseController;
-    private KeyboardController gameStateKeyboardController;
-    private GameStateControlCenter gameStateControlCenter;
-
-    public List<Fireball> fireballs = new List<Fireball>();
-    public List<IEntity> entities = new List<IEntity>();
-    private List<IEntity> entitiesRemoved = new List<IEntity>();
-    private List<SoundEffect> marioSounds = new List<SoundEffect>();
-    private List<SoundEffect> ItemSounds = new List<SoundEffect>();
-    private List<Rectangle> lvl1CollidableRectangles;
-    private List<Rectangle> lvl2CollidableRectangles;
-
-    private Sort sort = new Sort();
-    private Sweep sweep;
-
-    private SoundEffect oneUpSound;
-    private SoundEffect breakBlockSound;
-    private SoundEffect powerDownSound;
-
-    private Rectangle screen = new Rectangle(0, 0, 800, 480);
-    private FollowCamera camera;
-
-    private Ground ground;
-    private ToggleFalling toggleFalling;
-    private ToggleFalling ToggleFalling;
-
-    private BlackJackStateMachine blackJackStateMachine;
-
-    private StartScreenSprite startScreenSprite;
-    private LevelScreenSprite levelScreenSprite;
-    private SpriteFont startScreenFonts;
-    private SpriteFont levelScreenFonts;
-
-    private LevelOne levelOne;
-    private LevelTwo levelTwo;
-
-    public Game1()
+    public class Game1 : Game
     {
-        graphics = new GraphicsDeviceManager(this);
-        Content.RootDirectory = "Content";
-        IsMouseVisible = true;
-        camera = new(Vector2.Zero);
-    }
+        // core game components
+        private GraphicsDeviceManager graphics;
+        private SpriteBatch spriteBatch;
+        private FollowCamera camera;
 
-    public void ResetGame()
-    {
-        entities.Clear();
-        if (gameStateMachine.isLevelOne())
+        // managers
+        private TextureManager textureManager;
+        private SoundManager soundManager;
+        public HudManager hudManager;
+
+        // game state management
+        private GameStateMachine gameStateMachine;
+        private GameStateControlCenter gameStateControlCenter;
+        private KeyboardController gameStateKeyboardController;
+        private MouseController gameStateMouseController;
+
+        // players and controllers
+        private Mario mario;
+        private Luigi luigi;
+        private MarioControlCenter marioControlCenter;
+        private LuigiControlCenter luigiControlCenter;
+        private PlayerMovementController marioMovementController;
+        private PlayerMovementController luigiMovementController;
+        private KeyboardControllerMovement keyboardControllerMovement;
+        private KeyboardController keyboardController;
+
+        // levels
+        private LevelOne levelOne;
+        private LevelTwo levelTwo;
+
+        // game entities and collections
+        public List<Fireball> fireballs = new List<Fireball>();
+        public List<IEntity> entities = new List<IEntity>();
+        private List<IEntity> entitiesRemoved = new List<IEntity>();
+        private List<Rectangle> lvl1CollidableRectangles;
+        private List<Rectangle> lvl2CollidableRectangles;
+
+        // additional game components
+        private BlackJackStateMachine blackJackStateMachine;
+        private StartScreenSprite startScreenSprite;
+        private LevelScreenSprite levelScreenSprite;
+        private SpriteFont startScreenFonts;
+        private SpriteFont levelScreenFonts;
+
+        // game mechanics
+        private Sort sort = new Sort();
+        private Sweep sweep;
+        private Ground ground;
+        private ToggleFalling toggleFalling;
+
+        // timing
+        private float gameOverTickTimer;
+
+        public Game1()
         {
+            graphics = new GraphicsDeviceManager(this);
+            Content.RootDirectory = "Content";
+            IsMouseVisible = true;
+            camera = new(Vector2.Zero);
+        }
+
+        protected override void Initialize()
+        {
+            base.Initialize();
+            InitializeGameComponents();
+            InitializeLevels();
+        }
+
+        private void InitializeGameComponents()
+        {
+            sweep = new Sweep(new GameTime());
+            keyboardController = new KeyboardController();
+            keyboardControllerMovement = new KeyboardControllerMovement();
+
+            lvl1CollidableRectangles = new List<Rectangle>();
+            lvl2CollidableRectangles = new List<Rectangle>();
+        }
+
+        private void InitializeLevels()
+        {
+            levelOne = new LevelOne(this, mario, luigi, entities, entitiesRemoved, spriteBatch, new GameTime(), Content, textureManager, gameStateMachine);
             levelOne.InitializeLevel();
-        }
-        else if (gameStateMachine.isLevelTwo())
-        {
+            lvl1CollidableRectangles = levelOne.GetLevelFloorRectangles();
+
+            levelTwo = new LevelTwo(this, mario, luigi, entities, entitiesRemoved, spriteBatch, new GameTime(), Content, textureManager, gameStateMachine);
             levelTwo.InitializeLevel();
+            lvl2CollidableRectangles = levelTwo.GetLevelFloorRectangles();
         }
 
-        fireballs.Clear();
-        mario.Reset();
-        hudManager.SetTime(400);
-        camera = new(Vector2.Zero);
-    }
-
-    public void GameOver()
-    {
-        gameStateMachine.setGameStateOver();
-        soundManager.GetSound("over").Play();
-    }
-    protected override void Initialize()
-    {
-        base.Initialize();
-        this.gameTime = new GameTime();
-        this.sweep = new Sweep(gameTime);
-
-        textureManager = new TextureManager(Content, squareTexture);
-     
-
-        keyboardController = new KeyboardController();
-        keyboardControllerMovement = new KeyboardControllerMovement();
-        controlCenter = new CommandControlCenter(this);
-
-        levelOne = new LevelOne(this, mario, luigi, entities, entitiesRemoved, spriteBatch, gameTime, Content, textureManager, gameStateMachine);
-        levelOne.InitializeLevel();
-
-        levelTwo = new LevelTwo(this, mario, luigi, entities, entitiesRemoved, spriteBatch, gameTime, Content, textureManager, gameStateMachine);
-        levelTwo.InitializeLevel();
-
-        lvl1CollidableRectangles = new List<Rectangle>();
-        lvl1CollidableRectangles = levelOne.GetLevelFloorRectangles();
-        lvl2CollidableRectangles = new List<Rectangle>();
-        lvl2CollidableRectangles = levelTwo.GetLevelFloorRectangles();
-
-
-    }
-
-    public void SetKey(KeyboardController keys)
-    {
-        keyboardController = keys;
-    }
-
-    protected override void LoadContent()
-    {
-        spriteBatch = new SpriteBatch(GraphicsDevice);
-        squareTexture = new Texture2D(GraphicsDevice, 1, 1);
-        squareTexture.SetData(new Color[] { Color.Red });
-        textureManager = new TextureManager(Content, squareTexture);
-        soundManager = new SoundManager(Content);
-
-
-        //oneUpSound = Content.Load<SoundEffect>("Audio/Sound Effect(s)/smb_1-up");
-
-        ItemSounds.Add(soundManager.GetSound("coin"));
-        ItemSounds.Add(soundManager.GetSound("spawn"));
-
-        marioSounds.Add(soundManager.GetSound("powerup"));
-        marioSounds.Add(soundManager.GetSound("pipe"));
-        marioSounds.Add(soundManager.GetSound("fireball"));
-        marioSounds.Add(soundManager.GetSound("jump"));
-        marioSounds.Add(soundManager.GetSound("death"));
-        marioSounds.Add(soundManager.GetSound("flagpole"));
-
-        mario = new Mario(this, entities, marioSounds, textureManager, gameTime);
-        luigi = new Luigi(this, entities, marioSounds, textureManager, gameTime);
-
-        startScreenFonts = Content.Load<SpriteFont>("StartScreenFonts");
-        levelScreenFonts = Content.Load<SpriteFont>("LevelScreenFonts");
-        startScreenSprite = new StartScreenSprite(textureManager, startScreenFonts);
-        levelScreenSprite = new LevelScreenSprite(levelScreenFonts);
-
-        blackJackStateMachine = new BlackJackStateMachine(textureManager, soundManager.GetSound("fwip"), startScreenFonts);
-        hudManager = new HudManager(startScreenFonts, this, mario);
-
-        marioMovementController = new PlayerMovementController();
-        luigiMovementController = new PlayerMovementController();
-
-        marioControlCenter = new MarioControlCenter(mario, marioMovementController);
-        luigiControlCenter = new LuigiControlCenter(luigi, luigiMovementController);
-
-
-        gameStateMachine = new GameStateMachine();
-        gameStateKeyboardController = new KeyboardController();
-        gameStateMouseController = new MouseController();
-        gameStateControlCenter = new GameStateControlCenter(gameStateMachine, gameStateKeyboardController, gameStateMouseController, this, startScreenSprite, levelScreenSprite, soundManager, blackJackStateMachine, marioControlCenter.GetController());
-
-    }
-
-    protected override void Update(GameTime gameTime)
-    {
-        ground = new Ground(lvl1CollidableRectangles);
-        toggleFalling = new ToggleFalling(ground, entities, this.mario);
-        if (gameStateMachine.isLevelOne())
+        protected override void LoadContent()
         {
-            ground = new Ground(lvl1CollidableRectangles);
-            toggleFalling = new ToggleFalling(ground, entities, this.mario);
+            spriteBatch = new SpriteBatch(GraphicsDevice);
+            LoadManagers();
+            LoadPlayers();
+            LoadUserInterface();
+            LoadControllers();
         }
-        else if (gameStateMachine.isLevelTwo())
+
+        private void LoadManagers()
         {
-            ground = new Ground(lvl2CollidableRectangles);
-            toggleFalling = new ToggleFalling(ground, entities, this.mario);
+            var squareTexture = new Texture2D(GraphicsDevice, 1, 1);
+            squareTexture.SetData(new Color[] { Color.Red });
+
+            textureManager = new TextureManager(Content, squareTexture);
+            soundManager = new SoundManager(Content);
         }
 
-        gameStateKeyboardController.Update();
-        gameStateMouseController.Update();
+        private void LoadPlayers()
+        {
+            var marioSounds = new List<SoundEffect> {
+                soundManager.GetSound("powerup"),
+                soundManager.GetSound("pipe"),
+                soundManager.GetSound("fireball"),
+                soundManager.GetSound("jump"),
+                soundManager.GetSound("death"),
+                soundManager.GetSound("flagpole")
+            };
 
-        List<IEntity> temp = entities;
-        entities = sort.SortList(entities, entities.Count, temp);
-        sweep.Compare(entities, entitiesRemoved, camera.position);
+            mario = new Mario(this, entities, marioSounds, textureManager, new GameTime());
+            luigi = new Luigi(this, entities, marioSounds, textureManager, new GameTime());
+        }
 
-        blackJackStateMachine.Update();
-        if (gameStateMachine.isCurrentStateRunning())
+        private void LoadUserInterface()
+        {
+            startScreenFonts = Content.Load<SpriteFont>("StartScreenFonts");
+            levelScreenFonts = Content.Load<SpriteFont>("LevelScreenFonts");
+            startScreenSprite = new StartScreenSprite(textureManager, startScreenFonts);
+            levelScreenSprite = new LevelScreenSprite(levelScreenFonts);
+
+            blackJackStateMachine = new BlackJackStateMachine(textureManager, soundManager.GetSound("fwip"), startScreenFonts);
+            hudManager = new HudManager(startScreenFonts, this, mario);
+        }
+
+        private void LoadControllers()
+        {
+            marioMovementController = new PlayerMovementController();
+            luigiMovementController = new PlayerMovementController();
+
+            marioControlCenter = new MarioControlCenter(mario, marioMovementController);
+            luigiControlCenter = new LuigiControlCenter(luigi, luigiMovementController);
+
+            gameStateMachine = new GameStateMachine();
+            gameStateKeyboardController = new KeyboardController();
+            gameStateMouseController = new MouseController();
+
+            gameStateControlCenter = new GameStateControlCenter(
+                gameStateMachine,
+                gameStateKeyboardController,
+                gameStateMouseController,
+                this,
+                startScreenSprite,
+                levelScreenSprite,
+                soundManager,
+                blackJackStateMachine,
+                marioControlCenter.GetController()
+            );
+        }
+
+        protected override void Update(GameTime gameTime)
+        {
+            UpdateGameState(gameTime);
+            UpdateGameplay(gameTime);
+            UpdateGameOver(gameTime);
+
+            base.Update(gameTime);
+        }
+
+        private void UpdateGameState(GameTime gameTime)
+        {
+            gameStateKeyboardController.Update();
+            gameStateMouseController.Update();
+
+            entities = sort.SortList(entities, entities.Count, entities);
+            sweep.Compare(entities, entitiesRemoved, camera.position);
+
+            blackJackStateMachine.Update();
+        }
+
+        private void UpdateGameplay(GameTime gameTime)
+        {
+            if (!gameStateMachine.isCurrentStateRunning()) return;
+
+            UpdateInputControllers();
+            UpdateCurrentLevel(gameTime);
+            UpdateCamera();
+            UpdateFireballs(gameTime);
+            UpdateRemovedEntities();
+            hudManager.Update(gameTime, camera);
+        }
+
+        private void UpdateInputControllers()
         {
             keyboardController.Update();
             keyboardControllerMovement.Update();
             marioMovementController.Update();
             luigiMovementController.Update();
+        }
+
+        private void UpdateCurrentLevel(GameTime gameTime)
+        {
+            ground = DetermineCurrentGround();
+            toggleFalling = new ToggleFalling(ground, entities, mario, luigi);
 
             if (gameStateMachine.isLevelOne())
-            {
                 levelOne.UpdateLevel(gameTime);
-            }
             else if (gameStateMachine.isLevelTwo())
-            {
                 levelTwo.UpdateLevel(gameTime);
-            }
 
+            toggleFalling.updates();
+        }
+
+        private Ground DetermineCurrentGround()
+        {
+            return gameStateMachine.isLevelOne()
+                ? new Ground(lvl1CollidableRectangles)
+                : new Ground(lvl2CollidableRectangles);
+        }
+
+        private void UpdateCamera()
+        {
             camera.Follow(mario.marioPosition, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height));
+        }
 
-            foreach (var item in fireballs)
+        private void UpdateFireballs(GameTime gameTime)
+        {
+            foreach (var fireball in fireballs)
             {
-                item.Update(gameTime);
+                fireball.Update(gameTime);
             }
+        }
 
+        private void UpdateRemovedEntities()
+        {
             foreach (var consumedEntity in entitiesRemoved)
             {
                 if (entities.Contains(consumedEntity))
-                {
                     entities.Remove(consumedEntity);
-                }
             }
-
-            hudManager.Update(gameTime, camera);
         }
 
-        if (gameStateMachine.isCurrentStatOver())
+        private void UpdateGameOver(GameTime gameTime)
         {
-            this.gameOverTickTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+            if (!gameStateMachine.isCurrentStatOver()) return;
+
+            gameOverTickTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
             if (gameOverTickTimer > 5000)
             {
                 Process.Start("Pixel-Plumbers-Fall-2024");
@@ -254,52 +268,87 @@ public class Game1 : Game
             }
         }
 
-        //toggleFalling.updateMarioFalling(mario);
-        toggleFalling.updates();
-        base.Update(gameTime);
-    }
-
-    protected override void Draw(GameTime gameTime)
-    {
-        GraphicsDevice.Clear(Color.CornflowerBlue);
-        spriteBatch.Begin(transformMatrix: camera.GetViewMatrix());
-
-        if (gameStateMachine.isCurrentStateStart())
+        protected override void Draw(GameTime gameTime)
         {
-            startScreenSprite.Draw(spriteBatch, new Vector2(200, 200));
+            GraphicsDevice.Clear(Color.CornflowerBlue);
+            spriteBatch.Begin(transformMatrix: camera.GetViewMatrix());
+
+            DrawGameScreen();
+            DrawGameOver();
+
+            spriteBatch.End();
+            base.Draw(gameTime);
         }
 
-        if (gameStateMachine.isLevelScreen())
+        private void DrawGameScreen()
         {
-            levelScreenSprite.Draw(spriteBatch, new Vector2(200, 200));
+            if (gameStateMachine.isCurrentStateStart())
+                startScreenSprite.Draw(spriteBatch, new Vector2(200, 200));
+
+            if (gameStateMachine.isLevelScreen())
+                levelScreenSprite.Draw(spriteBatch, new Vector2(200, 200));
+
+            if (gameStateMachine.isCurrentStateRunning() || gameStateMachine.isCurrentStatePaused())
+            {
+                DrawCurrentLevel();
+                DrawFireballs();
+                hudManager.Draw(spriteBatch);
+                blackJackStateMachine.Draw(spriteBatch);
+            }
         }
 
-        if (gameStateMachine.isCurrentStateRunning() || gameStateMachine.isCurrentStatePaused())
+        private void DrawCurrentLevel()
         {
             if (gameStateMachine.isLevelOne())
-            {
                 levelOne.DrawLevel(spriteBatch, camera);
-            }
-
-            if (gameStateMachine.isLevelTwo())
-            {
+            else if (gameStateMachine.isLevelTwo())
                 levelTwo.DrawLevel(spriteBatch, camera);
-            }
-
-            foreach (var item in fireballs)
-            {
-                item.Draw(spriteBatch);
-            }
-
-            hudManager.Draw(spriteBatch);
-            blackJackStateMachine.Draw(spriteBatch);
         }
-        if (gameStateMachine.isCurrentStatOver())
+
+        private void DrawFireballs()
         {
-            // spriteBatch.Draw(gameOverBackground, new Vector2(camera.position.X, camera.position.Y), Color.Black);
-            spriteBatch.DrawString(startScreenFonts, "GAME OVER", new Vector2(camera.position.X + 300, camera.position.Y + 150), Color.White, 0f, Vector2.Zero, 1, SpriteEffects.None, 0f);
+            foreach (var fireball in fireballs)
+            {
+                fireball.Draw(spriteBatch);
+            }
         }
-        spriteBatch.End();
-        base.Draw(gameTime);
+
+        private void DrawGameOver()
+        {
+            if (gameStateMachine.isCurrentStatOver())
+            {
+                spriteBatch.DrawString(
+                    startScreenFonts,
+                    "GAME OVER",
+                    new Vector2(camera.position.X + 300, camera.position.Y + 150),
+                    Color.White
+                );
+            }
+        }
+
+        public void ResetGame()
+        {
+            entities.Clear();
+            fireballs.Clear();
+            mario.Reset();
+            hudManager.SetTime(400);
+            camera = new(Vector2.Zero);
+
+            if (gameStateMachine.isLevelOne())
+                levelOne.InitializeLevel();
+            else if (gameStateMachine.isLevelTwo())
+                levelTwo.InitializeLevel();
+        }
+
+        public void GameOver()
+        {
+            gameStateMachine.setGameStateOver();
+            soundManager.GetSound("over").Play();
+        }
+
+        public void SetKey(KeyboardController keys)
+        {
+            keyboardController = keys;
+        }
     }
 }

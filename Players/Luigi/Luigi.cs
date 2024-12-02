@@ -15,24 +15,25 @@ public class Luigi : IPlayer
     private Texture2D itemTexture;
     private TextureManager textureManager;
 
-    private ICharacter currentMarioSprite;
-    private PlayerStateMachine playerStateMachine;
+    private ICharacter currentLuigiSprite;
     private IMarioSpriteMachine luigiSpriteMachine;
+    private PlayerStateMachine playerStateMachine;
     public GameTime gameTime;
 
     private Vector2 initialPosition;
     public Vector2 luigiPosition;
     private Vector2 luigiVelocity;
     private float groundPosition = 385f;
+    private float swimmingMaxHeight = 10f;
     private float gravity = 980f;
     private float jumpSpeed = -570f;
 
+    private bool isSwimmingLevel = false;
     public bool isOnGround = true;
     private bool canPowerUp = true;
     private bool canTakeDamage = true;
     private bool moveKeyPressed = false;
     private bool deathSoundPlaying = false;
-    private bool isSwimmingLevel = false;
 
     private const float maxSpeed = 3f;
     private const float acceleration = 0.03f;
@@ -46,12 +47,9 @@ public class Luigi : IPlayer
     private int gameResetTimer = -1;
     private List<IEntity> _entities;
 
-
-
     public Luigi(Game1 game, List<IEntity> entities, List<SoundEffect> sfx, TextureManager textureManager, GameTime gametime)
     {
         this.textureManager = textureManager;
-
         this.luigiTexture = textureManager.GetTexture("Luigi");
         this.itemTexture = textureManager.GetTexture("Items");
 
@@ -64,7 +62,7 @@ public class Luigi : IPlayer
         this.starTimer = 0;
         this.luigiDeathBounceIncrement = 15;
 
-        this.currentMarioSprite = new IdleRightSmallMario(luigiTexture);
+        this.currentLuigiSprite = new IdleRightSmallMario(luigiTexture);
         this.game = game;
         this._entities = entities;
 
@@ -74,7 +72,6 @@ public class Luigi : IPlayer
     public void MoveRight()
     {
         if (playerStateMachine.IsDead()) return;
-
         moveKeyPressed = true;
         if (!playerStateMachine.IsJumping())
         {
@@ -88,7 +85,10 @@ public class Luigi : IPlayer
                 playerStateMachine.SetPlayerMoving();
             }
         }
-
+        if (isSwimmingLevel && (luigiVelocity.X > 0f))
+        {
+            playerStateMachine.SetPlayerRight();
+        }
         if (!playerStateMachine.IsCrouching())
         {
             if (luigiVelocity.X < maxSpeed)
@@ -101,9 +101,7 @@ public class Luigi : IPlayer
     public void MoveLeft()
     {
         if (playerStateMachine.IsDead()) return;
-
         moveKeyPressed = true;
-
         if (!playerStateMachine.IsJumping())
         {
             if (luigiVelocity.X > 0f)
@@ -116,7 +114,10 @@ public class Luigi : IPlayer
                 playerStateMachine.SetPlayerMoving();
             }
         }
-
+        if (isSwimmingLevel && (luigiVelocity.X < 0f))
+        {
+            playerStateMachine.SetPlayerLeft();
+        }
         if (!playerStateMachine.IsCrouching())
         {
             if (luigiVelocity.X > -maxSpeed)
@@ -129,8 +130,7 @@ public class Luigi : IPlayer
     public void Jump()
     {
         if (playerStateMachine.IsDead()) return;
-
-        if (isOnGround && !playerStateMachine.IsCrouching())
+        if ((isOnGround || isSwimmingLevel) && !playerStateMachine.IsCrouching())
         {
             luigiVelocity.Y = jumpSpeed;
             playerStateMachine.SetPlayerJumping();
@@ -142,22 +142,20 @@ public class Luigi : IPlayer
     public void Crouch()
     {
         if (playerStateMachine.IsDead()) return;
-
         if (!playerStateMachine.IsJumping())
         {
             playerStateMachine.SetPlayerCrouching();
+            luigiVelocity.X = 0;
         }
     }
 
     public void ApplyGravity(GameTime gameTime)
     {
         if (playerStateMachine.IsDead()) return;
-
         if (!isOnGround)
         {
             luigiVelocity.Y += gravity * (float)gameTime.ElapsedGameTime.TotalSeconds;
             luigiVelocity.Y += luigiVelocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;
-
             if (luigiVelocity.Y >= groundPosition)
             {
                 luigiVelocity.Y = groundPosition;
@@ -175,9 +173,7 @@ public class Luigi : IPlayer
 
     public void PowerUp()
     {
-        if (playerStateMachine.IsDead()) return;
-
-        if (!canPowerUp) return;
+        if (playerStateMachine.IsDead() || !canPowerUp) return;
         switch (playerStateMachine.CurrentGameState)
         {
             case PlayerStateMachine.PlayerGameState.Small:
@@ -200,9 +196,7 @@ public class Luigi : IPlayer
 
     public void TakeDamage()
     {
-        if (playerStateMachine.IsDead()) return;
-
-        if (!canTakeDamage) return;
+        if (playerStateMachine.IsDead() || !canTakeDamage) return;
         switch (playerStateMachine.CurrentGameState)
         {
             case PlayerStateMachine.PlayerGameState.Fire:
@@ -222,7 +216,8 @@ public class Luigi : IPlayer
         canTakeDamage = false;
         Task.Delay(1000).ContinueWith(t => canTakeDamage = true);
     }
-    public void MarioWins()
+
+    public void LuigiWins()
     {
         if (playerStateMachine.Wins())
         {
@@ -267,6 +262,7 @@ public class Luigi : IPlayer
             }
         }
     }
+
     public void SwapDirection()
     {
         if (playerStateMachine.IsDead()) return;
@@ -281,16 +277,14 @@ public class Luigi : IPlayer
     public void Stop()
     {
         if (playerStateMachine.IsDead()) return;
-
         luigiVelocity.X *= 0.3f;
-
         moveKeyPressed = false;
-
-        if (isOnGround)
+        if (!playerStateMachine.IsJumping())
         {
             playerStateMachine.SetPlayerIdle();
         }
     }
+
     public void JumpStop()
     {
         if (playerStateMachine.IsDead()) return;
@@ -300,6 +294,7 @@ public class Luigi : IPlayer
             playerStateMachine.SetPlayerIdle();
         }
     }
+
     private void CheckStopTurningUpd()
     {
         if (playerStateMachine.IsTurning())
@@ -315,7 +310,7 @@ public class Luigi : IPlayer
         }
     }
 
-    private void SlowStopMario()
+    private void SlowStopLuigi()
     {
         if (!moveKeyPressed && !playerStateMachine.IsJumping())
         {
@@ -346,21 +341,21 @@ public class Luigi : IPlayer
     {
         ApplyGravity(gameTime);
         luigiPosition.X += luigiVelocity.X;
-        this.SlowStopMario();
+        this.SlowStopLuigi();
         this.CheckStopTurningUpd();
         this.LuigiDeath();
-        currentMarioSprite = luigiSpriteMachine.UpdatePlayerSprite(playerStateMachine, luigiTexture);
-        currentMarioSprite.Update(gameTime);
+        currentLuigiSprite = luigiSpriteMachine.UpdatePlayerSprite(playerStateMachine, luigiTexture);
+        currentLuigiSprite.Update(gameTime);
         fireballTimer += -1;
         starTimer += -1;
         this.RemoveStar();
         this.checkMarioHeightForDeath();
-        this.MarioWins();
+        this.LuigiWins();
     }
 
     public void Draw(SpriteBatch spriteBatch)
     {
-        currentMarioSprite.Draw(spriteBatch, luigiPosition, this.HasStar());
+        currentLuigiSprite.Draw(spriteBatch, luigiPosition, this.HasStar());
     }
 
     public void Reset()
@@ -369,21 +364,22 @@ public class Luigi : IPlayer
         luigiVelocity = Vector2.Zero;
         playerStateMachine.Reset();
         isOnGround = true;
-        currentMarioSprite = new IdleRightSmallMario(luigiTexture);
+        currentLuigiSprite = new IdleRightSmallMario(luigiTexture);
         luigiDeathBounceIncrement = 20;
         gameResetTimer = -1;
         deathSoundPlaying = false;
-
     }
 
     public Rectangle GetDestination()
     {
-        return currentMarioSprite.GetDestination(luigiPosition);
+        return currentLuigiSprite.GetDestination(luigiPosition);
     }
+
     public float GroundPosition()
     {
         return this.groundPosition;
     }
+
     public void checkMarioHeightForDeath()
     {
         if (this.GetDestination().Y > 464)
@@ -401,30 +397,37 @@ public class Luigi : IPlayer
     {
         return playerStateMachine.HasStar();
     }
+
     public void SetVelocityY(float velocityY)
     {
         luigiVelocity.Y = velocityY;
     }
+
     public void SetVelocityX(float velocityX)
     {
         luigiVelocity.X = velocityX;
     }
+
     public void SetPositionY(float positionY)
     {
         luigiPosition.Y = positionY;
     }
+
     public void SetPositionX(float positionX)
     {
         luigiPosition.X = positionX;
     }
+
     public void SetIsOnGround(bool isGround)
     {
         isOnGround = isGround;
     }
+
     public bool GetIsOnGround()
     {
         return isOnGround;
     }
+
     public void CollectStar()
     {
         starTimer = 450;
@@ -446,14 +449,12 @@ public class Luigi : IPlayer
 
         if (isSwimmingLevel)
         {
-            //Reduce gravity and jump height, "floaty" physics
             luigiSpriteMachine = new LuigiSpriteMachineSwimming();
             gravity = 980f / 4f;
             jumpSpeed = -570f / 4f;
         }
         else
         {
-            //Set parameters to normal
             luigiSpriteMachine = new LuigiSpriteMachine();
             gravity = 980f;
             jumpSpeed = -570f;
@@ -477,4 +478,10 @@ public class Luigi : IPlayer
     {
         return playerStateMachine.IsFire();
     }
+
+    public bool IsCrouching()
+    {
+        return playerStateMachine.IsCrouching();
+    }
+
 }
