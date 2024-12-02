@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\sprites\\luigisprites\\smallluigi\\idlerightsmallluigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\luigisprites\\smallluigi\\idlerightsmallluigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\sprites\\luigisprites\\smallluigi\\idleleftsmallluigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\luigisprites\\smallluigi\\idleleftsmallluigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\sprites\\luigisprites\\smallluigi\\deadluigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\luigisprites\\smallluigi\\deadluigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\sprites\\luigisprites\\bigluigi\\crouchleftbigluigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\luigisprites\\bigluigi\\crouchleftbigluigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -73,18 +85,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\sprites\\luigisprites\\smallluigi\\jumpingleftsmallluigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\luigisprites\\smallluigi\\jumpingleftsmallluigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\sprites\\luigisprites\\smallluigi\\idlerightsmallluigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\luigisprites\\smallluigi\\idlerightsmallluigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\sprites\\luigisprites\\smallluigi\\idleleftsmallluigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\luigisprites\\smallluigi\\idleleftsmallluigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\sprites\\luigisprites\\smallluigi\\deadluigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\luigisprites\\smallluigi\\deadluigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\sprites\\luigisprites\\fireluigi\\turningleftfireluigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -362,46 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TextureManager.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\TextureManager.cs",
-              "RelativeDocumentMoniker": "TextureManager.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\TextureManager.cs",
-              "RelativeToolTip": "TextureManager.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAQwDAAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T19:04:33.946Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Luigi.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Players\\Luigi\\Luigi.cs",
-              "RelativeDocumentMoniker": "Players\\Luigi\\Luigi.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Players\\Luigi\\Luigi.cs",
-              "RelativeToolTip": "Players\\Luigi\\Luigi.cs",
-              "ViewState": "AgIAAGEBAAAAAAAAAADwvz8AAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T19:00:51.664Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LuigiSpriteMachine.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Players\\Luigi\\LuigiSpriteMachine.cs",
-              "RelativeDocumentMoniker": "Players\\Luigi\\LuigiSpriteMachine.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Players\\Luigi\\LuigiSpriteMachine.cs",
-              "RelativeToolTip": "Players\\Luigi\\LuigiSpriteMachine.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAowAUAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T19:00:09.91Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Mario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Players\\Mario\\Mario.cs",
               "RelativeDocumentMoniker": "Players\\Mario\\Mario.cs",
@@ -414,7 +375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "IMarioSpriteMachine.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Players\\Mario\\IMarioSpriteMachine.cs",
               "RelativeDocumentMoniker": "Players\\Mario\\IMarioSpriteMachine.cs",
@@ -427,7 +388,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "CrouchRightBigLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\BigLuigi\\CrouchRightBigLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\BigLuigi\\CrouchRightBigLuigi.cs",
@@ -440,7 +401,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "CrouchLeftBigLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\BigLuigi\\CrouchLeftBigLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\BigLuigi\\CrouchLeftBigLuigi.cs",
@@ -452,12 +413,90 @@
               "EditorCaption": ""
             },
             {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DeadLuigi.cs",
+              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\DeadLuigi.cs",
+              "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\SmallLuigi\\DeadLuigi.cs",
+              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\DeadLuigi.cs",
+              "RelativeToolTip": "Sprites\\LuigiSprites\\SmallLuigi\\DeadLuigi.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T22:23:05.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IdleLeftSmallLuigi.cs",
+              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\IdleLeftSmallLuigi.cs",
+              "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\SmallLuigi\\IdleLeftSmallLuigi.cs",
+              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\IdleLeftSmallLuigi.cs",
+              "RelativeToolTip": "Sprites\\LuigiSprites\\SmallLuigi\\IdleLeftSmallLuigi.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T22:23:10.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IdleRightSmallLuigi.cs",
+              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\IdleRightSmallLuigi.cs",
+              "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\SmallLuigi\\IdleRightSmallLuigi.cs",
+              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\IdleRightSmallLuigi.cs",
+              "RelativeToolTip": "Sprites\\LuigiSprites\\SmallLuigi\\IdleRightSmallLuigi.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T22:23:17.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LuigiSpriteMachine.cs",
+              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Players\\Luigi\\LuigiSpriteMachine.cs",
+              "RelativeDocumentMoniker": "Players\\Luigi\\LuigiSpriteMachine.cs",
+              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Players\\Luigi\\LuigiSpriteMachine.cs",
+              "RelativeToolTip": "Players\\Luigi\\LuigiSpriteMachine.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAowAUAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T19:00:09.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Luigi.cs",
+              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Players\\Luigi\\Luigi.cs",
+              "RelativeDocumentMoniker": "Players\\Luigi\\Luigi.cs",
+              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Players\\Luigi\\Luigi.cs",
+              "RelativeToolTip": "Players\\Luigi\\Luigi.cs",
+              "ViewState": "AgIAAGEBAAAAAAAAAADwvz8AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T19:00:51.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TextureManager.cs",
+              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\TextureManager.cs",
+              "RelativeDocumentMoniker": "TextureManager.cs",
+              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\TextureManager.cs",
+              "RelativeToolTip": "TextureManager.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAQwDAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T19:04:33.946Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "TurningRightSmallLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\TurningRightSmallLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\SmallLuigi\\TurningRightSmallLuigi.cs",
@@ -470,7 +509,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
@@ -483,7 +522,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "LuigiSpriteMachineSwimming.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Players\\Luigi\\LuigiSpriteMachineSwimming.cs",
               "RelativeDocumentMoniker": "Players\\Luigi\\LuigiSpriteMachineSwimming.cs",
@@ -495,7 +534,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "LevelOne.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Levels\\LevelOne.cs",
               "RelativeDocumentMoniker": "Levels\\LevelOne.cs",
@@ -507,7 +546,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "TurningLeftSmallLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\TurningLeftSmallLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\SmallLuigi\\TurningLeftSmallLuigi.cs",
@@ -519,7 +558,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "SwimmingRightSmallLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\SwimmingRightSmallLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\SmallLuigi\\SwimmingRightSmallLuigi.cs",
@@ -531,7 +570,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "SwimmingLeftSmallLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\SwimmingLeftSmallLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\SmallLuigi\\SwimmingLeftSmallLuigi.cs",
@@ -543,7 +582,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "MovingRightSmallLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\MovingRightSmallLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\SmallLuigi\\MovingRightSmallLuigi.cs",
@@ -555,7 +594,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "MovingLeftSmallLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\MovingLeftSmallLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\SmallLuigi\\MovingLeftSmallLuigi.cs",
@@ -567,7 +606,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "JumpingRightSmallLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\JumpingRightSmallLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\SmallLuigi\\JumpingRightSmallLuigi.cs",
@@ -579,7 +618,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "JumpingLeftSmallLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\JumpingLeftSmallLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\SmallLuigi\\JumpingLeftSmallLuigi.cs",
@@ -588,42 +627,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-24T22:23:23.43Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "IdleRightSmallLuigi.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\IdleRightSmallLuigi.cs",
-              "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\SmallLuigi\\IdleRightSmallLuigi.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\IdleRightSmallLuigi.cs",
-              "RelativeToolTip": "Sprites\\LuigiSprites\\SmallLuigi\\IdleRightSmallLuigi.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T22:23:17.772Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "IdleLeftSmallLuigi.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\IdleLeftSmallLuigi.cs",
-              "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\SmallLuigi\\IdleLeftSmallLuigi.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\IdleLeftSmallLuigi.cs",
-              "RelativeToolTip": "Sprites\\LuigiSprites\\SmallLuigi\\IdleLeftSmallLuigi.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T22:23:10.997Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "DeadLuigi.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\DeadLuigi.cs",
-              "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\SmallLuigi\\DeadLuigi.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\DeadLuigi.cs",
-              "RelativeToolTip": "Sprites\\LuigiSprites\\SmallLuigi\\DeadLuigi.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T22:23:05.536Z"
             },
             {
               "$type": "Document",
