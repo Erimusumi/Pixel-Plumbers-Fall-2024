@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Pixel-Plumbers-Fall-2024")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e38610dfa2b6e0beea8fd41ce1bd12bda8fa7c1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be15d81e336b03c1c7378cc2ecedae11a090afcc")]
 [assembly: System.Reflection.AssemblyProductAttribute("Pixel-Plumbers-Fall-2024")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Pixel-Plumbers-Fall-2024")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -142,13 +142,11 @@ public class Luigi : IPlayer
     public void Crouch()
     {
         if (playerStateMachine.IsDead()) return;
-
         if (!playerStateMachine.IsJumping())
         {
             playerStateMachine.SetPlayerCrouching();
         }
     }
-
 
     public void ApplyGravity(GameTime gameTime)
     {
@@ -217,6 +215,7 @@ public class Luigi : IPlayer
         canTakeDamage = false;
         Task.Delay(1000).ContinueWith(t => canTakeDamage = true);
     }
+
     public void LuigiWins()
     {
         if (playerStateMachine.Wins())
@@ -279,7 +278,7 @@ public class Luigi : IPlayer
         if (playerStateMachine.IsDead()) return;
         luigiVelocity.X *= 0.3f;
         moveKeyPressed = false;
-        if (isOnGround)
+        if (!playerStateMachine.IsJumping())
         {
             playerStateMachine.SetPlayerIdle();
         }
@@ -483,5 +482,5 @@ public class Luigi : IPlayer
     {
         return playerStateMachine.IsCrouching();
     }
-    
+
 }

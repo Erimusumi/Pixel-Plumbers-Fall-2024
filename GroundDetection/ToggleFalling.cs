@@ -261,13 +261,14 @@ public class ToggleFalling
 
             }
         }
+
         if (marHitCount == 0)
         {
             marioIsColliding = false;
         }
         if (!marioIsColliding && lui.GetDestination().Intersects(new Rectangle(lui.GetDestination().X, (int)lui.GroundPosition(), 16, 16)))
         {
-            lui.updateGroundPosition(lui.GroundPosition() + 100f); // Mario falls by 5 units per frame
+            lui.updateGroundPosition(lui.GroundPosition() + 100f);
         }
         marHitCount = 0;
     }
