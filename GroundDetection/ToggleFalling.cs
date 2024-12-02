@@ -15,6 +15,7 @@ public class ToggleFalling
     private List<IEntity> entities;
     private List<IEntity> enemies;
     private List<IEntity> items;
+    private List<IEntity> fireballs;
     private Mario mario;
     private Ground ground;
     private float fallingGroundPosition = 480f;
@@ -34,6 +35,8 @@ public class ToggleFalling
         filterEntities = new FilterEntities();
         enemies = filterEntities.FilterEnemies(entities);
         items = filterEntities.FilterItems(entities);
+        fireballs = filterEntities.FilterFireballs(entities);
+        Debug.WriteLine("There are" + fireballs.Count + "fireballs");
         //Debug.WriteLine("There are " + items.Count + " items");
         this.mario = mario;
 
@@ -45,8 +48,26 @@ public class ToggleFalling
         updateMarioFalling(this.mario);
         updateItemFalling(this.items);
         updateEnemyFalling(this.enemies);
+        updateFireBallFalling(this.fireballs);
 
     }
+
+    public void updateFireBallFalling(List<IEntity> fireBalls)
+    {
+        Fireball fireBall;
+        for (int i = 0; i < fireBalls.Count; i++)
+        {
+            fireBall = (Fireball)fireBalls[i];
+            for (int j = 0; j < collisionRects.Count; j++)
+            {
+                if (fireBall.GetDestination().Intersects(collisionRects[j]) && fireBall.GetDestination().Intersects(new Rectangle(fireBall.GetDestination().X, 400, 16, 16)))
+                {
+                    fireBall.Bounce();
+                }
+            }
+        }
+    }
+    
 
     public void updateEnemyFalling(List<IEntity> enemies)
     {
