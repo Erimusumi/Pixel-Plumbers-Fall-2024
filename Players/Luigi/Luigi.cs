@@ -368,7 +368,6 @@ public class Luigi : IPlayer
         luigiDeathBounceIncrement = 20;
         gameResetTimer = -1;
         deathSoundPlaying = false;
-
     }
 
     public Rectangle GetDestination()
@@ -479,4 +478,10 @@ public class Luigi : IPlayer
     {
         return playerStateMachine.IsFire();
     }
+
+    public bool IsCrouching()
+    {
+        return playerStateMachine.IsCrouching();
+    }
+    
 }
