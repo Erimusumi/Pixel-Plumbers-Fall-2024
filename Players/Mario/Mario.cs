@@ -151,7 +151,6 @@ public class Mario : IPlayer
     public void Crouch()
     {
         if (playerStateMachine.IsDead()) return;
-
         if (!playerStateMachine.IsJumping())
         {
             playerStateMachine.SetPlayerCrouching();
