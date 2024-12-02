@@ -66,6 +66,15 @@ public class Luigi : IPlayer
         this.game = game;
         this._entities = entities;
 
+        /*
+         * SFX loaded in specific order:
+         * 0: Power up
+         * 1: Power down
+         * 2: Fireball
+         * 3: Jump
+         * 4: Death
+         * 5:FlagPole for winning
+         */
         this._sfx = sfx;
     }
 
