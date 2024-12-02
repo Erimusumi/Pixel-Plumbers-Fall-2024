@@ -1,34 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Projects\\",
+  "WorkspaceRootPath": "C:\\Users\\kamau\\Downloads\\CSE3902\\Powder\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\players\\mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:players\\mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\powder\\grounddetection\\togglefalling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:grounddetection\\togglefalling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\items\\flag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:items\\flag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\powder\\filter entities\\filterentities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:filter entities\\filterentities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\collision\\interaction\\playerflaginteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\powder\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\powder\\players\\luigi\\luigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:players\\luigi\\luigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\powder\\projectile\\fireball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:projectile\\fireball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\powder\\collision\\interaction\\blockfireballinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\blockfireballinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\powder\\collision\\interaction\\playerflaginteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\playerflaginteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\players\\mario\\mariospritemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:players\\mario\\mariospritemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\powder\\sprites\\item sprites\\flagsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\item sprites\\flagsprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\players\\mario\\playerstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:players\\mario\\playerstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\powder\\items\\flag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:items\\flag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\powder\\levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\powder\\levels\\leveltwo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:levels\\leveltwo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,85 +54,25 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "Game1.cs",
-              "DocumentMoniker": "C:\\Projects\\Game1.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Powder\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
-              "ToolTip": "C:\\Projects\\Game1.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Powder\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAI0AAAAAAAAAAAASwJsAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAgwIwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Mario.cs",
-              "DocumentMoniker": "C:\\Projects\\Players\\Mario\\Mario.cs",
-              "RelativeDocumentMoniker": "Players\\Mario\\Mario.cs",
-              "ToolTip": "C:\\Projects\\Players\\Mario\\Mario.cs*",
-              "RelativeToolTip": "Players\\Mario\\Mario.cs*",
-              "ViewState": "AgIAANgAAAAAAAAAAAAIwOkAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T20:19:56.004Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Flag.cs",
-              "DocumentMoniker": "C:\\Projects\\Items\\Flag.cs",
-              "RelativeDocumentMoniker": "Items\\Flag.cs",
-              "ToolTip": "C:\\Projects\\Items\\Flag.cs",
-              "RelativeToolTip": "Items\\Flag.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwCkAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T20:18:51.349Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PlayerFlagInteraction.cs",
-              "DocumentMoniker": "C:\\Projects\\Collision\\Interaction\\PlayerFlagInteraction.cs",
-              "RelativeDocumentMoniker": "Collision\\Interaction\\PlayerFlagInteraction.cs",
-              "ToolTip": "C:\\Projects\\Collision\\Interaction\\PlayerFlagInteraction.cs",
-              "RelativeToolTip": "Collision\\Interaction\\PlayerFlagInteraction.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T20:18:44.469Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PlayerStateMachine.cs",
-              "DocumentMoniker": "C:\\Projects\\Players\\Mario\\PlayerStateMachine.cs",
-              "RelativeDocumentMoniker": "Players\\Mario\\PlayerStateMachine.cs",
-              "ToolTip": "C:\\Projects\\Players\\Mario\\PlayerStateMachine.cs",
-              "RelativeToolTip": "Players\\Mario\\PlayerStateMachine.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T19:43:09.429Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MarioSpriteMachine.cs",
-              "DocumentMoniker": "C:\\Projects\\Players\\Mario\\MarioSpriteMachine.cs",
-              "RelativeDocumentMoniker": "Players\\Mario\\MarioSpriteMachine.cs",
-              "ToolTip": "C:\\Projects\\Players\\Mario\\MarioSpriteMachine.cs",
-              "RelativeToolTip": "Players\\Mario\\MarioSpriteMachine.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T19:43:01.213Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Bookmark",
@@ -140,20 +96,134 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Luigi.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Powder\\Players\\Luigi\\Luigi.cs",
+              "RelativeDocumentMoniker": "Players\\Luigi\\Luigi.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Powder\\Players\\Luigi\\Luigi.cs",
+              "RelativeToolTip": "Players\\Luigi\\Luigi.cs",
+              "ViewState": "AgIAAMUBAAAAAAAAAAAxwLgBAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T19:28:39.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FilterEntities.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Powder\\Filter Entities\\FilterEntities.cs",
+              "RelativeDocumentMoniker": "Filter Entities\\FilterEntities.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Powder\\Filter Entities\\FilterEntities.cs",
+              "RelativeToolTip": "Filter Entities\\FilterEntities.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwDkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T13:38:36.793Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ToggleFalling.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Powder\\GroundDetection\\ToggleFalling.cs",
+              "RelativeDocumentMoniker": "GroundDetection\\ToggleFalling.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Powder\\GroundDetection\\ToggleFalling.cs*",
+              "RelativeToolTip": "GroundDetection\\ToggleFalling.cs*",
+              "ViewState": "AgIAADAAAAAAAAAAAAA1wDwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T13:36:53.436Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Fireball.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Powder\\Projectile\\Fireball.cs",
+              "RelativeDocumentMoniker": "Projectile\\Fireball.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Powder\\Projectile\\Fireball.cs",
+              "RelativeToolTip": "Projectile\\Fireball.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAYwBMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T13:35:08.699Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "LevelOne.cs",
-              "DocumentMoniker": "C:\\Projects\\Levels\\LevelOne.cs",
-              "RelativeDocumentMoniker": "Levels\\LevelOne.cs",
-              "ToolTip": "C:\\Projects\\Levels\\LevelOne.cs",
-              "RelativeToolTip": "Levels\\LevelOne.cs",
-              "ViewState": "AgIAAGcBAAAAAAAAAAAlwHABAAAIAAAAAAAAAA==",
+              "Title": "BlockFireballInteraction.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Powder\\Collision\\Interaction\\BlockFireballInteraction.cs",
+              "RelativeDocumentMoniker": "Collision\\Interaction\\BlockFireballInteraction.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Powder\\Collision\\Interaction\\BlockFireballInteraction.cs",
+              "RelativeToolTip": "Collision\\Interaction\\BlockFireballInteraction.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T17:31:38.596Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T13:34:05.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LevelTwo.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Powder\\Levels\\LevelTwo.cs",
+              "RelativeDocumentMoniker": "Levels\\LevelTwo.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Powder\\Levels\\LevelTwo.cs",
+              "RelativeToolTip": "Levels\\LevelTwo.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAASwGYAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T17:42:29.244Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LevelOne.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Powder\\Levels\\LevelOne.cs",
+              "RelativeDocumentMoniker": "Levels\\LevelOne.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Powder\\Levels\\LevelOne.cs",
+              "RelativeToolTip": "Levels\\LevelOne.cs",
+              "ViewState": "AgIAAPEAAAAAAAAAAAAawP8AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T17:31:38.596Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FlagSprite.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Powder\\Sprites\\Item Sprites\\FlagSprite.cs",
+              "RelativeDocumentMoniker": "Sprites\\Item Sprites\\FlagSprite.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Powder\\Sprites\\Item Sprites\\FlagSprite.cs",
+              "RelativeToolTip": "Sprites\\Item Sprites\\FlagSprite.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwEYAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T17:34:32.012Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Flag.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Powder\\Items\\Flag.cs",
+              "RelativeDocumentMoniker": "Items\\Flag.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Powder\\Items\\Flag.cs",
+              "RelativeToolTip": "Items\\Flag.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwDkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T17:15:51.834Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PlayerFlagInteraction.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Powder\\Collision\\Interaction\\PlayerFlagInteraction.cs",
+              "RelativeDocumentMoniker": "Collision\\Interaction\\PlayerFlagInteraction.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Powder\\Collision\\Interaction\\PlayerFlagInteraction.cs",
+              "RelativeToolTip": "Collision\\Interaction\\PlayerFlagInteraction.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T17:15:30.49Z"
             }
           ]
         }

@@ -34,6 +34,7 @@ public class Luigi : IPlayer
     private bool canTakeDamage = true;
     private bool moveKeyPressed = false;
     private bool deathSoundPlaying = false;
+    private bool isDead = false;
 
     private const float maxSpeed = 3f;
     private const float acceleration = 0.03f;
@@ -47,7 +48,10 @@ public class Luigi : IPlayer
     private int gameResetTimer = -1;
     private List<IEntity> _entities;
 
-    public Luigi(Game1 game, List<IEntity> entities, List<SoundEffect> sfx, TextureManager textureManager, GameTime gametime)
+    private GameStateMachine gsm;
+    private Mario mario;
+
+    public Luigi(Game1 game, List<IEntity> entities, List<SoundEffect> sfx, TextureManager textureManager, GameTime gametime, GameStateMachine gsm, Mario mario)
     {
         this.textureManager = textureManager;
         this.luigiTexture = textureManager.GetTexture("Luigi");
@@ -76,6 +80,9 @@ public class Luigi : IPlayer
          * 5:FlagPole for winning
          */
         this._sfx = sfx;
+
+        this.gsm = gsm;
+        this.mario = mario;
     }
 
     public void MoveRight()
@@ -255,18 +262,21 @@ public class Luigi : IPlayer
             }
             else if (gameResetTimer < 0)
             {
+                game.hudManager.LoseLife();
                 gameResetTimer = 250;
             }
             else if (gameResetTimer == 0)
             {
-                game.hudManager.LoseLife();
-                if (game.hudManager.GetNumLives() <= 0)
+                if (gsm.isSingleplayer() || (gsm.isMultiplayer() && IsDead()))
                 {
-                    game.GameOver();
-                }
-                else
-                {
-                    game.ResetGame();
+                    if (game.hudManager.GetNumLives() <= 0)
+                    {
+                        game.GameOver();
+                    }
+                    else
+                    {
+                        game.ResetGame();
+                    }
                 }
             }
         }
@@ -348,10 +358,11 @@ public class Luigi : IPlayer
 
     public void Update(GameTime gameTime)
     {
-        ApplyGravity(gameTime);
+        this.ApplyGravity(gameTime);
         luigiPosition.X += luigiVelocity.X;
         this.SlowStopLuigi();
         this.CheckStopTurningUpd();
+        this.CheckSwimmingMaxHeight();
         this.LuigiDeath();
         currentLuigiSprite = luigiSpriteMachine.UpdatePlayerSprite(playerStateMachine, luigiTexture);
         currentLuigiSprite.Update(gameTime);
@@ -499,6 +510,11 @@ public class Luigi : IPlayer
     public bool IsCrouching()
     {
         return playerStateMachine.IsCrouching();
+    }
+
+    public bool IsDead()
+    {
+        return playerStateMachine.IsDead();
     }
 
 }

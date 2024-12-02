@@ -134,8 +134,9 @@ namespace Pixel_Plumbers_Fall_2024
                 soundManager.GetSound("flagpole")
             };
 
-            mario = new Mario(this, entities, marioSounds, textureManager, new GameTime());
-            luigi = new Luigi(this, entities, marioSounds, textureManager, new GameTime());
+            mario = new Mario(this, entities, marioSounds, textureManager, new GameTime(), this.gameStateMachine, this.luigi);
+            luigi = new Luigi(this, entities, marioSounds, textureManager, new GameTime(), this.gameStateMachine, this.mario);
+
         }
 
         private void LoadUserInterface()
