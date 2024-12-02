@@ -48,11 +48,11 @@ public class ToggleFalling
 
     public void updates()
     {
+        updateLuigiFalling(this.luigi);
         updateMarioFalling(this.mario);
         updateItemFalling(this.items);
         updateEnemyFalling(this.enemies);
         updateFireBallFalling(this.fireballs);
-
     }
 
     public void updateFireBallFalling(List<IEntity> fireBalls)
@@ -74,13 +74,11 @@ public class ToggleFalling
 
     public void updateEnemyFalling(List<IEntity> enemies)
     {
-
         ISpriteEnemy currentEnemy;
         for (int i = 0; i < enemies.Count; i++)
         {
             //Boolean enemyColliding = true;
             currentEnemy = (ISpriteEnemy)enemies[i];
-
             {
                 for (int j = 0; j < collisionRects.Count; j++)
                 {
@@ -89,7 +87,6 @@ public class ToggleFalling
                         currentEnemy.setGroundPosition(480);
                     }
                 }
-
             }
         }
     }
@@ -101,23 +98,18 @@ public class ToggleFalling
         for (int j = 0; j < items.Count; j++)
         {
             IItem x = (IItem)item[j];
-
             for (int i = 0; i < collisionRects.Count; i++)
             {
-
                 if (x.GetDestination().Intersects(collisionRects[i]))
                 {
-
                     x.setGroundPosition(385);
-
-
                     itemColliding = true;
                     hitCount++;
 
                     break;
                 }
-
             }
+
             if (hitCount == 0)
             {
                 itemColliding = false;
@@ -256,7 +248,6 @@ public class ToggleFalling
                     lui.Stop();
                     break;
                 }
-
             }
         }
 
