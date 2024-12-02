@@ -116,7 +116,7 @@ public class Game1 : Game
         this.sweep = new Sweep(gameTime);
 
         textureManager = new TextureManager(Content, squareTexture);
-     
+
 
         keyboardController = new KeyboardController();
         keyboardControllerMovement = new KeyboardControllerMovement();
@@ -190,16 +190,16 @@ public class Game1 : Game
     protected override void Update(GameTime gameTime)
     {
         ground = new Ground(lvl1CollidableRectangles);
-        toggleFalling = new ToggleFalling(ground, entities, this.mario);
+        toggleFalling = new ToggleFalling(ground, entities, this.mario, this.luigi);
         if (gameStateMachine.isLevelOne())
         {
             ground = new Ground(lvl1CollidableRectangles);
-            toggleFalling = new ToggleFalling(ground, entities, this.mario);
+            toggleFalling = new ToggleFalling(ground, entities, this.mario, this.luigi);
         }
         else if (gameStateMachine.isLevelTwo())
         {
             ground = new Ground(lvl2CollidableRectangles);
-            toggleFalling = new ToggleFalling(ground, entities, this.mario);
+            toggleFalling = new ToggleFalling(ground, entities, this.mario, this.luigi);
         }
 
         gameStateKeyboardController.Update();

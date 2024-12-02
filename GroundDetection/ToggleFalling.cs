@@ -15,7 +15,9 @@ public class ToggleFalling
     private List<IEntity> entities;
     private List<IEntity> enemies;
     private List<IEntity> items;
+    private List<IEntity> fireballs;
     private Mario mario;
+    private Luigi luigi;
     private Ground ground;
     private float fallingGroundPosition = 480f;
 
@@ -26,17 +28,19 @@ public class ToggleFalling
     int itemHitCount = 0;
 
 
-    public ToggleFalling(Ground g, List<IEntity> entities, Mario mario)
+    public ToggleFalling(Ground g, List<IEntity> entities, Mario mario, Luigi luigi)
     {
         this.ground = g;
         this.collisionRects = g.allCollisionRectangles();
         this.entities = entities;
+        this.luigi = luigi;
         filterEntities = new FilterEntities();
         enemies = filterEntities.FilterEnemies(entities);
         items = filterEntities.FilterItems(entities);
+        fireballs = filterEntities.FilterFireballs(entities);
+        Debug.WriteLine("There are" + fireballs.Count + "fireballs");
         //Debug.WriteLine("There are " + items.Count + " items");
         this.mario = mario;
-
     }
 
 
@@ -45,8 +49,26 @@ public class ToggleFalling
         updateMarioFalling(this.mario);
         updateItemFalling(this.items);
         updateEnemyFalling(this.enemies);
+        updateFireBallFalling(this.fireballs);
 
     }
+
+    public void updateFireBallFalling(List<IEntity> fireBalls)
+    {
+        Fireball fireBall;
+        for (int i = 0; i < fireBalls.Count; i++)
+        {
+            fireBall = (Fireball)fireBalls[i];
+            for (int j = 0; j < collisionRects.Count; j++)
+            {
+                if (fireBall.GetDestination().Intersects(collisionRects[j]) && fireBall.GetDestination().Intersects(new Rectangle(fireBall.GetDestination().X, 400, 16, 16)))
+                {
+                    fireBall.Bounce();
+                }
+            }
+        }
+    }
+
 
     public void updateEnemyFalling(List<IEntity> enemies)
     {
@@ -180,5 +202,75 @@ public class ToggleFalling
         marHitCount = 0;
     }
 
+    public void updateLuigiFalling(Luigi lui)
+    {
+
+        Rectangle marioBounds = lui.GetDestination();
+        for (int i = 0; i < collisionRects.Count; i++)
+        {
+            Rectangle blockBounds = collisionRects[i];
+
+            if (marioBounds.Intersects(blockBounds))
+            {
+                marioIsColliding = true;
+                marHitCount++;
+
+                if (marioBounds.Bottom > blockBounds.Top &&
+                    marioBounds.Top < blockBounds.Top &&
+                    marioBounds.Right > blockBounds.Left &&
+                    marioBounds.Left < blockBounds.Right)
+                {
+                    float groundPosition = blockBounds.Top;
+
+                    if (lui.isSmall())
+                    {
+                        lui.updateGroundPosition(groundPosition - 32);
+                    }
+                    else
+                    {
+                        if (lui.IsCrouching())
+                        {
+                            lui.updateGroundPosition(groundPosition - 42);
+                        }
+                        else
+                        {
+                            lui.updateGroundPosition(groundPosition - 64);
+                        }
+                    }
+
+                    break;
+                }
+
+                if (marioBounds.Right > blockBounds.Left &&
+                    marioBounds.Left < blockBounds.Left &&
+                    marioBounds.Bottom > blockBounds.Top &&
+                    marioBounds.Top < blockBounds.Bottom)
+                {
+                    lui.Stop();
+                    break;
+                }
+
+                if (marioBounds.Left < blockBounds.Right &&
+                    marioBounds.Right > blockBounds.Right &&
+                    marioBounds.Bottom > blockBounds.Top &&
+                    marioBounds.Top < blockBounds.Bottom)
+                {
+                    lui.Stop();
+                    break;
+                }
+
+            }
+        }
+
+        if (marHitCount == 0)
+        {
+            marioIsColliding = false;
+        }
+        if (!marioIsColliding && lui.GetDestination().Intersects(new Rectangle(lui.GetDestination().X, (int)lui.GroundPosition(), 16, 16)))
+        {
+            lui.updateGroundPosition(lui.GroundPosition() + 100f);
+        }
+        marHitCount = 0;
+    }
 }
 

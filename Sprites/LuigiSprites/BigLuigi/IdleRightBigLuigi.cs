@@ -5,12 +5,12 @@ public class IdleRightBigLuigi : ICharacter
 {
     private float scale = 2f;
     private Vector2 _position;
-    private Texture2D MarioTexture;
+    private Texture2D LuigiTexture;
     private Color tint;
    
-    public IdleRightBigLuigi(Texture2D MarioTexture)
+    public IdleRightBigLuigi(Texture2D LuigiTexture)
     {
-        this.MarioTexture = MarioTexture;
+        this.LuigiTexture = LuigiTexture;
     }
 
     public void Draw(SpriteBatch spriteBatch, Vector2 position, bool HasStar)
@@ -19,7 +19,7 @@ public class IdleRightBigLuigi : ICharacter
         else { tint = Color.White; }
 
         Rectangle sourceRectangle = new Rectangle(209, 52, 16, 32);
-        spriteBatch.Draw(MarioTexture, position, sourceRectangle, tint, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+        spriteBatch.Draw(LuigiTexture, position, sourceRectangle, tint, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
     }
 
     public void Update(GameTime gametime)
