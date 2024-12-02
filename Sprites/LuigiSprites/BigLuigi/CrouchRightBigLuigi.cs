@@ -4,12 +4,12 @@ using Microsoft.Xna.Framework.Graphics;
 public class CrouchRightBigLuigi : ICharacter
 {
     private float scale = 2f;
-    private Texture2D MarioTexture;
+    private Texture2D LuigiTexture;
     private Color tint;
     
-    public CrouchRightBigLuigi(Texture2D MarioTexture)
+    public CrouchRightBigLuigi(Texture2D LuigiTexture)
     {
-        this.MarioTexture = MarioTexture;
+        this.LuigiTexture = LuigiTexture;
     }
 
     public void Draw(SpriteBatch spriteBatch, Vector2 position, bool HasStar)
@@ -18,7 +18,7 @@ public class CrouchRightBigLuigi : ICharacter
         else { tint = Color.White; }
 
         Rectangle sourceRectangle = new Rectangle(389, 57, 16, 22);
-        spriteBatch.Draw(MarioTexture, position, sourceRectangle, tint, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+        spriteBatch.Draw(LuigiTexture, position, sourceRectangle, tint, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
     }
 
     public void Update(GameTime gametime)
