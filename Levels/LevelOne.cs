@@ -25,6 +25,7 @@ public class LevelOne : ILevel
     private Texture2D overworldTiles;
     private Texture2D danceTexture;
 
+    private Point layerSize = new(211, 30);
     private Layer lvl1backdrop;
     private Layer lvl1greenery;
     private Layer lvl1foreground;
@@ -256,9 +257,9 @@ public class LevelOne : ILevel
         mario.SetSwimmingLevel(false);
         luigi.SetSwimmingLevel(false);
 
-        lvl1backdrop = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Backdrop.csv");
-        lvl1greenery = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Greenery.csv");
-        lvl1foreground = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Foreground.csv");
+        lvl1backdrop = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Backdrop.csv", layerSize);
+        lvl1greenery = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Greenery.csv", layerSize);
+        lvl1foreground = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Foreground.csv", layerSize);
 
         lvl1backdrop.LoadLayer();
         lvl1greenery.LoadLayer();
