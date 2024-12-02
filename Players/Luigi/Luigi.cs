@@ -34,6 +34,7 @@ public class Luigi : IPlayer
     private bool canTakeDamage = true;
     private bool moveKeyPressed = false;
     private bool deathSoundPlaying = false;
+    private bool isDead = false;
 
     private const float maxSpeed = 3f;
     private const float acceleration = 0.03f;
@@ -266,7 +267,7 @@ public class Luigi : IPlayer
             }
             else if (gameResetTimer == 0)
             {
-                if (gsm.isSingleplayer() || (gsm.isMultiplayer() && mario.IsDead()))
+                if (gsm.isSingleplayer() || (gsm.isMultiplayer() && IsDead()))
                 {
                     if (game.hudManager.GetNumLives() <= 0)
                     {
