@@ -368,6 +368,8 @@ public class LevelOne : ILevel
         obstacle6.Draw(spriteBatch, new Vector2(5740, 370));
 
         spriteBatch.Draw(box, flag.GetDestination(), Color.White);
+        //spriteBatch.Draw(box, luigi.GetDestination(), Color.White);
+
     }
 
     public List<IEntity> GetAllEntities()

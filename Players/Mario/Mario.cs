@@ -47,7 +47,10 @@ public class Mario : IPlayer
     private int gameResetTimer = -1;
     private List<IEntity> _entities;
 
-    public Mario(Game1 game, List<IEntity> entities, List<SoundEffect> sfx, TextureManager textureManager, GameTime gametime)
+    private GameStateMachine gsm;
+    private Luigi luigi;
+
+    public Mario(Game1 game, List<IEntity> entities, List<SoundEffect> sfx, TextureManager textureManager, GameTime gametime, GameStateMachine gsm, Luigi luigi)
     {
         this.textureManager = textureManager;
         this.marioTexture = textureManager.GetTexture("Mario");
@@ -65,6 +68,9 @@ public class Mario : IPlayer
         this.currentMarioSprite = new IdleRightSmallMario(marioTexture);
         this.game = game;
         this._entities = entities;
+
+        this.gsm = gsm;
+        this.luigi = luigi;
 
         /*
          * SFX loaded in specific order:
@@ -154,6 +160,7 @@ public class Mario : IPlayer
         if (!playerStateMachine.IsJumping())
         {
             playerStateMachine.SetPlayerCrouching();
+            marioVelocity.X = 0;
         }
     }
 
@@ -252,18 +259,21 @@ public class Mario : IPlayer
             }
             else if (gameResetTimer < 0)
             {
+                game.hudManager.LoseLife();
                 gameResetTimer = 250;
             }
             else if (gameResetTimer == 0)
             {
-                game.hudManager.LoseLife();
-                if (game.hudManager.GetNumLives() <= 0)
+                if (gsm.isSingleplayer() || (gsm.isMultiplayer() && luigi.IsDead()))
                 {
-                    game.GameOver();
-                }
-                else
-                {
-                    game.ResetGame();
+                    if (game.hudManager.GetNumLives() <= 0)
+                    {
+                        game.GameOver();
+                    }
+                    else
+                    {
+                        game.ResetGame();
+                    }
                 }
             }
         }
@@ -495,5 +505,10 @@ public class Mario : IPlayer
     public bool IsCrouching()
     {
         return playerStateMachine.IsCrouching();
+    }
+
+    public bool IsDead()
+    {
+        return playerStateMachine.IsDead();
     }
 }
