@@ -32,6 +32,7 @@ public class LevelTwo : ILevel
     private Texture2D overworldTiles;
     private Texture2D underwaterTiles;
 
+    private Point layerSize = new(192, 30);
     private Layer lvl2backdrop1;
     private Layer lvl2backdrop2;
     private Layer lvl2greenery;
@@ -86,11 +87,11 @@ public class LevelTwo : ILevel
             entities.Add(mario);
         }
 
-        lvl2backdrop1 = new Layer(32, 16, 16, Content.RootDirectory + "/level2_OWBackdrop.csv");
-        lvl2backdrop2 = new Layer(32, 16, 16, Content.RootDirectory + "/level2_UWBackdrop.csv");
-        lvl2greenery = new Layer(32, 16, 16, Content.RootDirectory + "/level2_OWGreenery.csv");
-        lvl2foreground1 = new Layer(32, 16, 16, Content.RootDirectory + "/level2_OWForeground.csv");
-        lvl2foreground2 = new Layer(32, 16, 16, Content.RootDirectory + "//level2_UWForeground.csv");
+        lvl2backdrop1 = new Layer(32, 16, 16, Content.RootDirectory + "/level2_OWBackdrop.csv", layerSize);
+        lvl2backdrop2 = new Layer(32, 16, 16, Content.RootDirectory + "/level2_UWBackdrop.csv", layerSize);
+        lvl2greenery = new Layer(32, 16, 16, Content.RootDirectory + "/level2_OWGreenery.csv", layerSize); 
+        lvl2foreground1 = new Layer(32, 16, 16, Content.RootDirectory + "/level2_OWForeground.csv", layerSize);
+        lvl2foreground2 = new Layer(32, 16, 16, Content.RootDirectory + "//level2_UWForeground.csv", layerSize);
 
         lvl2backdrop1.LoadLayer();
         lvl2backdrop2.LoadLayer();

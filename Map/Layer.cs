@@ -8,6 +8,7 @@ using System.IO;
 
 public class Layer
 {
+    private Point mapSize;
     private int display_tilesize;
     private int num_tile_per_row;
     private int pixel_tilesize;
@@ -15,7 +16,7 @@ public class Layer
     private Dictionary<Vector2, int> tile_array;
     private List<Rectangle> redRectangles;  // List to store red rectangles
 
-    public Layer(int display_tilesize, int num_tile_per_row, int pixel_tilesize, string filepath)
+    public Layer(int display_tilesize, int num_tile_per_row, int pixel_tilesize, string filepath, Point mapSize)
     {
         this.display_tilesize = display_tilesize;
         this.num_tile_per_row = num_tile_per_row;
@@ -23,9 +24,10 @@ public class Layer
         this.filepath = filepath;
         this.tile_array = new Dictionary<Vector2, int>();
         this.redRectangles = new List<Rectangle>();
+        this.mapSize = mapSize;
     }
 
-    // Load the layre from the CSV file
+    // Load the layer from the CSV file
     public void LoadLayer()
     {
         StreamReader reader = new(filepath);
@@ -111,4 +113,5 @@ public class Layer
     {
         return redRectangles;
     }
+
 }
