@@ -27,7 +27,7 @@ public class FlagSprite
         this.position = position;
         dance = new DancePole(new Vector2(position.X-30, position.Y-250));
     }
-     private int  drawPole(int x, int y)
+     private int drawPole(int x, int y)
     {
         Rectangle poleSourceRectangle = new Rectangle(80,33,15,15);
         int currY = y;
@@ -68,7 +68,8 @@ public class FlagSprite
     public Rectangle GetDestination()
     {
         //return destinationRectangle;
-        return new Rectangle((int)position.X, (int)position.Y, 30, 240);
+        return new Rectangle((int)position.X+10, (int)position.Y - 220, 30, 250);
+        //return new Rectangle((int)position.X+10, (int)position.Y - 170, 30, 200);
     }
 }
 

@@ -14,8 +14,9 @@ public class GameStateControlCenter
     private LevelScreenSprite levelScreenSprite;
     private MusicMachine MusicMachine;
     private BlackJackStateMachine blackJackStateMachine;
+    PlayerMovementController playerMovement;
 
-    public GameStateControlCenter(GameStateMachine gameStateMachine, KeyboardController gameKeyboardController, MouseController gameMouseController, Game1 game, StartScreenSprite startScreenSprite, LevelScreenSprite levelScreenSprite, SoundManager musics, BlackJackStateMachine blackJackStateMachine)
+    public GameStateControlCenter(GameStateMachine gameStateMachine, KeyboardController gameKeyboardController, MouseController gameMouseController, Game1 game, StartScreenSprite startScreenSprite, LevelScreenSprite levelScreenSprite, SoundManager musics, BlackJackStateMachine blackJackStateMachine, PlayerMovementController playerMovement)
     {
         this.gameKeyboardController = gameKeyboardController;
         this.gameMouseController = gameMouseController;
@@ -24,6 +25,7 @@ public class GameStateControlCenter
         this.startScreenSprite = startScreenSprite;
         this.levelScreenSprite = levelScreenSprite;
         this.blackJackStateMachine = blackJackStateMachine;
+        this.playerMovement = playerMovement;
         MusicMachine = new MusicMachine(musics);
         InitializeCommands();
     }
@@ -48,6 +50,9 @@ public class GameStateControlCenter
 
         ICommand startScreenCommand = new StartScreeGameCommand(gameStateMachine);
         gameKeyboardController.addCommand(Keys.D0, startScreenCommand);
+
+        ICommand DisablePlayerCommand = new DisablePlayerCommand(playerMovement);
+        gameKeyboardController.addCommand(Keys.Z, DisablePlayerCommand);
 
         // Mouse commands
         ICommand helpClickCommand = new PrintMessageCommand("HELP");

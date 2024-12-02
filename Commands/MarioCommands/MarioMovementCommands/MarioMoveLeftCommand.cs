@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 public class MarioMoveLeftCommand : IPlayerCommand
 {
     private Mario mario;

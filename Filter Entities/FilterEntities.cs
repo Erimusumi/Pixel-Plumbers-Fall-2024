@@ -43,6 +43,23 @@ using System.Threading.Tasks;
             return enemyList;
     }
 
+    public List<IEntity> FilterFireballs(List<IEntity> entities)
+    {
+        List<IEntity> fireballs = new List<IEntity>();
+
+        for(int i = 0; i < entities.Count; i++)
+        {
+            Type currentEntityType = entities[i].GetType();
+            if(currentEntityType == typeof(Fireball))
+            {
+                fireballs.Add(entities[i]);
+            }
+        }
+        return fireballs;
+
+
+    }
+
 
 
 

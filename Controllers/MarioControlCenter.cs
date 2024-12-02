@@ -37,4 +37,9 @@ public class MarioControlCenter
         playerMovementController.addCommand(Keys.LeftShift, marioFireballCommand);
         playerMovementController.addCommand(Keys.RightShift, marioStarCommand);
     }
+
+    public PlayerMovementController GetController()
+    {
+        return playerMovementController;
+    }
 }

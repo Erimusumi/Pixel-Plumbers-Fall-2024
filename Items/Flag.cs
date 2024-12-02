@@ -15,6 +15,7 @@ using System.Threading.Tasks;
     Rectangle destinationRectangle;
     //DancePole dance;
     Boolean isWinFlag = false;
+    Boolean MarioTop = false;
 
     public Flag(Vector2 position, Texture2D flagTexture, Texture2D danceTexture, SpriteBatch spriteBatch)
     {
@@ -32,9 +33,13 @@ using System.Threading.Tasks;
     }
    public void Draw()
     {
-        if (isWinFlag)
+        if (isWinFlag && MarioTop)
         {
             flagSprite.drawDanceFlag();
+        }
+        else if (isWinFlag && !MarioTop)
+        {
+            flagSprite.drawIdleFlag();
         }
         else
         {
@@ -46,9 +51,14 @@ using System.Threading.Tasks;
     {
         return flagSprite.GetDestination();
     }
-    public void makeWinFlag()
+    public void makeWinFlag(int MarioPositionY)
     {
+        Rectangle flagDest = GetDestination();
         isWinFlag = true;
+        if (MarioPositionY < (flagDest.Y + 50))
+        {
+            MarioTop = true;
+        }
     }
     public void resetFlag()
     {

@@ -21,6 +21,7 @@ public class LuigiControlCenter
         IPlayerCommand luigiMoveLeft = new LuigiMoveLeftCommand(luigi);
         IPlayerCommand luigiJumpCommand = new LuigiJumpCommand(luigi);
         IPlayerCommand luigiCrouchCommand = new LuigiCrouchCommand(luigi);
+
         IPlayerCommand luigiFireballCommand = new LuigiFireballCommand(luigi);
         IPlayerCommand luigiPowerUpCommand = new LuigiPowerUpCommand(luigi);
         IPlayerCommand luigiTakeDamageCommand = new LuigiTakeDamageCommand(luigi);
@@ -30,6 +31,9 @@ public class LuigiControlCenter
         playerMovementController.addCommand(Keys.Left, luigiMoveLeft);
         playerMovementController.addCommand(Keys.Up, luigiJumpCommand);
         playerMovementController.addCommand(Keys.Down, luigiCrouchCommand);
-
+        playerMovementController.addCommand(Keys.RightShift, luigiFireballCommand);
+        playerMovementController.addCommand(Keys.D4, luigiPowerUpCommand);
+        playerMovementController.addCommand(Keys.D5, luigiTakeDamageCommand);
+        playerMovementController.addCommand(Keys.D6, luigiStarCommand);
     }
 }
