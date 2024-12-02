@@ -3,7 +3,7 @@ using System.Configuration.Assemblies;
 
 public class PlayerStateMachine
 {
-    public enum PlayerGameState { Small, Big, Fire, Star }
+    public enum PlayerGameState { Small, Big, Fire}
     public enum PlayerFaceState { Left, Right }
     public enum PlayerMoveState { Idle, Moving, Jumping, Crouching, Turning, Dead }
 
@@ -12,7 +12,7 @@ public class PlayerStateMachine
     public PlayerMoveState CurrentMoveState { get; private set; }
 
     public bool _HasStar;
-    public bool PlayerWins;
+    private bool PlayerWins;
     public bool isVisible;
     public bool isSwimmingLevel;
 
