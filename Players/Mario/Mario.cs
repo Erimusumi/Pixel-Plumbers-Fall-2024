@@ -154,6 +154,7 @@ public class Mario : IPlayer
         if (!playerStateMachine.IsJumping())
         {
             playerStateMachine.SetPlayerCrouching();
+            marioVelocity.X = 0;
         }
     }
 

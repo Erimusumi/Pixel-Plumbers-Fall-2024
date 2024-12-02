@@ -145,6 +145,7 @@ public class Luigi : IPlayer
         if (!playerStateMachine.IsJumping())
         {
             playerStateMachine.SetPlayerCrouching();
+            luigiVelocity.X = 0;
         }
     }
 
