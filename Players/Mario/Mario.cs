@@ -47,12 +47,9 @@ public class Mario : IPlayer
     private int gameResetTimer = -1;
     private List<IEntity> _entities;
 
-
-
     public Mario(Game1 game, List<IEntity> entities, List<SoundEffect> sfx, TextureManager textureManager, GameTime gametime)
     {
         this.textureManager = textureManager;
-
         this.marioTexture = textureManager.GetTexture("Mario");
         this.itemTexture = textureManager.GetTexture("Items");
 
@@ -186,8 +183,7 @@ public class Mario : IPlayer
 
     public void PowerUp()
     {
-        if (playerStateMachine.IsDead()) return;
-        if (!canPowerUp) return;
+        if (playerStateMachine.IsDead() || !canPowerUp) return;
         switch (playerStateMachine.CurrentGameState)
         {
             case PlayerStateMachine.PlayerGameState.Small:
