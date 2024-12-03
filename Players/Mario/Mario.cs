@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -22,6 +23,8 @@ public class Mario : IPlayer
 
     private Vector2 initialPosition;
     public Vector2 marioPosition;
+    public Vector2 minPos, maxPos;
+    private int tileSize = 32;
     private Vector2 marioVelocity;
     private float groundPosition = 385f;
     private float swimmingMaxHeight = 10f;

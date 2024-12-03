@@ -8,7 +8,6 @@ using System.IO;
 
 public class Layer
 {
-    private Point mapSize;
     private int display_tilesize;
     private int num_tile_per_row;
     private int pixel_tilesize;
@@ -16,7 +15,7 @@ public class Layer
     private Dictionary<Vector2, int> tile_array;
     private List<Rectangle> redRectangles;  // List to store red rectangles
 
-    public Layer(int display_tilesize, int num_tile_per_row, int pixel_tilesize, string filepath, Point mapSize)
+    public Layer(int display_tilesize, int num_tile_per_row, int pixel_tilesize, string filepath, Point layerSize)
     {
         this.display_tilesize = display_tilesize;
         this.num_tile_per_row = num_tile_per_row;
@@ -24,7 +23,6 @@ public class Layer
         this.filepath = filepath;
         this.tile_array = new Dictionary<Vector2, int>();
         this.redRectangles = new List<Rectangle>();
-        this.mapSize = mapSize;
     }
 
     // Load the layer from the CSV file
@@ -57,13 +55,7 @@ public class Layer
         redRectangles.Clear();
         foreach (var item in tile_array)
         {
-            // Calculate the destination rectangle for the tile
-            //Rectangle drect = new(
-            //    (int)(item.Key.X * display_tilesize - cameraPosition.X),
-            //    (int)(item.Key.Y * display_tilesize - cameraPosition.Y),
-            //    display_tilesize,
-            //    display_tilesize
-            //);
+            // Calculate the destination vector for the tile
             Vector2 destVector = new Vector2(
                 item.Key.X * display_tilesize - cameraPosition.X,
                 item.Key.Y * display_tilesize - cameraPosition.Y
@@ -125,5 +117,7 @@ public class Layer
     {
         return redRectangles;
     }
+
+   
 
 }

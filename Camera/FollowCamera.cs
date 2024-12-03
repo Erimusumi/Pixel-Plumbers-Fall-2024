@@ -12,24 +12,20 @@ public class FollowCamera
         this.position = position;
     }
 
-    public void Follow(Vector2 marioPosition, Vector2 screenSize)
+    public void Follow(Vector2 marioPosition, Vector2 screenSize, float mapWidth)
     {
-        // Calculate the target camera position
+        // Calculate the target camera position (only X-axis)
         float targetX = marioPosition.X - (screenSize.X / 2);
-        float targetY = marioPosition.Y - (screenSize.Y / 2);
 
-        // Smoothly interpolate between current position and target position
+        // Smoothly interpolate between current position and target position (only X)
         position.X = MathHelper.Lerp(position.X, targetX, smoothSpeed);
-        position.Y = MathHelper.Lerp(position.Y, targetY, smoothSpeed);
 
         // Clamp the camera position to prevent going out of bounds
-        position.X = Math.Max(0, position.X);
-        position.Y = Math.Max(0, position.Y);
-    }
+        position.X = Math.Max(0, position.X); // Prevent going left of 0
+        position.X = Math.Min(position.X, mapWidth - screenSize.X); // Prevent going beyond map width
 
-    public void SetCameraY(float y)
-    {
-        position.Y = y;
+        // Set Y to the center of the screen height
+        position.Y = (screenSize.Y / 2) - (screenSize.Y / 2);
     }
 
     public Matrix GetViewMatrix()
