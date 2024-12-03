@@ -1,7 +1,14 @@
+using System;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Content;
+using System.Reflection.Metadata;
+using Microsoft.Xna.Framework.Audio;
+using System.Net.NetworkInformation;
+using System.Diagnostics;
 using Pixel_Plumbers_Fall_2024;
 
 public class LevelOne : ILevel
@@ -25,7 +32,7 @@ public class LevelOne : ILevel
     private Texture2D danceTexture;
     private Texture2D box;
 
-    private Point layerSize = new(211, 30);
+    public Point mapSize = new(211 * 32, 30 * 32);
     private Layer lvl1backdrop;
     private Layer lvl1greenery;
     private Layer lvl1foreground;
@@ -206,9 +213,9 @@ public class LevelOne : ILevel
 
     private void LoadLevelLayers()
     {
-        lvl1backdrop = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Backdrop.csv", layerSize);
-        lvl1greenery = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Greenery.csv", layerSize);
-        lvl1foreground = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Foreground.csv", layerSize);
+        lvl1backdrop = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Backdrop.csv");
+        lvl1greenery = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Greenery.csv");
+        lvl1foreground = new Layer(32, 16, 16, Content.RootDirectory + "/level1_Foreground.csv");
 
         lvl1backdrop.LoadLayer();
         lvl1greenery.LoadLayer();
@@ -257,7 +264,7 @@ public class LevelOne : ILevel
         flag.Update();
     }
 
-    public void DrawLevel(SpriteBatch spriteBatch, FollowCamera camera)
+    public void DrawLevel(SpriteBatch spriteBatch)
     {
         // Draw level layers
         lvl1backdrop.Draw(spriteBatch, overworldTiles, Vector2.Zero);

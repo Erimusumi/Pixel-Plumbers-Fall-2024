@@ -15,7 +15,7 @@ public class Layer
     private Dictionary<Vector2, int> tile_array;
     private List<Rectangle> redRectangles;  // List to store red rectangles
 
-    public Layer(int display_tilesize, int num_tile_per_row, int pixel_tilesize, string filepath, Point layerSize)
+    public Layer(int display_tilesize, int num_tile_per_row, int pixel_tilesize, string filepath)
     {
         this.display_tilesize = display_tilesize;
         this.num_tile_per_row = num_tile_per_row;

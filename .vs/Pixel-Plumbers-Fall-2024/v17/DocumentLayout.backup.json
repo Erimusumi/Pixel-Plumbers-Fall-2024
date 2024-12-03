@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\players\\mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:players\\mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\levels\\leveltwo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:levels\\leveltwo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\levels\\ilevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:levels\\ilevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\map\\layer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,20 +31,12 @@
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:camera\\followcamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\players\\mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:players\\mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\gamestatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:gamestatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\players\\luigi\\luigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:players\\luigi\\luigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\levels\\leveltwo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:levels\\leveltwo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\helen\\source\\repos\\pixelplumbers2\\players\\luigi\\luigispritemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -381,7 +385,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -401,58 +405,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FollowCamera.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Camera\\FollowCamera.cs",
-              "RelativeDocumentMoniker": "Camera\\FollowCamera.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Camera\\FollowCamera.cs",
-              "RelativeToolTip": "Camera\\FollowCamera.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAApwBgAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T00:47:05.089Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAOIAAAAAAAAAAAApwPsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAANQAAAAAAAAAAAAmwNgAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-24T21:51:48.718Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Mario.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Players\\Mario\\Mario.cs",
-              "RelativeDocumentMoniker": "Players\\Mario\\Mario.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Players\\Mario\\Mario.cs",
-              "RelativeToolTip": "Players\\Mario\\Mario.cs",
-              "ViewState": "AgIAAKYAAAAAAAAAAAAYwLUAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T21:50:49.149Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "LuigiSpriteMachine.cs",
-              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Players\\Luigi\\LuigiSpriteMachine.cs",
-              "RelativeDocumentMoniker": "Players\\Luigi\\LuigiSpriteMachine.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Players\\Luigi\\LuigiSpriteMachine.cs",
-              "RelativeToolTip": "Players\\Luigi\\LuigiSpriteMachine.cs",
-              "ViewState": "AgIAAJwAAAAAAAAAAAAIwAkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T19:00:09.91Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "Luigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Players\\Luigi\\Luigi.cs",
               "RelativeDocumentMoniker": "Players\\Luigi\\Luigi.cs",
@@ -464,20 +430,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "LevelOne.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Levels\\LevelOne.cs",
               "RelativeDocumentMoniker": "Levels\\LevelOne.cs",
-              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Levels\\LevelOne.cs*",
-              "RelativeToolTip": "Levels\\LevelOne.cs*",
-              "ViewState": "AgIAADABAAAAAAAAAAAwwFABAAABAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Levels\\LevelOne.cs",
+              "RelativeToolTip": "Levels\\LevelOne.cs",
+              "ViewState": "AgIAANQAAAAAAAAAAAAYwOAAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-24T21:49:51.954Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Layer.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Map\\Layer.cs",
               "RelativeDocumentMoniker": "Map\\Layer.cs",
@@ -485,12 +451,11 @@
               "RelativeToolTip": "Map\\Layer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T19:06:08.105Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T19:06:08.105Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "BlackJackSprites.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\BlackJack\\BlackJackSprites.cs",
               "RelativeDocumentMoniker": "BlackJack\\BlackJackSprites.cs",
@@ -502,7 +467,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "GameStateMachine.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\GameStateMachine.cs",
               "RelativeDocumentMoniker": "GameStateMachine.cs",
@@ -514,19 +479,70 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "LevelTwo.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Levels\\LevelTwo.cs",
               "RelativeDocumentMoniker": "Levels\\LevelTwo.cs",
               "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Levels\\LevelTwo.cs",
               "RelativeToolTip": "Levels\\LevelTwo.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAgwHgAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwCIAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T19:22:41.231Z"
+              "WhenOpened": "2024-12-03T06:28:37.883Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 0,
+              "Title": "Mario.cs",
+              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Players\\Mario\\Mario.cs",
+              "RelativeDocumentMoniker": "Players\\Mario\\Mario.cs",
+              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Players\\Mario\\Mario.cs",
+              "RelativeToolTip": "Players\\Mario\\Mario.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAIAwwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T21:50:49.149Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LuigiSpriteMachine.cs",
+              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Players\\Luigi\\LuigiSpriteMachine.cs",
+              "RelativeDocumentMoniker": "Players\\Luigi\\LuigiSpriteMachine.cs",
+              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Players\\Luigi\\LuigiSpriteMachine.cs",
+              "RelativeToolTip": "Players\\Luigi\\LuigiSpriteMachine.cs",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAIwAkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T19:00:09.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ILevel.cs",
+              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Levels\\ILevel.cs",
+              "RelativeDocumentMoniker": "Levels\\ILevel.cs",
+              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Levels\\ILevel.cs",
+              "RelativeToolTip": "Levels\\ILevel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T06:20:39.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FollowCamera.cs",
+              "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Camera\\FollowCamera.cs",
+              "RelativeDocumentMoniker": "Camera\\FollowCamera.cs",
+              "ToolTip": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Camera\\FollowCamera.cs",
+              "RelativeToolTip": "Camera\\FollowCamera.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAApwBgAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T00:47:05.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "DylanMoore\u0027s Review.txt",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Code Reviews\\Sprint 2\\DylanMoore\u0027s Review.txt",
               "RelativeDocumentMoniker": "Code Reviews\\Sprint 2\\DylanMoore\u0027s Review.txt",
@@ -538,7 +554,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "BlackJackCommand.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\BlackJack\\BlackJackCommand.cs",
               "RelativeDocumentMoniker": "BlackJack\\BlackJackCommand.cs",
@@ -550,7 +566,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "ArunGhimire\u0027s Review.txt",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Code Reviews\\Sprint 2\\ArunGhimire\u0027s Review.txt",
               "RelativeDocumentMoniker": "Code Reviews\\Sprint 2\\ArunGhimire\u0027s Review.txt",
@@ -562,7 +578,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "Sweep.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Collision\\Sweep.cs",
               "RelativeDocumentMoniker": "Collision\\Sweep.cs",
@@ -574,7 +590,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "Microsoft.PackageDependencyResolution.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.401\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\8.0.401\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
@@ -586,7 +602,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "SwimmingRightSmallLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\SwimmingRightSmallLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\SmallLuigi\\SwimmingRightSmallLuigi.cs",
@@ -598,7 +614,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "TurningLeftSmallLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\TurningLeftSmallLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\SmallLuigi\\TurningLeftSmallLuigi.cs",
@@ -610,7 +626,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "SwimmingLeftSmallLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\SwimmingLeftSmallLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\SmallLuigi\\SwimmingLeftSmallLuigi.cs",
@@ -622,7 +638,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "TurningRightSmallLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\TurningRightSmallLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\SmallLuigi\\TurningRightSmallLuigi.cs",
@@ -634,7 +650,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "MovingLeftSmallLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\MovingLeftSmallLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\SmallLuigi\\MovingLeftSmallLuigi.cs",
@@ -646,7 +662,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "JumpingLeftSmallLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\JumpingLeftSmallLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\SmallLuigi\\JumpingLeftSmallLuigi.cs",
@@ -658,7 +674,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "IdleRightSmallLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\IdleRightSmallLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\SmallLuigi\\IdleRightSmallLuigi.cs",
@@ -670,7 +686,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "IdleLeftSmallLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\IdleLeftSmallLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\SmallLuigi\\IdleLeftSmallLuigi.cs",
@@ -682,7 +698,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "DeadLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\DeadLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\SmallLuigi\\DeadLuigi.cs",
@@ -694,7 +710,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "TurningRightFireLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\FireLuigi\\TurningRightFireLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\FireLuigi\\TurningRightFireLuigi.cs",
@@ -706,7 +722,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "TurningLeftFireLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\FireLuigi\\TurningLeftFireLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\FireLuigi\\TurningLeftFireLuigi.cs",
@@ -718,7 +734,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "SwimmingRightFireLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\FireLuigi\\SwimmingRightFireLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\FireLuigi\\SwimmingRightFireLuigi.cs",
@@ -730,7 +746,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "SwimmingLeftFireLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\FireLuigi\\SwimmingLeftFireLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\FireLuigi\\SwimmingLeftFireLuigi.cs",
@@ -742,7 +758,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "MovingRightFireLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\FireLuigi\\MovingRightFireLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\FireLuigi\\MovingRightFireLuigi.cs",
@@ -754,7 +770,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "MovingLeftFireLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\FireLuigi\\MovingLeftFireLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\FireLuigi\\MovingLeftFireLuigi.cs",
@@ -766,7 +782,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "JumpRightFireLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\FireLuigi\\JumpRightFireLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\FireLuigi\\JumpRightFireLuigi.cs",
@@ -778,7 +794,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "JumpLeftFireLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\FireLuigi\\JumpLeftFireLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\FireLuigi\\JumpLeftFireLuigi.cs",
@@ -790,7 +806,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "CrouchRightFireLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\FireLuigi\\CrouchRightFireLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\FireLuigi\\CrouchRightFireLuigi.cs",
@@ -802,7 +818,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "IdleRightFireLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\FireLuigi\\IdleRightFireLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\FireLuigi\\IdleRightFireLuigi.cs",
@@ -814,7 +830,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "IdleLeftFireLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\FireLuigi\\IdleLeftFireLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\FireLuigi\\IdleLeftFireLuigi.cs",
@@ -826,7 +842,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "CrouchLeftFireLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\FireLuigi\\CrouchLeftFireLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\FireLuigi\\CrouchLeftFireLuigi.cs",
@@ -838,7 +854,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "TurningRightBigLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\BigLuigi\\TurningRightBigLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\BigLuigi\\TurningRightBigLuigi.cs",
@@ -850,7 +866,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "TurningLeftBigLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\BigLuigi\\TurningLeftBigLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\BigLuigi\\TurningLeftBigLuigi.cs",
@@ -862,7 +878,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "SwimmingRightBigLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\BigLuigi\\SwimmingRightBigLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\BigLuigi\\SwimmingRightBigLuigi.cs",
@@ -874,7 +890,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "SwimmingLeftBigLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\BigLuigi\\SwimmingLeftBigLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\BigLuigi\\SwimmingLeftBigLuigi.cs",
@@ -886,7 +902,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "MovingRightBigLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\BigLuigi\\MovingRightBigLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\BigLuigi\\MovingRightBigLuigi.cs",
@@ -898,7 +914,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "MovingLeftBigLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\BigLuigi\\MovingLeftBigLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\BigLuigi\\MovingLeftBigLuigi.cs",
@@ -910,7 +926,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "JumpingRightBigLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\BigLuigi\\JumpingRightBigLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\BigLuigi\\JumpingRightBigLuigi.cs",
@@ -922,7 +938,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "JumpingLeftBigLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\BigLuigi\\JumpingLeftBigLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\BigLuigi\\JumpingLeftBigLuigi.cs",
@@ -934,7 +950,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "IdleRightBigLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\BigLuigi\\IdleRightBigLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\BigLuigi\\IdleRightBigLuigi.cs",
@@ -946,7 +962,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "IdleLeftBigLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\BigLuigi\\IdleLeftBigLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\BigLuigi\\IdleLeftBigLuigi.cs",
@@ -958,7 +974,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "CrouchLeftBigLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\BigLuigi\\CrouchLeftBigLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\BigLuigi\\CrouchLeftBigLuigi.cs",
@@ -970,7 +986,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "CrouchRightBigLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\BigLuigi\\CrouchRightBigLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\BigLuigi\\CrouchRightBigLuigi.cs",
@@ -982,7 +998,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 49,
               "Title": "MovingRightSmallLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\MovingRightSmallLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\SmallLuigi\\MovingRightSmallLuigi.cs",
@@ -994,7 +1010,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 50,
               "Title": "JumpingRightSmallLuigi.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\LuigiSprites\\SmallLuigi\\JumpingRightSmallLuigi.cs",
               "RelativeDocumentMoniker": "Sprites\\LuigiSprites\\SmallLuigi\\JumpingRightSmallLuigi.cs",
@@ -1006,7 +1022,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 52,
               "Title": "IMarioSpriteMachine.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Players\\Mario\\IMarioSpriteMachine.cs",
               "RelativeDocumentMoniker": "Players\\Mario\\IMarioSpriteMachine.cs",
@@ -1018,7 +1034,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 51,
               "Title": "TextureManager.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\TextureManager.cs",
               "RelativeDocumentMoniker": "TextureManager.cs",
@@ -1030,7 +1046,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 52,
+              "DocumentIndex": 53,
               "Title": "LuigiSpriteMachineSwimming.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Players\\Luigi\\LuigiSpriteMachineSwimming.cs",
               "RelativeDocumentMoniker": "Players\\Luigi\\LuigiSpriteMachineSwimming.cs",
@@ -1042,7 +1058,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 54,
+              "DocumentIndex": 55,
               "Title": "TurningLeftSmallMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\SmallMario\\TurningLeftSmallMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\SmallMario\\TurningLeftSmallMario.cs",
@@ -1054,7 +1070,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 55,
+              "DocumentIndex": 56,
               "Title": "SwimmingRightSmallMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\SmallMario\\SwimmingRightSmallMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\SmallMario\\SwimmingRightSmallMario.cs",
@@ -1066,7 +1082,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 56,
+              "DocumentIndex": 57,
               "Title": "SwimmingLeftSmallMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\SmallMario\\SwimmingLeftSmallMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\SmallMario\\SwimmingLeftSmallMario.cs",
@@ -1078,7 +1094,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 57,
+              "DocumentIndex": 58,
               "Title": "MovingRightSmallMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\SmallMario\\MovingRightSmallMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\SmallMario\\MovingRightSmallMario.cs",
@@ -1090,7 +1106,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 53,
+              "DocumentIndex": 54,
               "Title": "TurningRightSmallMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\SmallMario\\TurningRightSmallMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\SmallMario\\TurningRightSmallMario.cs",
@@ -1102,7 +1118,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 58,
+              "DocumentIndex": 59,
               "Title": "MovingLeftSmallMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\SmallMario\\MovingLeftSmallMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\SmallMario\\MovingLeftSmallMario.cs",
@@ -1114,7 +1130,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 59,
+              "DocumentIndex": 60,
               "Title": "JumpingRightSmallMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\SmallMario\\JumpingRightSmallMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\SmallMario\\JumpingRightSmallMario.cs",
@@ -1126,7 +1142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 61,
+              "DocumentIndex": 62,
               "Title": "IdleRightSmallMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\SmallMario\\IdleRightSmallMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\SmallMario\\IdleRightSmallMario.cs",
@@ -1138,7 +1154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 64,
+              "DocumentIndex": 65,
               "Title": "TurningRightFireMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\FireMario\\TurningRightFireMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\FireMario\\TurningRightFireMario.cs",
@@ -1150,7 +1166,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 65,
+              "DocumentIndex": 66,
               "Title": "TurningLeftFireMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\FireMario\\TurningLeftFireMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\FireMario\\TurningLeftFireMario.cs",
@@ -1162,7 +1178,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 66,
+              "DocumentIndex": 67,
               "Title": "SwimmingRightFireMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\FireMario\\SwimmingRightFireMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\FireMario\\SwimmingRightFireMario.cs",
@@ -1174,7 +1190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 63,
+              "DocumentIndex": 64,
               "Title": "DeadMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\SmallMario\\DeadMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\SmallMario\\DeadMario.cs",
@@ -1186,7 +1202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 60,
+              "DocumentIndex": 61,
               "Title": "JumpingLeftSmallMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\SmallMario\\JumpingLeftSmallMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\SmallMario\\JumpingLeftSmallMario.cs",
@@ -1198,7 +1214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 67,
+              "DocumentIndex": 68,
               "Title": "SwimmingLeftFireMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\FireMario\\SwimmingLeftFireMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\FireMario\\SwimmingLeftFireMario.cs",
@@ -1210,7 +1226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 62,
+              "DocumentIndex": 63,
               "Title": "IdleLeftSmallMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\SmallMario\\IdleLeftSmallMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\SmallMario\\IdleLeftSmallMario.cs",
@@ -1222,7 +1238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 68,
+              "DocumentIndex": 69,
               "Title": "MovingRightFireMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\FireMario\\MovingRightFireMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\FireMario\\MovingRightFireMario.cs",
@@ -1234,7 +1250,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 70,
+              "DocumentIndex": 71,
               "Title": "JumpRightFireMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\FireMario\\JumpRightFireMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\FireMario\\JumpRightFireMario.cs",
@@ -1246,7 +1262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 69,
+              "DocumentIndex": 70,
               "Title": "MovingLeftFireMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\FireMario\\MovingLeftFireMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\FireMario\\MovingLeftFireMario.cs",
@@ -1258,7 +1274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 71,
+              "DocumentIndex": 72,
               "Title": "JumpLeftFireMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\FireMario\\JumpLeftFireMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\FireMario\\JumpLeftFireMario.cs",
@@ -1270,7 +1286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 72,
+              "DocumentIndex": 73,
               "Title": "IdleRightFireMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\FireMario\\IdleRightFireMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\FireMario\\IdleRightFireMario.cs",
@@ -1282,7 +1298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 73,
+              "DocumentIndex": 74,
               "Title": "IdleLeftFireMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\FireMario\\IdleLeftFireMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\FireMario\\IdleLeftFireMario.cs",
@@ -1294,7 +1310,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 74,
+              "DocumentIndex": 75,
               "Title": "CrouchRightFireMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\FireMario\\CrouchRightFireMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\FireMario\\CrouchRightFireMario.cs",
@@ -1306,7 +1322,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 75,
+              "DocumentIndex": 76,
               "Title": "CrouchLeftFireMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\FireMario\\CrouchLeftFireMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\FireMario\\CrouchLeftFireMario.cs",
@@ -1318,7 +1334,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 81,
+              "DocumentIndex": 82,
               "Title": "MovingLeftBigMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\BigMario\\MovingLeftBigMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\BigMario\\MovingLeftBigMario.cs",
@@ -1330,7 +1346,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 80,
+              "DocumentIndex": 81,
               "Title": "MovingRightBigMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\BigMario\\MovingRightBigMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\BigMario\\MovingRightBigMario.cs",
@@ -1342,7 +1358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 79,
+              "DocumentIndex": 80,
               "Title": "SwimmingLeftBigMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\BigMario\\SwimmingLeftBigMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\BigMario\\SwimmingLeftBigMario.cs",
@@ -1354,7 +1370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 78,
+              "DocumentIndex": 79,
               "Title": "SwimmingRightBigMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\BigMario\\SwimmingRightBigMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\BigMario\\SwimmingRightBigMario.cs",
@@ -1366,7 +1382,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 77,
+              "DocumentIndex": 78,
               "Title": "TurningLeftBigMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\BigMario\\TurningLeftBigMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\BigMario\\TurningLeftBigMario.cs",
@@ -1378,7 +1394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 76,
+              "DocumentIndex": 77,
               "Title": "TurningRightBigMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\BigMario\\TurningRightBigMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\BigMario\\TurningRightBigMario.cs",
@@ -1390,7 +1406,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 82,
+              "DocumentIndex": 83,
               "Title": "JumpingRightBigMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\BigMario\\JumpingRightBigMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\BigMario\\JumpingRightBigMario.cs",
@@ -1402,7 +1418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 83,
+              "DocumentIndex": 84,
               "Title": "JumpingLeftBigMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\BigMario\\JumpingLeftBigMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\BigMario\\JumpingLeftBigMario.cs",
@@ -1414,7 +1430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 84,
+              "DocumentIndex": 85,
               "Title": "IdleRightBigMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\BigMario\\IdleRightBigMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\BigMario\\IdleRightBigMario.cs",
@@ -1426,7 +1442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 85,
+              "DocumentIndex": 86,
               "Title": "IdleLeftBigMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\BigMario\\IdleLeftBigMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\BigMario\\IdleLeftBigMario.cs",
@@ -1438,7 +1454,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 86,
+              "DocumentIndex": 87,
               "Title": "CrouchRightBigMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\BigMario\\CrouchRightBigMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\BigMario\\CrouchRightBigMario.cs",
@@ -1450,7 +1466,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 87,
+              "DocumentIndex": 88,
               "Title": "CrouchLeftBigMario.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\MarioSprites\\BigMario\\CrouchLeftBigMario.cs",
               "RelativeDocumentMoniker": "Sprites\\MarioSprites\\BigMario\\CrouchLeftBigMario.cs",
@@ -1462,7 +1478,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 88,
+              "DocumentIndex": 89,
               "Title": "ICharacter.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\ICharacter.cs",
               "RelativeDocumentMoniker": "Sprites\\ICharacter.cs",
@@ -1474,7 +1490,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 89,
+              "DocumentIndex": 90,
               "Title": "ISprite.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\ISprite.cs",
               "RelativeDocumentMoniker": "Sprites\\ISprite.cs",
@@ -1486,7 +1502,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 90,
+              "DocumentIndex": 91,
               "Title": "IPlayer.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\IPlayer.cs",
               "RelativeDocumentMoniker": "Sprites\\IPlayer.cs",
@@ -1498,7 +1514,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 91,
+              "DocumentIndex": 92,
               "Title": "IBlock.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Sprites\\IBlock.cs",
               "RelativeDocumentMoniker": "Sprites\\IBlock.cs",
@@ -1510,7 +1526,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 92,
+              "DocumentIndex": 93,
               "Title": "MarioSpriteMachineSwimming.cs",
               "DocumentMoniker": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Players\\Mario\\MarioSpriteMachineSwimming.cs",
               "RelativeDocumentMoniker": "Players\\Mario\\MarioSpriteMachineSwimming.cs",
