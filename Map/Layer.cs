@@ -58,9 +58,21 @@ public class Layer
         foreach (var item in tile_array)
         {
             // Calculate the destination rectangle for the tile
-            Rectangle drect = new(
-                (int)(item.Key.X * display_tilesize - cameraPosition.X),
-                (int)(item.Key.Y * display_tilesize - cameraPosition.Y),
+            //Rectangle drect = new(
+            //    (int)(item.Key.X * display_tilesize - cameraPosition.X),
+            //    (int)(item.Key.Y * display_tilesize - cameraPosition.Y),
+            //    display_tilesize,
+            //    display_tilesize
+            //);
+            Vector2 destVector = new Vector2(
+                item.Key.X * display_tilesize - cameraPosition.X,
+                item.Key.Y * display_tilesize - cameraPosition.Y
+            );
+
+            // Create destination rectangle from the destination vector
+            Rectangle destRect = new Rectangle(
+                (int)destVector.X,
+                (int)destVector.Y,
                 display_tilesize,
                 display_tilesize
             );
@@ -77,16 +89,16 @@ public class Layer
             );
 
             // Draw the tile from the texture atlas
-            spriteBatch.Draw(textureAtlas, drect, src, Color.White);
+            spriteBatch.Draw(textureAtlas, destRect, src, Color.White);
 
             // Add a 16x16 red rectangle if the value is 112 or between 38 and 55
             if ((item.Value == 112 || item.Value == 98 || item.Value == 114 || (item.Value >= 38 && item.Value <= 55))
         && item.Value != 6 && item.Value != 26 && item.Value != 42)
             {
-                // Create a fixed 16x16 red rectangle
+                // Create a fixed 16x16 red rectangle based on the destination vector
                 Rectangle redRect = new Rectangle(
-                    drect.X,
-                    drect.Y,
+                    (int)destVector.X,
+                    (int)destVector.Y,
                     16,
                     16
                 );
@@ -95,14 +107,14 @@ public class Layer
                 redRectangles.Add(redRect);
 
                 spriteBatch.Draw(
-                     textureAtlas,    
-                     redRect,        
-                     null,            
-                     Color.Red,       
-                     0f,              
-                     Vector2.Zero,    
+                     textureAtlas,
+                     redRect,
+                     null,
+                     Color.Red,
+                     0f,
+                     Vector2.Zero,
                      SpriteEffects.None,
-                     0f             
+                     0f
                  );
             }
         }
