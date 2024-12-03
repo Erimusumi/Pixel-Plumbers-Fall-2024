@@ -24,6 +24,7 @@ using System.Threading.Tasks;
     {
         Rectangle destination = player.GetDestination();
         flag.makeWinFlag(destination.Y);
+        player.SetWin();
     }
     private void removeFromList()
     {

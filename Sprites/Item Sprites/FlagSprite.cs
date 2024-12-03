@@ -68,8 +68,7 @@ public class FlagSprite
     public Rectangle GetDestination()
     {
         //return destinationRectangle;
-        return new Rectangle((int)position.X+10, (int)position.Y - 220, 30, 250);
-        //return new Rectangle((int)position.X+10, (int)position.Y - 170, 30, 200);
+        return new Rectangle((int)position.X+15, (int)position.Y - 220, 30, 250);
     }
 }
 

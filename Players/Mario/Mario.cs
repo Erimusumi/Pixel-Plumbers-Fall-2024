@@ -235,11 +235,19 @@ public class Mario : IPlayer
         Task.Delay(1000).ContinueWith(t => canTakeDamage = true);
     }
 
+    public void SetWin()
+    {
+        playerStateMachine.SetPlayerWins();
+    }
+
     public void MarioWins()
     {
         if (playerStateMachine.Wins())
         {
-            _sfx[5].Play();
+            marioVelocity.Y = 0;
+            marioVelocity.X = 0;
+            marioPosition.Y++;
+            //_sfx[5].Play();
             playerStateMachine.MakeInvisible();
         }
     }

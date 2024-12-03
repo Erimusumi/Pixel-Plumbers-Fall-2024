@@ -232,7 +232,10 @@ public class Luigi : IPlayer
         canTakeDamage = false;
         Task.Delay(1000).ContinueWith(t => canTakeDamage = true);
     }
-
+    public void SetWin()
+    {
+        playerStateMachine.SetPlayerWins();
+    }
     public void LuigiWins()
     {
         if (playerStateMachine.Wins())

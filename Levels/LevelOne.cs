@@ -307,7 +307,7 @@ public class LevelOne : ILevel
         obstacle6.Draw(spriteBatch, new Vector2(5740, 370));
 
         // Draw box
-        spriteBatch.Draw(box, flag.GetDestination(), Color.White);
+        //spriteBatch.Draw(box, flag.GetDestination(), Color.White);
     }
 
     private void DrawBrickBlocks(SpriteBatch spriteBatch)
