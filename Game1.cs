@@ -282,8 +282,7 @@ namespace Pixel_Plumbers_Fall_2024
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            spriteBatch.Begin(transformMatrix: camera.GetViewMatrix());
-
+            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, SamplerState.PointWrap, null, null, null, transformMatrix: camera.GetViewMatrix());
             DrawGameScreen();
             DrawGameOver();
 
