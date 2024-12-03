@@ -3,28 +3,16 @@
   "WorkspaceRootPath": "C:\\Projects\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\players\\mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:players\\mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\collision\\interaction\\playerflaginteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\playerflaginteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\players\\mario\\playerstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:players\\mario\\playerstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\players\\mario\\mariospritemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:players\\mario\\mariospritemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\items\\flag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:items\\flag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\enemy\\blooper\\bloopersprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:enemy\\blooper\\bloopersprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\enemy\\blooper\\blooperstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:enemy\\blooper\\blooperstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,7 +30,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Projects\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
@@ -79,78 +67,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Flag.cs",
-              "DocumentMoniker": "C:\\Projects\\Items\\Flag.cs",
-              "RelativeDocumentMoniker": "Items\\Flag.cs",
-              "ToolTip": "C:\\Projects\\Items\\Flag.cs",
-              "RelativeToolTip": "Items\\Flag.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwDgAAAAZAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "BlooperStateMachine.cs",
+              "DocumentMoniker": "C:\\Projects\\Enemy\\Blooper\\BlooperStateMachine.cs",
+              "RelativeDocumentMoniker": "Enemy\\Blooper\\BlooperStateMachine.cs",
+              "ToolTip": "C:\\Projects\\Enemy\\Blooper\\BlooperStateMachine.cs",
+              "RelativeToolTip": "Enemy\\Blooper\\BlooperStateMachine.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAwDYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T20:18:51.349Z",
+              "WhenOpened": "2024-12-03T21:47:25.188Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PlayerFlagInteraction.cs",
-              "DocumentMoniker": "C:\\Projects\\Collision\\Interaction\\PlayerFlagInteraction.cs",
-              "RelativeDocumentMoniker": "Collision\\Interaction\\PlayerFlagInteraction.cs",
-              "ToolTip": "C:\\Projects\\Collision\\Interaction\\PlayerFlagInteraction.cs",
-              "RelativeToolTip": "Collision\\Interaction\\PlayerFlagInteraction.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAmwBoAAAAYAAAAAAAAAA==",
+              "Title": "BlooperSprites.cs",
+              "DocumentMoniker": "C:\\Projects\\Enemy\\Blooper\\BlooperSprites.cs",
+              "RelativeDocumentMoniker": "Enemy\\Blooper\\BlooperSprites.cs",
+              "ToolTip": "C:\\Projects\\Enemy\\Blooper\\BlooperSprites.cs",
+              "RelativeToolTip": "Enemy\\Blooper\\BlooperSprites.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBoAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T20:18:44.469Z",
+              "WhenOpened": "2024-12-03T21:47:16.038Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Mario.cs",
-              "DocumentMoniker": "C:\\Projects\\Players\\Mario\\Mario.cs",
-              "RelativeDocumentMoniker": "Players\\Mario\\Mario.cs",
-              "ToolTip": "C:\\Projects\\Players\\Mario\\Mario.cs*",
-              "RelativeToolTip": "Players\\Mario\\Mario.cs*",
-              "ViewState": "AgIAAOEAAAAAAAAAAAAIwPkAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T19:32:11.744Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PlayerStateMachine.cs",
-              "DocumentMoniker": "C:\\Projects\\Players\\Mario\\PlayerStateMachine.cs",
-              "RelativeDocumentMoniker": "Players\\Mario\\PlayerStateMachine.cs",
-              "ToolTip": "C:\\Projects\\Players\\Mario\\PlayerStateMachine.cs",
-              "RelativeToolTip": "Players\\Mario\\PlayerStateMachine.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T19:43:09.429Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MarioSpriteMachine.cs",
-              "DocumentMoniker": "C:\\Projects\\Players\\Mario\\MarioSpriteMachine.cs",
-              "RelativeDocumentMoniker": "Players\\Mario\\MarioSpriteMachine.cs",
-              "ToolTip": "C:\\Projects\\Players\\Mario\\MarioSpriteMachine.cs",
-              "RelativeToolTip": "Players\\Mario\\MarioSpriteMachine.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAQwBAAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T19:43:01.213Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "LevelOne.cs",
               "DocumentMoniker": "C:\\Projects\\Levels\\LevelOne.cs",
               "RelativeDocumentMoniker": "Levels\\LevelOne.cs",
-              "ToolTip": "C:\\Projects\\Levels\\LevelOne.cs",
-              "RelativeToolTip": "Levels\\LevelOne.cs",
-              "ViewState": "AgIAAMkAAAAAAAAAAAAqwNcAAAAbAAAAAAAAAA==",
+              "ToolTip": "C:\\Projects\\Levels\\LevelOne.cs*",
+              "RelativeToolTip": "Levels\\LevelOne.cs*",
+              "ViewState": "AgIAANUAAAAAAAAAAIAywOIAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-27T17:31:38.596Z",
               "EditorCaption": ""

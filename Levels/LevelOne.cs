@@ -104,7 +104,7 @@ public class LevelOne : ILevel
         AddEntitiesToGame();
 
         // Set player swimming states
-        mario.SetSwimmingLevel(false);
+        mario.SetSwimmingLevel(true);
         luigi.SetSwimmingLevel(false);
 
         // Load level layers
@@ -224,7 +224,7 @@ public class LevelOne : ILevel
 
     public void UpdateLevel(GameTime gameTime)
     {
-        mario.SetSwimmingLevel(false);
+        mario.SetSwimmingLevel(true);
         if (gameStateMachine.isMultiplayer())
         {
             mario.SetIsOnGround(false);
