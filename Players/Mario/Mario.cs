@@ -58,6 +58,7 @@ public class Mario : IPlayer
         this.textureManager = textureManager;
         this.marioTexture = textureManager.GetTexture("Mario");
         this.itemTexture = textureManager.GetTexture("Items");
+
         this.marioPosition = new Vector2(200, groundPosition);
         this.initialPosition = new Vector2(200, groundPosition);
         this.playerStateMachine = new PlayerStateMachine();
@@ -66,13 +67,13 @@ public class Mario : IPlayer
         this.fireballTimer = 0;
         this.starTimer = 0;
         this.marioDeathBounceIncrement = 15;
+
         this.currentMarioSprite = new IdleRightSmallMario(marioTexture);
         this.game = game;
         this._entities = entities;
 
         this.gsm = gsm;
         this.luigi = luigi;
-        this.SetMapBounds();
 
         /*
          * SFX loaded in specific order:
@@ -86,21 +87,6 @@ public class Mario : IPlayer
         this._sfx = sfx;
     }
 
-    private void SetMapBounds()
-    {
-        if (gsm.isLevelOne())
-        {
-            this.minPos = new Vector2(0, groundPosition);
-            this.maxPos = new Vector2(211 * 32, groundPosition);
-        }
-        else if (gsm.isLevelTwo())
-        {
-            this.minPos = new Vector2(0, groundPosition);
-            this.maxPos = new Vector2(192 * 32, groundPosition);
-        }
-    }
-   
-    
     public void MoveRight()
     {
         if (playerStateMachine.IsDead()) return;
@@ -367,7 +353,6 @@ public class Mario : IPlayer
 
     public void Update(GameTime gameTime)
     {
-        marioPosition = Vector2.Clamp(marioPosition, minPos, maxPos);
         ApplyGravity(gameTime);
         marioPosition.X += marioVelocity.X;
         this.SlowStopMario();
