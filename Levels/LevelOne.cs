@@ -85,29 +85,14 @@ public class LevelOne : ILevel
 
     public void InitializeLevel()
     {
-        // Initialize Flag
         flag = new Flag(new Vector2(6335, 354), overworldTiles, danceTexture, spriteBatch);
-
-        // Initialize Enemies
         InitializeEnemies();
-
-        // Initialize Lucky Blocks
         InitializeLuckyBlocks();
-
-        // Initialize Brick Blocks
         InitializeBrickBlocks();
-
-        // Initialize Obstacles
         InitializeObstacles();
-
-        // Add entities to game
         AddEntitiesToGame();
-
-        // Set player swimming states
         mario.SetSwimmingLevel(true);
         luigi.SetSwimmingLevel(false);
-
-        // Load level layers
         LoadLevelLayers();
     }
 
@@ -200,15 +185,9 @@ public class LevelOne : ILevel
         entities.Add(obstacle6);
         entities.Add(flag);
 
-        if (gameStateMachine.isMultiplayer())
-        {
-            entities.Add(mario);
-            entities.Add(luigi);
-        }
-        else if (gameStateMachine.isSingleplayer())
-        {
-            entities.Add(mario);
-        }
+        entities.Add(mario);
+        entities.Add(luigi);
+
     }
 
     private void LoadLevelLayers()
@@ -224,7 +203,9 @@ public class LevelOne : ILevel
 
     public void UpdateLevel(GameTime gameTime)
     {
-        mario.SetSwimmingLevel(true);
+        mario.SetSwimmingLevel(false);
+        luigi.SetSwimmingLevel(false);
+
         if (gameStateMachine.isMultiplayer())
         {
             mario.SetIsOnGround(false);
@@ -238,25 +219,21 @@ public class LevelOne : ILevel
             mario.Update(gameTime);
         }
 
-        // Update Enemies
         for (int i = 0; i < Enemy.Count; i++)
         {
             Enemy[i].Updates();
         }
 
-        // Update Lucky Blocks
         for (int i = 0; i < LuckyBlocks.Count; i++)
         {
             LuckyBlocks[i].Update(gameTime);
         }
 
-        // Update Brick Blocks
         for (int i = 0; i < BrickBlocks.Count; i++)
         {
             BrickBlocks[i].Update(gameTime);
         }
 
-        // Update Obstacles
         obstacle1.Update();
         obstacle2.Update();
         obstacle3.Update();
@@ -266,15 +243,11 @@ public class LevelOne : ILevel
 
     public void DrawLevel(SpriteBatch spriteBatch)
     {
-        // Draw level layers
         lvl1backdrop.Draw(spriteBatch, overworldTiles, Vector2.Zero);
         lvl1greenery.Draw(spriteBatch, overworldTiles, Vector2.Zero);
         lvl1foreground.Draw(spriteBatch, overworldTiles, Vector2.Zero);
 
-        // Draw flag
         flag.Draw();
-
-        // Draw players
         if (gameStateMachine.isMultiplayer())
         {
             luigi.Draw(spriteBatch);
@@ -285,28 +258,21 @@ public class LevelOne : ILevel
             mario.Draw(spriteBatch);
         }
 
-        // Draw Enemies
         for (int i = 0; i < Enemy.Count; i++)
         {
             Enemy[i].Draw(spriteBatch, EnemyTexture);
         }
 
-        // Draw Lucky Blocks
         for (int i = 0; i < LuckyBlocks.Count; i++)
         {
             LuckyBlocks[i].Draw(spriteBatch, new Vector2(69, 69));
         }
 
-        // Draw Brick Blocks with original positioning
         DrawBrickBlocks(spriteBatch);
-
-        // Draw Obstacles
         obstacle1.Draw(spriteBatch, new Vector2(350, 370));
         obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
         obstacle3.Draw(spriteBatch, new Vector2(350 + 350, 335));
         obstacle6.Draw(spriteBatch, new Vector2(5740, 370));
-
-        // Draw box
         //spriteBatch.Draw(box, flag.GetDestination(), Color.White);
     }
 

@@ -23,7 +23,7 @@ public class Luigi : IPlayer
     private Vector2 initialPosition;
     public Vector2 luigiPosition;
     private Vector2 luigiVelocity;
-    private float groundPosition = 200f;
+    private float groundPosition = 385f;
     private float swimmingMaxHeight = 10f;
     private float gravity = 980f;
     private float jumpSpeed = -570f;

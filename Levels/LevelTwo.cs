@@ -32,7 +32,7 @@ public class LevelTwo : ILevel
     private Texture2D overworldTiles;
     private Texture2D underwaterTiles;
 
-    public Point mapSize = new(192* 32, 30 * 32);
+    public Point mapSize = new(192 * 32, 30 * 32);
     private Layer lvl2backdrop1;
     private Layer lvl2backdrop2;
     private Layer lvl2greenery;
@@ -60,7 +60,6 @@ public class LevelTwo : ILevel
         this.EnemyTexture = textureManager.GetTexture("Enemy");
         this.blockTexture = textureManager.GetTexture("Block");
         this.ItemsTexture = textureManager.GetTexture("Items");
-        this.obstacleTexture = textureManager.GetTexture("Obstacle");
         this.overworldTiles = textureManager.GetTexture("OverworldTiles");
         this.underwaterTiles = textureManager.GetTexture("UnderwaterTiles");
 
@@ -72,24 +71,17 @@ public class LevelTwo : ILevel
         this.game = game;
         this.entitiesRemoved = entitiesRemoved;
         this.Content = Content;
-    }
 
+    }
 
     public void InitializeLevel()
     {
-        if (gameStateMachine.isMultiplayer())
-        {
-            entities.Add(mario);
-            entities.Add(luigi);
-        }
-        else if (gameStateMachine.isSingleplayer())
-        {
-            entities.Add(mario);
-        }
+        entities.Add(mario);
+        entities.Add(luigi);
 
         lvl2backdrop1 = new Layer(32, 16, 16, Content.RootDirectory + "/level2_OWBackdrop.csv");
         lvl2backdrop2 = new Layer(32, 16, 16, Content.RootDirectory + "/level2_UWBackdrop.csv");
-        lvl2greenery = new Layer(32, 16, 16, Content.RootDirectory + "/level2_OWGreenery.csv"); 
+        lvl2greenery = new Layer(32, 16, 16, Content.RootDirectory + "/level2_OWGreenery.csv");
         lvl2foreground1 = new Layer(32, 16, 16, Content.RootDirectory + "/level2_OWForeground.csv");
         lvl2foreground2 = new Layer(32, 16, 16, Content.RootDirectory + "//level2_UWForeground.csv");
 
@@ -99,9 +91,11 @@ public class LevelTwo : ILevel
         lvl2foreground1.LoadLayer();
         lvl2foreground2.LoadLayer();
     }
+
     public void UpdateLevel(GameTime gameTime)
     {
         mario.SetSwimmingLevel(true);
+        luigi.SetSwimmingLevel(true);
 
         if (gameStateMachine.isMultiplayer())
         {
@@ -115,7 +109,6 @@ public class LevelTwo : ILevel
             mario.SetIsOnGround(false);
             mario.Update(gameTime); ;
         }
-
     }
 
     public void DrawLevel(SpriteBatch sB)
