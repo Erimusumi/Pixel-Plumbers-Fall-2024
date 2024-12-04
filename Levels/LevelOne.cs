@@ -43,7 +43,6 @@ public class LevelOne : ILevel
     
     private IBlock OWBrokenBrickSprite;
 
-    private CoinInstance coin1;
 
     private IObstacle obstacle1;
     private IObstacle obstacle2;
@@ -90,7 +89,7 @@ public class LevelOne : ILevel
     public void InitializeLevel()
     {
         flag = new Flag(new Vector2(6335, 354), overworldTiles, danceTexture, spriteBatch);
-        coin1 = new CoinInstance(ItemsTexture, new Vector2(340,290));
+
         InitializeEnemies();
         InitializeLuckyBlocks();
         InitializeBrickBlocks();
@@ -244,7 +243,7 @@ public class LevelOne : ILevel
         obstacle3.Update();
         obstacle6.Update();
         flag.Update();
-        coin1.Update(gameTime);
+
     }
 
     public void DrawLevel(SpriteBatch spriteBatch)
@@ -254,7 +253,7 @@ public class LevelOne : ILevel
         lvl1foreground.Draw(spriteBatch, overworldTiles, Vector2.Zero);
 
         flag.Draw();
-        coin1.Draw(spriteBatch, new Vector2(340, 290));
+
         if (gameStateMachine.isMultiplayer())
         {
             luigi.Draw(spriteBatch);
