@@ -9,9 +9,9 @@ public class CoinInstance : ISprite
     private int currentFrame;
     private int lastFrame;
     private int ticks;
-    //private Vector2 position;
+    private Vector2 position;
 
-    public CoinInstance(Texture2D ItemTexture)
+    public CoinInstance(Texture2D ItemTexture, Vector2 position)
     {
         this.ItemTexture = ItemTexture;
 
@@ -31,17 +31,23 @@ public class CoinInstance : ISprite
 
         currentFrame = 0;
         lastFrame = 4;
+        ticks = 0;
+        this.position = position;
     }
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
         Rectangle sourceRectangle = frames[currentFrame];
-        spriteBatch.Draw(ItemTexture, position, sourceRectangle, Color.White);
+        Rectangle destinationRectangle = new Rectangle((int)position.X + frames[currentFrame].Width/2, (int)position.Y, frames[currentFrame].Width*2, frames[currentFrame].Height * 2);
+        spriteBatch.Draw(ItemTexture, destinationRectangle, sourceRectangle, Color.White);
+        
+        
 
     }
 
     public void Update(GameTime gametime)
     {
-        if (ticks > 8)
+        position.Y--;
+        if (ticks > 5)
         {
             ticks = 0;
             if (currentFrame >= lastFrame)
@@ -55,7 +61,7 @@ public class CoinInstance : ISprite
         }
         ticks++;
     }
-    public Rectangle GetDestination(Vector2 position)
+    public Rectangle GetDestination()
     {
         return new Rectangle((int)position.X, (int)position.Y, frameWidths[currentFrame], 15);
     }

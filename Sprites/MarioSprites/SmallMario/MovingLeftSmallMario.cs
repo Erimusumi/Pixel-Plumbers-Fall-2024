@@ -24,8 +24,8 @@ public class MovingLeftSmallMario : ICharacter
 
         FrameRectangles = new Rectangle[3];
         FrameRectangles[0] = new Rectangle(150, 0, 14, 15); // Frame 1
-        FrameRectangles[1] = new Rectangle(121, 0, 14, 15); // Frame 2
-        FrameRectangles[2] = new Rectangle(89, 0, 14, 15);  // Frame 3
+        FrameRectangles[1] = new Rectangle(121, 0, 12, 16); // Frame 2
+        FrameRectangles[2] = new Rectangle(89, 0, 16, 16);  // Frame 3
 
         previousAnimationIndex = 2;
         currentAnimationIndex = 1;
@@ -72,9 +72,9 @@ public class MovingLeftSmallMario : ICharacter
         switch (currentAnimationIndex)
         {
             case 0: return new Rectangle((int)position.X, (int)position.Y, 14 * (int)scale, 15 * (int)scale);
-            case 1: return new Rectangle((int)position.X, (int)position.Y, 14 * (int)scale, 15 * (int)scale);
+            case 1: return new Rectangle((int)position.X, (int)position.Y, 12 * (int)scale, 16 * (int)scale);
             case 2:
-            default: return new Rectangle((int)position.X, (int)position.Y, 14 * (int)scale, 15 * (int)scale);
+            default: return new Rectangle((int)position.X, (int)position.Y, 16 * (int)scale, 16 * (int)scale);
         }
 
     }

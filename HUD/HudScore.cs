@@ -15,15 +15,21 @@ public class HudScore : IHudElement
     private Vector2 screenPos;
     private int numScore;
     private SpriteFont _font;
+    private const int maxScoreAmt = 10000;
     public HudScore(int startScore, SpriteFont font, Game1 game, Mario mario)
     {
         numScore = startScore;
         this._font = font;
     }
 
-    public void AddScore(int scoreAmt)
+    public bool AddScore(int scoreAmt)
     {
+        if (scoreAmt > maxScoreAmt)
+        {
+            return true;
+        }
         numScore += scoreAmt;
+        return false;
     }
 
     public int GetScore()

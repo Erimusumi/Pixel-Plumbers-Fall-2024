@@ -23,8 +23,8 @@ public class MovingRightSmallMario : ICharacter
 
         FrameRectangles = new Rectangle[3];
         FrameRectangles[0] = new Rectangle(241, 0, 14, 15); // Frame 1
-        FrameRectangles[1] = new Rectangle(272, 0, 14, 15); // Frame 2
-        FrameRectangles[2] = new Rectangle(300, 0, 14, 15);  // Frame 3
+        FrameRectangles[1] = new Rectangle(272, 0, 12, 16); // Frame 2
+        FrameRectangles[2] = new Rectangle(300, 0, 16, 16);  // Frame 3
 
         previousAnimationIndex = 2;
         currentAnimationIndex = 1;

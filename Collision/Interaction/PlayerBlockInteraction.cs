@@ -45,10 +45,11 @@ public class PlayerBlockInteraction
             // Collision from the bottom (player jumps into the obstacle)
             player.SetPositionY(blockRect.Bottom);
             player.SetVelocityY(0); // Prevent player from going higher
+            
 
             if (block is LuckyBlockSprite luckyBlock)
             {
-                luckyBlock.bump = true;
+                luckyBlock.bumping = true;
 
             }
 

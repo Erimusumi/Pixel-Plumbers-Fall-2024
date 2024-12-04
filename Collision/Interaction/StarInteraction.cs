@@ -25,7 +25,8 @@ public class MarioStarInteraction
         star.collect();
         player.CollectStar();
         removeFromList();
-         
+
+        player.AddScore(100);
         
     }
     private void removeFromList()
