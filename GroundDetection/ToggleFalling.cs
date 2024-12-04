@@ -82,24 +82,48 @@ public class ToggleFalling
     }
 
 
-    public void updateEnemyFalling(List<IEntity> enemies)
+public void updateEnemyFalling(List<IEntity> enemies)
+{
+    for (int i = 0; i < enemies.Count; i++)
     {
-        ISpriteEnemy currentEnemy;
-        for (int i = 0; i < enemies.Count; i++)
+        ISpriteEnemy currentEnemy = (ISpriteEnemy)enemies[i];
+        Rectangle enemyBounds = currentEnemy.GetDestination();
+        bool enemyColliding = false;
+
+        for (int j = 0; j < collisionRects.Count; j++)
         {
-            //Boolean enemyColliding = true;
-            currentEnemy = (ISpriteEnemy)enemies[i];
+            Rectangle blockBounds = collisionRects[j];
+            if (enemyBounds.Intersects(blockBounds))
             {
-                for (int j = 0; j < collisionRects.Count; j++)
+                enemyColliding = true;
+                if (enemyBounds.Bottom > blockBounds.Top &&
+                    enemyBounds.Top < blockBounds.Top &&
+                    enemyBounds.Right > blockBounds.Left &&
+                    enemyBounds.Left < blockBounds.Right)
                 {
-                    if (!currentEnemy.GetDestination().Intersects(collisionRects[j]) && currentEnemy.GetDestination().Intersects(new Rectangle(currentEnemy.GetDestination().X, 385, 16, 16)))
-                    {
-                        currentEnemy.setGroundPosition(480);
-                    }
+                    currentEnemy.setGroundPosition(blockBounds.Top);
                 }
+                else if (enemyBounds.Right > blockBounds.Left &&
+                         enemyBounds.Left < blockBounds.Left)
+                {
+                    currentEnemy.changeDirection();
+                }
+                else if (enemyBounds.Left < blockBounds.Right &&
+                         enemyBounds.Right > blockBounds.Right)
+                {
+                    currentEnemy.changeDirection();
+                }
+
+                break;
             }
         }
+        if (!enemyColliding)
+        {
+            // Make it fall when that functionality is added.
+        }
     }
+}
+
 
     public void updateItemFalling(List<IEntity> items)
     {
