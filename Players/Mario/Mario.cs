@@ -519,7 +519,8 @@ public class Mario : IPlayer
 
     public void ResetScoreMult()
     {
-        if (isOnGround && !this.HasStar())
+        
+        if (isOnGround && !this.playerStateMachine.HasStar())
         {
             scoreMult = 1;
         }
