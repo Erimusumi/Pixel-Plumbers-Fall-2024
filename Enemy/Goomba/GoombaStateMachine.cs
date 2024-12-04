@@ -11,12 +11,14 @@ public class GoombaStateMachine
 	private GoombaState _currentState = GoombaState.Start;
 	private GoombaSprites _sprite;
 	private Boolean _isFlipped = true;
-	private IPlayer player;
+	private IPlayer mario;
+    private IPlayer luigi;
 
-    public GoombaStateMachine(int posX, int posY, IPlayer player)
+    public GoombaStateMachine(int posX, int posY, IPlayer mario, IPlayer luigi)
 	{
 		_sprite = new GoombaSprites(posX, posY);
-		this.player = player;
+		this.mario = mario;
+		this.luigi = luigi;
 	}
 
     public Boolean IsFlipped()
@@ -55,9 +57,14 @@ public class GoombaStateMachine
 
     public void Update()
 	{
-		Rectangle pHold = player.GetDestination();
-		Rectangle goombaRec = _sprite.GetDestination();
-        if (((goombaRec.X - pHold.X) > 0) && ((goombaRec.X - pHold.X) < 400) && (_currentState == GoombaState.Start)){
+		Rectangle mHold = mario.GetDestination();
+        Rectangle lHold = mario.GetDestination();
+        Rectangle goombaRec = _sprite.GetDestination();
+        if (((goombaRec.X - mHold.X) > 0) && ((goombaRec.X - mHold.X) < 400) && (_currentState == GoombaState.Start)){
+            _currentState = GoombaState.Left;
+        }
+        if (((goombaRec.X - lHold.X) > 0) && ((goombaRec.X - lHold.X) < 400) && (_currentState == GoombaState.Start))
+        {
             _currentState = GoombaState.Left;
         }
         _sprite.ApplyGravity();

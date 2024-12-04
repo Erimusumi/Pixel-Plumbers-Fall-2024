@@ -8,16 +8,19 @@ using Pixel_Plumbers_Fall_2024;
 
 public class KoopaStateMachine
 {
-	private enum KoopaState {Left, Right, StompedLeft, StompedRight, StompedTwiceLeft, StompedTwiceRight, Flipped};
-	private KoopaState _currentState = KoopaState.Flipped;
+	private enum KoopaState {Left, Right, StompedLeft, StompedRight, StompedTwiceLeft, StompedTwiceRight, Flipped, Start};
+	private KoopaState _currentState = KoopaState.Start;
     private int done;
     private KoopaSprites _sprite;
 	private Boolean _isMovingShell = false;
-
-	public KoopaStateMachine(int posX, int posY)
+    private IPlayer mario;
+	private IPlayer luigi;
+    public KoopaStateMachine(int posX, int posY, IPlayer mario, IPlayer luigi)
 	{
 		_sprite = new KoopaSprites(posX, posY);
-	}
+        this.mario = mario;
+		this.luigi = luigi;
+    }
 	public Boolean IsMovingShell()
 	{
 		return _isMovingShell;
@@ -83,6 +86,19 @@ public class KoopaStateMachine
 	}
     public void Update()
 	{
+        Rectangle mHold = mario.GetDestination();
+        Rectangle lHold = luigi.GetDestination();
+        Rectangle koopaRec = _sprite.GetDestination();
+        if (((koopaRec.X - mHold.X) > 0) && ((koopaRec.X - mHold.X) < 400) && (_currentState == KoopaState.Start))
+        {
+            _currentState = KoopaState.Left;
+        }
+        if (((koopaRec.X - lHold.X) > 0) && ((koopaRec.X - lHold.X) < 400) && (_currentState == KoopaState.Start))
+        {
+            _currentState = KoopaState.Left;
+        }
+        _sprite.ApplyGravity();
+
         switch (_currentState)
 		{
             case KoopaState.Left:

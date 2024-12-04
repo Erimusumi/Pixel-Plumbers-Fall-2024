@@ -19,6 +19,8 @@ public class KoopaSprites
     public float rotation = 0f;
     public int posY = 0;
     public int position = 0;
+    private bool isOnGround = false;
+    private float groundPosition = 385f;
     public KoopaSprites(int _posX, int _posY)
     {
         position = _posX;
@@ -131,6 +133,25 @@ public class KoopaSprites
             }
         }
         destinationRectangle = new Rectangle(position, posY, width * scaleUp, 15 * scaleUp);
+    }
+    public void ApplyGravity()
+    {
+        if (!isOnGround)
+        {
+            if (counter % 10 == 0)
+            {
+                counter2++;
+            }
+            posY += counter2;
+
+            if (posY >= groundPosition)
+            {
+                posY = (int)groundPosition;
+                counter2 = 0;
+                isOnGround = true;
+            }
+            destinationRectangle = new Rectangle(position, posY, width * scaleUp, 15 * scaleUp);
+        }
     }
     public void FlippedLogic()
 	{
