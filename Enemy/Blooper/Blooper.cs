@@ -8,9 +8,9 @@ using Pixel_Plumbers_Fall_2024;
 public class Blooper : ISpriteEnemy
 {
     private BlooperStateMachine stateMachine;
-    public Blooper(int posX, int posY, Mario mario)
+    public Blooper(int posX, int posY, IPlayer mario, IPlayer luigi)
     {
-        stateMachine = new BlooperStateMachine(posX, posY, mario);
+        stateMachine = new BlooperStateMachine(posX, posY, mario, luigi);
     }
     public Boolean IsFlipped()
     {

@@ -10,9 +10,9 @@ public class Koopa : ISpriteEnemy
 {
     private KoopaStateMachine stateMachine;
 	private float groundPosition = 385f;
-	public Koopa(int posX, int posY)
+	public Koopa(int posX, int posY, IPlayer mario, IPlayer luigi)
 	{
-		stateMachine = new KoopaStateMachine(posX, posY);
+		stateMachine = new KoopaStateMachine(posX, posY, mario, luigi);
 	}
 
 	public Boolean IsMovingShell()

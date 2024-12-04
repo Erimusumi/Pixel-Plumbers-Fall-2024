@@ -80,7 +80,6 @@ public class GoombaSprites
     }
     public void ApplyGravity()
     {
-        //if (playerStateMachine.IsDead()) return;
         if (!isOnGround)
         {
             if (counter % 10 == 0)
