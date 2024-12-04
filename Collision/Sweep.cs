@@ -278,12 +278,12 @@ public class Sweep
             Boolean luckyBlock = true;
             if (item2.GetType() == typeof(LuckyBlockSprite))
             {
-                MarioBlockInteraction = new PlayerBlockInteraction((IPlayer)item1, (IBlock)item2, luckyBlock);
+                MarioBlockInteraction = new PlayerBlockInteraction((IPlayer)item1, (IBlock)item2, entitiesRemoved, luckyBlock);
             }
             else
             {
                 luckyBlock = false;
-                MarioBlockInteraction = new PlayerBlockInteraction((IPlayer)item1, (IBlock)item2, luckyBlock);
+                MarioBlockInteraction = new PlayerBlockInteraction((IPlayer)item1, (IBlock)item2, entitiesRemoved, luckyBlock);
             }
             MarioBlockInteraction.update();
 
@@ -294,12 +294,12 @@ public class Sweep
             Boolean luckyBlock = true;
             if (item1.GetType() == typeof(LuckyBlockSprite))
             {
-                MarioBlockInteraction = new PlayerBlockInteraction((IPlayer)item2, (IBlock)item1, luckyBlock);
+                MarioBlockInteraction = new PlayerBlockInteraction((IPlayer)item2, (IBlock)item1, entitiesRemoved, luckyBlock);
             }
             else
             {
                 luckyBlock = false;
-                MarioBlockInteraction = new PlayerBlockInteraction((IPlayer)item2, (IBlock)item1, luckyBlock);
+                MarioBlockInteraction = new PlayerBlockInteraction((IPlayer)item2, (IBlock)item1, entitiesRemoved, luckyBlock);
             }
             MarioBlockInteraction.update();
 

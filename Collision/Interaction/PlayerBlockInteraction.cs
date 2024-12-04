@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Security.Cryptography.X509Certificates;
 
@@ -10,13 +11,15 @@ public class PlayerBlockInteraction
     private Rectangle playerRect;
     private Rectangle blockRect;
     public Boolean isLuckyBlock;
+    private List<IEntity> entitiesRemoved;
 
-    public PlayerBlockInteraction(IPlayer player, IBlock block, Boolean isLuckyBlock)
+    public PlayerBlockInteraction(IPlayer player, IBlock block, List<IEntity> entitiesRemoved, Boolean isLuckyBlock)
     {
         this.player = player;
         this.block = block;
         playerRect = player.GetDestination();
         blockRect = block.GetDestination();
+        this.entitiesRemoved = entitiesRemoved;
         this.isLuckyBlock = isLuckyBlock;
     }
 
@@ -45,6 +48,12 @@ public class PlayerBlockInteraction
             {
                 block.broke();
             }
+            if (!isLuckyBlock && !player.GetStateMachine().IsSmall())
+            {
+                removeFromList();
+                BrokenBrickSprite brokenBlock = (BrokenBrickSprite)block;
+                brokenBlock.StopDrawing(true);
+            }
         }
         else if (minOverlap == overlapLeft)
         {
@@ -57,14 +66,8 @@ public class PlayerBlockInteraction
             player.SetVelocityX(0); 
         }
     }
-
-    private void StopPlayerHorizontalMovement()
+    private void removeFromList()
     {
-        player.SetVelocityX(0);
-    }
-
-    private void StopPlayerVerticalMovement()
-    {
-        player.SetVelocityY(0);
+        entitiesRemoved.Add(block);
     }
 }
