@@ -29,8 +29,8 @@ public class StartScreenSprite : ISprite
         Vector2 helpTextSize = MyFont.MeasureString(helpText) * scale;
 
         player1Position = new Vector2((ScreenWidth - player1TextSize.X) / 2, 250);
-        player2Position = new Vector2((ScreenWidth - player2TextSize.X) / 2, 320);
-        helpPosition = new Vector2((ScreenWidth - helpTextSize.X) / 2, 390);
+        player2Position = new Vector2((ScreenWidth - player2TextSize.X) / 2, 300);
+        helpPosition = new Vector2((ScreenWidth - helpTextSize.X) / 2, 350);
     }
 
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
@@ -38,8 +38,8 @@ public class StartScreenSprite : ISprite
         spriteBatch.Draw(startScreenTexture, new Vector2(220, 60), sourceRectangle, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
 
         spriteBatch.DrawString(MyFont, "SINGLEPLAYER", new Vector2(240, 250), Color.White);
-        spriteBatch.DrawString(MyFont, "MULTIPLAYER", new Vector2(260, 320), Color.White);
-        spriteBatch.DrawString(MyFont, "HELP", new Vector2(360, 390), Color.White);
+        spriteBatch.DrawString(MyFont, "MULTIPLAYER", new Vector2(260, 300), Color.White);
+        spriteBatch.DrawString(MyFont, "HELP", new Vector2(360, 350), Color.White);
     }
 
     public Rectangle GetOnePlayerRectangle()
