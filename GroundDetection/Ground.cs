@@ -11,12 +11,10 @@ using Microsoft.Xna.Framework;
 
 public class Ground
 {
-   // private List<Rectangle> emptyRectangles;
     private List<Rectangle> collisionRectangles;
 
     public Ground(List<Rectangle> collisionRects)
     {
-        //this.emptyRectangles = emptyRects;
         this.collisionRectangles = collisionRects;
     }
 

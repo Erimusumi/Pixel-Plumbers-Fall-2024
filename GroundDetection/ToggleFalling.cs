@@ -100,40 +100,52 @@ public class ToggleFalling
             }
         }
     }
-    public void updateItemFalling(List<IEntity> item)
-    {
-        Boolean itemColliding = true;
-        int hitCount = 0;
 
+    public void updateItemFalling(List<IEntity> items)
+    {
         for (int j = 0; j < items.Count; j++)
         {
-            IItem x = (IItem)item[j];
+            IItem item = (IItem)items[j];
+            Rectangle itemBounds = item.GetDestination();
+            bool itemColliding = false;
             for (int i = 0; i < collisionRects.Count; i++)
             {
-                if (x.GetDestination().Intersects(collisionRects[i]))
+                Rectangle blockBounds = collisionRects[i];
+                if (itemBounds.Intersects(blockBounds))
                 {
-                    x.setGroundPosition(385);
                     itemColliding = true;
-                    hitCount++;
-
+                    if (itemBounds.Bottom > blockBounds.Top &&
+                        itemBounds.Top < blockBounds.Top &&
+                        itemBounds.Right > blockBounds.Left &&
+                        itemBounds.Left < blockBounds.Right)
+                    {
+                        item.setGroundPosition(blockBounds.Top - 32);
+                    }
+                    else if (itemBounds.Right > blockBounds.Left &&
+                             itemBounds.Left < blockBounds.Left)
+                    {
+                        item.swapDirection();
+                    }
+                    else if (itemBounds.Left < blockBounds.Right &&
+                             itemBounds.Right > blockBounds.Right)
+                    {
+                        item.swapDirection();
+                    }
                     break;
                 }
             }
 
-            if (hitCount == 0)
+            if (!itemColliding)
             {
-                itemColliding = false;
-            }
-            if (!itemColliding && x.GetDestination().Intersects(new Rectangle(x.GetDestination().X, 385, 16, 16)))
-            {
-
-                x.setGroundPosition(480);
+                if (itemBounds.Intersects(new Rectangle(itemBounds.X, 385, 16, 16)))
+                {
+                    item.setGroundPosition(480);
+                }
             }
         }
-        hitCount = 0;
-
-
     }
+
+
 
     public void updateMarioFalling(Mario mar)
     {
