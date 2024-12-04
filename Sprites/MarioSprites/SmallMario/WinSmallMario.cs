@@ -17,7 +17,7 @@ public class WinSmallMario : ICharacter
         this.MarioTexture = MarioTexture;
 
         AnimationTimer = 0;
-        AnimationSpeed = 200;
+        AnimationSpeed = 10;
 
         FrameRectangles = new Rectangle[2];
         FrameRectangles[0] = new Rectangle(331, 30, 13, 15); // Frame 1
