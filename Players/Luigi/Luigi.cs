@@ -53,7 +53,8 @@ public class Luigi : IPlayer
 
     private int scoreMult;
     private const int maxScoreMult = 16;
-    public Luigi(Game1 game, List<IEntity> entities, List<SoundEffect> sfx, TextureManager textureManager, GameTime gametime, GameStateMachine gsm, Mario mario)
+    private SpriteFont scoreFont;
+    public Luigi(Game1 game, List<IEntity> entities, List<SoundEffect> sfx, TextureManager textureManager, GameTime gametime, GameStateMachine gsm, Mario mario, ref SpriteFont font)
     {
         this.textureManager = textureManager;
         this.luigiTexture = textureManager.GetTexture("Luigi");
@@ -87,6 +88,7 @@ public class Luigi : IPlayer
         this.mario = mario;
 
         this.scoreMult = 1;
+        this.scoreFont = font;
     }
 
     public void MoveRight()
@@ -357,7 +359,7 @@ public class Luigi : IPlayer
         if (playerStateMachine.IsFire())
         {
             _sfx[2].Play();
-            Fireball f = new Fireball(luigiPosition, itemTexture, gameTime, playerStateMachine.CurrentFaceState, game, _entities);
+            Fireball f = new Fireball(luigiPosition, itemTexture, gameTime, playerStateMachine.CurrentFaceState, game, _entities, this);
             game.fireballs.Add(f);
             fireballTimer = 20;
         }
@@ -530,5 +532,6 @@ public class Luigi : IPlayer
     public void AddScore(int scoreAmt)
     {
         game.hudManager.AddScore(scoreAmt * this.scoreMult);
+        //game.scorePopups.Add(new ScorePopup(luigiPosition, scoreFont, this.game, game.scorePopups, this, scoreAmt * this.scoreMult));
     }
 }
