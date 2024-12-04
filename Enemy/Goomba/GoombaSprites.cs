@@ -31,6 +31,11 @@ public class GoombaSprites
 
     private float rotation = 0f;
 
+    public bool IsOnGround()
+    {
+        return isOnGround;
+    }
+
     public void LeftLogic()
 	{
         counter++;
@@ -88,12 +93,12 @@ public class GoombaSprites
             }
             posY += counter2;
             
-            if (posY >= groundPosition)
-            {
-                posY = (int)groundPosition;
-                counter2 = 0;
-                isOnGround = true;
-            }
+            //if (posY >= groundPosition)
+            //{
+            //    posY = (int)groundPosition;
+            //    counter2 = 0;
+            //    isOnGround = true;
+            //}
             
             destinationRectangle = new Rectangle(position, posY, size * scaleUp, size * scaleUp);
         }
