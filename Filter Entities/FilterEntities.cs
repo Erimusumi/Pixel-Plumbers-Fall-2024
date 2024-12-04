@@ -33,7 +33,7 @@ using System.Threading.Tasks;
         for (int i = 0; i < entities.Count; i++)
         {
             Type currentEntityType = entities[i].GetType();
-            if (currentEntityType == typeof(Goomba) || currentEntityType == typeof(Koopa) || currentEntityType == typeof(Goomba2))
+            if (currentEntityType == typeof(Goomba) || currentEntityType == typeof(Koopa))
             {
                 enemyList.Add(entities[i]);
             }

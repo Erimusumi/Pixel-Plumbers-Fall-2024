@@ -33,8 +33,15 @@ public class Koopa : ISpriteEnemy
 	{
 		stateMachine.beFlipped();
 	}
-
-	public void Updates()
+    public bool GetIsOnGround()
+    {
+        return stateMachine.GetIsOnGround();
+    }
+    public void SetIsOnGround(bool val)
+    {
+        stateMachine.SetIsOnGround(val);
+    }
+    public void Updates()
 	{
 		stateMachine.Update();
 	}

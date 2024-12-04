@@ -31,7 +31,7 @@ public class Goomba : ISpriteEnemy
 		stateMachine.beFlipped();
 	}
 
-	public void Updates()
+    public void Updates()
 	{
 		stateMachine.Update();
 	}
@@ -40,6 +40,14 @@ public class Goomba : ISpriteEnemy
 	{
 		return stateMachine.GetDestination();
 	}
+    public bool GetIsOnGround()
+    {
+        return stateMachine.GetIsOnGround();
+    }
+    public void SetIsOnGround(bool val)
+    {
+        stateMachine.SetIsOnGround(val);
+    }
 
     public void Draw(SpriteBatch sb, Texture2D Texture)
 	{

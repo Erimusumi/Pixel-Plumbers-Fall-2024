@@ -84,6 +84,14 @@ public class KoopaStateMachine
 			_currentState = KoopaState.Flipped;
 		}
 	}
+    public bool GetIsOnGround()
+    {
+        return _sprite.GetIsOnGround();
+    }
+    public void SetIsOnGround(bool val)
+    {
+        _sprite.SetIsOnGround(val);
+    }
     public void Update()
 	{
         Rectangle mHold = mario.GetDestination();
@@ -96,6 +104,10 @@ public class KoopaStateMachine
         if (((koopaRec.X - lHold.X) > 0) && ((koopaRec.X - lHold.X) < 400) && (_currentState == KoopaState.Start))
         {
             _currentState = KoopaState.Left;
+        }
+        if (_currentState != KoopaState.Start)
+        {
+            SetIsOnGround(false);
         }
         _sprite.ApplyGravity();
 

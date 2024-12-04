@@ -39,7 +39,14 @@ public class Blooper : ISpriteEnemy
     {
         return stateMachine.GetDestination();
     }
-
+    //Needed in level one enemies
+    public bool GetIsOnGround()
+    {
+        return true;
+    }
+    public void SetIsOnGround(bool val)
+    {
+    }
     public void Draw(SpriteBatch sb, Texture2D Texture)
     {
         stateMachine.Draw(sb, Texture);

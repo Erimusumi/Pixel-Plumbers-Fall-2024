@@ -26,6 +26,14 @@ public class KoopaSprites
         position = _posX;
         posY = _posY;
     }
+    public bool GetIsOnGround()
+    {
+        return isOnGround;
+    }
+    public void SetIsOnGround(bool val)
+    {
+        isOnGround = val;
+    }
     public void LeftLogic()
 	{
         counter2 = -1;
