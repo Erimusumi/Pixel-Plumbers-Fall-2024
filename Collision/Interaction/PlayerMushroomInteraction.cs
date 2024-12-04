@@ -32,6 +32,8 @@ public class PlayerMushroomInteraction
             player.PowerUp();
         }
 
+        player.AddScore(100);
+
         removeFromList();
         
         

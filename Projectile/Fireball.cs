@@ -22,7 +22,8 @@ public class Fireball : IProjectile
     private GameTime gameTime;
     private Game1 game;
     private List<IEntity> _entities;
-    public Fireball(Vector2 marioPosition, Texture2D texture, GameTime gameTime, PlayerStateMachine.PlayerFaceState direction, Game1 game, List<IEntity> entities)
+    private IPlayer player;
+    public Fireball(Vector2 marioPosition, Texture2D texture, GameTime gameTime, PlayerStateMachine.PlayerFaceState direction, Game1 game, List<IEntity> entities, IPlayer player)
     {
         isBouncing = false;
         pos = marioPosition;
@@ -33,6 +34,7 @@ public class Fireball : IProjectile
         this.game = game;
         this._entities = entities;
         _entities.Add(this);
+        this.player = player;
     }
     private void Move()
     {
@@ -89,5 +91,10 @@ public class Fireball : IProjectile
     {
         //All fireball sprites are 16*16
         return new Rectangle((int)pos.X, (int)pos.Y, 16, 16);
+    }
+
+    public void AddScore(int scoreAmt)
+    {
+        player.AddScore(scoreAmt);
     }
 }

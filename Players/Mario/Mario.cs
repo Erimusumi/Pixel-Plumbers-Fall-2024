@@ -74,6 +74,8 @@ public class Mario : IPlayer
         this.gsm = gsm;
         this.luigi = luigi;
 
+        this.scoreMult = 1;
+
         /*
          * SFX loaded in specific order:
          * 0: Power up
@@ -514,16 +516,29 @@ public class Mario : IPlayer
         return playerStateMachine.IsDead();
     }
 
-    public int GetScoreMult()
-    {
-        return this.scoreMult;
-    }
+    //public int GetScoreMult()
+    //{
+    //    return this.scoreMult;
+    //}
 
     public void IncreaseScoreMult()
     {
-        if (scoreMult < maxScoreMult)
+        if ((scoreMult < maxScoreMult) && !isSwimmingLevel)
         {
             this.scoreMult *= 2;
         }
+    }
+
+    public void ResetScoreMult()
+    {
+        if (isOnGround && !this.HasStar())
+        {
+            scoreMult = 1;
+        }
+    }
+
+    public void AddScore(int scoreAmt)
+    {
+        game.hudManager.AddScore(scoreAmt * this.scoreMult);
     }
 }

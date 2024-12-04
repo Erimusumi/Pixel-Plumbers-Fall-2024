@@ -25,4 +25,8 @@ public interface IPlayer : IEntity
     public PlayerStateMachine.PlayerGameState GetGameState();
     public void PowerUp();
     public bool isFire();
+    public void AddScore(int scoreAmt);
+
+    public void ResetScoreMult();
+    public void IncreaseScoreMult();
 }

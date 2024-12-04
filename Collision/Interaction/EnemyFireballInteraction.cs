@@ -26,6 +26,7 @@ using System.Threading.Tasks;
         enemy.beFlipped();
         fireball.Remove();
         removeFromList();
+        fireball.AddScore(100);
     }
     private void removeFromList()
     {

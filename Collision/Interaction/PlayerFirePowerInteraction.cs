@@ -27,6 +27,7 @@ using System.Threading.Tasks;
         {
             player.PowerUp();
         }
+        player.AddScore(100);
     }
     private void removeFromList()
     {

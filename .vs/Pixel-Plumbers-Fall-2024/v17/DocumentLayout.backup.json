@@ -60,7 +60,7 @@
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Powder\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAIgAAAAAAAAAAAAkwBAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAswK8AAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
               "IsPinned": true,
@@ -95,10 +95,6 @@
               "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "FilterEntities.cs",
@@ -108,8 +104,7 @@
               "RelativeToolTip": "Filter Entities\\FilterEntities.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAYwDkAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T13:38:36.793Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T13:38:36.793Z"
             },
             {
               "$type": "Document",
@@ -121,8 +116,7 @@
               "RelativeToolTip": "GroundDetection\\ToggleFalling.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAAuwD4AAACiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T13:36:53.436Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T13:36:53.436Z"
             },
             {
               "$type": "Document",
@@ -134,8 +128,7 @@
               "RelativeToolTip": "Projectile\\Fireball.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAYwBMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T13:35:08.699Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T13:35:08.699Z"
             },
             {
               "$type": "Document",
@@ -147,8 +140,7 @@
               "RelativeToolTip": "Collision\\Interaction\\BlockFireballInteraction.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T13:34:05.998Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T13:34:05.998Z"
             },
             {
               "$type": "Document",
@@ -208,8 +200,7 @@
               "RelativeToolTip": "Collision\\Interaction\\PlayerFlagInteraction.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwBkAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T17:15:30.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T17:15:30.49Z"
             }
           ]
         }
