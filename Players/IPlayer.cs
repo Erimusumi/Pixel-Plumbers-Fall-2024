@@ -24,5 +24,4 @@ public interface IPlayer : IEntity
     public void PowerUp();
     public void SetWin();
     public PlayerStateMachine getStateMachine();
-
 }
