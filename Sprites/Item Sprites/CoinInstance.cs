@@ -37,7 +37,7 @@ public class CoinInstance : ISprite
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
         Rectangle sourceRectangle = frames[currentFrame];
-        Rectangle destinationRectangle = new Rectangle((int)position.X, (int)position.Y, frames[currentFrame].Width*2, frames[currentFrame].Height * 2);
+        Rectangle destinationRectangle = new Rectangle((int)position.X + frames[currentFrame].Width/2, (int)position.Y, frames[currentFrame].Width*2, frames[currentFrame].Height * 2);
         spriteBatch.Draw(ItemTexture, destinationRectangle, sourceRectangle, Color.White);
         
         
