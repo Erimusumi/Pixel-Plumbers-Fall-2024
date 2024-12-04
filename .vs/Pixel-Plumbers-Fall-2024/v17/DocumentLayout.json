@@ -7,8 +7,16 @@
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:grounddetection\\togglefalling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\hurray\\filter entities\\filterentities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:filter entities\\filterentities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\hurray\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\hurray\\enemy\\koopa\\koopasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:enemy\\koopa\\koopasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\hurray\\enemy\\koopa\\koopa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,14 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\hurray\\enemy\\koopa\\koopastatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:enemy\\koopa\\koopastatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\hurray\\enemy\\koopa\\koopasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:enemy\\koopa\\koopasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\hurray\\filter entities\\filterentities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:filter entities\\filterentities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\hurray\\levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,29 +42,16 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Hurray\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Hurray\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAFYBAAAAAAAAAAAcwGYBAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAF4BAAAAAAAAAAAiwGYBAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "KoopaSprites.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Hurray\\Enemy\\Koopa\\KoopaSprites.cs",
-              "RelativeDocumentMoniker": "Enemy\\Koopa\\KoopaSprites.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Hurray\\Enemy\\Koopa\\KoopaSprites.cs*",
-              "RelativeToolTip": "Enemy\\Koopa\\KoopaSprites.cs*",
-              "ViewState": "AgIAABAAAAAAAAAAAADgvyYAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T23:35:46.907Z",
               "EditorCaption": ""
             },
             {
@@ -94,11 +81,24 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "KoopaSprites.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Hurray\\Enemy\\Koopa\\KoopaSprites.cs",
+              "RelativeDocumentMoniker": "Enemy\\Koopa\\KoopaSprites.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Hurray\\Enemy\\Koopa\\KoopaSprites.cs",
+              "RelativeToolTip": "Enemy\\Koopa\\KoopaSprites.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAADgvyYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T23:35:46.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "KoopaStateMachine.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Hurray\\Enemy\\Koopa\\KoopaStateMachine.cs",
               "RelativeDocumentMoniker": "Enemy\\Koopa\\KoopaStateMachine.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Hurray\\Enemy\\Koopa\\KoopaStateMachine.cs*",
-              "RelativeToolTip": "Enemy\\Koopa\\KoopaStateMachine.cs*",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Hurray\\Enemy\\Koopa\\KoopaStateMachine.cs",
+              "RelativeToolTip": "Enemy\\Koopa\\KoopaStateMachine.cs",
               "ViewState": "AgIAAFYAAAAAAAAAAAAswGAAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-04T23:33:48.499Z",
@@ -106,20 +106,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Koopa.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Hurray\\Enemy\\Koopa\\Koopa.cs",
               "RelativeDocumentMoniker": "Enemy\\Koopa\\Koopa.cs",
               "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Hurray\\Enemy\\Koopa\\Koopa.cs",
               "RelativeToolTip": "Enemy\\Koopa\\Koopa.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAswDwAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwDwAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-04T23:33:26.643Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "FilterEntities.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Hurray\\Filter Entities\\FilterEntities.cs",
               "RelativeDocumentMoniker": "Filter Entities\\FilterEntities.cs",
@@ -138,7 +138,7 @@
               "RelativeDocumentMoniker": "GroundDetection\\ToggleFalling.cs",
               "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Hurray\\GroundDetection\\ToggleFalling.cs",
               "RelativeToolTip": "GroundDetection\\ToggleFalling.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAASwIcAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAiwLIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-04T23:27:52.642Z",
               "EditorCaption": ""

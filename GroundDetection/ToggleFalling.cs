@@ -176,7 +176,7 @@ public class ToggleFalling
                 }
             }
 
-            if (!itemColliding)
+            if (itemColliding)
             {
                 if (itemBounds.Intersects(new Rectangle(itemBounds.X, 385, 16, 16)))
                 {
