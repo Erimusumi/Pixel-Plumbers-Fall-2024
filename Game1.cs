@@ -348,7 +348,7 @@ namespace Pixel_Plumbers_Fall_2024
         {
             foreach (var sp in scorePopups)
             {
-                sp.Draw(spriteBatch);
+                sp.Draw(spriteBatch,levelScreenFonts);
             }
         }
 
