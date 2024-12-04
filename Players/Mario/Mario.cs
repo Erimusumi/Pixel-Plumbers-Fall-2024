@@ -55,7 +55,8 @@ public class Mario : IPlayer
 
     private int scoreMult;
     private const int maxScoreMult = 16;
-    public Mario(Game1 game, List<IEntity> entities, List<SoundEffect> sfx, TextureManager textureManager, GameTime gametime, GameStateMachine gsm, Luigi luigi)
+    private SpriteFont scoreFont;
+    public Mario(Game1 game, List<IEntity> entities, List<SoundEffect> sfx, TextureManager textureManager, GameTime gametime, GameStateMachine gsm, Luigi luigi, ref SpriteFont font)
     {
         this.textureManager = textureManager;
         this.marioTexture = textureManager.GetTexture("Mario");
@@ -78,6 +79,7 @@ public class Mario : IPlayer
         this.luigi = luigi;
 
         this.scoreMult = 1;
+        this.scoreFont = font;
 
         /*
          * SFX loaded in specific order:
@@ -529,6 +531,7 @@ public class Mario : IPlayer
     public void AddScore(int scoreAmt)
     {
         game.hudManager.AddScore(scoreAmt * this.scoreMult);
+        //game.scorePopups.Add(new ScorePopup(marioPosition, scoreFont, this.game, game.scorePopups, this, scoreAmt * this.scoreMult));
     }
     public void AddCoin()
     {

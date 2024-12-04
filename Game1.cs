@@ -51,6 +51,7 @@ namespace Pixel_Plumbers_Fall_2024
 
         // game entities and collections
         public List<Fireball> fireballs = new List<Fireball>();
+        public List<ScorePopup> scorePopups = new List<ScorePopup>();
         public List<IEntity> entities = new List<IEntity>();
         private List<IEntity> entitiesRemoved = new List<IEntity>();
         private List<Rectangle> lvl1CollidableRectangles;
@@ -140,8 +141,8 @@ namespace Pixel_Plumbers_Fall_2024
                 soundManager.GetSound("1-up")
             };
 
-            mario = new Mario(this, entities, marioSounds, textureManager, new GameTime(), this.gameStateMachine, this.luigi);
-            luigi = new Luigi(this, entities, marioSounds, textureManager, new GameTime(), this.gameStateMachine, this.mario);
+            mario = new Mario(this, entities, marioSounds, textureManager, new GameTime(), this.gameStateMachine, this.luigi, ref levelScreenFonts);
+            luigi = new Luigi(this, entities, marioSounds, textureManager, new GameTime(), this.gameStateMachine, this.mario, ref levelScreenFonts);
 
         }
 
@@ -217,6 +218,7 @@ namespace Pixel_Plumbers_Fall_2024
             UpdateCurrentLevel(gameTime);
             UpdateCamera();
             UpdateFireballs(gameTime);
+            UpdateScorePopups(gameTime);
             UpdateRemovedEntities();
             hudManager.Update(gameTime, camera);
         }
@@ -270,6 +272,13 @@ namespace Pixel_Plumbers_Fall_2024
             }
         }
 
+        private void UpdateScorePopups(GameTime gameTime)
+        {
+            foreach (var sp in scorePopups)
+            {
+                sp.Update(gameTime);
+            }
+        }
         private void UpdateRemovedEntities()
         {
             foreach (var consumedEntity in entitiesRemoved)
@@ -314,6 +323,7 @@ namespace Pixel_Plumbers_Fall_2024
             {
                 DrawCurrentLevel();
                 DrawFireballs();
+                DrawScorePopups();
                 hudManager.Draw(spriteBatch);
                 blackJackStateMachine.Draw(spriteBatch);
             }
@@ -332,6 +342,13 @@ namespace Pixel_Plumbers_Fall_2024
             foreach (var fireball in fireballs)
             {
                 fireball.Draw(spriteBatch);
+            }
+        }
+        private void DrawScorePopups()
+        {
+            foreach (var sp in scorePopups)
+            {
+                sp.Draw(spriteBatch);
             }
         }
 
