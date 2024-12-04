@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\Projects\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAA8BAAAAAAAAAAAMwB0BAACnAAAAAAAAAA==",
+              "ViewState": "AgIAAA8BAAAAAAAAAAAMwBsBAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
               "IsPinned": true,
@@ -76,8 +76,7 @@
               "RelativeToolTip": "Enemy\\Blooper\\BlooperStateMachine.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAAwDYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T21:47:25.188Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T21:47:25.188Z"
             },
             {
               "$type": "Document",
@@ -89,8 +88,7 @@
               "RelativeToolTip": "Enemy\\Blooper\\BlooperSprites.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwBoAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T21:47:16.038Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T21:47:16.038Z"
             },
             {
               "$type": "Document",
@@ -102,8 +100,7 @@
               "RelativeToolTip": "Levels\\LevelOne.cs",
               "ViewState": "AgIAANUAAAAAAAAAAIAywOIAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T17:31:38.596Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-27T17:31:38.596Z"
             }
           ]
         }
