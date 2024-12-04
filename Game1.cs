@@ -44,7 +44,9 @@ namespace Pixel_Plumbers_Fall_2024
 
         // levels
         private LevelOne levelOne;
+        private Point lvl1mapSize;
         private LevelTwo levelTwo;
+        private Point lvl2mapSize;
 
         // game entities and collections
         public List<Fireball> fireballs = new List<Fireball>();
@@ -136,6 +138,7 @@ namespace Pixel_Plumbers_Fall_2024
 
             mario = new Mario(this, entities, marioSounds, textureManager, new GameTime(), this.gameStateMachine, this.luigi);
             luigi = new Luigi(this, entities, marioSounds, textureManager, new GameTime(), this.gameStateMachine, this.mario);
+
         }
 
         private void LoadUserInterface()
@@ -180,6 +183,9 @@ namespace Pixel_Plumbers_Fall_2024
             UpdateGameplay(gameTime);
             UpdateGameOver(gameTime);
 
+
+
+
             base.Update(gameTime);
         }
 
@@ -192,6 +198,11 @@ namespace Pixel_Plumbers_Fall_2024
             sweep.Compare(entities, entitiesRemoved, camera.position);
 
             blackJackStateMachine.Update();
+
+            Console.WriteLine(gameStateMachine.currentGameMode);
+            // Console.WriteLine(gameStateMachine.currentGameState);
+            // Console.WriteLine(gameStateMachine.currentLevelState);
+
         }
 
         private void UpdateGameplay(GameTime gameTime)
@@ -236,7 +247,15 @@ namespace Pixel_Plumbers_Fall_2024
 
         private void UpdateCamera()
         {
-            camera.Follow(mario.marioPosition, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height));
+            if (gameStateMachine.isLevelOne())
+            {
+                camera.Follow(mario.marioPosition, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), levelOne.mapSize.X);
+            }
+            else if (gameStateMachine.isLevelTwo())
+            {
+                camera.Follow(mario.marioPosition, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), levelTwo.mapSize.X);
+            }
+
         }
 
         private void UpdateFireballs(GameTime gameTime)
@@ -271,8 +290,7 @@ namespace Pixel_Plumbers_Fall_2024
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            spriteBatch.Begin(transformMatrix: camera.GetViewMatrix());
-
+            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, SamplerState.PointWrap, null, null, null, transformMatrix: camera.GetViewMatrix());
             DrawGameScreen();
             DrawGameOver();
 
@@ -300,9 +318,9 @@ namespace Pixel_Plumbers_Fall_2024
         private void DrawCurrentLevel()
         {
             if (gameStateMachine.isLevelOne())
-                levelOne.DrawLevel(spriteBatch, camera);
+                levelOne.DrawLevel(spriteBatch);
             else if (gameStateMachine.isLevelTwo())
-                levelTwo.DrawLevel(spriteBatch, camera);
+                levelTwo.DrawLevel(spriteBatch);
         }
 
         private void DrawFireballs()

@@ -5,5 +5,5 @@ using Microsoft.Xna.Framework.Graphics;
 public interface ILevel
 {
     public void UpdateLevel(GameTime gameTime);
-    public void DrawLevel(SpriteBatch spriteBatch, FollowCamera camera);
+    public void DrawLevel(SpriteBatch spriteBatch);
 }

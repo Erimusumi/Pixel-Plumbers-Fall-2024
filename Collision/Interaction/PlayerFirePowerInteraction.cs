@@ -6,7 +6,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-    public class PlayerFirePowerInteraction
+public class PlayerFirePowerInteraction
 {
     private IPlayer player;
     private Fire FirePower;
@@ -21,9 +21,10 @@ using System.Threading.Tasks;
     }
     public void update()
     {
+        PlayerStateMachine playerStateMachine = player.getStateMachine();
         FirePower.collect();
         player.PowerUp();
-        if (player.isFire())
+        if (playerStateMachine.IsFire())
         {
             player.PowerUp();
         }

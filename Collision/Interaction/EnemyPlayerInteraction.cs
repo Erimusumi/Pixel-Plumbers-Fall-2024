@@ -21,7 +21,8 @@ public class EnemyPlayerInteraction
     }
     public void Update()
     {
-        if (player.HasStar())
+        PlayerStateMachine playerStateMachine = player.getStateMachine();
+        if (playerStateMachine.HasStar())
         {
             enemy.beFlipped();
             entitiesRemoved.Add(enemy);

@@ -23,7 +23,7 @@ public class Luigi : IPlayer
     private Vector2 initialPosition;
     public Vector2 luigiPosition;
     private Vector2 luigiVelocity;
-    private float groundPosition = 200f;
+    private float groundPosition = 385f;
     private float swimmingMaxHeight = 10f;
     private float gravity = 980f;
     private float jumpSpeed = -570f;
@@ -34,6 +34,7 @@ public class Luigi : IPlayer
     private bool canTakeDamage = true;
     private bool moveKeyPressed = false;
     private bool deathSoundPlaying = false;
+    private bool isDead = false;
 
     private const float maxSpeed = 3f;
     private const float acceleration = 0.03f;
@@ -235,7 +236,10 @@ public class Luigi : IPlayer
         canTakeDamage = false;
         Task.Delay(1000).ContinueWith(t => canTakeDamage = true);
     }
-
+    public void SetWin()
+    {
+        playerStateMachine.SetPlayerWins();
+    }
     public void LuigiWins()
     {
         if (playerStateMachine.Wins())
@@ -270,7 +274,7 @@ public class Luigi : IPlayer
             }
             else if (gameResetTimer == 0)
             {
-                if (gsm.isSingleplayer() || (gsm.isMultiplayer() && mario.IsDead()))
+                if (gsm.isSingleplayer() || (gsm.isMultiplayer() && this.playerStateMachine.IsDead()))
                 {
                     if (game.hudManager.GetNumLives() <= 0)
                     {
@@ -356,6 +360,25 @@ public class Luigi : IPlayer
             Fireball f = new Fireball(luigiPosition, itemTexture, gameTime, playerStateMachine.CurrentFaceState, game, _entities);
             game.fireballs.Add(f);
             fireballTimer = 20;
+        }
+    }
+
+    public void SetSwimmingLevel(bool isLevelSwimming)
+    {
+        isSwimmingLevel = isLevelSwimming;
+        playerStateMachine.setSwimmingLevel(isLevelSwimming);
+
+        if (isSwimmingLevel)
+        {
+            luigiSpriteMachine = new LuigiSpriteMachineSwimming();
+            gravity = 980f / 4f;
+            jumpSpeed = -570f / 4f;
+        }
+        else
+        {
+            luigiSpriteMachine = new LuigiSpriteMachine();
+            gravity = 980f;
+            jumpSpeed = -570f;
         }
     }
 
@@ -473,51 +496,14 @@ public class Luigi : IPlayer
         }
     }
 
-    public void SetSwimmingLevel(bool isLevelSwimming)
-    {
-        isSwimmingLevel = isLevelSwimming;
-        playerStateMachine.setSwimmingLevel(isLevelSwimming);
-
-        if (isSwimmingLevel)
-        {
-            luigiSpriteMachine = new LuigiSpriteMachineSwimming();
-            gravity = 980f / 4f;
-            jumpSpeed = -570f / 4f;
-        }
-        else
-        {
-            luigiSpriteMachine = new LuigiSpriteMachine();
-            gravity = 980f;
-            jumpSpeed = -570f;
-        }
-    }
     public void updateGroundPosition(float gp)
     {
         this.groundPosition = gp;
     }
 
-    public bool isSmall()
+    public PlayerStateMachine getStateMachine()
     {
-        return playerStateMachine.IsSmall();
-    }
-
-    public bool isBig()
-    {
-        return playerStateMachine.IsBig();
-    }
-    public bool isFire()
-    {
-        return playerStateMachine.IsFire();
-    }
-
-    public bool IsCrouching()
-    {
-        return playerStateMachine.IsCrouching();
-    }
-
-    public bool IsDead()
-    {
-        return playerStateMachine.IsDead();
+        return this.playerStateMachine;
     }
 
     //public int GetScoreMult()
