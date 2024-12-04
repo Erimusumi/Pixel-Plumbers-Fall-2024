@@ -136,7 +136,7 @@ public class ToggleFalling
             if (!enemyColliding)
             {
                 // Make it fall when that functionality is added.
-                //currentEnemy.setGroundPosition(fallingGroundPosition); //set to fall below screen
+                currentEnemy.setGroundPosition(fallingGroundPosition); //set to fall below screen
             }
         }
     }

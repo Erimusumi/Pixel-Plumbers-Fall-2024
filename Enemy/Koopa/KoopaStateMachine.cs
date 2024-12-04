@@ -92,6 +92,10 @@ public class KoopaStateMachine
     {
         _sprite.SetIsOnGround(val);
     }
+	public void setGroundPosition(int x)
+	{
+		this._sprite.setGroundPosition(x);
+	}
     public void Update()
 	{
         Rectangle mHold = mario.GetDestination();
