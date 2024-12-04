@@ -100,6 +100,7 @@ public class Sweep
     EnemyObstacleInteraction EnemyObstacleInteraction;
     PlayerItemInteraction MarioItemInteraction;
     PlayerFlagInteraction PlayerFlagInteraction;
+    ObstacleFireballInteraction ObstacleFireballInteraction;
    
 
     public void iterateListInteractions(List<IEntity> entities, List<IEntity> entitiesRemoved)
@@ -321,6 +322,16 @@ public class Sweep
         {
             EnemyObstacleInteraction = new EnemyObstacleInteraction((ISpriteEnemy)item2, (IObstacle)item1);
             EnemyObstacleInteraction.update();
+        }
+        else if (item1.GetType() == typeof(Fireball) && (ContainsObstacle(entities,index2)))
+        {
+            ObstacleFireballInteraction = new ObstacleFireballInteraction((Fireball)item1,(IObstacle)item2);
+            ObstacleFireballInteraction.Update();
+        }
+        else if (item2.GetType() == typeof(Fireball) && (ContainsObstacle(entities, index1)))
+        {
+            ObstacleFireballInteraction = new ObstacleFireballInteraction((Fireball)item2, (IObstacle)item1);
+            ObstacleFireballInteraction.Update();
         }
         
     }
