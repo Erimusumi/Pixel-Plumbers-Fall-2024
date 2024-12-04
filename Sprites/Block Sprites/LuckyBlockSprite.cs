@@ -22,6 +22,7 @@ public class LuckyBlockSprite : IBlock
     private Rectangle destinationRectangle;
     private Vector2 position;
     private IItem item;
+    private Coin coin;
     private int frames = 3;
     private int wait = 20;
     public Boolean bump = false;
@@ -68,6 +69,7 @@ public class LuckyBlockSprite : IBlock
 
         if (bump && !hasItemAppeared)
         {
+            Boolean isItem = true;
             i_position = new Vector2(position.X, position.Y - 31);
             if (playerStateMachine.IsSmall())
             {
@@ -79,16 +81,35 @@ public class LuckyBlockSprite : IBlock
             }
             else if (playerStateMachine.IsFire())
             {
-                item = new Star(spriteBatch, itemTexture, i_position);
+                Random rand = new Random();
+               int r = rand.Next(10);
+                if (r <= 5)
+                {
+                    item = new Star(spriteBatch, itemTexture, i_position);
+                }
+                else
+                {
+                    coin = new Coin(spriteBatch,itemTexture,i_position);
+                    isItem = false;
+                }
+                
             }
-            game.entities.Add(item);
+            if (isItem)
+            {
+                game.entities.Add(item);
+                
+            }
             hasItemAppeared = true;
         }
 
         if (bump && item != null)  // Added null check
         {
             item.update(gametime);
+        }else if (bump)
+        {
+            coin.Update(gametime);
         }
+       
     }
 
     public void Draw(SpriteBatch spriteBatch2, Vector2 pos)
@@ -105,6 +126,11 @@ public class LuckyBlockSprite : IBlock
         if (hasItemAppeared && item != null)
         {
             item.draw();
+        }
+        else if(hasItemAppeared)
+        {
+            coin.Draw();
+             
         }
     }
 
