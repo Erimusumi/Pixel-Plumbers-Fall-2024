@@ -29,6 +29,7 @@ public class LevelOne : ILevel
     private Texture2D obstacleTexture;
     private Texture2D ItemsTexture;
     private Texture2D overworldTiles;
+
     private Texture2D danceTexture;
     private Texture2D box;
 
@@ -42,7 +43,6 @@ public class LevelOne : ILevel
     private List<IBlock> BrickBlocks = new List<IBlock>();
     
     private IBlock OWBrokenBrickSprite;
-
 
     private IObstacle obstacle1;
     private IObstacle obstacle2;
