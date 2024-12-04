@@ -55,10 +55,19 @@ public class GoombaStateMachine
 		}
 	}
 
+	public bool GetIsOnGround()
+	{
+		return _sprite.GetIsOnGround();
+	}
+    public void SetIsOnGround(bool val)
+    {
+        _sprite.SetIsOnGround(val);
+    }
+
     public void Update()
 	{
 		Rectangle mHold = mario.GetDestination();
-        Rectangle lHold = mario.GetDestination();
+        Rectangle lHold = luigi.GetDestination();
         Rectangle goombaRec = _sprite.GetDestination();
         if (((goombaRec.X - mHold.X) > 0) && ((goombaRec.X - mHold.X) < 400) && (_currentState == GoombaState.Start)){
             _currentState = GoombaState.Left;
