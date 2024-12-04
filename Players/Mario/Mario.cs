@@ -275,7 +275,7 @@ public class Mario : IPlayer
             }
             else if (gameResetTimer == 0)
             {
-                if (gsm.isSingleplayer() || (gsm.isMultiplayer() && luigi.IsDead()))
+                if (gsm.isSingleplayer() || (gsm.isMultiplayer() && this.playerStateMachine.IsDead()))
                 {
                     if (game.hudManager.GetNumLives() <= 0)
                     {
@@ -376,10 +376,31 @@ public class Mario : IPlayer
         this.MarioWins();
     }
 
+    public void SetSwimmingLevel(bool isLevelSwimming)
+    {
+        isSwimmingLevel = isLevelSwimming;
+        playerStateMachine.setSwimmingLevel(isLevelSwimming);
+
+        if (isSwimmingLevel)
+        {
+            marioSpriteMachine = new MarioSpriteMachineSwimming();
+            gravity = 980f / 4f;
+            jumpSpeed = -570f / 4f;
+        }
+        else
+        {
+            marioSpriteMachine = new MarioSpriteMachine();
+            gravity = 980f;
+            jumpSpeed = -570f;
+        }
+    }
+
     public void Draw(SpriteBatch spriteBatch)
     {
-        currentMarioSprite.Draw(spriteBatch, marioPosition, this.HasStar());
+        currentMarioSprite.Draw(spriteBatch, marioPosition, this.playerStateMachine.HasStar());
     }
+
+
 
     public void Reset()
     {
@@ -424,10 +445,6 @@ public class Mario : IPlayer
         return playerStateMachine.CurrentGameState;
     }
 
-    public bool HasStar()
-    {
-        return playerStateMachine.HasStar();
-    }
 
     public void SetVelocityY(float velocityY)
     {
@@ -467,28 +484,9 @@ public class Mario : IPlayer
 
     public void RemoveStar()
     {
-        if (this.HasStar() && starTimer <= 0)
+        if (this.playerStateMachine.HasStar() && starTimer <= 0)
         {
             playerStateMachine.RemoveStar();
-        }
-    }
-
-    public void SetSwimmingLevel(bool isLevelSwimming)
-    {
-        isSwimmingLevel = isLevelSwimming;
-        playerStateMachine.setSwimmingLevel(isLevelSwimming);
-
-        if (isSwimmingLevel)
-        {
-            marioSpriteMachine = new MarioSpriteMachineSwimming();
-            gravity = 980f / 4f;
-            jumpSpeed = -570f / 4f;
-        }
-        else
-        {
-            marioSpriteMachine = new MarioSpriteMachine();
-            gravity = 980f;
-            jumpSpeed = -570f;
         }
     }
 
@@ -497,29 +495,8 @@ public class Mario : IPlayer
         this.groundPosition = gp;
     }
 
-    public bool isSmall()
+    public PlayerStateMachine getStateMachine()
     {
-
-        return playerStateMachine.IsSmall();
-    }
-
-    public bool isBig()
-    {
-        return playerStateMachine.IsBig();
-    }
-    public
-    bool isFire()
-    {
-        return playerStateMachine.IsFire();
-    }
-
-    public bool IsCrouching()
-    {
-        return playerStateMachine.IsCrouching();
-    }
-
-    public bool IsDead()
-    {
-        return playerStateMachine.IsDead();
+        return this.playerStateMachine;
     }
 }

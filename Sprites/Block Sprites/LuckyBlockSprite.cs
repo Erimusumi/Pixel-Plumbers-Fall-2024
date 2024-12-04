@@ -54,6 +54,7 @@ public class LuckyBlockSprite : IBlock
 
     public void Update(GameTime gametime)
     {
+        PlayerStateMachine playerStateMachine = mario.getStateMachine();
         buffer++;
         if (buffer >= waitTime)  // Changed from == to >= to ensure it triggers
         {
@@ -68,15 +69,15 @@ public class LuckyBlockSprite : IBlock
         if (bump && !hasItemAppeared)
         {
             i_position = new Vector2(position.X, position.Y - 31);
-            if (mario.isSmall())
+            if (playerStateMachine.IsSmall())
             {
                 item = new Mushroom(spriteBatch, itemTexture, i_position);
             }
-            else if (mario.isBig())
+            else if (playerStateMachine.IsBig())
             {
                 item = new Fire(spriteBatch, itemTexture, i_position);
             }
-            else if (mario.isFire())
+            else if (playerStateMachine.IsFire())
             {
                 item = new Star(spriteBatch, itemTexture, i_position);
             }

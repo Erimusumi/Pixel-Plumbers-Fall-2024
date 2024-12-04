@@ -21,18 +21,19 @@ public class EnemyPlayerInteraction
     }
     public void Update()
     {
-        if (player.HasStar())
+        PlayerStateMachine playerStateMachine = player.getStateMachine();
+        if (playerStateMachine.HasStar())
         {
             enemy.beFlipped();
             entitiesRemoved.Add(enemy);
-
-        } else if (Overlap.Width >= Overlap.Height)
+        }
+        else if (Overlap.Width >= Overlap.Height)
         {
             enemy.beStomped();
             player.SetVelocityY(-450);
             entitiesRemoved.Add(enemy);
-
-        } else
+        }
+        else
         {
             player.TakeDamage();
         }
