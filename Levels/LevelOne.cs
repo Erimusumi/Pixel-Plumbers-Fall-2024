@@ -90,7 +90,7 @@ public class LevelOne : ILevel
     public void InitializeLevel()
     {
         flag = new Flag(new Vector2(6335, 354), overworldTiles, danceTexture, spriteBatch);
-        coin1 = new CoinInstance(ItemsTexture);
+        coin1 = new CoinInstance(ItemsTexture, new Vector2(340,290));
         InitializeEnemies();
         InitializeLuckyBlocks();
         InitializeBrickBlocks();
