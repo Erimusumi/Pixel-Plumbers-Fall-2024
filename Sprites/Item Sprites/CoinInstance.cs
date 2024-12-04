@@ -60,7 +60,7 @@ public class CoinInstance : ISprite
         }
         ticks++;
     }
-    public Rectangle GetDestination(Vector2 position)
+    public Rectangle GetDestination()
     {
         return new Rectangle((int)position.X, (int)position.Y, frameWidths[currentFrame], 15);
     }
