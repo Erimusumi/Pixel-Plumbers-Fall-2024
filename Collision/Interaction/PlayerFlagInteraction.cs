@@ -6,19 +6,19 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-    public class PlayerFlagInteraction
+public class PlayerFlagInteraction
 {
 
     private IPlayer player;
     private Flag flag;
     private List<IEntity> entitiesRemoved;
 
-
-    public PlayerFlagInteraction(IPlayer play, Flag flag, List<IEntity> entitiesRemoved)
+    public PlayerFlagInteraction(IPlayer play, Flag flag, List<IEntity> entitiesRemoved, DisablePlayerCommand disablePlayerCommand)
     {
         this.flag = flag;
         this.player = play;
         this.entitiesRemoved = entitiesRemoved;
+        disablePlayerCommand.Execute();
     }
     public void update()
     {

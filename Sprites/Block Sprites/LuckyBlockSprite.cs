@@ -89,6 +89,8 @@ public class LuckyBlockSprite : IBlock
                 {
                     coin = new Coin(spriteBatch, itemTexture, i_position);
                     mario.AddCoin();
+                    mario.playSound(6);
+                    
                     isItem = false;
                 }
                
@@ -105,7 +107,8 @@ public class LuckyBlockSprite : IBlock
                 {
                     coin = new Coin(spriteBatch,itemTexture,i_position);
                     mario.AddCoin();
-                    
+                    mario.playSound(6);
+
                     isItem = false;
                     
                 }
@@ -161,7 +164,7 @@ public class LuckyBlockSprite : IBlock
     }
     public void bump()
     {
-
+        bumping = true;
     }
     public void broke()
     {

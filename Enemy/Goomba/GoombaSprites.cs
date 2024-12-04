@@ -31,6 +31,19 @@ public class GoombaSprites
 
     private float rotation = 0f;
 
+    public bool GetIsOnGround()
+    {
+        return isOnGround;
+    }
+    public void SetIsOnGround(bool val)
+    {
+        isOnGround = val;
+    }
+    public void SetGroundPosition(float x)
+    {
+        //groundPosition = x;
+    }
+
     public void LeftLogic()
 	{
         counter++;
@@ -80,7 +93,6 @@ public class GoombaSprites
     }
     public void ApplyGravity()
     {
-        //if (playerStateMachine.IsDead()) return;
         if (!isOnGround)
         {
             if (counter % 10 == 0)
@@ -88,14 +100,14 @@ public class GoombaSprites
                 counter2++;
             }
             posY += counter2;
-            
+
             if (posY >= groundPosition)
             {
                 posY = (int)groundPosition;
                 counter2 = 0;
                 isOnGround = true;
             }
-            
+
             destinationRectangle = new Rectangle(position, posY, size * scaleUp, size * scaleUp);
         }
     }

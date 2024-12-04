@@ -19,10 +19,9 @@ public class MusicMachine
     public MusicMachine(SoundManager musics)
     {
         songList = new List<Song>();
-        currentSong = musics.GetSongs("LionSin");
-        songList.Add(currentSong);
         currentSong = musics.GetSongs("mario");
         songList.Add(currentSong);
+        MediaPlayer.Play(currentSong);
         currentSong = musics.GetSongs("kirby");
         songList.Add(currentSong);
         currentSong = musics.GetSongs("Doom");
@@ -30,6 +29,8 @@ public class MusicMachine
         currentSong = musics.GetSongs("rumbling");
         songList.Add(currentSong);
         currentSong = musics.GetSongs("erwin");
+        songList.Add(currentSong);
+        currentSong = musics.GetSongs("LionSin");
         songList.Add(currentSong);
     }
 

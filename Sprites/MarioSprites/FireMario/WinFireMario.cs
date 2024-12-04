@@ -17,7 +17,7 @@ public class WinFireMario : ICharacter
         this.MarioTexture = MarioTexture;
 
         AnimationTimer = 0;
-        AnimationSpeed = 200;
+        AnimationSpeed = 10;
 
         FrameRectangles = new Rectangle[2];
         FrameRectangles[0] = new Rectangle(363, 159, 14, 27); // Frame 1

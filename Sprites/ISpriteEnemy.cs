@@ -14,5 +14,7 @@ public interface ISpriteEnemy : IEntity
     void Draw(SpriteBatch sb, Texture2D Texture);
 
 	void setGroundPosition(float x);
+	public bool GetIsOnGround();
+	public void SetIsOnGround(bool val);
 
 }

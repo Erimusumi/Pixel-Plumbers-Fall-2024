@@ -4,24 +4,30 @@ using Microsoft.Xna.Framework.Input;
 using System.Diagnostics;
 public class DisablePlayerCommand : ICommand
 {
-    Dictionary<Keys, IPlayerCommand> commands;
-    PlayerMovementController playerMovementController;
+    Dictionary<Keys, IPlayerCommand> commandsMario;
+    Dictionary<Keys, IPlayerCommand> commandsLuigi;
+    PlayerMovementController marioMovementController;
+    PlayerMovementController luigiMovementController;
     int count = 0;
-    public DisablePlayerCommand(PlayerMovementController playerMovementController)
+    public DisablePlayerCommand(PlayerMovementController marioMovementController, PlayerMovementController luigiMovementController)
     {
-        this.playerMovementController = playerMovementController;
-        commands = playerMovementController.GetCommands();
+        this.marioMovementController = marioMovementController;
+        commandsMario = marioMovementController.GetCommands();
+        this.luigiMovementController = luigiMovementController;
+        commandsLuigi = luigiMovementController.GetCommands();
     }
 
     public void Execute()
     {
         if (count == 0)
         {
-            playerMovementController.SetCommands(new Dictionary<Keys, IPlayerCommand>());
+            marioMovementController.SetCommands(new Dictionary<Keys, IPlayerCommand>());
+            luigiMovementController.SetCommands(new Dictionary<Keys, IPlayerCommand>());
             count++;
         } else
         {
-            playerMovementController.SetCommands(commands);
+            marioMovementController.SetCommands(commandsMario);
+            luigiMovementController.SetCommands(commandsLuigi);
             count = 0;
         }
     }

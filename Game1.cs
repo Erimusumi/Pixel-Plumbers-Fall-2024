@@ -31,6 +31,7 @@ namespace Pixel_Plumbers_Fall_2024
         private GameStateControlCenter gameStateControlCenter;
         private KeyboardController gameStateKeyboardController;
         private MouseController gameStateMouseController;
+        private DisablePlayerCommand disablePlayerCommand;
 
         // players and controllers
         private Mario mario;
@@ -50,6 +51,7 @@ namespace Pixel_Plumbers_Fall_2024
 
         // game entities and collections
         public List<Fireball> fireballs = new List<Fireball>();
+        public List<ScorePopup> scorePopups = new List<ScorePopup>();
         public List<IEntity> entities = new List<IEntity>();
         private List<IEntity> entitiesRemoved = new List<IEntity>();
         private List<Rectangle> lvl1CollidableRectangles;
@@ -88,7 +90,7 @@ namespace Pixel_Plumbers_Fall_2024
 
         private void InitializeGameComponents()
         {
-            sweep = new Sweep(new GameTime());
+            sweep = new Sweep(new GameTime(), disablePlayerCommand);
             keyboardController = new KeyboardController();
             keyboardControllerMovement = new KeyboardControllerMovement();
 
@@ -133,11 +135,14 @@ namespace Pixel_Plumbers_Fall_2024
                 soundManager.GetSound("fireball"),
                 soundManager.GetSound("jump"),
                 soundManager.GetSound("death"),
-                soundManager.GetSound("flagpole")
+                soundManager.GetSound("flagpole"),
+                soundManager.GetSound("coin"),
+                soundManager.GetSound("powerup"),
+                soundManager.GetSound("1-up")
             };
 
-            mario = new Mario(this, entities, marioSounds, textureManager, new GameTime(), this.gameStateMachine, this.luigi);
-            luigi = new Luigi(this, entities, marioSounds, textureManager, new GameTime(), this.gameStateMachine, this.mario);
+            mario = new Mario(this, entities, marioSounds, textureManager, new GameTime(), this.gameStateMachine, this.luigi, ref levelScreenFonts);
+            luigi = new Luigi(this, entities, marioSounds, textureManager, new GameTime(), this.gameStateMachine, this.mario, ref levelScreenFonts);
 
         }
 
@@ -156,6 +161,7 @@ namespace Pixel_Plumbers_Fall_2024
         {
             marioMovementController = new PlayerMovementController();
             luigiMovementController = new PlayerMovementController();
+            disablePlayerCommand = new DisablePlayerCommand(marioMovementController, luigiMovementController);
 
             marioControlCenter = new MarioControlCenter(mario, marioMovementController);
             luigiControlCenter = new LuigiControlCenter(luigi, luigiMovementController);
@@ -172,8 +178,7 @@ namespace Pixel_Plumbers_Fall_2024
                 startScreenSprite,
                 levelScreenSprite,
                 soundManager,
-                blackJackStateMachine,
-                marioControlCenter.GetController()
+                blackJackStateMachine
             );
         }
 
@@ -213,6 +218,7 @@ namespace Pixel_Plumbers_Fall_2024
             UpdateCurrentLevel(gameTime);
             UpdateCamera();
             UpdateFireballs(gameTime);
+            UpdateScorePopups(gameTime);
             UpdateRemovedEntities();
             hudManager.Update(gameTime, camera);
         }
@@ -266,6 +272,13 @@ namespace Pixel_Plumbers_Fall_2024
             }
         }
 
+        private void UpdateScorePopups(GameTime gameTime)
+        {
+            foreach (var sp in scorePopups)
+            {
+                sp.Update(gameTime);
+            }
+        }
         private void UpdateRemovedEntities()
         {
             foreach (var consumedEntity in entitiesRemoved)
@@ -310,6 +323,7 @@ namespace Pixel_Plumbers_Fall_2024
             {
                 DrawCurrentLevel();
                 DrawFireballs();
+                DrawScorePopups();
                 hudManager.Draw(spriteBatch);
                 blackJackStateMachine.Draw(spriteBatch);
             }
@@ -328,6 +342,13 @@ namespace Pixel_Plumbers_Fall_2024
             foreach (var fireball in fireballs)
             {
                 fireball.Draw(spriteBatch);
+            }
+        }
+        private void DrawScorePopups()
+        {
+            foreach (var sp in scorePopups)
+            {
+                sp.Draw(spriteBatch);
             }
         }
 
