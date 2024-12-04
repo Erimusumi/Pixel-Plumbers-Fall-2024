@@ -68,7 +68,7 @@ public class BrokenBrickSprite : IBlock
         // Handle other animation frames if needed
         if (broken)
         {
-            buffer += gameTime.ElapsedGameTime.TotalSeconds;
+            buffer += 6.1f;
 
             if (buffer >= waitTime)
             {

@@ -109,6 +109,7 @@ public class ToggleFalling
                 Rectangle blockBounds = collisionRects[j];
                 if (enemyBounds.Intersects(blockBounds))
                 {
+                    
                     enemyColliding = true;
                     if (enemyBounds.Bottom > blockBounds.Top &&
                         enemyBounds.Top < blockBounds.Top &&
@@ -116,6 +117,7 @@ public class ToggleFalling
                         enemyBounds.Left < blockBounds.Right)
                     {
                         currentEnemy.setGroundPosition(blockBounds.Top);
+                       
                     }
                     else if (enemyBounds.Right > blockBounds.Left &&
                              enemyBounds.Left < blockBounds.Left)
