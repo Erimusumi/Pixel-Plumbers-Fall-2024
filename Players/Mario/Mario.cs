@@ -534,4 +534,8 @@ public class Mario : IPlayer
     {
         game.hudManager.CollectCoin();
     }
+    public void playSound(int index)
+    {
+        _sfx[index].Play();
+    }
 }
