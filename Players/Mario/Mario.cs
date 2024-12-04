@@ -357,7 +357,7 @@ public class Mario : IPlayer
         if (playerStateMachine.IsFire())
         {
             _sfx[2].Play();
-            Fireball f = new Fireball(marioPosition, itemTexture, gameTime, playerStateMachine.CurrentFaceState, game, _entities);
+            Fireball f = new Fireball(marioPosition, itemTexture, gameTime, playerStateMachine.CurrentFaceState, game, _entities, this);
             game.fireballs.Add(f);
             fireballTimer = 20;
         }
