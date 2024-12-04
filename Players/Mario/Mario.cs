@@ -53,6 +53,8 @@ public class Mario : IPlayer
     private GameStateMachine gsm;
     private Luigi luigi;
 
+    private int scoreMult;
+    private const int maxScoreMult = 16;
     public Mario(Game1 game, List<IEntity> entities, List<SoundEffect> sfx, TextureManager textureManager, GameTime gametime, GameStateMachine gsm, Luigi luigi)
     {
         this.textureManager = textureManager;
@@ -74,6 +76,8 @@ public class Mario : IPlayer
 
         this.gsm = gsm;
         this.luigi = luigi;
+
+        this.scoreMult = 1;
 
         /*
          * SFX loaded in specific order:
@@ -275,7 +279,7 @@ public class Mario : IPlayer
             }
             else if (gameResetTimer == 0)
             {
-                if (gsm.isSingleplayer() || (gsm.isMultiplayer() && luigi.IsDead()))
+                if (gsm.isSingleplayer() || (gsm.isMultiplayer() && this.playerStateMachine.IsDead()))
                 {
                     if (game.hudManager.GetNumLives() <= 0)
                     {
@@ -353,7 +357,7 @@ public class Mario : IPlayer
         if (playerStateMachine.IsFire())
         {
             _sfx[2].Play();
-            Fireball f = new Fireball(marioPosition, itemTexture, gameTime, playerStateMachine.CurrentFaceState, game, _entities);
+            Fireball f = new Fireball(marioPosition, itemTexture, gameTime, playerStateMachine.CurrentFaceState, game, _entities, this);
             game.fireballs.Add(f);
             fireballTimer = 20;
         }
@@ -376,10 +380,31 @@ public class Mario : IPlayer
         this.MarioWins();
     }
 
+    public void SetSwimmingLevel(bool isLevelSwimming)
+    {
+        isSwimmingLevel = isLevelSwimming;
+        playerStateMachine.setSwimmingLevel(isLevelSwimming);
+
+        if (isSwimmingLevel)
+        {
+            marioSpriteMachine = new MarioSpriteMachineSwimming();
+            gravity = 980f / 4f;
+            jumpSpeed = -570f / 4f;
+        }
+        else
+        {
+            marioSpriteMachine = new MarioSpriteMachine();
+            gravity = 980f;
+            jumpSpeed = -570f;
+        }
+    }
+
     public void Draw(SpriteBatch spriteBatch)
     {
-        currentMarioSprite.Draw(spriteBatch, marioPosition, this.HasStar());
+        currentMarioSprite.Draw(spriteBatch, marioPosition, this.playerStateMachine.HasStar());
     }
+
+
 
     public void Reset()
     {
@@ -424,10 +449,6 @@ public class Mario : IPlayer
         return playerStateMachine.CurrentGameState;
     }
 
-    public bool HasStar()
-    {
-        return playerStateMachine.HasStar();
-    }
 
     public void SetVelocityY(float velocityY)
     {
@@ -467,28 +488,9 @@ public class Mario : IPlayer
 
     public void RemoveStar()
     {
-        if (this.HasStar() && starTimer <= 0)
+        if (this.playerStateMachine.HasStar() && starTimer <= 0)
         {
             playerStateMachine.RemoveStar();
-        }
-    }
-
-    public void SetSwimmingLevel(bool isLevelSwimming)
-    {
-        isSwimmingLevel = isLevelSwimming;
-        playerStateMachine.setSwimmingLevel(isLevelSwimming);
-
-        if (isSwimmingLevel)
-        {
-            marioSpriteMachine = new MarioSpriteMachineSwimming();
-            gravity = 980f / 4f;
-            jumpSpeed = -570f / 4f;
-        }
-        else
-        {
-            marioSpriteMachine = new MarioSpriteMachine();
-            gravity = 980f;
-            jumpSpeed = -570f;
         }
     }
 
@@ -497,29 +499,39 @@ public class Mario : IPlayer
         this.groundPosition = gp;
     }
 
-    public bool isSmall()
+    public PlayerStateMachine getStateMachine()
     {
-
-        return playerStateMachine.IsSmall();
+        return this.playerStateMachine;
     }
 
-    public bool isBig()
+    //public int GetScoreMult()
+    //{
+    //    return this.scoreMult;
+    //}
+
+    public void IncreaseScoreMult()
     {
-        return playerStateMachine.IsBig();
-    }
-    public
-    bool isFire()
-    {
-        return playerStateMachine.IsFire();
+        if ((scoreMult < maxScoreMult) && !isSwimmingLevel)
+        {
+            this.scoreMult *= 2;
+        }
     }
 
-    public bool IsCrouching()
+    public void ResetScoreMult()
     {
-        return playerStateMachine.IsCrouching();
+        
+        if (isOnGround && !this.playerStateMachine.HasStar())
+        {
+            scoreMult = 1;
+        }
     }
 
-    public bool IsDead()
+    public void AddScore(int scoreAmt)
     {
-        return playerStateMachine.IsDead();
+        game.hudManager.AddScore(scoreAmt * this.scoreMult);
+    }
+    public void AddCoin()
+    {
+        game.hudManager.CollectCoin();
     }
 }

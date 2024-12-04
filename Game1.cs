@@ -183,6 +183,9 @@ namespace Pixel_Plumbers_Fall_2024
             UpdateGameplay(gameTime);
             UpdateGameOver(gameTime);
 
+
+
+
             base.Update(gameTime);
         }
 
@@ -195,6 +198,11 @@ namespace Pixel_Plumbers_Fall_2024
             sweep.Compare(entities, entitiesRemoved, camera.position);
 
             blackJackStateMachine.Update();
+
+            Console.WriteLine(gameStateMachine.currentGameMode);
+            // Console.WriteLine(gameStateMachine.currentGameState);
+            // Console.WriteLine(gameStateMachine.currentLevelState);
+
         }
 
         private void UpdateGameplay(GameTime gameTime)

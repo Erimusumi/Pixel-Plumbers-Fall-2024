@@ -12,23 +12,24 @@ public class PlayerItemInteraction
     private IItem item;
     private List<IEntity> entitiesRemoved;
     public PlayerItemInteraction(IItem item, IPlayer player, List<IEntity> entitiesRemoved)
-	{
+    {
         this.item = item;
         this.player = player;
         this.entitiesRemoved = entitiesRemoved;
     }
     public void update()
     {
-        //item.collect();
-        if (player.GetGameState() == PlayerStateMachine.PlayerGameState.Small)
+        PlayerStateMachine playerStateMachine = player.getStateMachine();
+
+        if (playerStateMachine.IsSmall())
         {
             player.PowerUp();
         }
-        else if (player.GetGameState() == PlayerStateMachine.PlayerGameState.Big)
+        else if (playerStateMachine.IsBig())
         {
             player.PowerUp();
         }
-        else if (player.GetGameState() == PlayerStateMachine.PlayerGameState.Fire)
+        else if (playerStateMachine.IsFire())
         {
             player.PowerUp();
         }

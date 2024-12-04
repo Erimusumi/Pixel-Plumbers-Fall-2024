@@ -57,111 +57,159 @@ public class ToggleFalling
 
     public void updateFireBallFalling(List<IEntity> fireBalls)
     {
-        Fireball fireBall;
-        
-        
         for (int i = 0; i < fireBalls.Count; i++)
         {
-            fireBall = (Fireball)fireBalls[i];
+            Fireball fireBall = (Fireball)fireBalls[i];
+            Rectangle fireBallBounds = fireBall.GetDestination();
+            bool fireBallColliding = false;
             for (int j = 0; j < collisionRects.Count; j++)
             {
-                if (fireBall.GetDestination().Intersects(collisionRects[j]) && fireBall.GetDestination().Intersects(new Rectangle(fireBall.GetDestination().X, 400, 16, 16)))
+                Rectangle blockBounds = collisionRects[j];
+                if (fireBallBounds.Intersects(blockBounds))
                 {
-                    fireBall.Bounce();
+                    fireBallColliding = true;
+                    if (fireBallBounds.Bottom > blockBounds.Top &&
+                        fireBallBounds.Top < blockBounds.Top &&
+                        fireBallBounds.Right > blockBounds.Left &&
+                        fireBallBounds.Left < blockBounds.Right)
+                    {
+                        fireBall.Bounce();
+                    }
+                    else if (fireBallBounds.Right > blockBounds.Left &&
+                             fireBallBounds.Left < blockBounds.Left)
+                    {
+                        fireBall.Remove();
+                    }
+                    else if (fireBallBounds.Left < blockBounds.Right &&
+                             fireBallBounds.Right > blockBounds.Right)
+                    {
+                        fireBall.Remove();
+                    }
+                    break;
                 }
-                //if (fireBall.GetDestination().Intersects(new Rectangle(collisionRects.X,collisionRects.Y)collisionRects[j].Left))
-                //{
-
-                //}else if (fireBall.GetDestination().Intersects())
-                //{
-
-                //}
+            }
+            if (!fireBallColliding)
+            {
+                // I guess it would just keep its velocity until collision again.
             }
         }
-
     }
+
 
 
     public void updateEnemyFalling(List<IEntity> enemies)
     {
-        ISpriteEnemy currentEnemy;
         for (int i = 0; i < enemies.Count; i++)
         {
-            //Boolean enemyColliding = true;
-            currentEnemy = (ISpriteEnemy)enemies[i];
+            ISpriteEnemy currentEnemy = (ISpriteEnemy)enemies[i];
+            Rectangle enemyBounds = currentEnemy.GetDestination();
+            bool enemyColliding = false;
+            for (int j = 0; j < collisionRects.Count; j++)
             {
-                for (int j = 0; j < collisionRects.Count; j++)
+                Rectangle blockBounds = collisionRects[j];
+                if (enemyBounds.Intersects(blockBounds))
                 {
-                    if (!currentEnemy.GetDestination().Intersects(collisionRects[j]) && currentEnemy.GetDestination().Intersects(new Rectangle(currentEnemy.GetDestination().X, 385, 16, 16)))
+                    enemyColliding = true;
+                    if (enemyBounds.Bottom > blockBounds.Top &&
+                        enemyBounds.Top < blockBounds.Top &&
+                        enemyBounds.Right > blockBounds.Left &&
+                        enemyBounds.Left < blockBounds.Right)
                     {
-                        currentEnemy.setGroundPosition(480);
+                        currentEnemy.setGroundPosition(blockBounds.Top);
                     }
-                }
-            }
-        }
-    }
-    public void updateItemFalling(List<IEntity> item)
-    {
-        Boolean itemColliding = true;
-        int hitCount = 0;
-
-        for (int j = 0; j < items.Count; j++)
-        {
-            IItem x = (IItem)item[j];
-            for (int i = 0; i < collisionRects.Count; i++)
-            {
-                if (x.GetDestination().Intersects(collisionRects[i]))
-                {
-                    x.setGroundPosition(385);
-                    itemColliding = true;
-                    hitCount++;
+                    else if (enemyBounds.Right > blockBounds.Left &&
+                             enemyBounds.Left < blockBounds.Left)
+                    {
+                        currentEnemy.changeDirection();
+                    }
+                    else if (enemyBounds.Left < blockBounds.Right &&
+                             enemyBounds.Right > blockBounds.Right)
+                    {
+                        currentEnemy.changeDirection();
+                    }
 
                     break;
                 }
             }
-
-            if (hitCount == 0)
+            if (!enemyColliding)
             {
-                itemColliding = false;
-            }
-            if (!itemColliding && x.GetDestination().Intersects(new Rectangle(x.GetDestination().X, 385, 16, 16)))
-            {
-
-                x.setGroundPosition(480);
+                // Make it fall when that functionality is added.
+                //currentEnemy.setGroundPosition(fallingGroundPosition); //set to fall below screen
             }
         }
-        hitCount = 0;
-
-
     }
+
+
+    public void updateItemFalling(List<IEntity> items)
+    {
+        for (int j = 0; j < items.Count; j++)
+        {
+            IItem item = (IItem)items[j];
+            Rectangle itemBounds = item.GetDestination();
+            bool itemColliding = false;
+            for (int i = 0; i < collisionRects.Count; i++)
+            {
+                Rectangle blockBounds = collisionRects[i];
+                if (itemBounds.Intersects(blockBounds))
+                {
+                    itemColliding = true;
+                    if (itemBounds.Bottom > blockBounds.Top &&
+                        itemBounds.Top < blockBounds.Top &&
+                        itemBounds.Right > blockBounds.Left &&
+                        itemBounds.Left < blockBounds.Right)
+                    {
+                        item.setGroundPosition(blockBounds.Top - 32);
+                    }
+                    else if (itemBounds.Right > blockBounds.Left &&
+                             itemBounds.Left < blockBounds.Left)
+                    {
+                        item.swapDirection();
+                    }
+                    else if (itemBounds.Left < blockBounds.Right &&
+                             itemBounds.Right > blockBounds.Right)
+                    {
+                        item.swapDirection();
+                    }
+                    break;
+                }
+            }
+
+            if (!itemColliding)
+            {
+                if (itemBounds.Intersects(new Rectangle(itemBounds.X, 385, 16, 16)))
+                {
+                    item.setGroundPosition(480);
+                }
+            }
+        }
+    }
+
+
 
     public void updateMarioFalling(Mario mar)
     {
-
+        PlayerStateMachine playerStateMachine = mario.getStateMachine();
         Rectangle marioBounds = mar.GetDestination();
         for (int i = 0; i < collisionRects.Count; i++)
         {
             Rectangle blockBounds = collisionRects[i];
-
             if (marioBounds.Intersects(blockBounds))
             {
                 marioIsColliding = true;
                 marHitCount++;
-
                 if (marioBounds.Bottom > blockBounds.Top &&
                     marioBounds.Top < blockBounds.Top &&
                     marioBounds.Right > blockBounds.Left &&
                     marioBounds.Left < blockBounds.Right)
                 {
                     float groundPosition = blockBounds.Top;
-
-                    if (mar.isSmall())
+                    if (playerStateMachine.IsSmall())
                     {
                         mar.updateGroundPosition(groundPosition - 32);
                     }
                     else
                     {
-                        if (mar.IsCrouching())
+                        if (playerStateMachine.IsCrouching())
                         {
                             mar.updateGroundPosition(groundPosition - 42);
                         }
@@ -170,7 +218,6 @@ public class ToggleFalling
                             mar.updateGroundPosition(groundPosition - 64);
                         }
                     }
-
                     break;
                 }
 
@@ -207,6 +254,7 @@ public class ToggleFalling
 
     public void updateLuigiFalling(Luigi lui)
     {
+        PlayerStateMachine playerStateMachine = luigi.getStateMachine();
         Rectangle luigiBounds = lui.GetDestination();
         for (int i = 0; i < collisionRects.Count; i++)
         {
@@ -223,13 +271,13 @@ public class ToggleFalling
                 {
                     float groundPosition = blockBounds.Top;
 
-                    if (lui.isSmall())
+                    if (playerStateMachine.IsSmall())
                     {
                         lui.updateGroundPosition(groundPosition - 32);
                     }
                     else
                     {
-                        if (lui.IsCrouching())
+                        if (playerStateMachine.IsCrouching())
                         {
                             lui.updateGroundPosition(groundPosition - 42);
                         }
@@ -270,8 +318,7 @@ public class ToggleFalling
         {
             lui.updateGroundPosition(lui.GroundPosition() + 100f);
         }
-        
+
         luiHitCount = 0;
     }
 }
-
