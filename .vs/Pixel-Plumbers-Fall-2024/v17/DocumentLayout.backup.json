@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Projects\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\collision\\interaction\\enemyplayerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\enemyplayerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\sprites\\mariosprites\\bigmario\\winbigmario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\mariosprites\\bigmario\\winbigmario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,20 +15,8 @@
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\mariosprites\\smallmario\\winsmallmario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\collision\\interaction\\playerflaginteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\playerflaginteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\commands\\disableplayercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:commands\\disableplayercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,7 +34,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Projects\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
@@ -65,14 +49,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EnemyPlayerInteraction.cs",
-              "DocumentMoniker": "C:\\Projects\\Collision\\Interaction\\EnemyPlayerInteraction.cs",
-              "RelativeDocumentMoniker": "Collision\\Interaction\\EnemyPlayerInteraction.cs",
-              "ToolTip": "C:\\Projects\\Collision\\Interaction\\EnemyPlayerInteraction.cs",
-              "RelativeToolTip": "Collision\\Interaction\\EnemyPlayerInteraction.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Title": "WinBigMario.cs",
+              "DocumentMoniker": "C:\\Projects\\Sprites\\MarioSprites\\BigMario\\WinBigMario.cs",
+              "RelativeDocumentMoniker": "Sprites\\MarioSprites\\BigMario\\WinBigMario.cs",
+              "ToolTip": "C:\\Projects\\Sprites\\MarioSprites\\BigMario\\WinBigMario.cs",
+              "RelativeToolTip": "Sprites\\MarioSprites\\BigMario\\WinBigMario.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBMAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T21:34:34.149Z",
+              "WhenOpened": "2024-12-04T21:39:00.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WinFireMario.cs",
+              "DocumentMoniker": "C:\\Projects\\Sprites\\MarioSprites\\FireMario\\WinFireMario.cs",
+              "RelativeDocumentMoniker": "Sprites\\MarioSprites\\FireMario\\WinFireMario.cs",
+              "ToolTip": "C:\\Projects\\Sprites\\MarioSprites\\FireMario\\WinFireMario.cs*",
+              "RelativeToolTip": "Sprites\\MarioSprites\\FireMario\\WinFireMario.cs*",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T21:38:55.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "WinSmallMario.cs",
+              "DocumentMoniker": "C:\\Projects\\Sprites\\MarioSprites\\SmallMario\\WinSmallMario.cs",
+              "RelativeDocumentMoniker": "Sprites\\MarioSprites\\SmallMario\\WinSmallMario.cs",
+              "ToolTip": "C:\\Projects\\Sprites\\MarioSprites\\SmallMario\\WinSmallMario.cs*",
+              "RelativeToolTip": "Sprites\\MarioSprites\\SmallMario\\WinSmallMario.cs*",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T21:38:50.062Z",
               "EditorCaption": ""
             },
             {
@@ -101,85 +111,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "WinBigMario.cs",
-              "DocumentMoniker": "C:\\Projects\\Sprites\\MarioSprites\\BigMario\\WinBigMario.cs",
-              "RelativeDocumentMoniker": "Sprites\\MarioSprites\\BigMario\\WinBigMario.cs",
-              "ToolTip": "C:\\Projects\\Sprites\\MarioSprites\\BigMario\\WinBigMario.cs",
-              "RelativeToolTip": "Sprites\\MarioSprites\\BigMario\\WinBigMario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T21:32:34.294Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "WinFireMario.cs",
-              "DocumentMoniker": "C:\\Projects\\Sprites\\MarioSprites\\FireMario\\WinFireMario.cs",
-              "RelativeDocumentMoniker": "Sprites\\MarioSprites\\FireMario\\WinFireMario.cs",
-              "ToolTip": "C:\\Projects\\Sprites\\MarioSprites\\FireMario\\WinFireMario.cs",
-              "RelativeToolTip": "Sprites\\MarioSprites\\FireMario\\WinFireMario.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBMAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T21:32:29.395Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WinSmallMario.cs",
-              "DocumentMoniker": "C:\\Projects\\Sprites\\MarioSprites\\SmallMario\\WinSmallMario.cs",
-              "RelativeDocumentMoniker": "Sprites\\MarioSprites\\SmallMario\\WinSmallMario.cs",
-              "ToolTip": "C:\\Projects\\Sprites\\MarioSprites\\SmallMario\\WinSmallMario.cs",
-              "RelativeToolTip": "Sprites\\MarioSprites\\SmallMario\\WinSmallMario.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBMAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T21:32:21.284Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "DisablePlayerCommand.cs",
-              "DocumentMoniker": "C:\\Projects\\Commands\\DisablePlayerCommand.cs",
-              "RelativeDocumentMoniker": "Commands\\DisablePlayerCommand.cs",
-              "ToolTip": "C:\\Projects\\Commands\\DisablePlayerCommand.cs",
-              "RelativeToolTip": "Commands\\DisablePlayerCommand.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwB0AAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T21:15:49.962Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "PlayerFlagInteraction.cs",
-              "DocumentMoniker": "C:\\Projects\\Collision\\Interaction\\PlayerFlagInteraction.cs",
-              "RelativeDocumentMoniker": "Collision\\Interaction\\PlayerFlagInteraction.cs",
-              "ToolTip": "C:\\Projects\\Collision\\Interaction\\PlayerFlagInteraction.cs",
-              "RelativeToolTip": "Collision\\Interaction\\PlayerFlagInteraction.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T21:15:37.575Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Sweep.cs",
-              "DocumentMoniker": "C:\\Projects\\Collision\\Sweep.cs",
-              "RelativeDocumentMoniker": "Collision\\Sweep.cs",
-              "ToolTip": "C:\\Projects\\Collision\\Sweep.cs",
-              "RelativeToolTip": "Collision\\Sweep.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAAlwIoAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T19:46:45.935Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "LevelOne.cs",
               "DocumentMoniker": "C:\\Projects\\Levels\\LevelOne.cs",
               "RelativeDocumentMoniker": "Levels\\LevelOne.cs",

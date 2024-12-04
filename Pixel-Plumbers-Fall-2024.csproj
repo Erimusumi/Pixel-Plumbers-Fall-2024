@@ -15,7 +15,6 @@
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.2.1105" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Code Reviews\Sprint 5\" />
     <Folder Include="Code Reviews\Sprint 3\" />
     <Folder Include="Code Reviews\Sprint 2\" />
     <Folder Include="Commands\BlockCommands\" />
