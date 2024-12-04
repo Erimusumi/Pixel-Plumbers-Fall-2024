@@ -55,7 +55,8 @@ public class Goomba : ISpriteEnemy
     }
 	public void setGroundPosition(float x)
 	{
-		this.groundPosition = x;
+		//this.groundPosition = x;
+		stateMachine.SetGroundPosition(x);
 	}
 
 }

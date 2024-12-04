@@ -22,13 +22,15 @@ public class EnemyPlayerInteraction
     public void Update()
     {
         PlayerStateMachine playerStateMachine = player.getStateMachine();
+        Rectangle playersR = player.GetDestination();
+        Rectangle enemyR = enemy.GetDestination();
+
         if (playerStateMachine.HasStar())
         {
             enemy.beFlipped();
             entitiesRemoved.Add(enemy);
             player.AddScore(100);
-
-        } else if (Overlap.Width >= Overlap.Height)
+        } else if ((Overlap.Width >= Overlap.Height) && (Math.Abs(playersR.Height - playersR.Y) < Math.Abs(enemyR.Height -enemyR.Y)))
         {
             enemy.beStomped();
             player.SetVelocityY(-450);

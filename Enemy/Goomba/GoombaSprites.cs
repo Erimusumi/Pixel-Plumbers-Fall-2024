@@ -39,6 +39,10 @@ public class GoombaSprites
     {
         isOnGround = val;
     }
+    public void SetGroundPosition(float x)
+    {
+        //groundPosition = x;
+    }
 
     public void LeftLogic()
 	{

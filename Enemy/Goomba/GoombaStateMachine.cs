@@ -63,6 +63,10 @@ public class GoombaStateMachine
     {
         _sprite.SetIsOnGround(val);
     }
+	public void SetGroundPosition(float x)
+	{
+		_sprite.SetGroundPosition(x);
+	}
     public void Update()
 	{
 		Rectangle mHold = mario.GetDestination();
@@ -78,10 +82,10 @@ public class GoombaStateMachine
         _sprite.ApplyGravity();
 		if (_currentState != GoombaState.Start)
 		{
-            SetIsOnGround(false);
-        }
+			SetIsOnGround(false);
+		}
 
-        switch (_currentState)
+		switch (_currentState)
 		{
             case GoombaState.Left:
 				_sprite.LeftLogic();
