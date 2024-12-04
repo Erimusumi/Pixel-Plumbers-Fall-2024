@@ -30,4 +30,5 @@ public interface IPlayer : IEntity
 
     public void ResetScoreMult();
     public void IncreaseScoreMult();
+    public void playSound(int i);
 }

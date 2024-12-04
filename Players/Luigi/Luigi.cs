@@ -535,4 +535,8 @@ public class Luigi : IPlayer
     {
         game.hudManager.CollectCoin();
     }
+    public void playSound(int index)
+    {
+        _sfx[index].Play();
+    }
 }
