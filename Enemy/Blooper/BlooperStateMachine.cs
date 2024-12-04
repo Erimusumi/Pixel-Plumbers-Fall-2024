@@ -12,7 +12,7 @@ public class BlooperStateMachine
     private BlooperSprites _sprite;
     private Boolean _isFlipped = false;
     private Mario mario;
-
+    private int RiseMore = 0;
     public BlooperStateMachine(int posX, int posY, Mario mario)
     {
         _sprite = new BlooperSprites(posX, posY);
@@ -48,21 +48,23 @@ public class BlooperStateMachine
         } else if ((holdMario.X > holdSprite.X) && (Math.Abs(holdMario.X - holdSprite.X) > 5))
         {
             _currentState = BlooperState.Right;
-        } else
+        }else
         {
             _currentState = BlooperState.Idle;
         }
 
+        RiseMore = 384 - holdMario.Y;
+
         switch (_currentState)
         {
             case BlooperState.Left:
-                _sprite.LeftLogic(mario);
+                _sprite.LeftLogic(RiseMore);
                 break;
             case BlooperState.Right:
-                _sprite.RightLogic(mario);
+                _sprite.RightLogic(RiseMore);
                 break;
             case BlooperState.Idle:
-                _sprite.Idle(mario);
+                _sprite.Idle(RiseMore);
                 break;
             case BlooperState.Flipped:
                 _sprite.FlippedLogic();

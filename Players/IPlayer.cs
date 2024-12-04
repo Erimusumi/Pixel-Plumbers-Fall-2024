@@ -12,7 +12,6 @@ public interface IPlayer : IEntity
     public void Jump();
     public void JumpStop();
     public void Crouch();
-    public bool HasStar();
     public void TakeDamage();
     public void SetVelocityY(float vY);
     public void SetVelocityX(float vX);
@@ -22,7 +21,7 @@ public interface IPlayer : IEntity
     public bool GetIsOnGround();
     public void ApplyGravity(GameTime gameTime);
     public void CollectStar();
-    public PlayerStateMachine.PlayerGameState GetGameState();
     public void PowerUp();
-    public bool isFire();
+    public void SetWin();
+    public PlayerStateMachine getStateMachine();
 }

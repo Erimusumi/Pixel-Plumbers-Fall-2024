@@ -56,10 +56,15 @@ public class BlooperSprites
         destinationRectangle = new Rectangle(position, posY, height * scaleUp, width * scaleUp);
     }
 
-    public void Idle(Mario mario)
+    public int YVal()
+    {
+        return posY;
+    }
+
+    public void Idle(int riseMore)
     {
         counter++;
-        int posYBalance = 170-(minFall-posY);
+        int posYBalance = 170-(minFall-posY) + riseMore;
 
         if (counter < posYBalance)
         {
@@ -76,16 +81,16 @@ public class BlooperSprites
         destinationRectangle = new Rectangle(position, posY, height * scaleUp, width * scaleUp);
     }
 
-    public void LeftLogic(Mario mario)
+    public void LeftLogic(int riseMore)
     {
         counterLR = 1;
-        Idle(mario);
+        Idle(riseMore);
         counterLR = 0;
     }
-    public void RightLogic(Mario mario)
+    public void RightLogic(int riseMore)
     {
         counterLR = 2;
-        Idle(mario);
+        Idle(riseMore);
         counterLR = 0;
     }
     public void StompedLogic()

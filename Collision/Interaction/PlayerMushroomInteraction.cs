@@ -13,7 +13,7 @@ public class PlayerMushroomInteraction
     private List<IEntity> entitiesRemoved;
     int mushroomIndex;
     int marioIndex;
-    
+
     public PlayerMushroomInteraction(IPlayer play, Mushroom mush, List<IEntity> entitiesRemoved)
     {
         player = play;
@@ -23,19 +23,15 @@ public class PlayerMushroomInteraction
 
     public void update()
     {
-     
+        PlayerStateMachine playerStateMachine = player.getStateMachine();
         mushroom.collect();
-
-
-        if (player.GetGameState() == PlayerStateMachine.PlayerGameState.Small)
+        if (playerStateMachine.IsSmall())
         {
             player.PowerUp();
         }
-
         removeFromList();
-        
-        
     }
+    
     private void removeFromList()
     {
         entitiesRemoved.Add(mushroom);
@@ -44,6 +40,6 @@ public class PlayerMushroomInteraction
     }
 
 }
-    
+
 
 

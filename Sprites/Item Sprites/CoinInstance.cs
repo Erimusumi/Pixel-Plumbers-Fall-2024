@@ -31,17 +31,20 @@ public class CoinInstance : ISprite
 
         currentFrame = 0;
         lastFrame = 4;
+        ticks = 0;
     }
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
         Rectangle sourceRectangle = frames[currentFrame];
         spriteBatch.Draw(ItemTexture, position, sourceRectangle, Color.White);
+        
+        
 
     }
 
     public void Update(GameTime gametime)
     {
-        if (ticks > 8)
+        if (ticks > 5)
         {
             ticks = 0;
             if (currentFrame >= lastFrame)

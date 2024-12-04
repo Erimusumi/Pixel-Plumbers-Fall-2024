@@ -58,8 +58,8 @@ public class ToggleFalling
     public void updateFireBallFalling(List<IEntity> fireBalls)
     {
         Fireball fireBall;
-        
-        
+
+
         for (int i = 0; i < fireBalls.Count; i++)
         {
             fireBall = (Fireball)fireBalls[i];
@@ -137,31 +137,28 @@ public class ToggleFalling
 
     public void updateMarioFalling(Mario mar)
     {
-
+        PlayerStateMachine playerStateMachine = mario.getStateMachine();
         Rectangle marioBounds = mar.GetDestination();
         for (int i = 0; i < collisionRects.Count; i++)
         {
             Rectangle blockBounds = collisionRects[i];
-
             if (marioBounds.Intersects(blockBounds))
             {
                 marioIsColliding = true;
                 marHitCount++;
-
                 if (marioBounds.Bottom > blockBounds.Top &&
                     marioBounds.Top < blockBounds.Top &&
                     marioBounds.Right > blockBounds.Left &&
                     marioBounds.Left < blockBounds.Right)
                 {
                     float groundPosition = blockBounds.Top;
-
-                    if (mar.isSmall())
+                    if (playerStateMachine.IsSmall())
                     {
                         mar.updateGroundPosition(groundPosition - 32);
                     }
                     else
                     {
-                        if (mar.IsCrouching())
+                        if (playerStateMachine.IsCrouching())
                         {
                             mar.updateGroundPosition(groundPosition - 42);
                         }
@@ -170,7 +167,6 @@ public class ToggleFalling
                             mar.updateGroundPosition(groundPosition - 64);
                         }
                     }
-
                     break;
                 }
 
@@ -207,6 +203,7 @@ public class ToggleFalling
 
     public void updateLuigiFalling(Luigi lui)
     {
+        PlayerStateMachine playerStateMachine = luigi.getStateMachine();
         Rectangle luigiBounds = lui.GetDestination();
         for (int i = 0; i < collisionRects.Count; i++)
         {
@@ -223,13 +220,13 @@ public class ToggleFalling
                 {
                     float groundPosition = blockBounds.Top;
 
-                    if (lui.isSmall())
+                    if (playerStateMachine.IsSmall())
                     {
                         lui.updateGroundPosition(groundPosition - 32);
                     }
                     else
                     {
-                        if (lui.IsCrouching())
+                        if (playerStateMachine.IsCrouching())
                         {
                             lui.updateGroundPosition(groundPosition - 42);
                         }
@@ -270,7 +267,7 @@ public class ToggleFalling
         {
             lui.updateGroundPosition(lui.GroundPosition() + 100f);
         }
-        
+
         luiHitCount = 0;
     }
 }
