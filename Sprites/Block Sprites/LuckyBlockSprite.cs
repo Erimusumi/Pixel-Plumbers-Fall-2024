@@ -164,7 +164,7 @@ public class LuckyBlockSprite : IBlock
     }
     public void bump()
     {
-
+        bumping = true;
     }
     public void broke()
     {
