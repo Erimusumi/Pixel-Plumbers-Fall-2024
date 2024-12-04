@@ -55,10 +55,14 @@ public class GoombaStateMachine
 		}
 	}
 
-	public bool IsOnGround()
+	public bool GetIsOnGround()
 	{
-		return _sprite.IsOnGround();
+		return _sprite.GetIsOnGround();
 	}
+    public void SetIsOnGround(bool val)
+    {
+        _sprite.SetIsOnGround(val);
+    }
 
     public void Update()
 	{

@@ -31,9 +31,13 @@ public class GoombaSprites
 
     private float rotation = 0f;
 
-    public bool IsOnGround()
+    public bool GetIsOnGround()
     {
         return isOnGround;
+    }
+    public void SetIsOnGround(bool val)
+    {
+        isOnGround = val;
     }
 
     public void LeftLogic()
