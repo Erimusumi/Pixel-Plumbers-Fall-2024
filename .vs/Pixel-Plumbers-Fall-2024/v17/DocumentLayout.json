@@ -1,42 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\",
+  "WorkspaceRootPath": "C:\\Projects\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\collision\\interaction\\enemyplayerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\enemyplayerinteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\players\\luigi\\luigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:players\\luigi\\luigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\collision\\interaction\\otherenemyinteractions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\otherenemyinteractions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\players\\mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:players\\mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\hud\\scorepopup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:hud\\scorepopup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\projectile\\fireball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:projectile\\fireball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\hud\\hudscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:hud\\hudscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\hud\\hudmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:hud\\hudmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\players\\iplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:players\\iplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\creat\\source\\repos\\pixel-plumbers-fall-2024\\collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\enemy\\goomba\\goomba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:enemy\\goomba\\goomba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\enemy\\goomba\\goombasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:enemy\\goomba\\goombasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\enemy\\goomba\\goombastatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:enemy\\goomba\\goombastatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,17 +42,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "Game1.cs",
-              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Game1.cs",
+              "DocumentMoniker": "C:\\Projects\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
-              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Game1.cs",
+              "ToolTip": "C:\\Projects\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAIMAAAAAAAAAAAAcwIkAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAcwIMAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
               "IsPinned": true,
@@ -88,105 +84,93 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ScorePopup.cs",
-              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\HUD\\ScorePopup.cs",
-              "RelativeDocumentMoniker": "HUD\\ScorePopup.cs",
-              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\HUD\\ScorePopup.cs",
-              "RelativeToolTip": "HUD\\ScorePopup.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAcwDoAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Sweep.cs",
+              "DocumentMoniker": "C:\\Projects\\Collision\\Sweep.cs",
+              "RelativeDocumentMoniker": "Collision\\Sweep.cs",
+              "ToolTip": "C:\\Projects\\Collision\\Sweep.cs",
+              "RelativeToolTip": "Collision\\Sweep.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAQwGsAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T19:24:42.002Z",
+              "WhenOpened": "2024-12-04T19:46:45.935Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "IPlayer.cs",
-              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Players\\IPlayer.cs",
-              "RelativeDocumentMoniker": "Players\\IPlayer.cs",
-              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Players\\IPlayer.cs",
-              "RelativeToolTip": "Players\\IPlayer.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAA0wBkAAAAwAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "EnemyPlayerInteraction.cs",
+              "DocumentMoniker": "C:\\Projects\\Collision\\Interaction\\EnemyPlayerInteraction.cs",
+              "RelativeDocumentMoniker": "Collision\\Interaction\\EnemyPlayerInteraction.cs",
+              "ToolTip": "C:\\Projects\\Collision\\Interaction\\EnemyPlayerInteraction.cs",
+              "RelativeToolTip": "Collision\\Interaction\\EnemyPlayerInteraction.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwCAAAABhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T05:07:01.748Z",
+              "WhenOpened": "2024-12-04T21:03:44.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Goomba.cs",
+              "DocumentMoniker": "C:\\Projects\\Enemy\\Goomba\\Goomba.cs",
+              "RelativeDocumentMoniker": "Enemy\\Goomba\\Goomba.cs",
+              "ToolTip": "C:\\Projects\\Enemy\\Goomba\\Goomba.cs",
+              "RelativeToolTip": "Enemy\\Goomba\\Goomba.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAjwDoAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T20:56:33.961Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "HudScore.cs",
-              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\HUD\\HudScore.cs",
-              "RelativeDocumentMoniker": "HUD\\HudScore.cs",
-              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\HUD\\HudScore.cs",
-              "RelativeToolTip": "HUD\\HudScore.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAACmAAAAAAAAAA==",
+              "Title": "GoombaStateMachine.cs",
+              "DocumentMoniker": "C:\\Projects\\Enemy\\Goomba\\GoombaStateMachine.cs",
+              "RelativeDocumentMoniker": "Enemy\\Goomba\\GoombaStateMachine.cs",
+              "ToolTip": "C:\\Projects\\Enemy\\Goomba\\GoombaStateMachine.cs",
+              "RelativeToolTip": "Enemy\\Goomba\\GoombaStateMachine.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAwwEEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T19:49:01.168Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "HudManager.cs",
-              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\HUD\\HudManager.cs",
-              "RelativeDocumentMoniker": "HUD\\HudManager.cs",
-              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\HUD\\HudManager.cs",
-              "RelativeToolTip": "HUD\\HudManager.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAADMAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T19:48:09.109Z",
+              "WhenOpened": "2024-12-04T20:40:27.809Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Fireball.cs",
-              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Projectile\\Fireball.cs",
-              "RelativeDocumentMoniker": "Projectile\\Fireball.cs",
-              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Projectile\\Fireball.cs",
-              "RelativeToolTip": "Projectile\\Fireball.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBcAAAAkAAAAAAAAAA==",
+              "Title": "GoombaSprites.cs",
+              "DocumentMoniker": "C:\\Projects\\Enemy\\Goomba\\GoombaSprites.cs",
+              "RelativeDocumentMoniker": "Enemy\\Goomba\\GoombaSprites.cs",
+              "ToolTip": "C:\\Projects\\Enemy\\Goomba\\GoombaSprites.cs",
+              "RelativeToolTip": "Enemy\\Goomba\\GoombaSprites.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwCUAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T19:37:46.114Z",
+              "WhenOpened": "2024-12-04T20:56:31.977Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Sweep.cs",
-              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Collision\\Sweep.cs",
-              "RelativeDocumentMoniker": "Collision\\Sweep.cs",
-              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Collision\\Sweep.cs",
-              "RelativeToolTip": "Collision\\Sweep.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAADwv10AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T19:33:48.644Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Luigi.cs",
-              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Players\\Luigi\\Luigi.cs",
-              "RelativeDocumentMoniker": "Players\\Luigi\\Luigi.cs",
-              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Players\\Luigi\\Luigi.cs",
-              "RelativeToolTip": "Players\\Luigi\\Luigi.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAAwDgAAAChAAAAAAAAAA==",
+              "Title": "OtherEnemyInteractions.cs",
+              "DocumentMoniker": "C:\\Projects\\Collision\\Interaction\\OtherEnemyInteractions.cs",
+              "RelativeDocumentMoniker": "Collision\\Interaction\\OtherEnemyInteractions.cs",
+              "ToolTip": "C:\\Projects\\Collision\\Interaction\\OtherEnemyInteractions.cs",
+              "RelativeToolTip": "Collision\\Interaction\\OtherEnemyInteractions.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAADgvyMAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T19:31:58.324Z",
+              "WhenOpened": "2024-12-04T19:45:40.259Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Mario.cs",
-              "DocumentMoniker": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Players\\Mario\\Mario.cs",
-              "RelativeDocumentMoniker": "Players\\Mario\\Mario.cs",
-              "ToolTip": "C:\\Users\\creat\\source\\repos\\Pixel-Plumbers-Fall-2024\\Players\\Mario\\Mario.cs",
-              "RelativeToolTip": "Players\\Mario\\Mario.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAAwDkAAAAhAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "LevelOne.cs",
+              "DocumentMoniker": "C:\\Projects\\Levels\\LevelOne.cs",
+              "RelativeDocumentMoniker": "Levels\\LevelOne.cs",
+              "ToolTip": "C:\\Projects\\Levels\\LevelOne.cs",
+              "RelativeToolTip": "Levels\\LevelOne.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAvwG8AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T18:33:52.755Z",
+              "WhenOpened": "2024-11-27T17:31:38.596Z",
               "EditorCaption": ""
             }
           ]

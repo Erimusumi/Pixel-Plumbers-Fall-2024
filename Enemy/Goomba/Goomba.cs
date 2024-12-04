@@ -9,9 +9,9 @@ public class Goomba : ISpriteEnemy
 {
     private GoombaStateMachine stateMachine;
 	private float groundPosition = 385f;
-	public Goomba(int posX, int posY, IPlayer player)
+	public Goomba(int posX, int posY, IPlayer mario, IPlayer luigi)
 	{
-		stateMachine = new GoombaStateMachine(posX, posY, player);
+		stateMachine = new GoombaStateMachine(posX, posY, mario, luigi);
 	}
 	public Boolean IsFlipped()
 	{
@@ -31,7 +31,7 @@ public class Goomba : ISpriteEnemy
 		stateMachine.beFlipped();
 	}
 
-	public void Updates()
+    public void Updates()
 	{
 		stateMachine.Update();
 	}
@@ -40,6 +40,14 @@ public class Goomba : ISpriteEnemy
 	{
 		return stateMachine.GetDestination();
 	}
+    public bool GetIsOnGround()
+    {
+        return stateMachine.GetIsOnGround();
+    }
+    public void SetIsOnGround(bool val)
+    {
+        stateMachine.SetIsOnGround(val);
+    }
 
     public void Draw(SpriteBatch sb, Texture2D Texture)
 	{
@@ -47,7 +55,8 @@ public class Goomba : ISpriteEnemy
     }
 	public void setGroundPosition(float x)
 	{
-		this.groundPosition = x;
+		//this.groundPosition = x;
+		stateMachine.SetGroundPosition(x);
 	}
 
 }

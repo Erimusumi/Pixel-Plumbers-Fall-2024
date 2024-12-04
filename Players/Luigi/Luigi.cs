@@ -534,4 +534,12 @@ public class Luigi : IPlayer
         game.hudManager.AddScore(scoreAmt * this.scoreMult);
         //game.scorePopups.Add(new ScorePopup(luigiPosition, scoreFont, this.game, game.scorePopups, this, scoreAmt * this.scoreMult));
     }
+    public void AddCoin()
+    {
+        game.hudManager.CollectCoin();
+    }
+    public void playSound(int index)
+    {
+        _sfx[index].Play();
+    }
 }

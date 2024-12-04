@@ -7,13 +7,13 @@ using Pixel_Plumbers_Fall_2024;
 
 public class BlooperStateMachine
 {
-    private enum BlooperState { Left, Right, Idle, Flipped };
-    private BlooperState _currentState = BlooperState.Idle;
+    private enum BlooperState { Left, Right, Idle, Flipped, Start};
+    private BlooperState _currentState = BlooperState.Start;
     private BlooperSprites _sprite;
     private Boolean _isFlipped = false;
-    private Mario mario;
+    private IPlayer mario;
     private int RiseMore = 0;
-    public BlooperStateMachine(int posX, int posY, Mario mario)
+    public BlooperStateMachine(int posX, int posY, IPlayer mario, IPlayer luigi)
     {
         _sprite = new BlooperSprites(posX, posY);
         this.mario = mario;
@@ -39,8 +39,19 @@ public class BlooperStateMachine
     }
     public void Update()
     {
+
         Rectangle holdSprite = _sprite.GetDestination();
         Rectangle holdMario = mario.GetDestination();
+        Rectangle holdLuigi = mario.GetDestination();
+        Rectangle goombaRec = _sprite.GetDestination();
+        if (((goombaRec.X - holdMario.X) > 0) && ((goombaRec.X - holdMario.X) < 400) && (_currentState == BlooperState.Start))
+        {
+            _currentState = BlooperState.Left;
+        }
+        if (((goombaRec.X - holdLuigi.X) > 0) && ((goombaRec.X - holdLuigi.X) < 400) && (_currentState == BlooperState.Start))
+        {
+            _currentState = BlooperState.Left;
+        }
 
         if ((holdMario.X < holdSprite.X) && (Math.Abs(holdMario.X - holdSprite.X) > 5))
         {

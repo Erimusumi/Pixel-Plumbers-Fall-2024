@@ -521,7 +521,8 @@ public class Mario : IPlayer
 
     public void ResetScoreMult()
     {
-        if (isOnGround && !playerStateMachine.HasStar())
+        
+        if (isOnGround && !this.playerStateMachine.HasStar())
         {
             scoreMult = 1;
         }
@@ -531,5 +532,13 @@ public class Mario : IPlayer
     {
         game.hudManager.AddScore(scoreAmt * this.scoreMult);
         //game.scorePopups.Add(new ScorePopup(marioPosition, scoreFont, this.game, game.scorePopups, this, scoreAmt * this.scoreMult));
+    }
+    public void AddCoin()
+    {
+        game.hudManager.CollectCoin();
+    }
+    public void playSound(int index)
+    {
+        _sfx[index].Play();
     }
 }

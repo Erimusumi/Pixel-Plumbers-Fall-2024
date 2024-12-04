@@ -22,7 +22,7 @@ public class Sweep
     {
         Boolean containsEnemy = false;
         Type type = entities[index].GetType();
-        if (type == typeof(Goomba) || type == typeof(Goomba2) || type == typeof(Koopa) || type == typeof(Cheeps))
+        if (type == typeof(Goomba) || type == typeof(Koopa) || type == typeof(Cheeps))
         {
             containsEnemy = true;
             
@@ -97,9 +97,9 @@ public class Sweep
     PlayerObstacleInteraction MarioObstacleInteraction;
     ItemObstacleInteraction ItemObstacleInteraction;
     ItemBlockInteraction ItemBlockInteraction;
-    EnemyObstacleInteraction EnemyObstacleInteraction;
     PlayerItemInteraction MarioItemInteraction;
     PlayerFlagInteraction PlayerFlagInteraction;
+    ObstacleFireballInteraction ObstacleFireballInteraction;
    
 
     public void iterateListInteractions(List<IEntity> entities, List<IEntity> entitiesRemoved)
@@ -312,15 +312,15 @@ public class Sweep
             MarioObstacleInteraction.update();
 
         }
-        else if (ContainsEnemy(entities, index1) && ContainsObstacle(entities, index2))
+        else if (item1.GetType() == typeof(Fireball) && (ContainsObstacle(entities,index2)))
         {
-            EnemyObstacleInteraction = new EnemyObstacleInteraction((ISpriteEnemy)item1, (IObstacle)item2);
-            EnemyObstacleInteraction.update();
+            ObstacleFireballInteraction = new ObstacleFireballInteraction((Fireball)item1,(IObstacle)item2);
+            ObstacleFireballInteraction.Update();
         }
-        else if (ContainsObstacle(entities, index1) && ContainsEnemy(entities, index2))
+        else if (item2.GetType() == typeof(Fireball) && (ContainsObstacle(entities, index1)))
         {
-            EnemyObstacleInteraction = new EnemyObstacleInteraction((ISpriteEnemy)item2, (IObstacle)item1);
-            EnemyObstacleInteraction.update();
+            ObstacleFireballInteraction = new ObstacleFireballInteraction((Fireball)item2, (IObstacle)item1);
+            ObstacleFireballInteraction.Update();
         }
         
     }

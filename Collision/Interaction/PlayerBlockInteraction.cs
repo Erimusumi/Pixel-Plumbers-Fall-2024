@@ -46,11 +46,13 @@ public class PlayerBlockInteraction
             player.SetPositionY(blockRect.Bottom);
             player.SetVelocityY(0); // Prevent player from going higher
 
-            if (block is LuckyBlockSprite luckyBlock)
+            block.bump();
+            if (!player.getStateMachine().IsSmall())
             {
-                luckyBlock.bump = true;
-
+                block.broke();
             }
+            
+            
 
 
         }

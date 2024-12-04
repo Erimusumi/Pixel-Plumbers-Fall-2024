@@ -134,7 +134,10 @@ namespace Pixel_Plumbers_Fall_2024
                 soundManager.GetSound("fireball"),
                 soundManager.GetSound("jump"),
                 soundManager.GetSound("death"),
-                soundManager.GetSound("flagpole")
+                soundManager.GetSound("flagpole"),
+                soundManager.GetSound("coin"),
+                soundManager.GetSound("powerup"),
+                soundManager.GetSound("1-up")
             };
 
             mario = new Mario(this, entities, marioSounds, textureManager, new GameTime(), this.gameStateMachine, this.luigi, ref levelScreenFonts);

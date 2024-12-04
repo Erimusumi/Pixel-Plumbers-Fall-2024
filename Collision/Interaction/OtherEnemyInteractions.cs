@@ -9,13 +9,17 @@ public class OtherEnemyInteraction
 {
     ISpriteEnemy enemy;
     IEntity item2;
+
     public OtherEnemyInteraction(ISpriteEnemy _enemy, IEntity _item2)
     {
         enemy = _enemy;
         item2 = _item2;
     }
+
     public void Update()
     {
+        Rectangle EnemyRec = enemy.GetDestination();
+        Rectangle ItemRec = item2.GetDestination();
 
         if (item2.GetType() == typeof(Koopa))
         {
@@ -28,7 +32,12 @@ public class OtherEnemyInteraction
             {
                 enemy.changeDirection();
             }
-        } else
+        }
+        else if (Math.Abs(EnemyRec.Height - EnemyRec.Y) < ItemRec.Y)
+        {
+            enemy.SetIsOnGround(true);
+        }
+        else
         {
             enemy.changeDirection();
         }

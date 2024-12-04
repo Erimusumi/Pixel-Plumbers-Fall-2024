@@ -26,6 +26,9 @@ public interface IPlayer : IEntity
     public PlayerStateMachine getStateMachine();
     public void AddScore(int scoreAmt);
 
+    public void AddCoin();
+
     public void ResetScoreMult();
     public void IncreaseScoreMult();
+    public void playSound(int i);
 }
