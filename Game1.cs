@@ -255,11 +255,11 @@ namespace Pixel_Plumbers_Fall_2024
         {
             if (gameStateMachine.isLevelOne())
             {
-                camera.Follow(mario.marioPosition, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), levelOne.mapSize.X);
+                camera.Follow(mario, luigi, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), levelOne.mapSize.X);
             }
             else if (gameStateMachine.isLevelTwo())
             {
-                camera.Follow(mario.marioPosition, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), levelTwo.mapSize.X);
+                camera.Follow(mario, luigi, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), levelTwo.mapSize.X);
             }
 
         }
@@ -314,10 +314,16 @@ namespace Pixel_Plumbers_Fall_2024
         private void DrawGameScreen()
         {
             if (gameStateMachine.isCurrentStateStart())
+            {
                 startScreenSprite.Draw(spriteBatch, new Vector2(200, 200));
+                camera.Reset();
+            }
 
             if (gameStateMachine.isLevelScreen())
+            {
                 levelScreenSprite.Draw(spriteBatch, new Vector2(200, 200));
+                camera.Reset();
+            }
 
             if (gameStateMachine.isCurrentStateRunning() || gameStateMachine.isCurrentStatePaused())
             {
@@ -348,7 +354,7 @@ namespace Pixel_Plumbers_Fall_2024
         {
             foreach (var sp in scorePopups)
             {
-                sp.Draw(spriteBatch);
+                // sp.Draw(spriteBatch);
             }
         }
 
