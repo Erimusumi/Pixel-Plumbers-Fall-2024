@@ -3,6 +3,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework;
 using Pixel_Plumbers_Fall_2024;
 using System;
@@ -32,7 +33,6 @@ public class LuckyBlockSprite : IBlock
     private bool hasItemAppeared;
     SpriteBatch spriteBatch;
     private Vector2 i_position;
-
     public LuckyBlockSprite(Texture2D texture, SpriteBatch spriteBatch, Texture2D itemTexture, Game1 game, Mario mario, Vector2 position)
     {
         Texture = texture;
@@ -51,6 +51,8 @@ public class LuckyBlockSprite : IBlock
         this.mario = mario;
         this.position = position;
         destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 31, 31);
+        
+        
     }
 
     public void Update(GameTime gametime)
@@ -77,20 +79,35 @@ public class LuckyBlockSprite : IBlock
             }
             else if (playerStateMachine.IsBig())
             {
-                item = new Fire(spriteBatch, itemTexture, i_position);
+                Random rand = new Random();
+                int r = rand.Next(10);
+                if (r <= 6)
+                {
+                    item = new Fire(spriteBatch, itemTexture, i_position); 
+                }
+                else
+                {
+                    coin = new Coin(spriteBatch, itemTexture, i_position);
+                    mario.AddCoin();
+                    isItem = false;
+                }
+               
             }
             else if (playerStateMachine.IsFire())
             {
                 Random rand = new Random();
                int r = rand.Next(10);
-                if (r <= 5)
+                if (r <= 3)
                 {
                     item = new Star(spriteBatch, itemTexture, i_position);
                 }
                 else
                 {
                     coin = new Coin(spriteBatch,itemTexture,i_position);
+                    mario.AddCoin();
+                    
                     isItem = false;
+                    
                 }
                 
             }

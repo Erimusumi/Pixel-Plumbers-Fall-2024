@@ -531,4 +531,8 @@ public class Luigi : IPlayer
     {
         game.hudManager.AddScore(scoreAmt * this.scoreMult);
     }
+    public void AddCoin()
+    {
+        game.hudManager.CollectCoin();
+    }
 }

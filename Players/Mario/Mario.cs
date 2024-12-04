@@ -530,4 +530,8 @@ public class Mario : IPlayer
     {
         game.hudManager.AddScore(scoreAmt * this.scoreMult);
     }
+    public void AddCoin()
+    {
+        game.hudManager.CollectCoin();
+    }
 }
