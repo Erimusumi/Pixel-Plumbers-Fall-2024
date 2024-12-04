@@ -53,6 +53,8 @@ public class Mario : IPlayer
     private GameStateMachine gsm;
     private Luigi luigi;
 
+    private int scoreMult;
+    private const int maxScoreMult = 16;
     public Mario(Game1 game, List<IEntity> entities, List<SoundEffect> sfx, TextureManager textureManager, GameTime gametime, GameStateMachine gsm, Luigi luigi)
     {
         this.textureManager = textureManager;
@@ -74,6 +76,8 @@ public class Mario : IPlayer
 
         this.gsm = gsm;
         this.luigi = luigi;
+
+        this.scoreMult = 1;
 
         /*
          * SFX loaded in specific order:
@@ -498,5 +502,31 @@ public class Mario : IPlayer
     public PlayerStateMachine getStateMachine()
     {
         return this.playerStateMachine;
+    }
+
+    //public int GetScoreMult()
+    //{
+    //    return this.scoreMult;
+    //}
+
+    public void IncreaseScoreMult()
+    {
+        if ((scoreMult < maxScoreMult) && !isSwimmingLevel)
+        {
+            this.scoreMult *= 2;
+        }
+    }
+
+    public void ResetScoreMult()
+    {
+        if (isOnGround && !this.HasStar())
+        {
+            scoreMult = 1;
+        }
+    }
+
+    public void AddScore(int scoreAmt)
+    {
+        game.hudManager.AddScore(scoreAmt * this.scoreMult);
     }
 }

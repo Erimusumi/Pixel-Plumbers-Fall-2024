@@ -45,7 +45,12 @@ public class HudManager
 
     public void AddScore(int scoreAmt)
     {
-        this.HudScore.AddScore(scoreAmt);
+        bool scoreRollover = this.HudScore.AddScore(scoreAmt);
+
+        if (scoreRollover)
+        {
+            this.HudLives.AddLife();
+        }
     }
 
     public int GetScore()

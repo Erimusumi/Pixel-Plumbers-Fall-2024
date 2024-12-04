@@ -26,14 +26,16 @@ public class EnemyPlayerInteraction
         {
             enemy.beFlipped();
             entitiesRemoved.Add(enemy);
-        }
-        else if (Overlap.Width >= Overlap.Height)
+            player.AddScore(100);
+
+        } else if (Overlap.Width >= Overlap.Height)
         {
             enemy.beStomped();
             player.SetVelocityY(-450);
             entitiesRemoved.Add(enemy);
-        }
-        else
+            player.AddScore(100);
+
+        } else
         {
             player.TakeDamage();
         }

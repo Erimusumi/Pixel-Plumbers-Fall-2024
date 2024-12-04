@@ -28,6 +28,7 @@ public class PlayerFirePowerInteraction
         {
             player.PowerUp();
         }
+        player.AddScore(100);
     }
     private void removeFromList()
     {
