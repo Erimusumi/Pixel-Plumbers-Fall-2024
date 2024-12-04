@@ -25,7 +25,7 @@ public class LuckyBlockSprite : IBlock
     private Coin coin;
     private int frames = 3;
     private int wait = 20;
-    public Boolean bump = false;
+    public Boolean bumping = false;
     private Game1 game;
     private Mario mario;
     private Texture2D itemTexture;
@@ -67,7 +67,7 @@ public class LuckyBlockSprite : IBlock
             }
         }
 
-        if (bump && !hasItemAppeared)
+        if (bumping && !hasItemAppeared)
         {
             Boolean isItem = true;
             i_position = new Vector2(position.X, position.Y - 31);
@@ -102,10 +102,10 @@ public class LuckyBlockSprite : IBlock
             hasItemAppeared = true;
         }
 
-        if (bump && item != null)  // Added null check
+        if (bumping && item != null)  // Added null check
         {
             item.update(gametime);
-        }else if (bump)
+        }else if (bumping)
         {
             coin.Update(gametime);
         }
@@ -141,5 +141,13 @@ public class LuckyBlockSprite : IBlock
 
     public void Load(GraphicsDeviceManager graphics)
     {
+    }
+    public void bump()
+    {
+
+    }
+    public void broke()
+    {
+
     }
 }

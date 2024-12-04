@@ -79,4 +79,13 @@ public class UnknownBlockSprite : IBlock
     {
 
     }
+
+    public void bump()
+    {
+
+    }
+    public void broke()
+    {
+
+    }
 }

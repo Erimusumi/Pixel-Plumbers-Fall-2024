@@ -357,7 +357,7 @@ public class Luigi : IPlayer
         if (playerStateMachine.IsFire())
         {
             _sfx[2].Play();
-            Fireball f = new Fireball(luigiPosition, itemTexture, gameTime, playerStateMachine.CurrentFaceState, game, _entities);
+            Fireball f = new Fireball(luigiPosition, itemTexture, gameTime, playerStateMachine.CurrentFaceState, game, _entities, this);
             game.fireballs.Add(f);
             fireballTimer = 20;
         }
