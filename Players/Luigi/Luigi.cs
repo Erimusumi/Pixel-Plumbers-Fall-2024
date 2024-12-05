@@ -35,6 +35,7 @@ public class Luigi : IPlayer
     private bool moveKeyPressed = false;
     private bool deathSoundPlaying = false;
     private bool isDead = false;
+    private bool waitingForPartnerToDie = false;
 
     private const float maxSpeed = 3f;
     private const float acceleration = 0.03f;
@@ -54,7 +55,7 @@ public class Luigi : IPlayer
     private int scoreMult;
     private const int maxScoreMult = 16;
     private SpriteFont scoreFont;
-    public Luigi(Game1 game, List<IEntity> entities, List<SoundEffect> sfx, TextureManager textureManager, GameTime gametime, ref GameStateMachine gsm, Mario mario, ref SpriteFont font)
+    public Luigi(Game1 game, List<IEntity> entities, List<SoundEffect> sfx, TextureManager textureManager, GameTime gametime, ref GameStateMachine gsm, ref SpriteFont font)
     {
         this.textureManager = textureManager;
         this.luigiTexture = textureManager.GetTexture("Luigi");
@@ -85,7 +86,6 @@ public class Luigi : IPlayer
         this._sfx = sfx;
 
         this.gsm = gsm;
-        this.mario = mario;
 
         this.scoreMult = 1;
         this.scoreFont = font;
@@ -254,7 +254,7 @@ public class Luigi : IPlayer
 
     public void LuigiDeath()
     {
-        if (playerStateMachine.IsDead())
+        if (playerStateMachine.IsDead() && !waitingForPartnerToDie)
         {
             if (!deathSoundPlaying)
             {
@@ -276,7 +276,11 @@ public class Luigi : IPlayer
             }
             else if (gameResetTimer == 0)
             {
-                if (gsm.isSingleplayer() || (gsm.isMultiplayer() && this.playerStateMachine.IsDead()))
+                if (gsm.isMultiplayer() && !mario.getStateMachine().IsDead())
+                {
+                    waitingForPartnerToDie = true;
+                }
+                else if (gsm.isSingleplayer() || (gsm.isMultiplayer() && mario.getStateMachine().IsDead()))
                 {
                     if (game.hudManager.GetNumLives() <= 0)
                     {
@@ -541,5 +545,10 @@ public class Luigi : IPlayer
     public void playSound(int index)
     {
         _sfx[index].Play();
+    }
+
+    public void SetMarioRef(Mario mario)
+    {
+        this.mario = mario;
     }
 }
