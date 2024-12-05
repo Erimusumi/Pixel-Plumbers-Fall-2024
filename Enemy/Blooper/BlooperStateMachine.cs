@@ -53,10 +53,16 @@ public class BlooperStateMachine
             _currentState = BlooperState.Left;
         }
 
-        if ((holdMario.X < holdSprite.X) && (Math.Abs(holdMario.X - holdSprite.X) > 5))
+        if (
+            ((holdMario.X < holdSprite.X) && (Math.Abs(holdMario.X - holdSprite.X) > 5)) ||
+            ((holdLuigi.X < holdSprite.X) && (Math.Abs(holdLuigi.X - holdSprite.X) > 5))
+            )
         {
             _currentState = BlooperState.Left;
-        } else if ((holdMario.X > holdSprite.X) && (Math.Abs(holdMario.X - holdSprite.X) > 5))
+        } else if (
+            ((holdMario.X > holdSprite.X) && (Math.Abs(holdMario.X - holdSprite.X) > 5)) ||
+            ((holdLuigi.X > holdSprite.X) && (Math.Abs(holdLuigi.X - holdSprite.X) > 5))
+            )
         {
             _currentState = BlooperState.Right;
         }else

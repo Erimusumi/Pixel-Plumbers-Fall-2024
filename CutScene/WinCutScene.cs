@@ -18,16 +18,13 @@ using System.Threading.Tasks;
     public  WinCutScene(IPlayer player, Rectangle currentPosition)
     {
         this.player1 = player;
-        this.stateMachine = player.getStateMachine();
         manager = new CutSceneManager(player);
-        
-        this.currentPosition = currentPosition;
     }
     public void play()
     {
-      
+        stateMachine = player1.GetStateMachine();
         stateMachine.SetPlayerBig();
-        manager.setPlayerPosition(6380, 380);
+        manager.setPlayerPosition(6350, 380);
 
         while (doorDistance >0)
         {
