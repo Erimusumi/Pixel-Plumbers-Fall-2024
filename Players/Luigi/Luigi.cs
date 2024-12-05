@@ -558,4 +558,10 @@ public class Luigi : IPlayer
     {
         this.mario = mario;
     }
+
+    public void Fall()
+    {
+        this.isOnGround = false;
+        this.updateGroundPosition(this.GroundPosition() + 100f);
+    }
 }
