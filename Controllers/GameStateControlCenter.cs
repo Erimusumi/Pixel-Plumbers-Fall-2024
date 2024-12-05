@@ -67,9 +67,6 @@ public class GameStateControlCenter
         ICommand levelTwoCommand = new LevelTwoCommand(gameStateMachine);
         gameMouseController.AddCommand(levelScreenSprite.GetLevelTwoRectangle(), levelTwoCommand);
 
-        ICommand levelThreeCommand = new LevelThreeCommand(gameStateMachine);
-        gameMouseController.AddCommand(levelScreenSprite.GetLevelThreeRectangle(), levelThreeCommand);
-
         ICommand BlackJackCommand = new BlackJackCommand(blackJackStateMachine, gameStateMachine);
         gameMouseController.AddCommand(blackJackStateMachine.DestinationRectangle(), BlackJackCommand);
 
