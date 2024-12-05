@@ -32,3 +32,5 @@ KNOWN BUGS:
     - Mario will not fall down unless jumping
     - Goomba2 and GoombaStateMaåchine2 are temporary.
     - For the MarioOBlock and MarioObstacle Interaction, the gravity is not applied to the mario when mario is on the top of the obstalce/block without jumping.
+    -Mario doesn't animate properly when winning
+    -Mario falls through the floor at times
