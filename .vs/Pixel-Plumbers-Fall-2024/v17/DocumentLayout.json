@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 12,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Document",
@@ -52,7 +52,7 @@
               "RelativeDocumentMoniker": "Game1.cs",
               "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Game1.cs",
               "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAAwAQBAAANAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAwAIBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
               "IsPinned": true,
@@ -81,6 +81,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
@@ -149,8 +153,8 @@
               "Title": "ToggleFalling.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\GroundDetection\\ToggleFalling.cs",
               "RelativeDocumentMoniker": "GroundDetection\\ToggleFalling.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\GroundDetection\\ToggleFalling.cs*",
-              "RelativeToolTip": "GroundDetection\\ToggleFalling.cs*",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\GroundDetection\\ToggleFalling.cs",
+              "RelativeToolTip": "GroundDetection\\ToggleFalling.cs",
               "ViewState": "AgIAAF8AAAAAAAAAAAAuwHgAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-04T23:27:52.642Z",
