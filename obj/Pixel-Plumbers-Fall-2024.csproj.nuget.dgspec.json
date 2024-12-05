@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Pixel-Plumbers-Fall-2024.csproj": {}
+    "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Pixel-Plumbers-Fall-2024.csproj": {}
   },
   "projects": {
-    "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Pixel-Plumbers-Fall-2024.csproj": {
+    "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Pixel-Plumbers-Fall-2024.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Pixel-Plumbers-Fall-2024.csproj",
+        "projectUniqueName": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Pixel-Plumbers-Fall-2024.csproj",
         "projectName": "Pixel-Plumbers-Fall-2024",
-        "projectPath": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\Pixel-Plumbers-Fall-2024.csproj",
-        "packagesPath": "C:\\Users\\helen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\helen\\source\\repos\\PixelPlumbers2\\obj\\",
+        "projectPath": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Pixel-Plumbers-Fall-2024.csproj",
+        "packagesPath": "C:\\Users\\kamau\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\helen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kamau\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

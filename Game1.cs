@@ -141,8 +141,10 @@ namespace Pixel_Plumbers_Fall_2024
                 soundManager.GetSound("1-up")
             };
 
-            mario = new Mario(this, entities, marioSounds, textureManager, new GameTime(), this.gameStateMachine, this.luigi, ref levelScreenFonts);
-            luigi = new Luigi(this, entities, marioSounds, textureManager, new GameTime(), this.gameStateMachine, this.mario, ref levelScreenFonts);
+            gameStateMachine = new GameStateMachine();
+
+            mario = new Mario(this, entities, marioSounds, textureManager, new GameTime(), ref this.gameStateMachine, this.luigi, ref levelScreenFonts);
+            luigi = new Luigi(this, entities, marioSounds, textureManager, new GameTime(), ref this.gameStateMachine, this.mario, ref levelScreenFonts);
 
         }
 
@@ -166,7 +168,6 @@ namespace Pixel_Plumbers_Fall_2024
             marioControlCenter = new MarioControlCenter(mario, marioMovementController);
             luigiControlCenter = new LuigiControlCenter(luigi, luigiMovementController);
 
-            gameStateMachine = new GameStateMachine();
             gameStateKeyboardController = new KeyboardController();
             gameStateMouseController = new MouseController();
 
