@@ -12,11 +12,9 @@ using Pixel_Plumbers_Fall_2024;
 public class Sweep
 {
     GameTime gameTime;
-    private DisablePlayerCommand disablePlayerCommand;
-    public Sweep(GameTime gameTime, DisablePlayerCommand disablePlayerCommand)
+    public Sweep(GameTime gameTime)
     {
         this.gameTime = gameTime;
-        this.disablePlayerCommand = disablePlayerCommand;
     }
     public enum CollisionType { Top, Bottom, Left, Right, DontCare };
 
@@ -129,14 +127,14 @@ public class Sweep
           if (ContainsPlayer(entities, index1) && item2.GetType() == typeof(Flag))
         {
 
-            PlayerFlagInteraction = new PlayerFlagInteraction((IPlayer)item1, (Flag)item2, entitiesRemoved, disablePlayerCommand);
+            PlayerFlagInteraction = new PlayerFlagInteraction((IPlayer)item1, (Flag)item2, entitiesRemoved);
             PlayerFlagInteraction.update();
 
         }
         else if (ContainsPlayer(entities, index2) && item1.GetType() == typeof(Flag))
         {
 
-            PlayerFlagInteraction = new PlayerFlagInteraction((IPlayer)item2, (Flag)item1, entitiesRemoved, disablePlayerCommand);
+            PlayerFlagInteraction = new PlayerFlagInteraction((IPlayer)item2, (Flag)item1, entitiesRemoved);
             PlayerFlagInteraction.update();
         }
         if (ContainsEnemy(entities, index1) && ContainsPlayer(entities, index2))
