@@ -246,7 +246,10 @@ public class Luigi : IPlayer
     {
         if (playerStateMachine.Wins())
         {
-            _sfx[5].Play();
+            luigiVelocity.Y = 0;
+            luigiVelocity.X = 0;
+            luigiPosition.Y++;
+            //_sfx[5].Play();
             playerStateMachine.MakeInvisible();
 
         }

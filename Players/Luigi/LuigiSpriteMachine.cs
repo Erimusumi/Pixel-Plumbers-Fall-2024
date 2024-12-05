@@ -13,6 +13,10 @@ namespace Pixel_Plumbers_Fall_2024
             {
                 newSprite = new DeadLuigi(texture);
             }
+            else if (luigiStateMachine.Wins())
+            {
+                newSprite = GetWinLuigiState(luigiStateMachine, texture);
+            }
             else
             {
                 newSprite = GetSpriteForFaceState(luigiStateMachine, texture);
@@ -183,6 +187,21 @@ namespace Pixel_Plumbers_Fall_2024
                 default:
                     return null;
             }
+        }
+
+        private static ICharacter GetWinLuigiState(PlayerStateMachine marioStateMachine, Texture2D texture)
+        {
+            switch (marioStateMachine.CurrentGameState)
+            {
+                case PlayerStateMachine.PlayerGameState.Small:
+                    return new WinSmallLuigi(texture);
+                case PlayerStateMachine.PlayerGameState.Big:
+                    return new WinBigLuigi(texture);
+                case PlayerStateMachine.PlayerGameState.Fire:
+                    return new WinFireLuigi(texture);
+                default: return null;
+            }
+
         }
     }
 }

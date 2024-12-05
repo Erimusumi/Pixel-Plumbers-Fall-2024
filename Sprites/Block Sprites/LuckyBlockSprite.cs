@@ -52,7 +52,6 @@ public class LuckyBlockSprite : IBlock
         this.position = position;
         destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 31, 31);
         
-        
     }
 
     public void Update(GameTime gametime)

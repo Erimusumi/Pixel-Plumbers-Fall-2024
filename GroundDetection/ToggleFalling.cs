@@ -20,6 +20,7 @@ public class ToggleFalling
     private Luigi luigi;
     private Ground ground;
     private float fallingGroundPosition = 480f;
+    private float groundPosition = 385f;
 
     FilterEntities filterEntities;
     Boolean marioIsColliding = true;
@@ -118,7 +119,7 @@ public class ToggleFalling
                         enemyBounds.Right > blockBounds.Left &&
                         enemyBounds.Left < blockBounds.Right)
                     {
-                        currentEnemy.setGroundPosition(385 /*blockBounds.Top*/);
+                        currentEnemy.setGroundPosition(groundPosition);
                        
                     }
                     else if (enemyBounds.Right > blockBounds.Left &&
