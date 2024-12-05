@@ -72,10 +72,10 @@ public class GoombaStateMachine
 		Rectangle mHold = mario.GetDestination();
         Rectangle lHold = luigi.GetDestination();
         Rectangle goombaRec = _sprite.GetDestination();
-        if (((goombaRec.X - mHold.X) > 0) && ((goombaRec.X - mHold.X) < 400) && (_currentState == GoombaState.Start)){
+        if (((goombaRec.X - mHold.X) > 0) && ((goombaRec.X - mHold.X) < 4) && (_currentState == GoombaState.Start)){
             _currentState = GoombaState.Left;
         }
-        if (((goombaRec.X - lHold.X) > 0) && ((goombaRec.X - lHold.X) < 400) && (_currentState == GoombaState.Start))
+        if (((goombaRec.X - lHold.X) > 0) && ((goombaRec.X - lHold.X) < 4) && (_currentState == GoombaState.Start))
         {
             _currentState = GoombaState.Left;
         }
