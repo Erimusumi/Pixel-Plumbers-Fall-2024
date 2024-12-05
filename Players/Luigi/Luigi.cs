@@ -203,6 +203,7 @@ public class Luigi : IPlayer
         switch (playerStateMachine.CurrentGameState)
         {
             case PlayerStateMachine.PlayerGameState.Small:
+                this.SetPositionY(this.luigiPosition.Y - 32);
                 playerStateMachine.SetPlayerBig();
                 _sfx[0].Play();
                 break;
@@ -231,6 +232,7 @@ public class Luigi : IPlayer
                 break;
 
             case PlayerStateMachine.PlayerGameState.Big:
+                this.SetPositionY(this.luigiPosition.Y + 32);
                 _sfx[1].Play();
                 playerStateMachine.SetPlayerSmall();
                 break;
