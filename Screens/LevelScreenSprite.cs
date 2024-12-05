@@ -8,7 +8,6 @@ public class LevelScreenSprite : ISprite
 
     private Vector2 LevelOneTextPosition;
     private Vector2 LevelTwoTextPosition;
-    private Vector2 LevelThreeTextPosition;
 
     public LevelScreenSprite(SpriteFont levelScreenFonts)
     {
@@ -16,14 +15,12 @@ public class LevelScreenSprite : ISprite
 
         LevelOneTextPosition = new Vector2(50, 100); // Position for Level 1
         LevelTwoTextPosition = new Vector2(50, 130); // Position for Level 2
-        LevelThreeTextPosition = new Vector2(50, 160); // Position for Level 3
     }
 
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
         spriteBatch.DrawString(levelScreenFonts, "LEVEL 1", LevelOneTextPosition, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
         spriteBatch.DrawString(levelScreenFonts, "LEVEL 2", LevelTwoTextPosition, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
-        spriteBatch.DrawString(levelScreenFonts, "LEVEL 3", LevelThreeTextPosition, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
     }
 
     public Rectangle GetLevelOneRectangle()
@@ -37,13 +34,6 @@ public class LevelScreenSprite : ISprite
         Vector2 textSize = levelScreenFonts.MeasureString("LEVEL 2") * scale;
         return new Rectangle((int)LevelTwoTextPosition.X, (int)LevelTwoTextPosition.Y, (int)textSize.X, (int)textSize.Y);
     }
-
-    public Rectangle GetLevelThreeRectangle()
-    {
-        Vector2 textSize = levelScreenFonts.MeasureString("LEVEL 3") * scale;
-        return new Rectangle((int)LevelThreeTextPosition.X, (int)LevelThreeTextPosition.Y, (int)textSize.X, (int)textSize.Y);
-    }
-
     public void Update(GameTime gameTime)
     {
 
