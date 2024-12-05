@@ -102,7 +102,9 @@ public class ToggleFalling
         for (int i = 0; i < enemies.Count; i++)
         {
             ISpriteEnemy currentEnemy = (ISpriteEnemy)enemies[i];
+            
             Rectangle enemyBounds = currentEnemy.GetDestination();
+          
             bool enemyColliding = false;
             for (int j = 0; j < collisionRects.Count; j++)
             {
@@ -116,7 +118,7 @@ public class ToggleFalling
                         enemyBounds.Right > blockBounds.Left &&
                         enemyBounds.Left < blockBounds.Right)
                     {
-                        currentEnemy.setGroundPosition(blockBounds.Top);
+                        currentEnemy.setGroundPosition(385 /*blockBounds.Top*/);
                        
                     }
                     else if (enemyBounds.Right > blockBounds.Left &&
@@ -176,7 +178,7 @@ public class ToggleFalling
                 }
             }
 
-            if (itemColliding)
+            if (!itemColliding)
             {
                 if (itemBounds.Intersects(new Rectangle(itemBounds.X, 385, 16, 16)))
                 {
