@@ -255,11 +255,11 @@ namespace Pixel_Plumbers_Fall_2024
         {
             if (gameStateMachine.isLevelOne())
             {
-                camera.Follow(mario.marioPosition, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), levelOne.mapSize.X);
+                camera.Follow(this.mario,this.luigi, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), levelOne.mapSize.X);
             }
             else if (gameStateMachine.isLevelTwo())
             {
-                camera.Follow(mario.marioPosition, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), levelTwo.mapSize.X);
+                camera.Follow(this.mario,this.luigi, new Vector2(GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height), levelTwo.mapSize.X);
             }
 
         }

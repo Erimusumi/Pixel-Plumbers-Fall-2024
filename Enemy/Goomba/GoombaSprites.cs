@@ -41,7 +41,7 @@ public class GoombaSprites
     }
     public void SetGroundPosition(float x)
     {
-        //groundPosition = x;
+        groundPosition = x;
     }
 
     public void LeftLogic()
