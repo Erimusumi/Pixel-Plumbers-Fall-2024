@@ -143,8 +143,10 @@ namespace Pixel_Plumbers_Fall_2024
 
             gameStateMachine = new GameStateMachine();
 
-            mario = new Mario(this, entities, marioSounds, textureManager, new GameTime(), ref this.gameStateMachine, this.luigi, ref levelScreenFonts);
-            luigi = new Luigi(this, entities, marioSounds, textureManager, new GameTime(), ref this.gameStateMachine, this.mario, ref levelScreenFonts);
+            mario = new Mario(this, entities, marioSounds, textureManager, new GameTime(), ref this.gameStateMachine, ref levelScreenFonts);
+            luigi = new Luigi(this, entities, marioSounds, textureManager, new GameTime(), ref this.gameStateMachine, ref levelScreenFonts);
+            mario.SetLuigiRef(luigi);
+            luigi.SetMarioRef(mario);
 
         }
 

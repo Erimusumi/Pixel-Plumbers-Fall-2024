@@ -1,10 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-public class WinBigMario : ICharacter
+public class WinSmallLuigi : ICharacter
 {
     private float scale = 2f;
-    private Texture2D MarioTexture;
+    private Texture2D LuigiTexture;
     private float AnimationTimer;
     private int AnimationSpeed;
     private int currentAnimationIndex = 0;
@@ -12,16 +12,16 @@ public class WinBigMario : ICharacter
 
     private Rectangle[] FrameRectangles;
 
-    public WinBigMario(Texture2D MarioTexture)
+    public WinSmallLuigi(Texture2D LuigiTexture)
     {
-        this.MarioTexture = MarioTexture;
+        this.LuigiTexture = LuigiTexture;
 
         AnimationTimer = 0;
-        AnimationSpeed = 20;
+        AnimationSpeed = 10;
 
         FrameRectangles = new Rectangle[2];
-        FrameRectangles[0] = new Rectangle(363, 89, 14, 27); // Frame 1
-        FrameRectangles[1] = new Rectangle(390, 88, 14, 30); // Frame 2
+        FrameRectangles[0] = new Rectangle(331, 30, 13, 15); // Frame 1
+        FrameRectangles[1] = new Rectangle(361, 30, 14, 16); // Frame 2
 
         currentAnimationIndex = 0;
     }
@@ -31,7 +31,7 @@ public class WinBigMario : ICharacter
         if (HasStar) { tint = Color.Magenta; }
         else { tint = Color.White; }
 
-        spriteBatch.Draw(MarioTexture, position, FrameRectangles[currentAnimationIndex], tint, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
+        spriteBatch.Draw(LuigiTexture, position, FrameRectangles[currentAnimationIndex], tint, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
     }
 
     public void Update(GameTime gameTime)
