@@ -56,7 +56,8 @@ This project is a replica of the classic Mario game, written in C# using MonoGam
 - `Goomba2` and `GoombaStateMachine2` are temporary placeholders  
 - Mario's gravity is not applied correctly when standing on top of obstacles or blocks without jumping  
 - The click boxes for "level screen" and "main menu" are persistent  
-- Mario may fall through the ground or off blocks when colliding with obstacles from the left or right  
+- Mario may fall through the ground or off blocks when colliding with obstacles from the left or right
+- Mario may fall through the incline steps instead of climbing up them if in small Mario form
 - Mario's win animation does not play properly for level 1  
 
 ---
