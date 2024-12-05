@@ -14,7 +14,7 @@ using System.Threading.Tasks;
     Rectangle currentPosition;
     PlayerStateMachine stateMachine;
     CutSceneManager manager;
-    int doorDistance = 190;
+    int doorDistance = 300;
     public  WinCutScene(IPlayer player, Rectangle currentPosition)
     {
         this.player1 = player;

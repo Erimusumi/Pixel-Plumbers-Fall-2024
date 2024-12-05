@@ -25,12 +25,12 @@ public class PlayerFlagInteraction
 
     public void update()
     {
-        //disablePlayerCommand.Execute();
+        disablePlayerCommand.Execute();
         Rectangle destination = player.GetDestination();
        // flag.makeWinFlag(destination.Y);
         //flag.resetFlag();
         
-       // player.SetWin();
+       //player.SetWin();
         
         WinCutScene wc = new WinCutScene(player, destination);
         wc.play();
