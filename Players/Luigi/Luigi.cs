@@ -91,6 +91,10 @@ public class Luigi : IPlayer
         this.scoreFont = font;
     }
 
+    public PlayerStateMachine GetStateMachine()
+    {
+        return this.playerStateMachine;
+    }
     public void MoveRight()
     {
         if (playerStateMachine.IsDead()) return;

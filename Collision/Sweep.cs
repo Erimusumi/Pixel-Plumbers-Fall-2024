@@ -13,6 +13,7 @@ public class Sweep
 {
     GameTime gameTime;
     DisablePlayerCommand disablePlayerCommand;
+
     public Sweep(GameTime gameTime, DisablePlayerCommand disablePlayerCommand)
     {
         this.gameTime = gameTime;

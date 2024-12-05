@@ -15,14 +15,14 @@ using System.Threading.Tasks;
     PlayerStateMachine stateMachine;
     CutSceneManager manager;
     int doorDistance = 190;
-    public  WinCutScene(IPlayer player, Rectangle currentPosition, PlayerStateMachine playerStateMachine)
+    public  WinCutScene(IPlayer player, Rectangle currentPosition)
     {
         this.player1 = player;
-        this.stateMachine = playerStateMachine;
         manager = new CutSceneManager(player);
     }
     public void play()
     {
+        stateMachine = player1.GetStateMachine();
         stateMachine.SetPlayerBig();
         manager.setPlayerPosition(6350, 380);
 

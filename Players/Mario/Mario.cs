@@ -94,6 +94,11 @@ public class Mario : IPlayer
         this._sfx = sfx;
     }
 
+    public PlayerStateMachine GetStateMachine()
+    {
+        return this.playerStateMachine;
+    }
+
     public void MoveRight()
     {
         if (playerStateMachine.IsDead()) return;
