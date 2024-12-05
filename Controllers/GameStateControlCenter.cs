@@ -64,20 +64,20 @@ public class GameStateControlCenter
         gameMouseController.AddCommand(startScreenSprite.GetTwoPlayerRectangle(), multiplayerCommand); // Multiplayer
 
         list = gameMouseController.SendList();
-        ICommand levelOneCommand = new LevelOneCommand(gameStateMachine, levelScreenSprite.GetLevelOneRectangle(), list, gameMouseController);
+        ICommand levelOneCommand = new LevelOneCommand(gameStateMachine, list, gameMouseController, blackJackStateMachine);
         gameMouseController.AddCommand(levelScreenSprite.GetLevelOneRectangle(), levelOneCommand);
 
-        ICommand levelTwoCommand = new LevelTwoCommand(gameStateMachine);
+        ICommand levelTwoCommand = new LevelTwoCommand(gameStateMachine, list, gameMouseController, blackJackStateMachine);
         gameMouseController.AddCommand(levelScreenSprite.GetLevelTwoRectangle(), levelTwoCommand);
 
 
-        ICommand BlackJackCommand = new BlackJackCommand(blackJackStateMachine, gameStateMachine);
-        gameMouseController.AddCommand(blackJackStateMachine.DestinationRectangle(), BlackJackCommand);
+        //ICommand BlackJackCommand = new BlackJackCommand(blackJackStateMachine, gameStateMachine);
+        //gameMouseController.AddCommand(blackJackStateMachine.DestinationRectangle(), BlackJackCommand);
 
-        ICommand CardCommand = new CardCommand(blackJackStateMachine);
-        gameMouseController.AddCommand(new Rectangle(660, 130, 75, 110), CardCommand);
+        //ICommand CardCommand = new CardCommand(blackJackStateMachine);
+        //gameMouseController.AddCommand(new Rectangle(660, 130, 75, 110), CardCommand);
 
-        ICommand StandCommand = new StandCommand(blackJackStateMachine);
-        gameMouseController.AddCommand(new Rectangle(660, 270, 100, 50), StandCommand);
+        //ICommand StandCommand = new StandCommand(blackJackStateMachine);
+        //gameMouseController.AddCommand(new Rectangle(660, 270, 100, 50), StandCommand);
     }
 }

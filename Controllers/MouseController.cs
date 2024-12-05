@@ -23,6 +23,11 @@ public class MouseController : IController
         ClickRegions.Remove(region);
     }
 
+    public void SetList(Dictionary<Rectangle, ICommand> list)
+    {
+        ClickRegions = list;
+    }
+
     public Dictionary<Rectangle, ICommand> SendList()
     {
         return ClickRegions;
