@@ -18,6 +18,16 @@ public class MouseController : IController
         ClickRegions.Add(region, command);
     }
 
+    public void RemoveCommand(Rectangle region)
+    {
+        ClickRegions.Remove(region);
+    }
+
+    public Dictionary<Rectangle, ICommand> SendList()
+    {
+        return ClickRegions;
+    }
+
     public void Update()
     {
         MouseState currentMouseState = Mouse.GetState();
