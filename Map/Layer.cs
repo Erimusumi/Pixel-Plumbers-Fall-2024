@@ -51,48 +51,39 @@ public class Layer
         }
     }
 
-    // Modify GenerateRedRectangles to force rectangle generation
+
     public void GenerateRedRectangles(Texture2D textureAtlas, Vector2 cameraPosition)
     {
-        // Clear existing rectangles
+
         redRectangles.Clear();
 
-        // Debug: Print total number of tiles
-        //System.Diagnostics.Debug.WriteLine($"Total tiles in layer: {tile_array.Count}");
 
         foreach (var item in tile_array)
         {
             // Calculate the destination vector for the tile
             Vector2 destVector = new Vector2(
-                item.Key.X * display_tilesize,  // Remove camera position subtraction
+                item.Key.X * display_tilesize, 
                 item.Key.Y * display_tilesize
             );
 
-            // Expanded logging for tile values
-            //System.Diagnostics.Debug.WriteLine($"Tile value: {item.Value}, X: {item.Key.X}, Y: {item.Key.Y}");
 
-            // Modify conditions to be more inclusive
             if ((item.Value == 112 || item.Value == 98 || item.Value == 114 || (item.Value >= 38 && item.Value <= 55))
         && item.Value != 6 && item.Value != 26 && item.Value != 42)
             {
-                // Create a rectangle based on the display tile size
+
                 Rectangle redRect = new Rectangle(
                     (int)destVector.X,
                     (int)destVector.Y,
-                    display_tilesize,  // Use display_tilesize instead of fixed 16
+                    display_tilesize,  
                     display_tilesize
                 );
 
-                // Add the red rectangle to the list
+
                 redRectangles.Add(redRect);
 
-                // Debug: Log each generated rectangle
-                //System.Diagnostics.Debug.WriteLine($"Generated rectangle: X:{redRect.X}, Y:{redRect.Y}, Width:{redRect.Width}, Height:{redRect.Height}");
             }
         }
 
-        // Debug: Print total number of generated rectangles
-        //System.Diagnostics.Debug.WriteLine($"Total red rectangles generated: {redRectangles.Count}");
     }
 
     // Modify Draw method to ensure rectangles are generated
@@ -128,17 +119,17 @@ public class Layer
                 pixel_tilesize
             );
 
-            // Draw the tile from the texture atlas
+
             spriteBatch.Draw(textureAtlas, destRect, src, Color.White);
         }
 
-        // Then, draw red rectangles on top
+ 
         foreach (Rectangle redRect in redRectangles)
         {
             // Adjust rectangle position based on camera
             Rectangle adjustedRect = new Rectangle(
-                redRect.X - (int)cameraPosition.X,
-                redRect.Y - (int)cameraPosition.Y,
+                redRect.X,
+                redRect.Y,
                 redRect.Width,
                 redRect.Height
             );
