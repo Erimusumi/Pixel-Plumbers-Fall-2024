@@ -56,7 +56,7 @@ public class Mario : IPlayer
     private int scoreMult;
     private const int maxScoreMult = 16;
     private SpriteFont scoreFont;
-    public Mario(Game1 game, List<IEntity> entities, List<SoundEffect> sfx, TextureManager textureManager, GameTime gametime, GameStateMachine gsm, Luigi luigi, ref SpriteFont font)
+    public Mario(Game1 game, List<IEntity> entities, List<SoundEffect> sfx, TextureManager textureManager, GameTime gametime, ref GameStateMachine gsm, Luigi luigi, ref SpriteFont font)
     {
         this.textureManager = textureManager;
         this.marioTexture = textureManager.GetTexture("Mario");
@@ -154,6 +154,10 @@ public class Mario : IPlayer
     public void Jump()
     {
         if (playerStateMachine.IsDead()) return;
+        if (this.gsm == null)
+        {
+            this.TakeDamage();
+        }
         if ((isOnGround || isSwimmingLevel) && !playerStateMachine.IsCrouching())
         {
             marioVelocity.Y = jumpSpeed;
