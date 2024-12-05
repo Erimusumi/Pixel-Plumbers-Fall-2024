@@ -279,7 +279,7 @@ public class LevelOne : ILevel
         obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
         obstacle3.Draw(spriteBatch, new Vector2(350 + 350, 335));
         obstacle6.Draw(spriteBatch, new Vector2(5740, 370));
-        //spriteBatch.Draw(box, flag.GetDestination(), Color.White);
+        //spriteBatch.Draw(box, mario.GetDestination(), Color.White);
     }
 
     private void DrawBrickBlocks(SpriteBatch spriteBatch)
