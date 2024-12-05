@@ -90,6 +90,10 @@ public class LevelOne : ILevel
     {
         flag = new Flag(new Vector2(6335, 354), overworldTiles, danceTexture, spriteBatch);
 
+        Enemy = new List<ISpriteEnemy>();
+        LuckyBlocks = new List<IBlock>();
+        BrickBlocks = new List<IBlock>();
+
         InitializeEnemies();
         InitializeLuckyBlocks();
         InitializeBrickBlocks();
