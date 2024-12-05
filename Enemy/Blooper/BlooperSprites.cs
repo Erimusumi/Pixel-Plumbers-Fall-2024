@@ -93,8 +93,11 @@ public class BlooperSprites
         Idle(riseMore);
         counterLR = 0;
     }
-    public void StompedLogic()
+    public void StompedLogic() { }
+    public void StartLogic()
     {
+        sourceRectangle = new Rectangle(420, 0, height, width);
+        destinationRectangle = new Rectangle(position, posY, height * scaleUp, width * scaleUp);
     }
     public void FlippedLogic()
     {

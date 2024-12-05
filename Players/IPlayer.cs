@@ -25,10 +25,10 @@ public interface IPlayer : IEntity
     public void SetWin();
     public PlayerStateMachine getStateMachine();
     public void AddScore(int scoreAmt);
-
     public void AddCoin();
-
+    public void Fall();
     public void ResetScoreMult();
     public void IncreaseScoreMult();
     public void playSound(int i);
+    public PlayerStateMachine GetStateMachine();
 }

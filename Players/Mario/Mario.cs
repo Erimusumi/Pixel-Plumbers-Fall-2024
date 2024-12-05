@@ -57,6 +57,7 @@ public class Mario : IPlayer
     private int scoreMult;
     private const int maxScoreMult = 16;
     private SpriteFont scoreFont;
+
     public Mario(Game1 game, List<IEntity> entities, List<SoundEffect> sfx, TextureManager textureManager, GameTime gametime, ref GameStateMachine gsm, ref SpriteFont font)
     {
         this.textureManager = textureManager;
@@ -91,6 +92,11 @@ public class Mario : IPlayer
          * 5:FlagPole for winning
          */
         this._sfx = sfx;
+    }
+
+    public PlayerStateMachine GetStateMachine()
+    {
+        return this.playerStateMachine;
     }
 
     public void MoveRight()
@@ -206,6 +212,7 @@ public class Mario : IPlayer
         switch (playerStateMachine.CurrentGameState)
         {
             case PlayerStateMachine.PlayerGameState.Small:
+                this.SetPositionY(this.marioPosition.Y - 32);
                 playerStateMachine.SetPlayerBig();
                 _sfx[0].Play();
                 break;
@@ -233,6 +240,7 @@ public class Mario : IPlayer
                 break;
 
             case PlayerStateMachine.PlayerGameState.Big:
+                this.SetPositionY(this.marioPosition.Y - 32);
                 _sfx[1].Play();
                 playerStateMachine.SetPlayerSmall();
                 break;
@@ -529,7 +537,7 @@ public class Mario : IPlayer
 
     public void ResetScoreMult()
     {
-        
+
         if (isOnGround && !this.playerStateMachine.HasStar())
         {
             scoreMult = 1;
@@ -553,5 +561,11 @@ public class Mario : IPlayer
     public void SetLuigiRef(Luigi luigi)
     {
         this.luigi = luigi;
+    }
+
+    public void Fall()
+    {
+        this.isOnGround = false;
+        this.updateGroundPosition(this.GroundPosition() + 100f);
     }
 }

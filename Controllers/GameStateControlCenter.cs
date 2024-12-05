@@ -3,6 +3,7 @@ using Pixel_Plumbers_Fall_2024;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using System;
+using System.Collections.Generic;
 
 public class GameStateControlCenter
 {
@@ -14,6 +15,7 @@ public class GameStateControlCenter
     private LevelScreenSprite levelScreenSprite;
     private MusicMachine MusicMachine;
     private BlackJackStateMachine blackJackStateMachine;
+    private Dictionary<Rectangle, ICommand> list;
 
     public GameStateControlCenter(GameStateMachine gameStateMachine, KeyboardController gameKeyboardController, MouseController gameMouseController, Game1 game, StartScreenSprite startScreenSprite, LevelScreenSprite levelScreenSprite, SoundManager musics, BlackJackStateMachine blackJackStateMachine)
     {
@@ -61,14 +63,13 @@ public class GameStateControlCenter
         ICommand multiplayerCommand = new MultiplayerCommand(gameStateMachine);
         gameMouseController.AddCommand(startScreenSprite.GetTwoPlayerRectangle(), multiplayerCommand); // Multiplayer
 
-        ICommand levelOneCommand = new LevelOneCommand(gameStateMachine);
+        list = gameMouseController.SendList();
+        ICommand levelOneCommand = new LevelOneCommand(gameStateMachine, levelScreenSprite.GetLevelOneRectangle(), list, gameMouseController);
         gameMouseController.AddCommand(levelScreenSprite.GetLevelOneRectangle(), levelOneCommand);
 
         ICommand levelTwoCommand = new LevelTwoCommand(gameStateMachine);
         gameMouseController.AddCommand(levelScreenSprite.GetLevelTwoRectangle(), levelTwoCommand);
 
-        ICommand levelThreeCommand = new LevelThreeCommand(gameStateMachine);
-        gameMouseController.AddCommand(levelScreenSprite.GetLevelThreeRectangle(), levelThreeCommand);
 
         ICommand BlackJackCommand = new BlackJackCommand(blackJackStateMachine, gameStateMachine);
         gameMouseController.AddCommand(blackJackStateMachine.DestinationRectangle(), BlackJackCommand);

@@ -34,9 +34,11 @@ public class EnemyPlayerInteraction
         {
             enemy.beStomped();
             player.SetVelocityY(-450);
-            entitiesRemoved.Add(enemy);
+            if (enemy.GetType() != typeof(Koopa))
+            {
+                entitiesRemoved.Add(enemy);
+            }
             player.AddScore(100);
-
         } else
         {
             player.TakeDamage();
