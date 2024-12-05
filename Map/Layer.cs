@@ -14,7 +14,7 @@ public class Layer
     private string filepath;
     private Dictionary<Vector2, int> tile_array;
     private List<Rectangle> redRectangles;  // List to store red rectangles
-    private Texture2D textureAtlas;  
+    private Texture2D textureAtlas;
     private Vector2 cameraPosition;
 
     public Layer(int display_tilesize, int num_tile_per_row, int pixel_tilesize, string filepath)
@@ -131,6 +131,21 @@ public class Layer
             // Draw the tile from the texture atlas
             spriteBatch.Draw(textureAtlas, destRect, src, Color.White);
         }
+
+        // Then, draw red rectangles on top
+        foreach (Rectangle redRect in redRectangles)
+        {
+            // Adjust rectangle position based on camera
+            Rectangle adjustedRect = new Rectangle(
+                redRect.X - (int)cameraPosition.X,
+                redRect.Y - (int)cameraPosition.Y,
+                redRect.Width,
+                redRect.Height
+            );
+
+            // Draw red rectangles with some transparency for visibility
+            spriteBatch.Draw(textureAtlas, adjustedRect, Color.Red * 0.5f);
+        }
     }
 
     // Function to return the list of red rectangles for collision handling
@@ -144,6 +159,3 @@ public class Layer
         return redRectangles;
     }
 }
-
-
-
