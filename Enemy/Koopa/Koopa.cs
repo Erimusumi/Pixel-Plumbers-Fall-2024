@@ -57,7 +57,9 @@ public class Koopa : ISpriteEnemy
     }
 	public void setGroundPosition(float x)
 	{
-		this.groundPosition = x;		
+		this.groundPosition = x;
+		this.stateMachine.setGroundPosition((int)x);
+		
 	}
 
 }

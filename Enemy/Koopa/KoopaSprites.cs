@@ -34,6 +34,10 @@ public class KoopaSprites
     {
         isOnGround = val;
     }
+    public void setGroundPosition(int pos)
+    {
+        this.groundPosition = pos;
+    }
     public void LeftLogic()
 	{
         counter2 = -1;

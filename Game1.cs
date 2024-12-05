@@ -31,6 +31,7 @@ namespace Pixel_Plumbers_Fall_2024
         private GameStateControlCenter gameStateControlCenter;
         private KeyboardController gameStateKeyboardController;
         private MouseController gameStateMouseController;
+        private DisablePlayerCommand disablePlayerCommand;
 
         // players and controllers
         private Mario mario;
@@ -89,7 +90,7 @@ namespace Pixel_Plumbers_Fall_2024
 
         private void InitializeGameComponents()
         {
-            sweep = new Sweep(new GameTime());
+            sweep = new Sweep(new GameTime(), disablePlayerCommand);
             keyboardController = new KeyboardController();
             keyboardControllerMovement = new KeyboardControllerMovement();
 
@@ -160,6 +161,7 @@ namespace Pixel_Plumbers_Fall_2024
         {
             marioMovementController = new PlayerMovementController();
             luigiMovementController = new PlayerMovementController();
+            disablePlayerCommand = new DisablePlayerCommand(marioMovementController, luigiMovementController);
 
             marioControlCenter = new MarioControlCenter(mario, marioMovementController);
             luigiControlCenter = new LuigiControlCenter(luigi, luigiMovementController);
@@ -176,8 +178,7 @@ namespace Pixel_Plumbers_Fall_2024
                 startScreenSprite,
                 levelScreenSprite,
                 soundManager,
-                blackJackStateMachine,
-                marioControlCenter.GetController()
+                blackJackStateMachine
             );
         }
 
@@ -347,7 +348,7 @@ namespace Pixel_Plumbers_Fall_2024
         {
             foreach (var sp in scorePopups)
             {
-                sp.Draw(spriteBatch);
+                sp.Draw(spriteBatch,levelScreenFonts);
             }
         }
 
