@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Projects\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\enemy\\blooper\\blooperstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:enemy\\blooper\\blooperstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -26,11 +30,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Projects\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
@@ -40,6 +44,19 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BlooperStateMachine.cs",
+              "DocumentMoniker": "C:\\Projects\\Enemy\\Blooper\\BlooperStateMachine.cs",
+              "RelativeDocumentMoniker": "Enemy\\Blooper\\BlooperStateMachine.cs",
+              "ToolTip": "C:\\Projects\\Enemy\\Blooper\\BlooperStateMachine.cs",
+              "RelativeToolTip": "Enemy\\Blooper\\BlooperStateMachine.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAwwD8AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T02:56:50.918Z",
               "EditorCaption": ""
             },
             {
@@ -68,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "GoombaSprites.cs",
               "DocumentMoniker": "C:\\Projects\\Enemy\\Goomba\\GoombaSprites.cs",
               "RelativeDocumentMoniker": "Enemy\\Goomba\\GoombaSprites.cs",
@@ -81,7 +98,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "KoopaSprites.cs",
               "DocumentMoniker": "C:\\Projects\\Enemy\\Koopa\\KoopaSprites.cs",
               "RelativeDocumentMoniker": "Enemy\\Koopa\\KoopaSprites.cs",
@@ -94,13 +111,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "LevelOne.cs",
               "DocumentMoniker": "C:\\Projects\\Levels\\LevelOne.cs",
               "RelativeDocumentMoniker": "Levels\\LevelOne.cs",
               "ToolTip": "C:\\Projects\\Levels\\LevelOne.cs",
               "RelativeToolTip": "Levels\\LevelOne.cs",
-              "ViewState": "AgIAAAkBAAAAAAAAAADwvx8BAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwGwAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-05T01:25:02.791Z",
               "EditorCaption": ""
