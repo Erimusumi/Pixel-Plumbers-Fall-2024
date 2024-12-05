@@ -13,7 +13,9 @@ public class Layer
     private int pixel_tilesize;
     private string filepath;
     private Dictionary<Vector2, int> tile_array;
-    private List<Rectangle> redRectangles;
+    private List<Rectangle> redRectangles;  // List to store red rectangles
+    private Texture2D textureAtlas;  
+    private Vector2 cameraPosition;
 
     public Layer(int display_tilesize, int num_tile_per_row, int pixel_tilesize, string filepath)
     {
@@ -25,6 +27,7 @@ public class Layer
         this.redRectangles = new List<Rectangle>();
     }
 
+    // Load the layer from the CSV file
     public void LoadLayer()
     {
         StreamReader reader = new(filepath);
@@ -48,16 +51,65 @@ public class Layer
         }
     }
 
-    public void Draw(SpriteBatch spriteBatch, Texture2D textureAtlas, Vector2 cameraPosition)
+    // Modify GenerateRedRectangles to force rectangle generation
+    public void GenerateRedRectangles(Texture2D textureAtlas, Vector2 cameraPosition)
     {
+        // Clear existing rectangles
         redRectangles.Clear();
+
+        // Debug: Print total number of tiles
+        //System.Diagnostics.Debug.WriteLine($"Total tiles in layer: {tile_array.Count}");
+
         foreach (var item in tile_array)
         {
+            // Calculate the destination vector for the tile
+            Vector2 destVector = new Vector2(
+                item.Key.X * display_tilesize,  // Remove camera position subtraction
+                item.Key.Y * display_tilesize
+            );
+
+            // Expanded logging for tile values
+            //System.Diagnostics.Debug.WriteLine($"Tile value: {item.Value}, X: {item.Key.X}, Y: {item.Key.Y}");
+
+            // Modify conditions to be more inclusive
+            if ((item.Value == 112 || item.Value == 98 || item.Value == 114 || (item.Value >= 38 && item.Value <= 55))
+        && item.Value != 6 && item.Value != 26 && item.Value != 42)
+            {
+                // Create a rectangle based on the display tile size
+                Rectangle redRect = new Rectangle(
+                    (int)destVector.X,
+                    (int)destVector.Y,
+                    display_tilesize,  // Use display_tilesize instead of fixed 16
+                    display_tilesize
+                );
+
+                // Add the red rectangle to the list
+                redRectangles.Add(redRect);
+
+                // Debug: Log each generated rectangle
+                //System.Diagnostics.Debug.WriteLine($"Generated rectangle: X:{redRect.X}, Y:{redRect.Y}, Width:{redRect.Width}, Height:{redRect.Height}");
+            }
+        }
+
+        // Debug: Print total number of generated rectangles
+        //System.Diagnostics.Debug.WriteLine($"Total red rectangles generated: {redRectangles.Count}");
+    }
+
+    // Modify Draw method to ensure rectangles are generated
+    public void Draw(SpriteBatch spriteBatch, Texture2D textureAtlas, Vector2 cameraPosition)
+    {
+        // Always generate rectangles before drawing
+        GenerateRedRectangles(textureAtlas, cameraPosition);
+
+        foreach (var item in tile_array)
+        {
+            // Calculate the destination vector for the tile
             Vector2 destVector = new Vector2(
                 item.Key.X * display_tilesize - cameraPosition.X,
                 item.Key.Y * display_tilesize - cameraPosition.Y
             );
 
+            // Create destination rectangle from the destination vector
             Rectangle destRect = new Rectangle(
                 (int)destVector.X,
                 (int)destVector.Y,
@@ -65,6 +117,7 @@ public class Layer
                 display_tilesize
             );
 
+            // Calculate the source rectangle for the tile in the texture atlas
             int x = item.Value % num_tile_per_row;
             int y = item.Value / num_tile_per_row;
 
@@ -75,26 +128,22 @@ public class Layer
                 pixel_tilesize
             );
 
+            // Draw the tile from the texture atlas
             spriteBatch.Draw(textureAtlas, destRect, src, Color.White);
-
-            if ((item.Value == 112 || item.Value == 98 || item.Value == 114 || (item.Value >= 38 && item.Value <= 55))
-                && item.Value != 6 && item.Value != 26 && item.Value != 42)
-            {
-                Rectangle redRect = new Rectangle(
-                    (int)destVector.X,
-                    (int)destVector.Y,
-                    16,
-                    16
-                );
-                redRectangles.Add(redRect);
-            }
         }
     }
+
+    // Function to return the list of red rectangles for collision handling
     public List<Rectangle> GetRedRectangles()
     {
+        // If no rectangles, force generation
+        if (redRectangles.Count == 0)
+        {
+            GenerateRedRectangles(null, Vector2.Zero);
+        }
         return redRectangles;
     }
-
-
-
 }
+
+
+
