@@ -37,9 +37,8 @@ public class EnemyPlayerInteraction
             if (enemy.GetType() != typeof(Koopa))
             {
                 entitiesRemoved.Add(enemy);
-                player.AddScore(100);
             }
-
+            player.AddScore(100);
         } else
         {
             player.TakeDamage();

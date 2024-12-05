@@ -101,11 +101,11 @@ public class KoopaStateMachine
         Rectangle mHold = mario.GetDestination();
         Rectangle lHold = luigi.GetDestination();
         Rectangle koopaRec = _sprite.GetDestination();
-        if (((koopaRec.X - mHold.X) > 0) && ((koopaRec.X - mHold.X) < 4) && (_currentState == KoopaState.Start))
+        if (((koopaRec.X - mHold.X) > 0) && ((koopaRec.X - mHold.X) < 400) && (_currentState == KoopaState.Start))
         {
             _currentState = KoopaState.Left;
         }
-        if (((koopaRec.X - lHold.X) > 0) && ((koopaRec.X - lHold.X) < 4) && (_currentState == KoopaState.Start))
+        if (((koopaRec.X - lHold.X) > 0) && ((koopaRec.X - lHold.X) < 400) && (_currentState == KoopaState.Start))
         {
             _currentState = KoopaState.Left;
         }
