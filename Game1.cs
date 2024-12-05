@@ -90,7 +90,7 @@ namespace Pixel_Plumbers_Fall_2024
 
         private void InitializeGameComponents()
         {
-            sweep = new Sweep(new GameTime());
+            sweep = new Sweep(new GameTime(), disablePlayerCommand);
             keyboardController = new KeyboardController();
             keyboardControllerMovement = new KeyboardControllerMovement();
 
