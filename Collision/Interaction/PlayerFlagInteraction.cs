@@ -28,6 +28,8 @@ public class PlayerFlagInteraction
         Rectangle destination = player.GetDestination();
         flag.makeWinFlag(destination.Y);
         player.SetWin();
+        WinCutScene wc = new WinCutScene(player, destination);
+        wc.play();
     }
     private void removeFromList()
     {
