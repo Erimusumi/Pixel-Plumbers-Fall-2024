@@ -132,6 +132,9 @@ public class LevelTwo : ILevel
 
     public List<Rectangle> GetLevelFloorRectangles()
     {
-        return lvl2foreground2.GetRedRectangles();
+        List<Rectangle> combinedFloorRectangles = new List<Rectangle>();
+        combinedFloorRectangles.AddRange(lvl2foreground1.GetRedRectangles());
+        combinedFloorRectangles.AddRange(lvl2foreground2.GetRedRectangles());
+        return combinedFloorRectangles;
     }
 }
