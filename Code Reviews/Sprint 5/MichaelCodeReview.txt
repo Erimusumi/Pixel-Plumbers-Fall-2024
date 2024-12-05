@@ -1,0 +1,7 @@
+Sprint 5
+Michael Code Review
+12/4/24
+
+CutSceneManager.cs, written by Sanaa
+
+Readability: 
