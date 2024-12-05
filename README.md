@@ -1,36 +1,63 @@
-# Pixel-Plumbers-Fall-2024
+# Pixel Plumbers - Fall 2024
 
-Mario Game 
-Sprint 4
-Pixel-Plumbers
+**Mario Game - Sprint 4**  
+**Pixel-Plumbers**
 
-This is a replica of Mario written in C# using monogame. 
+This project is a replica of the classic Mario game, written in C# using MonoGame.
 
-MARIO CONTROLS:
-    - WASD and arrow keys for movement
-        - W / Up to jump
-        - A / Left to go left
-        - D / Right to go right
-        - S / Down to crouch
+---
 
-        - 1 to go up in mario state (small -> big -> fire)
-        - 2 to go down in mario state (fire -> big -> small -> "died")
-        - Left Shift to shoot fireballs while in fire mode
-        - Right Shift to give mario a star
+## Mario Controls
 
-GAME CONTROLS:
-     - Click on "1 player" or "2 player" to start the game.
-     - Click on the table in the bottom left to enter a Blackjack minigame.
-     - Press R to reset the game
-     - press P to pause the game. (Also pauses music)
-     - Press Q to quit the game
-     - Press M to play music. Press again to play another song.
-     - Press Z to mute everything.
+- **Movement**:
+  - `W`: Jump  
+  - `A`: Move left  
+  - `D`: Move right  
+  - `S`: Crouch  
 
-KNOWN BUGS:
-    - Some of the hitboxes are a bit clunky
-≈    - Goomba2 and GoombaStateMaåchine2 are temporary.
-    - For the MarioOBlock and MarioObstacle Interaction, the gravity is not applied to the mario when mario is on the top of the obstalce/block without jumping.
-    - The click boxes for "level screen" and "main menu" are presistent.
-    - Sometimes when mario is colliding with a obstacle from the left or right, he will fall through the ground, or falling off a block
-    - Mario win animation doesn't play properly for level 1
+- **State Controls**:
+  - `1`: Increase Mario's state (Small → Big → Fire)  
+  - `2`: Decrease Mario's state (Fire → Big → Small → "Died")  
+
+- **Special Actions**:
+  - `Left Shift`: Shoot fireballs (Fire mode only)  
+  - `Right Shift`: Grant Mario a star  
+
+---
+
+## Luigi Controls (Multiplayer Mode)
+
+- **Movement**:
+  - `Up Arrow`: Jump  
+  - `Left Arrow`: Move left  
+  - `Right Arrow`: Move right  
+  - `Down Arrow`: Crouch  
+
+---
+
+## Game Controls
+
+- **Menu Actions**:
+  - Click **"1 Player"** or **"2 Player"** to start the game  
+  - Click on the table in the bottom left corner to enter the Blackjack minigame  
+
+- **Gameplay Actions**:
+  - `R`: Reset the game  
+  - `P`: Pause the game (also pauses music)  
+  - `Q`: Quit the game  
+  - `M`: Play music (press again to switch songs)  
+  - `Z`: Mute all sounds  
+
+---
+
+## Known Bugs
+
+- Some hitboxes are clunky  
+- `Goomba2` and `GoombaStateMachine2` are temporary placeholders  
+- Mario's gravity is not applied correctly when standing on top of obstacles or blocks without jumping  
+- The click boxes for "level screen" and "main menu" are persistent  
+- Mario may fall through the ground or off blocks when colliding with obstacles from the left or right
+- Mario may fall through the incline steps instead of climbing up them if in small Mario form
+- Mario's win animation does not play properly for level 1  
+
+---

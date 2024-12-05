@@ -51,7 +51,12 @@ public class LuckyBlockSprite : IBlock
         this.mario = mario;
         this.position = position;
         destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 31, 31);
-        
+        sourceRectangle = new Rectangle(
+        (int)Start.X + width * currentFrame,  // Removed the reverse frame calculation
+        (int)Start.Y,
+        width,
+        height
+        );
     }
 
     public void Update(GameTime gametime)
@@ -72,6 +77,7 @@ public class LuckyBlockSprite : IBlock
         {
             Boolean isItem = true;
             i_position = new Vector2(position.X, position.Y - 31);
+            
             if (playerStateMachine.IsSmall())
             {
                 item = new Mushroom(spriteBatch, itemTexture, i_position);
@@ -133,12 +139,7 @@ public class LuckyBlockSprite : IBlock
 
     public void Draw(SpriteBatch spriteBatch2, Vector2 pos)
     {
-        sourceRectangle = new Rectangle(
-            (int)Start.X + width * currentFrame,  // Removed the reverse frame calculation
-            (int)Start.Y,
-            width,
-            height
-        );
+ 
 
         spriteBatch.Draw(Texture, destinationRectangle, sourceRectangle, Color.White);
 
