@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,10 +25,13 @@ public class PlayerFlagInteraction
 
     public void update()
     {
-        disablePlayerCommand.Execute();
+        //disablePlayerCommand.Execute();
         Rectangle destination = player.GetDestination();
-        flag.makeWinFlag(destination.Y);
-        player.SetWin();
+       // flag.makeWinFlag(destination.Y);
+        //flag.resetFlag();
+        
+       // player.SetWin();
+        
         WinCutScene wc = new WinCutScene(player, destination);
         wc.play();
     }

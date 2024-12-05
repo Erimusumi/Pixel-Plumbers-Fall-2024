@@ -130,16 +130,20 @@ public class Sweep
         {
 
             PlayerFlagInteraction = new PlayerFlagInteraction((IPlayer)item1, (Flag)item2, entitiesRemoved, disablePlayerCommand);
+            
             PlayerFlagInteraction.update();
+            entities.RemoveAt(index2);
 
         }
         else if (ContainsPlayer(entities, index2) && item1.GetType() == typeof(Flag))
         {
 
             PlayerFlagInteraction = new PlayerFlagInteraction((IPlayer)item2, (Flag)item1, entitiesRemoved, disablePlayerCommand);
+            
             PlayerFlagInteraction.update();
+            entities.RemoveAt(index1);
         }
-        if (ContainsEnemy(entities, index1) && ContainsPlayer(entities, index2))
+        else if (ContainsEnemy(entities, index1) && ContainsPlayer(entities, index2))
         {
             EnemyMarioInteraction = new EnemyPlayerInteraction((ISpriteEnemy)item1, (IPlayer)item2, Rectangle.Intersect(item1.GetDestination(), item2.GetDestination()), entitiesRemoved);
             EnemyMarioInteraction.Update();
