@@ -110,6 +110,11 @@ public class CheepsSprites
         }
     }
 	public void StompedLogic()	{  }
+    public void StartLogic()
+    {
+        sourceRectangle = new Rectangle(LeftPosX2, SourceHeight, size, size);
+        destinationRectangle = new Rectangle(position, posY, size * scaleUp, size * scaleUp);
+    }
 	public void FlippedLogic()
 	{
         rotation = 3.1415926535f;

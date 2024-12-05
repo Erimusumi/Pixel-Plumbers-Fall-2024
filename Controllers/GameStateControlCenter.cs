@@ -37,6 +37,9 @@ public class GameStateControlCenter
         ICommand musicCommand = new MusicCommand(MusicMachine);
         gameKeyboardController.addCommand(Keys.M, musicCommand);
 
+        ICommand muteCommand = new MuteCommand();
+        gameKeyboardController.addCommand(Keys.Z, muteCommand);
+
         ICommand quitGameCommand = new QuitGameCommand(game);
         gameKeyboardController.addCommand(Keys.Q, quitGameCommand);
 
@@ -63,9 +66,6 @@ public class GameStateControlCenter
 
         ICommand levelTwoCommand = new LevelTwoCommand(gameStateMachine);
         gameMouseController.AddCommand(levelScreenSprite.GetLevelTwoRectangle(), levelTwoCommand);
-
-        ICommand levelThreeCommand = new LevelThreeCommand(gameStateMachine);
-        gameMouseController.AddCommand(levelScreenSprite.GetLevelThreeRectangle(), levelThreeCommand);
 
         ICommand BlackJackCommand = new BlackJackCommand(blackJackStateMachine, gameStateMachine);
         gameMouseController.AddCommand(blackJackStateMachine.DestinationRectangle(), BlackJackCommand);

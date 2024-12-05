@@ -57,6 +57,7 @@ public class Mario : IPlayer
     private int scoreMult;
     private const int maxScoreMult = 16;
     private SpriteFont scoreFont;
+
     public Mario(Game1 game, List<IEntity> entities, List<SoundEffect> sfx, TextureManager textureManager, GameTime gametime, ref GameStateMachine gsm, ref SpriteFont font)
     {
         this.textureManager = textureManager;
@@ -91,6 +92,11 @@ public class Mario : IPlayer
          * 5:FlagPole for winning
          */
         this._sfx = sfx;
+    }
+
+    public PlayerStateMachine GetStateMachine()
+    {
+        return this.playerStateMachine;
     }
 
     public void MoveRight()

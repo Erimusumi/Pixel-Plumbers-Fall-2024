@@ -146,6 +146,9 @@ public class KoopaStateMachine
             case KoopaState.Flipped:
 				_sprite.FlippedLogic();
 				break;
+            case KoopaState.Start:
+                _sprite.StartLogic();
+                break;
         }
 
     }

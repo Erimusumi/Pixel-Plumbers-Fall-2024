@@ -106,10 +106,10 @@ public class LevelOne : ILevel
 
     private void InitializeEnemies()
     {
-        Enemy.Add(new Blooper(240, 200, mario, luigi));
+        Enemy.Add(new Koopa(3350, 365, mario, luigi));
 
         int[] enemyXPositions = { 535, 1400, 1700, 1750, 2500, 2600, 3000, 3150, 3520, 3720, 4000, 4050, 4110, 4160, 5400, 5550 };
-        int[] enemyYPositions = { 370, 385, 385, 385, 235, 105, 385, 385, 385, 385, 385, 385, 385, 385, 385, 385 };
+        int[] enemyYPositions = { 385, 385, 385, 385, 235, 105, 385, 385, 385, 385, 385, 385, 385, 385, 385, 385 };
 
         for (int i = 0; i < enemyXPositions.Length; i++)
         {
@@ -283,7 +283,6 @@ public class LevelOne : ILevel
         obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
         obstacle3.Draw(spriteBatch, new Vector2(350 + 350, 335));
         obstacle6.Draw(spriteBatch, new Vector2(5740, 370));
-        //spriteBatch.Draw(box, mario.GetDestination(), Color.White);
     }
 
     private void DrawBrickBlocks(SpriteBatch spriteBatch)

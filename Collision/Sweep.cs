@@ -12,7 +12,8 @@ using Pixel_Plumbers_Fall_2024;
 public class Sweep
 {
     GameTime gameTime;
-    private DisablePlayerCommand disablePlayerCommand;
+    DisablePlayerCommand disablePlayerCommand;
+
     public Sweep(GameTime gameTime, DisablePlayerCommand disablePlayerCommand)
     {
         this.gameTime = gameTime;
