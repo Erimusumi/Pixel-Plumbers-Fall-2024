@@ -206,11 +206,6 @@ namespace Pixel_Plumbers_Fall_2024
             sweep.Compare(entities, entitiesRemoved, camera.position);
 
             blackJackStateMachine.Update();
-
-            Console.WriteLine(gameStateMachine.currentGameMode);
-            // Console.WriteLine(gameStateMachine.currentGameState);
-            // Console.WriteLine(gameStateMachine.currentLevelState);
-
         }
 
         private void UpdateGameplay(GameTime gameTime)
@@ -317,10 +312,16 @@ namespace Pixel_Plumbers_Fall_2024
         private void DrawGameScreen()
         {
             if (gameStateMachine.isCurrentStateStart())
+            {
                 startScreenSprite.Draw(spriteBatch, new Vector2(200, 200));
+                camera.Reset();
+            }
 
             if (gameStateMachine.isLevelScreen())
+            {
                 levelScreenSprite.Draw(spriteBatch, new Vector2(200, 200));
+                camera.Reset();
+            }
 
             if (gameStateMachine.isCurrentStateRunning() || gameStateMachine.isCurrentStatePaused())
             {
@@ -351,7 +352,7 @@ namespace Pixel_Plumbers_Fall_2024
         {
             foreach (var sp in scorePopups)
             {
-                sp.Draw(spriteBatch,levelScreenFonts);
+                sp.Draw(spriteBatch, levelScreenFonts);
             }
         }
 

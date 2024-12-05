@@ -69,6 +69,9 @@ public class CheepsStateMachine
 			case CheepsState.Flipped:
 				_sprite.FlippedLogic();
 				break;
+            case CheepsState.Start:
+                _sprite.StartLogic();
+                break;
         }
 
     }

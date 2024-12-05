@@ -80,9 +80,12 @@ public class BlooperStateMachine
             case BlooperState.Flipped:
                 _sprite.FlippedLogic();
                 break;
+            case BlooperState.Start:
+                _sprite.StartLogic();
+                break;
         }
 
-        }
+    }
     public Rectangle GetDestination()
     {
         return _sprite.GetDestination();

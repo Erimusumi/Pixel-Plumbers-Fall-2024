@@ -11,6 +11,7 @@ public class KoopaSprites
     public Rectangle destinationRectangle;
     public int counter = -1;
     public int counter2 = -1;
+    public int counter3 = 0;
     public const int countMod = 10;
     public const int scaleUp = 2;
     public const int speed = 1;
@@ -152,18 +153,22 @@ public class KoopaSprites
         {
             if (counter % 10 == 0)
             {
-                counter2++;
+                counter3++;
             }
-            posY += counter2;
-
+            posY += counter3;
             if (posY >= groundPosition)
             {
                 posY = (int)groundPosition;
-                counter2 = 0;
+                counter3 = 0;
                 isOnGround = true;
             }
             destinationRectangle = new Rectangle(position, posY, width * scaleUp, 15 * scaleUp);
         }
+    }
+    public void StartLogic()
+    {
+        sourceRectangle = new Rectangle(180, 0, width, height);
+        destinationRectangle = new Rectangle(position, posY, width * scaleUp, height * scaleUp);
     }
     public void FlippedLogic()
 	{
