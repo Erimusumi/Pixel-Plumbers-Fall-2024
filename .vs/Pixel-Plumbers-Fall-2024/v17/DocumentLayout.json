@@ -1,30 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Projects\\",
+  "WorkspaceRootPath": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\players\\mario\\playerstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:players\\mario\\playerstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\moi\\sprites\\mariosprites\\firemario\\winfiremario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\mariosprites\\firemario\\winfiremario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\moi\\sprites\\mariosprites\\bigmario\\winbigmario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\mariosprites\\bigmario\\winbigmario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\moi\\content\\audio\\erwin.mp3||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:content\\audio\\erwin.mp3||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\moi\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\players\\mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:players\\mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\moi\\items\\flag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:items\\flag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\players\\luigi\\luigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:players\\luigi\\luigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\moi\\levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:levels\\levelone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\sweep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\moi\\grounddetection\\togglefalling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:grounddetection\\togglefalling.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\collision\\interaction\\playerflaginteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:collision\\interaction\\playerflaginteraction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\moi\\filter entities\\filterentities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:filter entities\\filterentities.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\moi\\enemy\\goomba\\goombasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:enemy\\goomba\\goombasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\moi\\enemy\\koopa\\koopasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:enemy\\koopa\\koopasprites.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\moi\\enemy\\koopa\\koopa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:enemy\\koopa\\koopa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\moi\\enemy\\koopa\\koopastatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:enemy\\koopa\\koopastatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,21 +58,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Game1.cs",
-              "DocumentMoniker": "C:\\Projects\\Game1.cs",
-              "RelativeDocumentMoniker": "Game1.cs",
-              "ToolTip": "C:\\Projects\\Game1.cs",
-              "RelativeToolTip": "Game1.cs",
-              "ViewState": "AgIAAIIAAAAAAAAAAAApwJIAAACKAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "WinFireMario.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Sprites\\MarioSprites\\FireMario\\WinFireMario.cs",
+              "RelativeDocumentMoniker": "Sprites\\MarioSprites\\FireMario\\WinFireMario.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Sprites\\MarioSprites\\FireMario\\WinFireMario.cs*",
+              "RelativeToolTip": "Sprites\\MarioSprites\\FireMario\\WinFireMario.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-16T18:15:02.512Z",
-              "IsPinned": true,
+              "WhenOpened": "2024-12-05T00:49:57.867Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Bookmark",
@@ -60,10 +87,6 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
@@ -72,71 +95,169 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Luigi.cs",
-              "DocumentMoniker": "C:\\Projects\\Players\\Luigi\\Luigi.cs",
-              "RelativeDocumentMoniker": "Players\\Luigi\\Luigi.cs",
-              "ToolTip": "C:\\Projects\\Players\\Luigi\\Luigi.cs",
-              "RelativeToolTip": "Players\\Luigi\\Luigi.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAYAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "WinBigMario.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Sprites\\MarioSprites\\BigMario\\WinBigMario.cs",
+              "RelativeDocumentMoniker": "Sprites\\MarioSprites\\BigMario\\WinBigMario.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Sprites\\MarioSprites\\BigMario\\WinBigMario.cs*",
+              "RelativeToolTip": "Sprites\\MarioSprites\\BigMario\\WinBigMario.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T01:17:31.695Z",
+              "WhenOpened": "2024-12-05T00:42:11.766Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Mario.cs",
-              "DocumentMoniker": "C:\\Projects\\Players\\Mario\\Mario.cs",
-              "RelativeDocumentMoniker": "Players\\Mario\\Mario.cs",
-              "ToolTip": "C:\\Projects\\Players\\Mario\\Mario.cs",
-              "RelativeToolTip": "Players\\Mario\\Mario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAACrAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T01:16:05.844Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PlayerStateMachine.cs",
-              "DocumentMoniker": "C:\\Projects\\Players\\Mario\\PlayerStateMachine.cs",
-              "RelativeDocumentMoniker": "Players\\Mario\\PlayerStateMachine.cs",
-              "ToolTip": "C:\\Projects\\Players\\Mario\\PlayerStateMachine.cs*",
-              "RelativeToolTip": "Players\\Mario\\PlayerStateMachine.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T01:15:35.819Z",
-              "EditorCaption": ""
+              "Title": "erwin.mp3",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Content\\Audio\\erwin.mp3",
+              "RelativeDocumentMoniker": "Content\\Audio\\erwin.mp3",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Content\\Audio\\erwin.mp3",
+              "RelativeToolTip": "Content\\Audio\\erwin.mp3",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALJSURBVDhPrVTfS1NRHP/s7pftTlzb2lybJYLDOVQQvSQGgUL02kPzKXqzB/FPsNdefQp8SXqwIvAhhFILIqg9GAPBEcUy5zQc6mZjmz92t7u\u002B5\u002B4227130UMf\u002BHDPOff7/ZzPOed7Dv4rqtWqQWnC6XR6fD7fVaXbFLlcLpNOp1NlgjKkj0gkMpVIJKSdnR0plUrpMrm1VVlYWPgoCMINA0FJ1cfExMRUNpuV/oaT42MpHo\u002BLS0tL0b6\u002BPkFJbQCnfOugbWjOWohxZGREeDI//5hEh2tD59AI6uHlxhFm3\u002B6iLAH5fB7b29vcRZer98HMzJzdbu9SwmToCqqdpc\u002BAh59PsHpQwZXOTthsNmQyGQQ6OnxmszlMKZZapkqQLUktxuiwGRF0mvEofoC9qg3BYBADAwNwu92c0WTiKc0sCxBUDmVJDX\u002BKInqsp7jZZsH7RAGSVFH\u002BwcCpTrtRkGLIkIatVuAHd4aQw4Zq2VAf14NK8HyZp6KEN9\u002BLmH6XxeyGhLDVji/pPCxG5o6F6is2XfKnvTNEXh9h7msRsd1jFIpljHe14k7Y8UecFo2HQjFViTmkXTZK4C\u002BUgNIpLLk8rrW2IBzg4XZYa3H6emqHDCyyil461cVbl7By249XdzsQuX4ZHG0/XRgSo4Js4tCkfGWQNzx99hybm98wOXkfa4svMDY2jlgshrX9ffj9fgjCMJaXV9De7sXQ0LBGVnMo7BGxWKygh4KKN4tKpYJSqYTR0VHZHc/zoCsHUfz92DRKavaQgRXt\u002Bvo6PB4PTSDKQslkEoODg2BlVyjksU\u002BO9dCwZAPHIRwOIxAIwOFwwG7n4XK50N/fj\u002B7ubmo7cXiYoYm81HbLOUbO2GCqXuVer7cnFArdoyZH4MlVhblhZMs2mUzsh\u002BxWpJvD\u002BjRejkajq9T/QHlFpqN\u002BJNuILcT6Zf8HnBCPiFTxwC\u002Bso4jfSRzgJAAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-12-05T00:42:04.523Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Sweep.cs",
-              "DocumentMoniker": "C:\\Projects\\Collision\\Sweep.cs",
-              "RelativeDocumentMoniker": "Collision\\Sweep.cs",
-              "ToolTip": "C:\\Projects\\Collision\\Sweep.cs",
-              "RelativeToolTip": "Collision\\Sweep.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA4AAAAiAAAAAAAAAA==",
+              "Title": "Flag.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Items\\Flag.cs",
+              "RelativeDocumentMoniker": "Items\\Flag.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Items\\Flag.cs",
+              "RelativeToolTip": "Items\\Flag.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T01:14:46.043Z",
+              "WhenOpened": "2024-12-05T00:41:15.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GoombaSprites.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Enemy\\Goomba\\GoombaSprites.cs",
+              "RelativeDocumentMoniker": "Enemy\\Goomba\\GoombaSprites.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Enemy\\Goomba\\GoombaSprites.cs",
+              "RelativeToolTip": "Enemy\\Goomba\\GoombaSprites.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAIwI8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T23:57:05.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "KoopaSprites.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Enemy\\Koopa\\KoopaSprites.cs",
+              "RelativeDocumentMoniker": "Enemy\\Koopa\\KoopaSprites.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Enemy\\Koopa\\KoopaSprites.cs",
+              "RelativeToolTip": "Enemy\\Koopa\\KoopaSprites.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAADgvyYAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T23:35:46.907Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "KoopaStateMachine.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Enemy\\Koopa\\KoopaStateMachine.cs",
+              "RelativeDocumentMoniker": "Enemy\\Koopa\\KoopaStateMachine.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Enemy\\Koopa\\KoopaStateMachine.cs",
+              "RelativeToolTip": "Enemy\\Koopa\\KoopaStateMachine.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAswGAAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T23:33:48.499Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Koopa.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Enemy\\Koopa\\Koopa.cs",
+              "RelativeDocumentMoniker": "Enemy\\Koopa\\Koopa.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Enemy\\Koopa\\Koopa.cs",
+              "RelativeToolTip": "Enemy\\Koopa\\Koopa.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwDwAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T23:33:26.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FilterEntities.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Filter Entities\\FilterEntities.cs",
+              "RelativeDocumentMoniker": "Filter Entities\\FilterEntities.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Filter Entities\\FilterEntities.cs",
+              "RelativeToolTip": "Filter Entities\\FilterEntities.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T23:33:05.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ToggleFalling.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\GroundDetection\\ToggleFalling.cs",
+              "RelativeDocumentMoniker": "GroundDetection\\ToggleFalling.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\GroundDetection\\ToggleFalling.cs",
+              "RelativeToolTip": "GroundDetection\\ToggleFalling.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAkwHkAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T23:27:52.642Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "PlayerFlagInteraction.cs",
-              "DocumentMoniker": "C:\\Projects\\Collision\\Interaction\\PlayerFlagInteraction.cs",
-              "RelativeDocumentMoniker": "Collision\\Interaction\\PlayerFlagInteraction.cs",
-              "ToolTip": "C:\\Projects\\Collision\\Interaction\\PlayerFlagInteraction.cs",
-              "RelativeToolTip": "Collision\\Interaction\\PlayerFlagInteraction.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAvAAAAAAAAAA==",
+              "Title": "LevelOne.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Levels\\LevelOne.cs",
+              "RelativeDocumentMoniker": "Levels\\LevelOne.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Levels\\LevelOne.cs",
+              "RelativeToolTip": "Levels\\LevelOne.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAiwGEAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T00:53:48.688Z",
+              "WhenOpened": "2024-11-27T17:31:38.596Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "88ab0326-3a7f-4c13-b6f1-c8b3bdbc77ba",
+        "Display": 0,
+        "X": 20,
+        "Y": 255,
+        "Width": 1269,
+        "Height": 534,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Game1.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Game1.cs",
+              "RelativeDocumentMoniker": "Game1.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Moi\\Game1.cs",
+              "RelativeToolTip": "Game1.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAswJEAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-16T18:15:02.512Z",
               "EditorCaption": ""
             }
           ]
