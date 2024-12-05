@@ -203,6 +203,7 @@ public class Luigi : IPlayer
         switch (playerStateMachine.CurrentGameState)
         {
             case PlayerStateMachine.PlayerGameState.Small:
+                this.SetPositionY(this.luigiPosition.Y - 32);
                 playerStateMachine.SetPlayerBig();
                 _sfx[0].Play();
                 break;
@@ -231,6 +232,7 @@ public class Luigi : IPlayer
                 break;
 
             case PlayerStateMachine.PlayerGameState.Big:
+                this.SetPositionY(this.luigiPosition.Y + 32);
                 _sfx[1].Play();
                 playerStateMachine.SetPlayerSmall();
                 break;
@@ -558,5 +560,11 @@ public class Luigi : IPlayer
     public void SetMarioRef(Mario mario)
     {
         this.mario = mario;
+    }
+
+    public void Fall()
+    {
+        this.isOnGround = false;
+        this.updateGroundPosition(this.GroundPosition() + 100f);
     }
 }

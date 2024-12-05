@@ -212,6 +212,7 @@ public class Mario : IPlayer
         switch (playerStateMachine.CurrentGameState)
         {
             case PlayerStateMachine.PlayerGameState.Small:
+                this.SetPositionY(this.marioPosition.Y - 32);
                 playerStateMachine.SetPlayerBig();
                 _sfx[0].Play();
                 break;
@@ -239,6 +240,7 @@ public class Mario : IPlayer
                 break;
 
             case PlayerStateMachine.PlayerGameState.Big:
+                this.SetPositionY(this.marioPosition.Y - 32);
                 _sfx[1].Play();
                 playerStateMachine.SetPlayerSmall();
                 break;
@@ -536,7 +538,7 @@ public class Mario : IPlayer
 
     public void ResetScoreMult()
     {
-        
+
         if (isOnGround && !this.playerStateMachine.HasStar())
         {
             scoreMult = 1;
@@ -560,5 +562,11 @@ public class Mario : IPlayer
     public void SetLuigiRef(Luigi luigi)
     {
         this.luigi = luigi;
+    }
+
+    public void Fall()
+    {
+        this.isOnGround = false;
+        this.updateGroundPosition(this.GroundPosition() + 100f);
     }
 }

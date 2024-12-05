@@ -10,18 +10,21 @@ public class CutSceneManager
     PlayerMovementController marioMovementController;
     PlayerMovementController luigiMovementController;
     IPlayer player;
-    IPlayer player2;
+    PlayerStateMachine playerSM;
     public CutSceneManager(IPlayer player)
     {
         this.player = player;
         marioMovementController = new PlayerMovementController();
         luigiMovementController = new PlayerMovementController();
         disableIPlayer = new DisablePlayerCommand(marioMovementController,luigiMovementController);
+        playerSM = player.GetStateMachine();
        
     }
     public void moveRight()
     {
         player.MoveRight();
+       
+        
 
     }
     public void moveLeft()
