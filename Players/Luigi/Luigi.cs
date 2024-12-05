@@ -54,7 +54,7 @@ public class Luigi : IPlayer
     private int scoreMult;
     private const int maxScoreMult = 16;
     private SpriteFont scoreFont;
-    public Luigi(Game1 game, List<IEntity> entities, List<SoundEffect> sfx, TextureManager textureManager, GameTime gametime, GameStateMachine gsm, Mario mario, ref SpriteFont font)
+    public Luigi(Game1 game, List<IEntity> entities, List<SoundEffect> sfx, TextureManager textureManager, GameTime gametime, ref GameStateMachine gsm, Mario mario, ref SpriteFont font)
     {
         this.textureManager = textureManager;
         this.luigiTexture = textureManager.GetTexture("Luigi");
