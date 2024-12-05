@@ -19,16 +19,12 @@ public class DisablePlayerCommand : ICommand
 
     public void Execute()
     {
-        if (count == 0)
-        {
             marioMovementController.SetCommands(new Dictionary<Keys, IPlayerCommand>());
             luigiMovementController.SetCommands(new Dictionary<Keys, IPlayerCommand>());
-            count++;
-        } else
-        {
-            marioMovementController.SetCommands(commandsMario);
-            luigiMovementController.SetCommands(commandsLuigi);
-            count = 0;
-        }
+    }
+    public void ReturnCommand()
+    {
+        marioMovementController.SetCommands(commandsMario);
+        luigiMovementController.SetCommands(commandsLuigi);
     }
 }
