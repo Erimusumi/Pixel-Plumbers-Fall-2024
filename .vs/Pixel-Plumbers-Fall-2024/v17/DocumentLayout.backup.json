@@ -72,10 +72,9 @@
               "RelativeDocumentMoniker": "Levels\\LevelOne.cs",
               "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Levels\\LevelOne.cs",
               "RelativeToolTip": "Levels\\LevelOne.cs",
-              "ViewState": "AgIAAI8AAAAAAAAAAAD4v5wAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAAJMAAAAAAAAAAAD4v6AAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T19:10:09.06Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T19:10:09.06Z"
             },
             {
               "$type": "Document",
@@ -87,8 +86,7 @@
               "RelativeToolTip": "Sprites\\Block Sprites\\StaticBlockSprite.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T19:08:29.714Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T19:08:29.714Z"
             },
             {
               "$type": "Document",
@@ -98,10 +96,9 @@
               "RelativeDocumentMoniker": "Players\\Luigi\\Luigi.cs",
               "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Players\\Luigi\\Luigi.cs",
               "RelativeToolTip": "Players\\Luigi\\Luigi.cs",
-              "ViewState": "AgIAAG0BAAAAAAAAAAAcwHoBAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAHwBAAAAAAAAAAAcwIkBAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T14:11:28.98Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T14:11:28.98Z"
             },
             {
               "$type": "Document",
@@ -113,8 +110,7 @@
               "RelativeToolTip": "Collision\\Interaction\\PlayerBlockInteraction.cs",
               "ViewState": "AgIAACQAAAAAzcwUv+kewDQAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T14:11:05.536Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T14:11:05.536Z"
             },
             {
               "$type": "Document",
@@ -126,8 +122,7 @@
               "RelativeToolTip": "Players\\Mario\\Mario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T14:10:13.457Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T14:10:13.457Z"
             },
             {
               "$type": "Document",
@@ -137,7 +132,7 @@
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\BrokenBrickSprite.cs",
               "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Sprites\\Block Sprites\\BrokenBrickSprite.cs",
               "RelativeToolTip": "Sprites\\Block Sprites\\BrokenBrickSprite.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAvwBcAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAFwAAAAAAAD9brAXwGwAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-04T14:09:01.558Z",
               "EditorCaption": ""
@@ -152,8 +147,7 @@
               "RelativeToolTip": "Sprites\\IBlock.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T14:00:02.844Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T14:00:02.844Z"
             },
             {
               "$type": "Document",
@@ -163,10 +157,9 @@
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\LuckyBlockSprite.cs",
               "ToolTip": "C:\\Users\\w6614\\Desktop\\OSU\\2024 Autumn Semester\\CSE 3902\\Project Code\\Sprint3\\Erimusumi\\Pixel-Plumbers-Fall-2024\\Sprites\\Block Sprites\\LuckyBlockSprite.cs",
               "RelativeToolTip": "Sprites\\Block Sprites\\LuckyBlockSprite.cs",
-              "ViewState": "AgIAAIgAAAAAZ2ZmZmYuwKoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIcAAAAAZ2ZmZmYuwKkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T06:40:29.922Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T06:40:29.922Z"
             },
             {
               "$type": "Document",
@@ -178,8 +171,7 @@
               "RelativeToolTip": "Players\\IPlayer.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAIwBkAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T06:39:42.804Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T06:39:42.804Z"
             }
           ]
         }
