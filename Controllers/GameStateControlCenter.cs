@@ -37,6 +37,9 @@ public class GameStateControlCenter
         ICommand musicCommand = new MusicCommand(MusicMachine);
         gameKeyboardController.addCommand(Keys.M, musicCommand);
 
+        ICommand muteCommand = new MuteCommand();
+        gameKeyboardController.addCommand(Keys.Z, muteCommand);
+
         ICommand quitGameCommand = new QuitGameCommand(game);
         gameKeyboardController.addCommand(Keys.Q, quitGameCommand);
 
