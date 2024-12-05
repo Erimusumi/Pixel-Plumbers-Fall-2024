@@ -33,7 +33,7 @@ public class OtherEnemyInteraction
                 enemy.changeDirection();
             }
         }
-        else if (Math.Abs(EnemyRec.Height - EnemyRec.Y) < ItemRec.Y)
+        else if (Math.Abs(EnemyRec.Height - EnemyRec.Y) < ItemRec.Y && item2.GetType() != typeof(Goomba) && item2.GetType() != typeof(Cheeps) && item2.GetType() != typeof(Blooper))
         {
             enemy.SetIsOnGround(true);
         }
