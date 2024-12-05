@@ -25,6 +25,7 @@ GAME CONTROLS:
      - press P to pause the game. (Also pauses music)
      - Press Q to quit the game
      - Press M to play music. Press again to play another song.
+     - Press Z to mute everything.
 
 KNOWN BUGS:
     - Some of the hitboxes are a bit clunky
