@@ -32,4 +32,5 @@ KNOWN BUGS:
 ≈    - Goomba2 and GoombaStateMaåchine2 are temporary.
     - For the MarioOBlock and MarioObstacle Interaction, the gravity is not applied to the mario when mario is on the top of the obstalce/block without jumping.
     - The click boxes for "level screen" and "main menu" are presistent.
-    - Sometimes when mario is colliding with a obstacle from the left or right, he will fall through the ground
+    - Sometimes when mario is colliding with a obstacle from the left or right, he will fall through the ground, or falling off a block
+    - Mario win animation doesn't play properly for level 1
