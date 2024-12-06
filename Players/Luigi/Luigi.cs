@@ -429,6 +429,7 @@ public class Luigi : IPlayer
         luigiDeathBounceIncrement = 20;
         gameResetTimer = -1;
         deathSoundPlaying = false;
+        waitingForPartnerToDie = false;
     }
 
     public Rectangle GetDestination()

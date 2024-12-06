@@ -123,20 +123,21 @@ public class Layer
             spriteBatch.Draw(textureAtlas, destRect, src, Color.White);
         }
 
- 
-        foreach (Rectangle redRect in redRectangles)
-        {
-            // Adjust rectangle position based on camera
-            Rectangle adjustedRect = new Rectangle(
-                redRect.X,
-                redRect.Y,
-                redRect.Width,
-                redRect.Height
-            );
 
-            // Draw red rectangles with some transparency for visibility
-            spriteBatch.Draw(textureAtlas, adjustedRect, Color.Red * 0.5f);
-        }
+        // Draws red rectangles for debugging collisions 
+        //foreach (Rectangle redRect in redRectangles)
+        //{
+        //    // Adjust rectangle position based on camera
+        //    Rectangle adjustedRect = new Rectangle(
+        //        redRect.X,
+        //        redRect.Y,
+        //        redRect.Width,
+        //        redRect.Height
+        //    );
+
+        //    // Draw red rectangles with some transparency for visibility
+        //    spriteBatch.Draw(textureAtlas, adjustedRect, Color.Red * 0.5f);
+        //}
     }
 
     // Function to return the list of red rectangles for collision handling

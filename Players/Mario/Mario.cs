@@ -434,6 +434,7 @@ public class Mario : IPlayer
         marioDeathBounceIncrement = 20;
         gameResetTimer = -1;
         deathSoundPlaying = false;
+        waitingForPartnerToDie = false;
     }
 
     public Rectangle GetDestination()
