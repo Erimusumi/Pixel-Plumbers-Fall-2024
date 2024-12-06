@@ -41,7 +41,7 @@ public class ItemBlockInteraction
                 item.NotFalling();
                 wasOnTop = true; // Mario is on the obstacle
 
-                System.Diagnostics.Debug.Write("NotFalling is executed");
+                //System.Diagnostics.Debug.Write("NotFalling is executed");
             }
             else if (minOverlap == overlapLeft)
             {

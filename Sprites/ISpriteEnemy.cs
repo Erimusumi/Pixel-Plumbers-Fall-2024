@@ -17,4 +17,5 @@ public interface ISpriteEnemy : IEntity
 	public bool GetIsOnGround();
 	public void SetIsOnGround(bool val);
 
+	public Boolean IsDead();
 }

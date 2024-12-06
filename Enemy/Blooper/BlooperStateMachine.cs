@@ -10,7 +10,7 @@ public class BlooperStateMachine
     private enum BlooperState { Left, Right, Idle, Flipped, Start};
     private BlooperState _currentState = BlooperState.Start;
     private BlooperSprites _sprite;
-    private Boolean _isFlipped = false;
+    private Boolean isDead = false;
     private IPlayer mario;
     private int RiseMore = 0;
     public BlooperStateMachine(int posX, int posY, IPlayer mario, IPlayer luigi)
@@ -18,10 +18,9 @@ public class BlooperStateMachine
         _sprite = new BlooperSprites(posX, posY);
         this.mario = mario;
     }
-
-    public Boolean IsFlipped()
+    public Boolean IsDead()
     {
-        return _isFlipped;
+        return isDead;
     }
     public void changeDirection()
     {
@@ -36,6 +35,23 @@ public class BlooperStateMachine
         {
             _currentState = BlooperState.Flipped;
         }
+    }
+
+    public bool GetIsOnGround()
+    {
+        return _sprite.GetIsOnGround();
+    }
+    public void SetIsOnGround(bool val)
+    {
+        _sprite.SetIsOnGround(val);
+    }
+    public void SetGroundPosition(float x)
+    {
+        if (isDead)
+        {
+            x = 1000;
+        }
+        _sprite.SetGroundPosition(x);
     }
     public void Update()
     {
@@ -68,6 +84,11 @@ public class BlooperStateMachine
         }else
         {
             _currentState = BlooperState.Idle;
+        }
+
+        if (isDead)
+        {
+            _sprite.ApplyGravity();
         }
 
         RiseMore = 384 - holdMario.Y;

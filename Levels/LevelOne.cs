@@ -108,8 +108,8 @@ public class LevelOne : ILevel
     {
         Enemy.Add(new Koopa(3350, 365, mario, luigi));
 
-        int[] enemyXPositions = { 535, 1400, 1700, 1750, 2500, 2600, 3000, 3150, 3520, 3720, 4000, 4050, 4110, 4160, 5400, 5550 };
-        int[] enemyYPositions = { 385, 385, 385, 385, 235, 105, 385, 385, 385, 385, 385, 385, 385, 385, 385, 385 };
+        int[] enemyXPositions = { 535, 1400, 1700, 1750, 2490, 2600, 3000, 3150, 3520, 3720, 4000, 4050, 4110, 4160, 5400, 5550 };
+        int[] enemyYPositions = { 385, 385, 385, 385, 215, 105, 385, 385, 385, 385, 385, 385, 385, 385, 385, 385 };
 
         for (int i = 0; i < enemyXPositions.Length; i++)
         {
