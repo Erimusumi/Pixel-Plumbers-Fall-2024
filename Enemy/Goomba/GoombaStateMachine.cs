@@ -7,7 +7,7 @@ using Pixel_Plumbers_Fall_2024;
 
 public class GoombaStateMachine
 {
-	private enum GoombaState {Left, Right, Stomped, Flipped, Start};
+	public enum GoombaState {Left, Right, Stomped, Flipped, Start};
 	private GoombaState _currentState = GoombaState.Start;
 	private GoombaSprites _sprite;
 	private Boolean isDead = false;
@@ -45,6 +45,7 @@ public class GoombaStateMachine
         {
             _currentState = GoombaState.Stomped;
         }
+		isDead = true;
     }
 
 	public void beFlipped()
@@ -120,4 +121,5 @@ public class GoombaStateMachine
 	{
 		_sprite.Draw(sb, Texture);
 	}
+
 }
