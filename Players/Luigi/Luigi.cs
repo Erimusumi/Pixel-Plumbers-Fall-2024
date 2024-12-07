@@ -522,10 +522,10 @@ public class Luigi : IPlayer
         return this.playerStateMachine;
     }
 
-    //public int GetScoreMult()
-    //{
-    //    return this.scoreMult;
-    //}
+    public int GetScoreMult()
+    {
+        return this.scoreMult;
+    }
 
     public void IncreaseScoreMult()
     {
@@ -546,11 +546,12 @@ public class Luigi : IPlayer
     public void AddScore(int scoreAmt)
     {
         game.hudManager.AddScore(scoreAmt * this.scoreMult);
-        //game.scorePopups.Add(new ScorePopup(luigiPosition, scoreFont, this.game, game.scorePopups, this, scoreAmt * this.scoreMult));
+        game.scorePopups.Add(new ScorePopup(luigiPosition, this.game, scoreAmt * this.scoreMult));
     }
     public void AddCoin()
     {
         game.hudManager.CollectCoin();
+        game.hudManager.AddScore(100);
     }
     public void playSound(int index)
     {

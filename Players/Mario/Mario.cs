@@ -523,10 +523,10 @@ public class Mario : IPlayer
         return this.playerStateMachine;
     }
 
-    //public int GetScoreMult()
-    //{
-    //    return this.scoreMult;
-    //}
+    public int GetScoreMult()
+    {
+        return this.scoreMult;
+    }
 
     public void IncreaseScoreMult()
     {
@@ -548,11 +548,12 @@ public class Mario : IPlayer
     public void AddScore(int scoreAmt)
     {
         game.hudManager.AddScore(scoreAmt * this.scoreMult);
-        //game.scorePopups.Add(new ScorePopup(marioPosition, scoreFont, this.game, game.scorePopups, this, scoreAmt * this.scoreMult));
+        game.scorePopups.Add(new ScorePopup(marioPosition, this.game, scoreAmt * this.scoreMult));
     }
     public void AddCoin()
     {
         game.hudManager.CollectCoin();
+        game.hudManager.AddScore(100);
     }
     public void playSound(int index)
     {

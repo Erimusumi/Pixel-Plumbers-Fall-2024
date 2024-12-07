@@ -19,20 +19,7 @@ public class PlayerItemInteraction
     }
     public void update()
     {
-        PlayerStateMachine playerStateMachine = player.getStateMachine();
-
-        if (playerStateMachine.IsSmall())
-        {
-            player.PowerUp();
-        }
-        else if (playerStateMachine.IsBig())
-        {
-            player.PowerUp();
-        }
-        else if (playerStateMachine.IsFire())
-        {
-            player.PowerUp();
-        }
+        player.PowerUp();
         removeFromList();
     }
     private void removeFromList()

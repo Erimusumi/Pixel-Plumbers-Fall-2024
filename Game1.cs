@@ -52,6 +52,7 @@ namespace Pixel_Plumbers_Fall_2024
         // game entities and collections
         public List<Fireball> fireballs = new List<Fireball>();
         public List<ScorePopup> scorePopups = new List<ScorePopup>();
+        public List<ScorePopup> removedSP = new List<ScorePopup>();
         public List<IEntity> entities = new List<IEntity>();
         private List<IEntity> entitiesRemoved = new List<IEntity>();
         private List<Rectangle> lvl1CollidableRectangles;
@@ -276,6 +277,10 @@ namespace Pixel_Plumbers_Fall_2024
             {
                 sp.Update(gameTime);
             }
+            foreach (var sp in removedSP)
+            {
+                scorePopups.Remove(sp);
+            }
         }
         private void UpdateRemovedEntities()
         {
@@ -352,7 +357,7 @@ namespace Pixel_Plumbers_Fall_2024
         {
             foreach (var sp in scorePopups)
             {
-                sp.Draw(spriteBatch, levelScreenFonts);
+                sp.Draw(spriteBatch, startScreenFonts);
             }
         }
 
