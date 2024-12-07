@@ -36,7 +36,7 @@ public class ItemObstacleInteraction
             {
                 // Collision on the top side of the obstacle
                 item.NotFalling();
-                System.Diagnostics.Debug.Write("item.notFalling is executed");
+                //System.Diagnostics.Debug.Write("item.notFalling is executed");
             }
             else
             {

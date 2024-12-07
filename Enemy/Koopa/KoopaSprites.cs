@@ -89,12 +89,12 @@ public class KoopaSprites
         if (counter2 == 0)
         {
             sourceRectangle = new Rectangle(360, 5, 16, 15);
-            destinationRectangle = new Rectangle(position, posY + 20, 16 * scaleUp, 15 * scaleUp);
+            destinationRectangle = new Rectangle(position, posY+30, 16 * scaleUp, 15 * scaleUp);
         }
         if (counter2 == 200)
         {
             sourceRectangle = new Rectangle(330, 4, 16, 15);
-            destinationRectangle = new Rectangle(position, posY + 20, 16 * scaleUp, 15 * scaleUp);
+            destinationRectangle = new Rectangle(position, posY+30, 16 * scaleUp, 15 * scaleUp);
         }
         if (counter2 == 350)
         {
@@ -123,7 +123,7 @@ public class KoopaSprites
                 sourceRectangle = new Rectangle(360, 5, width, 15);
             }
         }
-        destinationRectangle = new Rectangle(position, posY, width * scaleUp, 15 * scaleUp);
+        destinationRectangle = new Rectangle(position, posY + 30, width * scaleUp, 15 * scaleUp);
     }
     public void StompedTwiceLogicRight()
     {
@@ -145,7 +145,7 @@ public class KoopaSprites
                 sourceRectangle = new Rectangle(360, 5, width, 15);
             }
         }
-        destinationRectangle = new Rectangle(position, posY, width * scaleUp, 15 * scaleUp);
+        destinationRectangle = new Rectangle(position, posY + 30, width * scaleUp, 15 * scaleUp);
     }
     public void ApplyGravity()
     {
@@ -174,7 +174,7 @@ public class KoopaSprites
 	{
         rotation = 3.1415926535f;
         sourceRectangle = new Rectangle(360, 5, width, 15);
-        destinationRectangle = new Rectangle(position, posY, width * scaleUp, 15 * scaleUp);
+        destinationRectangle = new Rectangle(position, posY+30, width * scaleUp, 15 * scaleUp);
     }
     public Rectangle GetDestination()
     {

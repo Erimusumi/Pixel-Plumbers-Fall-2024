@@ -25,7 +25,7 @@ public class Sweep
     {
         Boolean containsEnemy = false;
         Type type = entities[index].GetType();
-        if (type == typeof(Goomba) || type == typeof(Koopa) || type == typeof(Cheeps))
+        if (type == typeof(Goomba) || type == typeof(Koopa) || type == typeof(Cheeps) || type == typeof(Blooper))
         {
             containsEnemy = true;
             
@@ -230,12 +230,12 @@ public class Sweep
         else if (ContainsItem(entities, index1) && ContainsPlayer(entities, index2))
         {
             MarioItemInteraction = new PlayerItemInteraction((IItem)item1, (IPlayer)item2, entitiesRemoved);
-            System.Diagnostics.Debug.Write("MarioItemInteraction works");
+            //System.Diagnostics.Debug.Write("MarioItemInteraction works");
         }
         else if (ContainsPlayer(entities, index1) && ContainsItem(entities, index2))
         {
             MarioItemInteraction = new PlayerItemInteraction((IItem)item2, (IPlayer)item1, entitiesRemoved);
-            System.Diagnostics.Debug.Write("MarioItemInteraction works");
+            //System.Diagnostics.Debug.Write("MarioItemInteraction works");
         }
         else if (ContainsObstacle(entities, index1) && ContainsItem(entities, index2))
         {
@@ -272,7 +272,7 @@ public class Sweep
 
         else if (ContainsPlayer(entities, index1) && ContainsBlock(entities, index2))
         {
-            Debug.WriteLine("Mario Block Collision Detected");
+            //Debug.WriteLine("Mario Block Collision Detected");
             //handle block interaction
 
             Boolean luckyBlock = true;
@@ -290,7 +290,7 @@ public class Sweep
         }
         else if (ContainsBlock(entities, index1) && ContainsPlayer(entities, index2))
         {
-            Debug.WriteLine("Mario Block Collision Detected");
+            //Debug.WriteLine("Mario Block Collision Detected");
             Boolean luckyBlock = true;
             if (item1.GetType() == typeof(LuckyBlockSprite))
             {

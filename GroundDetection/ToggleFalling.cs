@@ -32,7 +32,7 @@ public class ToggleFalling
         enemies = filterEntities.FilterEnemies(entities);
         items = filterEntities.FilterItems(entities);
         fireballs = filterEntities.FilterFireballs(entities);
-        Debug.WriteLine("There are" + fireballs.Count + "fireballs");
+        //Debug.WriteLine("There are" + fireballs.Count + "fireballs");
         //Debug.WriteLine("There are " + items.Count + " items");
         this.mario = mario;
         this.luigi = luigi;
@@ -102,10 +102,11 @@ public class ToggleFalling
             for (int j = 0; j < collisionRects.Count; j++)
             {
                 Rectangle blockBounds = collisionRects[j];
-                if (enemyBounds.Intersects(blockBounds))
+                if (enemyBounds.Intersects(blockBounds) && !currentEnemy.IsDead())
                 {
 
                     enemyColliding = true;
+
                     if (enemyBounds.Bottom > blockBounds.Top &&
                         enemyBounds.Top < blockBounds.Top &&
                         enemyBounds.Right > blockBounds.Left &&

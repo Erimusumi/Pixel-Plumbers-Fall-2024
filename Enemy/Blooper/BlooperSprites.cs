@@ -17,7 +17,6 @@ public class BlooperSprites
 
     private Rectangle sourceRectangle;
     private Rectangle destinationRectangle;
-    private Rectangle marioDestination;
     private int counterLR = 0;
     private int counter = 0;
 
@@ -27,10 +26,23 @@ public class BlooperSprites
     private const int speed = 1;
 
     private int minFall = 336;
-    private int maxRise = 100;
+    private int counter2 = 0;
+    private bool isOnGround = false;
+    private float groundPosition = 385f;
 
     private float rotation = 0f;
-
+    public bool GetIsOnGround()
+    {
+        return isOnGround;
+    }
+    public void SetIsOnGround(bool val)
+    {
+        isOnGround = val;
+    }
+    public void SetGroundPosition(float x)
+    {
+        groundPosition = x;
+    }
     public void Rise()
     {
         width = 24;
@@ -105,6 +117,26 @@ public class BlooperSprites
         width = 24;
         sourceRectangle = new Rectangle(420, 0, height, width);
     }
+
+    public void ApplyGravity()
+    {
+        if (!isOnGround)
+        {
+            if (counter % 10 == 0)
+            {
+                counter2++;
+            }
+            posY += counter2;
+            if (posY >= groundPosition)
+            {
+                posY = (int)groundPosition;
+                counter2 = 0;
+                isOnGround = true;
+            }
+            destinationRectangle = new Rectangle(position, posY, width * scaleUp, height * scaleUp);
+        }
+    }
+
     public Rectangle GetDestination()
     {
         return destinationRectangle;

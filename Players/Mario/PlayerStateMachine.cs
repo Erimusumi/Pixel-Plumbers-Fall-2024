@@ -92,7 +92,7 @@ public class PlayerStateMachine
     {
         _HasStar = true;
         //test, remove later
-        System.Diagnostics.Debug.WriteLine("Star Collected");
+        //System.Diagnostics.Debug.WriteLine("Star Collected");
     }
 
     public void RemoveStar()

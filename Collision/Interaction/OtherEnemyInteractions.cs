@@ -39,7 +39,10 @@ public class OtherEnemyInteraction
         }
         else
         {
-            enemy.changeDirection();
+            if (enemy.GetType() != typeof(Blooper) && enemy.GetType() != typeof(Cheeps))
+            {
+                enemy.changeDirection();
+            }
         }
         
     }
