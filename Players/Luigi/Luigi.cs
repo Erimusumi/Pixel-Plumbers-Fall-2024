@@ -411,12 +411,13 @@ public class Luigi : IPlayer
         starTimer += -1;
         this.RemoveStar();
         this.checkLuigiHeightForDeath();
+        this.ResetScoreMult();
         this.LuigiWins();
     }
 
     public void Draw(SpriteBatch spriteBatch)
     {
-        currentLuigiSprite.Draw(spriteBatch, luigiPosition, this.HasStar());
+        currentLuigiSprite.Draw(spriteBatch, luigiPosition, this.playerStateMachine.HasStar());
     }
 
     public void Reset()
@@ -463,11 +464,6 @@ public class Luigi : IPlayer
         return playerStateMachine.CurrentGameState;
     }
 
-    public bool HasStar()
-    {
-        return playerStateMachine.HasStar();
-    }
-
     public void SetVelocityY(float velocityY)
     {
         luigiVelocity.Y = velocityY;
@@ -506,7 +502,7 @@ public class Luigi : IPlayer
 
     public void RemoveStar()
     {
-        if (this.HasStar() && starTimer <= 0)
+        if (this.playerStateMachine.HasStar() && starTimer <= 0)
         {
             playerStateMachine.RemoveStar();
         }
@@ -537,7 +533,7 @@ public class Luigi : IPlayer
 
     public void ResetScoreMult()
     {
-        if (isOnGround && !this.HasStar())
+        if (isOnGround && !this.playerStateMachine.HasStar())
         {
             scoreMult = 1;
         }

@@ -25,6 +25,7 @@ public class Goomba : ISpriteEnemy
 	{
 		stateMachine.beStomped();
 	}
+
 	public void beFlipped()
 	{
 		stateMachine.beFlipped();

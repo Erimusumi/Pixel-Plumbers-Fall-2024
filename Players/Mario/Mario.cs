@@ -395,6 +395,7 @@ public class Mario : IPlayer
         starTimer += -1;
         this.RemoveStar();
         this.checkMarioHeightForDeath();
+        this.ResetScoreMult();
         this.MarioWins();
     }
 
@@ -539,7 +540,7 @@ public class Mario : IPlayer
     public void ResetScoreMult()
     {
 
-        if (isOnGround && !this.playerStateMachine.HasStar())
+        if (!playerStateMachine.IsJumping() && !this.playerStateMachine.HasStar())
         {
             scoreMult = 1;
         }
