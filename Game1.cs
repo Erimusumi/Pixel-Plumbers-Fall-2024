@@ -43,6 +43,10 @@ namespace Pixel_Plumbers_Fall_2024
         private KeyboardControllerMovement keyboardControllerMovement;
         private KeyboardController keyboardController;
 
+        private MouseController startMenuController;
+        private MouseController levelScreenController;
+        private MouseController gameOverScrenController;
+
         // levels
         private LevelOne levelOne;
         private Point lvl1mapSize;
@@ -62,6 +66,7 @@ namespace Pixel_Plumbers_Fall_2024
         private BlackJackStateMachine blackJackStateMachine;
         private StartScreenSprite startScreenSprite;
         private LevelScreenSprite levelScreenSprite;
+        private GameOverScreen gameOverScreenSprite;
         private SpriteFont startScreenFonts;
         private SpriteFont levelScreenFonts;
 
@@ -157,6 +162,7 @@ namespace Pixel_Plumbers_Fall_2024
             levelScreenFonts = Content.Load<SpriteFont>("LevelScreenFonts");
             startScreenSprite = new StartScreenSprite(textureManager, startScreenFonts);
             levelScreenSprite = new LevelScreenSprite(levelScreenFonts);
+            gameOverScreenSprite = new GameOverScreen(levelScreenFonts);
 
             blackJackStateMachine = new BlackJackStateMachine(textureManager, soundManager.GetSound("fwip"), startScreenFonts);
             hudManager = new HudManager(startScreenFonts, this, mario);
@@ -173,6 +179,9 @@ namespace Pixel_Plumbers_Fall_2024
 
             gameStateKeyboardController = new KeyboardController();
             gameStateMouseController = new MouseController();
+            startMenuController = new MouseController();
+            levelScreenController = new MouseController();
+            gameOverScrenController = new MouseController();
 
             gameStateControlCenter = new GameStateControlCenter(
                 gameStateMachine,
@@ -181,8 +190,12 @@ namespace Pixel_Plumbers_Fall_2024
                 this,
                 startScreenSprite,
                 levelScreenSprite,
+                gameOverScreenSprite,
                 soundManager,
-                blackJackStateMachine
+                blackJackStateMachine,
+                startMenuController,
+                levelScreenController,
+                gameOverScrenController
             );
         }
 
@@ -191,16 +204,33 @@ namespace Pixel_Plumbers_Fall_2024
             UpdateGameState(gameTime);
             UpdateGameplay(gameTime);
             UpdateGameOver(gameTime);
-
-
-
-
             base.Update(gameTime);
         }
 
         private void UpdateGameState(GameTime gameTime)
         {
-            gameStateKeyboardController.Update();
+            if (!gameStateMachine.isCurrentStateRunning() || !gameStateMachine.isCurrentStatePaused())
+            {
+                {
+                    ResetGame();
+                    startMenuController.Update();
+                }
+                if (gameStateMachine.isLevelScreen())
+                {
+                    ResetGame();
+                    levelScreenController.Update();
+                }
+
+                if (gameStateMachine.isCurrentStateOver())
+                {
+                    ResetGame();
+                    gameOverScrenController.Update();
+                }
+            }
+            if (gameStateMachine.isCurrentStateStart())
+
+
+                gameStateKeyboardController.Update();
             gameStateMouseController.Update();
 
             entities = sort.SortList(entities, entities.Count, entities);
@@ -224,6 +254,9 @@ namespace Pixel_Plumbers_Fall_2024
 
         private void UpdateInputControllers()
         {
+            startMenuController.Update();
+            levelScreenController.Update();
+            gameOverScrenController.Update();
             keyboardController.Update();
             keyboardControllerMovement.Update();
             marioMovementController.Update();
@@ -298,8 +331,7 @@ namespace Pixel_Plumbers_Fall_2024
             gameOverTickTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
             if (gameOverTickTimer > 5000)
             {
-                Process.Start("Pixel-Plumbers-Fall-2024");
-                Environment.Exit(0);
+                gameStateMachine.setGameStateOver();
             }
         }
 
@@ -308,7 +340,6 @@ namespace Pixel_Plumbers_Fall_2024
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.NonPremultiplied, SamplerState.PointWrap, null, null, null, transformMatrix: camera.GetViewMatrix());
             DrawGameScreen();
-            DrawGameOver();
 
             spriteBatch.End();
             base.Draw(gameTime);
@@ -316,6 +347,10 @@ namespace Pixel_Plumbers_Fall_2024
 
         private void DrawGameScreen()
         {
+            if (gameStateMachine.isCurrentStateOver())
+            {
+                gameOverScreenSprite.Draw(spriteBatch, new Vector2(200, 200));
+            }
             if (gameStateMachine.isCurrentStateStart())
             {
                 startScreenSprite.Draw(spriteBatch, new Vector2(200, 200));
@@ -358,19 +393,6 @@ namespace Pixel_Plumbers_Fall_2024
             foreach (var sp in scorePopups)
             {
                 sp.Draw(spriteBatch, startScreenFonts);
-            }
-        }
-
-        private void DrawGameOver()
-        {
-            if (gameStateMachine.isCurrentStateOver())
-            {
-                spriteBatch.DrawString(
-                    startScreenFonts,
-                    "GAME OVER",
-                    new Vector2(camera.position.X + 300, camera.position.Y + 150),
-                    Color.White
-                );
             }
         }
 
