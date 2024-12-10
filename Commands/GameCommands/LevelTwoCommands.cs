@@ -1,6 +1,7 @@
 using Pixel_Plumbers_Fall_2024;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
+using System;
 
 public class LevelTwoCommand : ICommand
 {
@@ -17,5 +18,6 @@ public class LevelTwoCommand : ICommand
         gameStateMachine.setGameStateRunning();
         disableScreenCommand.Execute();
         disableScreenCommand.Set();
+        Console.WriteLine("lvl2Command");
     }
 }

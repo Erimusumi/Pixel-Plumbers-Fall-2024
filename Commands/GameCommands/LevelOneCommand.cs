@@ -1,6 +1,7 @@
 using Pixel_Plumbers_Fall_2024;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
+using System;
 
 public class LevelOneCommand : ICommand
 {
@@ -19,5 +20,6 @@ public class LevelOneCommand : ICommand
 
         disableScreenCommand.Execute();
         disableScreenCommand.Set();
+        Console.WriteLine("lvl1Command");
     }
 }

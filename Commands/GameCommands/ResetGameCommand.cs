@@ -1,4 +1,5 @@
-﻿using Pixel_Plumbers_Fall_2024;
+﻿using System;
+using Pixel_Plumbers_Fall_2024;
 
 public class ResetGameCommand : ICommand
 {
@@ -12,5 +13,6 @@ public class ResetGameCommand : ICommand
     public void Execute()
     {
         game.ResetGame();
+        Console.WriteLine("Reset Command");
     }
 }

@@ -201,6 +201,21 @@ namespace Pixel_Plumbers_Fall_2024
 
         protected override void Update(GameTime gameTime)
         {
+
+            if (gameStateMachine.isStartScreen())
+            {
+                startMenuController.Update();
+            }
+            else if (gameStateMachine.isLevelScreen())
+            {
+                levelScreenController.Update();
+            }
+            else if (gameStateMachine.isCurrentStateOver())
+            {
+                gameOverScrenController.Update();
+
+            }
+
             UpdateGameState(gameTime);
             UpdateGameplay(gameTime);
             UpdateGameOver(gameTime);
@@ -209,33 +224,11 @@ namespace Pixel_Plumbers_Fall_2024
 
         private void UpdateGameState(GameTime gameTime)
         {
-            if (!gameStateMachine.isCurrentStateRunning() || !gameStateMachine.isCurrentStatePaused())
-            {
-                {
-                    ResetGame();
-                    startMenuController.Update();
-                }
-                if (gameStateMachine.isLevelScreen())
-                {
-                    ResetGame();
-                    levelScreenController.Update();
-                }
-
-                if (gameStateMachine.isCurrentStateOver())
-                {
-                    ResetGame();
-                    gameOverScrenController.Update();
-                }
-            }
-            if (gameStateMachine.isCurrentStateStart())
-
-
-                gameStateKeyboardController.Update();
+            gameStateKeyboardController.Update();
             gameStateMouseController.Update();
 
             entities = sort.SortList(entities, entities.Count, entities);
             sweep.Compare(entities, entitiesRemoved, camera.position);
-
             blackJackStateMachine.Update();
         }
 
@@ -350,7 +343,9 @@ namespace Pixel_Plumbers_Fall_2024
             if (gameStateMachine.isCurrentStateOver())
             {
                 gameOverScreenSprite.Draw(spriteBatch, new Vector2(200, 200));
+                camera.Reset();
             }
+
             if (gameStateMachine.isCurrentStateStart())
             {
                 startScreenSprite.Draw(spriteBatch, new Vector2(200, 200));
@@ -402,7 +397,7 @@ namespace Pixel_Plumbers_Fall_2024
             fireballs.Clear();
             mario.Reset();
             hudManager.SetTime(400);
-            camera = new(Vector2.Zero);
+            camera.Reset();
 
             if (gameStateMachine.isLevelOne())
                 levelOne.InitializeLevel();
