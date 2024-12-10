@@ -7,14 +7,10 @@ public class DisableScreenCommand : ICommand
 {
     Dictionary<Rectangle, ICommand> list;
     MouseController gameMouseController;
-    GameStateMachine gameStateMachine;
-    BlackJackStateMachine blackJackStateMachine;
-    public DisableScreenCommand(Dictionary<Rectangle, ICommand> list, MouseController gameMouseController, BlackJackStateMachine blackJackStateMachine, GameStateMachine gameStateMachine)
+    public DisableScreenCommand(Dictionary<Rectangle, ICommand> list, MouseController gameMouseController)
     {
         this.list = list;
         this.gameMouseController = gameMouseController;
-        this.gameStateMachine = gameStateMachine;
-        this.blackJackStateMachine = blackJackStateMachine;
     }
     public void Execute()
     {
@@ -24,7 +20,7 @@ public class DisableScreenCommand : ICommand
         }
     }
 
-    public void Set()
+    public void Set(BlackJackStateMachine blackJackStateMachine, GameStateMachine gameStateMachine)
     {
         Dictionary<Rectangle, ICommand> BlackJackList = new Dictionary<Rectangle, ICommand>();
 
