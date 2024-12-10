@@ -14,6 +14,5 @@ public class MarioJumpCommand : IPlayerCommand
 
     public void Unexecute()
     {
-        //mario.Stop();
     }
 }

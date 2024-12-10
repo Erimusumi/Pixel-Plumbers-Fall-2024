@@ -293,7 +293,7 @@ namespace Pixel_Plumbers_Fall_2024
 
         private void UpdateGameOver(GameTime gameTime)
         {
-            if (!gameStateMachine.isCurrentStatOver()) return;
+            if (!gameStateMachine.isCurrentStateOver()) return;
 
             gameOverTickTimer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
             if (gameOverTickTimer > 5000)
@@ -363,7 +363,7 @@ namespace Pixel_Plumbers_Fall_2024
 
         private void DrawGameOver()
         {
-            if (gameStateMachine.isCurrentStatOver())
+            if (gameStateMachine.isCurrentStateOver())
             {
                 spriteBatch.DrawString(
                     startScreenFonts,

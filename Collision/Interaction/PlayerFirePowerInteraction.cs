@@ -32,7 +32,6 @@ public class PlayerFirePowerInteraction
     }
     private void removeFromList()
     {
-        //entitiesRemoved.Add(FirePower);
     }
 }
 

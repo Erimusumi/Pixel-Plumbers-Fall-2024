@@ -4,7 +4,7 @@ using System.Diagnostics.Contracts;
 public class GameStateMachine
 {
     public enum GameStates { Start, Levels, Running, Paused, Over }
-    public enum LevelStates { LevelZero, LevelOne, LevelTwo, LevelThree }
+    public enum LevelStates { LevelZero, LevelOne, LevelTwo }
     public enum GameModes { Singleplayer, Multiplayer }
 
     public GameStates currentGameState = GameStates.Start;
@@ -46,7 +46,7 @@ public class GameStateMachine
         return currentGameState == GameStates.Paused;
     }
 
-    public bool isCurrentStatOver()
+    public bool isCurrentStateOver()
     {
         return currentGameState == GameStates.Over;
     }
@@ -66,10 +66,6 @@ public class GameStateMachine
         currentLevelState = LevelStates.LevelTwo;
     }
 
-    public void setLevelThree()
-    {
-        currentLevelState = LevelStates.LevelThree;
-    }
 
     public bool isLevelZero()
     {
@@ -86,14 +82,14 @@ public class GameStateMachine
         return currentLevelState == LevelStates.LevelTwo;
     }
 
-    public bool isLevelThree()
-    {
-        return currentLevelState == LevelStates.LevelThree;
-    }
-
     public bool isLevelScreen()
     {
         return currentGameState == GameStates.Levels;
+    }
+
+    public bool isStartScreen()
+    {
+        return currentGameState == GameStates.Start;
     }
 
     public void setGameSinglePlayer()
