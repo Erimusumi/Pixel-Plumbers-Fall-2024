@@ -7,6 +7,7 @@ public class LevelTwoCommand : ICommand
 {
     private GameStateMachine gameStateMachine;
     private DisableScreenCommand disableScreenCommand;
+
     public LevelTwoCommand(GameStateMachine gameStateMachine, Dictionary<Rectangle, ICommand> list, MouseController gameMouseController, BlackJackStateMachine blackJackStateMachine)
     {
         this.gameStateMachine = gameStateMachine;
