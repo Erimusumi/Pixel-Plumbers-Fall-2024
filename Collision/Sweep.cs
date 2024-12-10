@@ -130,19 +130,19 @@ public class Sweep
           if (ContainsPlayer(entities, index1) && item2.GetType() == typeof(Flag))
         {
 
-            PlayerFlagInteraction = new PlayerFlagInteraction((IPlayer)item1, (Flag)item2, entitiesRemoved, disablePlayerCommand);
+            PlayerFlagInteraction = new PlayerFlagInteraction((IPlayer)item1, (Flag)item2, entities, index2, entitiesRemoved, disablePlayerCommand);
             
             PlayerFlagInteraction.update();
-            entities.RemoveAt(index2);
+            //entities.RemoveAt(index2);
 
         }
         else if (ContainsPlayer(entities, index2) && item1.GetType() == typeof(Flag))
         {
 
-            PlayerFlagInteraction = new PlayerFlagInteraction((IPlayer)item2, (Flag)item1, entitiesRemoved, disablePlayerCommand);
+            PlayerFlagInteraction = new PlayerFlagInteraction((IPlayer)item2, (Flag)item1, entities, index1, entitiesRemoved, disablePlayerCommand);
             
             PlayerFlagInteraction.update();
-            entities.RemoveAt(index1);
+            //entities.RemoveAt(index1);
         }
         else if (ContainsEnemy(entities, index1) && ContainsPlayer(entities, index2))
         {

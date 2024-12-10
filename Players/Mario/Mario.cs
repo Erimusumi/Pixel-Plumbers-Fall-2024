@@ -258,6 +258,11 @@ public class Mario : IPlayer
         playerStateMachine.SetPlayerWins();
     }
 
+    public void ResetWin()
+    {
+        playerStateMachine.ResetWin();
+    }
+
     public void MarioWins()
     {
         if (playerStateMachine.Wins())

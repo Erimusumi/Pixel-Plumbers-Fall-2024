@@ -74,6 +74,10 @@ public class PlayerStateMachine
     {
         PlayerWins = true;
     }
+    public void ResetWin()
+    {
+        PlayerWins = false;
+    }
     public void SetPlayerLeft()
     {
         CurrentFaceState = PlayerFaceState.Left;

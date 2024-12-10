@@ -23,7 +23,7 @@ public class CutSceneManager
     public void moveRight()
     {
         player.MoveRight();
-       
+        
         
 
     }
