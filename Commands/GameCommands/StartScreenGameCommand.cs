@@ -1,3 +1,4 @@
+using System;
 using Pixel_Plumbers_Fall_2024;
 
 public class StartScreeGameCommand : ICommand
@@ -10,5 +11,6 @@ public class StartScreeGameCommand : ICommand
     public void Execute()
     {
         gameStateMachine.setGameStateStart();
+        Console.WriteLine("Start Screen Command");
     }
 }

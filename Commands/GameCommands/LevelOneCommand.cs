@@ -1,17 +1,16 @@
 using Pixel_Plumbers_Fall_2024;
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
+using System;
 
 public class LevelOneCommand : ICommand
 {
     private GameStateMachine gameStateMachine;
     private DisableScreenCommand disableScreenCommand;
-    private BlackJackStateMachine blackJackStateMachine;
     public LevelOneCommand(GameStateMachine gameStateMachine, Dictionary<Rectangle, ICommand> list, MouseController gameMouseController, BlackJackStateMachine blackJackStateMachine)
     {
         this.gameStateMachine = gameStateMachine;
-        disableScreenCommand = new DisableScreenCommand(list, gameMouseController);
-        this.blackJackStateMachine = blackJackStateMachine;
+        disableScreenCommand = new DisableScreenCommand(list, gameMouseController, blackJackStateMachine, gameStateMachine);
 
     }
     public void Execute()
@@ -20,6 +19,7 @@ public class LevelOneCommand : ICommand
         gameStateMachine.setGameStateRunning();
 
         disableScreenCommand.Execute();
-        disableScreenCommand.Set(blackJackStateMachine, gameStateMachine);
+        disableScreenCommand.Set();
+        Console.WriteLine("lvl1Command");
     }
 }

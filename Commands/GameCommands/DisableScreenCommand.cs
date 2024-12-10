@@ -23,11 +23,8 @@ public class DisableScreenCommand : ICommand
     public void Set(BlackJackStateMachine blackJackStateMachine, GameStateMachine gameStateMachine)
     {
         Dictionary<Rectangle, ICommand> BlackJackList = new Dictionary<Rectangle, ICommand>();
-
         ICommand BlackJackCommand = new BlackJackCommand(blackJackStateMachine, gameStateMachine);
-
         ICommand CardCommand = new CardCommand(blackJackStateMachine);
-
         ICommand StandCommand = new StandCommand(blackJackStateMachine);
 
         BlackJackList.Add(blackJackStateMachine.DestinationRectangle(), BlackJackCommand);
