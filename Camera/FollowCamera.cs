@@ -60,6 +60,4 @@ public class FollowCamera
     {
         return Matrix.CreateTranslation(new Vector3(-position.X, -position.Y, 0));
     }
-
-
 }

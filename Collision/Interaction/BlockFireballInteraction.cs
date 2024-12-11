@@ -20,10 +20,9 @@ using System.Threading.Tasks;
         this._fireball = fireball;
         this._entitiesRemoved = entitiesRemoved;
     }
+    
     public void update()
     {
-        //Check if overlap in rectangles has more horizontal area than vertical area
-        //This means collision type is a top/bottom
         Rectangle temp = Rectangle.Intersect(_block.GetDestination(), _fireball.GetDestination());
         if (temp.Width > temp.Height)
         {

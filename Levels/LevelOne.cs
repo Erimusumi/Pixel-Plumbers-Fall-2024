@@ -26,7 +26,6 @@ public class LevelOne : ILevel
     private SpriteBatch spriteBatch;
     private Texture2D EnemyTexture;
     private Texture2D blockTexture;
-    private Texture2D obstacleTexture;
     private Texture2D ItemsTexture;
     private Texture2D overworldTiles;
 
@@ -41,15 +40,7 @@ public class LevelOne : ILevel
     private List<ISpriteEnemy> Enemy = new List<ISpriteEnemy>();
     private List<IBlock> LuckyBlocks = new List<IBlock>();
     private List<IBlock> BrickBlocks = new List<IBlock>();
-    
     private IBlock OWBrokenBrickSprite;
-
-    private IObstacle obstacle1;
-    private IObstacle obstacle2;
-    private IObstacle obstacle3;
-    private IObstacle obstacle6;
-
-    
 
     private Flag flag;
     private GameTime gameTime;
@@ -70,7 +61,6 @@ public class LevelOne : ILevel
         this.EnemyTexture = textureManager.GetTexture("Enemy");
         this.blockTexture = textureManager.GetTexture("Block");
         this.ItemsTexture = textureManager.GetTexture("Items");
-        this.obstacleTexture = textureManager.GetTexture("Obstacle");
         this.overworldTiles = textureManager.GetTexture("OverworldTiles");
         this.danceTexture = textureManager.GetTexture("dance");
         box = textureManager.GetTexture("box");
@@ -97,7 +87,6 @@ public class LevelOne : ILevel
         InitializeEnemies();
         InitializeLuckyBlocks();
         InitializeBrickBlocks();
-        InitializeObstacles();
         AddEntitiesToGame();
         mario.SetSwimmingLevel(true);
         luigi.SetSwimmingLevel(false);
@@ -164,14 +153,6 @@ public class LevelOne : ILevel
         OWBrokenBrickSprite = new BrokenBrickSprite(blockTexture, 4, 1);
     }
 
-    private void InitializeObstacles()
-    {
-        obstacle1 = new obstacle1(obstacleTexture);
-        obstacle2 = new obstacle2(obstacleTexture);
-        obstacle3 = new obstacle3(obstacleTexture);
-        obstacle6 = new obstacle1(obstacleTexture);
-    }
-
     private void AddEntitiesToGame()
     {
         foreach (var e in Enemy)
@@ -187,15 +168,9 @@ public class LevelOne : ILevel
             entities.Add(brick);
         }
 
-        entities.Add(obstacle1);
-        entities.Add(obstacle2);
-        entities.Add(obstacle3);
-        entities.Add(obstacle6);
         entities.Add(flag);
-
         entities.Add(mario);
         entities.Add(luigi);
-
     }
 
     private void LoadLevelLayers()
@@ -242,10 +217,6 @@ public class LevelOne : ILevel
             BrickBlocks[i].Update(gameTime);
         }
 
-        obstacle1.Update();
-        obstacle2.Update();
-        obstacle3.Update();
-        obstacle6.Update();
         flag.Update();
 
     }
@@ -279,10 +250,6 @@ public class LevelOne : ILevel
         }
 
         DrawBrickBlocks(spriteBatch);
-        obstacle1.Draw(spriteBatch, new Vector2(350, 370));
-        obstacle2.Draw(spriteBatch, new Vector2(350 + 80, 350));
-        obstacle3.Draw(spriteBatch, new Vector2(350 + 350, 335));
-        obstacle6.Draw(spriteBatch, new Vector2(5740, 370));
     }
 
     private void DrawBrickBlocks(SpriteBatch spriteBatch)

@@ -212,7 +212,7 @@ public class Mario : IPlayer
         switch (playerStateMachine.CurrentGameState)
         {
             case PlayerStateMachine.PlayerGameState.Small:
-                this.SetPositionY(this.marioPosition.Y - 32);
+                this.SetPositionY(this.marioPosition.Y - 30);
                 playerStateMachine.SetPlayerBig();
                 _sfx[0].Play();
                 break;
@@ -240,7 +240,7 @@ public class Mario : IPlayer
                 break;
 
             case PlayerStateMachine.PlayerGameState.Big:
-                this.SetPositionY(this.marioPosition.Y - 32);
+                this.SetPositionY(this.marioPosition.Y + 30);
                 _sfx[1].Play();
                 playerStateMachine.SetPlayerSmall();
                 break;

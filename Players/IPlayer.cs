@@ -10,6 +10,7 @@ public interface IPlayer : IEntity
     public void MoveRight();
     public void MoveLeft();
     public void Jump();
+    public void Stop();
     public void JumpStop();
     public void Crouch();
     public void TakeDamage();

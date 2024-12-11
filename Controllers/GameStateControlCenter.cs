@@ -13,11 +13,17 @@ public class GameStateControlCenter
     private Game1 game;
     private StartScreenSprite startScreenSprite;
     private LevelScreenSprite levelScreenSprite;
+    private GameOverScreen gameOverScreen;
     private MusicMachine MusicMachine;
     private BlackJackStateMachine blackJackStateMachine;
     private Dictionary<Rectangle, ICommand> list;
 
-    public GameStateControlCenter(GameStateMachine gameStateMachine, KeyboardController gameKeyboardController, MouseController gameMouseController, Game1 game, StartScreenSprite startScreenSprite, LevelScreenSprite levelScreenSprite, SoundManager musics, BlackJackStateMachine blackJackStateMachine)
+
+    private MouseController startMenuController;
+    private MouseController levelScreenController;
+    private MouseController gameOverScrenController;
+
+    public GameStateControlCenter(GameStateMachine gameStateMachine, KeyboardController gameKeyboardController, MouseController gameMouseController, Game1 game, StartScreenSprite startScreenSprite, LevelScreenSprite levelScreenSprite, GameOverScreen gameOverScreen, SoundManager musics, BlackJackStateMachine blackJackStateMachine, MouseController startMenuController, MouseController levelScreenController, MouseController gameOverScrenController)
     {
         this.gameKeyboardController = gameKeyboardController;
         this.gameMouseController = gameMouseController;
@@ -26,7 +32,12 @@ public class GameStateControlCenter
         this.startScreenSprite = startScreenSprite;
         this.levelScreenSprite = levelScreenSprite;
         this.blackJackStateMachine = blackJackStateMachine;
+        this.gameOverScreen = gameOverScreen;
+        this.startMenuController = startMenuController;
+        this.levelScreenController = levelScreenController;
+        this.gameOverScrenController = gameOverScrenController;
         MusicMachine = new MusicMachine(musics);
+
         InitializeCommands();
     }
 
@@ -35,33 +46,26 @@ public class GameStateControlCenter
         // Keyboard commands
         ICommand startGameCommand = new RunGameCommand(gameStateMachine);
         gameKeyboardController.addCommand(Keys.D9, startGameCommand);
-
         ICommand musicCommand = new MusicCommand(MusicMachine);
         gameKeyboardController.addCommand(Keys.M, musicCommand);
-
         ICommand muteCommand = new MuteCommand();
         gameKeyboardController.addCommand(Keys.Z, muteCommand);
-
         ICommand quitGameCommand = new QuitGameCommand(game);
         gameKeyboardController.addCommand(Keys.Q, quitGameCommand);
-
         ICommand resetGameCommand = new ResetGameCommand(game);
         gameKeyboardController.addCommand(Keys.R, resetGameCommand);
-
         ICommand pauseGameCommand = new PauseGameCommand(gameStateMachine, MusicMachine);
         gameKeyboardController.addCommand(Keys.D3, pauseGameCommand);
-
         ICommand startScreenCommand = new StartScreeGameCommand(gameStateMachine);
         gameKeyboardController.addCommand(Keys.D0, startScreenCommand);
 
         // Mouse commands
         ICommand helpClickCommand = new PrintMessageCommand("HELP");
-        gameMouseController.AddCommand(startScreenSprite.GetHelpRectangle(), helpClickCommand);
-
+        startMenuController.AddCommand(startScreenSprite.GetHelpRectangle(), helpClickCommand);
         ICommand singlePlayerCommand = new SingleplayerCommand(gameStateMachine);
-        gameMouseController.AddCommand(startScreenSprite.GetOnePlayerRectangle(), singlePlayerCommand); // Single Player
+        startMenuController.AddCommand(startScreenSprite.GetOnePlayerRectangle(), singlePlayerCommand); // Single Player
         ICommand multiplayerCommand = new MultiplayerCommand(gameStateMachine);
-        gameMouseController.AddCommand(startScreenSprite.GetTwoPlayerRectangle(), multiplayerCommand); // Multiplayer
+        startMenuController.AddCommand(startScreenSprite.GetTwoPlayerRectangle(), multiplayerCommand); // Multiplayer
 
         list = gameMouseController.SendList();
         ICommand levelOneCommand = new LevelOneCommand(gameStateMachine, list, gameMouseController, blackJackStateMachine);
@@ -70,6 +74,13 @@ public class GameStateControlCenter
         ICommand levelTwoCommand = new LevelTwoCommand(gameStateMachine, list, gameMouseController, blackJackStateMachine);
         gameMouseController.AddCommand(levelScreenSprite.GetLevelTwoRectangle(), levelTwoCommand);
 
+        levelScreenController.AddCommand(levelScreenSprite.GetLevelOneRectangle(), levelOneCommand);
+        levelScreenController.AddCommand(levelScreenSprite.GetLevelTwoRectangle(), levelTwoCommand);
+
+        ICommand startScreenCommand2 = new StartScreeGameCommand2(gameStateMachine);
+        gameOverScrenController.AddCommand(gameOverScreen.GetMainMenuRectangle(), startScreenCommand2);
+        ICommand resetGameCommand2 = new ResetGameCommand2(game, gameStateMachine);
+        gameOverScrenController.AddCommand(gameOverScreen.GetRestartRectangle(), resetGameCommand2);
 
         //ICommand BlackJackCommand = new BlackJackCommand(blackJackStateMachine, gameStateMachine);
         //gameMouseController.AddCommand(blackJackStateMachine.DestinationRectangle(), BlackJackCommand);
