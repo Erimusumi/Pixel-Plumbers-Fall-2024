@@ -95,6 +95,7 @@ public class LevelTwo : ILevel
         lvl2foreground1.LoadLayer();
         lvl2foreground2.LoadLayer();
         startAnimation = false;
+        upPipeAnimation = false;
 
         Enemy = new List<ISpriteEnemy>();
         InitializeEnemies();
