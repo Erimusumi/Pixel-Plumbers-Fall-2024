@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
@@ -262,7 +263,7 @@ public class Mario : IPlayer
     {
         playerStateMachine.ResetWin();
     }
-
+    
     public void MarioWins()
     {
         if (playerStateMachine.Wins())
@@ -272,7 +273,17 @@ public class Mario : IPlayer
             marioPosition.Y++;
             //_sfx[5].Play();
             playerStateMachine.MakeInvisible();
+            
         }
+       
+    }
+    public void WinLevelOne()
+    {
+        this.GetStateMachine().MakeVisible();
+        this.ResetWin();
+        this.GetStateMachine().SetPlayerBig();
+        WinCutScene wc = new WinCutScene(this, this.GetDestination());
+        wc.play(this.gameTime);
     }
 
     public void MarioDeath()
@@ -402,6 +413,10 @@ public class Mario : IPlayer
         this.checkMarioHeightForDeath();
         this.ResetScoreMult();
         this.MarioWins();
+        //if (this.GetDestination().X > 0)
+        //{
+        //    this.WinLevelOne();
+        //}
     }
 
     public void SetSwimmingLevel(bool isLevelSwimming)

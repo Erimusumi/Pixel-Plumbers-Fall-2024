@@ -8,7 +8,6 @@ using Microsoft.Xna.Framework;
 using Pixel_Plumbers_Fall_2024;
 using System;
 
-
 public class LuckyBlockSprite : IBlock
 {
     public Texture2D Texture { get; set; }
