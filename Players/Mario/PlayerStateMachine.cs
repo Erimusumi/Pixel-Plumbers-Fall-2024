@@ -152,6 +152,9 @@ public class PlayerStateMachine
         CurrentFaceState = PlayerFaceState.Right;
         CurrentMoveState = PlayerMoveState.Idle;
         PlayerWins = false;
+        this.isVisible = true;
+        
+        
     }
     public bool Wins()
     {
