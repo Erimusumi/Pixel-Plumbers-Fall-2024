@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\kamau\\Downloads\\CSE3902\\Fe\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\fe\\players\\luigi\\luigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:players\\luigi\\luigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\fe\\players\\mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:players\\mario\\mario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\fe\\sprites\\block sprites\\brokenbricksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:sprites\\block sprites\\brokenbricksprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\fe\\players\\luigi\\luigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:players\\luigi\\luigi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\users\\kamau\\downloads\\cse3902\\fe\\players\\mario\\mariospritemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -90,7 +90,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 13,
           "Children": [
             {
               "$type": "Document",
@@ -122,7 +122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "BrokenBrickSprite.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Fe\\Sprites\\Block Sprites\\BrokenBrickSprite.cs",
               "RelativeDocumentMoniker": "Sprites\\Block Sprites\\BrokenBrickSprite.cs",
@@ -163,29 +163,46 @@
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "WinCutScene.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Fe\\CutScene\\WinCutScene.cs",
               "RelativeDocumentMoniker": "CutScene\\WinCutScene.cs",
               "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Fe\\CutScene\\WinCutScene.cs",
               "RelativeToolTip": "CutScene\\WinCutScene.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwCEAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-11T05:51:14.099Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Mario.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Fe\\Players\\Mario\\Mario.cs",
               "RelativeDocumentMoniker": "Players\\Mario\\Mario.cs",
               "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Fe\\Players\\Mario\\Mario.cs",
               "RelativeToolTip": "Players\\Mario\\Mario.cs",
-              "ViewState": "AgIAABkBAAAAAAAAAAAuwDUBAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAwCYBAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-04T14:10:13.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Luigi.cs",
+              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Fe\\Players\\Luigi\\Luigi.cs",
+              "RelativeDocumentMoniker": "Players\\Luigi\\Luigi.cs",
+              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Fe\\Players\\Luigi\\Luigi.cs",
+              "RelativeToolTip": "Players\\Luigi\\Luigi.cs",
+              "ViewState": "AgIAAPoAAAAAAAAAAAA2wA8BAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T14:11:28.98Z",
               "EditorCaption": ""
             },
             {
@@ -203,7 +220,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PlayerStateMachine.cs",
               "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Fe\\Players\\Mario\\PlayerStateMachine.cs",
               "RelativeDocumentMoniker": "Players\\Mario\\PlayerStateMachine.cs",
@@ -212,19 +229,6 @@
               "ViewState": "AgIAAKAAAAAAAAAAAAAewKcAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-11T05:36:12.803Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Luigi.cs",
-              "DocumentMoniker": "C:\\Users\\kamau\\Downloads\\CSE3902\\Fe\\Players\\Luigi\\Luigi.cs",
-              "RelativeDocumentMoniker": "Players\\Luigi\\Luigi.cs",
-              "ToolTip": "C:\\Users\\kamau\\Downloads\\CSE3902\\Fe\\Players\\Luigi\\Luigi.cs",
-              "RelativeToolTip": "Players\\Luigi\\Luigi.cs",
-              "ViewState": "AgIAANcAAAAAAAAAAAAowAYBAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T14:11:28.98Z",
               "EditorCaption": ""
             },
             {

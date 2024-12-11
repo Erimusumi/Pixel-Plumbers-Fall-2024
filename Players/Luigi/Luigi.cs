@@ -36,12 +36,14 @@ public class Luigi : IPlayer
     private bool deathSoundPlaying = false;
     private bool isDead = false;
     private bool waitingForPartnerToDie = false;
+    private bool winHitBottom = false;
 
     private const float maxSpeed = 3f;
     private const float acceleration = 0.03f;
 
     private int fireballTimer;
     private int starTimer;
+    private int visibleCount = 0;
     int luigiDeathBounceIncrement;
     private List<SoundEffect> _sfx;
 
@@ -55,6 +57,8 @@ public class Luigi : IPlayer
     private int scoreMult;
     private const int maxScoreMult = 16;
     private SpriteFont scoreFont;
+
+    private WinCutScene wc;
     public Luigi(Game1 game, List<IEntity> entities, List<SoundEffect> sfx, TextureManager textureManager, GameTime gametime, ref GameStateMachine gsm, ref SpriteFont font)
     {
         this.textureManager = textureManager;
@@ -248,28 +252,57 @@ public class Luigi : IPlayer
     {
         playerStateMachine.SetPlayerWins();
     }
+
     public void ResetWin()
     {
         playerStateMachine.ResetWin();
     }
+
     public void LuigiWins()
     {
         if (playerStateMachine.Wins())
         {
-            luigiVelocity.Y = 0;
-            luigiVelocity.X = 0;
-            luigiPosition.Y++;
-            //_sfx[5].Play();
-            playerStateMachine.MakeInvisible();
+            if (!winHitBottom)
+            {
+                luigiVelocity.Y = 0;
+                luigiVelocity.X = 0;
+                luigiPosition.Y++;
+                //_sfx[5].Play();
+                if (luigiPosition.Y > 326)
+                {
+                    winHitBottom = true;
+                    this.ResetWin();
+                    this.WinLevelOne();
+                }
+
+
+            }
 
         }
+        if (winHitBottom)
+        {
+            playerStateMachine.SetPlayerMoving();
+            wc.Update(this.gameTime);
+            if (wc.entersDoor())
+            {
+                this.GetStateMachine().MakeInvisible();
+            }
+
+        }
+
+
     }
     public void WinLevelOne()
     {
-        this.GetStateMachine().MakeVisible();
-        this.ResetWin();
-        this.GetStateMachine().SetPlayerBig();
-        WinCutScene wc = new WinCutScene(this, this.GetDestination());
+        if (visibleCount == 0)
+        {
+            this.GetStateMachine().MakeVisible();
+            visibleCount++;
+        }
+
+        //this.ResetWin();
+        //this.GetStateMachine().SetPlayerBig();
+        wc = new WinCutScene(this, this.GetDestination());
         wc.play(this.gameTime);
     }
 
@@ -429,7 +462,11 @@ public class Luigi : IPlayer
 
     public void Draw(SpriteBatch spriteBatch)
     {
-        currentLuigiSprite.Draw(spriteBatch, luigiPosition, this.playerStateMachine.HasStar());
+        if (this.GetStateMachine().isVisible)
+        {
+           currentLuigiSprite.Draw(spriteBatch, luigiPosition, this.playerStateMachine.HasStar());
+        }
+        
     }
 
     public void Reset()
