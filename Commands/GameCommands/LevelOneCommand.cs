@@ -17,11 +17,14 @@ public class LevelOneCommand : ICommand
     }
     public void Execute()
     {
-        gameStateMachine.setLevelOne();
-        gameStateMachine.setGameStateRunning();
+        if (gameStateMachine.isLevelScreen())
+        {
+            gameStateMachine.setLevelOne();
+            gameStateMachine.setGameStateRunning();
 
-        disableScreenCommand.Execute();
-        disableScreenCommand.Set( blackJackStateMachine, gameStateMachine);
-        Console.WriteLine("lvl1Command");
+            disableScreenCommand.Execute();
+            disableScreenCommand.Set(blackJackStateMachine, gameStateMachine);
+            Console.WriteLine("lvl1Command");
+        }
     }
 }

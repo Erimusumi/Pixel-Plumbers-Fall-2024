@@ -44,17 +44,17 @@ public class StartScreenSprite : ISprite
 
     public Rectangle GetOnePlayerRectangle()
     {
-        return new Rectangle((int)player1Position.X, (int)player1Position.Y, (int)MyFont.MeasureString("1 PLAYER").X * (int)scale, (int)MyFont.MeasureString("SINGLEPLAYER").Y * (int)scale);
+        return new Rectangle((int)player1Position.X, (int)player1Position.Y, (int)MyFont.MeasureString("SINGLEPLAYER").X, (int)MyFont.MeasureString("SINGLEPLAYER").Y);
     }
 
     public Rectangle GetTwoPlayerRectangle()
     {
-        return new Rectangle((int)player2Position.X, (int)player2Position.Y, (int)MyFont.MeasureString("2 PLAYER").X * (int)scale, (int)MyFont.MeasureString("MULTIPLAYER").Y * (int)scale);
+        return new Rectangle((int)player2Position.X, (int)player2Position.Y, (int)MyFont.MeasureString("MULTIPLAYER").X, (int)MyFont.MeasureString("MULTIPLAYER").Y);
     }
 
     public Rectangle GetHelpRectangle()
     {
-        return new Rectangle((int)helpPosition.X, (int)helpPosition.Y, (int)MyFont.MeasureString("HELP").X * (int)scale, (int)MyFont.MeasureString("HELP").Y * (int)scale);
+        return new Rectangle((int)helpPosition.X, (int)helpPosition.Y, (int)MyFont.MeasureString("HELP").X, (int)MyFont.MeasureString("HELP").Y);
     }
 
     public void Update(GameTime gameTime)

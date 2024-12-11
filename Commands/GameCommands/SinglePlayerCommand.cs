@@ -13,8 +13,11 @@ public class SingleplayerCommand : ICommand
     }
     public void Execute()
     {
-        gameStateMachine.setGameSinglePlayer();
-        levelScreenCommand.Execute();
-        Console.WriteLine("SinglePlayer Command");
+        if (gameStateMachine.isStartScreen())
+        {
+            gameStateMachine.setGameSinglePlayer();
+            levelScreenCommand.Execute();
+            Console.WriteLine("SinglePlayer Command");
+        }
     }
 }

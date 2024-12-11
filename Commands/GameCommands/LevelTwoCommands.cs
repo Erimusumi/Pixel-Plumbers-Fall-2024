@@ -17,10 +17,13 @@ public class LevelTwoCommand : ICommand
     }
     public void Execute()
     {
-        gameStateMachine.setLevelTwo();
-        gameStateMachine.setGameStateRunning();
-        disableScreenCommand.Execute();
-        disableScreenCommand.Set( blackJackStateMachine, gameStateMachine);
-        Console.WriteLine("lvl2Command");
+        if (gameStateMachine.isLevelScreen())
+        {
+            gameStateMachine.setLevelTwo();
+            gameStateMachine.setGameStateRunning();
+            disableScreenCommand.Execute();
+            disableScreenCommand.Set(blackJackStateMachine, gameStateMachine);
+            Console.WriteLine("lvl2Command");
+        }
     }
 }
