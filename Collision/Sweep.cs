@@ -132,8 +132,8 @@ public class Sweep
 
             PlayerFlagInteraction = new PlayerFlagInteraction((IPlayer)item1, (Flag)item2, entities, index2, entitiesRemoved, disablePlayerCommand);
             
-            PlayerFlagInteraction.update();
-            //entities.RemoveAt(index2);
+            PlayerFlagInteraction.update(this.gameTime);
+            entities.RemoveAt(index2);
 
         }
         else if (ContainsPlayer(entities, index2) && item1.GetType() == typeof(Flag))
@@ -141,8 +141,8 @@ public class Sweep
 
             PlayerFlagInteraction = new PlayerFlagInteraction((IPlayer)item2, (Flag)item1, entities, index1, entitiesRemoved, disablePlayerCommand);
             
-            PlayerFlagInteraction.update();
-            //entities.RemoveAt(index1);
+            PlayerFlagInteraction.update(this.gameTime);
+            entities.RemoveAt(index1);
         }
         else if (ContainsEnemy(entities, index1) && ContainsPlayer(entities, index2))
         {

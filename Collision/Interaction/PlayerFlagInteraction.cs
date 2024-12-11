@@ -16,6 +16,7 @@ public class PlayerFlagInteraction
     private List<IEntity> entitiesRemoved;
     private List<IEntity> entities;
     private int index;
+    private float timeCount;
     DisablePlayerCommand disablePlayerCommand;
 
     public PlayerFlagInteraction(IPlayer play, Flag flag,List<IEntity> entities, int index,  List<IEntity> entitiesRemoved, DisablePlayerCommand disablePlayerCommand)
@@ -25,24 +26,26 @@ public class PlayerFlagInteraction
         this.entities = entities;
         this.entitiesRemoved = entitiesRemoved;
         this.disablePlayerCommand = disablePlayerCommand;
+        this.timeCount = 0;
         this.index = index;
     }
 
-    public void update()
+    public void update(GameTime gameTime)
     {
         disablePlayerCommand.Execute();
-        Rectangle destination = player.GetDestination();
+       Rectangle destination = player.GetDestination();
        flag.makeWinFlag(destination.Y);
-        flag.resetFlag();
-        
+        flag.resetFlag();     
        player.SetWin();
 
-        entities.RemoveAt(index);
-        player.GetStateMachine().MakeVisible();
-        player.ResetWin();
-        player.GetStateMachine().SetPlayerBig();
-                WinCutScene wc = new WinCutScene(player, destination);
-                wc.play();
+
+        
+       
+        //player.GetStateMachine().MakeVisible();
+        //player.ResetWin();
+        //player.GetStateMachine().SetPlayerBig();
+        //        WinCutScene wc = new WinCutScene(player, destination);
+        //        wc.play();
                
             
         

@@ -264,6 +264,14 @@ public class Luigi : IPlayer
 
         }
     }
+    public void WinLevelOne()
+    {
+        this.GetStateMachine().MakeVisible();
+        this.ResetWin();
+        this.GetStateMachine().SetPlayerBig();
+        WinCutScene wc = new WinCutScene(this, this.GetDestination());
+        wc.play();
+    }
 
     public void LuigiDeath()
     {
