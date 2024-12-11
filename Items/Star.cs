@@ -81,7 +81,6 @@ if (this.GetDestination().Y > this.groundPosition)
         if (!this.falling)
         {
             velocity.Y = 0;
-            //System.Diagnostics.Debug.Write("VelocityY is setted as zero");
         }
 
         position += velocity * (float)gameTime.ElapsedGameTime.TotalSeconds; // Update position

@@ -14,7 +14,6 @@ public class Sort
         {
             //Error: unable to remove object from collision detection list.
             string objName = objToRemove.ToString();
-            //System.Diagnostics.Debug.WriteLine("Unable to remove from collision detection list: " + objName);
             Environment.Exit(50);
         }
     }
