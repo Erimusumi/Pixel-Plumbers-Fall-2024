@@ -44,9 +44,9 @@ public class StartScreenSprite : ISprite
         spriteBatch.DrawString(MyFont, "MULTIPLAYER", new Vector2(260, 300), Color.White);
         spriteBatch.DrawString(MyFont, "HELP", new Vector2(360, 350), Color.White);
 
-        spriteBatch.Draw(startScreenTexture, GetOnePlayerRectangle(), Color.Red * 0.5f);
-        spriteBatch.Draw(startScreenTexture, GetTwoPlayerRectangle(), Color.Blue * 0.5f);
-        spriteBatch.Draw(startScreenTexture, GetHelpRectangle(), Color.Green * 0.5f);
+        // spriteBatch.Draw(startScreenTexture, GetOnePlayerRectangle(), Color.Red * 0.5f);
+        // spriteBatch.Draw(startScreenTexture, GetTwoPlayerRectangle(), Color.Blue * 0.5f);
+        // spriteBatch.Draw(startScreenTexture, GetHelpRectangle(), Color.Green * 0.5f);
     }
 
     public Rectangle GetOnePlayerRectangle()
