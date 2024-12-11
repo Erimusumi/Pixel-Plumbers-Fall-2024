@@ -25,10 +25,10 @@ using System.Threading.Tasks;
     {
         time += 1 /*(float)gameTime.ElapsedGameTime.TotalSeconds*/;
         //TODO: slow this down (timer)
-        if (time > 30 && doorDistance > 0)
+        if (time > 1 && doorDistance > 0)
         {
-            player1.SetPositionX(player1.GetDestination().X + 3);
-            
+            player1.SetPositionX(player1.GetDestination().X + 1);
+
             doorDistance--;
             time = 0;
         }
