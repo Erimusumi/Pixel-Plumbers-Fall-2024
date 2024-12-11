@@ -270,7 +270,7 @@ public class Luigi : IPlayer
         this.ResetWin();
         this.GetStateMachine().SetPlayerBig();
         WinCutScene wc = new WinCutScene(this, this.GetDestination());
-        wc.play();
+        wc.play(this.gameTime);
     }
 
     public void LuigiDeath()

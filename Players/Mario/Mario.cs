@@ -39,6 +39,7 @@ public class Mario : IPlayer
     private bool moveKeyPressed = false;
     private bool deathSoundPlaying = false;
     private bool waitingForPartnerToDie = false;
+    private bool winHitBottom = false;
 
     private const float maxSpeed = 3f;
     private const float acceleration = 0.03f;
@@ -58,6 +59,8 @@ public class Mario : IPlayer
     private int scoreMult;
     private const int maxScoreMult = 16;
     private SpriteFont scoreFont;
+
+    private WinCutScene wc;
 
     public Mario(Game1 game, List<IEntity> entities, List<SoundEffect> sfx, TextureManager textureManager, GameTime gametime, ref GameStateMachine gsm, ref SpriteFont font)
     {
@@ -268,21 +271,37 @@ public class Mario : IPlayer
     {
         if (playerStateMachine.Wins())
         {
-            marioVelocity.Y = 0;
-            marioVelocity.X = 0;
-            marioPosition.Y++;
-            //_sfx[5].Play();
-            playerStateMachine.MakeInvisible();
+            if (!winHitBottom)
+            {
+                marioVelocity.Y = 0;
+                marioVelocity.X = 0;
+                marioPosition.Y++;
+                //_sfx[5].Play();
+                playerStateMachine.MakeInvisible();
+                
+                    winHitBottom = true;
+                    this.ResetWin();
+                    this.WinLevelOne();
+                
+
+            }
             
+            }
+            if(winHitBottom){
+        
+               
+                wc.Update(this.gameTime);
+
         }
+        
        
     }
     public void WinLevelOne()
     {
         this.GetStateMachine().MakeVisible();
-        this.ResetWin();
+        //this.ResetWin();
         this.GetStateMachine().SetPlayerBig();
-        WinCutScene wc = new WinCutScene(this, this.GetDestination());
+         wc = new WinCutScene(this, this.GetDestination());
         wc.play(this.gameTime);
     }
 
@@ -413,10 +432,7 @@ public class Mario : IPlayer
         this.checkMarioHeightForDeath();
         this.ResetScoreMult();
         this.MarioWins();
-        //if (this.GetDestination().X > 0)
-        //{
-        //    this.WinLevelOne();
-        //}
+       
     }
 
     public void SetSwimmingLevel(bool isLevelSwimming)
@@ -456,6 +472,7 @@ public class Mario : IPlayer
         gameResetTimer = -1;
         deathSoundPlaying = false;
         waitingForPartnerToDie = false;
+        winHitBottom = false;
     }
 
     public Rectangle GetDestination()

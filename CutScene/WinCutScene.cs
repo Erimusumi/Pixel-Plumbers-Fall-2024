@@ -21,26 +21,41 @@ using System.Threading.Tasks;
         this.player1 = player;
         manager = new CutSceneManager(player);
     }
+    public void Update(GameTime gameTime)
+    {
+        time += 1 /*(float)gameTime.ElapsedGameTime.TotalSeconds*/;
+        //TODO: slow this down (timer)
+        if (time > 30 && doorDistance > 0)
+        {
+            player1.SetPositionX(player1.GetDestination().X + 3);
+            
+            doorDistance--;
+            time = 0;
+        }
+        if(doorDistance == 0)
+        {
+            player1.getStateMachine().MakeInvisible();
+        }
+    }
     public void play(GameTime gameTime)
     {
         stateMachine = player1.GetStateMachine();
         stateMachine.SetPlayerBig();
         manager.setPlayerPosition(6370, 380); 
 
-        while (doorDistance >0)
-        {
-            time += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
-            //TODO: slow this down (timer)
-            if(time > 1)
-            {
-                player1.SetPositionX(player1.GetDestination().X + 1);
-                doorDistance--;
-                time = 0;
-            }
+       
+            //time += (float)gameTime.ElapsedGameTime.TotalSeconds;
+            ////TODO: slow this down (timer)
+            //if(time > 1)
+            //{
+            //    player1.SetPositionX(player1.GetDestination().X + 1);
+            //    doorDistance--;
+            //    time = 0;
+            //}
             
-        }
+        
         //TODO: mario vanishes into door
-        player1.GetStateMachine().MakeInvisible();
+        //player1.GetStateMachine().MakeInvisible();
 
     }
 }
