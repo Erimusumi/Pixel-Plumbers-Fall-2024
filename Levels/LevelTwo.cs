@@ -135,8 +135,6 @@ public class LevelTwo : ILevel
 
     public void UpdateLevel(GameTime gameTime)
     {
-        Console.WriteLine(mario.marioPosition);
-
         if (swimming)
         {
             if (mario.marioPosition.Y < 538)
@@ -184,23 +182,32 @@ public class LevelTwo : ILevel
         }
 
 
-        if ((mario.marioPosition.X > 6000 && mario.marioPosition.Y > 672 && mario.marioPosition.Y < 736) || (luigi.luigiPosition.X > 6000 && luigi.luigiPosition.Y > 672 && luigi.luigiPosition.Y < 736) )
+        if ((mario.marioPosition.X > 6000 && mario.marioPosition.Y > 672 && mario.marioPosition.Y < 736) || (luigi.luigiPosition.X > 6000 && luigi.luigiPosition.Y > 672 && luigi.luigiPosition.Y < 736))
         {
             upPipeAnimation = true;
         }
 
         if (upPipeAnimation == true)
         {
-            swimming = false;
-            mario.SetSwimmingLevel(false);
-            luigi.SetSwimmingLevel(false);
-            mario.marioPosition = new Vector2(5132, 270);
-            luigi.luigiPosition = new Vector2(5132, 270);
+            PlayerStateMachine marioStateMachine = mario.getStateMachine();
+            PlayerStateMachine luigiStaetMachine = luigi.getStateMachine();
 
-            followCamera.setHigherCamera();
-            mario.Update(gameTime);
-            luigi.Update(gameTime);
+
+            if (!marioStateMachine.IsDead())
+            {
+                mario.SetSwimmingLevel(false);
+                mario.marioPosition = new Vector2(5132, 270);
+                mario.Update(gameTime);
+            }
+            if (!luigiStaetMachine.IsDead())
+            {
+                luigi.SetSwimmingLevel(false);
+                luigi.luigiPosition = new Vector2(5132, 270);
+                luigi.Update(gameTime);
+            }
+            swimming = false;
             upPipeAnimation = false;
+            followCamera.setHigherCamera();
         }
 
         if (gameStateMachine.isMultiplayer())
