@@ -110,7 +110,7 @@ namespace Pixel_Plumbers_Fall_2024
             levelOne.InitializeLevel();
             lvl1CollidableRectangles = levelOne.GetLevelFloorRectangles();
 
-            levelTwo = new LevelTwo(this, mario, luigi, entities, entitiesRemoved, spriteBatch, new GameTime(), Content, textureManager, gameStateMachine);
+            levelTwo = new LevelTwo(this, mario, luigi, entities, entitiesRemoved, spriteBatch, new GameTime(), Content, textureManager, gameStateMachine, camera);
             levelTwo.InitializeLevel();
             lvl2CollidableRectangles = levelTwo.GetLevelFloorRectangles();
         }
