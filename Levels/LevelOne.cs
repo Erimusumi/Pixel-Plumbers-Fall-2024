@@ -30,6 +30,7 @@ public class LevelOne : ILevel
     private Texture2D overworldTiles;
 
     private Texture2D danceTexture;
+    // Box was used to test where destination rectangles are
     private Texture2D box;
 
     public Point mapSize = new(211 * 32, 30 * 32);

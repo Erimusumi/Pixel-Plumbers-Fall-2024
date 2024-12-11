@@ -12,11 +12,13 @@ public class BlooperStateMachine
     private BlooperSprites _sprite;
     private Boolean isDead = false;
     private IPlayer mario;
+    private IPlayer luigi;
     private int RiseMore = 0;
     public BlooperStateMachine(int posX, int posY, IPlayer mario, IPlayer luigi)
     {
         _sprite = new BlooperSprites(posX, posY);
         this.mario = mario;
+        this.luigi = luigi;
     }
     public Boolean IsDead()
     {
@@ -58,7 +60,7 @@ public class BlooperStateMachine
 
         Rectangle holdSprite = _sprite.GetDestination();
         Rectangle holdMario = mario.GetDestination();
-        Rectangle holdLuigi = mario.GetDestination();
+        Rectangle holdLuigi = luigi.GetDestination();
         Rectangle goombaRec = _sprite.GetDestination();
         if (((goombaRec.X - holdMario.X) > 0) && ((goombaRec.X - holdMario.X) < 400) && (_currentState == BlooperState.Start))
         {
@@ -69,21 +71,26 @@ public class BlooperStateMachine
             _currentState = BlooperState.Left;
         }
 
-        if (
-            ((holdMario.X < holdSprite.X) && (Math.Abs(holdMario.X - holdSprite.X) > 5)) ||
-            ((holdLuigi.X < holdSprite.X) && (Math.Abs(holdLuigi.X - holdSprite.X) > 5))
-            )
+        if (!(_currentState == BlooperState.Start))
         {
-            _currentState = BlooperState.Left;
-        } else if (
-            ((holdMario.X > holdSprite.X) && (Math.Abs(holdMario.X - holdSprite.X) > 5)) ||
-            ((holdLuigi.X > holdSprite.X) && (Math.Abs(holdLuigi.X - holdSprite.X) > 5))
-            )
-        {
-            _currentState = BlooperState.Right;
-        }else
-        {
-            _currentState = BlooperState.Idle;
+            if (
+                ((holdMario.X < holdSprite.X) && (Math.Abs(holdMario.X - holdSprite.X) > 5)) ||
+                ((holdLuigi.X < holdSprite.X) && (Math.Abs(holdLuigi.X - holdSprite.X) > 5))
+                )
+            {
+                _currentState = BlooperState.Left;
+            }
+            else if (
+                ((holdMario.X > holdSprite.X) && (Math.Abs(holdMario.X - holdSprite.X) > 5)) ||
+                ((holdLuigi.X > holdSprite.X) && (Math.Abs(holdLuigi.X - holdSprite.X) > 5))
+                )
+            {
+                _currentState = BlooperState.Right;
+            }
+            else
+            {
+                _currentState = BlooperState.Idle;
+            }
         }
 
         if (isDead)

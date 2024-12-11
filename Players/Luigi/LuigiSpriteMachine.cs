@@ -11,7 +11,7 @@ namespace Pixel_Plumbers_Fall_2024
             ICharacter newSprite = null;
             if (luigiStateMachine.IsDead())
             {
-                newSprite = new DeadLuigi(texture);
+                newSprite = new DeadCharacter(texture);
             }
             else if (luigiStateMachine.Wins())
             {
@@ -33,7 +33,7 @@ namespace Pixel_Plumbers_Fall_2024
                 return newSprite;
             }
 
-            return lastValidSprite ?? new IdleLeftBigLuigi(texture);
+            return lastValidSprite ?? new IdleLeftBig(texture);
         }
 
         private static ICharacter GetSpriteForFaceState(PlayerStateMachine luigiStateMachine, Texture2D texture)
@@ -84,13 +84,13 @@ namespace Pixel_Plumbers_Fall_2024
             switch (luigiStateMachine.CurrentMoveState)
             {
                 case PlayerStateMachine.PlayerMoveState.Idle:
-                    return new IdleRightSmallLuigi(texture);
+                    return new IdleRightSmall(texture);
                 case PlayerStateMachine.PlayerMoveState.Moving:
-                    return new MovingRightSmallLuigi(texture);
+                    return new MovingRightSmall(texture);
                 case PlayerStateMachine.PlayerMoveState.Jumping:
-                    return new JumpingRightSmallLuigi(texture);
+                    return new JumpingRightSmall(texture);
                 case PlayerStateMachine.PlayerMoveState.Turning:
-                    return new TurningLeftSmallLuigi(texture);
+                    return new TurningLeftSmall(texture);
                 default:
                     return null;
             }
@@ -101,15 +101,15 @@ namespace Pixel_Plumbers_Fall_2024
             switch (luigiStateMachine.CurrentMoveState)
             {
                 case PlayerStateMachine.PlayerMoveState.Idle:
-                    return new IdleRightBigLuigi(texture);
+                    return new IdleRightBig(texture);
                 case PlayerStateMachine.PlayerMoveState.Moving:
-                    return new MovingRightBigLuigi(texture);
+                    return new MovingRightBig(texture);
                 case PlayerStateMachine.PlayerMoveState.Jumping:
-                    return new JumpingRightBigLuigi(texture);
+                    return new JumpingRightBig(texture);
                 case PlayerStateMachine.PlayerMoveState.Crouching:
-                    return new CrouchRightBigLuigi(texture);
+                    return new CrouchRightBig(texture);
                 case PlayerStateMachine.PlayerMoveState.Turning:
-                    return new TurningLeftBigLuigi(texture);
+                    return new TurningLeftBig(texture);
                 default:
                     return null;
             }
@@ -120,15 +120,15 @@ namespace Pixel_Plumbers_Fall_2024
             switch (luigiStateMachine.CurrentMoveState)
             {
                 case PlayerStateMachine.PlayerMoveState.Idle:
-                    return new IdleRightFireLuigi(texture);
+                    return new IdleRightFire(texture);
                 case PlayerStateMachine.PlayerMoveState.Moving:
-                    return new MovingRightFireLuigi(texture);
+                    return new MovingRightFire(texture);
                 case PlayerStateMachine.PlayerMoveState.Jumping:
-                    return new JumpingRightFireLuigi(texture);
+                    return new JumpingRightFire(texture);
                 case PlayerStateMachine.PlayerMoveState.Crouching:
-                    return new CrouchRightFireLuigi(texture);
+                    return new CrouchRightFire(texture);
                 case PlayerStateMachine.PlayerMoveState.Turning:
-                    return new TurningLeftFireLuigi(texture);
+                    return new TurningLeftFire(texture);
                 default:
                     return null;
             }
@@ -139,13 +139,13 @@ namespace Pixel_Plumbers_Fall_2024
             switch (luigiStateMachine.CurrentMoveState)
             {
                 case PlayerStateMachine.PlayerMoveState.Idle:
-                    return new IdleLeftSmallLuigi(texture);
+                    return new IdleLeftSmall(texture);
                 case PlayerStateMachine.PlayerMoveState.Moving:
-                    return new MovingLeftSmallLuigi(texture);
+                    return new MovingLeftSmall(texture);
                 case PlayerStateMachine.PlayerMoveState.Jumping:
-                    return new JumpingLeftSmallLuigi(texture);
+                    return new JumpingLeftSmall(texture);
                 case PlayerStateMachine.PlayerMoveState.Turning:
-                    return new TurningRightSmallLuigi(texture);
+                    return new TurningRightSmall(texture);
                 default:
                     return null;
             }
@@ -156,15 +156,15 @@ namespace Pixel_Plumbers_Fall_2024
             switch (luigiStateMachine.CurrentMoveState)
             {
                 case PlayerStateMachine.PlayerMoveState.Idle:
-                    return new IdleLeftBigLuigi(texture);
+                    return new IdleLeftBig(texture);
                 case PlayerStateMachine.PlayerMoveState.Moving:
-                    return new MovingLeftBigLuigi(texture);
+                    return new MovingLeftBig(texture);
                 case PlayerStateMachine.PlayerMoveState.Jumping:
-                    return new JumpingLeftBigLuigi(texture);
+                    return new JumpingLeftBig(texture);
                 case PlayerStateMachine.PlayerMoveState.Crouching:
-                    return new CrouchLeftBigLuigi(texture);
+                    return new CrouchLeftBig(texture);
                 case PlayerStateMachine.PlayerMoveState.Turning:
-                    return new TurningRightBigLuigi(texture);
+                    return new TurningRightBig(texture);
                 default:
                     return null;
             }
@@ -175,15 +175,15 @@ namespace Pixel_Plumbers_Fall_2024
             switch (luigiStateMachine.CurrentMoveState)
             {
                 case PlayerStateMachine.PlayerMoveState.Idle:
-                    return new IdleLeftFireLuigi(texture);
+                    return new IdleLeftFire(texture);
                 case PlayerStateMachine.PlayerMoveState.Moving:
-                    return new MovingLeftFireLuigi(texture);
+                    return new MovingLeftFire(texture);
                 case PlayerStateMachine.PlayerMoveState.Jumping:
-                    return new JumpingLeftFireLuigi(texture);
+                    return new JumpingLeftFire(texture);
                 case PlayerStateMachine.PlayerMoveState.Crouching:
-                    return new CrouchLeftFireLuigi(texture);
+                    return new CrouchLeftFire(texture);
                 case PlayerStateMachine.PlayerMoveState.Turning:
-                    return new TurningRightFireLuigi(texture);
+                    return new TurningRightFire(texture);
                 default:
                     return null;
             }
@@ -194,11 +194,11 @@ namespace Pixel_Plumbers_Fall_2024
             switch (marioStateMachine.CurrentGameState)
             {
                 case PlayerStateMachine.PlayerGameState.Small:
-                    return new WinSmallLuigi(texture);
+                    return new WinSmall(texture);
                 case PlayerStateMachine.PlayerGameState.Big:
-                    return new WinBigLuigi(texture);
+                    return new WinBig(texture);
                 case PlayerStateMachine.PlayerGameState.Fire:
-                    return new WinFireLuigi(texture);
+                    return new WinFire(texture);
                 default: return null;
             }
 
