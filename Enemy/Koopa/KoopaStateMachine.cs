@@ -53,7 +53,6 @@ public class KoopaStateMachine
 
 	public void beStomped()
 	{
-		isDead = true;
 		switch (_currentState)
 		{
 			case KoopaState.Left:

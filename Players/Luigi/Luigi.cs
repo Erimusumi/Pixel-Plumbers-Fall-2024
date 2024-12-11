@@ -37,11 +37,13 @@ public class Luigi : IPlayer
     private bool isDead = false;
     private bool waitingForPartnerToDie = false;
     private bool winHitBottom = false;
+    private int jumpSoundTimer = 0;
 
-    private const float maxSpeed = 3f;
-    private const float acceleration = 0.03f;
+    private float maxSpeed = 3f;
+    private float acceleration = 0.03f;
 
     private int fireballTimer;
+    private bool hasShotFireball = false;
     private int starTimer;
     private int visibleCount = 0;
     int luigiDeathBounceIncrement;
@@ -165,7 +167,11 @@ public class Luigi : IPlayer
             luigiVelocity.Y = jumpSpeed;
             playerStateMachine.SetPlayerJumping();
             isOnGround = false;
-            _sfx[3].Play();
+            if (jumpSoundTimer <= 0)
+            {
+                jumpSoundTimer = 40;
+                _sfx[3].Play();
+            }
         }
     }
 
@@ -412,15 +418,27 @@ public class Luigi : IPlayer
     public void ShootFireball()
     {
         if (playerStateMachine.IsDead()) return;
+
+        maxSpeed = 4.5f;
+        acceleration = 0.06f;
+
         if (fireballTimer > 0) return;
 
-        if (playerStateMachine.IsFire())
+        if (playerStateMachine.IsFire() && !hasShotFireball)
         {
             _sfx[2].Play();
             Fireball f = new Fireball(luigiPosition, itemTexture, gameTime, playerStateMachine.CurrentFaceState, game, _entities, this);
             game.fireballs.Add(f);
             fireballTimer = 20;
+            hasShotFireball = true;
         }
+    }
+
+    public void StopRunning()
+    {
+        maxSpeed = 3f;
+        acceleration = 0.03f;
+        hasShotFireball = false;
     }
 
     public void SetSwimmingLevel(bool isLevelSwimming)
@@ -454,6 +472,7 @@ public class Luigi : IPlayer
         currentLuigiSprite.Update(gameTime);
         fireballTimer += -1;
         starTimer += -1;
+        jumpSoundTimer += -1;
         this.RemoveStar();
         this.checkLuigiHeightForDeath();
         this.ResetScoreMult();

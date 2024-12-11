@@ -14,5 +14,6 @@ public class MarioFireballCommand : IPlayerCommand
 
     public void Unexecute()
     {
+        mario.StopRunning();
     }
 }
