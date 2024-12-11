@@ -311,7 +311,7 @@ public class Mario : IPlayer
         }
         
         //this.ResetWin();
-        this.GetStateMachine().SetPlayerBig();
+        //this.GetStateMachine().SetPlayerBig();
          wc = new WinCutScene(this, this.GetDestination());
         wc.play(this.gameTime);
     }
