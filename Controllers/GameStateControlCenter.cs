@@ -77,7 +77,8 @@ public class GameStateControlCenter
         levelScreenController.AddCommand(levelScreenSprite.GetLevelOneRectangle(), levelOneCommand);
         levelScreenController.AddCommand(levelScreenSprite.GetLevelTwoRectangle(), levelTwoCommand);
 
-        gameOverScrenController.AddCommand(gameOverScreen.GetMainMenuRectangle(), startScreenCommand);
+        ICommand startScreenCommand2 = new StartScreeGameCommand2(gameStateMachine);
+        gameOverScrenController.AddCommand(gameOverScreen.GetMainMenuRectangle(), startScreenCommand2);
         // gameOverScrenController.AddCommand(gameOverScreen.GetRestartRectangle(), resetGameCommand);
 
         //ICommand BlackJackCommand = new BlackJackCommand(blackJackStateMachine, gameStateMachine);

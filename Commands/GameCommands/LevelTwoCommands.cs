@@ -12,16 +12,18 @@ public class LevelTwoCommand : ICommand
     public LevelTwoCommand(GameStateMachine gameStateMachine, Dictionary<Rectangle, ICommand> list, MouseController gameMouseController, BlackJackStateMachine blackJackStateMachine)
     {
         this.gameStateMachine = gameStateMachine;
-        disableScreenCommand = new DisableScreenCommand(list, gameMouseController);
         this.blackJackStateMachine = blackJackStateMachine;
+        disableScreenCommand = new DisableScreenCommand(list, gameMouseController);
     }
     public void Execute()
     {
-        gameStateMachine.setLevelTwo();
-        gameStateMachine.setGameStateRunning();
-
-        disableScreenCommand.Execute();
-        disableScreenCommand.Set(blackJackStateMachine, gameStateMachine);
-        Console.WriteLine("lvl2Command");
+        if (gameStateMachine.isLevelScreen())
+        {
+            gameStateMachine.setLevelTwo();
+            gameStateMachine.setGameStateRunning();
+            disableScreenCommand.Execute();
+            disableScreenCommand.Set(blackJackStateMachine, gameStateMachine);
+            Console.WriteLine("lvl2Command");
+        }
     }
 }

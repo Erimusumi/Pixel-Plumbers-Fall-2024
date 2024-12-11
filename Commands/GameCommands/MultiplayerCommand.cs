@@ -13,8 +13,11 @@ public class MultiplayerCommand : ICommand
     }
     public void Execute()
     {
-        gameStateMachine.setGameMultiplayer();
-        levelScreenCommand.Execute();
-        Console.WriteLine("MultiplayerCommand");
+        if (gameStateMachine.isStartScreen())
+        {
+            gameStateMachine.setGameMultiplayer();
+            levelScreenCommand.Execute();
+            Console.WriteLine("MultiplayerCommand");
+        }
     }
 }
