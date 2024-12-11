@@ -49,6 +49,7 @@ public class Mario : IPlayer
     private int starTimer;
     int marioDeathBounceIncrement;
     private List<SoundEffect> _sfx;
+    private int jumpSoundTimer;
     private int visibleCount = 0;
 
     private Game1 game;
@@ -175,7 +176,12 @@ public class Mario : IPlayer
             marioVelocity.Y = jumpSpeed;
             playerStateMachine.SetPlayerJumping();
             isOnGround = false;
-            _sfx[3].Play();
+            if (jumpSoundTimer <= 0)
+            {
+                _sfx[3].Play();
+                jumpSoundTimer = 20;
+            }
+            
         }
     }
 
@@ -439,6 +445,7 @@ public class Mario : IPlayer
         currentMarioSprite.Update(gameTime);
         fireballTimer += -1;
         starTimer += -1;
+        jumpSoundTimer += -1;
         this.RemoveStar();
         this.checkMarioHeightForDeath();
         this.ResetScoreMult();

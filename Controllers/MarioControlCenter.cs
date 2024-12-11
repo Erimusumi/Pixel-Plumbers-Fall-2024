@@ -31,11 +31,18 @@ public class MarioControlCenter
         playerMovementController.addCommand(Keys.W, marioJumpCommand);
         playerMovementController.addCommand(Keys.S, marioCrouchCommand);
 
+        playerMovementController.addControllerCommand(Buttons.DPadRight, marioMoveRight);
+        playerMovementController.addControllerCommand(Buttons.DPadLeft, marioMoveLeft);
+        playerMovementController.addControllerCommand(Buttons.DPadDown, marioCrouchCommand);
+        playerMovementController.addControllerCommand(Buttons.A, marioJumpCommand);
+
+
         playerMovementController.addCommand(Keys.D1, marioPowerUpCommand);
         playerMovementController.addCommand(Keys.D2, marioTakeDamageCommand);
 
         playerMovementController.addCommand(Keys.LeftShift, marioFireballCommand);
-        playerMovementController.addCommand(Keys.RightShift, marioStarCommand);
+
+        playerMovementController.addControllerCommand(Buttons.B, marioFireballCommand);
     }
 
     public PlayerMovementController GetController()

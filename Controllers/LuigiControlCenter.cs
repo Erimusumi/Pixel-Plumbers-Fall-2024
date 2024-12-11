@@ -35,5 +35,6 @@ public class LuigiControlCenter
         playerMovementController.addCommand(Keys.D4, luigiPowerUpCommand);
         playerMovementController.addCommand(Keys.D5, luigiTakeDamageCommand);
         playerMovementController.addCommand(Keys.D6, luigiStarCommand);
+
     }
 }
