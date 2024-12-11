@@ -9,8 +9,7 @@ using System.Threading.Tasks;
 
     public class WinCutScene: ICutScene
 {
-    IPlayer player1;
-    IPlayer player2;
+    IPlayer player;
     Rectangle currentPosition;
     PlayerStateMachine stateMachine;
     CutSceneManager manager;
@@ -18,44 +17,36 @@ using System.Threading.Tasks;
     int doorDistance = 160;
     public  WinCutScene(IPlayer player, Rectangle currentPosition)
     {
-        this.player1 = player;
+        this.player = player;
         manager = new CutSceneManager(player);
+    }
+    public Boolean entersDoor()
+    {
+        if (doorDistance < 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
     }
     public void Update(GameTime gameTime)
     {
         time += 1 /*(float)gameTime.ElapsedGameTime.TotalSeconds*/;
-        //TODO: slow this down (timer)
-        if (time > 1 && doorDistance > 0)
+        if (time > 1 && doorDistance >= 0)
         {
-            player1.SetPositionX(player1.GetDestination().X + 1);
+            player.SetPositionX(player.GetDestination().X + 2);
 
-            doorDistance--;
+            doorDistance-=2;
             time = 0;
-        }
-        if(doorDistance == 0)
-        {
-            player1.getStateMachine().MakeInvisible();
         }
     }
     public void play(GameTime gameTime)
     {
-        stateMachine = player1.GetStateMachine();
-        stateMachine.SetPlayerBig();
-        manager.setPlayerPosition(6370, 380); 
-
-       
-            //time += (float)gameTime.ElapsedGameTime.TotalSeconds;
-            ////TODO: slow this down (timer)
-            //if(time > 1)
-            //{
-            //    player1.SetPositionX(player1.GetDestination().X + 1);
-            //    doorDistance--;
-            //    time = 0;
-            //}
-            
-        
-        //TODO: mario vanishes into door
-        //player1.GetStateMachine().MakeInvisible();
+        stateMachine = player.GetStateMachine();
+        manager.setPlayerPosition(6372, 380);
 
     }
 }

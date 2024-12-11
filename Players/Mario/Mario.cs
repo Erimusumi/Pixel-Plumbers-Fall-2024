@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 
 using System.Runtime.CompilerServices;
@@ -48,6 +49,7 @@ public class Mario : IPlayer
     private int starTimer;
     int marioDeathBounceIncrement;
     private List<SoundEffect> _sfx;
+    private int visibleCount = 0;
 
     private Game1 game;
     private int gameResetTimer = -1;
@@ -277,20 +279,24 @@ public class Mario : IPlayer
                 marioVelocity.X = 0;
                 marioPosition.Y++;
                 //_sfx[5].Play();
-                playerStateMachine.MakeInvisible();
-                
+                if (marioPosition.Y > 326)
+                {
                     winHitBottom = true;
                     this.ResetWin();
                     this.WinLevelOne();
-                
-
+                }    
+                    
+               
             }
             
             }
             if(winHitBottom){
-        
-               
-                wc.Update(this.gameTime);
+            playerStateMachine.SetPlayerMoving();
+            wc.Update(this.gameTime);
+            if (wc.entersDoor())
+            {
+                this.GetStateMachine().MakeInvisible();
+            }
 
         }
         
@@ -298,7 +304,12 @@ public class Mario : IPlayer
     }
     public void WinLevelOne()
     {
-        this.GetStateMachine().MakeVisible();
+        if(visibleCount == 0)
+        {
+            this.GetStateMachine().MakeVisible();
+            visibleCount++;
+        }
+        
         //this.ResetWin();
         this.GetStateMachine().SetPlayerBig();
          wc = new WinCutScene(this, this.GetDestination());
@@ -456,7 +467,11 @@ public class Mario : IPlayer
 
     public void Draw(SpriteBatch spriteBatch)
     {
-        currentMarioSprite.Draw(spriteBatch, marioPosition, this.playerStateMachine.HasStar());
+        if (this.GetStateMachine().isVisible)
+        {
+            currentMarioSprite.Draw(spriteBatch, marioPosition, this.playerStateMachine.HasStar());
+        }
+        
     }
 
 
@@ -470,6 +485,7 @@ public class Mario : IPlayer
         currentMarioSprite = new IdleRightSmallMario(marioTexture);
         marioDeathBounceIncrement = 20;
         gameResetTimer = -1;
+        visibleCount = 0;
         deathSoundPlaying = false;
         waitingForPartnerToDie = false;
         winHitBottom = false;
