@@ -1,3 +1,4 @@
+using System;
 using Microsoft.Xna.Framework.Media;
 using Pixel_Plumbers_Fall_2024;
 
@@ -24,5 +25,6 @@ public class PauseGameCommand : ICommand
             gameStateMachine.setGameStatePaused();
             MediaPlayer.Pause();
         }
+        Console.WriteLine("Pause Command");
     }
 }

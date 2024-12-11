@@ -28,9 +28,12 @@ public class StartScreenSprite : ISprite
         Vector2 player2TextSize = MyFont.MeasureString(player2Text) * scale;
         Vector2 helpTextSize = MyFont.MeasureString(helpText) * scale;
 
-        player1Position = new Vector2((ScreenWidth - player1TextSize.X) / 2, 250);
-        player2Position = new Vector2((ScreenWidth - player2TextSize.X) / 2, 300);
-        helpPosition = new Vector2((ScreenWidth - helpTextSize.X) / 2, 350);
+        //player1Position = new Vector2((ScreenWidth - player1TextSize.X) / 2, 250);
+        //player2Position = new Vector2((ScreenWidth - player2TextSize.X) / 2, 300);
+        //helpPosition = new Vector2((ScreenWidth - helpTextSize.X) / 2, 350);
+        player1Position = new Vector2(240, 250);
+        player2Position = new Vector2(260, 300);
+        helpPosition = new Vector2(360, 350);
     }
 
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
@@ -40,21 +43,25 @@ public class StartScreenSprite : ISprite
         spriteBatch.DrawString(MyFont, "SINGLEPLAYER", new Vector2(240, 250), Color.White);
         spriteBatch.DrawString(MyFont, "MULTIPLAYER", new Vector2(260, 300), Color.White);
         spriteBatch.DrawString(MyFont, "HELP", new Vector2(360, 350), Color.White);
+
+        spriteBatch.Draw(startScreenTexture, GetOnePlayerRectangle(), Color.Red * 0.5f);
+        spriteBatch.Draw(startScreenTexture, GetTwoPlayerRectangle(), Color.Blue * 0.5f);
+        spriteBatch.Draw(startScreenTexture, GetHelpRectangle(), Color.Green * 0.5f);
     }
 
     public Rectangle GetOnePlayerRectangle()
     {
-        return new Rectangle((int)player1Position.X, (int)player1Position.Y, (int)MyFont.MeasureString("1 PLAYER").X * (int)scale, (int)MyFont.MeasureString("SINGLEPLAYER").Y * (int)scale);
+        return new Rectangle((int)player1Position.X, (int)player1Position.Y, (int)MyFont.MeasureString("SINGLEPLAYER").X, (int)MyFont.MeasureString("SINGLEPLAYER").Y);
     }
 
     public Rectangle GetTwoPlayerRectangle()
     {
-        return new Rectangle((int)player2Position.X, (int)player2Position.Y, (int)MyFont.MeasureString("2 PLAYER").X * (int)scale, (int)MyFont.MeasureString("MULTIPLAYER").Y * (int)scale);
+        return new Rectangle((int)player2Position.X, (int)player2Position.Y, (int)MyFont.MeasureString("MULTIPLAYER").X, (int)MyFont.MeasureString("MULTIPLAYER").Y);
     }
 
     public Rectangle GetHelpRectangle()
     {
-        return new Rectangle((int)helpPosition.X, (int)helpPosition.Y, (int)MyFont.MeasureString("HELP").X * (int)scale, (int)MyFont.MeasureString("HELP").Y * (int)scale);
+        return new Rectangle((int)helpPosition.X, (int)helpPosition.Y, (int)MyFont.MeasureString("HELP").X, (int)MyFont.MeasureString("HELP").Y);
     }
 
     public void Update(GameTime gameTime)

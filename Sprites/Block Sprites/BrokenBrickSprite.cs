@@ -15,6 +15,7 @@ public class BrokenBrickSprite : IBlock
     private int currentFrame;
     private bool broken;
     private bool bumping;
+    public bool animationDone;
     public Rectangle destinationRectangle;
 
     public BrokenBrickSprite(Texture2D texture, int frames, double wait)
@@ -61,14 +62,13 @@ public class BrokenBrickSprite : IBlock
             {
                 // End the bump animation and reset
                 buffer = 0;
-                bumping = false; // Reset bumping to false after the animation
             }
         }
 
         // Handle other animation frames if needed
         if (broken)
         {
-            buffer += 6.1f;
+            buffer += gameTime.ElapsedGameTime.TotalSeconds;
 
             if (buffer >= waitTime)
             {
@@ -76,10 +76,11 @@ public class BrokenBrickSprite : IBlock
                 buffer -= waitTime;
 
                 // Stop animating at the last frame
-                if (currentFrame >= numOfFrames)
+                if (currentFrame >= numOfFrames-1)
                 {
-                    currentFrame = numOfFrames - 1; // Set to the last frame
+                    currentFrame = numOfFrames - 2; // Set to the last frame
                     broken = false; // Stop animation
+                    animationDone = true;
                 }
             }
         }
@@ -101,7 +102,11 @@ public class BrokenBrickSprite : IBlock
             31
         );
 
-        spriteBatch.Draw(Texture, destinationRectangle, sourceRectangle, Color.White);
+        if (!animationDone)
+        {
+            spriteBatch.Draw(Texture, destinationRectangle, sourceRectangle, Color.White);
+        }
+        
     }
 
     public Rectangle GetDestination()

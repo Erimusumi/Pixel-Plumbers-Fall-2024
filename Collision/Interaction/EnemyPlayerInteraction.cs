@@ -19,6 +19,7 @@ public class EnemyPlayerInteraction
         Overlap = _Overlap;
         entitiesRemoved = _entitiesRemoved;
     }
+    
     public void Update()
     {
         PlayerStateMachine playerStateMachine = player.getStateMachine();

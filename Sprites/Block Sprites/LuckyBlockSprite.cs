@@ -125,6 +125,7 @@ public class LuckyBlockSprite : IBlock
                 
             }
             hasItemAppeared = true;
+            sourceRectangle = new Rectangle(128, 112, 16, 16);
         }
 
         if (bumping && item != null)  // Added null check

@@ -162,7 +162,6 @@ public class KoopaStateMachine
                 _sprite.StartLogic();
                 break;
         }
-
     }
 
 	public Rectangle GetDestination()

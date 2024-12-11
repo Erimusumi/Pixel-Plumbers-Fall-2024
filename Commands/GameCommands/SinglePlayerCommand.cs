@@ -1,3 +1,4 @@
+using System;
 using System.Runtime.CompilerServices;
 
 public class SingleplayerCommand : ICommand
@@ -12,7 +13,11 @@ public class SingleplayerCommand : ICommand
     }
     public void Execute()
     {
-        gameStateMachine.setGameSinglePlayer();
-        levelScreenCommand.Execute();
+        if (gameStateMachine.isStartScreen())
+        {
+            gameStateMachine.setGameSinglePlayer();
+            levelScreenCommand.Execute();
+            Console.WriteLine("SinglePlayer Command");
+        }
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-    public class ObstacleFireballInteraction
+public class ObstacleFireballInteraction
 {
     private Fireball fireBall;
     private IObstacle obstacle;
