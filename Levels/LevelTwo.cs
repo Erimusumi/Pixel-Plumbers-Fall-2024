@@ -21,6 +21,7 @@ public class LevelTwo : ILevel
     private ContentManager Content;
 
     private List<IEntity> entities = new List<IEntity>();
+    private List<ISpriteEnemy> Enemy = new List<ISpriteEnemy>();
     private List<IEntity> entitiesRemoved;
     private List<IEntity> floorRectangles;
 
@@ -94,6 +95,38 @@ public class LevelTwo : ILevel
         lvl2foreground1.LoadLayer();
         lvl2foreground2.LoadLayer();
         startAnimation = false;
+
+        Enemy = new List<ISpriteEnemy>();
+        InitializeEnemies();
+        AddEntitiesToGame();
+    }
+
+    private void InitializeEnemies()
+    {
+
+        int[] BenemyXPositions = {390, 1500, 1700};
+        int[] BenemyYPositions = {700, 720, 720};
+
+        for (int i = 0; i < BenemyXPositions.Length; i++)
+        {
+            Enemy.Add(new Blooper(BenemyXPositions[i], BenemyYPositions[i], (IPlayer)mario, (IPlayer)luigi));
+        }
+
+        int[] CenemyXPositions = { 390, 1500, 1700 };
+        int[] CenemyYPositions = { 700, 720, 720 };
+
+        for (int i = 0; i < CenemyXPositions.Length; i++)
+        {
+            Enemy.Add(new Blooper(CenemyXPositions[i], CenemyYPositions[i], (IPlayer)mario, (IPlayer)luigi));
+        }
+    }
+
+    private void AddEntitiesToGame()
+    {
+        foreach (var e in Enemy)
+        {
+            entities.Add(e);
+        }
     }
 
     public void UpdateLevel(GameTime gameTime)
@@ -163,6 +196,11 @@ public class LevelTwo : ILevel
             mario.SetIsOnGround(false);
             mario.Update(gameTime); ;
         }
+
+        for (int i = 0; i < Enemy.Count; i++)
+        {
+            Enemy[i].Updates();
+        }
     }
 
     public void DrawLevel(SpriteBatch sB)
@@ -181,6 +219,11 @@ public class LevelTwo : ILevel
         else if (gameStateMachine.isSingleplayer())
         {
             mario.Draw(spriteBatch);
+        }
+
+        for (int i = 0; i < Enemy.Count; i++)
+        {
+            Enemy[i].Draw(spriteBatch, EnemyTexture);
         }
     }
 
