@@ -161,8 +161,8 @@ namespace Pixel_Plumbers_Fall_2024
             startScreenFonts = Content.Load<SpriteFont>("StartScreenFonts");
             levelScreenFonts = Content.Load<SpriteFont>("LevelScreenFonts");
             startScreenSprite = new StartScreenSprite(textureManager, startScreenFonts);
-            levelScreenSprite = new LevelScreenSprite(levelScreenFonts);
-            gameOverScreenSprite = new GameOverScreen(levelScreenFonts);
+            levelScreenSprite = new LevelScreenSprite(textureManager, levelScreenFonts);
+            gameOverScreenSprite = new GameOverScreen(textureManager, levelScreenFonts);
 
             blackJackStateMachine = new BlackJackStateMachine(textureManager, soundManager.GetSound("fwip"), startScreenFonts);
             hudManager = new HudManager(startScreenFonts, this, mario);
