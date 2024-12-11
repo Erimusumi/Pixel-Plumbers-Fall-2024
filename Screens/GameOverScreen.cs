@@ -28,9 +28,9 @@ public class GameOverScreen : ISprite
         Vector2 restartTextSize = MyFont.MeasureString(restartText) * scale;
         Vector2 mainMenuTextSize = MyFont.MeasureString(mainMenuText) * scale;
 
-        gameOverPosition = new Vector2((ScreenWidth - gameOverTextSize.X) / 2, 200);
-        restartPosition = new Vector2((ScreenWidth - restartTextSize.X) / 2, 300);
-        mainMenuPosition = new Vector2((ScreenWidth - mainMenuTextSize.X) / 2, 350);
+        // gameOverPosition = new Vector2((ScreenWidth - gameOverTextSize.X) / 2, 200);
+        // restartPosition = new Vector2((ScreenWidth - restartTextSize.X) / 2, 300);
+        // mainMenuPosition = new Vector2((ScreenWidth - mainMenuTextSize.X) / 2, 350);
     }
 
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
