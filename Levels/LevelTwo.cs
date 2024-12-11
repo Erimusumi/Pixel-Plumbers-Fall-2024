@@ -43,6 +43,7 @@ public class LevelTwo : ILevel
     private FollowCamera followCamera;
 
     Boolean startAnimation = false;
+    Boolean upPipeAnimation = false;
 
     public LevelTwo(
         Game1 game,
@@ -92,45 +93,63 @@ public class LevelTwo : ILevel
         lvl2greenery.LoadLayer();
         lvl2foreground1.LoadLayer();
         lvl2foreground2.LoadLayer();
+        startAnimation = false;
     }
-
 
     public void UpdateLevel(GameTime gameTime)
     {
-
+        Console.WriteLine(mario.marioPosition);
         if (!startAnimation)
         {
-            startAnimationElapsedTime += gameTime.ElapsedGameTime.TotalSeconds;
-
-            if (startAnimationElapsedTime <= 1.0)
             {
-                Console.WriteLine("We are here");
-                mario.MoveRight();
-                mario.Update(gameTime);
-            }
-            else
-            {
-                Console.WriteLine("We are now");
                 mario.Stop();
+                mario.Fall();
+                mario.Fall();
+                mario.Fall();
+                mario.Fall();
+                mario.Fall();
+                mario.Fall();
+                mario.Fall();
+                luigi.Stop();
 
+                luigi.Fall();
+                luigi.Fall();
+                luigi.Fall();
+                luigi.Fall();
+                luigi.Fall();
+                luigi.Fall();
+                luigi.Fall();
 
-                mario.SetPositionY(600);
-                luigi.SetPositionY(600);
+                mario.Update(gameTime);
+                luigi.Update(gameTime);
 
-
+                mario.marioPosition = new Vector2(70, 800);
+                luigi.luigiPosition = new Vector2(40, 800);
+                followCamera.SetYPosition();
                 mario.SetSwimmingLevel(true);
                 luigi.SetSwimmingLevel(true);
-
-                followCamera.SetYPosition();
-
                 startAnimation = true;
-                mario.Update(gameTime);
-
             }
         }
 
-        mario.SetSwimmingLevel(true);
-        luigi.SetSwimmingLevel(true);
+
+        if (mario.marioPosition.X > 6000 && mario.marioPosition.Y > 672 && mario.marioPosition.Y < 736)
+        {
+            upPipeAnimation = true;
+        }
+
+        if (upPipeAnimation == true)
+        {
+            mario.SetSwimmingLevel(false);
+            luigi.SetSwimmingLevel(false);
+            mario.marioPosition = new Vector2(5132, 270);
+            luigi.luigiPosition = new Vector2(5132, 270);
+
+            followCamera.setHigherCamera();
+            mario.Update(gameTime);
+            luigi.Update(gameTime);
+            upPipeAnimation = false;
+        }
 
         if (gameStateMachine.isMultiplayer())
         {
