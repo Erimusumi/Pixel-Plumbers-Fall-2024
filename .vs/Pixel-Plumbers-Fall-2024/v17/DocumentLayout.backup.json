@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Projects\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\enemy\\blooper\\blooperstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:enemy\\blooper\\blooperstatemachine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|c:\\projects\\levels\\leveltwo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBFF7838-82DB-463C-B412-8A9EBC0DC53C}|Pixel-Plumbers-Fall-2024.csproj|solutionrelative:levels\\leveltwo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -34,11 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Projects\\Game1.cs",
               "RelativeDocumentMoniker": "Game1.cs",
@@ -48,6 +52,19 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-16T18:15:02.512Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BlooperStateMachine.cs",
+              "DocumentMoniker": "C:\\Projects\\Enemy\\Blooper\\BlooperStateMachine.cs",
+              "RelativeDocumentMoniker": "Enemy\\Blooper\\BlooperStateMachine.cs",
+              "ToolTip": "C:\\Projects\\Enemy\\Blooper\\BlooperStateMachine.cs",
+              "RelativeToolTip": "Enemy\\Blooper\\BlooperStateMachine.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAYwGEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T18:10:01.628Z",
               "EditorCaption": ""
             },
             {
@@ -76,7 +93,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CheepsSprites.cs",
               "DocumentMoniker": "C:\\Projects\\Enemy\\Cheeps\\CheepsSprites.cs",
               "RelativeDocumentMoniker": "Enemy\\Cheeps\\CheepsSprites.cs",
@@ -89,20 +106,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "LevelTwo.cs",
               "DocumentMoniker": "C:\\Projects\\Levels\\LevelTwo.cs",
               "RelativeDocumentMoniker": "Levels\\LevelTwo.cs",
-              "ToolTip": "C:\\Projects\\Levels\\LevelTwo.cs*",
-              "RelativeToolTip": "Levels\\LevelTwo.cs*",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAYwHkAAABDAAAAAAAAAA==",
+              "ToolTip": "C:\\Projects\\Levels\\LevelTwo.cs",
+              "RelativeToolTip": "Levels\\LevelTwo.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAgwOYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-11T16:58:05.023Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "LevelOne.cs",
               "DocumentMoniker": "C:\\Projects\\Levels\\LevelOne.cs",
               "RelativeDocumentMoniker": "Levels\\LevelOne.cs",
@@ -115,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "StartScreenSprite.cs",
               "DocumentMoniker": "C:\\Projects\\Screens\\StartScreenSprite.cs",
               "RelativeDocumentMoniker": "Screens\\StartScreenSprite.cs",
@@ -128,7 +145,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "SinglePlayerCommand.cs",
               "DocumentMoniker": "C:\\Projects\\Commands\\GameCommands\\SinglePlayerCommand.cs",
               "RelativeDocumentMoniker": "Commands\\GameCommands\\SinglePlayerCommand.cs",
