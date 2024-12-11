@@ -61,8 +61,8 @@ public class Luigi : IPlayer
         this.luigiTexture = textureManager.GetTexture("Luigi");
         this.itemTexture = textureManager.GetTexture("Items");
 
-        this.luigiPosition = new Vector2(200, groundPosition);
-        this.initialPosition = new Vector2(200, groundPosition);
+        this.luigiPosition = new Vector2(150, groundPosition);
+        this.initialPosition = new Vector2(150, groundPosition);
         this.playerStateMachine = new PlayerStateMachine();
         this.gameTime = gametime;
         this.luigiPosition = initialPosition;

@@ -398,11 +398,8 @@ namespace Pixel_Plumbers_Fall_2024
             mario.Reset();
             hudManager.SetTime(400);
             camera.Reset();
-
-            if (gameStateMachine.isLevelOne())
-                levelOne.InitializeLevel();
-            else if (gameStateMachine.isLevelTwo())
-                levelTwo.InitializeLevel();
+            levelOne.InitializeLevel();
+            levelTwo.InitializeLevel();
         }
 
         public void GameOver()
