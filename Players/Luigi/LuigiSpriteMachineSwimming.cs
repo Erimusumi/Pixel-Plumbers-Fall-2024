@@ -16,7 +16,7 @@ namespace Pixel_Plumbers_Fall_2024
             //Mario being dead takes priority over all other sprites
             if (playerStateMachine.IsDead())
             {
-                newSprite = new DeadMario(texture);
+                newSprite = new DeadCharacter(texture);
             }
             else {
                 newSprite = GetSpriteForFaceState(playerStateMachine, texture);
@@ -33,7 +33,7 @@ namespace Pixel_Plumbers_Fall_2024
                 return newSprite;
             }
 
-            return lastValidSprite ?? new IdleLeftBigMario(texture);
+            return lastValidSprite ?? new IdleLeftBig(texture);
         }
 
         private static ICharacter GetSpriteForFaceState(PlayerStateMachine marioStateMachine, Texture2D texture)
@@ -84,13 +84,13 @@ namespace Pixel_Plumbers_Fall_2024
             switch (marioStateMachine.CurrentMoveState)
             {
                 case PlayerStateMachine.PlayerMoveState.Idle:
-                    return new IdleRightSmallMario(texture);
+                    return new IdleRightSmall(texture);
                 case PlayerStateMachine.PlayerMoveState.Moving:
-                    return new MovingRightSmallMario(texture);
+                    return new MovingRightSmall(texture);
                 case PlayerStateMachine.PlayerMoveState.Jumping:
-                    return new SwimmingRightSmallMario(texture);
+                    return new SwimmingRightSmall(texture);
                 case PlayerStateMachine.PlayerMoveState.Turning:
-                    return new TurningLeftSmallMario(texture);
+                    return new TurningLeftSmall(texture);
                 default:
                     return null;
             }
@@ -101,15 +101,15 @@ namespace Pixel_Plumbers_Fall_2024
             switch (marioStateMachine.CurrentMoveState)
             {
                 case PlayerStateMachine.PlayerMoveState.Idle:
-                    return new IdleRightBigMario(texture);
+                    return new IdleRightBig(texture);
                 case PlayerStateMachine.PlayerMoveState.Moving:
-                    return new MovingRightBigMario(texture);
+                    return new MovingRightBig(texture);
                 case PlayerStateMachine.PlayerMoveState.Jumping:
-                    return new SwimmingRightBigMario(texture);
+                    return new SwimmingRightBig(texture);
                 case PlayerStateMachine.PlayerMoveState.Crouching:
-                    return new CrouchRightBigMario(texture);
+                    return new CrouchRightBig(texture);
                 case PlayerStateMachine.PlayerMoveState.Turning:
-                    return new TurningLeftBigMario(texture);
+                    return new TurningLeftBig(texture);
                 default:
                     return null;
             }
@@ -120,15 +120,15 @@ namespace Pixel_Plumbers_Fall_2024
             switch (marioStateMachine.CurrentMoveState)
             {
                 case PlayerStateMachine.PlayerMoveState.Idle:
-                    return new IdleRightFireMario(texture);
+                    return new IdleRightFire(texture);
                 case PlayerStateMachine.PlayerMoveState.Moving:
-                    return new MovingRightFireMario(texture);
+                    return new MovingRightFire(texture);
                 case PlayerStateMachine.PlayerMoveState.Jumping:
-                    return new SwimmingRightFireMario(texture);
+                    return new SwimmingRightFire(texture);
                 case PlayerStateMachine.PlayerMoveState.Crouching:
-                    return new CrouchRightFireMario(texture);
+                    return new CrouchRightFire(texture);
                 case PlayerStateMachine.PlayerMoveState.Turning:
-                    return new TurningLeftFireMario(texture);
+                    return new TurningLeftFire(texture);
                 default:
                     return null;
             }
@@ -139,13 +139,13 @@ namespace Pixel_Plumbers_Fall_2024
             switch (marioStateMachine.CurrentMoveState)
             {
                 case PlayerStateMachine.PlayerMoveState.Idle:
-                    return new IdleLeftSmallMario(texture);
+                    return new IdleLeftSmall(texture);
                 case PlayerStateMachine.PlayerMoveState.Moving:
-                    return new MovingLeftSmallMario(texture);
+                    return new MovingLeftSmall(texture);
                 case PlayerStateMachine.PlayerMoveState.Jumping:
-                    return new SwimmingLeftSmallMario(texture);
+                    return new SwimmingLeftSmall(texture);
                 case PlayerStateMachine.PlayerMoveState.Turning:
-                    return new TurningRightSmallMario(texture);
+                    return new TurningRightSmall(texture);
                 default:
                     return null;
             }
@@ -156,15 +156,15 @@ namespace Pixel_Plumbers_Fall_2024
             switch (marioStateMachine.CurrentMoveState)
             {
                 case PlayerStateMachine.PlayerMoveState.Idle:
-                    return new IdleLeftBigMario(texture);
+                    return new IdleLeftBig(texture);
                 case PlayerStateMachine.PlayerMoveState.Moving:
-                    return new MovingLeftBigMario(texture);
+                    return new MovingLeftBig(texture);
                 case PlayerStateMachine.PlayerMoveState.Jumping:
-                    return new SwimmingLeftBigMario(texture);
+                    return new SwimmingLeftBig(texture);
                 case PlayerStateMachine.PlayerMoveState.Crouching:
-                    return new CrouchLeftBigMario(texture);
+                    return new CrouchLeftBig(texture);
                 case PlayerStateMachine.PlayerMoveState.Turning:
-                    return new TurningRightBigMario(texture);
+                    return new TurningRightBig(texture);
                 default:
                     return null;
             }
@@ -175,15 +175,15 @@ namespace Pixel_Plumbers_Fall_2024
             switch (marioStateMachine.CurrentMoveState)
             {
                 case PlayerStateMachine.PlayerMoveState.Idle:
-                    return new IdleLeftFireMario(texture);
+                    return new IdleLeftFire(texture);
                 case PlayerStateMachine.PlayerMoveState.Moving:
-                    return new MovingLeftFireMario(texture);
+                    return new MovingLeftFire(texture);
                 case PlayerStateMachine.PlayerMoveState.Jumping:
-                    return new SwimmingLeftFireMario(texture);
+                    return new SwimmingLeftFire(texture);
                 case PlayerStateMachine.PlayerMoveState.Crouching:
-                    return new CrouchLeftFireMario(texture);
+                    return new CrouchLeftFire(texture);
                 case PlayerStateMachine.PlayerMoveState.Turning:
-                    return new TurningRightFireMario(texture);
+                    return new TurningRightFire(texture);
                 default:
                     return null;
             }

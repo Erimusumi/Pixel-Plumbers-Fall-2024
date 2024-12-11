@@ -74,7 +74,7 @@ public class Luigi : IPlayer
         this.starTimer = 0;
         this.luigiDeathBounceIncrement = 15;
 
-        this.currentLuigiSprite = new IdleRightSmallMario(luigiTexture);
+        this.currentLuigiSprite = new IdleRightSmall(luigiTexture);
         this.game = game;
         this._entities = entities;
 
@@ -475,7 +475,7 @@ public class Luigi : IPlayer
         luigiVelocity = Vector2.Zero;
         playerStateMachine.Reset();
         isOnGround = true;
-        currentLuigiSprite = new IdleRightSmallMario(luigiTexture);
+        currentLuigiSprite = new IdleRightSmall(luigiTexture);
         luigiDeathBounceIncrement = 20;
         gameResetTimer = -1;
         deathSoundPlaying = false;

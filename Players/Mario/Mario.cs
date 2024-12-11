@@ -79,7 +79,7 @@ public class Mario : IPlayer
         this.starTimer = 0;
         this.marioDeathBounceIncrement = 15;
 
-        this.currentMarioSprite = new IdleRightSmallMario(marioTexture);
+        this.currentMarioSprite = new IdleRightSmall(marioTexture);
         this.game = game;
         this._entities = entities;
 
@@ -482,7 +482,7 @@ public class Mario : IPlayer
         marioVelocity = Vector2.Zero;
         playerStateMachine.Reset();
         isOnGround = true;
-        currentMarioSprite = new IdleRightSmallMario(marioTexture);
+        currentMarioSprite = new IdleRightSmall(marioTexture);
         marioDeathBounceIncrement = 20;
         gameResetTimer = -1;
         visibleCount = 0;
