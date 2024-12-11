@@ -42,6 +42,8 @@ public class MarioControlCenter
 
         playerMovementController.addCommand(Keys.LeftShift, marioFireballCommand);
 
+        playerMovementController.addCommand(Keys.Delete, marioStarCommand);
+
         playerMovementController.addControllerCommand(Buttons.B, marioFireballCommand);
     }
 
