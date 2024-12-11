@@ -248,6 +248,10 @@ public class Luigi : IPlayer
     {
         playerStateMachine.SetPlayerWins();
     }
+    public void ResetWin()
+    {
+        playerStateMachine.ResetWin();
+    }
     public void LuigiWins()
     {
         if (playerStateMachine.Wins())

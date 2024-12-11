@@ -36,13 +36,11 @@ public class PlayerFlagInteraction
         flag.resetFlag();
         
        player.SetWin();
-        Debug.Write(player.GetDestination().Y);
-        
-         for(int i = 0; i < 800; i++)
-        {
 
-        }
         entities.RemoveAt(index);
+        player.GetStateMachine().MakeVisible();
+        player.ResetWin();
+        player.GetStateMachine().SetPlayerBig();
                 WinCutScene wc = new WinCutScene(player, destination);
                 wc.play();
                
