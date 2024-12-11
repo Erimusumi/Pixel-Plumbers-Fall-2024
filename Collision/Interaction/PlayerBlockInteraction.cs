@@ -47,13 +47,13 @@ public class PlayerBlockInteraction
             if (!player.getStateMachine().IsSmall())
             {
                 block.broke();
+                if (!isLuckyBlock) 
+                {
+                    removeFromList();
+                }
+                
             }
-            if (!isLuckyBlock && !player.GetStateMachine().IsSmall())
-            {
-                removeFromList();
-                BrokenBrickSprite brokenBlock = (BrokenBrickSprite)block;
-                brokenBlock.StopDrawing(true);
-            }
+
         }
         else if (minOverlap == overlapLeft)
         {

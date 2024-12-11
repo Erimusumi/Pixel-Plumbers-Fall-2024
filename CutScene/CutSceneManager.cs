@@ -24,8 +24,6 @@ public class CutSceneManager
     {
         player.MoveRight();
         
-        
-
     }
     public void moveLeft()
     {

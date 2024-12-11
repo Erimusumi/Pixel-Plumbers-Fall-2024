@@ -68,10 +68,10 @@ public class GameStateControlCenter
         startMenuController.AddCommand(startScreenSprite.GetTwoPlayerRectangle(), multiplayerCommand); // Multiplayer
 
         list = gameMouseController.SendList();
-        ICommand levelOneCommand = new LevelOneCommand(gameStateMachine, list, gameMouseController, blackJackStateMachine);
+        ICommand levelOneCommand = new LevelOneCommand(gameStateMachine, list, gameMouseController, blackJackStateMachine, game);
         gameMouseController.AddCommand(levelScreenSprite.GetLevelOneRectangle(), levelOneCommand);
 
-        ICommand levelTwoCommand = new LevelTwoCommand(gameStateMachine, list, gameMouseController, blackJackStateMachine);
+        ICommand levelTwoCommand = new LevelTwoCommand(gameStateMachine, list, gameMouseController, blackJackStateMachine, game);
         gameMouseController.AddCommand(levelScreenSprite.GetLevelTwoRectangle(), levelTwoCommand);
 
         levelScreenController.AddCommand(levelScreenSprite.GetLevelOneRectangle(), levelOneCommand);

@@ -147,10 +147,8 @@ public class LevelOne : ILevel
 
         for (int i = 0; i < brickBlockPositions.Length; i++)
         {
-            BrickBlocks.Add(new BrokenBrickSprite(blockTexture, 4, 2));
+            BrickBlocks.Add(new BrokenBrickSprite(blockTexture, 4, 0.1));
         }
-
-        OWBrokenBrickSprite = new BrokenBrickSprite(blockTexture, 4, 1);
     }
 
     private void AddEntitiesToGame()

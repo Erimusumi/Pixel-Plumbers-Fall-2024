@@ -5,16 +5,23 @@ public class FollowCamera
 {
     public Vector2 position;
     private Vector2 initialPosition;
+    private Vector2 lowerPosition;
     private float smoothSpeed = 0.1f;
+    private Mario mario;
+    private Luigi luigi;
 
     public FollowCamera(Vector2 position)
     {
         this.position = position;
         this.initialPosition = position;
+        this.lowerPosition = new Vector2(position.X, position.Y);
     }
 
     public void Follow(Mario mario, Luigi luigi, Vector2 screenSize, float mapWidth)
     {
+        this.luigi = luigi;
+        this.mario = mario;
+
         float screenCenter = position.X + (screenSize.X / 2);
 
         float targetX;
@@ -34,15 +41,13 @@ public class FollowCamera
         position.X = MathHelper.Lerp(position.X, targetX, smoothSpeed);
         position.X = Math.Clamp(position.X, 0, mapWidth - screenSize.X);
 
-        position.Y = 0;
-
         if (mario.marioPosition.X < 3)
         {
-            mario.marioPosition.X = mario.marioPosition.X + 3;
+            mario.marioPosition.X += 3;
         }
         if (luigi.luigiPosition.X < 3)
         {
-            luigi.luigiPosition.X = luigi.luigiPosition.X + 3;
+            luigi.luigiPosition.X += 3;
         }
     }
 
@@ -51,9 +56,16 @@ public class FollowCamera
         position = initialPosition;
     }
 
-    public void SetYPosition(float newY)
+    public void SetYPosition()
     {
-        position.Y = newY;
+        lowerPosition = new Vector2(position.X, 480);
+        position = lowerPosition;
+    }
+
+    public void setHigherCamera()
+    {
+        position = new Vector2(mario.marioPosition.X, 0);
+        Console.WriteLine("Camera moved up");
     }
 
     public Matrix GetViewMatrix()
