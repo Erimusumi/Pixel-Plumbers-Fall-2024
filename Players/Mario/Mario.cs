@@ -212,7 +212,7 @@ public class Mario : IPlayer
         switch (playerStateMachine.CurrentGameState)
         {
             case PlayerStateMachine.PlayerGameState.Small:
-                this.SetPositionY(this.marioPosition.Y - 32);
+                this.SetPositionY(this.marioPosition.Y - 30);
                 playerStateMachine.SetPlayerBig();
                 _sfx[0].Play();
                 break;
@@ -240,7 +240,7 @@ public class Mario : IPlayer
                 break;
 
             case PlayerStateMachine.PlayerGameState.Big:
-                this.SetPositionY(this.marioPosition.Y - 32);
+                this.SetPositionY(this.marioPosition.Y + 30);
                 _sfx[1].Play();
                 playerStateMachine.SetPlayerSmall();
                 break;
@@ -256,6 +256,11 @@ public class Mario : IPlayer
     public void SetWin()
     {
         playerStateMachine.SetPlayerWins();
+    }
+
+    public void ResetWin()
+    {
+        playerStateMachine.ResetWin();
     }
 
     public void MarioWins()
@@ -395,6 +400,7 @@ public class Mario : IPlayer
         starTimer += -1;
         this.RemoveStar();
         this.checkMarioHeightForDeath();
+        this.ResetScoreMult();
         this.MarioWins();
     }
 
@@ -523,10 +529,10 @@ public class Mario : IPlayer
         return this.playerStateMachine;
     }
 
-    //public int GetScoreMult()
-    //{
-    //    return this.scoreMult;
-    //}
+    public int GetScoreMult()
+    {
+        return this.scoreMult;
+    }
 
     public void IncreaseScoreMult()
     {
@@ -539,7 +545,7 @@ public class Mario : IPlayer
     public void ResetScoreMult()
     {
 
-        if (isOnGround && !this.playerStateMachine.HasStar())
+        if (!playerStateMachine.IsJumping() && !this.playerStateMachine.HasStar())
         {
             scoreMult = 1;
         }
@@ -548,11 +554,12 @@ public class Mario : IPlayer
     public void AddScore(int scoreAmt)
     {
         game.hudManager.AddScore(scoreAmt * this.scoreMult);
-        //game.scorePopups.Add(new ScorePopup(marioPosition, scoreFont, this.game, game.scorePopups, this, scoreAmt * this.scoreMult));
+        game.scorePopups.Add(new ScorePopup(marioPosition, this.game, scoreAmt * this.scoreMult));
     }
     public void AddCoin()
     {
         game.hudManager.CollectCoin();
+        game.hudManager.AddScore(100);
     }
     public void playSound(int index)
     {

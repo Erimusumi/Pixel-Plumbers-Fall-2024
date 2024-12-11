@@ -24,6 +24,7 @@ public class BlackJackStateMachine
     private SpriteFont font;
     private int p1Score = 0;
     private int p2Score = 0;
+    
     public BlackJackStateMachine(TextureManager textureManager, SoundEffect fwip, SpriteFont font)
     {
 

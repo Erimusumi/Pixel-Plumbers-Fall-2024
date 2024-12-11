@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Security.Cryptography.X509Certificates;
+using System.Threading;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -19,6 +20,7 @@ public class GoombaSprites
     private Rectangle destinationRectangle;
     private int counter = -1;
     private int counter2 = 0;
+    private int counter3 = 0;
 
     private const int countStart = 10;
     private const int countMod = 10;
@@ -67,10 +69,6 @@ public class GoombaSprites
 	public void RightLogic()
 	{
         counter++;
-        if (counter == 0)
-        {
-            sourceRectangle = new Rectangle(0, 4, size, size);
-        }
         if (counter >= countStart)
         {
             position += speed;
@@ -87,9 +85,14 @@ public class GoombaSprites
     }
 	public void StompedLogic()
 	{
+        counter3++;
         rotation = 0f;
         sourceRectangle = new Rectangle(60, 8, size, size/2);
-        destinationRectangle = new Rectangle(position, posY+10, size * scaleUp, (size/2) * scaleUp);
+        destinationRectangle = new Rectangle(position, posY+20, size * scaleUp, (size/2) * scaleUp);
+        if (counter3 >= 100)
+        {
+            sourceRectangle = new Rectangle();
+        }
     }
     public void ApplyGravity()
     {
@@ -131,11 +134,7 @@ public class GoombaSprites
                 sourceRectangle = new Rectangle(0, 4, size, size);
             }
         }
-        if (flipOrStart == 0)
-        {
-            ApplyGravity();
-        }
-        destinationRectangle = new Rectangle(position, posY, size * scaleUp, size * scaleUp);
+        destinationRectangle = new Rectangle(position+size*scaleUp, posY+size*scaleUp, size * scaleUp, size * scaleUp);
     }
     public Rectangle GetDestination()
     {

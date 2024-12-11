@@ -12,8 +12,11 @@ public class Cheeps : ISpriteEnemy
 	{
 		stateMachine = new CheepsStateMachine(color, posX, posY, mario, luigi);
 	}
-
-	public void changeDirection()
+    public Boolean IsDead()
+    {
+        return stateMachine.IsDead();
+    }
+    public void changeDirection()
 	{
 		stateMachine.changeDirection();
 	}
@@ -36,21 +39,22 @@ public class Cheeps : ISpriteEnemy
 	{
 		return stateMachine.GetDestination();
 	}
-	//Needed in level one enemies
+    //Needed in level one enemies
     public bool GetIsOnGround()
     {
-		return true;
+        return stateMachine.GetIsOnGround();
     }
     public void SetIsOnGround(bool val)
     {
+        stateMachine.SetIsOnGround(val);
+    }
+    public void setGroundPosition(float x)
+    {
+        stateMachine.SetGroundPosition(x);
     }
     public void Draw(SpriteBatch sb, Texture2D Texture)
 	{
         stateMachine.Draw(sb, Texture);
     }
-	public void setGroundPosition(float x)
-	{
-
-	}
 
 }

@@ -12,9 +12,9 @@ public class Blooper : ISpriteEnemy
     {
         stateMachine = new BlooperStateMachine(posX, posY, mario, luigi);
     }
-    public Boolean IsFlipped()
+    public Boolean IsDead()
     {
-        return stateMachine.IsFlipped();
+        return stateMachine.IsDead();
     }
     public void changeDirection()
     {
@@ -42,18 +42,19 @@ public class Blooper : ISpriteEnemy
     //Needed in level one enemies
     public bool GetIsOnGround()
     {
-        return true;
+        return stateMachine.GetIsOnGround();
     }
     public void SetIsOnGround(bool val)
     {
+        stateMachine.SetIsOnGround(val);
+    }
+    public void setGroundPosition(float x)
+    {
+        stateMachine.SetGroundPosition(x);
     }
     public void Draw(SpriteBatch sb, Texture2D Texture)
     {
         stateMachine.Draw(sb, Texture);
-    }
-    public void setGroundPosition(float x)
-    {
-
     }
 
 }

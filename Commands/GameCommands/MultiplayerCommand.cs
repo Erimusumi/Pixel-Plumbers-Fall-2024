@@ -1,3 +1,4 @@
+using System;
 using System.Runtime.CompilerServices;
 
 public class MultiplayerCommand : ICommand
@@ -14,5 +15,6 @@ public class MultiplayerCommand : ICommand
     {
         gameStateMachine.setGameMultiplayer();
         levelScreenCommand.Execute();
+        Console.WriteLine("MultiplayerCommand");
     }
 }

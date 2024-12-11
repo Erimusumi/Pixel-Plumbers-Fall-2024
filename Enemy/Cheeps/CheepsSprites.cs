@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.Metrics;
 using System.Security.Cryptography.X509Certificates;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -55,9 +56,23 @@ public class CheepsSprites
     private const int scaleUp = 2;
     private const int speed = 1;
 
+    private int counter2 = 0;
+    private bool isOnGround = false;
+    private float groundPosition = 385f;
     private float rotation = 0f;
 
-
+    public bool GetIsOnGround()
+    {
+        return isOnGround;
+    }
+    public void SetIsOnGround(bool val)
+    {
+        isOnGround = val;
+    }
+    public void SetGroundPosition(float x)
+    {
+        groundPosition = x;
+    }
     public void LeftLogic()
 	{
         counter++;
@@ -115,7 +130,25 @@ public class CheepsSprites
         sourceRectangle = new Rectangle(LeftPosX2, SourceHeight, size, size);
         destinationRectangle = new Rectangle(position, posY, size * scaleUp, size * scaleUp);
     }
-	public void FlippedLogic()
+    public void ApplyGravity()
+    {
+        if (!isOnGround)
+        {
+            if (counter % 10 == 0)
+            {
+                counter2++;
+            }
+            posY += counter2;
+            if (posY >= groundPosition)
+            {
+                posY = (int)groundPosition;
+                counter2 = 0;
+                isOnGround = true;
+            }
+            destinationRectangle = new Rectangle(position, posY, size * scaleUp, size * scaleUp);
+        }
+    }
+    public void FlippedLogic()
 	{
         rotation = 3.1415926535f;
         counter++;

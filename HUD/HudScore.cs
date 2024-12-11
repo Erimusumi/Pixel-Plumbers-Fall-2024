@@ -24,7 +24,7 @@ public class HudScore : IHudElement
 
     public bool AddScore(int scoreAmt)
     {
-        if (scoreAmt > maxScoreAmt)
+        if (scoreAmt >= maxScoreAmt)
         {
             return true;
         }

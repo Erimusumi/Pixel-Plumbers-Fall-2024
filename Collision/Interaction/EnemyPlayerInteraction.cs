@@ -19,6 +19,7 @@ public class EnemyPlayerInteraction
         Overlap = _Overlap;
         entitiesRemoved = _entitiesRemoved;
     }
+    
     public void Update()
     {
         PlayerStateMachine playerStateMachine = player.getStateMachine();
@@ -27,18 +28,26 @@ public class EnemyPlayerInteraction
 
         if (playerStateMachine.HasStar())
         {
+            if (!enemy.IsDead())
+            {
+                player.AddScore(100);
+                player.IncreaseScoreMult();
+            }
             enemy.beFlipped();
             entitiesRemoved.Add(enemy);
-            player.AddScore(100);
-        } else if ((Overlap.Width >= Overlap.Height) && (Math.Abs(playersR.Height - playersR.Y) < Math.Abs(enemyR.Height -enemyR.Y)))
+        } else if ((Overlap.Width >= Overlap.Height) && (Math.Abs(playersR.Height - playersR.Y) < Math.Abs(enemyR.Height -enemyR.Y)) && enemy.GetType() != typeof(Cheeps) && enemy.GetType() != typeof(Blooper))
         {
+            if (!enemy.IsDead())
+            {
+                player.AddScore(100);
+                player.IncreaseScoreMult();
+            }
             enemy.beStomped();
             player.SetVelocityY(-450);
             if (enemy.GetType() != typeof(Koopa))
             {
                 entitiesRemoved.Add(enemy);
             }
-            player.AddScore(100);
         } else
         {
             player.TakeDamage();

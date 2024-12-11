@@ -13,6 +13,7 @@ public class KoopaStateMachine
     private int done;
     private KoopaSprites _sprite;
 	private Boolean _isMovingShell = false;
+	private Boolean isDead = false;
     private IPlayer mario;
 	private IPlayer luigi;
     public KoopaStateMachine(int posX, int posY, IPlayer mario, IPlayer luigi)
@@ -21,6 +22,11 @@ public class KoopaStateMachine
         this.mario = mario;
 		this.luigi = luigi;
     }
+
+	public Boolean IsDead()
+	{
+		return isDead;
+	}
 	public Boolean IsMovingShell()
 	{
 		return _isMovingShell;
@@ -47,6 +53,7 @@ public class KoopaStateMachine
 
 	public void beStomped()
 	{
+		isDead = true;
 		switch (_currentState)
 		{
 			case KoopaState.Left:
@@ -83,6 +90,7 @@ public class KoopaStateMachine
 		{
 			_currentState = KoopaState.Flipped;
 		}
+		isDead = true;
 	}
     public bool GetIsOnGround()
     {
@@ -94,7 +102,11 @@ public class KoopaStateMachine
     }
 	public void setGroundPosition(int x)
 	{
-		this._sprite.setGroundPosition(x);
+        if (isDead)
+        {
+            x = 1000;
+        }
+        this._sprite.setGroundPosition(x);
 	}
     public void Update()
 	{
@@ -150,7 +162,6 @@ public class KoopaStateMachine
                 _sprite.StartLogic();
                 break;
         }
-
     }
 
 	public Rectangle GetDestination()

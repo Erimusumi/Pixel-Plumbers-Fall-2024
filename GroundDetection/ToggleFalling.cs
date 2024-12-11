@@ -32,7 +32,7 @@ public class ToggleFalling
         enemies = filterEntities.FilterEnemies(entities);
         items = filterEntities.FilterItems(entities);
         fireballs = filterEntities.FilterFireballs(entities);
-        Debug.WriteLine("There are" + fireballs.Count + "fireballs");
+        //Debug.WriteLine("There are" + fireballs.Count + "fireballs");
         //Debug.WriteLine("There are " + items.Count + " items");
         this.mario = mario;
         this.luigi = luigi;
@@ -102,10 +102,11 @@ public class ToggleFalling
             for (int j = 0; j < collisionRects.Count; j++)
             {
                 Rectangle blockBounds = collisionRects[j];
-                if (enemyBounds.Intersects(blockBounds))
+                if (enemyBounds.Intersects(blockBounds) && !currentEnemy.IsDead())
                 {
 
                     enemyColliding = true;
+
                     if (enemyBounds.Bottom > blockBounds.Top &&
                         enemyBounds.Top < blockBounds.Top &&
                         enemyBounds.Right > blockBounds.Left &&
@@ -187,56 +188,67 @@ public class ToggleFalling
         Rectangle playerRect = player.GetDestination();
         Rectangle obstacleRect;
         bool playerIsColliding = false;
-        float minOverlap = float.MaxValue;
+
+        // Track collision flags
+        bool topCollision = false;
+        bool bottomCollision = false;
+        bool leftCollision = false;
+        bool rightCollision = false;
 
         for (int i = 0; i < collisionRects.Count; i++)
         {
             obstacleRect = collisionRects[i];
-            float overlapLeft = playerRect.Right - obstacleRect.Left;
-            float overlapRight = obstacleRect.Right - playerRect.Left;
-            float overlapTop = playerRect.Bottom - obstacleRect.Top;
-            float overlapBottom = obstacleRect.Bottom - playerRect.Top;
-
-            minOverlap = Math.Min(Math.Min(overlapLeft, overlapRight), Math.Min(overlapTop, overlapBottom));
-
-            if (minOverlap == overlapTop && playerRect.Intersects(obstacleRect))
+            if (playerRect.Intersects(obstacleRect))
             {
-                playerIsColliding = true;
-                player.SetIsOnGround(true);
-                player.SetPositionY(obstacleRect.Top - playerRect.Height);
-                player.SetVelocityY(0);
-                player.JumpStop();
-                break;
-            }
-            else if (minOverlap == overlapBottom && playerRect.Intersects(obstacleRect))
-            {
-                player.SetPositionY(obstacleRect.Bottom);
-                player.SetVelocityY(0);
-                playerIsColliding = true;
+                float overlapLeft = playerRect.Right - obstacleRect.Left;
+                float overlapRight = obstacleRect.Right - playerRect.Left;
+                float overlapTop = playerRect.Bottom - obstacleRect.Top;
+                float overlapBottom = obstacleRect.Bottom - playerRect.Top;
 
-                break;
-            }
+                float minOverlap = Math.Min(Math.Min(overlapLeft, overlapRight), Math.Min(overlapTop, overlapBottom));
 
-            else if (minOverlap == overlapLeft && playerRect.Intersects(obstacleRect))
-            {
-                player.SetPositionX(obstacleRect.Left - playerRect.Width);
-                player.SetVelocityX(0);
-                playerIsColliding = true;
-                break;
-            }
-            else if (minOverlap == overlapRight && playerRect.Intersects(obstacleRect))
-            {
+                if (minOverlap == overlapTop && overlapTop > 0)
+                {
+                    topCollision = true;
+                    player.SetPositionY(obstacleRect.Top - playerRect.Height);
+                    player.SetVelocityY(0);
+                    player.SetIsOnGround(true);
+                    player.JumpStop();
+                }
+                else if (minOverlap == overlapBottom && overlapBottom > 0)
+                {
+                    bottomCollision = true;
+                    player.SetPositionY(obstacleRect.Bottom);
+                    player.SetVelocityY(0);
+                }
+                else if (minOverlap == overlapLeft && overlapLeft > 0)
+                {
+                    leftCollision = true;
+                    player.Stop();
+                    player.SetPositionX(obstacleRect.Left - playerRect.Width);
+                    player.SetVelocityX(0);
+                }
+                else if (minOverlap == overlapRight && overlapRight > 0)
+                {
+                    rightCollision = true;
+                    player.Stop();
+                    player.SetPositionX(obstacleRect.Right);
+                    player.SetVelocityX(0);
+                }
 
-                player.SetPositionX(obstacleRect.Right);
-                player.SetVelocityX(0);
                 playerIsColliding = true;
-                break;
             }
         }
-        if (!playerIsColliding)
+
+        if (!topCollision && !player.GetIsOnGround())
         {
             player.Fall();
         }
-        playerIsColliding = false;
+
+        if (!playerIsColliding)
+        {
+            player.SetIsOnGround(false);
+        }
     }
+
 }

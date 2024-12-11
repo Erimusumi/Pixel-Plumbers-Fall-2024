@@ -38,7 +38,7 @@ This project is a replica of the classic Mario game, written in C# using MonoGam
 ## Game Controls
 
 - **Menu Actions**:
-  - Click **"1 Player"** or **"2 Player"** to start the game  
+  - Click **"Single Player"** or **"Multiplayer"** to start the game  
   - Click on the table in the bottom left corner to enter the Blackjack minigame  
 
 - **Gameplay Actions**:

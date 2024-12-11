@@ -74,6 +74,10 @@ public class PlayerStateMachine
     {
         PlayerWins = true;
     }
+    public void ResetWin()
+    {
+        PlayerWins = false;
+    }
     public void SetPlayerLeft()
     {
         CurrentFaceState = PlayerFaceState.Left;
@@ -92,7 +96,7 @@ public class PlayerStateMachine
     {
         _HasStar = true;
         //test, remove later
-        System.Diagnostics.Debug.WriteLine("Star Collected");
+        //System.Diagnostics.Debug.WriteLine("Star Collected");
     }
 
     public void RemoveStar()

@@ -4,6 +4,7 @@ using Pixel_Plumbers_Fall_2024;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
@@ -16,28 +17,25 @@ public class ScorePopup
     */
     private int timer;
     private Vector2 pos;
-    private const float scale = 0.4f;
-    private SpriteFont font;
-    private List<ScorePopup> scorePopups;
+    private const float scale = 0.75f;
     private int scoreAmt;
-    public ScorePopup(Vector2 marioPosition, Game1 game, List<ScorePopup> ScorePopups, IPlayer player, int scoreAmt)
+    private Game1 game;
+    public ScorePopup(Vector2 marioPosition, Game1 game, int scoreAmt)
     {
         pos = marioPosition;
         timer = 0;
-        //this.game = game;
-        this.scorePopups = ScorePopups;
-        ScorePopups.Add(this);
-        //this.player = player;
+        this.game = game;
+        game.scorePopups.Add(this);
         this.scoreAmt = scoreAmt;
     }
     private void Remove()
     {
-        scorePopups.Remove(this);
+        game.removedSP.Add(this);
     }
 
     private void Move()
     {
-        pos.Y += 1f;
+        pos.Y -= 1f;
     }
     public void Update(GameTime gameTime)
     {

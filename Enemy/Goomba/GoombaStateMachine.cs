@@ -7,10 +7,10 @@ using Pixel_Plumbers_Fall_2024;
 
 public class GoombaStateMachine
 {
-	private enum GoombaState {Left, Right, Stomped, Flipped, Start};
+	public enum GoombaState {Left, Right, Stomped, Flipped, Start};
 	private GoombaState _currentState = GoombaState.Start;
 	private GoombaSprites _sprite;
-	private Boolean _isFlipped = true;
+	private Boolean isDead = false;
 	private IPlayer mario;
     private IPlayer luigi;
 
@@ -21,10 +21,11 @@ public class GoombaStateMachine
 		this.luigi = luigi;
 	}
 
-    public Boolean IsFlipped()
-    {
-        return _isFlipped;
-    }
+	public Boolean IsDead()
+	{
+		return isDead;
+	}
+
     public void changeDirection()
 	{
 		switch (_currentState)
@@ -44,7 +45,7 @@ public class GoombaStateMachine
         {
             _currentState = GoombaState.Stomped;
         }
-
+		isDead = true;
     }
 
 	public void beFlipped()
@@ -53,6 +54,7 @@ public class GoombaStateMachine
 		{
 			_currentState = GoombaState.Flipped;
 		}
+		isDead = true;
 	}
 
 	public bool GetIsOnGround()
@@ -65,6 +67,10 @@ public class GoombaStateMachine
     }
 	public void SetGroundPosition(float x)
 	{
+		if (isDead)
+		{
+			x = 1000;
+		}
 		_sprite.SetGroundPosition(x);
 	}
     public void Update()
@@ -72,20 +78,21 @@ public class GoombaStateMachine
 		Rectangle mHold = mario.GetDestination();
         Rectangle lHold = luigi.GetDestination();
         Rectangle goombaRec = _sprite.GetDestination();
-        if (((goombaRec.X - mHold.X) > 0) && ((goombaRec.X - mHold.X) < 400) && (_currentState == GoombaState.Start)){
+        if ((((goombaRec.X - mHold.X) > 0) && ((goombaRec.X - mHold.X) < 400) && (_currentState == GoombaState.Start))){
             _currentState = GoombaState.Left;
         }
         if (((goombaRec.X - lHold.X) > 0) && ((goombaRec.X - lHold.X) < 400) && (_currentState == GoombaState.Start))
         {
             _currentState = GoombaState.Left;
         }
+
         _sprite.ApplyGravity();
-		if (_currentState != GoombaState.Start)
+        if (_currentState != GoombaState.Start)
 		{
 			SetIsOnGround(false);
-		}
+        }
 
-		switch (_currentState)
+        switch (_currentState)
 		{
             case GoombaState.Left:
 				_sprite.LeftLogic();
@@ -114,4 +121,5 @@ public class GoombaStateMachine
 	{
 		_sprite.Draw(sb, Texture);
 	}
+
 }

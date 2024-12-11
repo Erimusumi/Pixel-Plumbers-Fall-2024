@@ -21,6 +21,7 @@ public class BlackJackSprites
     private int player1Score;
     private int player2Score;
     private SpriteFont font;
+    
     public BlackJackSprites(Texture2D TextureTable, Texture2D TextureTop, Texture2D TextureCards, SpriteFont font)
     {
         cardRectangles.Add(next);

@@ -8,16 +8,15 @@ using Pixel_Plumbers_Fall_2024;
 public class Goomba : ISpriteEnemy
 {
     private GoombaStateMachine stateMachine;
-	private float groundPosition = 385f;
 	public Goomba(int posX, int posY, IPlayer mario, IPlayer luigi)
 	{
 		stateMachine = new GoombaStateMachine(posX, posY, mario, luigi);
 	}
-	public Boolean IsFlipped()
-	{
-		return stateMachine.IsFlipped();
-	}
-	public void changeDirection()
+    public Boolean IsDead()
+    {
+        return stateMachine.IsDead();
+    }
+    public void changeDirection()
 	{
 		stateMachine.changeDirection();
 	}
@@ -26,6 +25,7 @@ public class Goomba : ISpriteEnemy
 	{
 		stateMachine.beStomped();
 	}
+
 	public void beFlipped()
 	{
 		stateMachine.beFlipped();
@@ -48,15 +48,13 @@ public class Goomba : ISpriteEnemy
     {
         stateMachine.SetIsOnGround(val);
     }
-
+    public void setGroundPosition(float x)
+    {
+        stateMachine.SetGroundPosition(x);
+    }
     public void Draw(SpriteBatch sb, Texture2D Texture)
 	{
         stateMachine.Draw(sb, Texture);
     }
-	public void setGroundPosition(float x)
-	{
-		//this.groundPosition = x;
-		stateMachine.SetGroundPosition(x);
-	}
 
 }
