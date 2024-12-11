@@ -12,13 +12,11 @@ public class CheepsSprites
     private int LeftPosX2;
     private int RightPosX1;
     private int RightPosX2;
-    private int posX = 0;
     private int posY = 0;
     private int position = 0;
     //0 is red, 1 is green, 2 is white
     public CheepsSprites(int color, int _posX, int _posY)
     {
-        posX = _posX;
         position = _posX;
         posY = _posY;
         switch (color)
@@ -47,8 +45,6 @@ public class CheepsSprites
     private Rectangle destinationRectangle;
     private int counter = -1;
 
-    private const int countEnd = 400;
-    private const int countStart = 10;
     private const int countMod = 10;
 
     private const int SourceHeight = 184;
@@ -74,55 +70,32 @@ public class CheepsSprites
         groundPosition = x;
     }
     public void LeftLogic()
-	{
+    {
         counter++;
-        if (counter == 0)
+        position = position - speed;
+        if (counter % countMod < (countMod / 2))
+        {
+            sourceRectangle = new Rectangle(LeftPosX1, SourceHeight, size, size);
+        }
+        else
         {
             sourceRectangle = new Rectangle(LeftPosX2, SourceHeight, size, size);
         }
-        if ((counter >= countStart) && (counter < countEnd))
-        {
-            position = position - speed;
-            if (counter % countMod < (countMod / 2))
-            {
-                sourceRectangle = new Rectangle(LeftPosX1, SourceHeight, size, size);
-            } else
-            {
-                sourceRectangle = new Rectangle(LeftPosX2, SourceHeight, size, size);
-            }
-        }
         destinationRectangle = new Rectangle(position, posY, size * scaleUp, size * scaleUp);
-        if (counter >= countEnd)
-        {
-            counter = -1;
-            position = posX;
-        }
     }
-	public void RightLogic()
-	{
+    public void RightLogic()
+    {
         counter++;
-        if (counter == 0)
+        position = position + speed;
+        if (counter % countMod < (countMod / 2))
+        {
+            sourceRectangle = new Rectangle(RightPosX1, SourceHeight, size, size);
+        }
+        else
         {
             sourceRectangle = new Rectangle(RightPosX2, SourceHeight, size, size);
         }
-        if ((counter >= countStart) && (counter < countEnd))
-        {
-            position = position + speed;
-            if (counter % countMod < (countMod / 2))
-            {
-                sourceRectangle = new Rectangle(RightPosX1, SourceHeight, size, size);
-            }
-            else
-            {
-                sourceRectangle = new Rectangle(RightPosX2, SourceHeight, size, size);
-            }
-        }
         destinationRectangle = new Rectangle(position, posY, size * scaleUp, size * scaleUp);
-        if (counter >= countEnd)
-        {
-            counter = -1;
-            position = posX;
-        }
     }
 	public void StompedLogic()	{  }
     public void StartLogic()
@@ -149,27 +122,16 @@ public class CheepsSprites
         }
     }
     public void FlippedLogic()
-	{
+    {
         rotation = 3.1415926535f;
         counter++;
-        if (counter == 0)
+        if (counter % countMod < (countMod / 2))
+        {
+            sourceRectangle = new Rectangle(RightPosX1, SourceHeight, size, size);
+        }
+        else
         {
             sourceRectangle = new Rectangle(RightPosX2, SourceHeight, size, size);
-        }
-        if ((counter >= countStart) && (counter < countEnd))
-        {
-            if (counter % countMod < (countMod / 2))
-            {
-                sourceRectangle = new Rectangle(RightPosX1, SourceHeight, size, size);
-            }
-            else
-            {
-                sourceRectangle = new Rectangle(RightPosX2, SourceHeight, size, size);
-            }
-        }
-        if (counter >= countEnd)
-        {
-            counter = -1;
         }
     }
     public Rectangle GetDestination()

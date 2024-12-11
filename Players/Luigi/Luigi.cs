@@ -513,7 +513,7 @@ public class Luigi : IPlayer
 
     public void checkLuigiHeightForDeath()
     {
-        if (this.GetDestination().Y > 464)
+        if (this.GetDestination().Y > 1500)
         {
             playerStateMachine.SetPlayerDead();
         }
