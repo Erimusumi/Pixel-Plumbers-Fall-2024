@@ -184,7 +184,7 @@ public class LevelTwo : ILevel
         }
 
 
-        if (mario.marioPosition.X > 6000 && mario.marioPosition.Y > 672 && mario.marioPosition.Y < 736)
+        if ((mario.marioPosition.X > 6000 && mario.marioPosition.Y > 672 && mario.marioPosition.Y < 736) || (luigi.luigiPosition.X > 6000 && luigi.luigiPosition.Y > 672 && luigi.luigiPosition.Y < 736) )
         {
             upPipeAnimation = true;
         }
