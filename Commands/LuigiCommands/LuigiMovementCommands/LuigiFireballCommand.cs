@@ -14,5 +14,6 @@ public class LuigiFireballCommand : IPlayerCommand
 
     public void Unexecute()
     {
+        luigi.StopRunning();
     }
 }
