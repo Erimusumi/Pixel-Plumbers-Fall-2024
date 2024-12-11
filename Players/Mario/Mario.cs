@@ -42,10 +42,11 @@ public class Mario : IPlayer
     private bool waitingForPartnerToDie = false;
     private bool winHitBottom = false;
 
-    private const float maxSpeed = 3f;
-    private const float acceleration = 0.03f;
+    private float maxSpeed = 3f;
+    private float acceleration = 0.03f;
 
     private int fireballTimer;
+    private bool hasShotFireball = false;
     private int starTimer;
     int marioDeathBounceIncrement;
     private List<SoundEffect> _sfx;
@@ -179,7 +180,7 @@ public class Mario : IPlayer
             if (jumpSoundTimer <= 0)
             {
                 _sfx[3].Play();
-                jumpSoundTimer = 20;
+                jumpSoundTimer = 40;
             }
             
         }
@@ -424,13 +425,25 @@ public class Mario : IPlayer
     public void ShootFireball()
     {
         if (playerStateMachine.IsDead() || fireballTimer > 0) return;
-        if (playerStateMachine.IsFire())
+
+        maxSpeed = 4.5f;
+        acceleration = 0.06f;
+
+        if (playerStateMachine.IsFire() && !hasShotFireball)
         {
             _sfx[2].Play();
             Fireball f = new Fireball(marioPosition, itemTexture, gameTime, playerStateMachine.CurrentFaceState, game, _entities, this);
             game.fireballs.Add(f);
             fireballTimer = 20;
+            hasShotFireball = true;
         }
+    }
+
+    public void StopRunning()
+    {
+        maxSpeed = 3f;
+        acceleration = 0.03f;
+        hasShotFireball = false;
     }
 
     public void Update(GameTime gameTime)
