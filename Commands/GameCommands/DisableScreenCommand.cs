@@ -32,4 +32,9 @@ public class DisableScreenCommand : ICommand
         BlackJackList.Add(new Rectangle(660, 270, 100, 50), StandCommand);
         gameMouseController.SetList(BlackJackList);
     }
+
+    public void SetNew()
+    {
+        gameMouseController.SetList(new Dictionary<Rectangle, ICommand>());
+    }
 }
