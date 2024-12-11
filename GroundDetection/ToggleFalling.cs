@@ -32,8 +32,6 @@ public class ToggleFalling
         enemies = filterEntities.FilterEnemies(entities);
         items = filterEntities.FilterItems(entities);
         fireballs = filterEntities.FilterFireballs(entities);
-        //Debug.WriteLine("There are" + fireballs.Count + "fireballs");
-        //Debug.WriteLine("There are " + items.Count + " items");
         this.mario = mario;
         this.luigi = luigi;
     }

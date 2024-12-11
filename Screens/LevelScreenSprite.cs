@@ -24,8 +24,8 @@ public class LevelScreenSprite : ISprite
         spriteBatch.DrawString(levelScreenFonts, "LEVEL 1", LevelOneTextPosition, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
         spriteBatch.DrawString(levelScreenFonts, "LEVEL 2", LevelTwoTextPosition, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
 
-        spriteBatch.Draw(startScreenTexture, GetLevelOneRectangle(), Color.Red * 0.5f);
-        spriteBatch.Draw(startScreenTexture, GetLevelTwoRectangle(), Color.Blue * 0.5f);
+        // spriteBatch.Draw(startScreenTexture, GetLevelOneRectangle(), Color.Red * 0.5f);
+        // spriteBatch.Draw(startScreenTexture, GetLevelTwoRectangle(), Color.Blue * 0.5f);
     }
 
     public Rectangle GetLevelOneRectangle()

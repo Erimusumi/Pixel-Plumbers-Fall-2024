@@ -39,8 +39,8 @@ public class GameOverScreen : ISprite
         spriteBatch.DrawString(MyFont, "RESTART", restartPosition, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
         spriteBatch.DrawString(MyFont, "MAIN MENU", mainMenuPosition, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
 
-        spriteBatch.Draw(startScreenTexture, GetRestartRectangle(), Color.Red * 0.5f);
-        spriteBatch.Draw(startScreenTexture, GetMainMenuRectangle(), Color.Blue * 0.5f);
+        //spriteBatch.Draw(startScreenTexture, GetRestartRectangle(), Color.Red * 0.5f);
+        //spriteBatch.Draw(startScreenTexture, GetMainMenuRectangle(), Color.Blue * 0.5f);
     }
 
     public Rectangle GetRestartRectangle()

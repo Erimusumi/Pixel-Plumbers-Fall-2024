@@ -138,7 +138,6 @@ public class LuckyBlockSprite : IBlock
 
         if (bumping && !hasItemAppeared)
         {
-            System.Diagnostics.Debug.Write("Lucky block bumping code");
             // Calculate animation progress based on time
             double progress = buffer / bumpDuration;
 
