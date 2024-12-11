@@ -17,6 +17,7 @@ public class BrokenBrickSprite : IBlock
     private bool bumping;
     public bool animationDone;
     public Rectangle destinationRectangle;
+    int originalY;
 
     public BrokenBrickSprite(Texture2D texture, int frames, double wait)
     {
@@ -29,8 +30,6 @@ public class BrokenBrickSprite : IBlock
         buffer = 0; // total elapsed time
         width = (int)(End.X - Start.X) / frames;
         height = (int)(End.Y - Start.Y);
-        this.broken = false;  // Initial state is not animating
-        this.bumping = false;
     }
 
     public void StartAnimation()
@@ -43,27 +42,39 @@ public class BrokenBrickSprite : IBlock
     {
         if (bumping)
         {
-            // Adjust the block's vertical position for the bump animation
-            const float bumpHeight = 10f; // Height of the bump
+            const float bumpHeight = 10f; // Total height the block moves up
             const float bumpSpeed = 100f; // Speed of the bump animation
 
-            // Move block up and then back down
-            buffer += gameTime.ElapsedGameTime.TotalSeconds;
+            // Calculate total animation duration
+            double bumpDuration = 2 * (bumpHeight / bumpSpeed);
 
-            if (buffer <= bumpHeight / bumpSpeed) // Moving up
+            buffer += (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+
+            if (buffer <= bumpDuration)
             {
-                destinationRectangle.Y -= (int)(bumpSpeed * gameTime.ElapsedGameTime.TotalSeconds);
-            }
-            else if (buffer <= 2 * (bumpHeight / bumpSpeed)) // Moving down
-            {
-                destinationRectangle.Y += (int)(bumpSpeed * gameTime.ElapsedGameTime.TotalSeconds);
+                // Determine how far along the animation is
+                double progress = buffer / bumpDuration;
+
+                // Move block up for the first half, down for the second
+                if (progress <= 0.5f) // Moving up
+                {
+                    destinationRectangle.Y = (int)(originalY - (bumpHeight * (progress / 0.5f)));
+                }
+                else // Moving down
+                {
+                    destinationRectangle.Y = (int)(originalY - bumpHeight + (bumpHeight * ((progress - 0.5f) / 0.5f)));
+                }
             }
             else
             {
                 // End the bump animation and reset
+                destinationRectangle.Y = (int)originalY; // Return to original position
                 buffer = 0;
+                bumping = false;
             }
         }
+
 
         // Handle other animation frames if needed
         if (broken)

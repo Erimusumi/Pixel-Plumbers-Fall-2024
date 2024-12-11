@@ -43,7 +43,10 @@ public class PlayerBlockInteraction
             player.SetPositionY(blockRect.Bottom);
             player.SetVelocityY(0);
 
+            //bump animation
             block.bump();
+
+            //broke block except luckyblock
             if (!player.getStateMachine().IsSmall())
             {
                 block.broke();
