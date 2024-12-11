@@ -107,19 +107,26 @@ public class LevelTwo : ILevel
     private void InitializeEnemies()
     {
 
-        int[] BenemyXPositions = { 390, 1500, 1700 };
-        int[] BenemyYPositions = { 700, 720, 720 };
+        int[] BenemyXPositions = {390, 1500, 1700, 2650, 2900, 3250};
+        int[] BenemyYPositions = {700, 720, 720, 710, 720, 720};
 
         for (int i = 0; i < BenemyXPositions.Length; i++)
         {
             Enemy.Add(new Blooper(BenemyXPositions[i], BenemyYPositions[i], (IPlayer)mario, (IPlayer)luigi));
         }
 
-        int[] CenemyXPositions = { 390, 1500, 1700 };
-        int[] CenemyYPositions = { 700, 720, 720 };
-        for (int i = 0; i < CenemyXPositions.Length; i++)
+        int[] CenemyXPositions2 = { 2400, 2500, 2550, 2800, 3150, 3500, 3800, 4300, 4700, 5200, 5500};
+        int[] CenemyYPositions2 = { 832, 780, 832, 770, 790, 680, 832, 790, 790, 610, 700};
+        for (int i = 0; i < CenemyXPositions2.Length; i++)
         {
-            Enemy.Add(new Blooper(CenemyXPositions[i], CenemyYPositions[i], (IPlayer)mario, (IPlayer)luigi));
+            Enemy.Add(new Cheeps(2, CenemyXPositions2[i], CenemyYPositions2[i], (IPlayer)mario, (IPlayer)luigi));
+        }
+
+        int[] CenemyXPositions0 = {3050, 3700, 4800, 5300, 5800, 6000};
+        int[] CenemyYPositions0 = {680, 832, 780, 864, 620, 700};
+        for (int i = 0; i < CenemyXPositions0.Length; i++)
+        {
+            Enemy.Add(new Cheeps(0, CenemyXPositions0[i], CenemyYPositions0[i], (IPlayer)mario, (IPlayer)luigi));
         }
     }
 
