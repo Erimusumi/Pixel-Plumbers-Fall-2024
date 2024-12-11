@@ -79,7 +79,8 @@ public class GameStateControlCenter
 
         ICommand startScreenCommand2 = new StartScreeGameCommand2(gameStateMachine);
         gameOverScrenController.AddCommand(gameOverScreen.GetMainMenuRectangle(), startScreenCommand2);
-        // gameOverScrenController.AddCommand(gameOverScreen.GetRestartRectangle(), resetGameCommand);
+        ICommand resetGameCommand2 = new ResetGameCommand2(game, gameStateMachine);
+        gameOverScrenController.AddCommand(gameOverScreen.GetRestartRectangle(), resetGameCommand2);
 
         //ICommand BlackJackCommand = new BlackJackCommand(blackJackStateMachine, gameStateMachine);
         //gameMouseController.AddCommand(blackJackStateMachine.DestinationRectangle(), BlackJackCommand);
