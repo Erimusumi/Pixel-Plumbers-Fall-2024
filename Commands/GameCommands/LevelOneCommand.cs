@@ -7,19 +7,26 @@ public class LevelOneCommand : ICommand
 {
     private GameStateMachine gameStateMachine;
     private DisableScreenCommand disableScreenCommand;
-    public LevelOneCommand(GameStateMachine gameStateMachine, Dictionary<Rectangle, ICommand> list, MouseController gameMouseController, BlackJackStateMachine blackJackStateMachine)
+    private Game1 game;
+
+    private BlackJackStateMachine blackJackStateMachine;
+    public LevelOneCommand(GameStateMachine gameStateMachine, Dictionary<Rectangle, ICommand> list, MouseController gameMouseController, BlackJackStateMachine blackJackStateMachine, Game1 game)
     {
         this.gameStateMachine = gameStateMachine;
-        disableScreenCommand = new DisableScreenCommand(list, gameMouseController, blackJackStateMachine, gameStateMachine);
-
+        this.blackJackStateMachine = blackJackStateMachine;
+        disableScreenCommand = new DisableScreenCommand(list, gameMouseController);
+        this.game = game;
     }
     public void Execute()
     {
-        gameStateMachine.setLevelOne();
-        gameStateMachine.setGameStateRunning();
-
-        disableScreenCommand.Execute();
-        disableScreenCommand.Set();
-        Console.WriteLine("lvl1Command");
+        if (gameStateMachine.isLevelScreen())
+        {
+            game.ResetGame();
+            gameStateMachine.setLevelOne();
+            gameStateMachine.setGameStateRunning();
+            disableScreenCommand.Execute();
+            disableScreenCommand.Set(blackJackStateMachine, gameStateMachine);
+            Console.WriteLine("lvl1Command");
+        }
     }
 }

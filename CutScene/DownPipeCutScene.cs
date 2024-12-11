@@ -19,7 +19,7 @@ using Microsoft.Xna.Framework.Graphics;
     {
 
     }
-    public void play()
+    public void play(GameTime gameTime)
     {
 
     }

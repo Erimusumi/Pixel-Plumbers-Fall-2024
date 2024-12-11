@@ -9,31 +9,44 @@ using System.Threading.Tasks;
 
     public class WinCutScene: ICutScene
 {
-    IPlayer player1;
-    IPlayer player2;
+    IPlayer player;
     Rectangle currentPosition;
     PlayerStateMachine stateMachine;
     CutSceneManager manager;
-    int doorDistance = 180;
+    float time = 0;
+    int doorDistance = 160;
     public  WinCutScene(IPlayer player, Rectangle currentPosition)
     {
-        this.player1 = player;
+        this.player = player;
         manager = new CutSceneManager(player);
     }
-    public void play()
+    public Boolean entersDoor()
     {
-        stateMachine = player1.GetStateMachine();
-        stateMachine.SetPlayerBig();
-        manager.setPlayerPosition(6370, 380); 
-
-        while (doorDistance >0)
+        if (doorDistance < 0)
         {
-            //TODO: slow this down (timer)
-            player1.SetPositionX(player1.GetDestination().X + 1);
-            doorDistance--;
+            return true;
         }
-        //TODO: mario vanishes into door
-        //player1.MakeInvisible();
+        else
+        {
+            return false;
+        }
+
+    }
+    public void Update(GameTime gameTime)
+    {
+        time += 1 /*(float)gameTime.ElapsedGameTime.TotalSeconds*/;
+        if (time > 1 && doorDistance >= 0)
+        {
+            player.SetPositionX(player.GetDestination().X + 2);
+
+            doorDistance-=2;
+            time = 0;
+        }
+    }
+    public void play(GameTime gameTime)
+    {
+        stateMachine = player.GetStateMachine();
+        manager.setPlayerPosition(6372, 380);
 
     }
 }

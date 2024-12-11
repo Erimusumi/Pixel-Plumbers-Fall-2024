@@ -102,7 +102,7 @@ public class LevelOne : ILevel
 
         for (int i = 0; i < enemyXPositions.Length; i++)
         {
-            Enemy.Add(new Goomba(enemyXPositions[i], enemyYPositions[i], (IPlayer)mario, luigi));
+            Enemy.Add(new Goomba(enemyXPositions[i], enemyYPositions[i], (IPlayer)mario, (IPlayer)luigi));
         }
     }
 

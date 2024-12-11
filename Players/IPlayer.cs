@@ -24,6 +24,8 @@ public interface IPlayer : IEntity
     public void CollectStar();
     public void PowerUp();
     public void SetWin();
+
+    public void ResetWin();
     public PlayerStateMachine getStateMachine();
     public void AddScore(int scoreAmt);
     public void AddCoin();
@@ -31,5 +33,7 @@ public interface IPlayer : IEntity
     public void ResetScoreMult();
     public void IncreaseScoreMult();
     public void playSound(int i);
+
+    public void WinLevelOne();
     public PlayerStateMachine GetStateMachine();
 }

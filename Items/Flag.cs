@@ -58,6 +58,7 @@ using System.Threading.Tasks;
         if (MarioPositionY < (flagDest.Y + 50))
         {
             MarioTop = true;
+            
         }
     }
     public void resetFlag()

@@ -31,6 +31,7 @@ public class LevelTwo : ILevel
     private Texture2D ItemsTexture;
     private Texture2D overworldTiles;
     private Texture2D underwaterTiles;
+    private double startAnimationElapsedTime = 0;
 
     public Point mapSize = new(192 * 32, 30 * 32);
     private Layer lvl2backdrop1;
@@ -39,6 +40,7 @@ public class LevelTwo : ILevel
     private Layer lvl2foreground1;
     private Layer lvl2foreground2;
     private FlagSprite flagSprite;
+    private FollowCamera followCamera;
 
     Boolean startAnimation = false;
 
@@ -52,7 +54,8 @@ public class LevelTwo : ILevel
         GameTime gameTime,
         ContentManager Content,
         TextureManager textureManager,
-        GameStateMachine gameStateMachine
+        GameStateMachine gameStateMachine,
+        FollowCamera followCamera
     )
 
     {
@@ -62,7 +65,7 @@ public class LevelTwo : ILevel
         this.ItemsTexture = textureManager.GetTexture("Items");
         this.overworldTiles = textureManager.GetTexture("OverworldTiles");
         this.underwaterTiles = textureManager.GetTexture("UnderwaterTiles");
-
+        this.followCamera = followCamera;
         this.gameStateMachine = gameStateMachine;
         this.entities = entities;
         this.mario = mario;
@@ -71,7 +74,6 @@ public class LevelTwo : ILevel
         this.game = game;
         this.entitiesRemoved = entitiesRemoved;
         this.Content = Content;
-
     }
 
     public void InitializeLevel()
@@ -92,8 +94,41 @@ public class LevelTwo : ILevel
         lvl2foreground2.LoadLayer();
     }
 
+
     public void UpdateLevel(GameTime gameTime)
     {
+
+        if (!startAnimation)
+        {
+            startAnimationElapsedTime += gameTime.ElapsedGameTime.TotalSeconds;
+
+            if (startAnimationElapsedTime <= 1.0)
+            {
+                Console.WriteLine("We are here");
+                mario.MoveRight();
+                mario.Update(gameTime);
+            }
+            else
+            {
+                Console.WriteLine("We are now");
+                mario.Stop();
+
+
+                mario.SetPositionY(600);
+                luigi.SetPositionY(600);
+
+
+                mario.SetSwimmingLevel(true);
+                luigi.SetSwimmingLevel(true);
+
+                followCamera.SetYPosition();
+
+                startAnimation = true;
+                mario.Update(gameTime);
+
+            }
+        }
+
         mario.SetSwimmingLevel(true);
         luigi.SetSwimmingLevel(true);
 
