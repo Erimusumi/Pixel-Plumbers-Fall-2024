@@ -45,6 +45,7 @@ public class LevelTwo : ILevel
 
     Boolean startAnimation = false;
     Boolean upPipeAnimation = false;
+    bool swimming = false;
 
     public LevelTwo(
         Game1 game,
@@ -96,6 +97,7 @@ public class LevelTwo : ILevel
         lvl2foreground2.LoadLayer();
         startAnimation = false;
         upPipeAnimation = false;
+        bool swimming = false;
 
         Enemy = new List<ISpriteEnemy>();
         InitializeEnemies();
@@ -105,8 +107,8 @@ public class LevelTwo : ILevel
     private void InitializeEnemies()
     {
 
-        int[] BenemyXPositions = {390, 1500, 1700};
-        int[] BenemyYPositions = {700, 720, 720};
+        int[] BenemyXPositions = { 390, 1500, 1700 };
+        int[] BenemyYPositions = { 700, 720, 720 };
 
         for (int i = 0; i < BenemyXPositions.Length; i++)
         {
@@ -129,9 +131,24 @@ public class LevelTwo : ILevel
         }
     }
 
+
+
     public void UpdateLevel(GameTime gameTime)
     {
         Console.WriteLine(mario.marioPosition);
+
+        if (swimming)
+        {
+            if (mario.marioPosition.Y < 538)
+            {
+                mario.marioPosition.Y = 538;
+            }
+            if (luigi.luigiPosition.Y < 538)
+            {
+                luigi.luigiPosition.Y = 538;
+            }
+        }
+
         if (!startAnimation)
         {
             {
@@ -161,6 +178,7 @@ public class LevelTwo : ILevel
                 followCamera.SetYPosition();
                 mario.SetSwimmingLevel(true);
                 luigi.SetSwimmingLevel(true);
+                swimming = true;
                 startAnimation = true;
             }
         }
@@ -173,6 +191,7 @@ public class LevelTwo : ILevel
 
         if (upPipeAnimation == true)
         {
+            swimming = false;
             mario.SetSwimmingLevel(false);
             luigi.SetSwimmingLevel(false);
             mario.marioPosition = new Vector2(5132, 270);
