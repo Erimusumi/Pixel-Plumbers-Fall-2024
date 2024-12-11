@@ -29,7 +29,6 @@ public class Sweep
         {
             containsEnemy = true;
             
-            //Debug.WriteLine("ContainsEnemy is true");
         }
         return containsEnemy;
     }
@@ -41,7 +40,6 @@ public class Sweep
         if(type == typeof(BrokenBrickSprite) || type == typeof(LuckyBlockSprite) || type == typeof(StaticBlockSprite))
         {
             containsBlock = true;
-            //Debug.WriteLine("Contains Block is true");
         }
         return containsBlock;
     }
@@ -126,7 +124,6 @@ public class Sweep
         IEntity item1 = entities[index1];
         IEntity item2 = entities[index2];
 
-        //System.Diagnostics.Debug.WriteLine(item1.GetType() == typeof(Goomba));
           if (ContainsPlayer(entities, index1) && item2.GetType() == typeof(Flag))
         {
 
@@ -230,12 +227,10 @@ public class Sweep
         else if (ContainsItem(entities, index1) && ContainsPlayer(entities, index2))
         {
             MarioItemInteraction = new PlayerItemInteraction((IItem)item1, (IPlayer)item2, entitiesRemoved);
-            //System.Diagnostics.Debug.Write("MarioItemInteraction works");
         }
         else if (ContainsPlayer(entities, index1) && ContainsItem(entities, index2))
         {
             MarioItemInteraction = new PlayerItemInteraction((IItem)item2, (IPlayer)item1, entitiesRemoved);
-            //System.Diagnostics.Debug.Write("MarioItemInteraction works");
         }
         else if (ContainsObstacle(entities, index1) && ContainsItem(entities, index2))
         {
@@ -272,7 +267,6 @@ public class Sweep
 
         else if (ContainsPlayer(entities, index1) && ContainsBlock(entities, index2))
         {
-            //Debug.WriteLine("Mario Block Collision Detected");
             //handle block interaction
 
             Boolean luckyBlock = true;
@@ -290,7 +284,6 @@ public class Sweep
         }
         else if (ContainsBlock(entities, index1) && ContainsPlayer(entities, index2))
         {
-            //Debug.WriteLine("Mario Block Collision Detected");
             Boolean luckyBlock = true;
             if (item1.GetType() == typeof(LuckyBlockSprite))
             {
@@ -353,7 +346,6 @@ public class Sweep
                    
                     if (firstEntity.Intersects(secondEntity))
                     {
-                        //Debug.WriteLine("First Entity is: " + entities[i].ToString() + " Second Entity is " + entities[j].ToString()); 
                         handleInteraction(entities, entitiesRemoved, i, j);
                     }
                     

@@ -28,9 +28,9 @@ public class GameOverScreen : ISprite
         Vector2 restartTextSize = MyFont.MeasureString(restartText) * scale;
         Vector2 mainMenuTextSize = MyFont.MeasureString(mainMenuText) * scale;
 
-        // gameOverPosition = new Vector2((ScreenWidth - gameOverTextSize.X) / 2, 200);
-        // restartPosition = new Vector2((ScreenWidth - restartTextSize.X) / 2, 300);
-        // mainMenuPosition = new Vector2((ScreenWidth - mainMenuTextSize.X) / 2, 350);
+        gameOverPosition = new Vector2((ScreenWidth - gameOverTextSize.X) / 2, 200);
+        restartPosition = new Vector2((ScreenWidth - restartTextSize.X) / 2, 300);
+        mainMenuPosition = new Vector2((ScreenWidth - mainMenuTextSize.X) / 2, 350);
     }
 
     public void Draw(SpriteBatch spriteBatch, Vector2 position)
@@ -39,8 +39,8 @@ public class GameOverScreen : ISprite
         spriteBatch.DrawString(MyFont, "RESTART", restartPosition, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
         spriteBatch.DrawString(MyFont, "MAIN MENU", mainMenuPosition, Color.White, 0f, Vector2.Zero, scale, SpriteEffects.None, 0f);
 
-        spriteBatch.Draw(startScreenTexture, GetRestartRectangle(), Color.Red * 0.5f);
-        spriteBatch.Draw(startScreenTexture, GetMainMenuRectangle(), Color.Blue * 0.5f);
+        //spriteBatch.Draw(startScreenTexture, GetRestartRectangle(), Color.Red * 0.5f);
+        //spriteBatch.Draw(startScreenTexture, GetMainMenuRectangle(), Color.Blue * 0.5f);
     }
 
     public Rectangle GetRestartRectangle()

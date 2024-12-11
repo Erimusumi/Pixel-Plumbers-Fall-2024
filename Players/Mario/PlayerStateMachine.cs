@@ -95,8 +95,6 @@ public class PlayerStateMachine
     public void SetStar()
     {
         _HasStar = true;
-        //test, remove later
-        //System.Diagnostics.Debug.WriteLine("Star Collected");
     }
 
     public void RemoveStar()
@@ -152,6 +150,9 @@ public class PlayerStateMachine
         CurrentFaceState = PlayerFaceState.Right;
         CurrentMoveState = PlayerMoveState.Idle;
         PlayerWins = false;
+        this.isVisible = true;
+        
+        
     }
     public bool Wins()
     {

@@ -84,6 +84,7 @@ public class LevelOne : ILevel
         Enemy = new List<ISpriteEnemy>();
         LuckyBlocks = new List<IBlock>();
         BrickBlocks = new List<IBlock>();
+        
 
         InitializeEnemies();
         InitializeLuckyBlocks();
@@ -217,6 +218,13 @@ public class LevelOne : ILevel
         }
 
         flag.Update();
+        if (mario.LevelOneDone())
+        {
+            gameStateMachine.setLevelTwo();
+            mario.Reset();
+            luigi.Reset();
+            
+        }
 
     }
 

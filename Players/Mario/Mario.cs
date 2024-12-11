@@ -41,6 +41,7 @@ public class Mario : IPlayer
     private bool deathSoundPlaying = false;
     private bool waitingForPartnerToDie = false;
     private bool winHitBottom = false;
+    private bool levelOneDone = false;
 
     private float maxSpeed = 3f;
     private float acceleration = 0.03f;
@@ -303,11 +304,16 @@ public class Mario : IPlayer
             if (wc.entersDoor())
             {
                 this.GetStateMachine().MakeInvisible();
+                this.levelOneDone = true;
             }
 
         }
         
        
+    }
+    public bool LevelOneDone()
+    {
+        return levelOneDone;
     }
     public void WinLevelOne()
     {
@@ -509,6 +515,7 @@ public class Mario : IPlayer
         deathSoundPlaying = false;
         waitingForPartnerToDie = false;
         winHitBottom = false;
+        
     }
 
     public Rectangle GetDestination()
