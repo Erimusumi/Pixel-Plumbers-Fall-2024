@@ -395,6 +395,7 @@ namespace Pixel_Plumbers_Fall_2024
         {
             entities.Clear();
             fireballs.Clear();
+            luigi.Reset();
             mario.Reset();
             hudManager.SetTime(400);
             camera.Reset();
