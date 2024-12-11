@@ -33,7 +33,11 @@ public class CutSceneManager
     }
     public void moveDown()
     {
-        
+        player.SetPositionY(player.GetDestination().Y +1);
+    }
+    public void moveUp()
+    {
+        player.SetPositionY(player.GetDestination().Y - 1);
     }
 
 

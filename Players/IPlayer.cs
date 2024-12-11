@@ -24,6 +24,8 @@ public interface IPlayer : IEntity
     public void CollectStar();
     public void PowerUp();
     public void SetWin();
+
+    public void ResetWin();
     public PlayerStateMachine getStateMachine();
     public void AddScore(int scoreAmt);
     public void AddCoin();

@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework;
 using Pixel_Plumbers_Fall_2024;
 using System;
 
+
 public class LuckyBlockSprite : IBlock
 {
     public Texture2D Texture { get; set; }
@@ -125,6 +126,7 @@ public class LuckyBlockSprite : IBlock
                 
             }
             hasItemAppeared = true;
+            sourceRectangle = new Rectangle(128, 112, 16, 16);
         }
 
         if (bumping && item != null)  // Added null check
