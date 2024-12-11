@@ -114,7 +114,6 @@ public class LevelTwo : ILevel
 
         int[] CenemyXPositions = { 390, 1500, 1700 };
         int[] CenemyYPositions = { 700, 720, 720 };
-
         for (int i = 0; i < CenemyXPositions.Length; i++)
         {
             Enemy.Add(new Blooper(CenemyXPositions[i], CenemyYPositions[i], (IPlayer)mario, (IPlayer)luigi));
